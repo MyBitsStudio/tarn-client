@@ -1699,7 +1699,142 @@ public class ItemDef4 {
 				itemDef.stackable = false;
 				//itemDef.rdc2 = 654332;
 				break;
-
+			case 3474:
+				itemDef.name = "<col=C733FF>Meliodas Wings";
+				itemDef.modelID = 141011;
+				itemDef.maleEquip1 = 141010;
+				itemDef.femaleEquip1 = 141010;
+				itemDef21 = ItemDefinition.get(4055);
+				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+				itemDef.modelZoom = 1750;
+				itemDef.rotationY = itemDef21.rotationY;
+				itemDef.rotationX = itemDef21.rotationX;
+				itemDef.actions[1] = "Wear";
+				itemDef.actions[2] = "Dissolve";
+				itemDef.actions[4] = "Drop";
+				itemDef.stackable = false;
+				//itemDef.rdc2 = 654332;
+				break;
+			case 3475:
+				itemDef.name = "<col=C733FF>Lostvayne";
+				itemDef.modelID = 141013;
+				itemDef.maleEquip1 = 141012;
+				itemDef.femaleEquip1 = 141012;
+				itemDef21 = ItemDefinition.get(4055);
+				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+				itemDef.modelZoom = 1750;
+				itemDef.rotationY = itemDef21.rotationY;
+				itemDef.rotationX = itemDef21.rotationX;
+				itemDef.actions[1] = "Wear";
+				itemDef.actions[2] = "Dissolve";
+				itemDef.actions[4] = "Drop";
+				itemDef.stackable = false;
+				//itemDef.rdc2 = 654332;
+				break;
+			case 3476:
+				itemDef.name = "<col=C733FF>Meliodas Boots";
+				itemDef.modelID = 141014;
+				itemDef.maleEquip1 = 141014;
+				itemDef.femaleEquip1 = 141014;
+				itemDef21 = ItemDefinition.get(4055);
+				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+				itemDef.modelZoom = 1750;
+				itemDef.rotationY = itemDef21.rotationY;
+				itemDef.rotationX = itemDef21.rotationX;
+				itemDef.actions[1] = "Wear";
+				itemDef.actions[2] = "Dissolve";
+				itemDef.actions[4] = "Drop";
+				itemDef.stackable = false;
+				//itemDef.rdc2 = 654332;
+				break;
+			case 3477:
+				itemDef.name = "<col=C733FF>Meliodas Gloves";
+				itemDef.modelID = 141016;
+				itemDef.maleEquip1 = 141015;
+				itemDef.femaleEquip1 = 141015;
+				itemDef21 = ItemDefinition.get(4055);
+				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+				itemDef.modelZoom = 1750;
+				itemDef.rotationY = itemDef21.rotationY;
+				itemDef.rotationX = itemDef21.rotationX;
+				itemDef.actions[1] = "Wear";
+				itemDef.actions[2] = "Dissolve";
+				itemDef.actions[4] = "Drop";
+				itemDef.stackable = false;
+				//itemDef.rdc2 = 654332;
+				break;
+			case 13650:
+				itemDef.name = "Counter Token";
+				break;
+			case 3478:
+				itemDef.name = "<col=C733FF>Meliodas Legs";
+				itemDef.modelID = 141018;
+				itemDef.maleEquip1 = 141017;
+				itemDef.femaleEquip1 = 141017;
+				itemDef21 = ItemDefinition.get(4055);
+				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+				itemDef.modelZoom = 1750;
+				itemDef.rotationY = itemDef21.rotationY;
+				itemDef.rotationX = itemDef21.rotationX;
+				itemDef.actions[1] = "Wear";
+				itemDef.actions[2] = "Dissolve";
+				itemDef.actions[4] = "Drop";
+				itemDef.stackable = false;
+				//itemDef.rdc2 = 654332;
+				break;
+			case 3479:
+				itemDef.name = "<col=C733FF>Meliodas Body";
+				itemDef.modelID = 141020;
+				itemDef.maleEquip1 = 141019;
+				itemDef.femaleEquip1 = 141019;
+				itemDef21 = ItemDefinition.get(4055);
+				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+				itemDef.modelZoom = 1750;
+				itemDef.rotationY = itemDef21.rotationY;
+				itemDef.rotationX = itemDef21.rotationX;
+				itemDef.actions[1] = "Wear";
+				itemDef.actions[2] = "Dissolve";
+				itemDef.actions[4] = "Drop";
+				itemDef.stackable = false;
+				//itemDef.rdc2 = 654332;
+				break;
+			case 3480:
+				itemDef.name = "<col=C733FF>Meliodas Head";
+				itemDef.modelID = 141022;
+				itemDef.maleEquip1 = 141021;
+				itemDef.femaleEquip1 = 141021;
+				itemDef21 = ItemDefinition.get(4055);
+				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+				itemDef.modelZoom = 1750;
+				itemDef.rotationY = itemDef21.rotationY;
+				itemDef.rotationX = itemDef21.rotationX;
+				itemDef.actions[1] = "Wear";
+				itemDef.actions[2] = "Dissolve";
+				itemDef.actions[4] = "Drop";
+				itemDef.stackable = false;
+				//itemDef.rdc2 = 654332;
+				break;
+			case 12843:
+				itemDef.name = "Deathbringer";
+				itemDef.modelID = 141194;
+				itemDef.maleEquip1 = 140852;
+				itemDef.femaleEquip1 = 140852;
+				itemDef21 = ItemDefinition.get(5575);
+				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+				itemDef.modelZoom = itemDef21.modelZoom;
+				itemDef.rotationY = itemDef21.rotationY;
+				itemDef.rotationX = itemDef21.rotationX;
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+				itemDef.stackable = false;
+				break;
 
 
 			// NEW BOSS ITEMS END
