@@ -2057,9 +2057,9 @@ public class RSInterface {
 		// Scoll bar size, witdh and scrolling size.
 		scrollTableft.width = 133 - 15;
 		scrollTableft.height = 281;
-		scrollTableft.scrollMax = 870;
+		scrollTableft.scrollMax = 800;
 
-		int npcList = 57;
+		int npcList = 53;
 		int y = 1;
 		for (int i = 0; i < npcList; i++) {
 			RSInterface.addText(35071 + i, " ", tda, 1, ClientConstants.ORANGE, false, false, ClientConstants.WHITE, "Select", 150);
