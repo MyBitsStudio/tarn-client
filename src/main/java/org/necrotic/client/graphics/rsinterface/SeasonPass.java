@@ -70,7 +70,15 @@ public class SeasonPass extends RSInterface {
         addText(49499, "Level 7", ColorConstants.ORANGE, true, true, -1, 0);
         addText(49500, "Resets: 00/00/00", ColorConstants.ORANGE, false, true, -1, 0);
 
-        rsi.totalChildren(57);
+        addHDSprite(49501, 3341, 3341);
+        addHDSprite(49502, 3341, 3341);
+        addHDSprite(49503, 3341, 3341);
+        addHDSprite(49504, 3341, 3341);
+        addHDSprite(49505, 3341, 3341);
+        addHDSprite(49506, 3341, 3341);
+        addHDSprite(49507, 3341, 3341);
+
+        rsi.totalChildren(64);
         rsi.child(0, 49451, 5, 5);
         rsi.child(1, 49452, 250, 15);
         rsi.child(2, 49453, 482, 15);
@@ -88,6 +96,7 @@ public class SeasonPass extends RSInterface {
             rsi.child(20+i, 49470, 41 + (i*63), 219);
             rsi.child(28 + i, 49472 + i, 31 + (i * 63), 144);
             rsi.child(49 + i, 49493 + i, 65 + (i * 63), 140);
+            rsi.child(57 + i, 49501 + i, 31 + (i * 63), 200);
         }
         rsi.child(19, 49469, 50, 166);
         rsi.child(27, 49471, 12, 271);
