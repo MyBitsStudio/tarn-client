@@ -8219,6 +8219,7 @@ public class CustomInterfaces extends RSInterface {
 		raidsDifficulty(tda);
 		DrystreakOverlay.init();
 		EquipmentEnhancement.build();
+		SeasonPass.build();
 	}
 
 }
