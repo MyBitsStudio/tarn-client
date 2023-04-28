@@ -1005,13 +1005,13 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.actions = new String[]{null, null, null, null, "Drop"};
 				//itemDef.rdc2 = 234563434;
 				break;
-			case 2396:
-				itemDef.name = "Merry scroll";
-				itemDef.actions = new String[]{null, null, null, null, "Drop"};
-				itemDef.stackable = true;
-
-				itemDef.rdc2 = 2344321;
-				break;
+//			case 2396:
+//				itemDef.name = "Merry scroll";
+//				itemDef.actions = new String[]{null, null, null, null, "Drop"};
+//				itemDef.stackable = true;
+//
+//				itemDef.rdc2 = 2344321;
+//				break;
 			case 17718:
 				itemDef.name = "Darkness bow";
 				itemDef.modelID = 64073;
@@ -7018,21 +7018,6 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.name = "<img=28><col=f8ac00>Double vote pet";
 				itemDef.groundActions = new String[]{null, null, "Take", null, null};
 				itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
-				break;
-			case 2098:
-				itemDef.name = "Skilling ticket";
-				itemDef.rdc2 = 12511;
-				itemDef.stackable = true;
-				itemDef21 = ItemDefinition.get(18652);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				//	itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.modelID = itemDef21.modelID;
-				itemDef.actions = itemDef21.actions;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-
 				break;
 			case 20511:
 				ItemDefinition hooker = ItemDefinition.get(12479);

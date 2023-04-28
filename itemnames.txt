@@ -8143,7 +8143,7 @@ name: Picture
 finish
 
 Item Id: 2098
-name: Skilling ticket
+name: Tormented Body (u)
 finish
 
 Item Id: 2099
@@ -9335,7 +9335,7 @@ name: Magic ogre potion
 finish
 
 Item Id: 2396
-name: Merry scroll
+name: Groudon-Flame Staff (U)
 finish
 
 Item Id: 2397

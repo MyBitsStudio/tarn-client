@@ -259,7 +259,7 @@ public final class ItemDefinition {
 			case 2092:
 			case 2094:
 			case 2096:
-			case 2098:
+			//case 2098:
 			case 2100:
 			case 2102:
 			case 2104:
@@ -408,7 +408,7 @@ public final class ItemDefinition {
 			case 2390:
 			case 2392:
 			case 2394:
-			case 2396:
+			//case 2396:
 			case 2398:
 			case 2400:
 			case 2402:
