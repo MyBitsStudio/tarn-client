@@ -28,12 +28,12 @@ public class EquipmentEnhancement extends RSInterface {
         addButtonWSpriteLoader(49416, 3318, "Select Shield");
         addButtonWSpriteLoader(49417, 3316, "Select Weapon");
         addButtonWSpriteLoader(49418, 3315, "Select Quiver");
-        addButtonWSpriteLoader(49419, 3327, "Select Crown");
+        addButtonWSpriteLoader(49419, 3327, "Select Halo");
         addButtonWSpriteLoader(49420, 3320, "Select Gloves");
         addButtonWSpriteLoader(49421, 3322, "Select Ring");
-        addButtonWSpriteLoader(49422, 3327, "Select Star");
-        addButtonWSpriteLoader(49423, 3327, "Select Star");
-        addButtonWSpriteLoader(49424, 3327, "Select Bread");
+        addButtonWSpriteLoader(49422, 3327, "Select Enhancement");
+        addButtonWSpriteLoader(49423, 3327, "Select Aura");
+        addButtonWSpriteLoader(49424, 3327, "Select Gemstone");
 
         addText(49426, "You can enhance an equipment \\n slot up to +20. You will lose \\n materials and 1 level upon @red@enhance \\n @red@failure", 0xc0c0c0, true, true, -1, 0);
         addText(49427, "Success rate: 20%", 0xadff2f, true, true, -1, 0);

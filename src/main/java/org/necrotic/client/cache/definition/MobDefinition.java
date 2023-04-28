@@ -3577,6 +3577,18 @@ public final class MobDefinition {
 				definition.npcModels[6] = 140841; //BOOT
 				break;
 
+			case 1318:
+				definition.name = "@bla@Black Goku";
+				definition.actions = new String[]{null, "Attack", null, null, null};
+				definition.npcModels = new int[]{140781};
+				definition.combatLevel = 2733;
+				definition.npcSizeInSquares = 1;
+				definition.standAnimation = 8980;
+				definition.walkAnimation = 2076;
+				definition.scaleXZ = 200;
+				definition.scaleY = 200;
+				break;
+
 			case 811:
 				definition.name = "Nagendra";
 				definition.description = "Nagendra.".getBytes();

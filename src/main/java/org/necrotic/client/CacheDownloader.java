@@ -21,8 +21,8 @@ public class CacheDownloader {
 	private static final String NEWEST_VERSION_FILE_URL = "https://tarn-rsps.com/cache/cache_version.txt";
 	private static final String CURRENT_VERSION_FILE = "cache_version.txt"; //The location of the local cache_version txt file
 
-	public static final String URL_TO_LOADING_IMAGES = "https://ralos.000webhostapp.com/resource/";
-	public static final String MIRROR_URL_TO_LOADING_IMAGES = "https://ralos.000webhostapp.com/resource/"; //If first link is broken, it will attempt to download from here
+	public static final String URL_TO_LOADING_IMAGES = "https://tarn-rsps.com/resources/";
+	public static final String MIRROR_URL_TO_LOADING_IMAGES = "https://tarn-rsps.com/resources/"; //If first link is broken, it will attempt to download from here
 
 	public static boolean UPDATING = true;
 

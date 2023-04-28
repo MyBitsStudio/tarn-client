@@ -45,7 +45,7 @@ public class DiscordPlugin extends Plugin {
             .tab(false)
             .tooltip("Visit Store")
             .icon(icon2)
-            .onClick(() -> LinkBrowser.browse("https://tarn-rsps.com/store"))//TODO add your store
+            .onClick(() -> LinkBrowser.browse("https://tarn-rsps.com/store.html"))//TODO add your store
             .build();
         
         clientToolbar.addNavigation(storeButton);
