@@ -2468,7 +2468,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.scaleZ *= 0.50;
 				break;
 			case 20504:
-				itemDef.name = "<col=842e00><shad=0>Cursed Box<shad-1>";
+				itemDef.name = "<col=842e00><shad=0>AoE Token [2x2]<shad-1>";
 				itemDef.actions = new String[5];
 				itemDef.actions[0] = "Open";
 				itemDef21 = ItemDefinition.get(6199);
@@ -2477,7 +2477,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.modelZoom = 850;
 				itemDef.rotationY = 100;
 				itemDef.rotationX = 90;
-				itemDef.modelID = 15112;
+				itemDef.modelID = 139920;
 				
 				//itemDef.rdc2 = 988331;
 				itemDef.scaleY *= 0.50;
