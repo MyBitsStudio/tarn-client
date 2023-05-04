@@ -3602,6 +3602,7 @@ itemDef.actions[2] = "Dissolve";
 				break;
 			case 4446:
 				itemDef.name = "@cya@Collectors Ring I";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				break;
 			case 22116:
 				itemDef.name = "Iron's pet";

@@ -8126,7 +8126,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.stackable = true;
 				break;
 			case 3686:
-				itemDef.name = "<col=4689fe>100M ticket";
+				itemDef.name = "<col=4689fe>Premium Ticket";
 				itemDef.rdc2 = 999122;
 				ItemDefinition itemDefticket11 = ItemDefinition.get(5020);
 				// itemDef.modelID = itemDef2.modelID;
@@ -8141,6 +8141,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.rotationX = itemDefticket11.rotationX;
 				// itemDef.rdc2 = ;
 				itemDef.stackable = true;
+				itemDef.actions = new String[]{"Claim", null, null, null, "Drop"};
 				break;
 			case 3687:
 				itemDef.name = "<col=c762fb>1B ticket";
