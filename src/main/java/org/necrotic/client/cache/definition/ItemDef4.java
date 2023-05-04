@@ -4945,6 +4945,7 @@ itemDef.actions[2] = "Dissolve";
 			case 22229:
 				itemDef.copyItem(4710);
 				itemDef.name = "Owner's Sword";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.modelID = 140003;
 				itemDef.maleEquip1 = 140005;
 				itemDef.femaleEquip1 = 140005;
@@ -4958,6 +4959,7 @@ itemDef.actions[2] = "Dissolve";
 			case 22230:
 				itemDef.copyItem(4710);
 				itemDef.name = "Owner's Staff";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.modelID = 139999;
 				itemDef.maleEquip1 = 139998;
 				itemDef.femaleEquip1 = 139998;
@@ -4971,6 +4973,7 @@ itemDef.actions[2] = "Dissolve";
 			case 22231:
 				itemDef.copyItem(4710);
 				itemDef.name = "Owner's Bow";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.modelID = 139997;
 				itemDef.maleEquip1 = 139996;
 				itemDef.femaleEquip1 = 139996;
@@ -4984,6 +4987,7 @@ itemDef.actions[2] = "Dissolve";
 			case 22232:
 				itemDef.copyItem(4708);
 				itemDef.name = "Owner's Helm";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.modelID = 140017;
 				itemDef.maleEquip1 = 140009;
 				itemDef.femaleEquip1 = 140009;
@@ -4997,6 +5001,7 @@ itemDef.actions[2] = "Dissolve";
 			case 22233:
 				itemDef.copyItem(4712);
 				itemDef.name = "Owner's Body";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.modelID = 140018;
 				itemDef.maleEquip1 = 140010;
 				itemDef.femaleEquip1 = 140010;
@@ -5010,6 +5015,7 @@ itemDef.actions[2] = "Dissolve";
 			case 22234:
 				itemDef.copyItem(4714);
 				itemDef.name = "Owner's Legs";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.modelID = 140019;
 				itemDef.maleEquip1 = 140011;
 				itemDef.femaleEquip1 = 140011;
@@ -5023,6 +5029,7 @@ itemDef.actions[2] = "Dissolve";
 			case 22235:
 				itemDef.copyItem(4708);
 				itemDef.name = "Owner's Boots";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.modelID = 140007;
 				itemDef.maleEquip1 = 140007;
 				itemDef.femaleEquip1 = 140007;
@@ -5036,6 +5043,7 @@ itemDef.actions[2] = "Dissolve";
 			case 22236:
 				itemDef.copyItem(4708);
 				itemDef.name = "Owner's Gloves";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.modelID = 140015;
 				itemDef.maleEquip1 = 140008;
 				itemDef.femaleEquip1 = 140008;
@@ -5049,6 +5057,7 @@ itemDef.actions[2] = "Dissolve";
 			case 22237:
 				itemDef.copyItem(22111);
 				itemDef.name = "Owner's Wings";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.modelID = 140021;
 				itemDef.maleEquip1 = 140013;
 				itemDef.femaleEquip1 = 140013;
@@ -5062,6 +5071,7 @@ itemDef.actions[2] = "Dissolve";
 			case 22238:
 				itemDef.copyItem(22111);
 				itemDef.name = "Owner's Aura";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.modelID = 140023;
 				itemDef.maleEquip1 = 140022;
 				itemDef.femaleEquip1 = 140022;
@@ -5075,6 +5085,7 @@ itemDef.actions[2] = "Dissolve";
 			case 22239:
 				itemDef.copyItem(22111);
 				itemDef.name = "Owner's Halo";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.modelID = 140016;
 				itemDef.maleEquip1 = 139867;
 				itemDef.femaleEquip1 = 139867;
@@ -5088,6 +5099,7 @@ itemDef.actions[2] = "Dissolve";
 			case 22240:
 				itemDef.copyItem(22064);
 				itemDef.name = "Owner's Shield";
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.modelID = 140020;
 				itemDef.maleEquip1 = 140012;
 				itemDef.femaleEquip1 = 140012;
