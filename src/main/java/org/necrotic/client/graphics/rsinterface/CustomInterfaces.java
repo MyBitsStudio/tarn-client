@@ -3019,7 +3019,7 @@ public class CustomInterfaces extends RSInterface {
 		RSInterface newTab = addTabInterface(15000);
 		addButtonWSpriteLoader(15001, 618, "Show Equipment Stats", 41, 40);
 		addButtonWSpriteLoader(15002, 307, null, 41, 40);
-		addButtonWSpriteLoader(15003, 620, "Open Items kept on Death", 41, 40);
+		addButtonWSpriteLoader(15003, 621, "Open Items kept on Death", 41, 40);
 		addAdvancedButtonWSpriteLoader(15005, 3304, "Show Secondary Equipement", 35, 35);
 
 		//addButtonWSpriteLoader(15004, 621, "Toggle Experience", 41, 40);

@@ -63,6 +63,6 @@ public class Configuration {
 	public static boolean TOGGLE_FOV = true;
 	public static boolean DEPTH_BUFFER = true;
 	public static String SERVER_HOST() {
-		return localHost ? "194.93.58.13" : "127.0.0.1";//184.75.128.54
+		return localHost ? "raid-server1.tarn.gg" : "127.0.0.1";//184.75.128.54
 	}
 }
