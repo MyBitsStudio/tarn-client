@@ -1647,9 +1647,9 @@ public class ItemDef3 {
 
 			case 995:
 				//itemDef.copyItem(995);
-				itemDef.name = "<col=a48a4c><shad=110100>Million<shad-1>";
+				itemDef.name = "<col=a48a4c><shad=110100>Coins<shad-1>";
 				itemDef.actions = new String[5];
-				itemDef.actions[2] = "Convert to Billions";
+				itemDef.actions[2] = "Convert to Tokens";
 				itemDef.modelID = 15043;
 				itemDef.modelZoom = 1100;
 				itemDef.rotationX = 0;
@@ -1665,9 +1665,9 @@ public class ItemDef3 {
 				break;
 			case 10835:
 				//itemDef.copyItem(995);
-				itemDef.name = "<col=842e00><shad=0>Billion<shad-1>";
+				itemDef.name = "<col=842e00><shad=0>Tokens<shad-1>";
 				itemDef.actions = new String[5];
-				itemDef.actions[2] = "Convert to Millions";
+				itemDef.actions[2] = "Convert to Coins";
 				itemDef.modelID = 15044;
 				itemDef.modelZoom = 1100;
 				itemDef.rotationX = 0;
