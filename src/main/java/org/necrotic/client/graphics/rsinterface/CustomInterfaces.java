@@ -8220,6 +8220,7 @@ public class CustomInterfaces extends RSInterface {
 		DrystreakOverlay.init();
 		EquipmentEnhancement.build();
 		SeasonPass.build();
+		Forge.build();
 	}
 
 }

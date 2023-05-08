@@ -1001,7 +1001,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    private static String intToKOrMil(int value) {
+    public static String intToKOrMil(int value) {
         if (value < 0x186a0) {
             return String.valueOf(value);
         }
@@ -7808,7 +7808,16 @@ public class Client extends GameRenderer {
 
             if (childInterface.type == 287) {
                 drawProgressBar(childX, childY, childInterface.width, childInterface.height, childInterface.progress, childInterface.firstColor, childInterface.secondColor, 1);
+
+            } else if(childInterface.type == 288) {
+                if(childInterface.progressBarType == ProgressBarType.VERTICAL_DOWN_UP) {
+                    int calcHeight = (childInterface.progress * childInterface.height) / childInterface.maxPercentage;
+                    int height = Math.min(childInterface.height, calcHeight);
+                    new Sprite(spritesMap.getData(childInterface.disabledSpriteId), childInterface.width, height, 1).drawAdvancedSprite(childX, Math.max(childY, childY + (childInterface.height - calcHeight)));
+                }
+                    //todo add rest of the progress bar types
             }
+
             if (childInterface.type == 150) {
                 childInterface.wheel.render(childX, childY);
             }
@@ -7881,9 +7890,14 @@ public class Client extends GameRenderer {
                                     }
                                     stock.drawSprite(k5 - 8, j6 - 4);
                                 }
+
                                 int k6 = 0;
                                 int j7 = 0;
                                 int j9 = childInterface.inv[i3] - 1;
+
+                                if(childInterface.id == 49565) {
+                                    Forge.drawShopBox(j9, k5-6, j6-6);
+                                }
 
                                 if (k5 > DrawingArea.topX - 32 && k5 < DrawingArea.bottomX && j6 > DrawingArea.topY - 32 && j6 < DrawingArea.clipBottom || activeInterfaceType != 0 && selectedInventorySlot == i3) {
                                     int l9 = 0;
@@ -15934,6 +15948,14 @@ public class Client extends GameRenderer {
                     pktType = -1;
                     return true;
 
+                case 204:
+                    int progBarInt = getInputBuffer().getInt();
+                    int progBarProgress = getInputBuffer().getInt();
+                    int progBarMaxPercentage = getInputBuffer().getInt();
+                    RSInterface.interfaceCache[progBarInt].progress = progBarProgress;
+                    RSInterface.interfaceCache[progBarInt].maxPercentage = progBarMaxPercentage;
+                    pktType = -1;
+                    return true;
 
                 case 249:
                     anInt1046 = getInputBuffer().method426();
@@ -18311,7 +18333,7 @@ public class Client extends GameRenderer {
             animatedSprites[7] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/admin.gif");
             animatedSprites[8] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/cm.gif");
             animatedSprites[9] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/support.gif");
-
+            Forge.boxSprite = spritesMap.get(3363);
             /*
              * media.jag / 1615310064 dump: 0 = summoning wolf icon 1 = spirit shard icon 2
              * = grand exchange icon 3 = herblore decanter icon 4 = alternative wood icon 5

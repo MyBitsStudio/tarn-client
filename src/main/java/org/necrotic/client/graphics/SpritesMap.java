@@ -6,6 +6,7 @@ import java.awt.image.DataBufferInt;
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ import static java.nio.file.StandardOpenOption.READ;
 
 public class SpritesMap implements Closeable {
 
+	private static final int[] requiredData = new int[] {348, 349, 3350};
 	private Map<Integer, Sprite> map = new HashMap<>();
 	private Map<Integer, byte[]> data = new HashMap<>();
 	private FileChannel dat;
@@ -65,7 +67,7 @@ public class SpritesMap implements Closeable {
 				}
 				int[] pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
 				Sprite sprite = new Sprite(image.getWidth(), image.getHeight(), offsetX, offsetY, pixels);
-				if (id == 348 || id == 397) {
+				if (Arrays.stream(requiredData).anyMatch(it -> it == id)) {
 					data.put(id, datBuffer.array());
 				}
 				map.put(id, sprite);

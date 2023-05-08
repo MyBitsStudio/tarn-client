@@ -13,6 +13,7 @@ import org.necrotic.client.graphics.fonts.TextClass;
 import org.necrotic.client.graphics.fonts.TextDrawingArea;
 import org.necrotic.client.graphics.rsinterface.ClientConstants;
 import org.necrotic.client.graphics.rsinterface.CustomInterfaces;
+import org.necrotic.client.graphics.rsinterface.ProgressBarType;
 import org.necrotic.client.graphics.rsinterface.SummoningInterfaceData;
 import org.necrotic.client.io.ByteBuffer;
 import org.necrotic.client.world.Model;
@@ -283,6 +284,24 @@ public class RSInterface {
 	protected int progress;
 	protected int firstColor;
 	protected int secondColor;
+	public ProgressBarType progressBarType;
+	public int maxPercentage;
+	/**
+	 * Add the sprite id to the required data array in SpritesMap for this to work.
+	 * @param id
+	 * @param spriteId
+	 */
+	public static void addProgressBar(int id, int spriteId, int maxPercentage, ProgressBarType progressBarType) {
+		RSInterface rsi = addInterface(id);
+		rsi.type = 287;
+		rsi.disabledSpriteId = spriteId;
+		rsi.width = Client.spritesMap.get(spriteId).maxWidth;
+		rsi.height = Client.spritesMap.get(spriteId).maxHeight;
+		rsi.progress = maxPercentage;
+		rsi.maxPercentage = maxPercentage;
+		rsi.type = 288;
+		rsi.progressBarType = progressBarType;
+	}
 
 	private static void perkOverlays(TextDrawingArea[] tda) {
 		int STARTING_POINT = 42112;
@@ -3016,6 +3035,21 @@ public class RSInterface {
 		tab.tooltip = tooltip;
 	}
 
+	public static void addButton(int id, int sid, String tooltip) {
+		RSInterface tab = interfaceCache[id] = new RSInterface();
+		tab.id = id;
+		tab.parentID = id;
+		tab.type = 5;
+		tab.atActionType = 1;
+		tab.contentType = 0;
+		tab.opacity = (byte) 0;
+		tab.hoverType = 52;
+		tab.disabledSprite = Client.spritesMap.get(sid);
+		tab.width = tab.disabledSprite.maxWidth;
+		tab.height = tab.disabledSprite.maxHeight;
+		tab.tooltip = tooltip;
+	}
+
 	public static void addSkillChatSprite(int id, int skill) {
 		addSpriteLoader(id, 755 + skill);
 	}
@@ -5162,7 +5196,7 @@ public class RSInterface {
 			Tab.spritesY[i2] = 8;
 			Tab.spritesX[i2] = 16;
 		}
-		Tab.invSpritePadX = 7;
+		Tab.invSpritePadX = 10;
 		Tab.invSpritePadY = 4;
 		Tab.actions = new String[]{"Store 1", "Store 5", "Store 10", "Store All", null};
 		Tab.width = w;
@@ -5174,6 +5208,35 @@ public class RSInterface {
 		Tab.height = h;
 	}
 
+	public static void addInventoryItemGroup2(int id, int h, int w, String[] actions) {
+		RSInterface Tab = interfaceCache[id] = new RSInterface();
+		Tab.inv = new int[w * h];
+		Tab.invStackSizes = new int[w * h];
+		Tab.invGlow = new int[w * h];
+		Tab.bonus = new int[w * h];
+		for (int i1 = 0; i1 < w * h; i1++) {
+			Tab.invStackSizes[i1] = 0; // inv item stack size
+			Tab.inv[i1] = 0; // inv item ids
+			Tab.invGlow[i1] = 0;
+			Tab.bonus[i1] = -1;
+		}
+		Tab.spritesY = new int[28];
+		Tab.spritesX = new int[28];
+		for (int i2 = 0; i2 < 28; i2++) {
+			Tab.spritesY[i2] = 8;
+			Tab.spritesX[i2] = 16;
+		}
+		Tab.invSpritePadX = 10;
+		Tab.invSpritePadY = 4;
+		Tab.actions = actions;
+		Tab.width = w;
+		Tab.hoverType = -1;
+		Tab.parentID = id;
+		Tab.id = id;
+		Tab.scrollMax = 0;
+		Tab.type = 2;
+		Tab.height = h;
+	}
 	public static void addToItemGroup(int id, int w, int h, int x, int y, boolean hasActions, String[] actions) {
 		RSInterface rsi = addInterface(id);
 		rsi.width = w;
