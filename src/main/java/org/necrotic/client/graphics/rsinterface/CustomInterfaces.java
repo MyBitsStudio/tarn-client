@@ -38,70 +38,6 @@ public class CustomInterfaces extends RSInterface {
 
 	}
 
-	public static void raidsRewards(TextDrawingArea[] tda) {
-		RSInterface rsi = addTabInterface(22000);
-		rsi.totalChildren(5);
-
-		int x = 12, y = 20;
-
-
-		addSprite(22001, 1291);
-		rsi.child(0, 22001, x, y);
-
-		addText(22002, "Raid Final", 0xff9933, true, true, -1, tda, 2);
-		rsi.child(1, 22002, x + 239, y + 10);
-
-		addHoverButton(22003, 1016, 1, 16, 16, "Close", 250, 22003, 3);
-		rsi.child(2, 22003, x + 455, y + 10);
-
-		addText(22004, "Raid Rewards", 0xff9933, true, true, -1, tda, 0);
-		rsi.child(3, 22004, x + 401, y + 62);
-
-//		RSInterface item = addInterface(22005);
-//
-//		item.width = 200;
-//		item.height = 200;
-//		item.scrollMax = 600;
-//		item.totalChildren(1);
-//
-//		rsi.child(4, 22005, x + 250, y + 75);
-
-//		RSInterface scroll = addInterface(childId++);
-//		int scrollChildId = childId;
-//		int scrollFrame = 0;
-//		int scrollX = 3;
-//		int scrollY = 3;
-//		scroll.width = 274;
-//		scroll.height = 231;
-//		scroll.scrollMax = 425;
-//		scroll.totalChildren(5 * 7);
-//
-//		for (int i = 0; i < 7; i++) {
-//			addHoverButton(scrollChildId++, 1292, 0, 270, 53, "Claim", -1, scrollChildId, 1);
-//			addHoveredButton(scrollChildId++, 1293, 1, 270, 53, scrollChildId++);
-//
-//			scrollChildId -= 3;
-//
-//			scroll.child(scrollFrame++, scrollChildId++, scrollX, scrollY);
-//			scroll.child(scrollFrame++, scrollChildId++, scrollX, scrollY);
-//			scrollChildId++;
-//
-//			addText(scrollChildId, "Day " + (i + 1), 0xff9933, false, true, -1, TDA, 2);
-//			scroll.child(scrollFrame++, scrollChildId++, scrollX + 10, scrollY + 6);
-//
-//			addText(scrollChildId, "Reward text goes here blah blah blah" + (i + 1), 0xff9933, false, true, -1, TDA, 1);
-//			scroll.child(scrollFrame++, scrollChildId++, scrollX + 10, scrollY + 22);
-//
-//			addToItemGroup(scrollChildId, 1, 1, 16, 7, true, new String[]{"Select", null, null, null, null});
-//			scroll.child(scrollFrame++, scrollChildId++, scrollX + 210, scrollY + 12);
-//
-//			scrollY += 60;
-//		}
-
-
-	}
-
-
 	public static void upgrade(TextDrawingArea[] tda) {
 		RSInterface rsi = addTabInterface(19400);
 		rsi.totalChildren(28);
@@ -666,7 +602,7 @@ public class CustomInterfaces extends RSInterface {
 		widget.child(frame++, childId++, 18, 47);//Scroll frame
 	}
 
-	public static void loyaltyStreakRewards(TextDrawingArea[] TDA) { // corrupt
+	public static void loyaltyStreakRewards(TextDrawingArea[] TDA) {
 		RSInterface widget = addInterface(22406);
 
 		int childId = 22407;
@@ -8284,7 +8220,7 @@ public class CustomInterfaces extends RSInterface {
 		DrystreakOverlay.init();
 		EquipmentEnhancement.build();
 		SeasonPass.build();
-		raidsRewards(tda);
+		Forge.build();
 	}
 
 }
