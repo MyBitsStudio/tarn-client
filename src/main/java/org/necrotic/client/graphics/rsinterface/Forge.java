@@ -18,6 +18,14 @@ public class Forge extends RSInterface {
 
     static {
         PRICES.put(4151, 11000);
+        PRICES.put(6585, 3000);
+        PRICES.put(11732, 1000);
+        PRICES.put(4712, 2000);
+        PRICES.put(4714, 2000);
+        PRICES.put(4716, 2000);
+        PRICES.put(4718, 2000);
+        PRICES.put(4720, 2200);
+        PRICES.put(4722, 2500);
     }
 
     public static void build() {
@@ -99,16 +107,24 @@ public class Forge extends RSInterface {
 
         inventory();
         shop();
+        inventoryDisabled();
     }
 
-    public static void inventory() {
+    private static void inventory() {
         RSInterface tab = addTabInterface(49540);
         addInventoryItemGroup2(49541, 7, 4, new String[]{"Sacrifice", null, null, null, null});
         setChildren(1, tab);
         setBounds(49541, 0, 0, 0, tab);
     }
 
-    public static void shop() {
+    private static void inventoryDisabled() {
+        RSInterface tab = addTabInterface(49566);
+        addInventoryItemGroup2(49567, 7, 4, new String[]{null, null, null, null, null});
+        setChildren(1, tab);
+        setBounds(49567, 0, 0, 0, tab);
+    }
+
+    private static void shop() {
         RSInterface rsi = addInterface(49542);
 
         addSpriteLoader(49543, 3364);

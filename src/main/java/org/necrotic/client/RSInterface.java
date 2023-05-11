@@ -5237,6 +5237,7 @@ public class RSInterface {
 		Tab.type = 2;
 		Tab.height = h;
 	}
+
 	public static void addToItemGroup(int id, int w, int h, int x, int y, boolean hasActions, String[] actions) {
 		RSInterface rsi = addInterface(id);
 		rsi.width = w;
