@@ -19,8 +19,8 @@ public class Configuration {
 	
 	public static final boolean IS_RUNNING_WINDOWS = true;
 	
-	public final static int CLIENT_VERSION = 4;
-	public static boolean localHost = true;
+	public final static int CLIENT_VERSION = 31;
+	public static boolean localHost = false;
 	public static final boolean FORCE_CACHE_UPDATE = true;
 	public static final boolean STOP_CACHE_UPDATES = false;
 	public static final boolean DROPBOX_MODE = false;
@@ -63,6 +63,6 @@ public class Configuration {
 	public static boolean TOGGLE_FOV = true;
 	public static boolean DEPTH_BUFFER = true;
 	public static String SERVER_HOST() {
-		return localHost ? "127.0.0.1" : "127.0.0.1";//raid-server1.tarn.gg
+		return localHost ? "raid-server1.tarn.gg" : "127.0.0.1";//raid-server1.tarn.gg
 	}
 }

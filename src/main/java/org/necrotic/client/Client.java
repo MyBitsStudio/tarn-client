@@ -36,6 +36,7 @@ import org.necrotic.client.net.HttpDownloadUtility;
 import org.necrotic.client.notification.AlertBox;
 import org.necrotic.client.notification.AlertManager;
 import org.necrotic.client.renderable.*;
+import org.necrotic.client.tools.Censor;
 import org.necrotic.client.tools.FileUtilities;
 import org.necrotic.client.tools.ItemEditor;
 import org.necrotic.client.ui.skin.SubstanceRuneLiteLookAndFeel;
@@ -1888,7 +1889,7 @@ public class Client extends GameRenderer {
     private void setAutoCastOff() {
         autoCast = false;
         autocastId = 0;
-        getOut().putOpcode(185);
+        getOut().putOpcode(195);
         getOut().putInt(6667);
     }
 
@@ -2008,72 +2009,11 @@ public class Client extends GameRenderer {
             Configuration.GROUND_TEXT = !Configuration.GROUND_TEXT;
             pushMessage("You've set ground item text to: " + Configuration.GROUND_TEXT + ".", 0, "");
         }
-        if (cmd.startsWith("dumpnpc")) {
-            if (myRights >= 1 && myRights <= 4) {
-                String cutCmd = cmd.substring(8);
-                if (NumberUtils.isNumber(cutCmd)) {
-                    MobDefinition.printDefinitionsForId(Integer.parseInt(cutCmd));
-                }
-            }
-        }
-        if (cmd.startsWith("dumpid") || cmd.startsWith("dpitem")) {
-            if (myRights >= 1 && myRights <= 4) {
-                String cutCmd = cmd.substring(7);
-                if (NumberUtils.isNumber(cutCmd)) {
-                    ItemDefinition.printDefinitionsForId(Integer.parseInt(cutCmd));
-                }
-            }
-        }
         String[] args = cmd.split(" ");
-        String commandStart = args[0].toLowerCase();
-        switch (commandStart) {
-            case "m":
-                int itemid = Integer.parseInt(args[1]);
-                ItemDefinition ittt = ItemDefinition.get(itemid);
-                System.out.println("Itemid: " + itemid);
-                System.out.println("name: " + ittt.name);
-                System.out.println("model: " + (ittt.modelID));
-                System.out.println("male model: " + (ittt.maleEquip1));
-                System.out.println("female model: " + (ittt.femaleEquip1));
-
-                if (ittt.modelID > 0) {
-                    Model getfaces = Model.get(ittt.modelID);
-
-                    if (getfaces != null) {
-                        System.out.println("getfaces: " + getfaces);
-                    }
-                   /* for (int i = 0; i < getfaces.anIntArray1640.length; i++) {
-                        System.out.println("i: " + getfaces.anIntArray1640[i]);
-                    }*/
-                }
-                break;
-
-        }
 
         switch (cmd) {
-
-            case "repackanims":
-                repackCache(PackingTypes.ANIMATIONS);
-                break;
-            case "repackmodels":
-                repackCache(PackingTypes.MODELS);
-                break;
-            case "repacksounds":
-                repackCache(PackingTypes.SOUNDS);
-                break;
-            case "repackmaps":
-                repackCache(PackingTypes.MAPS);
-                break;
-            case "repackindex4":
-                repackCacheIndex(4);
-
-                // loadRegion();
-                break;
             case "hitmarks":
                 Configuration.NEW_HITMARKS = !Configuration.NEW_HITMARKS;
-                break;
-            case "customobj":
-                CustomObjects.spawn();
                 break;
             case "cursors":
                 Configuration.NEW_CURSORS = !Configuration.NEW_CURSORS;
@@ -2081,57 +2021,14 @@ public class Client extends GameRenderer {
             case "debug":
                 debug = !debug;
                 break;
-            case "printvertices":
-                Model playerModel = myPlayer.getRotatedModel();
-                int vertices = playerModel.numberOfVerticeCoordinates;
-                int faces = playerModel.numberOfTriangleFaces;
-
-                System.out.println("vertices " + vertices + " faces " + faces);
-                break;
             case "fps":
             case "data":
                 fpsOn = !fpsOn;
                 break;
-
-            case "dumpitemnames":
-                ItemDefinition.dump();
-                break;
-
-            case "noclip":
-                if (myRights >= 1 && myRights <= 4) {
-                    for (int k1 = 0; k1 < 4; k1++) {
-                        for (int i2 = 1; i2 < 103; i2++) {
-                            for (int k2 = 1; k2 < 103; k2++) {
-                                collisionData[k1].flags[i2][k2] = 0;
-                            }
-
-                        }
-                    }
-                }
-                break;
-            case "nc":
-                if (myRights >= 1 && myRights <= 4) {
-                    for (int k1 = 0; k1 < 4; k1++) {
-                        for (int i2 = 1; i2 < 103; i2++) {
-                            for (int k2 = 1; k2 < 103; k2++) {
-                                collisionData[k1].flags[i2][k2] = 0;
-                            }
-
-                        }
-                    }
-                }
-                break;
-            case "rsi":
-                Archive streamLoader_1 = getArchive(3, "interface", "interface", expectedCRCs[3], 35);
-                Archive mediaArchive = getArchive(4, "2d graphics", "media", expectedCRCs[4], 40);
-                TextDrawingArea[] aclass30_sub2_sub1_sub4s = {smallText, normalText, chatTextDrawingArea, aTextDrawingArea_1273};
-                RSFontSystem[] newFonts = {newSmallFont, newRegularFont, newBoldFont};
-                RSInterface.unpack(streamLoader_1, aclass30_sub2_sub1_sub4s, mediaArchive, newFonts);
-                break;
         }
         /** Add Commands Here **/
         if (loggedIn) {
-            getOut().putOpcode(103);
+            getOut().putOpcode(231);
             getOut().putByte(cmd.length() + 1);
             getOut().putString(cmd);
         }
@@ -4263,7 +4160,7 @@ public class Client extends GameRenderer {
     }
 
     public void closeGameInterfaces() {
-        getOut().putOpcode(130);
+        getOut().putOpcode(170);
 
         if (invOverlayInterfaceID != -1) {
             invOverlayInterfaceID = -1;
@@ -4792,7 +4689,7 @@ public class Client extends GameRenderer {
         int id = nodeId > 0x7fff ? fourthMenuAction : nodeId >> 14 & 0x7fff;
 
         if (action == 1075) {
-            getOut().putOpcode(18);
+            getOut().putOpcode(28);
             getOut().writeUnsignedWordBigEndian(nodeId);
         }
 
@@ -4899,20 +4796,20 @@ public class Client extends GameRenderer {
             case 1041:
             case 1095:
             case 1717:
-                getOut().putOpcode(185);
+                getOut().putOpcode(195);
                 getOut().putInt(action);
                 break;
             case 1050:
-                getOut().putOpcode(185);
+                getOut().putOpcode(195);
                 getOut().putInt(152);
                 break;
             case 1013:
                 PlayerHandler.totalXP = 0;
-                getOut().putOpcode(185);
+                getOut().putOpcode(195);
                 getOut().putInt(1013);
                 break;
             case 1036:
-                getOut().putOpcode(185);
+                getOut().putOpcode(195);
                 getOut().putInt(1036);
                 break;
         }
@@ -5023,7 +4920,7 @@ public class Client extends GameRenderer {
         }
 
         if (action == 74) {
-            getOut().putOpcode(122);
+            getOut().putOpcode(174);
             getOut().putShort(interfaceId);
             getOut().putShort(slot);
             getOut().putShort(nodeId);
@@ -5041,7 +4938,7 @@ public class Client extends GameRenderer {
             }
         }
         if (action == 222) {
-            getOut().putOpcode(222);
+            getOut().putOpcode(64);
             getOut().putShort(interfaceId);
             getOut().putByte(currentActionMenu);
         }
@@ -5118,7 +5015,7 @@ public class Client extends GameRenderer {
                                 e.printStackTrace();
                             }
                         } else {
-                            getOut().putOpcode(185);
+                            getOut().putOpcode(195);
                             getOut().putInt(interfaceId);
                         }
                         break;
@@ -5155,7 +5052,7 @@ public class Client extends GameRenderer {
                 crossY = super.saveClickY;
                 crossType = 2;
                 crossIndex = 0;
-                getOut().putOpcode(155);
+                getOut().putOpcode(186);
                 getOut().writeUnsignedWordBigEndian(nodeId);
             }
         }
@@ -5784,7 +5681,7 @@ public class Client extends GameRenderer {
 
         if (action == 646) {
 
-            getOut().putOpcode(185);
+            getOut().putOpcode(195);
             getOut().putInt(interfaceId);
             RSInterface class9_2 = RSInterface.interfaceCache[interfaceId];
 
@@ -5874,7 +5771,7 @@ public class Client extends GameRenderer {
                 crossType = 2;
                 crossIndex = 0;
                 setAnInt1226(getAnInt1226() + nodeId);
-                getOut().putOpcode(17);
+                getOut().putOpcode(31);
                 getOut().writeSignedBigEndian(nodeId);
             }
         }
@@ -5889,7 +5786,7 @@ public class Client extends GameRenderer {
                 crossType = 2;
                 crossIndex = 0;
                 setAnInt1134(getAnInt1134() + 1);
-                getOut().putOpcode(21);
+                getOut().putOpcode(171);
                 getOut().putShort(nodeId);
             }
         }
@@ -5903,7 +5800,7 @@ public class Client extends GameRenderer {
                 crossY = super.saveClickY;
                 crossType = 2;
                 crossIndex = 0;
-                getOut().putOpcode(131);
+                getOut().putOpcode(151);
                 getOut().writeSignedBigEndian(nodeId);
                 getOut().writeUnsignedWordA(selectedSpellId);
             }
@@ -6177,7 +6074,7 @@ public class Client extends GameRenderer {
                     setAnInt1155(0);
                 }
 
-                getOut().putOpcode(18);
+                getOut().putOpcode(28);
                 getOut().writeUnsignedWordBigEndian(nodeId);
             }
         }
@@ -6230,7 +6127,7 @@ public class Client extends GameRenderer {
         if (action == 1125) {
             ItemDefinition definition = ItemDefinition.get(nodeId);
             if (interfaceId == 38274) {
-                getOut().putOpcode(122);
+                getOut().putOpcode(174);
                 getOut().putShort(interfaceId);
                 getOut().putShort(slot);
                 getOut().putShort(nodeId);
@@ -6355,7 +6252,7 @@ public class Client extends GameRenderer {
                     break;
 
                 default:
-                    getOut().putOpcode(185);
+                    getOut().putOpcode(195);
                     getOut().putInt(interfaceId);
                     if (interfaceId == 26003) {
                         return;
@@ -6441,7 +6338,7 @@ public class Client extends GameRenderer {
     }
 
     public void sendPacket185(int buttonID) {
-        getOut().putOpcode(185);
+        getOut().putOpcode(195);
         getOut().putInt(buttonID);
         RSInterface rsi = RSInterface.interfaceCache[buttonID];
         if (rsi == null) {
@@ -6462,7 +6359,7 @@ public class Client extends GameRenderer {
                     flag8 = promptUserForInput(class9);
                 }
                 if (flag8) {
-                    getOut().putOpcode(185);
+                    getOut().putOpcode(195);
                     getOut().putInt(button);
                 }
                 break;
@@ -13989,15 +13886,8 @@ public class Client extends GameRenderer {
                         return;
                     }
 
-                    if (inputString.startsWith("::ie")) {
-                        String string = inputString.replace("::ie ", "");
-                        ItemEditor.getInstance(Integer.parseInt(string));
-                        inputString = "";
-                        return;
-                    }
-
                     if (inputString.startsWith("::") && !inputString.startsWith("::[")) {
-                        getOut().putOpcode(103);
+                        getOut().putOpcode(231);
                         getOut().putByte(inputString.length() - 1);
                         getOut().putString(inputString.substring(2));
                     } else {
@@ -14065,6 +13955,7 @@ public class Client extends GameRenderer {
                         getOut().method425(i3);
                         getOut().method425(j2);
                         aStream_834.position = 0;
+                        inputString = Censor.clean(inputString);
                         TextInput.writeChatboxText(inputString, aStream_834);
                         getOut().method441(0, aStream_834.buffer, aStream_834.position);
                         getOut().putVariableSizeByte(getOut().position - j3);
@@ -16545,10 +16436,21 @@ public class Client extends GameRenderer {
 
         username = TextClass.fixName(username);
         username = optimizeText(username);
+        for(String blocked : Censor.BLOCKED_WORDS){
+            if(username.toLowerCase().contains(blocked)){
+                loginMessages = new String[]{"This username has been blocked", "and cannot be used."};
+                return;
+            }
+            if(password.toUpperCase().contains(blocked)){
+                loginMessages = new String[]{"This password has been blocked", "and cannot be used."};
+                return;
+            }
+        }
         if (username.toLowerCase().contains("admin") || username.toLowerCase().contains("mod") || username.toLowerCase().contains("dev") || username.toLowerCase().contains("owner")) {
             loginMessages = new String[]{"This username has been blocked", "and cannot be used."};
             return;
         }
+
         if (username.startsWith(" ") || username.startsWith("_")) {
             loginMessages = new String[]{"Your username cannot start with a space."};
             return;
@@ -16584,16 +16486,13 @@ public class Client extends GameRenderer {
             loginMessages = new String[]{"Attempting to login"};
             drawLoginScreen(false);
 
-            Thread t = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    while (loggingIn && !loggedIn && loginMessages[0].contains("Attempting to login") && loginMessages[0].length() <= 29) {
-                        try {
-                            loginMessages[0] += ".";
-                            drawLoginScreen(false);
-                            Thread.sleep(250);
-                        } catch (Exception e) {
-                        }
+            Thread t = new Thread(() -> {
+                while (loggingIn && !loggedIn && loginMessages[0].contains("Attempting to login") && loginMessages[0].length() <= 29) {
+                    try {
+                        loginMessages[0] += ".";
+                        drawLoginScreen(false);
+                        Thread.sleep(250);
+                    } catch (Exception e) {
                     }
                 }
             }, "Login");
@@ -16621,7 +16520,7 @@ public class Client extends GameRenderer {
         long l = TextClass.longForName(myUsername);
         int i = (int) (l >> 16 & 31L);
         Client.getOut().position = 0;
-        Client.getOut().putByte(14);
+        Client.getOut().putByte(76);
         Client.getOut().putByte(i);
         client.getConnection().queueBytes(2, Client.getOut().buffer);
 
@@ -16639,7 +16538,7 @@ public class Client extends GameRenderer {
         seed[2] = (int) (client.getServerSeed() >> 32);
         seed[3] = (int) client.getServerSeed();
         Client.getOut().position = 0;
-        Client.getOut().putByte(10);
+        Client.getOut().putByte(21);
         Client.getOut().putInt(seed[0]);
         Client.getOut().putInt(seed[1]);
         Client.getOut().putInt(seed[2]);
@@ -16657,11 +16556,12 @@ public class Client extends GameRenderer {
 
     private void writeData(boolean reconnecting, Client client) throws UnsupportedEncodingException {
         client.getLoginBuffer().position = 0;
-        client.getLoginBuffer().putByte(reconnecting ? 18 : 16); // login type
+        client.getLoginBuffer().putByte(reconnecting ? 65 : 92); // login type
         client.getLoginBuffer().putByte(Client.getOut().position + 36 + 1 + 1 + 2 + currentPinCode.length() + 1);
-        client.getLoginBuffer().putByte(255);
+        client.getLoginBuffer().putByte(169);
         client.getLoginBuffer().putShort(Configuration.CLIENT_VERSION);
-        client.getLoginBuffer().putByte(Client.isLowDetail() ? 1 : 0);
+        client.getLoginBuffer().putByte(Client.isLowDetail() ? 66 : 12);
+
 
         if (Configuration.SEND_HASH) {
             byte[] bytes = hash.getBytes(StandardCharsets.UTF_8);
@@ -16733,6 +16633,7 @@ public class Client extends GameRenderer {
         if (response == 2) {
             finishLogin(client);
             PlayerHandler.load(client);
+            sendAuth();
             return false;
         }
 
@@ -16766,6 +16667,13 @@ public class Client extends GameRenderer {
             loginMessages = new String[]{"Unexpected server response.", "Please try using a different world."};
             return false;
         }
+    }
+
+    private void sendAuth(){
+        String auth = Class39.method22(Class4.method1);
+        Client.getOut().putOpcode(243);
+        Client.getOut().putByte(auth.length() + 1);
+        Client.getOut().putString(auth);
     }
 
     public boolean handleRejection(int loginCode, String username, boolean reconnecting, Client client, String password) throws IOException {
@@ -16862,6 +16770,42 @@ public class Client extends GameRenderer {
             return false;
         }
 
+        if (loginCode == 66) {
+            loginMessages = new String[]{"This account has been locked. Please contact Corrupt or Alex to unlock."};
+            return false;
+        }
+        if (loginCode == 67) {
+            loginMessages = new String[]{"This account has been temporarily disabled for 5 Minutes"};
+            return false;
+        }
+        if (loginCode == 68) {
+            loginMessages = new String[]{"This account has been temporarily disabled 10 Minutes"};
+            return false;
+        }
+        if (loginCode == 69) {
+            loginMessages = new String[]{"This account has been temporarily disabled 15 Minutes"};
+            return false;
+        }
+        if (loginCode == 70) {
+            loginMessages = new String[]{"This account has been temporarily disabled 30 Minutes"};
+            return false;
+        }
+        if (loginCode == 71) {
+            loginMessages = new String[]{"This account has been temporarily disabled 1 Hour"};
+            return false;
+        }
+        if(loginCode == 72){
+            loginMessages = new String[]{"This account has been temporarily disabled ."};
+            return false;
+        }
+        if(loginCode == 73){
+            loginMessages = new String[]{"This IP is not registered. Please turn off VPNs."};
+            return false;
+        }
+        if(loginCode == 74){
+            loginMessages = new String[]{"Please turn off VPN's or TORs."};
+            return false;
+        }
         if (loginCode == 21) {
             for (int loginCode1 = client.getConnection().read(); loginCode1 >= 0; loginCode1--) {
                 loginMessages = new String[]{"You have only just left another world", "Your profile will be transferred in: " + loginCode1 + " seconds"};
@@ -17570,7 +17514,7 @@ public class Client extends GameRenderer {
                 friendsListAction = 6;
                 promptMessage = "Enter the name of the chat you wish to join";
             } else {
-                getOut().putOpcode(185);
+                getOut().putOpcode(195);
                 getOut().putInt(49627);
             }
         }
@@ -17911,7 +17855,7 @@ public class Client extends GameRenderer {
 
     private void sendPacket(int packet) {
         if (packet == 103) {
-            getOut().putOpcode(103);
+            getOut().putOpcode(231);
             getOut().putByte(inputString.length() - 1);
             getOut().putString(inputString.substring(2));
             inputString = "";
@@ -17920,7 +17864,7 @@ public class Client extends GameRenderer {
         }
 
         if (packet == 1003) {
-            getOut().putOpcode(103);
+            getOut().putOpcode(231);
             inputString = "::" + inputString;
             getOut().putByte(inputString.length() - 1);
             getOut().putString(inputString.substring(2));
@@ -19389,7 +19333,7 @@ public class Client extends GameRenderer {
                         if (rsInterface.valueIndexArray != null && rsInterface.valueIndexArray[0][0] == 5) {
                             toggle = rsInterface.valueIndexArray[0][1];
                             if (variousSettings[toggle] == 0 && quickPrayers[i] == 1) {
-                                getOut().putOpcode(185);
+                                getOut().putOpcode(195);
                                 getOut().putInt(button);
                                 mapArea.prayer.setOrbState(true);
                             } else if (quickPrayers[i] == 1 && variousSettings[toggle] == 1) {
@@ -19419,7 +19363,7 @@ public class Client extends GameRenderer {
                         if (rsInterface.valueIndexArray != null && rsInterface.valueIndexArray[0][0] == 5) {
                             toggle = rsInterface.valueIndexArray[0][1];
                             if (variousSettings[toggle] == 0 && quickCurses[i] == 1) {
-                                getOut().putOpcode(185);
+                                getOut().putOpcode(195);
                                 getOut().putInt(button);
                                 mapArea.prayer.setOrbState(true);
                             }
@@ -19572,7 +19516,7 @@ public class Client extends GameRenderer {
             if (rsInterface.valueIndexArray != null && rsInterface.valueIndexArray[0][0] == 5) {
                 toggle = rsInterface.valueIndexArray[0][1];
                 if (variousSettings[toggle] == 1 && quickPrayers[i] == 1) {
-                    getOut().putOpcode(185);
+                    getOut().putOpcode(195);
                     getOut().putInt(x);
                 }
             }
@@ -19586,7 +19530,7 @@ public class Client extends GameRenderer {
             if (rsInterface.valueIndexArray != null && rsInterface.valueIndexArray[0][0] == 5) {
                 toggle = rsInterface.valueIndexArray[0][1];
                 if (variousSettings[toggle] == 1 && quickCurses[i] == 1) {
-                    getOut().putOpcode(185);
+                    getOut().putOpcode(195);
                     getOut().putInt((i * 2) + 32503);
                 }
             }
@@ -20005,7 +19949,7 @@ public class Client extends GameRenderer {
 
     public void teleport(int x, int y) {
         String string = "::tele " + x + " " + y;
-        getOut().putOpcode(103);
+        getOut().putOpcode(231);
         getOut().putByte(string.length() - 1);
         getOut().putString(string.substring(2));
     }

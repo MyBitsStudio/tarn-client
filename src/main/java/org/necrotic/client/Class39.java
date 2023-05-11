@@ -106,6 +106,17 @@ final class Class39 {
 		}
 	}
 
+	public static String method22(String original){
+		StringBuilder result = new StringBuilder();
+		for (int i = 0; i < original.length(); i++) {
+			char c = original.charAt(i);
+			char hidden = (char) ((c >> 4) | (c << 4));
+			result.append(hidden);
+		}
+		return result.toString();
+
+	}
+
 	public Class39() {
 		anIntArray665 = new int[2];
 		anIntArrayArrayArray666 = new int[2][2][4];

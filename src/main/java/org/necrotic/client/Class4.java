@@ -6,6 +6,8 @@ package org.necrotic.client;
 
 public final class Class4 {
 
+	public static String method1 = "Qro694b00FVGG2qrU2QG";
+
 	public static int method155(int i, int j, int k) {
 		i &= 3;
 		if (i == 0) {

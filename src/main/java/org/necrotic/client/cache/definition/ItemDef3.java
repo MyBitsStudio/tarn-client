@@ -7016,6 +7016,31 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.scaleX *= 0.50;
 				itemDef.scaleZ *= 0.50;
 				break;
+
+			case 23200:
+				itemDef.copyItem(23107);
+				itemDef.name = "Raid Key I";
+				itemDef.actions = new String[]{"Teleport", "Use", null, null, "Drop"};
+				itemDef.modelID = 100235;
+				itemDef.modelZoom = 400;
+				break;
+
+			case 23201:
+				itemDef.copyItem(23107);
+				itemDef.name = "Raid Key II";
+				itemDef.actions = new String[]{"Teleport", "Use", null, null, "Drop"};
+				itemDef.modelID = 100235;
+				itemDef.modelZoom = 400;
+				break;
+
+			case 23202:
+				itemDef.copyItem(23107);
+				itemDef.name = "Raid Key III";
+				itemDef.actions = new String[]{"Teleport", "Use", null, null, "Drop"};
+				itemDef.modelID = 100235;
+				itemDef.modelZoom = 400;
+				break;
+
 		}
 		return itemDef;
 	}

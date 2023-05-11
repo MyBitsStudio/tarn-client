@@ -717,7 +717,7 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 	private void sendCommand(String cmd) {
 		if (Client.instance.loggedIn) {
 			synchronized (Client.getOut()) {
-				Client.getOut().putOpcode(103);
+				Client.getOut().putOpcode(231);
 				Client.getOut().putByte(cmd.length() + 1);
 				Client.getOut().putString(cmd);
 			}
