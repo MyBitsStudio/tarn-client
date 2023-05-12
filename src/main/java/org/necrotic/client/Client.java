@@ -19,6 +19,7 @@ import org.necrotic.client.constants.SizeConstants;
 import org.necrotic.client.entity.player.Player;
 import org.necrotic.client.entity.player.PlayerHandler;
 import org.necrotic.client.graphics.*;
+import static org.necrotic.client.Class33.sendAuth;
 import org.necrotic.client.graphics.fonts.RSFontSystem;
 import org.necrotic.client.graphics.fonts.TextClass;
 import org.necrotic.client.graphics.fonts.TextDrawingArea;
@@ -68,6 +69,8 @@ import java.util.List;
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.zip.CRC32;
+
+
 
 public class Client extends GameRenderer {
     public static final RichPresense RICH_PRESENCE = new RichPresense();
@@ -16691,12 +16694,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    private void sendAuth(){
-        String auth = Class39.method22(Class4.method1);
-        Client.getOut().putOpcode(243);
-        Client.getOut().putByte(auth.length() + 1);
-        Client.getOut().putString(auth);
-    }
+
 
     public boolean handleRejection(int loginCode, String username, boolean reconnecting, Client client, String password) throws IOException {
         if (loginCode == 3) {
