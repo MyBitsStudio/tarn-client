@@ -898,6 +898,11 @@ public final class ObjectDefinition {
 			definition.modelSizeY = 75;
 			definition.objectModelIDs = new int[]{139882};//15073
 		}
+		if (definition.type == 621) {
+			definition.name = "Raids Table";
+			definition.actions = new String[5];
+			definition.actions[0] = "Select";
+		}
 		if (definition.type == 10621) {
 			definition.objectModelIDs = new int[]{139882};
 			definition.name = "Death Chest";

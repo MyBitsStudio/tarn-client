@@ -259,6 +259,36 @@ public final class MobDefinition {
 				definition.walkAnimation = 1339;
 				break;
 
+			case 589:
+				definition.name = "Arthrocrian";
+				definition.actions = new String[]{null, "Attack", null, null, null};
+				definition.npcModels = new int[]{140651};
+				definition.npcSizeInSquares = 5;
+				definition.combatLevel = 0;
+				definition.standAnimation = 1338;
+				definition.walkAnimation = 1339;
+				break;
+
+			case 591:
+				definition.name = "Rufugaris";
+				definition.actions = new String[]{null, "Attack", null, null, null};
+				definition.npcModels = new int[]{140918, 140919, 140920};
+				definition.npcSizeInSquares = 1;
+				definition.combatLevel = 0;
+				definition.standAnimation = 11973;
+				definition.walkAnimation = 11975;
+				break;
+
+			case 593:
+				definition.name = "Drurnsian";
+				definition.actions = new String[]{null, "Attack", null, null, null};
+				definition.npcModels = new int[]{141090};
+				definition.npcSizeInSquares = 1;
+				definition.combatLevel = 0;
+				definition.standAnimation = 11973;
+				definition.walkAnimation = 11975;
+				break;
+
 			case 1880:
 				definition.name = "@or2@YouTube Soldier";
 				definition.actions = new String[]{null, "Attack", null, null, null};
