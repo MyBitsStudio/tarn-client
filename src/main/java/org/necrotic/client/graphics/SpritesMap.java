@@ -14,7 +14,7 @@ import static java.nio.file.StandardOpenOption.READ;
 
 public class SpritesMap implements Closeable {
 
-	private static final int[] requiredData = new int[] {348, 349, 3350};
+	private static final int[] requiredData = new int[] {348, 397, 3350};
 	private Map<Integer, Sprite> map = new HashMap<>();
 	private Map<Integer, byte[]> data = new HashMap<>();
 	private FileChannel dat;
