@@ -12,7 +12,9 @@ import static org.necrotic.client.Client.intToKOrMil;
 public class Forge extends RSInterface {
 
     public static Sprite boxSprite;
+    public static Sprite lockSprite;
     public static int currentTierUnlocked = 0;
+    public static boolean unbuyable;
 
     public static final HashMap<Integer, Integer> PRICES = new HashMap<>();
 
@@ -162,11 +164,6 @@ public class Forge extends RSInterface {
         addToItemGroup(49565, 5,20, 26, 35, true, new String[]{"Buy 1", "Buy 5", "Buy 10", "Buy X", null});
         scroll.child(0, 49565, 9, 10);
 
-        for(int i = 0; i < 50; i++) {
-            RSInterface.interfaceCache[49565].inv[i] = 4152;
-            RSInterface.interfaceCache[49565].invStackSizes[i] = 1;
-        }
-
         rsi.totalChildren(21);
         rsi.child(0, 49543, 1, 1);
         rsi.child(1, 49544, 260, 13);
@@ -194,5 +191,11 @@ public class Forge extends RSInterface {
     public static void drawShopBox(int itemId, int x, int y) {
         boxSprite.drawSprite(x, y);
         Client.instance.smallText.drawRegularText(true, x + 14, 0xffff00, intToKOrMil(PRICES.get(itemId)), y + 52);
+    }
+
+    public static void drawLock(int x, int y) {
+        if(unbuyable) {
+            lockSprite.drawAdvancedSprite(x-3,y+1);
+        }
     }
 }

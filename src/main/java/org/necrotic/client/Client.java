@@ -1,6 +1,5 @@
 package org.necrotic.client;
 
-import org.apache.commons.lang3.math.NumberUtils;
 import org.necrotic.Configuration;
 import org.necrotic.RichPresense;
 import org.necrotic.client.Settings.Load;
@@ -39,7 +38,6 @@ import org.necrotic.client.notification.AlertManager;
 import org.necrotic.client.renderable.*;
 import org.necrotic.client.tools.Censor;
 import org.necrotic.client.tools.FileUtilities;
-import org.necrotic.client.tools.ItemEditor;
 import org.necrotic.client.ui.skin.SubstanceRuneLiteLookAndFeel;
 import org.necrotic.client.world.*;
 import org.necrotic.client.world.background.ScriptManager;
@@ -7913,6 +7911,11 @@ public class Client extends GameRenderer {
                                             }
                                         }
 
+                                        // draw lock here if applicable after drawing the item
+                                        if(childInterface.id == 49565) {
+                                            Forge.drawLock(k5-6, j6-6);
+                                        }
+
                                         if (selectedItem.maxWidth == 33 || childInterface.invStackSizes[i3] > 1 || (openInterfaceID == 5292 && childInterface.invStackSizes[i3] == 0)) {
                                             int k10 = childInterface.invStackSizes[i3];
                                             if ((openInterfaceID == 5292 && k10 == 0) || (childInterface.id == 30375 && k10 > 1 || !childInterface.hideStackSize)) {
@@ -7941,7 +7944,6 @@ public class Client extends GameRenderer {
                                     class30_sub2_sub1_sub1_1.drawSprite(k5, j6);
                                 }
                             }
-
                             i3++;
                         }
                     }
@@ -15154,7 +15156,6 @@ public class Client extends GameRenderer {
                     return true;
                 case 253:
                     String s = getInputBuffer().getString();
-
                     if (s.startsWith("casketopening##")) {
                         String[] boxargs = s.split("##");
                         if (boxargs[1] != null) {
@@ -15170,6 +15171,12 @@ public class Client extends GameRenderer {
                     }
                     if (s.equals(":resetCasket")) {
                         casketOpening.reset();
+                        pktType = -1;
+                        return true;
+                    }
+
+                    if(s.startsWith(":forge:")) {
+                        Forge.unbuyable = Integer.parseInt(s.substring(s.lastIndexOf(":")+1)) == 0;
                         pktType = -1;
                         return true;
                     }
@@ -18276,6 +18283,8 @@ public class Client extends GameRenderer {
             animatedSprites[8] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/cm.gif");
             animatedSprites[9] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/support.gif");
             Forge.boxSprite = spritesMap.get(3363);
+            Forge.lockSprite = spritesMap.get(3338);
+
             /*
              * media.jag / 1615310064 dump: 0 = summoning wolf icon 1 = spirit shard icon 2
              * = grand exchange icon 3 = herblore decanter icon 4 = alternative wood icon 5
