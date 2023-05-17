@@ -903,6 +903,11 @@ public final class ObjectDefinition {
 			definition.actions = new String[5];
 			definition.actions[0] = "Select";
 		}
+		if (definition.type == 2936) {
+			definition.name = "Asta Instance";
+			definition.actions = new String[5];
+			definition.actions[0] = "Start";
+		}
 		if (definition.type == 10621) {
 			definition.objectModelIDs = new int[]{139882};
 			definition.name = "Death Chest";
