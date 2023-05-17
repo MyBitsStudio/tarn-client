@@ -279,6 +279,18 @@ public final class MobDefinition {
 				definition.walkAnimation = 11975;
 				break;
 
+			case 595:
+				definition.name = "@bla@Black Asta";
+				definition.actions = new String[]{null, "Attack", null, null, null};
+				definition.npcModels = new int[]{139934, 141239, 141226, 141227, 141222, 141224, 141228, 141240};
+				definition.npcSizeInSquares = 1;
+				definition.combatLevel = 0;
+				definition.walkAnimation = 11662;
+				definition.standAnimation = 11667;
+				definition.scaleXZ = 170;
+				definition.scaleY = 170;
+				break;
+
 			case 593:
 				definition.name = "Drurnsian";
 				definition.actions = new String[]{null, "Attack", null, null, null};

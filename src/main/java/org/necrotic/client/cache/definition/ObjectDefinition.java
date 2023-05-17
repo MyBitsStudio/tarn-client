@@ -1155,7 +1155,7 @@ public final class ObjectDefinition {
 				definition.name = "Entrance";
 				break;
 			case 4388:
-				definition.name = "<col=89584A>[Tier Portal]";
+				definition.name = "<col=89584A>[Exit Instance]";
 				break;
 			case 13626:
 				definition.name = "<shad=1><col=FF0000>[Multi PVP]";
