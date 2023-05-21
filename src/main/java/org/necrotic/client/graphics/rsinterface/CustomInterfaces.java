@@ -6,6 +6,7 @@ import org.necrotic.client.*;
 import org.necrotic.client.accounts.Account;
 import org.necrotic.client.cache.definition.ItemDefinition;
 import org.necrotic.client.graphics.fonts.TextDrawingArea;
+import org.necrotic.client.security.Security;
 
 import java.util.ArrayList;
 
@@ -8221,6 +8222,7 @@ public class CustomInterfaces extends RSInterface {
 		EquipmentEnhancement.build();
 		SeasonPass.build();
 		Forge.build();
+		SecurityInterface.build(tda);
 	}
 
 }

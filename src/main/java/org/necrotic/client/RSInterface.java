@@ -4601,6 +4601,22 @@ public class RSInterface {
 		tab.tooltip = tooltip;
 	}
 
+	public static void addButtonWSpriteLoaderSlab(int id, int spriteId, String tooltip) {
+		RSInterface tab = interfaceCache[id] = new RSInterface();
+		tab.id = id;
+		tab.parentID = id;
+		tab.type = 5;
+		tab.atActionType = 1;
+		tab.contentType = 0;
+		tab.opacity = (byte) 0;
+		tab.hoverType = 52;
+		tab.enabledSprite = Client.spritesMap.get(spriteId);
+		tab.disabledSprite = Client.spritesMap.get(spriteId);
+		tab.width = tab.enabledSprite.myWidth;
+		tab.height = tab.disabledSprite.myHeight - 2;
+		tab.tooltip = tooltip;
+	}
+
 	public static void addButton1(int id, int spriteId, int spriteId2, String tooltip) {
 		RSInterface tab = interfaceCache[id] = new RSInterface();
 		tab.id = id;

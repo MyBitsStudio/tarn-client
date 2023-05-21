@@ -15902,7 +15902,14 @@ public class Client extends GameRenderer {
                     } else {
                         pinEnter = false;
                     }
-                    inputTaken = false;
+
+                    if (inputTitle.contains("#confirm2fa")) {
+                        confirmEnter = true;
+                        inputTitle = inputTitle.replace("#confirm2fa", "");
+                    } else {
+                        confirmEnter = false;
+                    }
+                    messagePromptRaised = false;
                     inputDialogState = 2;
                     //if (!getOption("save_input")) {
                     amountOrNameInput = "";
