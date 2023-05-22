@@ -8222,6 +8222,7 @@ public class CustomInterfaces extends RSInterface {
 		EquipmentEnhancement.build();
 		SeasonPass.build();
 		Forge.build();
+		AttendanceRewardInterface.build();
 		SecurityInterface.build(tda);
 	}
 

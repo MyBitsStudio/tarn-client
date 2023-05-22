@@ -15652,7 +15652,37 @@ public class Client extends GameRenderer {
                     setInterfaceText(text, frame);
                     pktType = -1;
                     return true;
+                case 32:
+                    RSInterface.interfaceCache[getInputBuffer().readInt()].hideWidget = getInputBuffer().getUnsignedByte() == 1;
+                    pktType = -1;
+                    return true;
+                case 43:
+                    for(int i = 0; i < 31; i++) {
+                        RSInterface rsi = RSInterface.interfaceCache[getInputBuffer().readInt()];
+                        rsi.inv[0] = getInputBuffer().readInt();
+                        rsi.invStackSizes[0] = getInputBuffer().readInt();
 
+                        RSInterface checkMark = RSInterface.interfaceCache[getInputBuffer().readInt()];
+                        checkMark.hideWidget = getInputBuffer().getUnsignedByte() == 0;
+
+                        RSInterface box = RSInterface.interfaceCache[getInputBuffer().readInt()];
+                        int boxSpriteId = getInputBuffer().getShort();
+
+                        if(boxSpriteId == 0) {
+                            box.hideWidget = true;
+                        } else {
+                            box.hideWidget = false;
+                            box.disabledSprite = spritesMap.get(boxSpriteId);
+                            box.enabledSprite = spritesMap.get(boxSpriteId);
+                        }
+
+                        setInterfaceText(getInputBuffer().getString(), getInputBuffer().readInt());
+                    }
+
+                    setInterfaceText(getInputBuffer().getString(), getInputBuffer().readInt());
+                    setInterfaceText(getInputBuffer().getString(), getInputBuffer().readInt());
+                    pktType = -1;
+                    return true;
                 case 180:
                     int rankId = getInputBuffer().getUnsignedShort();
                     int frameId = getInputBuffer().getUnsignedShort();

@@ -5368,7 +5368,7 @@ public class RSInterface {
 		int i = -1;
 		stream.getUnsignedShort();
 		// int j = stream.getUnsignedShort();
-		interfaceCache = new RSInterface[150000];
+		interfaceCache = new RSInterface[150250];
 		while (stream.position < stream.buffer.length) {
 			int k = stream.getUnsignedShort();
 			if (k == 65535) {
