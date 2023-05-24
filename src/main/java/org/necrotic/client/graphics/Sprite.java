@@ -136,6 +136,14 @@ public class Sprite extends DrawingArea {
 		return resizedImage;
 	}
 
+	public static BufferedImage getBuff(Image image){
+		BufferedImage bufferedImage = new BufferedImage(image.getWidth(null), image.getHeight(null), BufferedImage.TYPE_INT_ARGB);
+		Graphics2D g2d = bufferedImage.createGraphics();
+		g2d.drawImage(image, 0, 0, null);
+		g2d.dispose();
+		return bufferedImage;
+	}
+
 	public Sprite(byte spriteData[], int width, int height, int x) {
 		try {
 			Image image = Toolkit.getDefaultToolkit().createImage(spriteData);

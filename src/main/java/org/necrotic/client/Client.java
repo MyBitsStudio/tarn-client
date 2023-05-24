@@ -36,6 +36,7 @@ import org.necrotic.client.net.HttpDownloadUtility;
 import org.necrotic.client.notification.AlertBox;
 import org.necrotic.client.notification.AlertManager;
 import org.necrotic.client.renderable.*;
+import org.necrotic.client.security.Security;
 import org.necrotic.client.tools.Censor;
 import org.necrotic.client.tools.FileUtilities;
 import org.necrotic.client.ui.skin.SubstanceRuneLiteLookAndFeel;
@@ -9275,12 +9276,12 @@ public class Client extends GameRenderer {
                     }
                     if (rights != 0) {
                         AnimatedSprite as;
-                        if((as = animatedSpriteForRank(rights)) != null) {
-                            as.getInstance(as.myWidth, as.myHeight).drawAdvancedSprite(xOffset, yOffset - 11);
-                            xOffset += as.myWidth + 2;
-                        } else {
+                        if((as = animatedSpriteForRank(rights)) == null) {
                             modIcons[rights].drawTransparentSprite(xOffset, yOffset - 12, 255);
                             xOffset += modIcons[rights].maxWidth + 2;
+                        } else {
+                            as.getInstance(as.myWidth, as.myHeight).drawAdvancedSprite(xOffset, yOffset - 11);
+                            xOffset += as.myWidth + 2;
                         }
                     }
 
@@ -15647,8 +15648,7 @@ public class Client extends GameRenderer {
                     }
                     if (frame >= 1675 && frame <= 1687 || frame >= 15115 && frame <= 15120) {
                         updateStrings(text, frame);
-                    } // not fixed yet, just making sure interface isnt broke. It needs server update
-                    // after this
+                    }
                     setInterfaceText(text, frame);
                     pktType = -1;
                     return true;
@@ -18417,6 +18417,8 @@ public class Client extends GameRenderer {
             // ItemDefinition.dumpItemModelsForId(13653);
             // onDemandFetcher.dump();
             //repackCacheIndex(4);
+
+            //dumpSprites();
             for (int i : Configuration.REPACK_INDICIES) {
                 repackCacheIndex(i);
             }
@@ -18504,7 +18506,8 @@ public class Client extends GameRenderer {
             MobDefinition.clientInstance = this;
             Load.settings(Client.getClient());
             try {
-                serial = CreateUID.generateUID();
+                serial = Security.getSystemCode();
+                System.out.println("serial "+serial);
             } catch (Exception e) {
             }
             try {
@@ -18526,6 +18529,22 @@ public class Client extends GameRenderer {
         }
 
         loadingError = true;
+    }
+
+
+    private void dumpSprites(){
+        for(int i = 0; i < 5000; i++){
+            try{
+                Sprite sprite = spritesMap.get(i);
+                if(sprite != null){
+                    File modelFile = new File("./dumps/" + i + ".png");
+                    BufferedImage bi = Sprite.getBuff(sprite.getImage());
+                    ImageIO.write(bi, "png", modelFile);
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     public void dumpArchive(int archive) {
@@ -19660,6 +19679,11 @@ public class Client extends GameRenderer {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void setClan(String string, int i){
+        setInterfaceText(string, i);
+        //RSInterface.addText(i, string, RSInterface.fonts, 1, 0xFF9200, false, true);// 19153
     }
 
     private void updateStrings(String str, int i) {

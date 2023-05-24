@@ -19,7 +19,7 @@ public class Configuration {
 	
 	public static final boolean IS_RUNNING_WINDOWS = true;
 	
-	public final static int CLIENT_VERSION = 31;
+	public final static int CLIENT_VERSION = 35;
 	public static final boolean FORCE_CACHE_UPDATE = true;
 	public static final boolean STOP_CACHE_UPDATES = false;
 	public static final boolean DROPBOX_MODE = false;

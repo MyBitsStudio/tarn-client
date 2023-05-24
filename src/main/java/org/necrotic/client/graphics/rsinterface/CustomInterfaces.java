@@ -4372,6 +4372,8 @@ public class CustomInterfaces extends RSInterface {
 
 	private void clanChatTabInterface() {
 		RSInterface tab = addInterface(29328);
+
+
 		//addHoverButtonWSpriteLoader(29329, 698, 18, 18, "Join Clan", -1, 29330, 1);
 		//addHoveredImageWSpriteLoader(29330, 699, 18, 18, 29331);
 		//addHoverButtonWSpriteLoader(29332, 700, 18, 18, "Leave Clan", -1, 29333, 1);
@@ -4379,32 +4381,30 @@ public class CustomInterfaces extends RSInterface {
 		//addHoverButtonWSpriteLoader(29335, 702, 18, 18, "Settings", -1, 29336, 1);
 		//addHoveredImageWSpriteLoader(29336, 703, 18, 18, 29337);
 		//addButtonWSpriteLoader(29455, 20, "Toggle Lootshare");
-		//addButtonWSpriteLoader(29456, 51, "View players online.");
-		addText(29338, "Clan Chat", 0xff9b00, true, true, tda[1]);
-		addText(29340, "Talking in: @whi@Not in chat", 0xff9b00, false, true, tda[0]);
-		//addText(29454, "Lootshare: @gre@On", 0xff9b00, false, true, 52, tda, 0);
-		//addText(29450, "Owner: None", 0xff9b00, false, true, tda[0]);
-		addClickableText(29454, "Switch to Help Chat", "", tda, 0, 0xff9b00, false, true, 110);
-		addClickableText(29450, "Switch to Raids Chat", "", tda, 0, 0xff9b00, false, true, 110);
-		//addClickableText(29455, "Switch to Market Chat", "", tda, 0, 0xff9b00, false, true, 110);
+		//addButtonWSpriteLoader(29456, 51, "View players online.");;
+
+		addButtonWSpriteLoader(70103, 3075, "@gre@Help");
+		addButtonWSpriteLoader(70104, 3076, "@blu@Trade");
+		addButtonWSpriteLoader(70105, 3077, "@cya@Groups");
+		addButtonWSpriteLoader(70106, 3078, "@yel@Raids");
+		addButtonWSpriteLoader(70107, 3079, "@lre@Staff");
+
+		addText(70108, "Welcome to Chats. Pick a chat below.", 0xff9b00, true, false, -1, 0);
+
 		addSpriteLoader(29339, 705);
-		tab.totalChildren(8);
+		tab.totalChildren(10);
 		tab.child(0, 16126, 0, 236);
 		tab.child(1, 16126, 0, 62);
 		tab.child(2, 29339, 0, 60);
 		tab.child(3, 29343, 0, 62);
-		//tab.child(4, 29329, 8, 239);
-		//tab.child(5, 29330, 8, 239);
-		//tab.child(6, 29332, 25, 239);
-		//tab.child(7, 29333, 25, 239);
-		//tab.child(8, 29335, 42, 239);
-		//tab.child(9, 29336, 42, 239);
-		tab.child(4, 29338, 95, 1);
-		tab.child(5, 29340, 10, 15);
-		tab.child(6, 29450, 10, 41);
-		tab.child(7, 29454, 10, 28);
-		//tab.child(8, 29455, 10, 54);
-		//tab.child(15, 29456, 110, 23);
+
+		tab.child(4, 70103, 25, 28);
+		tab.child(5, 70104, 55, 28);
+		tab.child(6, 70105, 85, 28);
+		tab.child(7, 70106, 115, 28);
+		tab.child(8, 70107, 145, 28);
+		tab.child(9, 70108, 96, 10);
+
 		rebuildClanChatList(false, "", false);
 	}
 
@@ -4414,7 +4414,7 @@ public class CustomInterfaces extends RSInterface {
 			if (clickable && RSInterface.interfaceCache[i].message.length() > 0) {
 				addClanChatListTextWithOptions(i, RSInterface.interfaceCache[i].message, ignore, owner, tda, 0, 0xffffff, 200, 11);
 			} else {
-				addText(i, RSInterface.interfaceCache[i] == null ? "" + i + "" : RSInterface.interfaceCache[i].message, tda, 0, 0xffffff, false, true);
+				addText(i, RSInterface.interfaceCache[i] == null ? "" : RSInterface.interfaceCache[i].message, tda, 0, 0xffffff, false, true);
 			}
 		}
 		RSInterface list = addInterface(29343);
