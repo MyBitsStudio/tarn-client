@@ -44,7 +44,15 @@ public final class ItemDefinition {
                 break;
 
 */
-
+			case 23204:
+				model.setTexture(12);
+				break;
+			case 23205:
+				model.setTexture(91); // 71, 87, 52-- 88?
+				break;
+			case 23203:
+				model.setTexture(12);
+				break;
 			case 299:
 				model.setTexture(87);
 				break;

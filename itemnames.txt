@@ -84727,27 +84727,27 @@ name: Dwarf remains
 finish
 
 Item Id: 23200
-name: Dwarf remains
+name: Raid Key I
 finish
 
 Item Id: 23201
-name: Dwarf remains
+name: Raid Key II
 finish
 
 Item Id: 23202
-name: Dwarf remains
+name: Raid Key III
 finish
 
 Item Id: 23203
-name: Dwarf remains
+name: T-Token
 finish
 
 Item Id: 23204
-name: Dwarf remains
+name: Donator Ticket
 finish
 
 Item Id: 23205
-name: Dwarf remains
+name: Vote Ticket
 finish
 
 Item Id: 23206

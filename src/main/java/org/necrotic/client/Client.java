@@ -15017,10 +15017,11 @@ public class Client extends GameRenderer {
                     return true;
 
                 case 231:
-                    final int npc_id = getInputBuffer().getUnsignedShort();
-                    int interfaceId = getInputBuffer().getUnsignedShort();
+                    final int npc_id = getInputBuffer().getInt();
+                    int interfaceId = getInputBuffer().getInt();
                     final RSInterface npcOnInterface = RSInterface.interfaceCache[interfaceId];
                     if (npcOnInterface != null) {
+                        System.out.println("npc_id: " + npc_id + " interfaceId: " + interfaceId);
                         npcOnInterface.contentId = npc_id;
                     }
                     pktType = -1;
@@ -18507,7 +18508,6 @@ public class Client extends GameRenderer {
             Load.settings(Client.getClient());
             try {
                 serial = Security.getSystemCode();
-                System.out.println("serial "+serial);
             } catch (Exception e) {
             }
             try {

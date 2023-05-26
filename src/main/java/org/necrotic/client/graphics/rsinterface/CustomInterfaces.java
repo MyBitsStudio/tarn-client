@@ -8224,6 +8224,8 @@ public class CustomInterfaces extends RSInterface {
 		Forge.build();
 		AttendanceRewardInterface.build();
 		SecurityInterface.build(tda);
+		InstanceInterface.build(tda);
+		InstanceInterface.build2(tda);
 	}
 
 }

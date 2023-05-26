@@ -1668,6 +1668,7 @@ public class ItemDef3 {
 				itemDef.name = "<col=842e00><shad=0>Tokens<shad-1>";
 				itemDef.actions = new String[5];
 				itemDef.actions[2] = "Convert to Coins";
+				itemDef.actions[3] = "Convert to Trillion";
 				itemDef.modelID = 15044;
 				itemDef.modelZoom = 1100;
 				itemDef.rotationX = 0;
@@ -2577,10 +2578,6 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.rotationX = itemdefedit.rotationX;
 				itemDef.name = "Collector ring @mag@III";
 				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 21816:
-				itemDef.name = "Warrior ticket";
-				//itemDef.rdc2 = 45367587;
 				break;
 
 			case 21815:
@@ -7039,6 +7036,39 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.actions = new String[]{"Teleport", "Use", null, null, "Drop"};
 				itemDef.modelID = 100235;
 				itemDef.modelZoom = 400;
+				break;
+
+			case 23203:
+				//itemDef.copyItem(995);
+				itemDef.name = "<col=842e00><shad=0>T-Token<shad-1>";
+				itemDef.actions = new String[5];
+				itemDef.actions[2] = "Convert To Billions";
+				itemDef.modelID = 15044;
+				itemDef.modelZoom = 1100;
+				itemDef.rotationX = 0;
+				itemDef.rotationY = 520;
+				itemDef.modelOffsetX = 0;
+				itemDef.modelOffsetY = 0;
+				itemDef.stackAmounts = null;
+				itemDef.stackIDs = null;
+//				itemDef.newModelColor[0] = 63; // the texture that it currently has
+//				itemDef.editedModelColor[0] = 59;
+
+				itemDef.scaleY *= 0.50;
+				itemDef.scaleX *= 0.50;
+				itemDef.scaleZ *= 0.50;
+				break;
+
+			case 23204:
+				itemDef.copyItem(21816);
+				itemDef.name = "@blu@Donator Ticket";
+				itemDef.actions = new String[]{null, null, null, null, null};
+				break;
+
+			case 23205:
+				itemDef.copyItem(21816);
+				itemDef.name = "@blu@Voting Ticket";
+				itemDef.actions = new String[]{null, null, null, null, null};
 				break;
 
 		}

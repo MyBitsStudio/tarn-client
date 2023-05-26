@@ -6,7 +6,7 @@ import org.necrotic.client.graphics.fonts.TextDrawingArea;
 
 public class SecurityInterface extends RSInterface {
 
-    public static void build(TextDrawingArea[] tda) {
+    public static void build(TextDrawingArea[] tda) {//image 3045
         RSInterface main = addInterface(70000);
 
         addSpriteLoader(70001, 3324);

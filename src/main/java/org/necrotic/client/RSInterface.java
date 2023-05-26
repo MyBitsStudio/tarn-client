@@ -18,6 +18,8 @@ import org.necrotic.client.graphics.rsinterface.SummoningInterfaceData;
 import org.necrotic.client.io.ByteBuffer;
 import org.necrotic.client.world.Model;
 
+import java.util.Objects;
+
 public class RSInterface {
 
 	public static RSInterface addContainer(int id, int width, int height, int xPad, int yPad, boolean move, String... actions) {
@@ -4882,6 +4884,11 @@ public class RSInterface {
 	public static void addCloseButton(int child, int hoverChild, int hoverImageChild) {
 		addHoverButtonWSpriteLoader(child, 652, 21, 21, "Close", 250, hoverChild, 3);
 		addHoveredImageWSpriteLoader(hoverChild, 653, 21, 21, hoverImageChild);
+	}
+
+	public static void newCloseButton(int child, int hoverChild, int hoverImageChild) {
+		addHoverButtonWSpriteLoader(child, 2318, 21, 21, "Close", 250, hoverChild, 3);
+		addHoveredImageWSpriteLoader(hoverChild, 2317, 21, 21, hoverImageChild);
 	}
 
 	public static void addHoveredImageWSpriteLoader(int i, int spriteId, int w, int h, int imgInterface) {

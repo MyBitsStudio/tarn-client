@@ -260,7 +260,7 @@ public final class MobDefinition {
 				break;
 
 			case 589:
-				definition.name = "Arthrocrian";
+				definition.name = "Crucio";
 				definition.actions = new String[]{null, "Attack", null, null, null};
 				definition.npcModels = new int[]{140651};
 				definition.npcSizeInSquares = 5;
