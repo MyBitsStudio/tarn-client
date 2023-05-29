@@ -11,7 +11,7 @@ public class AttendanceRewardInterface extends RSInterface {
         addText(150_002, "Attendance Rewards", 0xff8624, false, true, 52, 2);
         addCloseButtonSmall(150_003, 150_004, 150_005);
 
-        rsInterface.totalChildren(136);
+        rsInterface.totalChildren(140);
 
         int spriteId = 3366;
         int y = 64;
@@ -38,8 +38,14 @@ public class AttendanceRewardInterface extends RSInterface {
         addConfigButton(150_006, 150_000, 3369, 3370, 78, 20, "Loyal", 0, 5, 178);
         addText(150_007, "Loyal", 0xff8624, false, true, 52, 0);
 
-        addConfigButton(150_136, 150_000, 3371, 3372, 78, 20, "Returning", 1, 5, 178);
-        addText(150_137, "Returning", 0xff8624, false, true, 52, 0);
+        addConfigButton(150_136, 150_000, 3371, 3372, 78, 20, "Donator", 1, 5, 178);
+        addText(150_137, "Donator", 0xff8624, false, true, 52, 0);
+
+        addConfigButton(150_138, 150_000, 3371, 3372, 78, 20, "Summer", 1, 5, 178);
+        addText(150_139, "Summer", 0xff8624, false, true, 52, 0);
+
+        addConfigButton(150_140, 150_000, 3371, 3372, 78, 20, "Event", 1, 5, 178);
+        addText(150_141, "Event", 0xff8624, false, true, 52, 0);
 
         addText(150_008, "Event Period: Oct 1, 2022 (00:00 UTC) - Oct 31 (23:59 UTC).", 0xe4a146, false, true, 52, 1);
         addText(150_009, "Claim Period Until Oct 31 (23:59 UTC).", 0xe4a146, false, true, 52, 1);
@@ -60,5 +66,9 @@ public class AttendanceRewardInterface extends RSInterface {
 
         rsInterface.child(134, 150_136, 125, 40);
         rsInterface.child(135, 150_137, 144, 45);
+        rsInterface.child(136, 150_138, 213, 40);
+        rsInterface.child(137, 150_139, 239, 45);
+        rsInterface.child(138, 150_140, 301, 40);
+        rsInterface.child(139, 150_141, 334, 45);
     }
 }

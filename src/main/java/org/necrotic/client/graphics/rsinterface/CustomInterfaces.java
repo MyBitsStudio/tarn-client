@@ -4433,9 +4433,9 @@ public class CustomInterfaces extends RSInterface {
 
 	private void redoSpellBooks() {
 		RSInterface newInterface = addTabInterface(11000);
-		RSInterface spellButtons = interfaceCache[1151];
+		RSInterface spellButtons;
 		RSInterface spellButtons1 = interfaceCache[12424];
-		newInterface.totalChildren(13);
+		newInterface.totalChildren(9);
 		/**
 		 * Modern spellbook
 		 */
@@ -4444,30 +4444,30 @@ public class CustomInterfaces extends RSInterface {
 		newInterface.child(0, 1151, 13, 32);
 
 		int x = 10;
-		addHoverButtonWSpriteLoader(11001, 706, 18, 18, "Select", -1, 11002, 1);
+		addHoverButtonWSpriteLoader(11001, 2351, 18, 18, "Teleport", -1, 11002, 1);
 		addTooltip(11002, "Home Teleport\nTeleport to set home location.");
 		newInterface.child(1, 11001, 8 + x, 16);
 		newInterface.child(2, 11002, 10 + x, 39);
-		addHoverButtonWSpriteLoader(11004, 711, 18, 18, "Select", -1, 11005, 1);
-		addTooltip(11005, "Monster Teleport\nOpen options of different \nmonster teleports.");
-		newInterface.child(3, 11004, 34 + x, 16);
-		newInterface.child(4, 11005, 30 + x, 39);
-		addHoverButtonWSpriteLoader(11008, 710, 18, 18, "Select", -1, 11009, 1);
-		addTooltip(11009, "Boss Teleport\nOpen options of different \nboss teleports.");
-		newInterface.child(5, 11008, 60 + x, 16);
-		newInterface.child(6, 11009, 40 + x, 39);
-		addHoverButtonWSpriteLoader(11011, 711, 18, 18, "Select", -1, 11012, 1);
-		addTooltip(11012, "Minigame Teleport\nOpen options of different\nminigame teleports.");
-		newInterface.child(7, 11011, 86 + x, 16);
-		newInterface.child(8, 11012, 23 + x, 39);
-		addHoverButtonWSpriteLoader(11014, 709, 18, 18, "Select", -1, 11015, 1);
-		addTooltip(11015, "Dungeon Teleport\nOpen options of different\ndungeon teleports.");
-		newInterface.child(9, 11014, 112 + x, 16);
-		newInterface.child(10, 11015, 23 + x, 39);
-		addHoverButtonWSpriteLoader(11017, 711, 18, 18, "Select", -1, 11018, 1);
-		addTooltip(11018, "Misc Teleport\nOpen options of different\nmisc teleports.");
-		newInterface.child(11, 11017, 138 + x, 16);
-		newInterface.child(12, 11018, 34 + x, 39);
+		addHoverButtonWSpriteLoader(11004, 1942, 18, 18, "Teleport", -1, 11005, 1);
+		addTooltip(11005, "Instance Zone\nTeleports you to the \nInstance Zone.");
+		newInterface.child(3, 11004, 56 + x, 16);
+		newInterface.child(4, 11005, 34 + x, 39);
+		addHoverButtonWSpriteLoader(11008, 1944, 18, 18, "Teleport", -1, 11009, 1);
+		addTooltip(11009, "Raids Lobby\nTeleports you to the \nRaid Lobby.");
+		newInterface.child(5, 11008, 96 + x, 16);
+		newInterface.child(6, 11009, 21 + x, 39);
+		addHoverButtonWSpriteLoader(11011, 1940, 18, 18, "Teleport", -1, 11012, 1);
+		addTooltip(11012, "Youtube Zone\nTeleports you to the \nYoutube Zone.");
+		newInterface.child(7, 11011, 139 + x, 16);
+		newInterface.child(8, 11012, 32 + x, 39);
+//		addHoverButtonWSpriteLoader(11014, 709, 18, 18, "Select", -1, 11015, 1);
+//		addTooltip(11015, "Dungeon Teleport\nOpen options of different\ndungeon teleports.");
+//		newInterface.child(9, 11014, 112 + x, 16);
+//		newInterface.child(10, 11015, 23 + x, 39);
+//		addHoverButtonWSpriteLoader(11017, 711, 18, 18, "Select", -1, 11018, 1);
+//		addTooltip(11018, "Misc Teleport\nOpen options of different\nmisc teleports.");
+//		newInterface.child(11, 11017, 138 + x, 16);
+//		newInterface.child(12, 11018, 34 + x, 39);
 
 		interfaceCache[1164] = interfaceCache[1165];
 		interfaceCache[1165] = interfaceCache[1166];
@@ -8224,7 +8224,6 @@ public class CustomInterfaces extends RSInterface {
 		Forge.build();
 		AttendanceRewardInterface.build();
 		SecurityInterface.build(tda);
-		InstanceInterface.build(tda);
 		InstanceInterface.build2(tda);
 	}
 

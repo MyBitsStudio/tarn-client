@@ -8,35 +8,35 @@ public class ItemDef4 {
 		ItemDefinition finity;
 		switch (id) {
 
-			case 17815:
-				itemDef.name = "Raw fury shark";
-				itemDef2 = ItemDefinition.get(20429);
-				itemDef.modelOffsetX = itemDef2.modelOffsetX;
-				//	itemDef.modelOffsetX = itemDef2.modelOffsetX;
-				itemDef.modelOffsetY = itemDef2.modelOffsetY;
-				itemDef.modelZoom = itemDef2.modelZoom;
-				itemDef.rotationY = itemDef2.rotationY;
-				itemDef.rotationX = itemDef2.rotationX;
-				itemDef.modelID = itemDef2.modelID;
-
-				//itemDef.rdc2 = 3262;
-				break;
-			case 9079:
-				itemDef.name = "Collector Donation [Special]";
-				itemDef2 = ItemDefinition.get(15287);
-				itemDef.modelOffsetX = itemDef2.modelOffsetX;
-				//	itemDef.modelOffsetX = itemDef2.modelOffsetX;
-				itemDef.modelOffsetY = itemDef2.modelOffsetY;
-				itemDef.modelZoom = itemDef2.modelZoom;
-				itemDef.rotationY = itemDef2.rotationY;
-				itemDef.rotationX = itemDef2.rotationX;
-				itemDef.modelID = itemDef2.modelID;
-				itemDef.actions = new String[5];
-				itemDef.actions[4] = "Drop";
-				itemDef.actions[0] = "Claim";
-
-				itemDef.rdc2 = 3262;
-				break;
+//			case 17815:
+//				itemDef.name = "Raw fury shark";
+//				itemDef2 = ItemDefinition.get(20429);
+//				itemDef.modelOffsetX = itemDef2.modelOffsetX;
+//				//	itemDef.modelOffsetX = itemDef2.modelOffsetX;
+//				itemDef.modelOffsetY = itemDef2.modelOffsetY;
+//				itemDef.modelZoom = itemDef2.modelZoom;
+//				itemDef.rotationY = itemDef2.rotationY;
+//				itemDef.rotationX = itemDef2.rotationX;
+//				itemDef.modelID = itemDef2.modelID;
+//
+//				//itemDef.rdc2 = 3262;
+//				break;
+//			case 9079:
+//				itemDef.name = "Collector Donation [Special]";
+//				itemDef2 = ItemDefinition.get(15287);
+//				itemDef.modelOffsetX = itemDef2.modelOffsetX;
+//				//	itemDef.modelOffsetX = itemDef2.modelOffsetX;
+//				itemDef.modelOffsetY = itemDef2.modelOffsetY;
+//				itemDef.modelZoom = itemDef2.modelZoom;
+//				itemDef.rotationY = itemDef2.rotationY;
+//				itemDef.rotationX = itemDef2.rotationX;
+//				itemDef.modelID = itemDef2.modelID;
+//				itemDef.actions = new String[5];
+//				itemDef.actions[4] = "Drop";
+//				itemDef.actions[0] = "Claim";
+//
+//				itemDef.rdc2 = 3262;
+//				break;
 			case 9080:
 				itemDef.name = "@cya@Mega Part @or1@[1]";
 				itemDef2 = ItemDefinition.get(15287);
@@ -107,22 +107,22 @@ public class ItemDef4 {
 				itemDef.actions[4] = "Drop";
 				itemDef.rdc2 = 39922;
 				break;
-			case 9085:
-				itemDef.name = "Weapon set Donation  [Special]";
-				itemDef2 = ItemDefinition.get(15287);
-				itemDef.modelOffsetX = itemDef2.modelOffsetX;
-				//	itemDef.modelOffsetX = itemDef2.modelOffsetX;
-				itemDef.modelOffsetY = itemDef2.modelOffsetY;
-				itemDef.modelZoom = itemDef2.modelZoom;
-				itemDef.rotationY = itemDef2.rotationY;
-				itemDef.rotationX = itemDef2.rotationX;
-				itemDef.modelID = itemDef2.modelID;
-				itemDef.actions = new String[5];
-				itemDef.actions[4] = "Drop";
-				itemDef.actions[0] = "Claim";
-
-				itemDef.rdc2 = 2395328;
-				break;
+//			case 9085:
+//				itemDef.name = "Weapon set Donation [Special]";
+//				itemDef2 = ItemDefinition.get(15287);
+//				itemDef.modelOffsetX = itemDef2.modelOffsetX;
+//				//	itemDef.modelOffsetX = itemDef2.modelOffsetX;
+//				itemDef.modelOffsetY = itemDef2.modelOffsetY;
+//				itemDef.modelZoom = itemDef2.modelZoom;
+//				itemDef.rotationY = itemDef2.rotationY;
+//				itemDef.rotationX = itemDef2.rotationX;
+//				itemDef.modelID = itemDef2.modelID;
+//				itemDef.actions = new String[5];
+//				itemDef.actions[4] = "Drop";
+//				itemDef.actions[0] = "Claim";
+//
+//				itemDef.rdc2 = 2395328;
+//				break;
 			case 17817:
 				itemDef.name = "Fury shark";
 				itemDef2 = ItemDefinition.get(20429);

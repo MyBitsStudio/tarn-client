@@ -5,86 +5,6 @@ import org.necrotic.client.RSInterface;
 import org.necrotic.client.graphics.fonts.TextDrawingArea;
 
 public class InstanceInterface extends RSInterface {
-
-    public static void build(TextDrawingArea[] tda){
-        RSInterface main = addInterface(70100);
-
-        addSpriteLoader(70101, 3028);
-        addButtonWSpriteLoader(70102, 459, "@yel@Instance Info");
-        addText(70103, "Instance Manager", ColorConstants.PURPLE, true, true, -1, 2);
-        newCloseButton(70104, 70105, 70106);
-
-        addText(70107, "Multi", ColorConstants.PURPLE, true, true, -1, 2);
-        addText(70108, "Single", ColorConstants.PURPLE, true, true, -1, 2);
-        addText(70109, "Special", ColorConstants.PURPLE, true, true, -1, 2);
-
-        addText(70110, "Req : ", ColorConstants.PURPLE, true, true, -1, 1);
-        addText(70111, "50k Goku Kills", ColorConstants.PURPLE, true, true, -1, 1);
-
-        addText(70112, "Diff : ", ColorConstants.PURPLE, true, true, -1, 1);
-        addText(70113, "FUCKING INSANE", ColorConstants.SLATE_BLUE, true, true, -1, 1);
-
-        addSpriteLoader(70114, 2713);
-
-        RSInterface scroll = RSInterface.addInterface(70200);
-        RSInterface scroll2 = RSInterface.addInterface(70300);
-        RSInterface scroll3 = RSInterface.addInterface(70400);
-
-        scroll.width = 130;
-        scroll.height = 143;
-        scroll.scrollMax = 870;
-
-        scroll2.width = 130;
-        scroll2.height = 143;
-        scroll2.scrollMax = 870;
-
-        scroll3.width = 130;
-        scroll3.height = 143;
-        scroll3.scrollMax = 870;
-
-        int npcList = 57;
-        int y = 1;
-        for (int i = 0; i < npcList; i++) {
-            addText(70201 + i, "b", tda, 1, ClientConstants.BURGUNDY, false, false, ClientConstants.WHITE, "Select", 150);
-            addText(70301 + i, "b", tda, 1, ClientConstants.BURGUNDY, false, false, ClientConstants.WHITE, "Select", 150);
-            addText(70401 + i, "b", tda, 1, ClientConstants.BURGUNDY, false, false, ClientConstants.WHITE, "Select", 150);
-        }
-
-        scroll.totalChildren(npcList);
-        scroll2.totalChildren(npcList);
-        scroll3.totalChildren(npcList);
-
-        for (int i = 0; i < npcList; i++) {
-            scroll.child(i, 70201 + i, 0, y);
-            scroll2.child(i, 70301 + i, 0, y);
-            scroll3.child(i, 70401 + i, 0, y);
-            y += 15;
-        }
-
-        main.totalChildren(16);
-        main.child(0, 70101, 5, 20);
-        main.child(1, 70102, 25, 27);
-        main.child(2, 70103, 250, 27);
-        main.child(3, 70104, 455, 26);
-        main.child(4, 70105, 455, 26);
-
-        main.child(5, 70200, 19, 161);
-        main.child(6, 70300, 178, 161);
-        main.child(7, 70400, 336, 161);
-
-        main.child(8, 70107, 76, 141);
-        main.child(9, 70108, 244, 141);
-        main.child(10, 70109, 406, 141);
-
-        main.child(11, 70110, 87, 65);
-        main.child(12, 70111, 149, 66);
-        main.child(13, 70112, 87, 90);
-        main.child(14, 70113, 149, 91);
-
-        main.child(15, 70114, 28, 70);
-
-    }
-
     public static void build2(TextDrawingArea[] tda){
         RSInterface main = addInterface(70500);
 
@@ -136,6 +56,7 @@ public class InstanceInterface extends RSInterface {
 
         addButtonWSpriteLoader(70534, 2991, "Change Difficulty");
         addButtonWSpriteLoader(70535, 3181, "Start Instance");
+        addButtonWSpriteLoader(70542, 2876, "Restart");
 
         addText(70541, "START", ColorConstants.ORA, true, true, -1, 2);
 
@@ -181,7 +102,7 @@ public class InstanceInterface extends RSInterface {
             y += 35;
         }
 
-        main.totalChildren(42);
+        main.totalChildren(43);
         main.child(0, 70501, 5, 10);
         main.child(1, 70502, 250, 19);
         main.child(2, 70503, 455, 16);
@@ -226,14 +147,15 @@ public class InstanceInterface extends RSInterface {
         main.child(33, 70533, 150, 275);
 
         main.child(34, 70534, 315, 291);
-        main.child(35, 70535, 385, 288);
+        main.child(35, 70535, 405, 288);
 
         main.child(36, 70536, 318, 51);
         main.child(37, 70537, 349, 51);
         main.child(38, 70538, 380, 51);
         main.child(39, 70539, 411, 51);
         main.child(40, 70540, 442, 51);
-        main.child(41, 70541, 422, 293);
+        main.child(41, 70541, 442, 293);
+        main.child(42, 70542, 370, 288);
 
     }
 }

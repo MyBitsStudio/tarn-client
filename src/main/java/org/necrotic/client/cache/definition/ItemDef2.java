@@ -3866,7 +3866,6 @@ itemDef.actions[2] = "Dissolve";
 				break;
 
 
-
 			case 8788:
 				itemDef.name = "Transfer Crystal";
 				itemDef.rdc2 = 91291;

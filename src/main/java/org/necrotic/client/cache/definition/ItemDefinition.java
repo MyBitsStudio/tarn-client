@@ -865,17 +865,17 @@ public final class ItemDefinition {
 				break;
 
 
-			case 4278:
-				itemDef.name = "Instance Token";
-				itemDef.actions = new String[]{"Open", null, "Last instance", null, "Destroy"};
-				break;
+//			case 4278:
+//				itemDef.name = "Instance Token";
+//				itemDef.actions = new String[]{"Open", null, "Last instance", null, "Destroy"};
+//				break;
 
-			case 12855:
-				itemDef.name = "@yel@Upgrade Tokens";
-				itemDef.modelID = 77799;
-				itemDef.modelZoom = 3000;
-				itemDef.actions = new String[]{"Activate", null, null, null, "Drop"};
-				break;
+//			case 12855:
+//				itemDef.name = "@yel@Upgrade Tokens";
+//				itemDef.modelID = 77799;
+//				itemDef.modelZoom = 3000;
+//				itemDef.actions = new String[]{"Activate", null, null, null, "Drop"};
+//				break;
 			case 1563:
 			case 1564:
 			case 1562:
@@ -962,9 +962,9 @@ public final class ItemDefinition {
 				itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
 				break;
 
-			case 20061:
-				itemDef.name = "Welcome Crate";
-				break;
+//			case 20061:
+//				itemDef.name = "Welcome Crate";
+//				break;
 			case 15682:
 				itemDef.name = "Vote Crate";
 				itemDef.actions = new String[]{"Open", null, null, null, "Drop"};
@@ -1195,19 +1195,19 @@ public final class ItemDefinition {
 			case 18355:
 				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				break;
-			case 19670:
-				itemDef.name = "Vote scroll";
-				itemDef.actions = new String[5];
-				itemDef.actions[4] = "Drop";
-				itemDef.actions[0] = "Claim";
-				itemDef.actions[2] = "Claim-All";
-				break;
-			case 10944:
-				itemDef.name = "Member scroll";
-				itemDef.actions = new String[5];
-				itemDef.actions[4] = "Drop";
-				itemDef.actions[0] = "Claim";
-				break;
+//			case 19670:
+//				itemDef.name = "Vote scroll";
+//				itemDef.actions = new String[5];
+//				itemDef.actions[4] = "Drop";
+//				itemDef.actions[0] = "Claim";
+//				itemDef.actions[2] = "Claim-All";
+//				break;
+//			case 10944:
+//				itemDef.name = "Member scroll";
+//				itemDef.actions = new String[5];
+//				itemDef.actions[4] = "Drop";
+//				itemDef.actions[0] = "Claim";
+//				break;
 
 			case 10034:
 			case 10033:
@@ -2129,34 +2129,34 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.name = "Golden Maul";
 				break;
 			case 6199:
-				itemDef.name = "Mystery Box";
-				itemDef.actions = new String[5];
+//				itemDef.name = "Mystery Box";
+//				itemDef.actions = new String[5];
+//
+//				itemDef.actions[0] = "Open";
+//				break;
 
-				itemDef.actions[0] = "Open";
-				break;
-
-			case 290:
-				itemDef.name = "Loot box";
-				itemDef.actions = new String[5];
-				itemDef.actions[0] = "Open";
-				break;
-			case 6198:
-				itemDef.name = "3% Droprate Pet";
-				itemDef21 = ItemDefinition.get(6199);
-				itemDef.actions = new String[5];
-				itemDef.actions[0] = "Open";
-				itemDef21 = ItemDefinition.get(6199);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				// itemDef.modelID = itemDef2.modelID;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.newModelColor = new int[]{63};
-				itemDef.editedModelColor = new int[]{66};
-				itemDef.modelID = 65284;
-				break;
+//			case 290:
+//				itemDef.name = "Loot box";
+//				itemDef.actions = new String[5];
+//				itemDef.actions[0] = "Open";
+//				break;
+//			case 6198:
+//				itemDef.name = "3% Droprate Pet";
+//				itemDef21 = ItemDefinition.get(6199);
+//				itemDef.actions = new String[5];
+//				itemDef.actions[0] = "Open";
+//				itemDef21 = ItemDefinition.get(6199);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.rotationZ = itemDef21.rotationZ;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = itemDef21.modelZoom;
+//				// itemDef.modelID = itemDef2.modelID;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.newModelColor = new int[]{63};
+//				itemDef.editedModelColor = new int[]{66};
+//				itemDef.modelID = 65284;
+//				break;
 			case 10947:
 				itemDef.name = "@red@Supreme Attachment";
 
@@ -2555,7 +2555,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.scaleZ *= 0.50;
 				break;
 			case 19659:
-				itemDef.name = "Super Box";
+				itemDef.name = "Summer's Present";
 				itemDef.actions = new String[5];
 				itemDef.actions[0] = "Open";
 				itemDef21 = ItemDefinition.get(6199);
@@ -2570,72 +2570,72 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.modelID = 64099;
 				itemDef.rdc2 = 32521;
 				break;
-			case 19114:
-				itemDef.name = "Weapon Box";
-				itemDef.actions = new String[5];
-				itemDef.actions[0] = "Open";
-				itemDef21 = ItemDefinition.get(6199);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				// itemDef.modelID = itemDef2.modelID;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.newModelColor = new int[]{63};
-				itemDef.editedModelColor = new int[]{66};
-				itemDef.modelID = 65284;
-				break;
-
-			case 18404:
-				itemDef.name = "@whi@Raids Box";
-				itemDef.actions = new String[5];
-				itemDef.actions[0] = "Open";
-				itemDef21 = ItemDefinition.get(6199);
-				itemDef.modelOffsetX = 2;
-				itemDef.modelOffsetY = 1;
-				itemDef.modelZoom = 850;
-				itemDef.rotationY = 100;
-				itemDef.rotationX = 90;
-				itemDef.modelID = 15112;
-				
-				//itemDef.rdc2 = 988331;
-				itemDef.scaleY *= 0.50;
-				itemDef.scaleX *= 0.50;
-				itemDef.scaleZ *= 0.50;
-				break;
-			case 19115:
-				itemDef.name = "Extreme Mystery Box";
-				itemDef.actions = new String[5];
-				itemDef.actions[0] = "Open";
-				itemDef21 = ItemDefinition.get(6199);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				// itemDef.modelID = itemDef2.modelID;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.newModelColor = new int[]{63};
-				itemDef.editedModelColor = new int[]{64};
-				itemDef.modelID = 65284;
-				break;
-			case 19116:
-				itemDef.name = "Super Mystery Box";
-				itemDef.actions = new String[5];
-				itemDef.actions[0] = "Open";
-				itemDef21 = ItemDefinition.get(6199);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				// itemDef.modelID = itemDef2.modelID;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.newModelColor = new int[]{63};
-				itemDef.editedModelColor = new int[]{65};
-				itemDef.modelID = 65284;
-				break;
+//			case 19114:
+//				itemDef.name = "Weapon Box";
+//				itemDef.actions = new String[5];
+//				itemDef.actions[0] = "Open";
+//				itemDef21 = ItemDefinition.get(6199);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.rotationZ = itemDef21.rotationZ;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = itemDef21.modelZoom;
+//				// itemDef.modelID = itemDef2.modelID;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.newModelColor = new int[]{63};
+//				itemDef.editedModelColor = new int[]{66};
+//				itemDef.modelID = 65284;
+//				break;
+//
+//			case 18404:
+//				itemDef.name = "@whi@Raids Box";
+//				itemDef.actions = new String[5];
+//				itemDef.actions[0] = "Open";
+//				itemDef21 = ItemDefinition.get(6199);
+//				itemDef.modelOffsetX = 2;
+//				itemDef.modelOffsetY = 1;
+//				itemDef.modelZoom = 850;
+//				itemDef.rotationY = 100;
+//				itemDef.rotationX = 90;
+//				itemDef.modelID = 15112;
+//
+//				//itemDef.rdc2 = 988331;
+//				itemDef.scaleY *= 0.50;
+//				itemDef.scaleX *= 0.50;
+//				itemDef.scaleZ *= 0.50;
+//				break;
+//			case 19115:
+//				itemDef.name = "Extreme Mystery Box";
+//				itemDef.actions = new String[5];
+//				itemDef.actions[0] = "Open";
+//				itemDef21 = ItemDefinition.get(6199);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.rotationZ = itemDef21.rotationZ;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = itemDef21.modelZoom;
+//				// itemDef.modelID = itemDef2.modelID;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.newModelColor = new int[]{63};
+//				itemDef.editedModelColor = new int[]{64};
+//				itemDef.modelID = 65284;
+//				break;
+//			case 19116:
+//				itemDef.name = "Super Mystery Box";
+//				itemDef.actions = new String[5];
+//				itemDef.actions[0] = "Open";
+//				itemDef21 = ItemDefinition.get(6199);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.rotationZ = itemDef21.rotationZ;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = itemDef21.modelZoom;
+//				// itemDef.modelID = itemDef2.modelID;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.newModelColor = new int[]{63};
+//				itemDef.editedModelColor = new int[]{65};
+//				itemDef.modelID = 65284;
+//				break;
 			case 6568: // To replace Transparent black with opaque black.
 				itemDef.newModelColor = new int[1];
 				itemDef.editedModelColor = new int[1];
@@ -7525,70 +7525,70 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.editedModelColor = new int[]{54};
 				//	itemDef.rdc2 = 9999;
 				break;
-			case 19119:
-				itemDef.name = "<img=6>Donator Rank Ticket";
-				itemDef.actions = new String[5];
-				itemDef.actions[4] = "Drop";
-				itemDef.actions[0] = "Claim";
-				itemDef21 = ItemDefinition.get(10944);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.modelID = itemDef21.modelID;
-				itemDef.actions = new String[]{"Inspect", null, "Claim-rank", null, "Drop"};
-				// itemDef.rdc2 = 55555;
-				break;
-			case 19120:
-				itemDef.name = "<img=7>Super Rank Ticket";
-				itemDef.actions = new String[5];
-				itemDef.actions[4] = "Drop";
-				itemDef.actions[0] = "Claim";
-				itemDef21 = ItemDefinition.get(10944);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.modelID = itemDef21.modelID;
-				itemDef.actions = new String[]{"Inspect", null, "Claim-rank", null, "Drop"};
-				// itemDef.rdc2 = 22222;
-				break;
-			case 19121:
-				itemDef.name = "<img=8>Extreme Rank Ticket";
-				itemDef.actions = new String[5];
-				itemDef.actions[4] = "Drop";
-				itemDef.actions[0] = "Claim";
-				itemDef21 = ItemDefinition.get(10944);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.modelID = itemDef21.modelID;
-				itemDef.actions = new String[]{"Inspect", null, "Claim-rank", null, "Drop"};
-				// itemDef.rdc2 = 11111;
-				break;
-			case 19122:
-				itemDef.name = "<img=9>Sponsor Rank Ticket";
-				itemDef.actions = new String[5];
-				itemDef.actions[4] = "Drop";
-				itemDef.actions[0] = "Claim";
-				itemDef21 = ItemDefinition.get(10944);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.modelID = itemDef21.modelID;
-				itemDef.actions = new String[]{"Inspect", null, "Claim-rank", null, "Drop"};
-				// itemDef.rdc2 = 44444;
-				break;
+//			case 19119:
+//				itemDef.name = "<img=6>Donator Rank Ticket";
+//				itemDef.actions = new String[5];
+//				itemDef.actions[4] = "Drop";
+//				itemDef.actions[0] = "Claim";
+//				itemDef21 = ItemDefinition.get(10944);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.rotationZ = itemDef21.rotationZ;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = itemDef21.modelZoom;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.modelID = itemDef21.modelID;
+//				itemDef.actions = new String[]{"Inspect", null, "Claim-rank", null, "Drop"};
+//				// itemDef.rdc2 = 55555;
+//				break;
+//			case 19120:
+//				itemDef.name = "<img=7>Super Rank Ticket";
+//				itemDef.actions = new String[5];
+//				itemDef.actions[4] = "Drop";
+//				itemDef.actions[0] = "Claim";
+//				itemDef21 = ItemDefinition.get(10944);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.rotationZ = itemDef21.rotationZ;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = itemDef21.modelZoom;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.modelID = itemDef21.modelID;
+//				itemDef.actions = new String[]{"Inspect", null, "Claim-rank", null, "Drop"};
+//				// itemDef.rdc2 = 22222;
+//				break;
+//			case 19121:
+//				itemDef.name = "<img=8>Extreme Rank Ticket";
+//				itemDef.actions = new String[5];
+//				itemDef.actions[4] = "Drop";
+//				itemDef.actions[0] = "Claim";
+//				itemDef21 = ItemDefinition.get(10944);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.rotationZ = itemDef21.rotationZ;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = itemDef21.modelZoom;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.modelID = itemDef21.modelID;
+//				itemDef.actions = new String[]{"Inspect", null, "Claim-rank", null, "Drop"};
+//				// itemDef.rdc2 = 11111;
+//				break;
+//			case 19122:
+//				itemDef.name = "<img=9>Sponsor Rank Ticket";
+//				itemDef.actions = new String[5];
+//				itemDef.actions[4] = "Drop";
+//				itemDef.actions[0] = "Claim";
+//				itemDef21 = ItemDefinition.get(10944);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.rotationZ = itemDef21.rotationZ;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = itemDef21.modelZoom;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.modelID = itemDef21.modelID;
+//				itemDef.actions = new String[]{"Inspect", null, "Claim-rank", null, "Drop"};
+//				// itemDef.rdc2 = 44444;
+//				break;
 			case 20094:// tetsu
 				itemDef.name = "Extetsu helm";
 				itemDef.modelID = 65412;
@@ -8569,12 +8569,12 @@ itemDef.actions[2] = "Dissolve";
 			case 3550:
 				itemDef.name = "Clue scroll";
 				break;
-			case 15752:
-			case 15751:
-			case 15750:
-				itemDef.name = "Saber Crystal";
-				itemDef.actions = new String[]{"Break-crystal", null, null, null, "Destroy"};
-				break;
+//			case 15752:
+//			case 15751:
+//			case 15750:
+//				itemDef.name = "Saber Crystal";
+//				itemDef.actions = new String[]{"Break-crystal", null, null, null, "Destroy"};
+//				break;
 			case 2946:
 				itemDef.actions = new String[]{"Open", null, null, null, "Destroy"};
 				break;
