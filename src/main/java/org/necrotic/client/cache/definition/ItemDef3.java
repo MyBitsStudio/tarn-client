@@ -7071,6 +7071,23 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.actions = new String[]{null, null, null, null, null};
 				break;
 
+			case 23206:
+				itemDef.copyItem(20435);
+				itemDef.name = "@blu@AOE Token";
+				itemDef.actions = new String[]{null, null, null, null, null};
+				break;
+
+			case 23207:
+				itemDef.copyItem(20435);
+				itemDef.name = "@blu@Drop Rate Token";
+				itemDef.actions = new String[]{null, null, null, null, null};
+				break;
+
+			case 23208:
+				itemDef.copyItem(20435);
+				itemDef.name = "@blu@Damage High Token";
+				itemDef.actions = new String[]{null, null, null, null, null};
+				break;
 		}
 		return itemDef;
 	}

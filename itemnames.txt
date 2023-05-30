@@ -84751,15 +84751,15 @@ name: Vote Ticket
 finish
 
 Item Id: 23206
-name: Dwarf remains
+name: AOE Token
 finish
 
 Item Id: 23207
-name: Dwarf remains
+name: Drop Rate Token
 finish
 
 Item Id: 23208
-name: Dwarf remains
+name: Damage High Token
 finish
 
 Item Id: 23209
