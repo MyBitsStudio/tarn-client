@@ -32,7 +32,7 @@ public class ItemDef3 {
 				break;
 			case 23002:
 				itemDef.copyItem(6199);
-				itemDef.name = "Fortune Chest";
+				itemDef.name = "Owner Chest";
 				itemDef.modelID = 100054;
 				itemDef.modelZoom = 936;
 				itemDef.rotationX = 110;
@@ -7014,80 +7014,6 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.scaleZ *= 0.50;
 				break;
 
-			case 23200:
-				itemDef.copyItem(23107);
-				itemDef.name = "Raid Key I";
-				itemDef.actions = new String[]{"Teleport", "Use", null, null, "Drop"};
-				itemDef.modelID = 100235;
-				itemDef.modelZoom = 400;
-				break;
-
-			case 23201:
-				itemDef.copyItem(23107);
-				itemDef.name = "Raid Key II";
-				itemDef.actions = new String[]{"Teleport", "Use", null, null, "Drop"};
-				itemDef.modelID = 100235;
-				itemDef.modelZoom = 400;
-				break;
-
-			case 23202:
-				itemDef.copyItem(23107);
-				itemDef.name = "Raid Key III";
-				itemDef.actions = new String[]{"Teleport", "Use", null, null, "Drop"};
-				itemDef.modelID = 100235;
-				itemDef.modelZoom = 400;
-				break;
-
-			case 23203:
-				//itemDef.copyItem(995);
-				itemDef.name = "<col=842e00><shad=0>T-Token<shad-1>";
-				itemDef.actions = new String[5];
-				itemDef.actions[2] = "Convert To Billions";
-				itemDef.modelID = 15044;
-				itemDef.modelZoom = 1100;
-				itemDef.rotationX = 0;
-				itemDef.rotationY = 520;
-				itemDef.modelOffsetX = 0;
-				itemDef.modelOffsetY = 0;
-				itemDef.stackAmounts = null;
-				itemDef.stackIDs = null;
-//				itemDef.newModelColor[0] = 63; // the texture that it currently has
-//				itemDef.editedModelColor[0] = 59;
-
-				itemDef.scaleY *= 0.50;
-				itemDef.scaleX *= 0.50;
-				itemDef.scaleZ *= 0.50;
-				break;
-
-			case 23204:
-				itemDef.copyItem(21816);
-				itemDef.name = "@blu@Donator Ticket";
-				itemDef.actions = new String[]{null, null, null, null, null};
-				break;
-
-			case 23205:
-				itemDef.copyItem(21816);
-				itemDef.name = "@blu@Voting Ticket";
-				itemDef.actions = new String[]{null, null, null, null, null};
-				break;
-
-			case 23206:
-				itemDef.copyItem(20435);
-				itemDef.name = "@blu@AOE Token";
-				itemDef.actions = new String[]{null, null, null, null, null};
-				break;
-
-			case 23207:
-				itemDef.copyItem(20435);
-				itemDef.name = "@blu@Drop Rate Token";
-				itemDef.actions = new String[]{null, null, null, null, null};
-				break;
-
-			case 23208:
-				itemDef.copyItem(20435);
-				itemDef.name = "@blu@Damage High Token";
-				itemDef.actions = new String[]{null, null, null, null, null};
-				break;
 		}
 		return itemDef;
 	}

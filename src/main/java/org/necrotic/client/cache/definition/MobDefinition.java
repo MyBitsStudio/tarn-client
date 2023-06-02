@@ -302,7 +302,7 @@ public final class MobDefinition {
 				break;
 
 			case 1880:
-				definition.name = "@or2@YouTube Soldier";
+				definition.name = "@or2@Ironman Boss";
 				definition.actions = new String[]{null, "Attack", null, null, null};
 				definition.npcModels = new int[]{97666};
 				definition.npcSizeInSquares = 5;
@@ -370,7 +370,7 @@ public final class MobDefinition {
 				definition.npcSizeInSquares = 3;
 				definition.rdc2 = 565;
 				break;
-			case 1120:
+			case 1120://corrupt
 				definition.name = "Vasa Nistirio";
 				definition.description = "Olm Dragon.".getBytes();
 				definition.npcModels = new int[]{64328};
@@ -632,7 +632,7 @@ public final class MobDefinition {
 				definition.scaleY = 32;
 				break;
 			case 9022:
-				definition.name = "<col=ff00fb>Server Perks";
+				definition.name = "<col=ff00fb>Server Perks"; //Corrupt
 				definition.npcModels = new int[]{100055};
 				definition.combatLevel = 0;
 				definition.standAnimation = -1;
@@ -762,7 +762,7 @@ public final class MobDefinition {
 
 			//
 
-			case 9028:
+			case 9028: //Corrupt
 				definition.setDefault();
 				definition.name = "Mystic of the Light";
 				definition.npcModels = new int[]{100097};
@@ -875,7 +875,7 @@ public final class MobDefinition {
 				definition.scaleXZ = 128;
 				definition.scaleY = 128;
 				break;
-			case 9802:
+			case 9802: // corrupt
 				definition.setDefault();
 				definition.name = "Nymora";
 				definition.npcModels = new int[]{100146};
@@ -1591,23 +1591,23 @@ public final class MobDefinition {
 				definition.actions = new String[]{"Harpoon", null, null, null, null, null, null};
 				definition.rdc2 = 633;
 				break;
-			case 2577:
-				definition.name = "Xxsk1ll3zxx";
-				definition.description = "I hope that's the last time I ever type your name.".getBytes();
-				definition.actions = new String[6];
-				definition.actions[0] = "Talk-to";
-				definition.actions[2] = "Follow";
-				definition.actions[3] = "Trade";
-				break;
-			case 2643:
-				definition.name = "Kids Ranq";
-				definition.description = "Stupid noob uses a magic shortbow? Lol l2pk scrub.".getBytes();
-				definition.actions = new String[6];
-				definition.actions[0] = "Talk-to";
-				definition.actions[2] = "Follow";
-				definition.actions[3] = "Trade";
-				definition.combatLevel = 103;
-				break;
+//			case 2577:
+//				definition.name = "Xxsk1ll3zxx";
+//				definition.description = "I hope that's the last time I ever type your name.".getBytes();
+//				definition.actions = new String[6];
+//				definition.actions[0] = "Talk-to";
+//				definition.actions[2] = "Follow";
+//				definition.actions[3] = "Trade";
+//				break;
+//			case 2643:
+//				definition.name = "Kids Ranq";
+//				definition.description = "Stupid noob uses a magic shortbow? Lol l2pk scrub.".getBytes();
+//				definition.actions = new String[6];
+//				definition.actions[0] = "Talk-to";
+//				definition.actions[2] = "Follow";
+//				definition.actions[3] = "Trade";
+//				definition.combatLevel = 103;
+//				break;
 			case 1066:
 				definition.name = "Ticket Exchange";
 				definition.actions = new String[6];
@@ -1628,14 +1628,14 @@ public final class MobDefinition {
 				definition.actions[2] = "Follow";
 				definition.actions[3] = "Trade";
 				break;
-			case 2589:
-				definition.name = "An0nymous26";
-				definition.description = "Browses 4chan.".getBytes();
-				definition.actions = new String[6];
-				definition.actions[0] = "Talk-to";
-				definition.actions[2] = "Follow";
-				definition.actions[3] = "Trade";
-				break;
+//			case 2589:
+//				definition.name = "An0nymous26";
+//				definition.description = "Browses 4chan.".getBytes();
+//				definition.actions = new String[6];
+//				definition.actions[0] = "Talk-to";
+//				definition.actions[2] = "Follow";
+//				definition.actions[3] = "Trade";
+//				break;
 			case 2576:
 				definition.name = "Snakeskin Guy";
 				definition.description = "He was born at a very young age.".getBytes();
@@ -1644,54 +1644,54 @@ public final class MobDefinition {
 				definition.actions[2] = "Follow";
 				definition.actions[3] = "Trade";
 				break;
-			case 5604:
-				definition.name = "Zara's Boss Store";
-				definition.description = "SHELDON'S GROUNDED!".getBytes();
-				definition.actions = new String[6];
-				definition.actions[0] = null;
-				definition.actions[2] = null;
-				definition.actions[3] = "Trade";
-				break;
-			case 736:
-				definition.name = "Emily0_o";
-				definition.description = "A `professional` grill gamer.".getBytes();
-				definition.actions = new String[5];
-				definition.actions[0] = "Ban";
-				definition.actions[2] = "Follow on Twitch";
-				definition.actions[3] = "Subscribe ($4.99/mo)";
-				break;
-			case 2578:
-				definition.name = "Ima GuYiRL";
-				definition.description = "Will get married for 1m lolzzzz.".getBytes();
-				definition.actions = new String[6];
-				definition.actions[0] = "Talk-to";
-				definition.actions[2] = "Follow";
-				definition.actions[3] = "Trade";
-				break;
-			case 2575:
-				definition.name = "OrcRogueIRL";
-				definition.description = "You can't see him, he's stealthed! ;)".getBytes();
-				definition.actions = new String[6];
-				definition.actions[0] = "Talk-to";
-				definition.actions[2] = "Follow";
-				definition.actions[3] = "Trade";
-				break;
-			case 433:
-				definition.name = "iTry2tribryd";
-				definition.description = "I bet was tri-bridding before it was cool.".getBytes();
-				definition.actions = new String[6];
-				definition.actions[0] = "Talk-to";
-				definition.actions[2] = "Follow";
-				definition.actions[3] = "Trade";
-				break;
-			case 432:
-				definition.name = "Hendrix";
-				definition.description = "Hendrix! OPEN THE DAMN DOOR!".getBytes();
-				definition.actions = new String[6];
-				definition.actions[0] = "Talk-to";
-				definition.actions[2] = "Follow";
-				definition.actions[3] = "Trade";
-				break;
+//			case 5604:
+//				definition.name = "Zara's Boss Store";
+//				definition.description = "SHELDON'S GROUNDED!".getBytes();
+//				definition.actions = new String[6];
+//				definition.actions[0] = null;
+//				definition.actions[2] = null;
+//				definition.actions[3] = "Trade";
+//				break;
+//			case 736:
+//				definition.name = "Emily0_o";
+//				definition.description = "A `professional` grill gamer.".getBytes();
+//				definition.actions = new String[5];
+//				definition.actions[0] = "Ban";
+//				definition.actions[2] = "Follow on Twitch";
+//				definition.actions[3] = "Subscribe ($4.99/mo)";
+//				break;
+//			case 2578:
+//				definition.name = "Ima GuYiRL";
+//				definition.description = "Will get married for 1m lolzzzz.".getBytes();
+//				definition.actions = new String[6];
+//				definition.actions[0] = "Talk-to";
+//				definition.actions[2] = "Follow";
+//				definition.actions[3] = "Trade";
+//				break;
+//			case 2575:
+//				definition.name = "OrcRogueIRL";
+//				definition.description = "You can't see him, he's stealthed! ;)".getBytes();
+//				definition.actions = new String[6];
+//				definition.actions[0] = "Talk-to";
+//				definition.actions[2] = "Follow";
+//				definition.actions[3] = "Trade";
+//				break;
+//			case 433:
+//				definition.name = "iTry2tribryd";
+//				definition.description = "I bet was tri-bridding before it was cool.".getBytes();
+//				definition.actions = new String[6];
+//				definition.actions[0] = "Talk-to";
+//				definition.actions[2] = "Follow";
+//				definition.actions[3] = "Trade";
+//				break;
+//			case 432:
+//				definition.name = "Hendrix";
+//				definition.description = "Hendrix! OPEN THE DAMN DOOR!".getBytes();
+//				definition.actions = new String[6];
+//				definition.actions[0] = "Talk-to";
+//				definition.actions[2] = "Follow";
+//				definition.actions[3] = "Trade";
+//				break;
 			case 5861:
 				definition.name = "The Riftsplitter";
 				break;
@@ -2705,7 +2705,7 @@ public final class MobDefinition {
 				definition.degreesToTurn = 32;
 				//definition.rdc2 = 7454;
 				break;
-			case 438:
+			case 438: // Corrupt
 				definition.name = "Dark Supreme";
 				definition.npcModels = new int[]{64427};
 				MobDefinition lightguild2 = get(202);
@@ -3273,8 +3273,8 @@ public final class MobDefinition {
 				definition.combatLevel = 607;
 				break;
 
-			case 4540:
-				definition.name = "@cya@Mega Avatar";
+			case 4540: // Corrupt
+				definition.name = "@cya@Youtube Boss";
 				definition.rdc2 = 9978;
 				definition.npcSizeInSquares = 4;
 				definition.scaleXZ = definition.scaleY = 250;
@@ -3730,7 +3730,7 @@ public final class MobDefinition {
 				definition.rdc2 = 19385;
 				break;
 
-			case 8007:
+			case 8007://corrupt
 				definition.name = "Bob marley";
 				definition.description = "Bob marley.".getBytes();
 				definition.npcModels = new int[]{65175};
@@ -4295,7 +4295,8 @@ public final class MobDefinition {
 				definition.name = "Darkrealm Gatekeeper";
 				break;
 
-			case 3308:
+			case 3308://corrupt
+
 				definition.name = "Angel Lugia";
 				MobDefinition poke = MobDefinition.get(4972);
 				definition.description = "GWD.".getBytes();
@@ -4638,7 +4639,7 @@ public final class MobDefinition {
 				definition.scaleY = 75;
 				definition.actions = new String[]{null, "Attack", null, null, null};
 				break;
-			case 12343:
+			case 12343: // Corrupt
 				definition.name = "Predator";
 				definition.actions = new String[]{null, "Attack", null, null, null};
 				definition.scaleXZ = 600;
@@ -5046,7 +5047,7 @@ public final class MobDefinition {
 				definition.standAnimation = 0;
 				definition.walkAnimation = 0;
 				break;
-			case 201:
+			case 201: // Corrupt
 				definition.name = "Hercules";
 				definition.actions = new String[]{null, "Attack", null, null, null};
 				definition.combatLevel = 456;
@@ -5097,7 +5098,7 @@ public final class MobDefinition {
 				definition.changedModelColours[1] = 54; // New
 				//definition.npcModels[4] = definition.rdc2 = 2044;
 				break;
-			case 203:
+			case 203://Corrupt
 				definition.name = "Almighty Zeus";
 				definition.actions = new String[]{null, "Attack", null, null, null};
 				definition.combatLevel = 456;
