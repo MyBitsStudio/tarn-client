@@ -4,18 +4,17 @@
 
 #noinspection ShrinkerUnresolvedReference
 
--keep class net.runelite.** { *; }
--dontshrink
--dontoptimize
--dontobfuscate
+-keep class net.runelite.client.** {*;}
 
--keepclasseswithmembernames,allowobfuscation,allowoptimization,allowshrinking class org.necrotic.** {
+-printseeds
+
+-keepclasseswithmembernames,includedescriptorclasses class org.necrotic.client.** {
     native <methods>;
 }
 
--keep,allowobfuscation,allowoptimization,allowshrinking public class org.necrotic.client.Client
+-keep public class org.necrotic.client.Client
 
--keepclassmembers,allowobfuscation,allowoptimization,allowshrinking  class org.necrotic.** implements java.io.Serializable {
+-keepclassmembers class org.necrotic.client.** implements java.io.Serializable {
     static final long serialVersionUID;
     static final java.io.ObjectStreamField[] serialPersistentFields;
     private void writeObject(java.io.ObjectOutputStream);
@@ -24,20 +23,22 @@
     java.lang.Object readResolve();
 }
 
--keepclassmembers,allowobfuscation,allowoptimization,allowshrinking enum org.necrotic.** {
+-keepclassmembers enum org.necrotic.client.** {
     public static **[] values();
     public static ** valueOf(java.lang.String);
 }
 
--keepdirectories
+-keep class com.google.** { *; }
+-keep class org.pushingpixels.** { *; }
+-keep class com.sun.** { *; }
+-keep class ch.qos.** { *; }
+-keep class org.slf4j.** { *; }
+-keep class club.** { *; }
+-keep class net.runelite.** { *; }
+-keep class org.projectlombok.** { *; }
 
--dontwarn lombok.**
--dontwarn com.google.**
--dontwarn proguard.gradle.**
--dontwarn org.pushingpixels.**
+
 -dontwarn java.lang.invoke.MethodHandle
--dontwarn com.sun.**
--dontwarn org.apache.**
+-dontwarn lombok.**
 -dontwarn ch.qos.**
-
--keepattributes *Annotation*
+-dontwarn com.google.common.hash.**

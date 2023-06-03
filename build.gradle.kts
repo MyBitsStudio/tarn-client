@@ -25,7 +25,6 @@ dependencies {
     api("club.minnced:java-discord-rpc:2.0.0")
     api("com.google.code.gson:gson:2.10")
     api("net.runelite.pushingpixels:substance:8.0.02")
-    api("com.guardsquare:proguard-gradle:7.1.0")
     api("net.runelite.pushingpixels:trident:1.5.00")
     runtimeOnly("net.runelite.pushingpixels:trident:1.5.00")
     compileOnly("org.projectlombok:lombok:1.18.24")
