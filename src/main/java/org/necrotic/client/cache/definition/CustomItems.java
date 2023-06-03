@@ -603,25 +603,25 @@ public class CustomItems {
 //                itemDef.editedModelColor[0] = 51; // the new texture u want it to have
 //                itemDef.stackable = false;
 //                break;
-//            case 18417:
-//                itemDef.name = "Firehell Partyhat";
-//                itemDef.modelID = 65286;
-//                itemDef.maleEquip1 = 65287;
-//                itemDef.femaleEquip1 = 65287;
-//                itemDef21 = ItemDefinition.get(1040);
-//                itemDef.modelOffsetX = itemDef21.modelOffsetX;
-//                itemDef.rotationZ = itemDef21.rotationZ;
-//                itemDef.modelOffsetY = itemDef21.modelOffsetY;
-//                itemDef.modelZoom = itemDef21.modelZoom;
-//                itemDef.rotationY = itemDef21.rotationY;
-//                itemDef.rotationX = itemDef21.rotationX;
-//                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//                itemDef.editedModelColor = new int[1]; // if only 1 texture is modified this has to be 1, if 2 then 2 etc
-//                itemDef.newModelColor = new int[1]; // same here
-//                itemDef.newModelColor[0] = 40; // the texture that it currently has
-//                itemDef.editedModelColor[0] = 52; // the new texture u want it to have
-//                itemDef.stackable = false;
-//                break;
+            case 18417:
+                itemDef.name = "Firehell Partyhat";
+                itemDef.modelID = 65286;
+                itemDef.maleEquip1 = 65287;
+                itemDef.femaleEquip1 = 65287;
+                itemDef2 = ItemDefinition.get(1040);
+                itemDef.modelOffsetX = itemDef2.modelOffsetX;
+                itemDef.rotationZ = itemDef2.rotationZ;
+                itemDef.modelOffsetY = itemDef2.modelOffsetY;
+                itemDef.modelZoom = itemDef2.modelZoom;
+                itemDef.rotationY = itemDef2.rotationY;
+                itemDef.rotationX = itemDef2.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.editedModelColor = new int[1]; // if only 1 texture is modified this has to be 1, if 2 then 2 etc
+                itemDef.newModelColor = new int[1]; // same here
+                itemDef.newModelColor[0] = 40; // the texture that it currently has
+                itemDef.editedModelColor[0] = 52; // the new texture u want it to have
+                itemDef.stackable = false;
+                break;
 //            case 18418:
 //                itemDef.name = "@mag@Velvet Partyhat";
 //                itemDef.modelID = 65286;

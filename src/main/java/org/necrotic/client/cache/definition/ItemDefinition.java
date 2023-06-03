@@ -834,17 +834,17 @@ public final class ItemDefinition {
 				itemDef.rdc = 800;
 				itemDef.actions = new String[]{null, "Wear", null, null, "Destroy"};
 				break;
-//			case 22005:
-//				itemDef.copyItem(18818);
-//				itemDef.name = "Infernal ring";
-//				itemDef.actions = new String[]{null, "Wear", null, null, "Destroy"};
-//				break;
-//			case 22006: // Deathtouch darts
-//				itemDef.copyItem(11230);
-//				itemDef.name = "Deathtouch Darts";
-//				itemDef.editedModelColor = new int[]{5409, 920, 914, 929, 10452, 10293};
-//				itemDef.newModelColor = new int[]{943, 3866, 914, 3866, 943, 943};
-//				break;
+			case 22005:
+				itemDef.copyItem(18818);
+				itemDef.name = "Infernal ring";
+				itemDef.actions = new String[]{null, "Wear", null, null, "Destroy"};
+				break;
+			case 22006: // Deathtouch darts
+				itemDef.copyItem(11230);
+				itemDef.name = "Deathtouch Darts";
+				itemDef.editedModelColor = new int[]{5409, 920, 914, 929, 10452, 10293};
+				itemDef.newModelColor = new int[]{943, 3866, 914, 3866, 943, 943};
+				break;
 
 			case 23044:
 				itemDef.name = "Aura (T1)";
@@ -980,27 +980,27 @@ public final class ItemDefinition {
 			/*
 			 * case 13095: itemDef.name = "Crip Stick"; break;
 			 */
-//			case 16337:
-//				itemDef.name = "Impspawn bow";
-//				break;
-//			case 7927:
-//				itemDef.name = "Cyantrix ring";
-//				break;
-//			case 19887:
-//				itemDef.name = "Impspawn necklace";
-//				break;
-//
-//			case 12601:
-//				itemDef.name = "Ring of the gods";
-//				itemDef.modelZoom = 900;
-//				itemDef.rotationY = 393;
-//				itemDef.rotationX = 1589;
-//				itemDef.modelOffsetX = -9;
-//				itemDef.modelOffsetY = -12;
-//				itemDef.groundActions = new String[]{null, null, "Take", null, null};
-//				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//				itemDef.modelID = 33009;
-//				break;
+			case 16337:
+				itemDef.name = "Impspawn bow";
+				break;
+			case 7927:
+				itemDef.name = "Cyantrix ring";
+				break;
+			case 19887:
+				itemDef.name = "Impspawn necklace";
+				break;
+
+			case 12601:
+				itemDef.name = "Ring of the gods";
+				itemDef.modelZoom = 900;
+				itemDef.rotationY = 393;
+				itemDef.rotationX = 1589;
+				itemDef.modelOffsetX = -9;
+				itemDef.modelOffsetY = -12;
+				itemDef.groundActions = new String[]{null, null, "Take", null, null};
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+				itemDef.modelID = 33009;
+				break;
 
 			case 4566:
 				itemDef.actions = new String[]{null, "Wield", null, "Dance", "Drop"};
@@ -1223,12 +1223,12 @@ public final class ItemDefinition {
 			case 13727:
 				itemDef.actions = new String[]{null, null, null, null, "Drop"};
 				break;
-//			case 6500:
-//				itemDef.modelID = 9123;
-//				itemDef.name = "Charming imp";
-//				itemDef.stackable = false;
-//				itemDef.actions = new String[]{null, null, "Check", "Config", "Drop"};
-//				break;
+			case 6500:
+				itemDef.modelID = 9123;
+				itemDef.name = "Charming imp";
+				itemDef.stackable = false;
+				itemDef.actions = new String[]{null, null, "Check", "Config", "Drop"};
+				break;
 			case 15332:
 				itemDef.newModelColor = new int[1];
 				itemDef.editedModelColor = new int[1];
@@ -4312,25 +4312,25 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.editedModelColor[1] = 54;// the u want it to have
 				itemDef.stackable = false;
 				break;
-//			case 19812:
-//				itemDef.name = "Lava Speed pickaxe";
-//				itemDef.modelID = 65224;
-//				itemDef.maleEquip1 = 65225;
-//				itemDef.femaleEquip1 = 65225;
-//				itemDef21 = ItemDefinition.get(4882);
-//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-//				itemDef.rotationZ = itemDef21.rotationZ;
-//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-//				itemDef.modelZoom = itemDef21.modelZoom;
-//				itemDef.rotationY = itemDef21.rotationY;
-//				itemDef.rotationX = itemDef21.rotationX;
-//				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//				itemDef.editedModelColor = new int[1]; // if only 1 texture is modified this has to be 1, if 2 then 2 etc
-//				itemDef.newModelColor = new int[1]; // same here
-//				itemDef.newModelColor[0] = 60; // the texture that it currently has
-//				itemDef.editedModelColor[0] = 40; // the new texture u want it to have
-//				itemDef.stackable = false;
-//				break;
+			case 19812:
+				itemDef.name = "Lava Speed pickaxe";
+				itemDef.modelID = 65224;
+				itemDef.maleEquip1 = 65225;
+				itemDef.femaleEquip1 = 65225;
+				itemDef21 = ItemDefinition.get(4882);
+				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+				itemDef.rotationZ = itemDef21.rotationZ;
+				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+				itemDef.modelZoom = itemDef21.modelZoom;
+				itemDef.rotationY = itemDef21.rotationY;
+				itemDef.rotationX = itemDef21.rotationX;
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+				itemDef.editedModelColor = new int[1]; // if only 1 texture is modified this has to be 1, if 2 then 2 etc
+				itemDef.newModelColor = new int[1]; // same here
+				itemDef.newModelColor[0] = 60; // the texture that it currently has
+				itemDef.editedModelColor[0] = 40; // the new texture u want it to have
+				itemDef.stackable = false;
+				break;
 //			case 12657:
 //				itemDef.name = "Penguin pebbles";
 //				itemDef.rdc2 = 995555;
