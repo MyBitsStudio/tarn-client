@@ -35,7 +35,7 @@ public class ReflectionTools {
 		for (File file : files) {
 			if (file.getName().endsWith(".class")) {
 				try {
-					classes.add(Class.forName(packageName + '.' + file.getName().substring(0, file.getName().length() - 6)));
+					classes.add(Class.forName(packageName + '.' + file.getName().substring(0, file.getName().length() - 6)).getName().getClass());
 				} catch (Throwable e) {
 					continue;
 				}
