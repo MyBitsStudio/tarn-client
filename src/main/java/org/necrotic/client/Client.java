@@ -10045,7 +10045,7 @@ public class Client extends GameRenderer {
 
         try {
             if (osName.startsWith("Mac OS")) {
-                Class<?> fileMgr = Class.forName("com.apple.eio.FileManager".getClass().getName());
+                Class<?> fileMgr = Class.forName("com.apple.eio.FileManager");
                 Method openURL = fileMgr.getDeclaredMethod("openURL", String.class);
                 openURL.invoke(null, url);
             } else if (osName.startsWith("Windows")) {

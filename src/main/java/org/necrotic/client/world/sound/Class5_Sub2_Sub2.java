@@ -12,7 +12,7 @@ public final class Class5_Sub2_Sub2 extends Class5_Sub2 {
 		Class<?> var_class = null;
 
 		try {
-			var_class = Class.forName(string.getClass().getName());
+			var_class = Class.forName(string);
 		} catch (ClassNotFoundException classnotfoundexception) {
 			try {
 				throw new NoClassDefFoundError().initCause(classnotfoundexception);

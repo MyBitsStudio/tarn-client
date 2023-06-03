@@ -8,6 +8,12 @@ plugins {
     `maven-publish`
 }
 
+group = "net.runelite"
+version = "1.0"
+description = "Tarn"
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+
 repositories {
     mavenLocal()
     maven("https://jcenter.bintray.com")
@@ -63,19 +69,5 @@ tasks {
         dependsOn(proguard)
     }
 }
-
-group = "net.runelite"
-version = "1.0"
-description = "Tarn"
-java.sourceCompatibility = JavaVersion.VERSION_1_8
-
-publishing {
-    publications.create<MavenPublication>("maven") {
-        from(components["java"])
-    }
-}
-
-
-//tasks.named("build") {finalizedBy("proguard")}
 
 

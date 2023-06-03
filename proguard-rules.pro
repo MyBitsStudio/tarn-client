@@ -1,4 +1,4 @@
--injars build/libs/Tarn-1.0.jar
+-injars build/libs/Tarn_Client_unobfuscated-1.0.jar
 -outjars build/libs/Tarn-Obf.jar
 -libraryjars <java.home>/lib/rt.jar
 
@@ -8,15 +8,17 @@
 
 -printseeds
 
--keepclasseswithmembernames,includedescriptorclasses class org.necrotic.client.** {
+-keepclasseswithmembernames class * {
     native <methods>;
 }
 
--keep public class org.necrotic.client.Client
+-keep public class org.necrotic.client.Client {
+    public static void main(java.lang.String[]);
+}
 
--keepclassmembers class org.necrotic.client.** implements java.io.Serializable {
+-keepclassmembers class * implements java.io.Serializable {
     static final long serialVersionUID;
-    static final java.io.ObjectStreamField[] serialPersistentFields;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
     private void writeObject(java.io.ObjectOutputStream);
     private void readObject(java.io.ObjectInputStream);
     java.lang.Object writeReplace();
@@ -28,17 +30,10 @@
     public static ** valueOf(java.lang.String);
 }
 
--keep class com.google.** { *; }
--keep class org.pushingpixels.** { *; }
--keep class com.sun.** { *; }
--keep class ch.qos.** { *; }
--keep class org.slf4j.** { *; }
--keep class club.** { *; }
--keep class net.runelite.** { *; }
--keep class org.projectlombok.** { *; }
+-keep public class com.apple.eio.FileManager
 
-
+-dontwarn com.google.common.**
 -dontwarn java.lang.invoke.MethodHandle
--dontwarn lombok.**
+-dontwarn org.apache.**
 -dontwarn ch.qos.**
--dontwarn com.google.common.hash.**
+-dontwarn lombok.**
