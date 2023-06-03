@@ -4,15 +4,18 @@
 
 #noinspection ShrinkerUnresolvedReference
 
--keepclasseswithmembernames,includedescriptorclasses class * {
+-keep class net.runelite.** { *; }
+-dontshrink
+-dontoptimize
+-dontobfuscate
+
+-keepclasseswithmembernames,allowobfuscation,allowoptimization,allowshrinking class org.necrotic.** {
     native <methods>;
 }
 
--keepclasseswithmembers public class * {
-    public static void main(java.lang.String[]);
-}
+-keep,allowobfuscation,allowoptimization,allowshrinking public class org.necrotic.client.Client
 
--keepclassmembers class * implements java.io.Serializable {
+-keepclassmembers,allowobfuscation,allowoptimization,allowshrinking  class org.necrotic.** implements java.io.Serializable {
     static final long serialVersionUID;
     static final java.io.ObjectStreamField[] serialPersistentFields;
     private void writeObject(java.io.ObjectOutputStream);
@@ -21,21 +24,20 @@
     java.lang.Object readResolve();
 }
 
--keepclassmembers,allowoptimization enum * {
+-keepclassmembers,allowobfuscation,allowoptimization,allowshrinking enum org.necrotic.** {
     public static **[] values();
     public static ** valueOf(java.lang.String);
 }
 
--keepattributes *Annotation*
+-keepdirectories
 
--dontwarn org.apache.**
--dontwarn org.slf4j.**
--dontwarn javax.xml.**
 -dontwarn lombok.**
 -dontwarn com.google.**
--dontwarn ch.qos.**
+-dontwarn proguard.gradle.**
+-dontwarn org.pushingpixels.**
 -dontwarn java.lang.invoke.MethodHandle
--dontwarn proguard.**
+-dontwarn com.sun.**
+-dontwarn org.apache.**
+-dontwarn ch.qos.**
 
--optimizationpasses 5
--repackageclasses ''
+-keepattributes *Annotation*

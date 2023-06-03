@@ -10,45 +10,27 @@ plugins {
 
 repositories {
     mavenLocal()
-    maven {
-        url = uri("https://jcenter.bintray.com")
-    }
-
-    maven {
-        url = uri("https://jitpack.io")
-    }
-
-    maven {
-        url = uri("https://repo.maven.apache.org/maven2/")
-    }
+    maven("https://jcenter.bintray.com")
+    maven("https://jitpack.io")
 }
 
 dependencies {
-    implementation("com.google.guava:guava:31.1-jre")
-    implementation("org.apache.commons:commons-text:1.10.0")
-    implementation("javax.inject:javax.inject:1")
-    implementation("org.slf4j:slf4j-api:2.0.5")
-    implementation("com.google.inject:guice:5.1.0")
-    implementation("ch.qos.logback:logback-core:1.3.5")
-    implementation("ch.qos.logback:logback-classic:1.3.5")
-    implementation("club.minnced:java-discord-rpc:2.0.0")
-    implementation("com.google.code.gson:gson:2.10")
-    implementation("net.runelite.pushingpixels:substance:8.0.02")
-    implementation("com.guardsquare:proguard-gradle:7.3.2")
-    implementation("net.runelite.pushingpixels:trident:1.5.00")
+    api("com.google.guava:guava:31.1-jre")
+    api("org.apache.commons:commons-text:1.10.0")
+    api("javax.inject:javax.inject:1")
+    api("org.slf4j:slf4j-api:2.0.5")
+    api("com.google.inject:guice:5.1.0")
+    api("ch.qos.logback:logback-core:1.3.5")
+    api("ch.qos.logback:logback-classic:1.3.5")
+    api("club.minnced:java-discord-rpc:2.0.0")
+    api("com.google.code.gson:gson:2.10")
+    api("net.runelite.pushingpixels:substance:8.0.02")
+    api("com.guardsquare:proguard-gradle:7.1.0")
+    api("net.runelite.pushingpixels:trident:1.5.00")
+    runtimeOnly("net.runelite.pushingpixels:trident:1.5.00")
     compileOnly("org.projectlombok:lombok:1.18.24")
+    compileOnly("javax.servlet:javax.servlet-api:4.0.1")
     annotationProcessor("org.projectlombok:lombok:1.18.24")
-}
-
-group = "net.runelite"
-version = "1.0"
-description = "Tarn"
-java.sourceCompatibility = JavaVersion.VERSION_1_8
-
-publishing {
-    publications.create<MavenPublication>("maven") {
-        from(components["java"])
-    }
 }
 
 buildscript {
@@ -57,13 +39,13 @@ buildscript {
         gradlePluginPortal()
     }
     dependencies {
-        classpath("com.guardsquare:proguard-gradle:7.3.2")
+        classpath("com.guardsquare:proguard-gradle:7.1.0")
     }
 }
 
 val fatJar = task("fatJar", type = Jar::class) {
-     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-     archiveBaseName.set(project.name)
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName.set(project.name)
     manifest {
         attributes["Implementation-Title"] = "Gradle Jar File"
         attributes["Main-Class"] = "net.runelite.client.RuneLite"
@@ -82,5 +64,19 @@ tasks {
         dependsOn(proguard)
     }
 }
+
+group = "net.runelite"
+version = "1.0"
+description = "Tarn"
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+publishing {
+    publications.create<MavenPublication>("maven") {
+        from(components["java"])
+    }
+}
+
+
+//tasks.named("build") {finalizedBy("proguard")}
 
 
