@@ -10045,7 +10045,7 @@ public class Client extends GameRenderer {
 
         try {
             if (osName.startsWith("Mac OS")) {
-                Class<?> fileMgr = Class.forName("com.apple.eio.FileManager");
+                Class<?> fileMgr = Class.forName("com.apple.eio.FileManager".getClass().getName());
                 Method openURL = fileMgr.getDeclaredMethod("openURL", String.class);
                 openURL.invoke(null, url);
             } else if (osName.startsWith("Windows")) {
@@ -18149,7 +18149,7 @@ public class Client extends GameRenderer {
         isLoading = true;
         super.resetGraphic();
 
-        RICH_PRESENCE.initiate();
+       // RICH_PRESENCE.initiate();
         if (Signlink.sunjava) {
             super.minDelay = 5;
         }

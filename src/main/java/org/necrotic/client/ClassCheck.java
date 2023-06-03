@@ -49,7 +49,7 @@ public class ClassCheck {
 		for (String className : classNames) {
 
 			List<String> found = new ArrayList<>();
-			Class<?> classz = Class.forName(className);
+			Class<?> classz = Class.forName(className.getClass().getName());
 
 			for (Method method : classz.getDeclaredMethods()) {
 
