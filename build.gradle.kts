@@ -21,17 +21,17 @@ repositories {
 }
 
 dependencies {
-    api("com.google.guava:guava:31.1-jre")
-    api("org.apache.commons:commons-text:1.10.0")
-    api("javax.inject:javax.inject:1")
-    api("org.slf4j:slf4j-api:2.0.5")
-    api("com.google.inject:guice:5.1.0")
-    api("ch.qos.logback:logback-core:1.3.5")
-    api("ch.qos.logback:logback-classic:1.3.5")
-    api("club.minnced:java-discord-rpc:2.0.0")
-    api("com.google.code.gson:gson:2.10")
-    api("net.runelite.pushingpixels:substance:8.0.02")
-    api("net.runelite.pushingpixels:trident:1.5.00")
+    implementation ("com.google.guava:guava:31.1-jre")
+    implementation ("org.apache.commons:commons-text:1.10.0")
+    implementation ("javax.inject:javax.inject:1")
+    implementation ("org.slf4j:slf4j-api:2.0.5")
+    implementation ("com.google.inject:guice:5.1.0")
+    implementation ("ch.qos.logback:logback-core:1.3.5")
+    implementation ("ch.qos.logback:logback-classic:1.3.5")
+    implementation ("club.minnced:java-discord-rpc:2.0.0")
+    implementation ("com.google.code.gson:gson:2.10")
+    implementation ("net.runelite.pushingpixels:substance:8.0.02")
+    implementation ("net.runelite.pushingpixels:trident:1.5.00")
     runtimeOnly("net.runelite.pushingpixels:trident:1.5.00")
     compileOnly("org.projectlombok:lombok:1.18.24")
     compileOnly("javax.servlet:javax.servlet-api:4.0.1")
@@ -44,7 +44,7 @@ buildscript {
         gradlePluginPortal()
     }
     dependencies {
-        classpath("com.guardsquare:proguard-gradle:7.1.0")
+        classpath("com.guardsquare:proguard-gradle:7.3.2")
     }
 }
 
@@ -61,6 +61,7 @@ val fatJar = task("fatJar", type = Jar::class) {
 
 val proguard = tasks.register<ProGuardTask>("proguard") {
     configuration("proguard-rules.pro")
+    libraryjars(configurations.runtimeClasspath)
 }
 
 tasks {
