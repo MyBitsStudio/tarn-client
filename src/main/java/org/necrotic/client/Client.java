@@ -16257,8 +16257,8 @@ public class Client extends GameRenderer {
             drawLoginScreen(false);
         } else {
             drawGameScreen();
-            RICH_PRESENCE.presence.state = "Logged In : " + myUsername + "";
-            RICH_PRESENCE.updatePresence();
+            //RICH_PRESENCE.presence.state = "Logged In : " + myUsername + "";
+            //RICH_PRESENCE.updatePresence();
         }
 
         anInt1213 = 0;

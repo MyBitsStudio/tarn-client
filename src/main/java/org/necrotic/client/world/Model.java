@@ -3091,15 +3091,6 @@ public class Model extends Animable {
 		for (int i = 0; i < anInt1630; i++) {
 			if (fromColor == anIntArray1640[i]) {
 				anIntArray1640[i] = tex;
-
-
-
-
-
-
-
-
-
 				face_render_type[i] = 3 + set2;
 				set2 += 4;
 				texture_face_x[assigned] = faces_a[i];

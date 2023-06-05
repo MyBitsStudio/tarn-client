@@ -30,13 +30,11 @@ public final class ItemDefinition {
 
 
 	public static void applyTexturing(Model model, int id) {
-//		if(id == 20435){
+//		if(id == 23049){
 //			System.out.println("Token - "+ Arrays.toString(model.anIntArray1640));
 //		}
 
 		switch (id) {
-
-
 			case 23211:
 				model.setTexture(300, 92);
 				break;
