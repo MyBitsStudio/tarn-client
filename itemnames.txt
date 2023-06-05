@@ -84763,23 +84763,23 @@ name: Damage High Token
 finish
 
 Item Id: 23209
-name: Dwarf remains
+name: Elite Voting Ticket
 finish
 
 Item Id: 23210
-name: Dwarf remains
+name: Event Crystal
 finish
 
 Item Id: 23211
-name: Dwarf remains
+name: Flash Deal Ticket
 finish
 
 Item Id: 23212
-name: Dwarf remains
+name: Aura 7
 finish
 
 Item Id: 23213
-name: Dwarf remains
+name: Golden Statue
 finish
 
 Item Id: 23214
