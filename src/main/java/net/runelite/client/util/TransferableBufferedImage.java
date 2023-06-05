@@ -31,12 +31,10 @@ import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.image.BufferedImage;
 import lombok.AllArgsConstructor;
-import lombok.NonNull;
 
 @AllArgsConstructor
 class TransferableBufferedImage implements Transferable
 {
-	@NonNull
 	private final BufferedImage image;
 
 	@Override

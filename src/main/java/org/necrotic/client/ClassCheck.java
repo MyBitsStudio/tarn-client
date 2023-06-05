@@ -34,23 +34,21 @@ public class ClassCheck {
 					continue;
 				}
 
-				if (name != null) {
-					classNames.add(name);
-				}
+				classNames.add(name);
 
 			}
 
 		}
 
-		Collections.sort(classNames, String.CASE_INSENSITIVE_ORDER);
+		classNames.sort(String.CASE_INSENSITIVE_ORDER);
 
-		Map<String, List<String>> objects = new HashMap<String, List<String>>();
+		Map<String, List<String>> objects = new HashMap<>();
 
 		for (String className : classNames) {
 
 			List<String> found = new ArrayList<>();
-			Class<?> classz = Class.forName(className.getClass().getName());
-
+			Class<?> classz = Class.forName(className);
+			
 			for (Method method : classz.getDeclaredMethods()) {
 
 				if (method == null) {
