@@ -84,7 +84,8 @@ public final class RuneLite {
         pluginManager.setOutdated(false);
         pluginManager.loadCorePlugins();
         pluginManager.loadDefaultPluginConfiguration(null);
-        clientUI.init();		eventBus.register(clientUI);
+        clientUI.init();
+        eventBus.register(clientUI);
         eventBus.register(pluginManager);
         eventBus.register(configManager);
         pluginManager.startPlugins();

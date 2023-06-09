@@ -1,6 +1,6 @@
 -injars build/libs/Tarn-1.0.jar
 -outjars build/libs/Tarn-Obf.jar
--libraryjars <java.home>/lib/rt.jar
+-libraryjars runtime/rt.jar
 -printmapping proguard.map
 
 #noinspection ShrinkerUnresolvedReference
@@ -9,8 +9,7 @@
 -dontusemixedcaseclassnames
 -dontskipnonpubliclibraryclasses
 -dontskipnonpubliclibraryclassmembers
-#-dontpreverify
-#-verbose
+-verbose
 
 -keepattributes *Annotation*
 -renamesourcefileattribute SourceFile
@@ -18,8 +17,8 @@
 -keepattributes InnerClasses,EnclosingMethod
 -keepattributes Signature
 
--adaptresourcefilenames    **.properties,**.gif,**.jpg,**.png
--adaptresourcefilecontents **.properties,META-INF/MANIFEST.MF
+-dontshrink
+-dontoptimize
 
 -keep class net.runelite.** { *; }
 
@@ -42,9 +41,9 @@
     native <methods>;
 }
 
--keepclassmembers,includedescriptorclasses class **.R$* {
-  public static <fields>;
-}
+#-keepclassmembers,includedescriptorclasses class **.R$* {
+#  public static <fields>;
+#}
 
 -keepclassmembers class * extends java.lang.Enum {
     <fields>;
