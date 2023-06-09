@@ -7,8 +7,8 @@
 
 -optimizationpasses 2
 -dontusemixedcaseclassnames
-#-dontskipnonpubliclibraryclasses
-#-dontskipnonpubliclibraryclassmembers
+-dontskipnonpubliclibraryclasses
+-dontskipnonpubliclibraryclassmembers
 #-dontpreverify
 #-verbose
 
@@ -17,6 +17,9 @@
 -keepattributes SourceFile,LineNumberTable
 -keepattributes InnerClasses,EnclosingMethod
 -keepattributes Signature
+
+-adaptresourcefilenames    **.properties,**.gif,**.jpg,**.png
+-adaptresourcefilecontents **.properties,META-INF/MANIFEST.MF
 
 -keep class net.runelite.** { *; }
 
@@ -50,9 +53,13 @@
 }
 
 -keep class org.necrotic.client.accounts.** { *; }
+-keep class org.necrotic.client.ui.skin.** { *; }
 -keep class com.sun.** { *; }
 -keep class org.pushingpixels.** { *; }
 -keep class com.google.** { *; }
+-keep class javax.swing.** { *; }
+-keep class java.awt.** { *; }
+
 -dontwarn java.lang.invoke.MethodHandle
 -dontwarn org.apache.**
 -dontwarn ch.qos.**

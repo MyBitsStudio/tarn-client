@@ -33,7 +33,6 @@ dependencies {
     implementation ("net.runelite.pushingpixels:substance:8.0.02")
     implementation ("net.runelite.pushingpixels:trident:1.5.00")
     implementation ("net.java.dev.jna:jna:5.8.0")
-    runtimeOnly("net.runelite.pushingpixels:trident:1.5.00")
     compileOnly("org.projectlombok:lombok:1.18.24")
     compileOnly("javax.servlet:javax.servlet-api:4.0.1")
     annotationProcessor("org.projectlombok:lombok:1.18.24")
