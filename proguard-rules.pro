@@ -1,22 +1,26 @@
--injars build/libs/Tarn_Client_unobfuscated-1.0.jar
+-injars build/libs/Tarn-1.0.jar
 -outjars build/libs/Tarn-Obf.jar
 -libraryjars <java.home>/lib/rt.jar
 -printmapping proguard.map
 
 #noinspection ShrinkerUnresolvedReference
 
--keepclasseswithmembernames class * {
-    native <methods>;
-}
+-optimizationpasses 2
+-dontusemixedcaseclassnames
+#-dontskipnonpubliclibraryclasses
+#-dontskipnonpubliclibraryclassmembers
+#-dontpreverify
+#-verbose
 
+-keepattributes *Annotation*
+-renamesourcefileattribute SourceFile
+-keepattributes SourceFile,LineNumberTable
+-keepattributes InnerClasses,EnclosingMethod
+-keepattributes Signature
 
--keep public class * {
-    public static void main(java.lang.String[]);
-}
+-keep class net.runelite.** { *; }
 
--keep public class * {
-    public protected *;
-}
+-keepclassmembers,includedescriptorclasses class net.runelite.** { *; }
 
 -keepclassmembers class * implements java.io.Serializable {
     static final long serialVersionUID;
@@ -27,35 +31,31 @@
     java.lang.Object readResolve();
 }
 
--keepclassmembers,allowoptimization enum * {
+-keepclasseswithmembers,includedescriptorclasses public class * {
+    public static void main(java.lang.String[]);
+}
+
+-keepclasseswithmembernames,includedescriptorclasses class * {
+    native <methods>;
+}
+
+-keepclassmembers,includedescriptorclasses class **.R$* {
+  public static <fields>;
+}
+
+-keepclassmembers class * extends java.lang.Enum {
+    <fields>;
     public static **[] values();
     public static ** valueOf(java.lang.String);
 }
 
--keep class net.runelite.client.plugins.** { *; }
--keep class com.apple.eio.FileManager { *; }
--keep class sun.** { *; }
--keep class org.apache.** { *; }
+-keep class org.necrotic.client.accounts.** { *; }
+-keep class com.sun.** { *; }
+-keep class org.pushingpixels.** { *; }
 -keep class com.google.** { *; }
--keep class ch.qos.** { *; }
-
 -dontwarn java.lang.invoke.MethodHandle
 -dontwarn org.apache.**
--dontwarn com.fasterxml.**
 -dontwarn ch.qos.**
--dontwarn javax.**
 -dontwarn lombok.**
+-dontwarn javax.crypto.**
 
--overloadaggressively
--repackageclasses ''
--allowaccessmodification
-
--keepattributes InnerClasses,EnclosingMethod
--keepattributes Signature
--keepattributes SourceFile,LineNumberTable
--keepattributes *Annotation*
-
--verbose
--dontusemixedcaseclassnames
--dontskipnonpubliclibraryclasses
--dontskipnonpubliclibraryclassmembers
