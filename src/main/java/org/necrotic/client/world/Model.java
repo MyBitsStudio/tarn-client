@@ -2830,6 +2830,31 @@ public class Model extends Animable {
 
 	public int numberOfTriangleFaces;
 
+	public void setTexture(int tex, int[] faces) {
+		int foundAmt = 0;
+		int set2 = 0;
+		anInt1642 = foundAmt;
+		if (face_render_type == null) {
+			face_render_type = new int[foundAmt];
+		}
+		if (anIntArray1640 == null) {
+			anIntArray1640 = new int[foundAmt];
+		}
+		texture_face_x = new int[foundAmt];
+		texture_face_y = new int[foundAmt];
+		texture_face_z = new int[foundAmt];
+
+		for (int i = 0; i < numberOfTriangleFaces; i++) {
+			for(int f : faces){
+				if (anIntArray1640[i] == f) {
+					anIntArray1640[i] = tex;
+					face_render_type[i] = 3 + set2;
+					set2 += 4;
+				}
+			}
+		}
+	}
+
 	public void setTexture(int fromColor, int fromcolor, int tex) {
 		int foundAmt = 0;
 		int set2 = 0;
@@ -2847,8 +2872,6 @@ public class Model extends Animable {
 
 		for (int i = 0; i < numberOfTriangleFaces; i++) {
 			if (anIntArray1640[i] >= fromColor && anIntArray1640[i] <= fromcolor) {
-
-
 				anIntArray1640[i] = tex;
 				face_render_type[i] = 3 + set2;
 				set2 += 4;
@@ -3072,14 +3095,14 @@ public class Model extends Animable {
 	public void setTexture(int fromColor, int tex) {
 		int foundAmt = 0;
 		int set2 = 0;
-		for (int i = 0; i < anIntArray1640.length; i++) {
-			if (fromColor == anIntArray1640[i]) {
+		for (int j : anIntArray1640) {
+			if (fromColor == j) {
 				foundAmt++;
 			}
 		}
 		anInt1642 = foundAmt;
 		if (face_render_type == null) {
-			face_render_type = new int[foundAmt];
+			face_render_type = new int[anInt1630];
 		}
 		if (anIntArray1640 == null) {
 			anIntArray1640 = new int[foundAmt];

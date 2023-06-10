@@ -15,6 +15,8 @@ import org.necrotic.client.Client;
 import javax.annotation.Nullable;
 import javax.inject.Singleton;
 import java.io.File;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.util.Locale;
 
 @Singleton
@@ -89,6 +91,16 @@ public final class RuneLite {
         eventBus.register(pluginManager);
         eventBus.register(configManager);
         pluginManager.startPlugins();
+        setSystemOut();
         clientUI.show();
+    }
+
+    private void setSystemOut(){
+        System.setOut(new PrintStream(new OutputStream() {
+            @Override
+            public void write(int arg0) {
+
+            }
+        }));
     }
 }
