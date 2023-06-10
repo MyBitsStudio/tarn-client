@@ -30,11 +30,109 @@ public final class ItemDefinition {
 
 
 	public static void applyTexturing(Model model, int id) {
-//		if(id == 23049){
-//			System.out.println("Token - "+ Arrays.toString(model.anIntArray1640));
-//		}
+		if(id == 10835){
+			System.out.println("Token - "+ Arrays.toString(model.anIntArray1640));
+		}
 
 		switch (id) {
+
+			//43020, 37929, 4549, 39950, 43016, 38950, 7743
+//			case 23214:
+//				model.setTexture(92, new int[]{552, 667});
+//				break;
+//			case 23215:
+//				model.setTexture(19, 92);
+//				break;
+//			case 23216:
+//				model.setTexture(37969, 92);
+//				break;
+
+			case 23219:
+				model.setTexture(40, 91);
+				break;
+			case 23225:
+				model.setTexture(51, 71);
+				break;
+			case 23243:
+				model.setTexture(51, 72);
+				break;
+			case 23244:
+				model.setTexture(51, 73);
+				break;
+			case 23245:
+				model.setTexture(51, 74);
+				break;
+			case 23246:
+				model.setTexture(51, 75);
+				break;
+			case 23247:
+				model.setTexture(51, 76);
+				break;
+			case 23248:
+				model.setTexture(51, 77);
+				break;
+			case 23249:
+				model.setTexture(51, 78);
+				break;
+			case 23250:
+				model.setTexture(51, 79);
+				break;
+			case 23251:
+				model.setTexture(51, 80);
+				break;
+
+			case 23226:
+				model.setTexture(0, 72);
+				break;
+			case 23227:
+				model.setTexture(0, 73);
+				break;
+			case 23228:
+				model.setTexture(0, 71);
+				break;
+			case 23229:
+				model.setTexture(0, 74);
+				break;
+			case 23230:
+				model.setTexture(0, 75);
+				break;
+			case 23231:
+				model.setTexture(0, 76);
+				break;
+			case 23232:
+				model.setTexture(0, 77);
+				break;
+			case 23233:
+				model.setTexture(0, 78);
+				break;
+			case 23234:
+				model.setTexture(0, 79);
+				break;
+			case 23235:
+				model.setTexture(0, 80);
+				break;
+			case 23236:
+				model.setTexture(0, 81);
+				break;
+			case 23237:
+				model.setTexture(0, 82);
+				break;
+			case 23238:
+				model.setTexture(0, 83);
+				break;
+			case 23239:
+				model.setTexture(0, 84);
+				break;
+			case 23240:
+				model.setTexture(0, 85);
+				break;
+			case 23241:
+				model.setTexture(0, 86);
+				break;
+			case 23242:
+				model.setTexture(0, 87);
+				break;
+
 			case 23211:
 				model.setTexture(300, 92);
 				break;
@@ -48,11 +146,12 @@ public final class ItemDefinition {
 				model.setTexture(300, 71);
 				break;
 			case 23203:
-				model.setTexture(428, 12);
+				model.setTexture(428, 78);
 				break;
 			case 23206:
 				model.setTexture(40, 91);
 				break;
+
 			case 23207:
 				model.setTexture(40, 71);
 				break;
@@ -72,7 +171,6 @@ public final class ItemDefinition {
 			case 23200:
 				model.setTexture(87);
 				break;
-
 			case 23201:
 				model.setTexture(71);
 				break;
@@ -3726,17 +3824,17 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.actions[0] = "Open";
 				break;
 			case 11960:
-				itemDef.name = "Lust Set";
+				itemDef.name = "Onyx Set";
 				itemDef.actions = new String[5];
 				itemDef.actions[0] = "Open";
 				break;
 			case 19588:
-				itemDef.name = "Godly Set";
+				itemDef.name = "Malvek Set";
 				itemDef.actions = new String[5];
 				itemDef.actions[0] = "Open";
 				break;
 			case 11938:
-				itemDef.name = "Gold Set";
+				itemDef.name = "Obsidian Set";
 				itemDef.actions = new String[5];
 				itemDef.actions[0] = "Open";
 				break;
@@ -3786,17 +3884,17 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.actions[0] = "Open";
 				break;
 			case 11874:
-				itemDef.name = "Graceful Set";
+				itemDef.name = "Blood Set";
 				itemDef.actions = new String[5];
 				itemDef.actions[0] = "Open";
 				break;
 			case 11916:
-				itemDef.name = "Mystical Set";
+				itemDef.name = "Demonlord Set";
 				itemDef.actions = new String[5];
 				itemDef.actions[0] = "Open";
 				break;
 			case 11920:
-				itemDef.name = "Cleric Set";
+				itemDef.name = "Groundon Set";
 				itemDef.actions = new String[5];
 				itemDef.actions[0] = "Open";
 				break;
