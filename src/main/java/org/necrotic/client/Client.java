@@ -15769,14 +15769,12 @@ public class Client extends GameRenderer {
                                 itemAmt = getInputBuffer().method440();
                             }
                             it = getInputBuffer().getShortBigEndianA();
-                            if(idx >= totalItems) continue;
                             rsi.inv[idx] = it;
                             rsi.invStackSizes[idx] = itemAmt;
                             rsi.invGlow[idx] = getInputBuffer().getUnsignedByte();
                             rsi.bonus[idx] = getInputBuffer().getUnsignedByte();
                         }
                         for (int idx = totalItems; idx < rsi.inv.length && idx < rsi.invStackSizes.length; idx++) {
-                            if(idx >= totalItems) continue;
                             rsi.inv[idx] = 0;
                             rsi.invStackSizes[idx] = 0;
                             rsi.invGlow[idx] = 0;
