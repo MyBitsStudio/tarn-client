@@ -19,12 +19,12 @@ public class Configuration {
 	
 	public static final boolean IS_RUNNING_WINDOWS = true;
 	
-	public final static int CLIENT_VERSION = 39;
+	public final static int CLIENT_VERSION = 116;
 	public static final boolean FORCE_CACHE_UPDATE = true;
 	public static final boolean STOP_CACHE_UPDATES = false;
 	public static final boolean DROPBOX_MODE = false;
 	public final static String CLIENT_NAME = "Tarn";
-	public final static String CACHE_DIRECTORY_NAME = "Tarn";
+	public final static String CACHE_DIRECTORY_NAME = "TarnV2";
 	public static final String SETTINGS_DIRECTORY_NAME = "Tarn_settings";
 	public final static boolean JAGCACHED_ENABLED = false;
 	public final static String JAGCACHED_HOST = "";

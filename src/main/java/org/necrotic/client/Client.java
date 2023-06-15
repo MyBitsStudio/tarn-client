@@ -16829,8 +16829,28 @@ public class Client extends GameRenderer {
             loginMessages = new String[]{"Invalid loginserver requested", "Please try using a different world."};
             return false;
         }
+        if (loginCode == 35) {
+            loginMessages = new String[]{"Account Banned. Message Support!"};
+            return false;
+        }
+        if (loginCode == 36) {
+            loginMessages = new String[]{"Blacklisted. Message Support!"};
+            return false;
+        }
         if (loginCode == 37) {
-            loginMessages = new String[]{"This account does not exist. You can create", "it by clicking the button below."};
+            loginMessages = new String[]{"VPN DETECTED!"};
+            return false;
+        }
+        if (loginCode == 38) {
+            loginMessages = new String[]{"Invalid IP. Message Support!"};
+            return false;
+        }
+        if (loginCode == 39) {
+            loginMessages = new String[]{"Locked. Try Again Later!"};
+            return false;
+        }
+        if (loginCode == 40) {
+            loginMessages = new String[]{"Different IP Detected. Message Support!"};
             return false;
         }
 

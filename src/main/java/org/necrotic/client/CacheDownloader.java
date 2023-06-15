@@ -17,8 +17,8 @@ public class CacheDownloader {
 
 	private static final String CACHE_FILE_NAME = "Tarn.zip"; //The name of the actual .zip file
 
-	private static final String CACHE_URL = "https://tarn-rsps.com/cache/Tarn.zip";//"https://dl.dropboxusercontent.com/s/t7rpvg2kgl84pdo/Tarn.zip";
-	private static final String NEWEST_VERSION_FILE_URL = "https://tarn-rsps.com/cache/cache_version.txt";
+	private static final String CACHE_URL = "https://tarn.gg/cache/Tarn.zip";//"https://dl.dropboxusercontent.com/s/t7rpvg2kgl84pdo/Tarn.zip";
+	private static final String NEWEST_VERSION_FILE_URL = "https://tarn.gg/cache/cache_version.txt";
 	private static final String CURRENT_VERSION_FILE = "cache_version.txt"; //The location of the local cache_version txt file
 
 	public static final String URL_TO_LOADING_IMAGES = "https://tarn-rsps.com/resources/";

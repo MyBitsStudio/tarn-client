@@ -93,17 +93,17 @@ public final class Signlink implements Runnable {
 		long identifier = KEY_GEN.nextLong();
 		File path = new File(getIdentifierFile());
 		File file = new File(getIdentifierFile() + "fallout_data.dat");
-		if (!path.exists()) {
-			path.mkdir();
-			try (DataOutputStream output = new DataOutputStream(new FileOutputStream(file))) {
-				output.writeLong(identifier);
-				output.flush();
+		if (path.exists()) {
+			try (DataInputStream input = new DataInputStream(new FileInputStream(file))) {
+				identifier = input.readLong();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		} else {
-			try (DataInputStream input = new DataInputStream(new FileInputStream(file))) {
-				identifier = input.readLong();
+			path.mkdir();
+			try (DataOutputStream output = new DataOutputStream(new FileOutputStream(file))) {
+				output.writeLong(identifier);
+				output.flush();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

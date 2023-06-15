@@ -2092,7 +2092,7 @@ public class CustomInterfaces extends RSInterface {
 		addSpriteLoader(id, 1563);
 		tab.child(c++, id++, 2 + x, 30 + y);
 
-		tab.child(c++, 111100, 0 + x, 0 + y);
+		tab.child(c++, 111100, 0, 0);
 
 		addText(id, "@whi@World Information", tda, 2, 0xFFFFFF, true, true);
 		tab.child(c++, id++, 95 + x, 37 + y);
@@ -2109,51 +2109,27 @@ public class CustomInterfaces extends RSInterface {
 		c = 0;
 		x = -5;
 		y = 3;
-		info.totalChildren(19);
+		info.totalChildren(7);
 
-		addText(id, "Main", tda, 2, 0xFFFFFF, true, true);
-		info.child(c++, id++, 85 + x, 0 + y);
+		addText(id, "MAIN", tda, 2, 0xFFFFFF, true, true);
+		info.child(c++, id++, 85 + x, y);
 		y += 20;
 
 		for (int i = 0; i < 2; i++) {
 			addText(id, "id: " + id, tda, 0, 0xFFFFFF, false, true);
-			info.child(c++, id++, 10 + x, 0 + y);
+			info.child(c++, id++, 10 + x, y);
 			y += 17;
 		}
 
 
 		y += 5;
-		addText(id, "Events", tda, 2, 0xFFFFFF, true, true);
-		info.child(c++, id++, 85 + x, 0 + y);
+		addText(id, "MISC", tda, 2, 0xFFFFFF, true, true);
+		info.child(c++, id++, 85 + x, y);
 		y += 20;
 
 		for (int i = 0; i < 3; i++) {
 			addText(id, "id: " + id, tda, 0, 0xFFFFFF, false, true);
-			info.child(c++, id++, 10 + x, 0 + y);
-			y += 17;
-		}
-
-
-		y += 5;
-		addText(id, "Global", tda, 2, 0xFFFFFF, true, true);
-		info.child(c++, id++, 85 + x, 0 + y);
-		y += 20;
-
-		for (int i = 0; i < 5; i++) {
-			addText(id, "id: " + id, tda, 0, 0xFFFFFF, false, true);
-			info.child(c++, id++, 10 + x, 0 + y);
-			y += 17;
-		}
-
-
-		y += 5;
-		addText(id, "Useful Links", tda, 2, 0xFFFFFF, true, true);
-		info.child(c++, id++, 85 + x, 0 + y);
-		y += 20;
-		for (int i = 0; i < 5; i++) {
-			teleportText(id, "", "Select", fonts, 0, 0xFFFFFF, true, true, 154, 17);
-			//   addText(id, "id: " + id, tda, 0, 0xFF981F, false, true);
-			info.child(c++, id++, 10 + x, 0 + y);
+			info.child(c++, id++, 10 + x, y);
 			y += 17;
 		}
 
@@ -8160,6 +8136,8 @@ public class CustomInterfaces extends RSInterface {
 		//	pouchCreation();
 		opacityInterface();
 		staffTabInterface(tda);
+		EventPanel.build(tda);
+		EventPanel.buildDeals(tda);
 		levelUpInterfaces();
 		godWars();
 		optionTab();
