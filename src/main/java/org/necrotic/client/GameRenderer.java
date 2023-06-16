@@ -1026,8 +1026,14 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 		childID1 = new int[5];
 		/* Main interface scrolling */
 		if (Client.openInterfaceID != -1) {
-			RSInterface rsi = RSInterface.interfaceCache[Client.openInterfaceID];
-
+			int interfaceId = Client.openInterfaceID;
+			if(Client.overlayInterfaceId != -1) {
+				interfaceId = Client.overlayInterfaceId;
+			}
+			RSInterface rsi = RSInterface.interfaceCache[interfaceId];
+			if(rsi.disableInteraction) {
+				return false;
+			}
 			offsetX = GameFrame.getScreenMode() == ScreenMode.FIXED ? 4 : Client.clientWidth / 2 - 360;
 			offsetY = GameFrame.getScreenMode() == ScreenMode.FIXED ? 4 : Client.clientHeight / 2 - 235;
 			int off = 0;

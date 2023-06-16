@@ -10,6 +10,7 @@ import net.runelite.client.eventbus.EventBus;
 import net.runelite.client.plugins.PluginManager;
 import net.runelite.client.rs.ClientLoader;
 import net.runelite.client.ui.ClientUI;
+import org.necrotic.Configuration;
 import org.necrotic.client.Client;
 
 import javax.annotation.Nullable;
@@ -91,7 +92,9 @@ public final class RuneLite {
         eventBus.register(pluginManager);
         eventBus.register(configManager);
         pluginManager.startPlugins();
-        setSystemOut();
+        if(!Configuration.SERVER_HOST().equals("localhost")) {
+            setSystemOut();
+        }
         clientUI.show();
     }
 

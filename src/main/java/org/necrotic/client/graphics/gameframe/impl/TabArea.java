@@ -6,6 +6,7 @@ import org.necrotic.client.constants.GameFrameConstants;
 import org.necrotic.client.constants.GameFrameConstants.GameFrameType;
 import org.necrotic.client.graphics.Sprite;
 import org.necrotic.client.graphics.gameframe.GameFrame;
+import org.necrotic.client.graphics.rsinterface.TradingPost;
 import org.necrotic.client.world.Rasterizer;
 
 public class TabArea extends GameFrame {
@@ -89,6 +90,24 @@ public class TabArea extends GameFrame {
 	 * @param client
 	 * @param screenMode
 	 */
+	private static final int[][] gameFrameData = new int[][]{{528, 11, 8}, // attack
+			// tab
+			{529, 11, 8}, // skills tab
+			{530, 10, 8}, // quest tab
+			{782, 10, 8}, // achievements tab
+			{532, 10, 8}, // inventory tab
+			{533, 12, 8}, // equipment tab
+			{534, 10, 8}, // prayer tab
+			{535, 10, 8}, // magic tab
+			{1197, 11, 8}, // summoning tab
+			{536, 11, 8}, // friends tab
+			{537, 11, 8}, // ignores tab
+			{541, 10, 10}, // clan chat tab
+			{538, 10, 8}, // settings tab
+			{539, 10, 8}, // emotes tab
+			{781, 10, 7}, // summon tab
+			{-1, 11, 8}, // staff tab / arlo
+	};
 	private void drawSideIcons(Client client, ScreenMode screenMode) {
 		if (isVisible()) {
 			if (GameFrameConstants.gameframeType == GameFrameType.FRAME_525) {
@@ -103,24 +122,6 @@ public class TabArea extends GameFrame {
 					}
 				}
 			} else if (GameFrameConstants.gameframeType == GameFrameType.FRAME_554) {
-				int[][] gameFrameData = new int[][]{{528, 11, 8}, // attack
-						// tab
-						{529, 11, 8}, // skills tab
-						{530, 10, 8}, // quest tab
-						{782, 10, 8}, // achievements tab
-						{532, 10, 8}, // inventory tab
-						{533, 12, 8}, // equipment tab
-						{534, 10, 8}, // prayer tab
-						{535, 10, 8}, // magic tab
-						{1197, 11, 8}, // summoning tab
-						{536, 11, 8}, // friends tab
-						{537, 11, 8}, // ignores tab
-						{541, 10, 10}, // clan chat tab
-						{538, 10, 8}, // settings tab
-						{539, 10, 8}, // emotes tab
-						{781, 10, 7}, // summon tab
-						{-1, 11, 8}, // staff tab / arlo
-				};
 				for (int i = 0; i < gameFrameData.length; i++) {
 					if (client.invOverlayInterfaceID == -1) {
 						int offsetX = getOffSetX() + gameFrameData[i][1] + (i >= 8 ? i - 8 : i) * 30;
@@ -301,6 +302,8 @@ public class TabArea extends GameFrame {
 		}
 	}
 
+	int inventoryGlow = 1;
+
 	@Override
 	protected void render(Client client, ScreenMode screenMode) {
 		if (isVisible()) {
@@ -338,8 +341,28 @@ public class TabArea extends GameFrame {
 
 			}
 
+			if(Client.invGlow) {
+				int direction = inventoryGlow & 1;
+				int opacity = inventoryGlow >> 1;
+				if (direction == 1) {
+					if (opacity >= 250) {
+						direction = 0;
+						opacity -= 4;
+					} else {
+						opacity += 4;
+					}
+				} else {
+					if (opacity <= 8) {
+						direction = 1;
+						opacity += 4;
+					} else {
+						opacity -= 4;
+					}
+				}
+				inventoryGlow = (opacity << 1) | direction;
+				Client.spritesMap.get(3375).drawTransparentSprite(getOffSetX() + 33, getOffSetY() - (Client.clientWidth <= GameFrameConstants.smallTabs ? 13 : -23) + 50, opacity);
+			}
 			drawRedStones(client, screenMode);
-
 			drawSideIcons(client, screenMode);
 			if (!componentHidden() || screenMode == ScreenMode.FIXED) {
 				if (client.invOverlayInterfaceID != -1) {

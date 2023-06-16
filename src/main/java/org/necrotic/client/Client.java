@@ -138,6 +138,7 @@ public class Client extends GameRenderer {
     public static boolean mousePressed;
     public static SpritesMap spritesMap = new SpritesMap(1);
     static boolean inputTaken;
+    public static boolean invGlow;
     private static boolean aBoolean475;
     private static boolean aBoolean995;
     private static byte[] aByteArray347;
@@ -3105,6 +3106,11 @@ public class Client extends GameRenderer {
         }
     }
 
+    public static int overlayInterfaceId = -1;
+    public void setOverlayInterfaceID(int interfaceId) {
+        overlayInterfaceId = interfaceId;
+    }
+
     private void buildInterfaceMenu(int xPadding, RSInterface rsInterface, int xPos, int yPadding, int yPos, int scrollPoint) {
         if (rsInterface == null) {
             rsInterface = RSInterface.interfaceCache[21356];
@@ -3112,9 +3118,13 @@ public class Client extends GameRenderer {
 
         if (rsInterface.type != 0 || rsInterface.children == null || rsInterface.interfaceShown || !rsInterface.isVisible()) {
             return;
-        } // oh
+        }
 
         if (xPos < xPadding || yPos < yPadding || xPos > xPadding + rsInterface.width || yPos > yPadding + rsInterface.height) {
+            return;
+        }
+
+        if(rsInterface.disableInteraction) {
             return;
         }
 
@@ -3163,8 +3173,6 @@ public class Client extends GameRenderer {
                     }
                 }
             } else {
-
-
                 if (child.type == 100 && mousePressed && child.unrevealedSprite != null) {
                     if (xPos >= xSpritePos && yPos >= ySpritePos && xPos < xSpritePos + child.width && yPos < ySpritePos + child.height) { // checks if mouse is inside the sprite
 
@@ -3473,8 +3481,7 @@ public class Client extends GameRenderer {
                                                     menuActionRow++;
                                                 }
                                             }
-                                        }
-                                        else if (child.actions != null) {
+                                        } else if (child.actions != null) {
                                             int interfaceId = child.id;
                                             for (int j4 = 4; j4 >= 0; j4--) {
                                                 if ((child.actions[j4] != null
@@ -3653,41 +3660,42 @@ public class Client extends GameRenderer {
 
                                         //
 
+                                        if(!child.hideExamine) {
 
-                                        List<Integer> dontHover = new ArrayList<Integer>() {
-                                            {
-                                                add(1);
-                                                add(2);
-                                            }
-                                        };
-                                        itemHover = itemDef.id;
+                                            List<Integer> dontHover = new ArrayList<Integer>() {
+                                                {
+                                                    add(1);
+                                                    add(2);
+                                                }
+                                            };
+                                            itemHover = itemDef.id;
 
-                                        if (itemHover > -1 && !dontHover.contains(openInterfaceID)) {
-                                            int y = super.mouseY;
-                                            int x = super.mouseX;
-                                            int hoverWidth = RSInterface.interfaceCache[94021].width;
-                                            int hoverWidth1 = RSInterface.interfaceCache[94086].width;
+                                            if (itemHover > -1 && !dontHover.contains(openInterfaceID)) {
+                                                int y = super.mouseY;
+                                                int x = super.mouseX;
+                                                int hoverWidth = RSInterface.interfaceCache[94021].width;
+                                                int hoverWidth1 = RSInterface.interfaceCache[94086].width;
 
-                                            if (ItemStats.itemstats[itemHover] != null) {
-                                                if (ItemStats.itemstats[itemHover].type == 1) {
-                                                    if (x + hoverWidth > 500) {
-                                                        x = 500 - hoverWidth;
-                                                    }
-                                                    if (GameFrame.getScreenMode() == ScreenMode.FIXED && y > 180) {
-                                                        y = 180;
+                                                if (ItemStats.itemstats[itemHover] != null) {
+                                                    if (ItemStats.itemstats[itemHover].type == 1) {
+                                                        if (x + hoverWidth > 500) {
+                                                            x = 500 - hoverWidth;
+                                                        }
+                                                        if (GameFrame.getScreenMode() == ScreenMode.FIXED && y > 180) {
+                                                            y = 180;
+                                                        }
                                                     }
                                                 }
-                                            }
-                                            //if (clientSize == 1) {
-                                            if (controlIsDown && ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 1) {
+                                                //if (clientSize == 1) {
+                                                if (controlIsDown && ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 1) {
 
-                                                drawInterface(0, x, RSInterface.interfaceCache[94000], y);
-                                            } else {
-                                                drawInterface(0, x, RSInterface.interfaceCache[94020], y);
+                                                    drawInterface(0, x, RSInterface.interfaceCache[94000], y);
+                                                } else {
+                                                    drawInterface(0, x, RSInterface.interfaceCache[94020], y);
+                                                }
                                             }
+
                                         }
-
-
                                         if (openInterfaceID == 5292 && child.invStackSizes[containerSlot] == 0) {
                                             menuActionRow = 3;
                                             menuActionName[0] = "Cancel";
@@ -6639,7 +6647,6 @@ public class Client extends GameRenderer {
         if (MBOX) {
             drawInterface(0, 0, RSInterface.interfaceCache[39670], 0);
         }
-
         if (getWalkableInterfaceId() > 0) {
             processInterfaceAnimation(anInt945, getWalkableInterfaceId());
             if (getWalkableInterfaceId() == 15892 && GameFrame.getScreenMode() != ScreenMode.FIXED) {
@@ -6674,6 +6681,10 @@ public class Client extends GameRenderer {
                 }
             }
             getGrandExchange().drawGrandExchange();
+
+            if(overlayInterfaceId != -1) {
+                drawInterface(0, 0, RSInterface.interfaceCache[overlayInterfaceId], 0);
+            }
         }
 
         // method70();
@@ -7728,27 +7739,36 @@ public class Client extends GameRenderer {
                     int calcHeight = (childInterface.progress * childInterface.height) / childInterface.maxPercentage;
                     int height = Math.min(childInterface.height, calcHeight);
                     new Sprite(spritesMap.getData(childInterface.disabledSpriteId), childInterface.width, height, 1).drawAdvancedSprite(childX, Math.max(childY, childY + (childInterface.height - calcHeight)));
+                } else if(childInterface.progressBarType == ProgressBarType.HORIZONTAL_LEFT_RIGHT) {
+                    int calcWidth = (childInterface.progress * childInterface.width) / childInterface.maxPercentage;
+                    int width = Math.min(childInterface.width, calcWidth);
+                    new Sprite(spritesMap.getData(childInterface.disabledSpriteId), width, childInterface.height, 1).drawAdvancedSprite(childX, childY);
                 }
-                    //todo add rest of the progress bar types
+            } else if(childInterface.type == 289) {
+                int[][] items = childInterface.conveyorItems;
+                for(int i = 0; i < tradingPostConveyorBeltValidItems; i++) {
+                    int[] component = items[i];
+                    int itemId = component[0];
+                    if(itemId <= 0) continue;
+                    int type = component[1];
+                    Sprite sprite = ItemDefinition.getSprite(itemId, 1, 0);
+                    if(sprite != null) {
+                        int xPos = 455 + (i*50) - (tradingPostConveyorBeltLoop);
+                        sprite.drawSprite(xPos, 286);
+                        spritesMap.get(type == 1 ? 3329 : 3328).drawSprite(xPos + sprite.maxWidth, 290);
+                    }
+                }
             }
-
             if (childInterface.type == 150) {
                 childInterface.wheel.render(childX, childY);
             }
-
             if (childInterface.type == 100 && childInterface.unrevealedSprite != null) {
-
                 childInterface.unrevealedSprite.drawSprite(childX + 2, childY + 2);
-                // System.out.println("Unrevealed sprite drawn");
             }
-
             if (childInterface.type == 831) {
                 DrawingArea.drawAlphaFilledPixels(childX, childY, childInterface.width, childInterface.height, childInterface.enabledColor, childInterface.customOpacity);
             }
             if (childInterface.type == 0) {
-                // System.out.println(childInterface.id);
-
-
                 if (childInterface.sideScroll) {
                     if (childInterface.scrollPosition > childInterface.scrollMax - childInterface.width) {
                         childInterface.scrollPosition = childInterface.scrollMax - childInterface.width;
@@ -7758,11 +7778,9 @@ public class Client extends GameRenderer {
                         childInterface.scrollPosition = childInterface.scrollMax - childInterface.height;
                     }
                 }
-
                 if (childInterface.scrollPosition < 0) {
                     childInterface.scrollPosition = 0;
                 }
-
                 drawInterface(childInterface.scrollPosition, childX, childInterface, childY);
 
                 if (childInterface.sideScroll) {
@@ -8980,6 +8998,10 @@ public class Client extends GameRenderer {
         DrawingArea.fillRectangle(color, yPos, width, height, 256, xPos);
     }
 
+    public void drawColorBox(int color, int xPos, int yPos, int width, int height, int opacity) {
+        DrawingArea.fillRectangle(color, yPos, width, height, 256, xPos);
+    }
+
     private void handleAccountHeadRotation() {
         for (int i = 0; i < accountManager.getAccounts().length; i++) {
             RSInterface rsi = RSInterface.interfaceCache[31001 + i];
@@ -10142,6 +10164,9 @@ public class Client extends GameRenderer {
         tabAreaAltered = true;
     }
 
+    public int tradingPostConveyorBeltLoop = 0;
+    public int tradingPostConveyorBeltValidItems = 25;
+
     private void mainGameProcessor() {
         if (openInterfaceID == 24600 && !getGrandExchange().searching && interfaceButtonAction != 1558 && interfaceButtonAction != 1557 && inputDialogState != 1 && inputDialogState != 4) {
             inputDialogState = 0;
@@ -10167,7 +10192,15 @@ public class Client extends GameRenderer {
         if (!loggedIn) {
             return;
         }
+
         casketOpening.spin();
+
+        if(openInterfaceID == 150250) {
+            tradingPostConveyorBeltLoop += 2;
+            if(tradingPostConveyorBeltLoop > ((tradingPostConveyorBeltValidItems * 50) + 450)) {
+                tradingPostConveyorBeltLoop = -20;
+            }
+        }
 
         if (((vengTimer != -1)) && (System.currentTimeMillis() - lastUpdate > 1000L)) {
             if (vengTimer != -1) {
@@ -11926,8 +11959,6 @@ public class Client extends GameRenderer {
                 Rasterizer.drawFog(0xc8c0a8, 7700, 7700);
 
             }
-
-
         }
 
         updateEntities();
@@ -15647,7 +15678,13 @@ public class Client extends GameRenderer {
                     PlayerHandler.totalXP = totalEXP;
                     pktType = -1;
                     return true;
-
+                case 10:
+                    int parent = getInputBuffer().getInt();
+                    int overlay = getInputBuffer().getInt();
+                    RSInterface.interfaceCache[parent].disableInteraction = overlay != -1;
+                    setOverlayInterfaceID(overlay);
+                    pktType = -1;
+                    return true;
                 case 126:
                     String text = getInputBuffer().getString();
                     int frame = getInputBuffer().readInt();
@@ -17406,11 +17443,18 @@ public class Client extends GameRenderer {
         int height = GameFrame.getScreenMode() != ScreenMode.FIXED ? getScreenHeight() : 338;
 
         if (super.mouseX > gameScreenDrawX && super.mouseY > gameScreenDrawY && super.mouseX < width && super.mouseY < height) {
+            int interfaceWidth = GameFrame.getScreenMode() != ScreenMode.FIXED ? getScreenWidth() : 516;
+            int interfaceHeight = GameFrame.getScreenMode() != ScreenMode.FIXED ? getScreenHeight() : 338;
+            if(overlayInterfaceId != -1 && isGameFrameVisible()) {
+                if (GameFrame.getScreenMode() != ScreenMode.FIXED) {
+                    buildInterfaceMenu(gameScreenDrawX + (interfaceWidth - 765) / 2, RSInterface.interfaceCache[overlayInterfaceId], super.mouseX, gameScreenDrawY + (interfaceHeight - 503) / 2, super.mouseY, 0);
+                } else {
+                    buildInterfaceMenu(4, RSInterface.interfaceCache[overlayInterfaceId], super.mouseX, 4, super.mouseY, 0);
+                }
+            }
             if (openInterfaceID != -1 && isGameFrameVisible()) {
                 RSInterface rsInterface = RSInterface.interfaceCache[openInterfaceID];
                 if (GameFrame.getScreenMode() != ScreenMode.FIXED) {
-                    int interfaceWidth = GameFrame.getScreenMode() != ScreenMode.FIXED ? getScreenWidth() : 516;
-                    int interfaceHeight = GameFrame.getScreenMode() != ScreenMode.FIXED ? getScreenHeight() : 338;
                     buildInterfaceMenu(gameScreenDrawX + (interfaceWidth - 765) / 2, rsInterface, super.mouseX, gameScreenDrawY + (interfaceHeight - 503) / 2, super.mouseY, 0);
                 } else {
                     buildInterfaceMenu(4, rsInterface, super.mouseX, 4, super.mouseY, 0);
@@ -18543,6 +18587,7 @@ public class Client extends GameRenderer {
             } catch (Exception _ex) {
             }
             ItemStats.readDefinitions();
+           // TradingPost.load();
             updateGameArea();
             RenderableObject.clientInstance = this;
             ObjectDefinition.clientInstance = this;
