@@ -18,8 +18,6 @@ import org.necrotic.client.graphics.rsinterface.SummoningInterfaceData;
 import org.necrotic.client.io.ByteBuffer;
 import org.necrotic.client.world.Model;
 
-import java.util.Objects;
-
 public class RSInterface {
 
 	public static RSInterface addContainer(int id, int width, int height, int xPad, int yPad, boolean move, String... actions) {
@@ -283,7 +281,7 @@ public class RSInterface {
 		rsi.secondColor = secondColor;
 	}
 
-	protected int progress;
+	public int progress;
 	protected int firstColor;
 	protected int secondColor;
 	public ProgressBarType progressBarType;
@@ -3969,7 +3967,6 @@ public class RSInterface {
 		return rsi;
 	}
 
-	// done
 	public static void addLunar2RunesSmallBox(int ID, int r1, int r2, int ra1, int ra2, int rune1, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
@@ -5375,7 +5372,7 @@ public class RSInterface {
 		int i = -1;
 		stream.getUnsignedShort();
 		// int j = stream.getUnsignedShort();
-		interfaceCache = new RSInterface[150250];
+		interfaceCache = new RSInterface[151250];
 		while (stream.position < stream.buffer.length) {
 			int k = stream.getUnsignedShort();
 			if (k == 65535) {
@@ -5987,13 +5984,14 @@ public class RSInterface {
 	public int width;
 	public int xOffset;
 	public int yOffset;
-	boolean hideStackSize, hideExamine;
+	public boolean hideStackSize, hideExamine;
 	public boolean advancedSprite;
 	public int summonReq;
 	public boolean greyScale;
 	public int itemSpriteId;
 	public int itemSpriteZoom;
 	public int itemSpriteIndex;
+	public boolean disableInteraction;
 
 	public RSInterface() {
 		enabledSpriteId = disabledSpriteId = -1;
@@ -6679,6 +6677,8 @@ public class RSInterface {
 		tab.actions = copy.actions;
 		return tab;
 	}
+
+	public int[][] conveyorItems;
 
 	public boolean hideWidget = false;
 

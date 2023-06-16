@@ -8200,9 +8200,9 @@ public class CustomInterfaces extends RSInterface {
 		EquipmentEnhancement.build();
 		SeasonPass.build();
 		Forge.build();
+		TradingPost.build();
 		AttendanceRewardInterface.build();
 		SecurityInterface.build(tda);
 		InstanceInterface.build2(tda);
 	}
-
 }
