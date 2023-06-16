@@ -212,32 +212,45 @@ public class Client extends GameRenderer {
                     return animatedSprites[8];
                 case 832:
                     return animatedSprites[9];
+                case 3385:
+                    return animatedSprites[10];
             }
             return null;
         }
 
     public static AnimatedSprite animatedSpriteForRank(int rank) {
-        switch (rank) {
+        switch(rank){
             case 4:
-                return animatedSprites[8];
-            case 9:
-                return animatedSprites[0];
-            case 7:
-                return animatedSprites[1];
-            case 8:
-                return animatedSprites[3];
-            case 2:
-                return animatedSprites[7];
-            case 1:
                 return animatedSprites[6];
             case 5:
+            case 6:
+                return animatedSprites[7];
+            case 8:
+                return animatedSprites[10];
+            case 7:
+                return animatedSprites[8];
+            case 2:
+            case 3:
                 return animatedSprites[9];
+        }
+        return null;
+    }
+
+    public static AnimatedSprite animatedSpriteForDonation(int rank) {
+        switch (rank) {
+            case 1:
+                return animatedSprites[0];
+            case 2:
+                return animatedSprites[1];
             case 3:
                 return animatedSprites[2];
-            case 6:
+            case 4:
+                return animatedSprites[3];
+            case 5:
                 return animatedSprites[4];
-            case 16:
-            case 13:
+            case 6:
+            case 7:
+            case 8:
                 return animatedSprites[5];
         }
         return null;
@@ -429,6 +442,8 @@ public class Client extends GameRenderer {
     public int minimapRotation;
     public int minimapZoom;
     public int myRights;
+    public int myDonator;
+    public int myVip;
     public int gameMode;
     public RSFontSystem newSmallFont, newRegularFont, newBoldFont, newFancyFont;
     public TextDrawingArea normalText;
@@ -2271,7 +2286,7 @@ public class Client extends GameRenderer {
                         }
                     }
 
-                    menuActionName[menuActionRow] = myRights == 4 ? "Examine @cya@" + class46.name + " @gre@(@whi@" + class46.type + "@gre@) (@whi@" + (x + regionBaseX) + "," + (y + regionBaseY) + ") @or1@(" + class46.animation + ")" + "@gre@)" : "Examine @cya@" + class46.name;
+                    menuActionName[menuActionRow] = myRights >= 6 ? "Examine @cya@" + class46.name + " @gre@(@whi@" + class46.type + "@gre@) (@whi@" + (x + regionBaseX) + "," + (y + regionBaseY) + ") @or1@(" + class46.animation + ")" + "@gre@)" : "Examine @cya@" + class46.name;
                     menuActionID[menuActionRow] = 1226;
                     menuActionCmd1[menuActionRow] = class46 == null ? -1 : class46.type << 14;
                     menuActionCmd2[menuActionRow] = x;
@@ -2347,7 +2362,7 @@ public class Client extends GameRenderer {
                         ItemDefinition itemDef = ItemDefinition.get(item.id);
 
                         if (itemSelected == 1) {
-                            menuActionName[menuActionRow] = "Use " + selectedItemName + " with @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                            menuActionName[menuActionRow] = "Use " + selectedItemName + " with @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                             menuActionID[menuActionRow] = 511;
                             menuActionCmd1[menuActionRow] = item.id;
                             menuActionCmd2[menuActionRow] = x;
@@ -2356,7 +2371,7 @@ public class Client extends GameRenderer {
                             menuActionRow++;
                         } else if (spellSelected == 1) {
                             if ((spellUsableOn & 1) == 1) {
-                                menuActionName[menuActionRow] = spellTooltip + " @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                menuActionName[menuActionRow] = spellTooltip + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                 menuActionID[menuActionRow] = 94;
                                 menuActionCmd1[menuActionRow] = item.id;
                                 menuActionCmd2[menuActionRow] = x;
@@ -2367,7 +2382,7 @@ public class Client extends GameRenderer {
                         } else {
                             for (int j3 = 4; j3 >= 0; j3--) {
                                 if (itemDef.groundActions != null && itemDef.groundActions[j3] != null) {
-                                    menuActionName[menuActionRow] = itemDef.groundActions[j3] + " @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                    menuActionName[menuActionRow] = itemDef.groundActions[j3] + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
 
                                     if (j3 == 0) {
                                         menuActionID[menuActionRow] = 652;
@@ -2396,7 +2411,7 @@ public class Client extends GameRenderer {
                                     menuActionCmd5[menuActionRow] = item.effect.ordinal();
                                     menuActionRow++;
                                 } else if (j3 == 2) {
-                                    menuActionName[menuActionRow] = "Take @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                    menuActionName[menuActionRow] = "Take @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                     menuActionID[menuActionRow] = 234;
                                     menuActionCmd1[menuActionRow] = item.id;
                                     menuActionCmd2[menuActionRow] = x;
@@ -2408,7 +2423,7 @@ public class Client extends GameRenderer {
                             }
 
 
-                            menuActionName[menuActionRow] = "Examine @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ") @or2@(" + itemDef.maleEquip1 + ")" : "");
+                            menuActionName[menuActionRow] = "Examine @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ") @or2@(" + itemDef.maleEquip1 + ")" : "");
                             menuActionID[menuActionRow] = 1448;
                             menuActionCmd1[menuActionRow] = item.id;
                             menuActionCmd2[menuActionRow] = x;
@@ -2540,8 +2555,8 @@ public class Client extends GameRenderer {
                 menuActionRow += 1;
 
             }
-            if (myRights == 4) {
-                s += " @whi@(@gre@" + entityDef.id + "@whi@)" + entityDef.npcModels[0] + "";
+            if (myRights >= 6) {
+                s += " @whi@(@gre@" + entityDef.id + "@whi@)" + entityDef.npcModels[0];
             }
 
 
@@ -3168,7 +3183,7 @@ public class Client extends GameRenderer {
                     if (child.atActionType == 0) {
                         String tooltip = child.tooltip;
                         if (tooltip != null) {
-                            if (myRights == 4 || myRights == 3) {
+                            if (myRights >= 5) {
                                 if (!tooltip.isEmpty()) {
                                     tooltip += " - Id: " + child.id;
                                 }
@@ -3210,7 +3225,7 @@ public class Client extends GameRenderer {
                             }
                             String tooltip = child.tooltip;
                             if (tooltip != null) {
-                                if (myRights == 4) {
+                                if (myRights == 5) {
                                     tooltip += " - Id: " + child.id;
                                 }
                                 if (tooltip.contains("[GE")) {
@@ -3238,7 +3253,7 @@ public class Client extends GameRenderer {
                         menuActionRow++;
                     }
 
-                    menuActionName[menuActionRow] = s + " @gre@" + child.spellName + (myRights == 4 ? ", " + child.id : "");
+                    menuActionName[menuActionRow] = s + " @gre@" + child.spellName + (myRights >= 6 ? ", " + child.id : "");
                     menuActionID[menuActionRow] = 626;
                     menuActionCmd3[menuActionRow] = child.id;
                     menuActionRow++;
@@ -3252,7 +3267,7 @@ public class Client extends GameRenderer {
                 }
 
                 if (child.atActionType == 4 && xPos >= xSpritePos && yPos >= ySpritePos && xPos < xSpritePos + child.width && yPos < ySpritePos + child.height) {
-                    menuActionName[menuActionRow] = child.tooltip + (myRights == 4 ? ", " + child.id : "");
+                    menuActionName[menuActionRow] = child.tooltip + (myRights >= 6 ? ", " + child.id : "");
                     menuActionID[menuActionRow] = 169;
                     menuActionCmd3[menuActionRow] = child.id;
                     menuActionRow++;
@@ -3264,14 +3279,14 @@ public class Client extends GameRenderer {
 
                 if (child.atActionType == 5 && xPos >= xSpritePos && yPos >= ySpritePos && xPos < xSpritePos + child.width && yPos < ySpritePos + child.height) {
                     childHovered = child;
-                    menuActionName[menuActionRow] = child.tooltip + (myRights == 4 ? ", " + child.id : "");
+                    menuActionName[menuActionRow] = child.tooltip + (myRights >= 6 ? ", " + child.id : "");
                     menuActionID[menuActionRow] = 646;
                     menuActionCmd3[menuActionRow] = child.id;
                     menuActionRow++;
                 }
 
                 if (child.atActionType == 6 && !aBoolean1149 && xPos >= xSpritePos && yPos >= ySpritePos && xPos < xSpritePos + child.width && yPos < ySpritePos + child.height) {
-                    menuActionName[menuActionRow] = child.tooltip + (myRights == 4 ? ", " + child.id : "");
+                    menuActionName[menuActionRow] = child.tooltip + (myRights >= 6 ? ", " + child.id : "");
                     menuActionID[menuActionRow] = 679;
                     menuActionCmd3[menuActionRow] = child.id;
                     menuActionRow++;
@@ -3307,7 +3322,7 @@ public class Client extends GameRenderer {
 
                                     if (itemSelected == 1 && child.isInventoryInterface) {
                                         if (child.id != anInt1284 || containerSlot != anInt1283) {
-                                            menuActionName[menuActionRow] = "Use " + selectedItemName + " with @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                            menuActionName[menuActionRow] = "Use " + selectedItemName + " with @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                             menuActionID[menuActionRow] = 870;
                                             menuActionCmd1[menuActionRow] = itemDef.id;
                                             menuActionCmd2[menuActionRow] = containerSlot;
@@ -3316,7 +3331,7 @@ public class Client extends GameRenderer {
                                         }
                                     } else if (spellSelected == 1 && child.isInventoryInterface) {
                                         if ((spellUsableOn & 0x10) == 16) {
-                                            menuActionName[menuActionRow] = spellTooltip + " @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                            menuActionName[menuActionRow] = spellTooltip + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                             menuActionID[menuActionRow] = 543;
                                             menuActionCmd1[menuActionRow] = itemDef.id;
                                             menuActionCmd2[menuActionRow] = containerSlot;
@@ -3360,7 +3375,7 @@ public class Client extends GameRenderer {
                                             if (openInterfaceID != 24700 && openInterfaceID != 2700) {
                                                 for (int l3 = 4; l3 >= 3; l3--) {
                                                     if (itemDef.actions != null && itemDef.actions[l3] != null) {
-                                                        menuActionName[menuActionRow] = itemDef.actions[l3] + " @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                        menuActionName[menuActionRow] = itemDef.actions[l3] + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
 
                                                         if (l3 == 3) {
                                                             menuActionID[menuActionRow] = 493;
@@ -3375,7 +3390,7 @@ public class Client extends GameRenderer {
                                                         menuActionCmd3[menuActionRow] = child.id;
                                                         menuActionRow++;
                                                     } else if (l3 == 4) {
-                                                        menuActionName[menuActionRow] = "Drop @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                        menuActionName[menuActionRow] = "Drop @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                         menuActionID[menuActionRow] = 847;
                                                         menuActionCmd1[menuActionRow] = itemDef.id;
                                                         menuActionCmd2[menuActionRow] = containerSlot;
@@ -3388,16 +3403,16 @@ public class Client extends GameRenderer {
 
                                         if (child.usableItemInterface) {
                                             if (openInterfaceID == 24700) {
-                                                menuActionName[menuActionRow] = "Offer @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                menuActionName[menuActionRow] = "Offer @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                 menuActionID[menuActionRow] = 24700;
                                                 menuActionCmd1[menuActionRow] = itemDef.id;
                                                 getGrandExchange().itemSelected = itemDef.id;
                                             } else if (openInterfaceID == 2700) {
-                                                menuActionName[menuActionRow] = "Store @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                menuActionName[menuActionRow] = "Store @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                 menuActionID[menuActionRow] = 2700;
                                                 menuActionCmd1[menuActionRow] = itemDef.id;
                                             } else {
-                                                menuActionName[menuActionRow] = "Use @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                menuActionName[menuActionRow] = "Use @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                 menuActionID[menuActionRow] = 447;
                                                 menuActionCmd1[menuActionRow] = itemDef.id;
                                             }
@@ -3409,7 +3424,7 @@ public class Client extends GameRenderer {
                                         if (openInterfaceID != 24700 && child.isInventoryInterface && itemDef.actions != null) {
                                             for (int i4 = 2; i4 >= 0; i4--) {
                                                 if (itemDef.actions[i4] != null) {
-                                                    menuActionName[menuActionRow] = itemDef.actions[i4] + " @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                    menuActionName[menuActionRow] = itemDef.actions[i4] + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
 
                                                     if (i4 == 0) {
                                                         menuActionID[menuActionRow] = 74;
@@ -3435,7 +3450,7 @@ public class Client extends GameRenderer {
                                         if (child.isInventoryInterface && shiftIsDown && shiftDrop) {
                                             for (int l3 = 4; l3 >= 3; l3--) {
                                                 if (itemDef.actions != null && itemDef.actions[l3] != null) {
-                                                    menuActionName[menuActionRow] = itemDef.actions[l3] + " @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                    menuActionName[menuActionRow] = itemDef.actions[l3] + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
 
                                                     if (l3 == 3) {
                                                         menuActionID[menuActionRow] = 493;
@@ -3450,7 +3465,7 @@ public class Client extends GameRenderer {
                                                     menuActionCmd3[menuActionRow] = child.id;
                                                     menuActionRow++;
                                                 } else if (l3 == 4) {
-                                                    menuActionName[menuActionRow] = "Drop @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                    menuActionName[menuActionRow] = "Drop @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                     menuActionID[menuActionRow] = 847;
                                                     menuActionCmd1[menuActionRow] = itemDef.id;
                                                     menuActionCmd2[menuActionRow] = containerSlot;
@@ -3469,11 +3484,11 @@ public class Client extends GameRenderer {
                                                     if (child.id == 1688) {
                                                         if (itemDef.equipOptions[menuActionRow] != null) {
                                                             menuActionName[menuActionRow] = itemDef.equipOptions[menuActionRow]
-                                                                    + " @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                                    + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                         } else {
                                                             if (child.actions[j4] != null) {
                                                                 menuActionName[menuActionRow] = child.actions[j4]
-                                                                        + " @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                                        + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                             }
                                                         }
                                                         if (j4 == 0)
@@ -3487,7 +3502,7 @@ public class Client extends GameRenderer {
                                                         if (j4 == 4)
                                                             menuActionID[menuActionRow] = 664;
                                                     } else {
-                                                        menuActionName[menuActionRow] = child.actions[j4] + " @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                        menuActionName[menuActionRow] = child.actions[j4] + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                         if (j4 == 0)
                                                             menuActionID[menuActionRow] = 632;
 
@@ -3523,7 +3538,7 @@ public class Client extends GameRenderer {
                                         }
                                         if (openInterfaceID != 24700) {
                                             if (!child.hideExamine && child.displayExamine) {
-                                                menuActionName[menuActionRow] = "Examine @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                menuActionName[menuActionRow] = "Examine @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                 menuActionID[menuActionRow] = 1125;
                                                 menuActionCmd1[menuActionRow] = itemDef.id;
                                                 menuActionCmd2[menuActionRow] = containerSlot;
@@ -3531,7 +3546,7 @@ public class Client extends GameRenderer {
                                                 menuActionRow++;
                                             } else {
                                                 if (child.parentID == 3822 && openInterfaceID == 3824) {
-                                                    menuActionName[menuActionRow] = "Sell All @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                    menuActionName[menuActionRow] = "Sell All @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                     menuActionID[menuActionRow] = 1126;
                                                     menuActionCmd1[menuActionRow] = itemDef.id;
                                                     menuActionCmd2[menuActionRow] = containerSlot;
@@ -3682,14 +3697,14 @@ public class Client extends GameRenderer {
                                             menuActionCmd3[0] = child.id;
 
                                             if (child.displayExamine) {
-                                                menuActionName[1] = "Examine @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                                menuActionName[1] = "Examine @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                 menuActionID[1] = 1125;
                                                 menuActionCmd1[1] = itemDef.id;
                                                 menuActionCmd2[1] = containerSlot;
                                                 menuActionCmd3[1] = child.id;
                                             }
 
-                                            menuActionName[2] = "Release @lre@" + itemDef.name + (myRights == 4 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
+                                            menuActionName[2] = "Release @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                             menuActionID[2] = 633;
                                             menuActionCmd1[2] = itemDef.id;
                                             menuActionCmd2[2] = containerSlot;
@@ -10404,7 +10419,7 @@ public class Client extends GameRenderer {
             int k = SceneGraph.clickedTileX;
             int k1 = SceneGraph.clickedTileY;
 
-            if ((myRights == 3 || myRights == 4) && controlShiftTeleporting) {
+            if ((myRights >= 5) && controlShiftTeleporting) {
                 teleport(regionBaseX + k, regionBaseY + k1);
                 SceneGraph.clickedTileX = -1;
             } else {
@@ -10477,7 +10492,7 @@ public class Client extends GameRenderer {
         if (super.idleTime > 9000) {
             anInt1011 = 250;
             super.idleTime = 0;
-            //getOut().putOpcode(202);
+            getOut().putOpcode(202);
         }
 
         if (++anInt1010 > 50) {
@@ -10809,6 +10824,8 @@ public class Client extends GameRenderer {
         if ((bitmap & 0x80) != 0) {
             int effects = buffer.getShortBigEndian();
             int rights = buffer.getUnsignedByte();
+            int donor = buffer.getUnsignedByte();
+            int vip = buffer.getUnsignedByte();
             int ironman = buffer.getUnsignedByte();
             int chatTextSize = buffer.method427();
             int currentOffset = buffer.position;
@@ -10852,6 +10869,7 @@ public class Client extends GameRenderer {
                         String prefix = getPrefix(rights) + (secondary > -1 ? getPrefix(secondary) : "");
                         List<Integer> chatRights = new ArrayList<>();
                         chatRights.add(rights);
+                        chatRights.add(donor);
                         chatRights.add(secondary);
 
                         if (Configuration.HIGHLIGHT_USERNAME) {
@@ -13520,7 +13538,7 @@ public class Client extends GameRenderer {
             }
 
             if (key == 167 || key == 96) {
-                if (myRights >= 1 && myRights <= 4) {
+                if (myRights >= 2 && myRights <= 8) {
                     consoleOpen = !consoleOpen;
                 }
                 return;
@@ -13986,14 +14004,16 @@ public class Client extends GameRenderer {
                         myPlayer.anInt1531 = i3;
                         myPlayer.textCycle = 150;
                         int prefixRights = myRights;
+                        int donRights = myDonator;
                         int secondary = -1;
                         if (gameMode > 0) {
                             secondary = 11 + gameMode;
                         }
                         List<Integer> chatRights = new ArrayList<>();
                         chatRights.add(prefixRights);
+                        chatRights.add(donRights);
                         chatRights.add(secondary);
-                        String prefix = getPrefix(prefixRights) + (secondary > -1 ? getPrefix(secondary) : "");
+                        String prefix = getPrefix(prefixRights > 0 ? prefixRights : donRights) + (secondary > -1 ? getPrefix(secondary) : "");
                         pushMessage(myPlayer.textSpoken, 2, prefix + myPlayer.name, myPlayer.loyaltyTitle, myPlayer.loyaltyColor, myPlayer.loyaltyPosition, chatRights);
 
                         if (publicChatMode == 2) {
@@ -14746,7 +14766,7 @@ public class Client extends GameRenderer {
                         PlayerHandler.addXP(skillId, gainedExperience);
                     }
                     if (skillId == 23) {
-                        setInterfaceText("" + maxLevel + "", 28171);
+                        setInterfaceText(String.valueOf(maxLevel), 28171);
                     }
                     pktType = -1;
                     return true;
@@ -15486,10 +15506,10 @@ public class Client extends GameRenderer {
                         try {
                             String message = TextInput.readChatboxText(pktSize - 13, getInputBuffer());
                             final String name = TextClass.fixName(TextClass.nameForLong(l5));
-                            if (playerRights != 0) {
-                                pushMessage(message, 7, getPrefix(playerRights) + name);
-                            } else {
+                            if (playerRights == 0) {
                                 pushMessage(message, 3, name);
+                            } else {
+                                pushMessage(message, 7, getPrefix(playerRights) + name);
                             }
                         } catch (Exception exception1) {
                             exception1.printStackTrace();
@@ -16913,6 +16933,8 @@ public class Client extends GameRenderer {
      */
     public void finishLogin(Client client) throws IOException {
         client.myRights = client.getConnection().read();
+        client.myDonator = client.getConnection().read();
+        client.myVip = client.getConnection().read();
         Client.flagged = client.getConnection().read() == 1;
 
         int captchaResponse = client.getConnection().read();
@@ -17076,7 +17098,7 @@ public class Client extends GameRenderer {
                 int l1 = clickY * j1 - clickX * i1 >> 11;
                 int i2 = myPlayer.x + k1 >> 7;
                 int j2 = myPlayer.y - l1 >> 7;
-                if ((myRights == 3 || myRights == 4) && controlShiftTeleporting) {
+                if ((myRights >= 5) && controlShiftTeleporting) {
                     teleport(regionBaseX + i2, regionBaseY + j2);
                 } else {
                     boolean flag1 = doWalkTo(1, 0, 0, 0, myPlayer.smallY[0], 0, 0, j2, myPlayer.smallX[0], true, i2);
@@ -18328,7 +18350,7 @@ public class Client extends GameRenderer {
             customMinimapIcons.add(new CustomMinimapIcon(2550, 3858, new Sprite(mediaArchive, "mapfunction", 5)));
             customMinimapIcons.add(new CustomMinimapIcon(2557, 3886, new Sprite(mediaArchive, "mapfunction", 34)));
 
-            animatedSprites = new AnimatedSprite[10];
+            animatedSprites = new AnimatedSprite[11];
             animatedSprites[0] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/diamond.gif");
             animatedSprites[1] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/emerald.gif");
             animatedSprites[2] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/onyx.gif");
@@ -18339,6 +18361,7 @@ public class Client extends GameRenderer {
             animatedSprites[7] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/admin.gif");
             animatedSprites[8] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/cm.gif");
             animatedSprites[9] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/support.gif");
+            animatedSprites[10] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/sales.gif");
             Forge.boxSprite = spritesMap.get(3363);
             Forge.lockSprite = spritesMap.get(3338);
 

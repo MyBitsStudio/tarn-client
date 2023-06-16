@@ -222,27 +222,25 @@ public class ChatArea extends GameFrame {
 
 			if (screenMode == ScreenMode.FIXED) {
 				Client.spritesMap.get(3).drawSprite(getOffSetX(), getOffSetY());
-			} else {
-				if (!componentHidden()) {
-					if (!client.messagePromptRaised && client.aString844 == null && client.backDialogID == -1 && client.dialogID == -1 && client.inputDialogState == 0) {
-						float rate = 50f / getHeight();
+			} else if (!componentHidden()) {
+				if (!client.messagePromptRaised && client.aString844 == null && client.backDialogID == -1 && client.dialogID == -1 && client.inputDialogState == 0) {
+					float rate = 50f / getHeight();
 
-						for (int i = 0; i < getHeight() - 35; i++) {
-							int opacity = (int) (i * rate);
-							// if(resizeY + i < Client.clientHeight - 26)
-							DrawingArea.fillRect(getOffSetX() + 5, getOffSetY() + 121 - i, getWidth() - 10, 1, 0, opacity);
+					for (int i = 0; i < getHeight() - 35; i++) {
+						int opacity = (int) (i * rate);
+						// if(resizeY + i < Client.clientHeight - 26)
+						DrawingArea.fillRect(getOffSetX() + 5, getOffSetY() + 121 - i, getWidth() - 10, 1, 0, opacity);
 
-						}
-
-						DrawingArea.drawAlphaGradient(getOffSetX() + 5, getOffSetY() + 5, getWidth() - 10, 1, 0xb4aea1, 0, 250);
-					} else {
-						Client.spritesMap.get(3).drawTransparentSprite(getOffSetX(), getOffSetY(), 255);
 					}
 
-					// for(int i = 0; i < getWidth)
-					// DrawingArea.drawHorizontalLine(resizeY, 0x807660,
-					// getWidth() - 20, getOffSetX() + 5);
+					DrawingArea.drawAlphaGradient(getOffSetX() + 5, getOffSetY() + 5, getWidth() - 10, 1, 0xb4aea1, 0, 250);
+				} else {
+					Client.spritesMap.get(3).drawTransparentSprite(getOffSetX(), getOffSetY(), 255);
 				}
+
+				// for(int i = 0; i < getWidth)
+				// DrawingArea.drawHorizontalLine(resizeY, 0x807660,
+				// getWidth() - 20, getOffSetX() + 5);
 			}
 			channel.drawChannelButtons(client, screenMode);
 
@@ -275,14 +273,16 @@ public class ChatArea extends GameFrame {
 						String name = client.chatNames[i];
 						int playerRights = 0;
 						int ironman = 0;
+						int donorRights = 0;
 						final List<Integer> chatRights = client.chatRights[i];
 						if (!chatRights.isEmpty()) {
 							playerRights = chatRights.get(0);
-							ironman = chatRights.get(1);
+							donorRights = chatRights.get(1);
+							ironman = chatRights.get(2);
 						}
-						if (playerRights == 13) { //Zenyte Donator
-							playerRights += 3;
-						}
+//						if (playerRights == 13) { //Zenyte Donator
+//							playerRights += 3;
+//						}
 						if (name != null && name.indexOf("@") == 0) {
 							int substringLength = Client.getClient().getPrefixSubstringLength(name);
 							name = name.substring(substringLength);
@@ -292,7 +292,10 @@ public class ChatArea extends GameFrame {
 							int substringLength = Client.getClient().getPrefixSubstringLength(name);
 							name = name.substring(substringLength);
 						}
-						color = AnimatedPlayerName.getCurrentColorByRank(playerRights);
+						if(playerRights > 0)
+							color = AnimatedPlayerName.getCurrentColorByRank(playerRights);
+						else
+							color = AnimatedPlayerName.getCurrentColorByRank(donorRights);
 						// Don't show Private messages in "All" if split chat is
 						// enabled.
 						if (client.chatTypeView == 0 && chatType >= 5 && chatType <= 7 && chatType != 22 && client.splitPrivateChat == 1) {
@@ -345,16 +348,17 @@ public class ChatArea extends GameFrame {
 							if (client.chatTypeView == 1 || client.chatTypeView == 0 || playerRights > 0 && playerRights <= 4 && playerRights != 3) {
 								if (positionY > 0 && positionY < 210) {
 									int xPos = 8;
-
+									AnimatedSprite as;
 									if (playerRights > 0) {
-										AnimatedSprite as;
 										if((as = Client.animatedSpriteForRank(playerRights)) != null) {
 											as.getInstance(as.myWidth,as.myHeight).drawAdvancedSprite(xPos + 1 + getOffSetX(),positionY - 11 + getOffSetY());
 											xPos += 14;
-										} else {
-											client.modIcons[playerRights].drawTransparentSprite(xPos + 1 + getOffSetX(), positionY - 11 + getOffSetY(), 255);
-											xPos += 14;
 										}
+									} else if ((as = Client.animatedSpriteForDonation(donorRights)) == null) {
+										client.modIcons[playerRights].drawTransparentSprite(xPos + 1 + getOffSetX(), positionY - 13 + getOffSetY(), 255);
+									} else {
+										as.getInstance(as.myWidth, as.myHeight).drawAdvancedSprite(xPos + 1 + getOffSetX(), positionY - 11 + getOffSetY());
+
 									}
 									if (ironman > 0) {
 										client.modIcons[ironman].drawTransparentSprite(xPos + 4 + getOffSetX(), positionY - 11 + getOffSetY(), 255);
@@ -394,11 +398,11 @@ public class ChatArea extends GameFrame {
 									xPos += textDrawingArea.getTextWidth("From ");
 									if (playerRights > 0) {
 										AnimatedSprite as;
-										if((as = Client.animatedSpriteForRank(playerRights)) != null) {
+										if((as = Client.animatedSpriteForRank(playerRights)) == null) {
+											client.modIcons[playerRights].drawTransparentSprite(xPos + 1 + getOffSetX(), positionY - 11 + getOffSetY(), 255);
+										} else {
 											as.getInstance(as.myWidth,as.myHeight).drawAdvancedSprite(xPos + 1 + getOffSetX(),positionY - 11 + getOffSetY());
 											xPos += 14;
-										} else {
-											client.modIcons[playerRights].drawTransparentSprite(xPos + 1 + getOffSetX(), positionY - 11 + getOffSetY(), 255);
 										}
 										xPos += 14;
 									}
@@ -528,29 +532,61 @@ public class ChatArea extends GameFrame {
 						Client.spritesMap.get(838).drawAdvancedSprite(drawOffsetX + 1, getOffSetY() + 133 - 11);
 						drawOffsetX += 12;
 					}
-
-					if (client.myRights > 0) {
-						int crown = client.myRights;
-						if (crown == 13) { //Zenyte Donator
-							crown += 3;
+					if(client.myDonator > 0){
+						int donor = client.myDonator;
+						int crowns = 0;
+						switch(donor){
+							case 1:
+								crowns = 6;
+								break;
+							case 2:
+								crowns = 7;
+								break;
+							case 3:
+								crowns = 8;
+								break;
+							case 4:
+								crowns = 9;
+								break;
+							case 5:
+								crowns = 4;
+								break;
+							case 6:
+								crowns = 16;
+								break;
 						}
 						int yOffset = 0;
-						if (crown == 1 || crown == 2 || crown == 3) {
+						if(crowns == 4){
 							yOffset = 1;
 						}
-						if (crown == 4) {
+						AnimatedSprite as;
+						if((as = Client.animatedSpriteForDonation(client.myDonator)) == null) {
+							client.modIcons[crowns].drawTransparentSprite(drawOffsetX + 1, getOffSetY() + 133 - 11 + yOffset, 255);
+						} else {
+							as.getInstance(as.myWidth,as.myHeight).drawAdvancedSprite(drawOffsetX + 1, getOffSetY() + 133 - 11 + yOffset);
+						}
+						drawOffsetX += 15;
+					}
+					if (client.myRights > 0) {
+						int crown = client.myRights;
+
+						int yOffset = 0;
+						if (crown == 4 || crown == 5) { // crown == 1 || 2 || 3;
+							yOffset = 1;
+						}
+						if (crown == 7 || crown == 8) {
 							yOffset--;
 						}
 						AnimatedSprite as;
-						if((as = Client.animatedSpriteForRank(client.myRights)) != null) {
-							as.getInstance(as.myWidth,as.myHeight).drawAdvancedSprite(drawOffsetX + 1, getOffSetY() + 133 - 11 + yOffset);
-							drawOffsetX += 15;
-						} else {
+						if((as = Client.animatedSpriteForRank(client.myRights)) == null) {
 							client.modIcons[crown].drawTransparentSprite(drawOffsetX + 1, getOffSetY() + 133 - 11 + yOffset, 255);
-							drawOffsetX += 15;
+						} else {
+							as.getInstance(as.myWidth,as.myHeight).drawAdvancedSprite(drawOffsetX + 1, getOffSetY() + 133 - 11 + yOffset);
 						}
+						drawOffsetX += 15;
 
 					}
+
 					if (client.gameMode > 0 && client.gameMode != 3) {
 						client.modIcons[11 + client.gameMode].drawTransparentSprite(drawOffsetX + 4, getOffSetY() + 133 - 11, 255);
 						drawOffsetX += 15;
