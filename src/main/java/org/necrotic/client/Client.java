@@ -367,6 +367,7 @@ public class Client extends GameRenderer {
     public boolean isMale;
     public boolean aBoolean1149;
     public boolean aBoolean954;
+    public boolean isInactive;
     public Sprite[] aClass30_Sub2_Sub1_Sub1Array1140;
     public String amountOrNameInput;
     public int anInt1009;
@@ -2588,62 +2589,72 @@ public class Client extends GameRenderer {
             title = "<col=" + Integer.toHexString(player.loyaltyColor) + ">" + player.loyaltyTitle.trim() + "</col> ";
         }
 
-        if (player.playerRights == 1) {
-            menuTooltip = menuTooltip + "<img=1><col=20B2AA>Mod@whi@ ";
-        }
-
-        if (player.playerRights == 2) {
-            menuTooltip = menuTooltip + "<img=2>@yel@Admin@whi@ ";
-        }
-
-        if (player.playerRights == 3) {
-            menuTooltip = menuTooltip + "<img=3> ";
-        }
-
-        if (player.playerRights == 5) {
-            menuTooltip = menuTooltip + "<img=5>@cya@Support@whi@ ";
-        }
-
-        if (player.playerRights == 6) {
-            menuTooltip = menuTooltip + "@bla@[<col=c40303>$@bla@]@whi@ ";
-        }
-
-        if (player.playerRights == 7) {
-            menuTooltip = menuTooltip + "@bla@[<col=0023d8>$@bla@]@whi@ ";
-        }
-
-        if (player.playerRights == 8) {
-            menuTooltip = menuTooltip + "@bla@[<col=1FBA07>$@bla@]@whi@ ";
-        }
-
-        if (player.playerRights == 9) {
-            menuTooltip = menuTooltip + "<img=9> ";
-        }
-
-        if (player.playerRights == 10) {
-            menuTooltip = menuTooltip + "<img=10> ";
-        }
-
-        if (player.playerRights == 11) {
-            menuTooltip = menuTooltip + "<col=b40404>Super@whi@ ";
-        }
-
-        if (player.playerRights == 12) {
-            menuTooltip = menuTooltip + "<col=b40404>Extreme@whi@ ";
-        }
-
-        if (player.playerRights == 13) {
-            menuTooltip = menuTooltip + "<img=13> ";
-        }
-
-        if (player.playerRights == 4) {
-            menuTooltip = "<img=12><col=ff0000>Founder@whi@ ";
-
+        int rights = player.playerRights;
+        int donorRights = player.donorRights;
+        if(rights >= 1){
+            switch(rights){
+                case 1:
+                    menuTooltip = menuTooltip + "<img=10> ";
+                    break;
+                case 2:
+                    menuTooltip = menuTooltip + "<img=5>@cya@Trial@whi@ ";
+                    break;
+                case 3:
+                    menuTooltip = menuTooltip + "<img=5>@cya@Helper@whi@ ";
+                    break;
+                case 4:
+                    menuTooltip = menuTooltip + "<img=1><col=20B2AA>Mod@whi@ ";
+                    break;
+                case 5:
+                    menuTooltip = menuTooltip + "<img=2>@yel@Admin@whi@ ";
+                    break;
+                case 6:
+                    menuTooltip = menuTooltip + "<img=2>@red@Manager@whi@ ";
+                    break;
+                case 7:
+                    menuTooltip = "<img=12>@red@Developer@whi@ ";
+                    break;
+                case 8:
+                    menuTooltip = "<img=12><col=ff0000>Owner@whi@ ";
+                    break;
+            }
+        } else if(donorRights >= 1){
+            switch(donorRights){
+                case 1:
+                    menuTooltip = menuTooltip + "@bla@[<col=c40303>$@bla@]@whi@ ";
+                    break;
+                case 2:
+                    menuTooltip = menuTooltip + "@bla@[<col=0023d8>$@bla@]@whi@ ";
+                    break;
+                case 3:
+                    menuTooltip = menuTooltip + "@bla@[<col=1FBA07>$@bla@]@whi@ ";
+                    break;
+                case 4:
+                    menuTooltip = menuTooltip + "<img=9> ";
+                    break;
+                case 5:
+                    menuTooltip = menuTooltip + "<img=3> ";
+                    break;
+                case 6:
+                    menuTooltip = menuTooltip + "<img=13> ";
+                    break;
+                case 7:
+                    menuTooltip = menuTooltip + "<col=b40404>Angelic@whi@ ";
+                    break;
+                case 8:
+                    menuTooltip = menuTooltip + "<col=b40404>Demonic@whi@ ";
+                    break;
+            }
         }
 
         int color = AnimatedPlayerName.getCurrentColorByRank(player.playerRights);
         if(color != 0) {
             menuTooltip += "<col="+color+">";
+        } else {
+            color = AnimatedPlayerName.getCurrentColorByRank(player.donorRights);
+            if(color != 0) {
+                menuTooltip += "<col="+color+">";
+            }
         }
         if (player.combatLevel == 0) {
             menuTooltip = title + player.name + combatDiffColor(myPlayer.combatLevel, player.combatLevel) + " (level-" + player.combatLevel + ")";
@@ -10239,9 +10250,9 @@ public class Client extends GameRenderer {
         method90();
         anInt1009++;
 
-        if (anInt1009 > 750) {
-            dropClient();
-        }
+//        if (anInt1009 > 7500) {
+//            dropClient();
+//        }
 
         updatePlayerInstances();
         readNPCUpdateBlockForced();
@@ -10522,9 +10533,9 @@ public class Client extends GameRenderer {
         manageTextInput();
         super.idleTime++;
 
-        if (super.idleTime > 9000) {
-            anInt1011 = 250;
-            super.idleTime = 0;
+        if (super.idleTime > 9000 && !isInactive) {
+            anInt1011 = 2500;
+            isInactive = true;
             getOut().putOpcode(202);
         }
 
@@ -10543,6 +10554,12 @@ public class Client extends GameRenderer {
         } catch (Exception exception) {
             resetLogout();
         }
+    }
+
+    public void setActive(){
+        super.idleTime = 0;
+        isInactive = false;
+
     }
 
     public void markMinimap(Sprite sprite, int x, int y) {
@@ -19029,22 +19046,50 @@ public class Client extends GameRenderer {
                             }
 
                             if (Configuration.DISPLAY_USERNAMES_ABOVE_HEAD) {
-                                if ((player.playerRights >= 1) && (player.playerRights <= 2) && (getOverheadPlayerTitle(player).startsWith("<col"))) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX, spriteDrawY - 10, 0x15FF00, 0x000000);
-                                } else if ((player.playerRights >= 1) && (player.playerRights <= 2)) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 20, spriteDrawY - 10, 0x15FF00, 0x000000);
-                                } else if (player.playerRights == 10) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 10, spriteDrawY - 10, 0x15FF00, 0x000000);
-                                } else if (player.playerRights == 6 || player.playerRights == 8 || player.playerRights == 9) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 10, spriteDrawY - 10, 0x15FF00, 0x000000);
-                                } else if (player.playerRights == 7) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 85, spriteDrawY - 10, 0x15FF00, 0x000000);
-                                } else if ((player.playerRights >= 3) && (player.playerRights <= 4)) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 250, spriteDrawY - 10, 0x15FF00, 0x000000);
-                                } else if ((player.playerRights == 5)) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 120, spriteDrawY - 10, 0x15FF00, 0x000000);
-                                } else if ((player.playerRights >= 13)) {
-                                    newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 0, spriteDrawY - 10, 0x15FF00, 0x000000);
+                                int rights = player.playerRights;
+                                int donorRights = player.donorRights;
+                                if(rights >= 1){
+                                    switch(rights){
+                                        case 1://youtube
+                                            newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 10, spriteDrawY - 10, 0x15FF00, 0x000000);
+                                            break;
+                                        case 2://trial
+                                        case 3://helper
+                                            newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 120, spriteDrawY - 10, 0x15FF00, 0x000000);
+                                            break;
+                                        case 4://mod
+                                        case 5://admin
+                                        case 6://Manager
+                                            if(getOverheadPlayerTitle(player).startsWith("<col")){
+                                                newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX, spriteDrawY - 10, 0x15FF00, 0x000000);
+                                            } else {
+                                                newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 20, spriteDrawY - 10, 0x15FF00, 0x000000);
+                                            }
+                                            break;
+                                        case 7:
+                                        case 8:
+                                            newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 250, spriteDrawY - 10, 0x15FF00, 0x000000);
+                                            break;
+                                    }
+                                } else if(donorRights >= 1){
+                                    switch(donorRights){
+                                        case 1:
+                                        case 3:
+                                        case 4:
+                                            newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 10, spriteDrawY - 10, 0x15FF00, 0x000000);
+                                            break;
+                                        case 2:
+                                            newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 85, spriteDrawY - 10, 0x15FF00, 0x000000);
+                                            break;
+                                        case 5:
+                                            newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 250, spriteDrawY - 10, 0x15FF00, 0x000000);
+                                            break;
+                                        case 6:
+                                        case 7:
+                                        case 8:
+                                            newSmallFont.drawCenteredString(player.name != null ? getOverheadPlayerTitle(player) + player.name : "null username", spriteDrawX + 0, spriteDrawY - 10, 0x15FF00, 0x000000);
+                                            break;
+                                    }
                                 } else {
                                     newSmallFont.drawCenteredString((player.name != null ? player.name : "null username"), spriteDrawX, spriteDrawY - 10, 0x15FF00, 0x000000);
                                 }
@@ -19325,49 +19370,51 @@ public class Client extends GameRenderer {
 
     private String getOverheadPlayerTitle(Player player) {
 
-        if (player.playerRights == 0) {
-            return "@whi@ ";
+        if(player.playerRights >= 1) {
+            if (player.playerRights == 1) {
+                return "<img=10>@red@Youtuber@whi@ ";
+            } else
+            if (player.playerRights == 2) {
+                return "<img=5>@mag@Trial@whi@ ";
+            } else
+            if (player.playerRights == 3) {
+                return "<img=5>@mag@Helper@whi@ ";
+            } else
+            if (player.playerRights == 4) {
+                return "<img=1><col=20B2AA>Moderator@whi@ ";
+            } else
+            if (player.playerRights == 5) {
+                return "<img=2><col=C5BE2D>Administrator@yel@ ";
+            } else
+            if (player.playerRights == 6) {
+                return "<img=2><col=ff0000>Manager@red@ ";
+            } else
+            if (player.playerRights == 7) {
+                return "<img=4><col=ff0000>Developer@red@ ";
+            } else
+            if (player.playerRights == 8) {
+                return "<img=4><col=ff0000>Owner@red@ ";
+            }
+        } else {
+            int donor = player.donorRights;
+            if (donor == 1) {
+                return "<img=6>@blu@Graceful Donator@whi@ ";
+            } else if (donor == 2) {
+                return "<img=7>@gre@Cleric Donator@whi@ ";
+            } else if (donor == 3) {
+                return "<img=8>@red@Tormented Donator@whi@ ";
+            } else if (donor == 4) {
+                return "<img=9>@whi@Mystical Donator@whi@ ";
+            } else if (donor == 5) {
+                return "<img=3><shad=1>@bla@Onyx Donator@whi@ ";
+            } else if (donor == 6) {
+                return "<img=1508><col=FF7400>Forsaken Donator@red@ ";
+            } else if(donor == 7) {
+                return "<img=1508><col=FF7400>Angelic Donator@red@ ";
+            } else if(donor == 8) {
+                return "<img=1508><col=FF7400>Demonic Donator@red@ ";
+            }
         }
-        if (player.playerRights == 1) {
-            return "<img=1><col=20B2AA>Moderator@whi@ ";
-        }
-        if (player.playerRights == 2) {
-            return "<img=2><col=C5BE2D>Administrator@yel@ ";
-        }
-        if (player.playerRights == 3) {
-            return "<img=3><shad=1>@bla@Onyx Donator@whi@ ";
-        }
-        if (player.playerRights == 4) {
-            return "<img=4><col=ff0000>Founder@red@ ";
-        }
-        if (player.playerRights == 5) {
-            return "<img=5>@mag@Helper@whi@ ";
-        }
-        if (player.playerRights == 6) {
-            return "<img=6>@blu@Graceful Donator@whi@ ";
-        }
-        if (player.playerRights == 7) {
-            return "<img=7>@gre@Cleric Donator@whi@ ";
-        }
-        if (player.playerRights == 8) {
-            return "<img=8>@red@Tormented Donator@whi@ ";
-        }
-        if (player.playerRights == 9) {
-            return "<img=9>@whi@Mystical Donator@whi@ ";
-        }
-        if (player.playerRights == 10) {
-            return "<img=10>@red@Youtuber@whi@ ";
-        }
-        if (player.playerRights == 11) {
-            return "111";
-        }
-        if (player.playerRights == 12) {
-            return "<img=5>@mag@Support@whi@ ";
-        }
-        if (player.playerRights == 13) {
-            return "<img=1508><col=FF7400>Forsaken Donator@red@ ";
-        }
-
 
         return "";
     }

@@ -40,6 +40,8 @@ public final class Player extends Entity {
 	public int hintIcon;
 	public boolean skulled;
 	public int playerRights;
+	public int donorRights;
+	public int vipRights;
 	public int currentAnimatedText;
 	/**
 	 * The text of the loyalty title
@@ -466,7 +468,9 @@ public final class Player extends Entity {
 		}
 		name = TextClass.fixName(TextClass.nameForLong(stream.getLong()));
 		combatLevel = stream.getUnsignedByte();
-		playerRights = stream.getUnsignedShort();//may isee ur character files?
+		playerRights = stream.getUnsignedShort();
+		donorRights = stream.getUnsignedShort();
+		vipRights = stream.getUnsignedByte();
 		loyaltyTitle = getTitle(stream.getUnsignedShort());
 		isMiniPlayer = stream.readUnsignedWord() == 1;
 		//	updateLoyaltyTitle(stream);

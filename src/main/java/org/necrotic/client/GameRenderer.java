@@ -480,6 +480,7 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 	public final void keyPressed(KeyEvent keyEvent) {
 		String regex = "[a-zA-z\\s]*";
 		idleTime = 0;
+		Client.getClient().setActive();
 		int keyCode = keyEvent.getKeyCode();
 		int keyChar = keyEvent.getKeyChar();
 		if (keyChar == 96) {
@@ -727,6 +728,7 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 	@Override
 	public final void keyReleased(KeyEvent keyevent) {
 		idleTime = 0;
+		Client.getClient().setActive();
 		int keyCode = keyevent.getKeyCode();
 		char keyChar = keyevent.getKeyChar();
 
@@ -804,6 +806,7 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
             y -= insets.top;// 22
         }*/
 		idleTime = 0;
+		Client.getClient().setActive();
 		clickX = x;
 		clickY = y;
 	}
@@ -832,6 +835,7 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 		}
 		if (System.currentTimeMillis() - clickTime >= 250L || Math.abs(saveClickX - x) > 5 || Math.abs(saveClickY - y) > 5) {
 			idleTime = 0;
+			Client.getClient().setActive();
 			mouseX = x;
 			mouseY = y;
 		}
@@ -845,6 +849,7 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 	public final void mouseExited(MouseEvent mouseevent) {
 		if (idleTime > 0) {
 			idleTime = 0;
+			Client.getClient().setActive();
 		}
 		mouseX = -1;
 		mouseY = -1;
@@ -865,6 +870,7 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 		}
 		if (System.currentTimeMillis() - clickTime >= 250L || Math.abs(saveClickX - x) > 5 || Math.abs(saveClickY - y) > 5) {
 			idleTime = 0;
+			Client.getClient().setActive();
 			mouseX = x;
 			mouseY = y;
 		}
@@ -887,6 +893,7 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
             y -= insets.top;// 22
         }*/
 		idleTime = 0;
+		Client.getClient().setActive();
 		clickX = x;
 		clickY = y;
 		clickTime = System.currentTimeMillis();
@@ -915,6 +922,7 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 	@Override
 	public final void mouseReleased(MouseEvent e) {
 		idleTime = 0;
+		Client.getClient().setActive();
 		mouseWheelDown = false;
 		Client.mousePressed = false;
 		setClickMode2(0);

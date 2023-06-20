@@ -186,6 +186,7 @@ public final class ItemDefinition {
 			case 18636:
 			case 18629:
 			case 18750:
+			case 24011:
 				model.setTexture(52);
 				break;
 			case 7543:

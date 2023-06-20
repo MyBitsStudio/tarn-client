@@ -940,6 +940,12 @@ public class CustomItems {
                 itemDef.actions = new String[]{null, "Equip", null, null, null};
                 break;
 
+            case 24011:
+                itemDef.copyItem(17391);
+                itemDef.name = "<col=ff00ff>Warped Enhancement";
+                itemDef.actions = new String[]{null, "Equip", null, null, null};
+                break;
+
 
             case 15682:
                 itemDef.name = "Vote Crate";
