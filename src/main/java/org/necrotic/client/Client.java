@@ -2648,13 +2648,13 @@ public class Client extends GameRenderer {
         }
 
         int color = AnimatedPlayerName.getCurrentColorByRank(player.playerRights);
-        if(color != 0) {
-            menuTooltip += "<col="+color+">";
-        } else {
+        if(color == 0) {
             color = AnimatedPlayerName.getCurrentColorByRank(player.donorRights);
             if(color != 0) {
                 menuTooltip += "<col="+color+">";
             }
+        } else {
+            menuTooltip += "<col="+color+">";
         }
         if (player.combatLevel == 0) {
             menuTooltip = title + player.name + combatDiffColor(myPlayer.combatLevel, player.combatLevel) + " (level-" + player.combatLevel + ")";
@@ -15306,7 +15306,7 @@ public class Client extends GameRenderer {
                         s = s.substring(8);
                         String originals = s;
                         System.out.println(originals);
-                        s = bracketColor + originals.substring(0, 1) + "@blu@" + originals.substring(1, length) + bracketColor + originals.substring(length, length + 1) + ChatArea.CLAN_CHAT_COLORS[clanChatColor] + "<shad=0>" + originals.substring(length + 1);
+                        s = bracketColor + originals.charAt(0) + "@blu@" + originals.substring(1, length) + bracketColor + originals.charAt(length) + ChatArea.CLAN_CHAT_COLORS[clanChatColor] + "<shad=0>" + originals.substring(length + 1);
                         pushMessage(s, 16, "");
                     } else if (s.endsWith("#url#")) {
                         String link = s.substring(0, s.indexOf("#"));

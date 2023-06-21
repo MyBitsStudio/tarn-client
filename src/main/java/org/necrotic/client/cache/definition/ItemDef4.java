@@ -4875,7 +4875,7 @@ itemDef.actions[2] = "Dissolve";
 				break;
 			case 22218:
 				itemDef.copyItem(3114);
-				itemDef.name = "Boots Certificate";
+				itemDef.name = "Boots ,kCertificate";
 				itemDef.actions = new String[]{"Claim", null, null, null, "Drop"};
 				itemDef.rdc = 129911;
 				break;

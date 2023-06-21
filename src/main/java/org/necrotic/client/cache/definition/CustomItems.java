@@ -423,6 +423,40 @@ public class CustomItems {
                 itemDef.scaleZ *= 0.50;
                 break;
 
+            case 23252:
+                itemDef.name = "<col=a18f00><shad=0>Cert Pack 1<shad-1>";
+                itemDef.actions = new String[5];
+                itemDef.actions[0] = "Open";
+                itemDef.modelOffsetX = 2;
+                itemDef.modelOffsetY = 1;
+                itemDef.modelZoom = 850;
+                itemDef.rotationY = 100;
+                itemDef.rotationX = 90;
+                itemDef.modelID = 15161;
+
+                //itemDef.rdc2 = 12111;
+                itemDef.scaleY *= 0.50;
+                itemDef.scaleX *= 0.50;
+                itemDef.scaleZ *= 0.50;
+                break;
+
+            case 23253:
+                itemDef.name = "<col=a18f00><shad=0>Cert Pack 2<shad-1>";
+                itemDef.actions = new String[5];
+                itemDef.actions[0] = "Open";
+                itemDef.modelOffsetX = 2;
+                itemDef.modelOffsetY = 1;
+                itemDef.modelZoom = 850;
+                itemDef.rotationY = 100;
+                itemDef.rotationX = 90;
+                itemDef.modelID = 15161;
+
+                //itemDef.rdc2 = 12111;
+                itemDef.scaleY *= 0.50;
+                itemDef.scaleX *= 0.50;
+                itemDef.scaleZ *= 0.50;
+                break;
+
             case 23300:
                 itemDef.copyItem(22233);
                 itemDef.name = "<col=ff9040>Owner's Body +1";

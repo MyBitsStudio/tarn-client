@@ -30,7 +30,7 @@ public final class ItemDefinition {
 
 
 	public static void applyTexturing(Model model, int id) {
-		if(id == 10835){
+		if(id == 23220){
 			System.out.println("Token - "+ Arrays.toString(model.anIntArray1640));
 		}
 
@@ -47,6 +47,9 @@ public final class ItemDefinition {
 //				model.setTexture(37969, 92);
 //				break;
 
+//			case 23220:
+//				model.setTexture(24747, 92);
+//				break;
 			case 23219:
 				model.setTexture(40, 91);
 				break;
@@ -79,6 +82,13 @@ public final class ItemDefinition {
 				break;
 			case 23251:
 				model.setTexture(51, 80);
+				break;
+
+			case 23252:
+				model.setTexture(51, 82);
+				break;
+			case 23253:
+				model.setTexture(51, 84);
 				break;
 
 			case 23226:

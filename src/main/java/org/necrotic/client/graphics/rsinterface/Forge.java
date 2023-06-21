@@ -19,15 +19,71 @@ public class Forge extends RSInterface {
     public static final HashMap<Integer, Integer> PRICES = new HashMap<>();
 
     static {
-        PRICES.put(4151, 11000);
-        PRICES.put(6585, 3000);
-        PRICES.put(11732, 1000);
-        PRICES.put(4712, 2000);
-        PRICES.put(4714, 2000);
-        PRICES.put(4716, 2000);
-        PRICES.put(4718, 2000);
-        PRICES.put(4720, 2200);
-        PRICES.put(4722, 2500);
+        PRICES.put(23226, 10);
+        PRICES.put(23227, 15);
+        PRICES.put(23228, 20);
+        PRICES.put(23229, 25);
+        PRICES.put(8100, 100);
+        PRICES.put(8101, 100);
+        PRICES.put(8102, 100);
+        PRICES.put(8103, 100);
+        PRICES.put(8104, 100);
+        PRICES.put(8105, 125);
+        PRICES.put(8106, 125);
+        PRICES.put(8107, 125);
+        PRICES.put(8108, 125);
+        PRICES.put(8109, 125);
+        PRICES.put(8110, 125);
+        PRICES.put(24003, 200);
+        PRICES.put(24004, 200);
+        PRICES.put(24005, 200);
+        PRICES.put(24006, 200);
+        PRICES.put(24007, 200);
+        PRICES.put(24008, 200);
+        PRICES.put(24009, 200);
+        PRICES.put(23127, 350);
+        PRICES.put(23128, 350);
+        PRICES.put(23129, 350);
+        PRICES.put(23130, 350);
+        PRICES.put(23131, 350);
+        PRICES.put(22242, 400);
+        PRICES.put(22244, 400);
+        PRICES.put(22246, 400);
+        PRICES.put(22250, 400);
+        PRICES.put(22248, 400);
+        PRICES.put(22252, 400);
+        PRICES.put(24010, 200);
+        PRICES.put(22254, 400);
+        PRICES.put(4446, 20);
+        PRICES.put(19886, 25);
+        PRICES.put(18888, 80);
+        PRICES.put(18823, 60);
+        PRICES.put(17391, 40);
+        PRICES.put(1857, 30);
+        PRICES.put(21814, 1);
+        PRICES.put(21815, 1);
+        PRICES.put(9084, 15);
+        PRICES.put(4718, 1);
+        PRICES.put(2380, 5);
+        PRICES.put(741, 10);
+        PRICES.put(23219, 30);
+        PRICES.put(8788, 3);
+        PRICES.put(21816, 4);
+        PRICES.put(23178, 40);
+        PRICES.put(22110, 60);
+        PRICES.put(9043, 110);
+        PRICES.put(13650, 2);
+        PRICES.put(742, 15);
+        PRICES.put(4442, 50);
+        PRICES.put(4440, 125);
+        PRICES.put(743, 30);
+        PRICES.put(13019, 120);
+        PRICES.put(3686, 2000);
+        PRICES.put(15003, 30);
+        PRICES.put(15002, 100);
+        PRICES.put(15004, 250);
+        PRICES.put(20491, 600);
+        PRICES.put(20490, 900);
     }
 
     public static void build() {
@@ -46,6 +102,8 @@ public class Forge extends RSInterface {
 
         addHoverButtonWSpriteLoader(49520, 3347, 91, 35, "Start", -1, 49521, 1);
         addHoveredImageWSpriteLoader(49521, 3346, 91, 35, 49522);
+
+        addHoverButtonWSpriteLoader(49582, 2768, 65, 35, "Forge Inventory", -1, 49583, 1);
 
         addItemOnInterface(49523, 49510, new String[]{});
         RSInterface.interfaceCache[49523].inv[0] = 18654;
@@ -79,7 +137,7 @@ public class Forge extends RSInterface {
         scroll.totalChildren(1);
         scroll.child(0, 49539, 0, 5);
 
-        rsi.totalChildren(26);
+        rsi.totalChildren(27);
         rsi.child(0, 49511, 1, 1);
         rsi.child(1, 49512, 260, 13);
         rsi.child(2, 49513, 485, 11);
@@ -106,6 +164,7 @@ public class Forge extends RSInterface {
         rsi.child(23, 49536, 450, 120);
         rsi.child(24, 49537, 450, 80);
         rsi.child(25, 49538, 115, 53);
+        rsi.child(26, 49582, 236, 286);
 
         inventory();
         shop();
@@ -145,16 +204,16 @@ public class Forge extends RSInterface {
         addConfigButtonWSpriteLoader(49554, 49542, 3353, 3356, 76, 26, "Tier two shop", 2, 5, 1531);
 
         addConfigButtonWSpriteLoader(49555, 49542, 3360, 3357, 76, 26, "Armoury", 0, 5, 1532);
-        addConfigButtonWSpriteLoader(49556, 49542, 3358, 3361, 76, 26, "Weapons", 1, 5, 1532);
-        addConfigButtonWSpriteLoader(49557, 49542, 3359, 3362, 76, 26, "Jewelry", 2, 5, 1532);
+        addConfigButtonWSpriteLoader(49556, 49542, 3359, 3362, 76, 26, "Jewelry", 1, 5, 1532);
+        addConfigButtonWSpriteLoader(49557, 49542, 3358, 3361, 76, 26, "Others", 2, 5, 1532);
 
         addText(49558, "Tier 1", 0xdba40b, false, true, -1, 0);
         addText(49559, "Tier 2", 0xdba40b, false, true, -1, 0);
         addText(49560, "Tier 3", 0xdba40b, false, true, -1, 0);
 
         addText(49561, "Armoury", 0xdba40b, false, true, -1, 0);
-        addText(49562, "Weapons", 0xdba40b, false, true, -1, 0);
-        addText(49563, "Jewelry", 0xdba40b, false, true, -1, 0);
+        addText(49562, "Jewelry", 0xdba40b, false, true, -1, 0);
+        addText(49563, "Others", 0xdba40b, false, true, -1, 0);
 
         RSInterface scroll = addInterface(49564);
         scroll.totalChildren(1);

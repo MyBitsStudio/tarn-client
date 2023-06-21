@@ -481,7 +481,7 @@ public class ChatArea extends GameFrame {
 								if (positionY > 0 && positionY < 210) {
 									int positionX = 11;
 									String message = (screenMode == ScreenMode.FIXED ? "<col=800000>" : "<col=FF5256>") + client.chatMessages[i] + "</col>";
-									textDrawingArea.drawBasicString("" + message, positionX, positionY + getOffSetY(), screenMode == ScreenMode.FIXED ? 0 : 0xffffff, screenMode == ScreenMode.FIXED ? -1 : 0, true);
+									textDrawingArea.drawBasicString(message, positionX, positionY + getOffSetY(), screenMode == ScreenMode.FIXED ? 0 : 0xffffff, screenMode == ScreenMode.FIXED ? -1 : 0, true);
 								}
 
 								scrollPosition++;

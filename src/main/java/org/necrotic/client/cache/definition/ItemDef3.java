@@ -43,8 +43,8 @@ public class ItemDef3 {
 				break;
 			case 23003:
 				itemDef.copyItem(12855);
-				itemDef.name = "Easter Tickets";
-				itemDef.actions = new String[]{null, null, null, null, "Drop"};
+				itemDef.name = "VIP Ticket";
+				itemDef.actions = new String[]{null, null, null, null, null};
 				itemDef.modelID = 100056;
 				itemDef.modelZoom = 1874;
 				itemDef.rotationX = 0;
