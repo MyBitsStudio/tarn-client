@@ -5235,8 +5235,8 @@ public class RSInterface {
 		Tab.invGlow = new int[w * h];
 		Tab.bonus = new int[w * h];
 		for (int i1 = 0; i1 < w * h; i1++) {
-			Tab.invStackSizes[i1] = 0; // inv item stack size
-			Tab.inv[i1] = 0; // inv item ids
+			Tab.invStackSizes[i1] = 0;
+			Tab.inv[i1] = 0;
 			Tab.invGlow[i1] = 0;
 			Tab.bonus[i1] = -1;
 		}

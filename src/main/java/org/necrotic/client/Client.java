@@ -138,7 +138,6 @@ public class Client extends GameRenderer {
     public static boolean mousePressed;
     public static SpritesMap spritesMap = new SpritesMap(1);
     static boolean inputTaken;
-    public static boolean invGlow;
     private static boolean aBoolean475;
     private static boolean aBoolean995;
     private static byte[] aByteArray347;
@@ -419,7 +418,7 @@ public class Client extends GameRenderer {
     public RSImageProducer gameScreenIP;
     public Deque[][][] groundArray;
     public int inputDialogState;
-    public int invOverlayInterfaceID;
+    public static int invOverlayInterfaceID;
     public int itemSelected;
     public int loadingStage;
     public static boolean loggedIn;
@@ -7865,7 +7864,7 @@ public class Client extends GameRenderer {
                             int k5 = childX + l4 * (32 + childInterface.invSpritePadX);
                             int j6 = childY + l3 * (32 + childInterface.invSpritePadY);
 
-                            if (i3 < 20) {
+                            if (i3 < childInterface.spritesX.length) {
                                 k5 += childInterface.spritesX[i3];
                                 j6 += childInterface.spritesY[i3];
                             }
@@ -15326,18 +15325,6 @@ public class Client extends GameRenderer {
                         return true;
                     }
 
-                    if(s.equals(":invglow0:")) {
-                        invGlow = false;
-                        pktType = -1;
-                        return true;
-                    }
-
-                    if(s.equals(":invglow1:")) {
-                        invGlow = true;
-                        pktType = -1;
-                        return true;
-                    }
-
                     if (consoleOpen) {
                         printConsoleMessage(s, 0);
                     } else if (s.equals(":refreshspinner:")) {
@@ -15556,7 +15543,7 @@ public class Client extends GameRenderer {
 
                 case 248:
                     int i5 = getInputBuffer().getInt();
-                    int k12 = getInputBuffer().getUnsignedShort();
+                    int k12 = getInputBuffer().getInt();
                     if (backDialogID != -1) {
                         backDialogID = -1;
                         inputTaken = true;

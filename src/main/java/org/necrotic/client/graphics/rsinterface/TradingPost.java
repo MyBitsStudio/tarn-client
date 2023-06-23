@@ -38,6 +38,7 @@ public class TradingPost extends RSInterface {
         searchPopup();
         buyingPage();
         historyPopup();
+        inventory();
     }
 
     private static void listingPage() {
@@ -264,6 +265,15 @@ public class TradingPost extends RSInterface {
 
         hoverButton(150279, 714, 715, "Close");
         popup.child(2, 150279, 315,38);
+
+        // start at id 151072
+    }
+
+    private static void inventory() {
+        RSInterface tab = addTabInterface(151070);
+        addInventoryItemGroup2(151071, 7, 4, new String[]{"Average value", "Offer 1", "Offer 5", "Offer 10", "Offer X"});
+        setChildren(1, tab);
+        setBounds(151071, 0, 0, 0, tab);
     }
 
     private static void historyPopup() {

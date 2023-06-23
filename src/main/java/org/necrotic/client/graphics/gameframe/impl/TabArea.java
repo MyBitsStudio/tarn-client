@@ -340,8 +340,7 @@ public class TabArea extends GameFrame {
 				Client.spritesMap.get(7).drawSprite(getOffSetX() + 33, getOffSetY() - (Client.clientWidth <= GameFrameConstants.smallTabs ? 13 : -23));
 
 			}
-
-			if(Client.invGlow) {
+			if(Client.invOverlayInterfaceID == 151070 || Client.invOverlayInterfaceID == 49540) {
 				int direction = inventoryGlow & 1;
 				int opacity = inventoryGlow >> 1;
 				if (direction == 1) {
