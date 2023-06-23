@@ -1,5 +1,6 @@
 package org.necrotic.client;
 
+import org.necrotic.ColorConstants;
 import org.necrotic.Configuration;
 import org.necrotic.RichPresense;
 import org.necrotic.client.Settings.Load;
@@ -99,7 +100,6 @@ public class Client extends GameRenderer {
     public static boolean controlShiftTeleporting = false;
     public static int chatIncreaseY = 0, chatIncreaseX = 0;
     public static boolean MBOX = false;
-
 
     public static int clientZoom = 0;
     /* SHIFT DROPPING */
@@ -2781,6 +2781,11 @@ public class Client extends GameRenderer {
                 break;
             }
 
+            if(inputDialogState == 5) {
+                TradingPost.setMouseY(yOffset);
+                break;
+            }
+
             if (chatTypeView == 5) {
                 break;
             }
@@ -3121,6 +3126,7 @@ public class Client extends GameRenderer {
     public void setOverlayInterfaceID(int interfaceId) {
         overlayInterfaceId = interfaceId;
     }
+    int dropDownItemHoverId;
 
     private void buildInterfaceMenu(int xPadding, RSInterface rsInterface, int xPos, int yPadding, int yPos, int scrollPoint) {
         if (rsInterface == null) {
@@ -3140,6 +3146,7 @@ public class Client extends GameRenderer {
         }
 
         int totalChildren = rsInterface.children.length;
+        dropDownItemHoverId = 0;
 
         for (int index = 0; index < totalChildren; index++) {
             int xSpritePos = (rsInterface.childX[index] + xPadding) - (rsInterface.sideScroll ? scrollPoint : 0);
@@ -3258,6 +3265,7 @@ public class Client extends GameRenderer {
                         }
                     }
                 }
+
                 if (child.atActionType == 2 && xPos >= xSpritePos && yPos >= ySpritePos && xPos < xSpritePos + child.width && yPos < ySpritePos + child.height) {
                     String s = child.selectedActionName;
 
@@ -4210,7 +4218,11 @@ public class Client extends GameRenderer {
             aBoolean1149 = false;
         }
 
-        openInterfaceID = -1;
+        if(openInterfaceID != -1) {
+            RSInterface.interfaceCache[openInterfaceID].disableInteraction = false;
+            openInterfaceID = -1;
+            overlayInterfaceId = -1;
+        }
         setFullscreenInterfaceID(-1);
     }
 
@@ -4788,6 +4800,10 @@ public class Client extends GameRenderer {
             getOut().putOpcode(204);
             getOut().putShort(getGrandExchange().itemSelected);
             return;
+        }
+
+        if(action == 1350) {
+            System.out.println("Id: " + TradingPost.selectedItemId);
         }
 
         if (action >= 990 && action <= 992) {
@@ -5786,10 +5802,14 @@ public class Client extends GameRenderer {
                         sendFrame36(175, i2);
 
 
+                        if(openInterfaceID != -1) {
+                            RSInterface.interfaceCache[openInterfaceID].disableInteraction = false;
+                            openInterfaceID = -1;
+                            overlayInterfaceId = -1;
+                        }
+
                         if (i2 == 1) {
                             openInterfaceID = 26000;
-                        } else {
-                            openInterfaceID = -1;
                         }
 
                         break;
@@ -6681,8 +6701,15 @@ public class Client extends GameRenderer {
 
             if (GameFrame.getScreenMode() != ScreenMode.FIXED) {
                 drawInterface(0, (width - 765) / 2, rsInterface, (height - 503) / 2);
+                if(overlayInterfaceId != -1) {
+                    drawInterface(0, (width - 765) / 2, RSInterface.interfaceCache[overlayInterfaceId], (height - 503) / 2);
+                }
             } else {
-                drawInterface(0, 0, rsInterface, 0);// first 1
+                drawInterface(0, 0, rsInterface, 0);
+                drawInterface(0, 0, rsInterface, 0);
+                if(overlayInterfaceId != -1) {
+                    drawInterface(0, 0, RSInterface.interfaceCache[overlayInterfaceId], 0);
+                }
             }
 
             if (openInterfaceID == 5292) {
@@ -6692,10 +6719,6 @@ public class Client extends GameRenderer {
                 }
             }
             getGrandExchange().drawGrandExchange();
-
-            if(overlayInterfaceId != -1) {
-                drawInterface(0, 0, RSInterface.interfaceCache[overlayInterfaceId], 0);
-            }
         }
 
         // method70();
@@ -7476,6 +7499,14 @@ public class Client extends GameRenderer {
                     }
                     drawInterface(0, 0, rsInterface_1, 8);
                 }
+                if (overlayInterfaceId != -1) {
+                    RSInterface rsInterface_1 = RSInterface.interfaceCache[overlayInterfaceId];
+                    if (rsInterface_1.width == 512 && rsInterface_1.height == 334 && rsInterface_1.type == 0) {
+                        rsInterface_1.width = 765;
+                        rsInterface_1.height = 503;
+                    }
+                    drawInterface(0, 0, rsInterface_1, 8);
+                }
                 RSInterface rsInterface = RSInterface.interfaceCache[getFullscreenInterfaceID()];
                 if (rsInterface.width == 512 && rsInterface.height == 334 && rsInterface.type == 0) {
                     rsInterface.width = 765;
@@ -7540,7 +7571,22 @@ public class Client extends GameRenderer {
                 inputTaken = true;
             }
         }
-        if (backDialogID == -1 && inputDialogState != 3) {
+        if(inputDialogState == 5 && TradingPost.hasSearchOpen) {
+            int scrollMax = (TradingPost.itemSearchCount / 3) * 35;
+            aClass9_1059.scrollPosition = TradingPost.scrollPosition;
+            int scrollPosition = aClass9_1059.scrollPosition;
+            if (scrollPosition < 0) {
+                scrollPosition = 0;
+            }
+            if (scrollPosition > scrollMax - 105) {
+                scrollPosition = scrollMax - 105;
+            }
+            if (TradingPost.scrollPosition != scrollPosition) {
+                TradingPost.scrollPosition = scrollPosition;
+                inputTaken = true;
+            }
+        }
+        if (backDialogID == -1 && inputDialogState != 3 && inputDialogState != 5) {
             aClass9_1059.scrollPosition = anInt1211 - anInt1089 - 110;
             if (super.mouseX > chatArea.getxPos() + 478 && super.mouseX < chatArea.getxPos() + 580
                     && super.mouseY > chatArea.getyPos() + 4) {
@@ -10023,6 +10069,13 @@ public class Client extends GameRenderer {
         }
 
         return (Click ? saveClickX : mouseX) >= xCoord && (Click ? saveClickX : mouseX) <= xCoord + sprite.myWidth && (Click ? saveClickY : mouseY) >= yCoord && (Click ? saveClickY : mouseY) <= yCoord + sprite.myHeight;
+    }
+
+    public boolean inCoords(boolean Click, int width, int height, int xCoord, int yCoord) {
+        if (Click && super.clickMode3 != 1) {
+            return false;
+        }
+        return (Click ? saveClickX : mouseX) >= xCoord && (Click ? saveClickX : mouseX) <= xCoord + width && (Click ? saveClickY : mouseY) >= yCoord && (Click ? saveClickY : mouseY) <= yCoord + height;
     }
 
     private String interfaceIntToString(int j) {
@@ -13942,6 +13995,16 @@ public class Client extends GameRenderer {
                     amountOrNameInput = amountOrNameInput.substring(0, amountOrNameInput.length() - 1);
                     inputTaken = true;
                 }
+            } else if(inputDialogState == 5) {
+                if (key >= 32 && key <= 122 && TradingPost.searchedName.length() < 40) {
+                    TradingPost.searchedName += (char) key;
+                    inputTaken = true;
+                }
+                if (key == 8 && TradingPost.searchedName.length() > 0) {
+                    TradingPost.searchedName = TradingPost.searchedName.substring(0,  TradingPost.searchedName.length() - 1);
+                    inputTaken = true;
+                }
+                TradingPost.searchItem();
             } else if (backDialogID == -1) {
                 if (key >= 32 && key <= 122 && inputString.length() < 80) {
                     inputString += (char) key;
@@ -15251,6 +15314,30 @@ public class Client extends GameRenderer {
                         return true;
                     }
 
+                    if(s.equals(":tsearch:")) {
+                        inputDialogState = inputDialogState == 5 ? -1 : 5;
+                        TradingPost.hasSearchOpen = !TradingPost.hasSearchOpen;
+                        TradingPost.searchedName = "";
+                        TradingPost.displayedItems = new int[100];
+                        TradingPost.selectedItemId = -1;
+                        TradingPost.itemSearchCount = 0;
+                        TradingPost.scrollPosition = 0;
+                        pktType = -1;
+                        return true;
+                    }
+
+                    if(s.equals(":invglow0:")) {
+                        invGlow = false;
+                        pktType = -1;
+                        return true;
+                    }
+
+                    if(s.equals(":invglow1:")) {
+                        invGlow = true;
+                        pktType = -1;
+                        return true;
+                    }
+
                     if (consoleOpen) {
                         printConsoleMessage(s, 0);
                     } else if (s.equals(":refreshspinner:")) {
@@ -15676,7 +15763,11 @@ public class Client extends GameRenderer {
 
                     invOverlayInterfaceID = j6;
                     tabAreaAltered = true;
-                    openInterfaceID = -1;
+                    if(openInterfaceID != -1) {
+                        RSInterface.interfaceCache[openInterfaceID].disableInteraction = false;
+                        openInterfaceID = -1;
+                        overlayInterfaceId = -1;
+                    }
                     aBoolean1149 = false;
                     pktType = -1;
                     return true;
@@ -16168,7 +16259,11 @@ public class Client extends GameRenderer {
                         inputTaken = true;
                     }
 
-                    openInterfaceID = -1;
+                    if(openInterfaceID != -1) {
+                        RSInterface.interfaceCache[openInterfaceID].disableInteraction = false;
+                        openInterfaceID = -1;
+                        overlayInterfaceId = -1;
+                    }
                     aBoolean1149 = false;
                     pktType = -1;
                     return true;
@@ -16238,7 +16333,11 @@ public class Client extends GameRenderer {
 
                     backDialogID = j9;
                     inputTaken = true;
-                    openInterfaceID = -1;
+                    if(openInterfaceID != -1) {
+                        RSInterface.interfaceCache[openInterfaceID].disableInteraction = false;
+                        openInterfaceID = -1;
+                        overlayInterfaceId = -1;
+                    }
                     aBoolean1149 = false;
                     pktType = -1;
                     return true;
@@ -16992,7 +17091,7 @@ public class Client extends GameRenderer {
         Client.flagged = client.getConnection().read() == 1;
 
         int captchaResponse = client.getConnection().read();
-        boolean captcha = captchaResponse >= 1;
+        boolean captcha = false;//captchaResponse >= 1;
 
         if (captcha) {
 
@@ -17020,7 +17119,6 @@ public class Client extends GameRenderer {
             return;
 
         }
-
         client.awtFocus = true;
         client.aBoolean954 = true;
         client.loggedIn = true;
@@ -17080,7 +17178,11 @@ public class Client extends GameRenderer {
         client.friendCount = 0;
         client.dialogID = -1;
         client.backDialogID = -1;
-        Client.openInterfaceID = -1;
+        if(openInterfaceID != -1) {
+            RSInterface.interfaceCache[openInterfaceID].disableInteraction = false;
+            openInterfaceID = -1;
+            overlayInterfaceId = -1;
+        }
         client.invOverlayInterfaceID = -1;
         client.setWalkableInterfaceId(-1);
         client.aBoolean1149 = false;

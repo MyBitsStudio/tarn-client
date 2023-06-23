@@ -6,6 +6,7 @@ import org.necrotic.client.graphics.RSImageProducer;
 import org.necrotic.client.graphics.Sprite;
 import org.necrotic.client.graphics.gameframe.GameFrame;
 import org.necrotic.client.graphics.gameframe.GameFrame.ScreenMode;
+import org.necrotic.client.graphics.rsinterface.TradingPost;
 
 
 import javax.swing.*;
@@ -1069,6 +1070,9 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 					}
 				}
 			}
+		}
+		if(Client.getClient().inputDialogState == 5 && TradingPost.selectedItemId != -1) {
+			TradingPost.scrollPosition += rotation * 10;
 		}
 		return false;
 	}

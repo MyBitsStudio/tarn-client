@@ -5,6 +5,7 @@ import org.necrotic.client.Settings.Save;
 import org.necrotic.client.graphics.DrawingArea;
 import org.necrotic.client.graphics.fonts.RSFontSystem;
 import org.necrotic.client.graphics.gameframe.GameFrame;
+import org.necrotic.client.graphics.rsinterface.TradingPost;
 import org.necrotic.client.world.Rasterizer;
 
 import javax.imageio.ImageIO;
@@ -252,7 +253,9 @@ public class ChatArea extends GameFrame {
 				client.newBoldFont.drawCenteredString(client.amountOrNameInput + "*", 259 + getOffSetX(), 80 + getOffSetY(), 128, -1);
 			} else if (client.inputDialogState == 3) {
 				client.getGrandExchange().displayItemSearch();
-			} else if (client.aString844 != null) {
+			} else if(client.inputDialogState == 5) {
+				TradingPost.drawSearchBox();
+			}else if (client.aString844 != null) {
 				client.newBoldFont.drawCenteredString(client.aString844, 259 + getOffSetX(), 60 + getOffSetY(), 0, -1);
 				client.newBoldFont.drawCenteredString("Click to continue", 259 + getOffSetX(), 80 + getOffSetY(), 128, -1);
 			} else if (client.backDialogID != -1) {
