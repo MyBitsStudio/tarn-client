@@ -92,13 +92,8 @@ public class TradingPost extends RSInterface {
             scroll.child(i+60, 150330+i, x+47,y+58);
 
             x += 145;
-
-            RSInterface.interfaceCache[150280+i].progress = 10*i+10;
-            RSInterface.interfaceCache[150290+i].inv[0] = 4152;
-            RSInterface.interfaceCache[150290+i].invStackSizes[0] = 1;
-            RSInterface.interfaceCache[150310+i].message = i + "/10";
-
         }
+
         rsi.child(7, 150259, 190, 50);
 
         hoverButton(150270, 3118, 3119, "View Offers");
@@ -136,15 +131,6 @@ public class TradingPost extends RSInterface {
         rsi1.child(0, 150431, 0,0);
 
         rsi.child(17, 150430, 18, 289);
-
-        for(int i = 0; i < 25; i++) {
-            cb.conveyorItems[i][0] = 4151;
-            if(i%2==0) {
-                cb.conveyorItems[i][1] = 1;
-            } else {
-                cb.conveyorItems[i][1] = 0;
-            }
-        }
 
         hoverButton(150432, 3114, 3117, "Search History");
         rsi.child(18, 150432, 23, 156);
@@ -200,13 +186,11 @@ public class TradingPost extends RSInterface {
             scroll.child(i+150, 150447+i+150, 403, y+10);
             addItemOnInterface(150447+i+200, 150446, new String[]{null});
             scroll.child(i+200, 150447+i+200, 12, y+3);
-            RSInterface.interfaceCache[150447+200+i].inv[0] = 4152;
-            RSInterface.interfaceCache[150447+200+i].invStackSizes[0] = i;
-            addText(150447+i+250, "Abyssal Whip", ColorConstants.RS_ORANGE, true, true, -1, 1);
+            addText(150447+i+250, "", ColorConstants.RS_ORANGE, true, true, -1, 1);
             scroll.child(i+250, 150447+i+250, 117, y+9);
-            addText(150447+i+300, "249M", 0x03b60b, true, true, -1, 1);
+            addText(150447+i+300, "", 0x03b60b, true, true, -1, 1);
             scroll.child(i+300, 150447+i+300, 230, y+9);
-            addText(150447+i+350, "0:0", 0xafafaf, true, true, -1, 1);
+            addText(150447+i+350, "", 0xafafaf, true, true, -1, 1);
             scroll.child(i+350, 150447+i+350, 320, y+9);
             y+=41;
         }

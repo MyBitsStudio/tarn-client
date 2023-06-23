@@ -3154,6 +3154,9 @@ public class Client extends GameRenderer {
             if (child == null) {
                 continue;
             }
+            if(child.hideWidget) {
+                continue;
+            }
             int offset = child.xOffset;
             xSpritePos += offset;
             ySpritePos += child.yOffset;
@@ -7732,8 +7735,11 @@ public class Client extends GameRenderer {
             int childX = (class9.childX[j2] + interfaceX) - (class9.sideScroll ? scrollOffset : 0);
             int childY = (class9.childY[j2] + interfaceY) - (class9.sideScroll ? 0 : scrollOffset);
             RSInterface childInterface = RSInterface.interfaceCache[class9.children[j2]];
-            if (childInterface == null || childInterface.hideWidget)
+            if (childInterface == null)
                 continue;
+            if(childInterface.hideWidget) {
+                continue;
+            }
             // System.out.println(childInterface.type);
             childX += childInterface.xOffset;
             childY += childInterface.yOffset;
@@ -15325,6 +15331,25 @@ public class Client extends GameRenderer {
                         return true;
                     }
 
+                    if(s.startsWith(":maxitems:")) {
+                        int amount = Integer.parseInt(s.substring(s.lastIndexOf(":")+1));
+                        for(int i = 0; i < 50; i++) {
+                            if(amount > i) {
+                                RSInterface.interfaceCache[150497+i].hideWidget = false;
+                                RSInterface.interfaceCache[150447+i].hideWidget = false;
+                                RSInterface.interfaceCache[150547+i].hideWidget = false;
+                                setInterfaceText("Buy", 150597+i);
+                            } else {
+                                RSInterface.interfaceCache[150497+i].hideWidget = true;
+                                RSInterface.interfaceCache[150447+i].hideWidget = true;
+                                RSInterface.interfaceCache[150547+i].hideWidget = true;
+                                setInterfaceText("", 150597+i);
+                            }
+                        }
+                        pktType = -1;
+                        return true;
+                    }
+
                     if (consoleOpen) {
                         printConsoleMessage(s, 0);
                     } else if (s.equals(":refreshspinner:")) {
@@ -15573,12 +15598,13 @@ public class Client extends GameRenderer {
                     return true;
 
                 case 102:
-                    int itf = getInputBuffer().getShortBigEndian();
+                    int itf = getInputBuffer().getInt();
                     int scroll = getInputBuffer().method435();
                     RSInterface class9_14 = RSInterface.interfaceCache[itf];
                     if (scroll <= class9_14.height)
                         scroll = class9_14.height + 1;
                     class9_14.scrollMax = scroll;
+                    System.out.println("itf: " + itf + " scroll: " + scroll);
                     pktType = -1;
                     return true;
 
