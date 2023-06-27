@@ -348,9 +348,9 @@ public class ChatArea extends GameFrame {
 						 * Normal chat
 						 */
 						if ((chatType == 1 || chatType == 2) && (chatType == 1 || client.publicChatMode == 0 || client.publicChatMode == 1 && client.isFriendOrSelf(name))) {
-							if (client.chatTypeView == 1 || client.chatTypeView == 0 || playerRights > 0 && playerRights <= 4 && playerRights != 3) {
+							if (client.chatTypeView == 1 || client.chatTypeView == 0) {
 								if (positionY > 0 && positionY < 210) {
-									int xPos = 8;
+									int xPos = 4;
 									AnimatedSprite as;
 									if (playerRights > 0) {
 										if((as = Client.animatedSpriteForRank(playerRights)) != null) {
@@ -361,7 +361,7 @@ public class ChatArea extends GameFrame {
 										client.modIcons[playerRights].drawTransparentSprite(xPos + 1 + getOffSetX(), positionY - 13 + getOffSetY(), 255);
 									} else {
 										as.getInstance(as.myWidth, as.myHeight).drawAdvancedSprite(xPos + 1 + getOffSetX(), positionY - 11 + getOffSetY());
-
+										xPos += 14;
 									}
 									if (ironman > 0) {
 										client.modIcons[ironman].drawTransparentSprite(xPos + 4 + getOffSetX(), positionY - 11 + getOffSetY(), 255);

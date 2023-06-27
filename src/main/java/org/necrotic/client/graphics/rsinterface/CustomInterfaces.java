@@ -8205,5 +8205,7 @@ public class CustomInterfaces extends RSInterface {
 		SecurityInterface.build(tda);
 		InstanceInterface.build2(tda);
 		VIPInterface.build(tda);
+		GlobalBosses.build(tda);
+		Shops.build(tda);
 	}
 }

@@ -10933,7 +10933,6 @@ public class Client extends GameRenderer {
             int effects = buffer.getShortBigEndian();
             int rights = buffer.getUnsignedByte();
             int donor = buffer.getUnsignedByte();
-            int vip = buffer.getUnsignedByte();
             int ironman = buffer.getUnsignedByte();
             int chatTextSize = buffer.method427();
             int currentOffset = buffer.position;
@@ -10972,7 +10971,7 @@ public class Client extends GameRenderer {
                             rights = 11 + ironman;
                         }*/
                         if (ironman > 0) {
-                            secondary = 11 + ironman;
+                            secondary = ironman;
                         }
                         String prefix = getPrefix(rights) + (secondary > -1 ? getPrefix(secondary) : "");
                         List<Integer> chatRights = new ArrayList<>();
@@ -16798,7 +16797,7 @@ public class Client extends GameRenderer {
         Client.getOut().putInt(seed[1]);
         Client.getOut().putInt(seed[2]);
         Client.getOut().putInt(seed[3]);
-        Client.getOut().putInt(350 >> 2240);
+        Client.getOut().putInt(350);
         Client.getOut().putString(username);
         Client.getOut().putString(password);
         Client.getOut().putString(mac);
@@ -16812,7 +16811,7 @@ public class Client extends GameRenderer {
     private void writeData(boolean reconnecting, Client client) throws UnsupportedEncodingException {
         client.getLoginBuffer().position = 0;
         client.getLoginBuffer().putByte(reconnecting ? 65 : 92); // login type
-        client.getLoginBuffer().putByte(Client.getOut().position + 36 + 1 + 1 + 2 + currentPinCode.length() + 1);
+        client.getLoginBuffer().putByte(Client.getOut().position + 38 + 1 + 1 + 2 + currentPinCode.length() + 1);
         client.getLoginBuffer().putByte(169);
         client.getLoginBuffer().putShort(Configuration.CLIENT_VERSION);
         client.getLoginBuffer().putByte(Client.isLowDetail() ? 66 : 12);
@@ -17104,7 +17103,7 @@ public class Client extends GameRenderer {
         Client.flagged = client.getConnection().read() == 1;
 
         int captchaResponse = client.getConnection().read();
-        boolean captcha = false;//captchaResponse >= 1;
+        boolean captcha = captchaResponse >= 1;
 
         if (captcha) {
 

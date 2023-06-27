@@ -41,7 +41,6 @@ public final class Player extends Entity {
 	public boolean skulled;
 	public int playerRights;
 	public int donorRights;
-	public int vipRights;
 	public int currentAnimatedText;
 	/**
 	 * The text of the loyalty title
@@ -470,7 +469,6 @@ public final class Player extends Entity {
 		combatLevel = stream.getUnsignedByte();
 		playerRights = stream.getUnsignedShort();
 		donorRights = stream.getUnsignedShort();
-		vipRights = stream.getUnsignedByte();
 		loyaltyTitle = getTitle(stream.getUnsignedShort());
 		isMiniPlayer = stream.readUnsignedWord() == 1;
 		//	updateLoyaltyTitle(stream);

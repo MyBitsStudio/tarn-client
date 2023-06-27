@@ -150,6 +150,13 @@ public class CustomItems {
                 itemDef.actions = new String[]{null, null, null, null, null};
                 break;
 
+            case 23220:
+                itemDef.copyItem(21816);
+                itemDef.name = "@blu@Global Ticket";
+                itemDef.stackable = true;
+                itemDef.actions = new String[]{null, null, null, null, null};
+                break;
+
 
             case 23225:
                 itemDef.name = "<col=a18f00><shad=0>Armor Pack<shad-1>";

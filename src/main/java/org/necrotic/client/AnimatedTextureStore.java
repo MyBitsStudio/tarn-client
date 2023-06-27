@@ -6,7 +6,7 @@ public enum AnimatedTextureStore {
 	private final int material_id;
 	private final int speed;
 
-	private AnimatedTextureStore(int material_id, int speed) {
+	AnimatedTextureStore(int material_id, int speed) {
 		this.material_id = material_id;
 		this.speed = speed;
 	}
