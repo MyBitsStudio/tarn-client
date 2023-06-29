@@ -4429,21 +4429,13 @@ public class CustomInterfaces extends RSInterface {
 		newInterface.child(3, 11004, 56 + x, 16);
 		newInterface.child(4, 11005, 34 + x, 39);
 		addHoverButtonWSpriteLoader(11008, 1944, 18, 18, "Teleport", -1, 11009, 1);
-		addTooltip(11009, "Raids Lobby\nTeleports you to the \nRaid Lobby.");
+		addTooltip(11009, "Monster Tele\nOpens the monster  \nteleport interface.");
 		newInterface.child(5, 11008, 96 + x, 16);
 		newInterface.child(6, 11009, 21 + x, 39);
 		addHoverButtonWSpriteLoader(11011, 1940, 18, 18, "Teleport", -1, 11012, 1);
 		addTooltip(11012, "Youtube Zone\nTeleports you to the \nYoutube Zone.");
 		newInterface.child(7, 11011, 139 + x, 16);
 		newInterface.child(8, 11012, 32 + x, 39);
-//		addHoverButtonWSpriteLoader(11014, 709, 18, 18, "Select", -1, 11015, 1);
-//		addTooltip(11015, "Dungeon Teleport\nOpen options of different\ndungeon teleports.");
-//		newInterface.child(9, 11014, 112 + x, 16);
-//		newInterface.child(10, 11015, 23 + x, 39);
-//		addHoverButtonWSpriteLoader(11017, 711, 18, 18, "Select", -1, 11018, 1);
-//		addTooltip(11018, "Misc Teleport\nOpen options of different\nmisc teleports.");
-//		newInterface.child(11, 11017, 138 + x, 16);
-//		newInterface.child(12, 11018, 34 + x, 39);
 
 		interfaceCache[1164] = interfaceCache[1165];
 		interfaceCache[1165] = interfaceCache[1166];

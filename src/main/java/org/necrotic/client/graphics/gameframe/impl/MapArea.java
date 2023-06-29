@@ -48,13 +48,13 @@ public class MapArea extends GameFrame {
 
 			if (level >= 101) {
 				client.newSmallFont.drawCenteredString(Integer.toString(currentValue), xPos + (screenMode == ScreenMode.FIXED ? 42 : 15), yPos + 26, 65280, 0);
-			} else if (level <= 100 && level >= 75) {
+			} else if (level >= 75) {
 				client.newSmallFont.drawCenteredString(Integer.toString(currentValue), xPos + (screenMode == ScreenMode.FIXED ? 42 : 15), yPos + 26, 65280, 0);
-			} else if (level <= 74 && level >= 50) {
+			} else if (level >= 50) {
 				client.newSmallFont.drawCenteredString(Integer.toString(currentValue), xPos + (screenMode == ScreenMode.FIXED ? 42 : 15), yPos + 26, 0xffff00, 0);
-			} else if (level <= 49 && level >= 25) {
+			} else if (level >= 25) {
 				client.newSmallFont.drawCenteredString(Integer.toString(currentValue), xPos + (screenMode == ScreenMode.FIXED ? 42 : 15), yPos + 26, 0xfca607, 0);
-			} else if (level <= 24 && level >= 0) {
+			} else if (level >= 0) {
 				client.newSmallFont.drawCenteredString(Integer.toString(currentValue), xPos + (screenMode == ScreenMode.FIXED ? 42 : 15), yPos + 26, 0xf50d0d, 0);
 			}
 
@@ -119,7 +119,7 @@ public class MapArea extends GameFrame {
 
 	}
 
-	class OrbValue {
+	static class OrbValue {
 
 		private final int currentValue, maxValue;
 
@@ -415,24 +415,18 @@ public class MapArea extends GameFrame {
 			client.menuActionID[3] = 1006;
 			client.menuActionRow = 4;
 		}
-		if (client.inSprite(false, Client.spritesMap.get(1423), getxPos() + (GameFrame.getScreenMode() != ScreenMode.FIXED ? 125 : 35), getyPos() + (GameFrame.getScreenMode() != ScreenMode.FIXED ? 160 : 137))) { //handleglobe
-			client.menuActionName[1] = "Previous teleports";
-			client.menuActionID[1] = 1717;
-			client.menuActionName[2] = "Teleports";
-			client.menuActionID[2] = 1716;
-			client.menuActionRow = 3;
-
-			/*client.menuActionName[1] = "Teleports";
-			client.menuActionID[1] = 1716;
-			client.menuActionName[2] = "Previous Teleport";
-			client.menuActionID[2] = 1717;
-			client.menuActionRow = 2;*/
-		}
-		if (client.inSprite(false, Client.spritesMap.get(457), getxPos() + (GameFrame.getScreenMode() != ScreenMode.FIXED ? 130 : 6), getyPos() + (GameFrame.getScreenMode() != ScreenMode.FIXED ? 132 : 124))) { //handleglobe
-			client.menuActionName[1] = "World Map";
-			client.menuActionID[1] = 1042;
-			client.menuActionRow = 2;
-		}
+//		if (client.inSprite(false, Client.spritesMap.get(1423), getxPos() + (GameFrame.getScreenMode() != ScreenMode.FIXED ? 125 : 35), getyPos() + (GameFrame.getScreenMode() != ScreenMode.FIXED ? 160 : 137))) { //handleglobe
+//			client.menuActionName[1] = "Previous teleports";
+//			client.menuActionID[1] = 1717;
+//			client.menuActionName[2] = "Teleports";
+//			client.menuActionID[2] = 1716;
+//			client.menuActionRow = 3;
+//		}
+//		if (client.inSprite(false, Client.spritesMap.get(457), getxPos() + (GameFrame.getScreenMode() != ScreenMode.FIXED ? 130 : 6), getyPos() + (GameFrame.getScreenMode() != ScreenMode.FIXED ? 132 : 124))) { //handleglobe
+//			client.menuActionName[1] = "World Map";
+//			client.menuActionID[1] = 1042;
+//			client.menuActionRow = 2;
+//		}
 
 		if (client.mouseX >= Client.clientWidth - (getScreenMode() == ScreenMode.FIXED ? 242 : 164) && client.mouseX <= Client.clientWidth - (getScreenMode() == ScreenMode.FIXED ? 203 : 129) && client.mouseY > (getScreenMode() == ScreenMode.FIXED ? 6 : 0) && client.mouseY < (getScreenMode() == ScreenMode.FIXED ? 42 : 37)) {
 			client.menuActionName[1] = "Face North";
@@ -599,21 +593,21 @@ public class MapArea extends GameFrame {
 			/*
 			 * Globe
 			 */
-			if (screenMode != ScreenMode.FIXED) {
-				Client.spritesMap.get(461).drawSprite(getOffSetX() + 125, getOffSetY() + 128);
-			}
-			if (client.inSprite(false, Client.spritesMap.get(456), getxPos() + (screenMode != ScreenMode.FIXED ? 130 : 6), getyPos() + (screenMode != ScreenMode.FIXED ? 132 : 124))) { //handleglobe
-				Client.spritesMap.get(457).drawSprite(getOffSetX() + (screenMode != ScreenMode.FIXED ? 130 : 6), getOffSetY() + (screenMode != ScreenMode.FIXED ? 132 : 124));
+//			if (screenMode != ScreenMode.FIXED) {
+//				Client.spritesMap.get(461).drawSprite(getOffSetX() + 125, getOffSetY() + 128);
+//			}
+			if (client.inSprite(false, Client.spritesMap.get(927), getxPos() + (screenMode != ScreenMode.FIXED ? 130 : 6), getyPos() + (screenMode != ScreenMode.FIXED ? 132 : 124))) { //handleglobe
+				Client.spritesMap.get(927).drawSprite(getOffSetX() + (screenMode != ScreenMode.FIXED ? 130 : 6), getOffSetY() + (screenMode != ScreenMode.FIXED ? 132 : 124));
 
 			} else {
-				Client.spritesMap.get(456).drawSprite(getOffSetX() + (screenMode != ScreenMode.FIXED ? 130 : 6), getOffSetY() + (screenMode != ScreenMode.FIXED ? 132 : 124));
+				Client.spritesMap.get(927).drawSprite(getOffSetX() + (screenMode != ScreenMode.FIXED ? 130 : 6), getOffSetY() + (screenMode != ScreenMode.FIXED ? 132 : 124));
 
 			}
-			if (client.inSprite(false, Client.spritesMap.get(1423), getxPos() + (screenMode != ScreenMode.FIXED ? 125 : 35), getyPos() + (screenMode != ScreenMode.FIXED ? 160 : 137))) { //handleglobe
-				Client.spritesMap.get(1424).drawSprite(getOffSetX() + (screenMode != ScreenMode.FIXED ? 125 : 35), getOffSetY() + (screenMode != ScreenMode.FIXED ? 160 : 137));
-			} else {
-				Client.spritesMap.get(1423).drawSprite(getOffSetX() + (screenMode != ScreenMode.FIXED ? 125 : 35), getOffSetY() + (screenMode != ScreenMode.FIXED ? 160 : 137));
-			}
+//			if (client.inSprite(false, Client.spritesMap.get(1423), getxPos() + (screenMode != ScreenMode.FIXED ? 125 : 35), getyPos() + (screenMode != ScreenMode.FIXED ? 160 : 137))) { //handleglobe
+//				Client.spritesMap.get(1424).drawSprite(getOffSetX() + (screenMode != ScreenMode.FIXED ? 125 : 35), getOffSetY() + (screenMode != ScreenMode.FIXED ? 160 : 137));
+//			} else {
+//				Client.spritesMap.get(1423).drawSprite(getOffSetX() + (screenMode != ScreenMode.FIXED ? 125 : 35), getOffSetY() + (screenMode != ScreenMode.FIXED ? 160 : 137));
+//			}
 
 			/*
 			 * Orbs

@@ -467,10 +467,10 @@ public final class Player extends Entity {
 		}
 		name = TextClass.fixName(TextClass.nameForLong(stream.getLong()));
 		combatLevel = stream.getUnsignedByte();
-		playerRights = stream.getUnsignedShort();
-		donorRights = stream.getUnsignedShort();
-		loyaltyTitle = getTitle(stream.getUnsignedShort());
-		isMiniPlayer = stream.readUnsignedWord() == 1;
+		playerRights = stream.getUnsignedByte();
+		donorRights = stream.getUnsignedByte();
+		loyaltyTitle = getTitle(stream.getUnsignedByte());
+		isMiniPlayer = stream.getUnsignedByte() == 1;
 		//	updateLoyaltyTitle(stream);
 		visible = true;
 		aLong1718 = 0L;
