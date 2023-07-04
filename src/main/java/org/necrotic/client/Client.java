@@ -16878,7 +16878,7 @@ public class Client extends GameRenderer {
         if (response == 2) {
             finishLogin(client);
             PlayerHandler.load(client);
-            sendAuth();
+            //sendAuth();
             return false;
         }
 
