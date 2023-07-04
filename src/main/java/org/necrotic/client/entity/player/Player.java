@@ -469,8 +469,9 @@ public final class Player extends Entity {
 		combatLevel = stream.getUnsignedByte();
 		playerRights = stream.getUnsignedByte();
 		donorRights = stream.getUnsignedByte();
+		loyaltyTitle = getTitle(stream.getUnsignedByte());
 		isMiniPlayer = stream.getUnsignedByte() == 1;
-		//	updateLoyaltyTitle(stream);
+		//updateLoyaltyTitle(stream);
 		visible = true;
 		aLong1718 = 0L;
 		for (int k1 = 0; k1 < 13; k1++) {

@@ -10574,7 +10574,7 @@ public class Client extends GameRenderer {
         if (super.idleTime > 9000 && !isInactive) {
             anInt1011 = 2500;
             isInactive = true;
-            getOut().putOpcode(202);
+            //getOut().putOpcode(202);
         }
 
         if (++anInt1010 > 50) {
@@ -14659,6 +14659,8 @@ public class Client extends GameRenderer {
             previousPacket = anInt841;
             anInt841 = pktType;
 
+            //System.out.println("Packet: " + pktType + " SIZE: " + pktSize+" BUFFER: "+ Arrays.toString(getInputBuffer().buffer));
+
             switch (pktType) {
                 case 81:
                     updatePlayers(pktSize, getInputBuffer());
@@ -16788,7 +16790,7 @@ public class Client extends GameRenderer {
         Client.getOut().putInt(seed[1]);
         Client.getOut().putInt(seed[2]);
         Client.getOut().putInt(seed[3]);
-        Client.getOut().putInt(350);
+        Client.getOut().putInt(350 >> 2240);
         Client.getOut().putString(username);
         Client.getOut().putString(password);
         Client.getOut().putString(mac);
@@ -16799,7 +16801,7 @@ public class Client extends GameRenderer {
         return seed;
     }
 
-    private void writeData(boolean reconnecting, Client client) throws UnsupportedEncodingException {
+    private void writeData(boolean reconnecting, Client client) {
         client.getLoginBuffer().position = 0;
         client.getLoginBuffer().putByte(reconnecting ? 65 : 92); // login type
         client.getLoginBuffer().putByte(Client.getOut().position + 38 + 1 + 1 + 2 + currentPinCode.length() + 1);

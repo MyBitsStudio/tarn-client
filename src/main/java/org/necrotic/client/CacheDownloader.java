@@ -15,15 +15,12 @@ import java.util.zip.ZipInputStream;
  */
 public class CacheDownloader {
 
-	private static final String CACHE_FILE_NAME = "Tarn.zip"; //The name of the actual .zip file
-
-	private static final String CACHE_URL = "https://tarn.gg/cache/Tarn.zip";//"https://dl.dropboxusercontent.com/s/t7rpvg2kgl84pdo/Tarn.zip";
-	private static final String NEWEST_VERSION_FILE_URL = "https://tarn.gg/cache/cache_version.txt";
-	private static final String CURRENT_VERSION_FILE = "cache_version.txt"; //The location of the local cache_version txt file
-
-	public static final String URL_TO_LOADING_IMAGES = "https://tarn-rsps.com/resources/";
-	public static final String MIRROR_URL_TO_LOADING_IMAGES = "https://tarn-rsps.com/resources/"; //If first link is broken, it will attempt to download from here
-
+	private static final String CACHE_FILE_NAME = "t-v1.zip";
+	private static final String CACHE_URL = "https://tarnserver.com/enforced/beta/cache/t-v1.zip";
+	private static final String NEWEST_VERSION_FILE_URL = "https://tarnserver.com/enforced/beta/cache/cache_version.txt";
+	private static final String CURRENT_VERSION_FILE = "cache_version.txt";
+	public static final String URL_TO_LOADING_IMAGES = "https://tarnserver.com/enforced/beta/img/";
+	public static final String MIRROR_URL_TO_LOADING_IMAGES = "https://tarnserver.com/enforced/beta/img/";
 	public static boolean UPDATING = true;
 
 	public static boolean updatedCache() {
@@ -32,37 +29,25 @@ public class CacheDownloader {
 			double current = getCurrentVersion();
 			if (cacheDownloadRequired(newest, current) || forceUpdateCache()) {
 				if (Configuration.STOP_CACHE_UPDATES) {
-					System.out.println("Stopped a cache update from occuring due to current configuration.");
+					System.out.println("Stopped a cache update from occurring due to current configuration.");
 				} else {
-					if (forceUpdateCache()) {
-						System.out.println("We are localhost, and being forced to update cache.");
-					} else {
-						System.out.println("Updated Tarn Cache. No manual overrides detected, proceeding as normal. Current: " + current + ", Newest: " + newest);
-					}
+					System.out.println(forceUpdateCache() ? "We are localhost, and being forced to update cache." : "Updated Tarn Cache. No manual overrides detected, proceeding as normal. Current: " + current + ", Newest: " + newest);
 					downloadCache();
 					unzipCache();
 					setLatestCacheVersion(newest);
 				}
 			}
-
 			UPDATING = false;
 			return true;
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		UPDATING = false;
 		return false;
-
 	}
 
-
-	@SuppressWarnings("unused")
 	public static boolean forceUpdateCache() {
-		if (Configuration.SERVER_HOST().equalsIgnoreCase("localhost") && Configuration.FORCE_CACHE_UPDATE) {
-			return true;
-		}
-		return false;
+		return Configuration.SERVER_HOST().equalsIgnoreCase("localhost") && Configuration.FORCE_CACHE_UPDATE;
 	}
 
 	public static boolean cacheDownloadRequired(double newest, double current) {
@@ -75,124 +60,74 @@ public class CacheDownloader {
 		httpConn.addRequestProperty("User-Agent", "Mozilla/4.76");
 		int responseCode = httpConn.getResponseCode();
 
-		// always check HTTP response code first
 		if (responseCode == HttpURLConnection.HTTP_OK) {
-			String fileName = CACHE_FILE_NAME;
-			// opens input stream from the HTTP connection
-			InputStream inputStream = httpConn.getInputStream();
-			String saveFilePath = Signlink.getCacheDirectory() + File.separator + fileName;
-
-			// opens an output stream to save into file
-			FileOutputStream outputStream = new FileOutputStream(saveFilePath);
-
-			int bytesRead = -1;
-			byte[] buffer = new byte[4096];
-			//long startTime = System.currentTimeMillis();
-			//int downloaded = 0;
-			long numWritten = 0;
-			int length = httpConn.getContentLength();
-			while ((bytesRead = inputStream.read(buffer)) != -1) {
-				outputStream.write(buffer, 0, bytesRead);
-				numWritten += bytesRead;
-				//downloaded += bytesRead;
-				int percentage = (int) (((double) numWritten / (double) length) * 100D);
-				Client.getClient().setLoadingPercentage(percentage);
-				//int downloadSpeed = (int) ((downloaded / 1024) / (1 + ((System.currentTimeMillis() - startTime) / 1000)));
-				//Client.getClient().drawSmoothLoading(percentage, (new StringBuilder()).append("Downloading "+percentage+"% ").append("@ "+downloadSpeed+"Kb/s").toString());
-				//System.out.println((new StringBuilder()).append("Downloading "+percentage+"% ").append("@ "+downloadSpeed+"Kb/s").toString());
-				//drawLoadingText(percentage, (new StringBuilder()).append("Downloading "+downloadingText+""+s+": "+percentage+"% ").append("@ "+downloadSpeed+"Kb/s").toString());
+			try (BufferedInputStream inputStream = new BufferedInputStream(httpConn.getInputStream());
+				 FileOutputStream outputStream = new FileOutputStream(Signlink.getCacheDirectory() + File.separator + CACHE_FILE_NAME)) {
+				byte[] buffer = new byte[4096];
+				long numWritten = 0;
+				int bytesRead;
+				long length = httpConn.getContentLength();
+				while ((bytesRead = inputStream.read(buffer)) != -1) {
+					outputStream.write(buffer, 0, bytesRead);
+					numWritten += bytesRead;
+					Client.getClient().setLoadingPercentage((int) (((double) numWritten / (double) length) * 100D));
+				}
+			} catch (IOException e) {
+				System.out.println("Cache host replied HTTP code: " + responseCode);
+				throw e;
 			}
-
-			outputStream.close();
-			inputStream.close();
-
-		} else {
-			System.out.println("Cache host replied HTTP code: " + responseCode);
 		}
 		httpConn.disconnect();
 	}
 
 	private static void unzipCache() {
-		try {
-			final File file = new File(Signlink.getCacheDirectory() + CACHE_FILE_NAME);
-			InputStream in = new BufferedInputStream(new FileInputStream(file));
-			ZipInputStream zin = new ZipInputStream(in);
+		try (FileInputStream fis = new FileInputStream(Signlink.getCacheDirectory() + CACHE_FILE_NAME);
+			 BufferedInputStream in = new BufferedInputStream(fis);
+			 ZipInputStream zin = new ZipInputStream(in)) {
 			ZipEntry e;
-			//new FinishedCacheDownload();
 			while ((e = zin.getNextEntry()) != null) {
+				String filePath = Signlink.getCacheDirectory() + e.getName();
 				if (e.isDirectory()) {
-					(new File(Signlink.getCacheDirectory() + e.getName())).mkdir();
-
+					new File(filePath).mkdir();
 				} else {
-
-					if (e.getName().equals(file.getName())) {
-						unzipPartlyArchive(zin, file.getName());
-						break;
-					}
-					unzipPartlyArchive(zin, Signlink.getCacheDirectory() + e.getName());
+					unzipPartlyArchive(zin, filePath);
 				}
-
 			}
-
-			zin.close();
-			file.delete();
+			new File(Signlink.getCacheDirectory() + CACHE_FILE_NAME).delete();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	/**
-	 * Unzips a partly archive
-	 *
-	 * @param zin The zip inputstream
-	 * @param s   The location of the zip file
-	 * @throws IOException The method can throw an IOException.
-	 */
-	private static void unzipPartlyArchive(ZipInputStream zin, String s) throws Exception {
-		FileOutputStream out = new FileOutputStream(s);
-		//drawLoadingText(100, "Unpacking data..");
-		byte[] b = new byte[1024];
-		int len = 0;
-
-		while ((len = zin.read(b)) != -1) {
-			out.write(b, 0, len);
+	private static void unzipPartlyArchive(ZipInputStream zin, String filePath) throws Exception {
+		try (FileOutputStream out = new FileOutputStream(filePath)) {
+			byte[] b = new byte[1024];
+			int len;
+			while ((len = zin.read(b)) != -1) {
+				out.write(b, 0, len);
+			}
 		}
-		out.close();
 	}
 
 	public static double getCurrentVersion() {
-		try {
-			File file = new File(Signlink.getCacheDirectory() + CURRENT_VERSION_FILE);
-			if (!file.exists()) {
-				return 0.0;
-			}
-			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
-			double version = Double.parseDouble(br.readLine());
-			br.close();
-			return version;
+		try (BufferedReader br = new BufferedReader(new FileReader(Signlink.getCacheDirectory() + CURRENT_VERSION_FILE))) {
+			return Double.parseDouble(br.readLine());
 		} catch (Exception e) {
+			return 0.1D;
 		}
-		return 0.1D;
 	}
 
 	public static double getNewestVersion() {
-		try {
-			URL url = new URL(NEWEST_VERSION_FILE_URL);
-			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-			connection.addRequestProperty("User-Agent", "Mozilla/4.76");
-			BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-			double version = Double.parseDouble(br.readLine());
-			br.close();
-			return version;
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(new URL(NEWEST_VERSION_FILE_URL).openStream()))) {
+			return Double.parseDouble(br.readLine());
 		} catch (Exception e) {
-
+			return 0.1D;
 		}
-		return 0.1D;
 	}
 
 	public static void setLatestCacheVersion(double newest) throws IOException {
-		BufferedWriter bw = new BufferedWriter(new FileWriter(Signlink.getCacheDirectory() + CURRENT_VERSION_FILE));
-		bw.write("" + newest + "");
-		bw.close();
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(Signlink.getCacheDirectory() + CURRENT_VERSION_FILE))) {
+			bw.write(String.valueOf(newest));
+		}
 	}
 }
