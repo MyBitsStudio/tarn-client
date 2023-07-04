@@ -92,8 +92,13 @@ public class TradingPost extends RSInterface {
             scroll.child(i+60, 150330+i, x+47,y+58);
 
             x += 145;
-        }
 
+            RSInterface.interfaceCache[150280+i].progress = 10*i+10;
+            RSInterface.interfaceCache[150290+i].inv[0] = 4152;
+            RSInterface.interfaceCache[150290+i].invStackSizes[0] = 1;
+            RSInterface.interfaceCache[150310+i].message = i + "/10";
+
+        }
         rsi.child(7, 150259, 190, 50);
 
         hoverButton(150270, 3118, 3119, "View Offers");
@@ -131,6 +136,15 @@ public class TradingPost extends RSInterface {
         rsi1.child(0, 150431, 0,0);
 
         rsi.child(17, 150430, 18, 289);
+
+        for(int i = 0; i < 25; i++) {
+            cb.conveyorItems[i][0] = 4151;
+            if(i%2==0) {
+                cb.conveyorItems[i][1] = 1;
+            } else {
+                cb.conveyorItems[i][1] = 0;
+            }
+        }
 
         hoverButton(150432, 3114, 3117, "Search History");
         rsi.child(18, 150432, 23, 156);
@@ -186,11 +200,13 @@ public class TradingPost extends RSInterface {
             scroll.child(i+150, 150447+i+150, 403, y+10);
             addItemOnInterface(150447+i+200, 150446, new String[]{null});
             scroll.child(i+200, 150447+i+200, 12, y+3);
-            addText(150447+i+250, "", ColorConstants.RS_ORANGE, true, true, -1, 1);
+            RSInterface.interfaceCache[150447+200+i].inv[0] = 4152;
+            RSInterface.interfaceCache[150447+200+i].invStackSizes[0] = i;
+            addText(150447+i+250, "Abyssal Whip", ColorConstants.RS_ORANGE, true, true, -1, 1);
             scroll.child(i+250, 150447+i+250, 117, y+9);
-            addText(150447+i+300, "", 0x03b60b, true, true, -1, 1);
+            addText(150447+i+300, "249M", 0x03b60b, true, true, -1, 1);
             scroll.child(i+300, 150447+i+300, 230, y+9);
-            addText(150447+i+350, "", 0xafafaf, true, true, -1, 1);
+            addText(150447+i+350, "0:0", 0xafafaf, true, true, -1, 1);
             scroll.child(i+350, 150447+i+350, 320, y+9);
             y+=41;
         }
@@ -239,7 +255,7 @@ public class TradingPost extends RSInterface {
     private static void searchPopup() {
         RSInterface popup = addInterface(150276);
 
-        popup.totalChildren(3);
+        popup.totalChildren(9);
 
         addRectangle(150277, 77, 0x000000, true, 494, 309);
         popup.child(0, 150277, 9,14);
@@ -251,6 +267,50 @@ public class TradingPost extends RSInterface {
         popup.child(2, 150279, 315,38);
 
         // start at id 151072
+        addText(151072, "Search", ColorConstants.RS_ORANGE, false, true, -1, 2);
+        popup.child(3, 151072, 225,39);
+
+        hoverButton(151073, 3166, 3166, "Perks");
+        popup.child(4, 151073, 186, 60);
+
+        hoverButton(151074, 3167, 3167, "Rarity");
+        popup.child(5, 151074, 221, 60);
+
+        hoverButton(151075, 3168, 3168, "Name");
+        popup.child(6, 151075, 256, 60);
+
+        hoverButton(151076, 3169, 3169, "Latest");
+        popup.child(7, 151076, 291, 60);
+
+        //perks
+        RSInterface scroll = addInterface(151100);
+        scroll.width = 120;
+        scroll.height = 55;
+        scroll.scrollMax = 250;
+        scroll.totalChildren(8);
+
+        hoverButton(151101, 2982, 2983, "6x6 AoE");
+        scroll.child(0, 151101, 0, 5);
+        addText(151102, "AoE 6x6", ColorConstants.RS_ORANGE, false, true, -1, 2);
+        scroll.child(1, 1510102, 12, 2);
+
+        hoverButton(151102, 2982, 2983, "3x3 AoE");
+        scroll.child(2, 151102, 37, 0);
+        addText(151103, "AoE 3x3", ColorConstants.RS_ORANGE, false, true, -1, 2);
+        scroll.child(3, 151103, 49, 2);
+
+        hoverButton(151104, 2982, 2983, "DR Bonus");
+        scroll.child(4, 151104, 0, 25);
+        addText(151105, "DR Bonus", ColorConstants.RS_ORANGE, false, true, -1, 2);
+        scroll.child(5, 151105, 12, 27);
+
+        hoverButton(151106, 2982, 2983, "Damage Bonus");
+        scroll.child(6, 151106, 37, 25);
+        addText(151107, "Damage Bonus", ColorConstants.RS_ORANGE, false, true, -1, 2);
+        scroll.child(7, 151107, 49, 27);
+
+        popup.child(8, 151100, 190, 100);
+
     }
 
     private static void inventory() {

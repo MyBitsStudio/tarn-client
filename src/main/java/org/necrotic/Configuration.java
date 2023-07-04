@@ -19,7 +19,7 @@ public class Configuration {
 	
 	public static final boolean IS_RUNNING_WINDOWS = true;
 	
-	public final static int CLIENT_VERSION = 116;
+	public final static int CLIENT_VERSION = 12;
 	public static final boolean FORCE_CACHE_UPDATE = true;
 	public static final boolean STOP_CACHE_UPDATES = false;
 	public static final boolean DROPBOX_MODE = false;
@@ -28,7 +28,7 @@ public class Configuration {
 	public static final String SETTINGS_DIRECTORY_NAME = "Tarn_settings";
 	public final static boolean JAGCACHED_ENABLED = false;
 	public final static String JAGCACHED_HOST = "";
-	public final static int SERVER_PORT = 43216;
+	public final static int SERVER_PORT = 43143;
 	public final static boolean DISPLAY_GAMEWORLD_ON_LOGIN = false;
 	public final static int NPC_BITS = 18;
 	public static final boolean SEND_HASH = true;
@@ -62,6 +62,6 @@ public class Configuration {
 	public static boolean TOGGLE_FOV = true;
 	public static boolean DEPTH_BUFFER = true;
 	public static String SERVER_HOST() {
-		return "test-server1.tarn.gg";//raid-server1.tarn.gg
+		return "localhost";//raidadmin-server-01.tarnserver.live
 	}
 }

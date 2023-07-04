@@ -9,10 +9,9 @@ public final class Item extends Animable {
 
 	public int amount;
 	public int id;
-	public ItemEffect effect;
 
 	@Override
-	public final Model getRotatedModel() {
+	public Model getRotatedModel() {
 		ItemDefinition definition = ItemDefinition.get(id);
 		return definition.getInventoryModel(amount);
 	}

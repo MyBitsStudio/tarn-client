@@ -978,7 +978,7 @@ public class Client extends GameRenderer {
         return "@yel@";
     }
 
-    private static final boolean constructMusic() {
+    private static boolean constructMusic() {
         anInt720 = 20;
 
         try {
@@ -995,7 +995,7 @@ public class Client extends GameRenderer {
         return PlayerHandler.format.format(value);
     }
 
-    private static final void handleSounds() {
+    private static void handleSounds() {
         if (aClass5_932 != null) {
             long l = System.currentTimeMillis();
 
@@ -1061,10 +1061,10 @@ public class Client extends GameRenderer {
             }
         });
         portOff = 0;
-        if (!Configuration.HIGH_DETAIL) {
-            setLowDetail();
-        } else {
+        if (Configuration.HIGH_DETAIL) {
             setHighDetail();
+        } else {
+            setLowDetail();
         }
         isMembers = true;
         Signlink.storeid = 32;
@@ -1121,18 +1121,18 @@ public class Client extends GameRenderer {
         }
     }
 
-    private static final Class3_Sub7_Sub1 method407(Component component) {
+    private static Class3_Sub7_Sub1 method407(Component component) {
         Client.method509(component);
         Class3_Sub7_Sub1 class3_sub7_sub1 = new Class3_Sub7_Sub1();
         method484(class3_sub7_sub1);
         return class3_sub7_sub1;
     }
 
-    private static final synchronized void method484(Class3_Sub7 class3_sub7) {
+    private static synchronized void method484(Class3_Sub7 class3_sub7) {
         aClass3_Sub7_1345 = class3_sub7;
     }
 
-    public static final synchronized void method486(int[] is, int i) {
+    public static synchronized void method486(int[] is, int i) {
         int i_2_ = 0;
         i -= 7;
 
@@ -1160,7 +1160,7 @@ public class Client extends GameRenderer {
         method689(i);
     }
 
-    private static final synchronized void method49() {
+    private static synchronized void method49() {
         if (musicIsntNull()) {
             if (fetchMusic) {
                 byte[] is = musicData;
@@ -1182,7 +1182,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    public static final synchronized void method493(int i) {
+    public static synchronized void method493(int i) {
         if (aClass3_Sub7_1345 != null) {
             aClass3_Sub7_1345.method380(i);
         }
@@ -1190,7 +1190,7 @@ public class Client extends GameRenderer {
         method689(i);
     }
 
-    private static final void method509(Component component) {
+    private static void method509(Component component) {
         try {
             Class5_Sub2 class5_sub2 = new Class5_Sub2_Sub2();
             class5_sub2.method502(2048);
@@ -1216,14 +1216,14 @@ public class Client extends GameRenderer {
         }
     }
 
-    private static final synchronized void method55(boolean bool) {
+    private static synchronized void method55(boolean bool) {
         if (musicIsntNull()) {
             method891(bool);
             fetchMusic = false;
         }
     }
 
-    public static final int method670(int i, int i_0_) {
+    public static int method670(int i, int i_0_) {
         if (i > i_0_) {
             int i_2_ = i_0_;
             i_0_ = i;
@@ -1238,7 +1238,7 @@ public class Client extends GameRenderer {
         return i_0_;
     }
 
-    private static final void method684(boolean bool, int i, int i_2_, byte[] is) {
+    private static void method684(boolean bool, int i, int i_2_, byte[] is) {
         if (aClass56_749 != null) {
             if (anInt478 >= 0) {
                 anInt2200 = i;
@@ -1268,7 +1268,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    private static final void method689(int i) {
+    private static void method689(int i) {
         Client.anInt1408 += i;
 
         while (Client.anInt1408 >= Client.anInt197) {
@@ -1283,7 +1283,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    public static final void method790() {
+    public static void method790() {
         if (aClass56_749 != null) {
             method891(false);
 
@@ -1297,7 +1297,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    private static final void method853(int i_2_, byte[] is, boolean bool) {
+    private static void method853(int i_2_, byte[] is, boolean bool) {
         if (aClass56_749 != null) {
             if (anInt478 >= 0) {
                 aClass56_749.method833();
@@ -1319,11 +1319,11 @@ public class Client extends GameRenderer {
         }
     }
 
-    private static final void method891(boolean bool) {
+    private static void method891(boolean bool) {
         method853(0, null, bool);
     }
 
-    private static final void method899(int i, int i_29_, boolean bool, byte[] is, int i_30_) {
+    private static void method899(int i, int i_29_, boolean bool, byte[] is, int i_30_) {
         if (aClass56_749 != null) {
             if (i_29_ >= (anInt478 ^ 0xffffffff)) {
                 i -= 20;
@@ -1355,7 +1355,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    private static final void method900(int i) {
+    private static void method900(int i) {
         if (aClass56_749 != null) {
             if (anInt720 == 0) {
                 if (anInt478 >= 0) {
@@ -1368,7 +1368,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    private static final boolean musicIsntNull() {
+    private static boolean musicIsntNull() {
         return aClass56_749 != null;
     }
 
@@ -1399,7 +1399,7 @@ public class Client extends GameRenderer {
         tabAreaAltered = true;
     }
 
-    private static final void setVolume(int i) {
+    private static void setVolume(int i) {
         if (musicIsntNull()) {
             if (fetchMusic) {
                 musicVolume2 = i;
@@ -1409,7 +1409,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    public static final void sleep(long time) {
+    public static void sleep(long time) {
         if (time > 0L) {
             if (time % 10L != 0L) {
                 threadSleep(time);
@@ -1420,7 +1420,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    private static final void threadSleep(long time) {
+    private static void threadSleep(long time) {
         try {
             Thread.sleep(time);
         } catch (InterruptedException ex) {
@@ -1546,7 +1546,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    public static final byte[] ReadFile(String s) {
+    public static byte[] ReadFile(String s) {
         try {
             byte[] abyte0;
             File file = new File(s);
@@ -2409,7 +2409,6 @@ public class Client extends GameRenderer {
                                     menuActionCmd2[menuActionRow] = x;
                                     menuActionCmd3[menuActionRow] = y;
                                     menuActionCmd4[menuActionRow] = index;
-                                    menuActionCmd5[menuActionRow] = item.effect.ordinal();
                                     menuActionRow++;
                                 } else if (j3 == 2) {
                                     menuActionName[menuActionRow] = "Take @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
@@ -2418,7 +2417,6 @@ public class Client extends GameRenderer {
                                     menuActionCmd2[menuActionRow] = x;
                                     menuActionCmd3[menuActionRow] = y;
                                     menuActionCmd4[menuActionRow] = index;
-                                    menuActionCmd5[menuActionRow] = item.effect.ordinal();
                                     menuActionRow++;
                                 }
                             }
@@ -4940,7 +4938,6 @@ public class Client extends GameRenderer {
             getOut().writeUnsignedWordBigEndian(interfaceId + regionBaseY);
             getOut().putShort(nodeId);
             getOut().writeUnsignedWordBigEndian(slot + regionBaseX);
-            getOut().putByte(fifthMenuAction);
         }
 
         if (action == 62 && method66(nodeId, y, x, id)) {
@@ -5159,8 +5156,6 @@ public class Client extends GameRenderer {
             getOut().writeUnsignedWordA(slot);
             getOut().writeUnsignedWordA(interfaceId);
             getOut().writeUnsignedWordA(nodeId);
-            getOut().writeUnsignedWordA(RSInterface.interfaceCache[interfaceId].invGlow[slot]);
-            getOut().writeUnsignedWordA(Math.max(RSInterface.interfaceCache[interfaceId].bonus[slot], 0));
             atInventoryLoopCycle = 0;
             atInventoryInterface = interfaceId;
             atInventoryIndex = slot;
@@ -5198,8 +5193,6 @@ public class Client extends GameRenderer {
             getOut().writeUnsignedWordA(slot);
             getOut().writeUnsignedWordA(interfaceId);
             getOut().writeUnsignedWordA(nodeId);
-            getOut().writeUnsignedWordA(RSInterface.interfaceCache[interfaceId].invGlow[slot]);
-            getOut().writeUnsignedWordA(Math.max(RSInterface.interfaceCache[interfaceId].bonus[slot], 0));
             atInventoryLoopCycle = 0;
             atInventoryInterface = interfaceId;
             atInventoryIndex = slot;
@@ -5219,8 +5212,6 @@ public class Client extends GameRenderer {
             getOut().writeUnsignedWordA(slot);
             getOut().writeUnsignedWordA(newId);
             getOut().writeUnsignedWordA(nodeId);
-            getOut().writeUnsignedWordA(0);
-            getOut().writeUnsignedWordA(0);
             atInventoryLoopCycle = 0;
             atInventoryInterface = interfaceId;
             atInventoryIndex = slot;
@@ -5417,8 +5408,6 @@ public class Client extends GameRenderer {
             getOut().writeUnsignedWordA(interfaceId);
             getOut().writeUnsignedWordA(nodeId);
             getOut().writeUnsignedWordA(slot);
-            getOut().writeUnsignedWordA(RSInterface.interfaceCache[interfaceId].invGlow[slot]);
-            getOut().writeUnsignedWordA(Math.max(RSInterface.interfaceCache[interfaceId].bonus[slot], 0));
             atInventoryLoopCycle = 0;
             atInventoryInterface = interfaceId;
             atInventoryIndex = slot;
@@ -5499,8 +5488,6 @@ public class Client extends GameRenderer {
             getOut().writeUnsignedWordA(interfaceId);
             getOut().writeUnsignedWordA(slot);
             getOut().writeUnsignedWordA(nodeId);
-            getOut().writeUnsignedWordA(RSInterface.interfaceCache[interfaceId].invGlow[slot]);
-            getOut().writeUnsignedWordA(Math.max(RSInterface.interfaceCache[interfaceId].bonus[slot], 0));
             atInventoryLoopCycle = 0;
             atInventoryInterface = interfaceId;
             atInventoryIndex = slot;
@@ -6012,8 +5999,6 @@ public class Client extends GameRenderer {
             getOut().writeUnsignedWordA(interfaceId);
             getOut().writeUnsignedWordA(nodeId);
             getOut().writeUnsignedWordA(slot);
-            getOut().writeUnsignedWordA(RSInterface.interfaceCache[interfaceId].invGlow[slot]);
-            getOut().writeUnsignedWordA(Math.max(RSInterface.interfaceCache[interfaceId].bonus[slot], 0));
             atInventoryLoopCycle = 0;
             atInventoryInterface = interfaceId;
             atInventoryIndex = slot;
@@ -6177,8 +6162,6 @@ public class Client extends GameRenderer {
                 slot_r = 4;
             }
             getOut().writeUnsignedWordA(slot_r);
-            getOut().writeUnsignedWordA(0);
-            getOut().writeUnsignedWordA(0);
 
         }
 
@@ -6192,8 +6175,7 @@ public class Client extends GameRenderer {
             } else {
                 getOut().putOpcode(2); // examine item
                 getOut().putShort(definition.id);
-                getOut().putByte(RSInterface.interfaceCache[interfaceId].invGlow[slot]);
-                getOut().putByte(RSInterface.interfaceCache[interfaceId].bonus[slot]);
+                getOut().putByte(slot);
             }
         }
         if (action == 1126) {
@@ -6201,8 +6183,6 @@ public class Client extends GameRenderer {
             getOut().writeUnsignedWordA(interfaceId);
             getOut().writeUnsignedWordA(slot);
             getOut().writeUnsignedWordA(nodeId);
-            getOut().writeUnsignedWordA(RSInterface.interfaceCache[interfaceId].invGlow[slot]);
-            getOut().writeUnsignedWordA(Math.max(RSInterface.interfaceCache[interfaceId].bonus[slot], 0));
             atInventoryLoopCycle = 0;
             atInventoryInterface = interfaceId;
             atInventoryIndex = slot;
@@ -11575,12 +11555,11 @@ public class Client extends GameRenderer {
             int i4 = anInt1268 + (j1 >> 4 & 7);
             int l6 = anInt1269 + (j1 & 7);
             int k9 = stream.getUnsignedShort();
-            int effect = stream.getUnsignedByte();
             if (i4 >= 0 && l6 >= 0 && i4 < 104 && l6 < 104) {
                 Deque class19 = groundArray[plane][i4][l6];
                 if (class19 != null) {
                     for (Item item = (Item) class19.reverseGetFirst(); item != null; item = (Item) class19.reverseGetNext()) {
-                        if (item.id != (k9 & 0x7fff) || item.effect.ordinal() != effect) {
+                        if (item.id != (k9 & 0x7fff)) {
                             continue;
                         }
                         item.unlink();
@@ -11762,9 +11741,8 @@ public class Client extends GameRenderer {
 
         if (j == 44) {
             int k2 = stream.getShortBigEndianA();
-            long j5 = stream.getLong(); // stream.getUnsignedShort();
+            long j5 = stream.getLong();
             int i8 = stream.getUnsignedByte();
-            int effect = stream.getUnsignedByte();
             int l10 = anInt1268 + (i8 >> 4 & 7);
             int i13 = anInt1269 + (i8 & 7);
 
@@ -11772,7 +11750,6 @@ public class Client extends GameRenderer {
                 Item class30_sub2_sub4_sub2_1 = new Item();
                 class30_sub2_sub4_sub2_1.id = k2;
                 class30_sub2_sub4_sub2_1.amount = (int) j5;
-                class30_sub2_sub4_sub2_1.effect = ItemEffect.values()[effect];
 
                 if (groundArray[plane][l10][i13] == null) {
                     groundArray[plane][l10][i13] = new Deque();
@@ -13421,7 +13398,7 @@ public class Client extends GameRenderer {
 
     }
 
-    private final synchronized void method56(int i, boolean bool, int music) {
+    private synchronized void method56(int i, boolean bool, int music) {
         if (musicIsntNull()) {
             nextSong = music;
             onDemandFetcher.requestFileData(2, nextSong);
@@ -13432,7 +13409,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    private final synchronized void method58(int i_30_, int volume, boolean bool, int music) {
+    private synchronized void method58(int i_30_, int volume, boolean bool, int music) {
         if (musicIsntNull()) {
             nextSong = music;
             onDemandFetcher.requestFileData(2, nextSong);
@@ -14273,7 +14250,7 @@ public class Client extends GameRenderer {
         class30_sub1.anInt1300 = l;
     }
 
-    private final void method90() {
+    private void method90() {
         for (int index = 0; soundCount > index; index++) {
             soundDelay[index]--;
 
@@ -15948,14 +15925,10 @@ public class Client extends GameRenderer {
                             it = getInputBuffer().getShortBigEndianA();
                             rsi.inv[idx] = it;
                             rsi.invStackSizes[idx] = itemAmt;
-                            rsi.invGlow[idx] = getInputBuffer().getUnsignedByte();
-                            rsi.bonus[idx] = getInputBuffer().getUnsignedByte();
                         }
                         for (int idx = totalItems; idx < rsi.inv.length && idx < rsi.invStackSizes.length; idx++) {
                             rsi.inv[idx] = 0;
                             rsi.invStackSizes[idx] = 0;
-                            rsi.invGlow[idx] = 0;
-                            rsi.bonus[idx] = 0;
                         }
                         if (rsi_frame == 24680) {
                             getGrandExchange().itemSelected = it;
@@ -16297,18 +16270,36 @@ public class Client extends GameRenderer {
                         int itemSlot = getInputBuffer().getSmart();
                         int itemInvId = getInputBuffer().getUnsignedShort();
                         int itemAmount = getInputBuffer().readInt();
-                        int rarityOrdinal = getInputBuffer().getUnsignedByte();
-                        int bonus = getInputBuffer().getByte();
                         if (itemSlot >= 0 && itemSlot < rsInt.inv.length) {
                             rsInt.inv[itemSlot] = itemInvId;
                             rsInt.invStackSizes[itemSlot] = itemAmount;
-                            rsInt.invGlow[itemSlot] = rarityOrdinal;
-                            rsInt.bonus[itemSlot] = bonus;
                         }
                     }
 
                     pktType = -1;
                     return true;
+
+                case 159:
+                    int rsIntId1 = getInputBuffer().getUnsignedShort();
+                    RSInterface rsInt1 = RSInterface.interfaceCache[rsIntId1];
+
+                    while (getInputBuffer().position < pktSize) {
+                        int itemSlot = getInputBuffer().getSmart();
+                        int itemInvId = getInputBuffer().getUnsignedShort();
+                        int itemAmount = getInputBuffer().readInt();
+                        int rarityOrdinal = getInputBuffer().getUnsignedByte();
+                        int bonus = getInputBuffer().getByte();
+                        if (itemSlot >= 0 && itemSlot < rsInt1.inv.length) {
+                            rsInt1.inv[itemSlot] = itemInvId;
+                            rsInt1.invStackSizes[itemSlot] = itemAmount;
+                            rsInt1.invGlow[itemSlot] = rarityOrdinal;
+                            rsInt1.bonus[itemSlot] = bonus;
+                        }
+                    }
+
+                    pktType = -1;
+                    return true;
+
 
                 case 4:
                 case 44:
