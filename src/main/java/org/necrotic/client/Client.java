@@ -4795,15 +4795,9 @@ public class Client extends GameRenderer {
             }
         }
 
-        if (action == 22700 || action == 1251) {
-            getGrandExchange().searching = false;
-            getOut().putOpcode(204);
-            getOut().putShort(getGrandExchange().itemSelected);
-            return;
-        }
-
         if(action == 1350) {
-            System.out.println("Id: " + TradingPost.selectedItemId);
+            getOut().putOpcode(204);
+            getOut().putInt(TradingPost.selectedItemId);
         }
 
         if (action >= 990 && action <= 992) {

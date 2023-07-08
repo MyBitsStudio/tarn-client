@@ -1038,6 +1038,7 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 			int interfaceId = Client.openInterfaceID;
 			if(Client.overlayInterfaceId != -1) {
 				interfaceId = Client.overlayInterfaceId;
+				System.out.println("Here");
 			}
 			RSInterface rsi = RSInterface.interfaceCache[interfaceId];
 			if(rsi.disableInteraction) {
@@ -1047,6 +1048,7 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 			offsetY = GameFrame.getScreenMode() == ScreenMode.FIXED ? 4 : Client.clientHeight / 2 - 235;
 			int off = 0;
 			for (int index = 0; index < rsi.children.length; index++) {
+				if(RSInterface.interfaceCache[rsi.children[index]] == null) continue;
 				if (RSInterface.interfaceCache[rsi.children[index]].scrollMax > 0) {
 					childID1[off] = index;
 					positionX1[off] = rsi.childX[index];

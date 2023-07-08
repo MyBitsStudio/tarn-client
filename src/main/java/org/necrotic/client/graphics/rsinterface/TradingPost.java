@@ -35,7 +35,7 @@ public class TradingPost extends RSInterface {
 
     public static void build() {
         listingPage();
-        searchPopup();
+       // searchPopup();
         buyingPage();
         historyPopup();
         inventory();
@@ -384,38 +384,6 @@ public class TradingPost extends RSInterface {
         }
     }
 
-    public static void load() {
-        Path path = Paths.get(Signlink.getCacheDirectory() + "tp_items.dat");
-
-        try(FileChannel fileChannel = FileChannel.open(path, StandardOpenOption.READ)) {
-            ByteBuffer buffer = ByteBuffer.allocate((int) fileChannel.size());
-
-            while(fileChannel.read(buffer) > 0) {
-                buffer.flip();
-                int id = 0;
-                while(buffer.hasRemaining()) {
-                    int opcode = buffer.get();
-                    if(opcode == 0) {
-                        id = buffer.get();
-                    } else if(opcode == 1) {
-                        byte[] bytes = new byte[30];
-                        byte b;
-                        int i = 0;
-                        while((b = buffer.get()) != 10) {
-                            bytes[i] = b;
-                            i++;
-                        }
-                        System.out.println("Id: " + id + " name : " + new String(Arrays.copyOfRange(bytes, 0, i), StandardCharsets.UTF_8));
-                    }
-                }
-                buffer.clear();
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     public static void drawSearchBox() {
         int yPosOffset = (GameFrame.getScreenMode() != GameFrame.ScreenMode.FIXED) ? Client.clientHeight - 165 : 0;
 
@@ -425,7 +393,7 @@ public class TradingPost extends RSInterface {
         DrawingArea.method338(yPosOffset+28, 107, 256, 0x463214, 505, 7);
         DrawingArea.method338(yPosOffset+29, 105, 256, 0x826f4e, 503, 8);
         DrawingArea.method335(0xa79475, yPosOffset+30, 501, 103, 112, 9);
-        Client.getClient().newBoldFont.drawCenteredString("What would you like to buy? <col=000080>" + searchedName + "*", 256, yPosOffset + 22, 0x000000, -1);
+        Client.getClient().newBoldFont.drawCenteredString("What would you like to " + (Client.overlayInterfaceId == 150857 ? "search for?": "buy?") + " <col=000080>" + searchedName + "*", 256, yPosOffset + 22, 0x000000, -1);
 
         DrawingArea.setDrawingArea(yPosOffset+132, 5, 512, 30 + yPosOffset);
         int x = 10;
@@ -500,13 +468,7 @@ public class TradingPost extends RSInterface {
             acdat.build(map);
             for (int id = 0; id < ItemDefinition.totalItems; id++) {
                 ItemDefinition item = ItemDefinition.get(id);
-                if (item.certTemplateID != -1 || item.name == null || item.name.equals("Picture") || item.certID == 18786 || item.name.equals("Null") || item.name.toLowerCase().contains("coins")
-                 || item.name.equals("Dwarf remains") || item.name.contains("Grimy") || item.name.contains("Seed") || item.membersObject || item.id < 0
-                || item.name.contains("(b)") || item.name.contains("Bronze") || item.name.contains("Iron")
-                        || item.name.contains("Steel") || item.name.contains("Black") || item.name.contains("Rune") || item.name.contains("Adamant")
-                        || item.name.contains("Mithril") || item.name.contains("Novite") || item.name.contains("Bathus") || item.name.contains("Fractite")
-                        || item.name.contains("Kratonite") || item.name.contains("Marmaros") || item.name.contains("Gravite") || item.name.contains("Broken")
-                        || item.name.contains("fish") || item.name.contains("Fish") || item.name.contains("logs") || item.name.contains("(deg)")) {
+                if (item.name == null) {
                     continue;
                 }
                 String name = item.name.toLowerCase();
@@ -523,6 +485,9 @@ public class TradingPost extends RSInterface {
                     if(!item.name.contains("+")) {
                         displayedItems[itemSearchCount] = item.id;
                         itemSearchCount++;
+                        System.out.println("Adding: " + item.name);
+                    } else {
+                        System.out.println("Skipped: " + item.name);
                     }
                 });
             }
