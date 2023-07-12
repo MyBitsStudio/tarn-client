@@ -15305,17 +15305,28 @@ public class Client extends GameRenderer {
 
                     if(s.startsWith(":maxitems:")) {
                         int amount = Integer.parseInt(s.substring(s.lastIndexOf(":")+1));
+                        System.out.println("Overlay: " + overlayInterfaceId);
                         for(int i = 0; i < 50; i++) {
                             if(amount > i) {
-                                RSInterface.interfaceCache[150497+i].hideWidget = false;
-                                RSInterface.interfaceCache[150447+i].hideWidget = false;
-                                RSInterface.interfaceCache[150547+i].hideWidget = false;
-                                setInterfaceText("Buy", 150597+i);
+                                if(overlayInterfaceId == 150857) {
+                                    RSInterface.interfaceCache[150867 + i].hideWidget = false;
+                                } else {
+                                    RSInterface.interfaceCache[150497 + i].hideWidget = false;
+                                    RSInterface.interfaceCache[150447 + i].hideWidget = false;
+                                    RSInterface.interfaceCache[150547 + i].hideWidget = false;
+                                    setInterfaceText("Buy", 150597+i);
+                                }
                             } else {
-                                RSInterface.interfaceCache[150497+i].hideWidget = true;
-                                RSInterface.interfaceCache[150447+i].hideWidget = true;
-                                RSInterface.interfaceCache[150547+i].hideWidget = true;
-                                setInterfaceText("", 150597+i);
+                                if(overlayInterfaceId == 150857) {
+                                    RSInterface.interfaceCache[150867 + i].hideWidget = true;
+                                    setInterfaceText("", 150967 + i);
+                                    setInterfaceText("", 151017 + i);
+                                } else {
+                                    RSInterface.interfaceCache[150497 + i].hideWidget = true;
+                                    RSInterface.interfaceCache[150447 + i].hideWidget = true;
+                                    RSInterface.interfaceCache[150547 + i].hideWidget = true;
+                                    setInterfaceText("", 150597+i);
+                                }
                             }
                         }
                         pktType = -1;
