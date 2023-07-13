@@ -8199,5 +8199,6 @@ public class CustomInterfaces extends RSInterface {
 		VIPInterface.build(tda);
 		GlobalBosses.build(tda);
 		Shops.build(tda);
+		MinigameLobbyInterface.build();
 	}
 }

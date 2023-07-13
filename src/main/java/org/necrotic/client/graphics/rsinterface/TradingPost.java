@@ -35,7 +35,6 @@ public class TradingPost extends RSInterface {
 
     public static void build() {
         listingPage();
-       // searchPopup();
         buyingPage();
         historyPopup();
         inventory();
@@ -250,67 +249,6 @@ public class TradingPost extends RSInterface {
 
         addButton(150856, 3403,  "Back");
         rsi.child(20, 150856, 18 , 24);
-    }
-
-    private static void searchPopup() {
-        RSInterface popup = addInterface(150276);
-
-        popup.totalChildren(9);
-
-        addRectangle(150277, 77, 0x000000, true, 494, 309);
-        popup.child(0, 150277, 9,14);
-
-        addSpriteLoader(150278, 481);
-        popup.child(1, 150278, 161,34);
-
-        hoverButton(150279, 714, 715, "Close");
-        popup.child(2, 150279, 315,38);
-
-        // start at id 151072
-        addText(151072, "Search", ColorConstants.RS_ORANGE, false, true, -1, 2);
-        popup.child(3, 151072, 225,39);
-
-        hoverButton(151073, 3166, 3166, "Perks");
-        popup.child(4, 151073, 186, 60);
-
-        hoverButton(151074, 3167, 3167, "Rarity");
-        popup.child(5, 151074, 221, 60);
-
-        hoverButton(151075, 3168, 3168, "Name");
-        popup.child(6, 151075, 256, 60);
-
-        hoverButton(151076, 3169, 3169, "Latest");
-        popup.child(7, 151076, 291, 60);
-
-        //perks
-        RSInterface scroll = addInterface(151100);
-        scroll.width = 120;
-        scroll.height = 55;
-        scroll.scrollMax = 250;
-        scroll.totalChildren(8);
-
-        hoverButton(151101, 2982, 2983, "6x6 AoE");
-        scroll.child(0, 151101, 0, 5);
-        addText(151102, "AoE 6x6", ColorConstants.RS_ORANGE, false, true, -1, 2);
-        scroll.child(1, 1510102, 12, 2);
-
-        hoverButton(151102, 2982, 2983, "3x3 AoE");
-        scroll.child(2, 151102, 37, 0);
-        addText(151103, "AoE 3x3", ColorConstants.RS_ORANGE, false, true, -1, 2);
-        scroll.child(3, 151103, 49, 2);
-
-        hoverButton(151104, 2982, 2983, "DR Bonus");
-        scroll.child(4, 151104, 0, 25);
-        addText(151105, "DR Bonus", ColorConstants.RS_ORANGE, false, true, -1, 2);
-        scroll.child(5, 151105, 12, 27);
-
-        hoverButton(151106, 2982, 2983, "Damage Bonus");
-        scroll.child(6, 151106, 37, 25);
-        addText(151107, "Damage Bonus", ColorConstants.RS_ORANGE, false, true, -1, 2);
-        scroll.child(7, 151107, 49, 27);
-
-        popup.child(8, 151100, 190, 100);
-
     }
 
     private static void inventory() {
