@@ -5,7 +5,7 @@ import org.necrotic.client.RSInterface;
 import org.necrotic.client.graphics.fonts.TextDrawingArea;
 
 public class InstanceInterface extends RSInterface {
-    public static void build2(TextDrawingArea[] tda){
+    public static void build2(TextDrawingArea[] tda){//2923
         RSInterface main = addInterface(70500);
 
         addSpriteLoader(70501, 3061);

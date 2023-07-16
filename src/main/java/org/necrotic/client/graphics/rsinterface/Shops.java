@@ -6,7 +6,9 @@ import org.necrotic.client.graphics.fonts.TextDrawingArea;
 
 public class Shops extends RSInterface {
 
-    public static void build(TextDrawingArea[] tda){
+    //2954 -- upgrade interface
+
+    public static void build(TextDrawingArea[] tda){ //2936
         RSInterface rsi = addInterface(160000);
         rsi.totalChildren(3);
 

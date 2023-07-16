@@ -10568,7 +10568,7 @@ public class Client extends GameRenderer {
         if (super.idleTime > 9000 && !isInactive) {
             anInt1011 = 2500;
             isInactive = true;
-            //getOut().putOpcode(202);
+            getOut().putOpcode(202);
         }
 
         if (++anInt1010 > 50) {
