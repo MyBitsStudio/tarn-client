@@ -7714,6 +7714,9 @@ public class Client extends GameRenderer {
             if(childInterface.hideWidget) {
                 continue;
             }
+            if(childInterface.interfaceShown){
+                continue;
+            }
             // System.out.println(childInterface.type);
             childX += childInterface.xOffset;
             childY += childInterface.yOffset;
@@ -15738,7 +15741,7 @@ public class Client extends GameRenderer {
 
                 case 171:
                     boolean flag1 = getInputBuffer().getUnsignedByte() == 1;
-                    int j13 = getInputBuffer().getUnsignedShort();
+                    int j13 = getInputBuffer().getInt();
                     RSInterface.interfaceCache[j13].interfaceShown = flag1;
                     pktType = -1;
                     return true;

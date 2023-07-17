@@ -8,7 +8,7 @@ public class TrackInterface extends RSInterface {
 
     public static void build(TextDrawingArea[] tda){
         RSInterface rsi = addInterface(161000);
-        rsi.totalChildren(59);
+        rsi.totalChildren(62);
 
         addSpriteLoader(161001, 1464);
         addText(161002, "Tracks", ColorConstants.AQUA, true, true, -1, 2);
@@ -76,6 +76,9 @@ public class TrackInterface extends RSInterface {
 
         addProgressBar(161058, 3392, 100, ProgressBarType.HORIZONTAL_LEFT_RIGHT);
 
+        addButtonWSpriteLoader(161059, 3296, "Claim");
+        addText(161060, "CLAIM", ColorConstants.ORA, true, true, -1, 2);
+
         RSInterface items = addTabInterface(161300);
         items.totalChildren(45);
         items.height = 86;
@@ -92,6 +95,24 @@ public class TrackInterface extends RSInterface {
             }
             x = 0;
             yz += 35;
+        }
+
+        RSInterface items1 = addTabInterface(161400);
+        items1.totalChildren(15);
+        items1.height = 42;
+        items1.width = 112;
+        items1.scrollMax = 400;
+
+        int x1 = 0, c1 = 0, yz1 = 2, id1 = 161401;
+
+        for (int z = 0; z < 5; z++) {
+            for (int i = 0; i < 3; i++) {
+                dropGroup(id1, 1, 1, 1, 1);
+                items1.child(c1++, id1++, x1, yz1);
+                x1 += 36;
+            }
+            x1 = 0;
+            yz1 += 35;
         }
 
 
@@ -200,5 +221,10 @@ public class TrackInterface extends RSInterface {
         rsi.child(57, 161057, 366, 297);
 
         rsi.child(58, 161058, 361, 215);
+
+        rsi.child(59, 161400, 182, 267);
+
+        rsi.child(60, 161059, 419, 255);
+        rsi.child(61, 161060, 449, 258);
     }
 }
