@@ -24,7 +24,7 @@ public class Configuration {
 	public static final boolean STOP_CACHE_UPDATES = false;
 	public static final boolean DROPBOX_MODE = false;
 	public final static String CLIENT_NAME = "Tarn";
-	public final static String CACHE_DIRECTORY_NAME = "TarnV2";
+	public final static String CACHE_DIRECTORY_NAME = ".tarn/data";
 	public static final String SETTINGS_DIRECTORY_NAME = "Tarn_settings";
 	public final static boolean JAGCACHED_ENABLED = false;
 	public final static String JAGCACHED_HOST = "";
@@ -62,6 +62,6 @@ public class Configuration {
 	public static boolean TOGGLE_FOV = true;
 	public static boolean DEPTH_BUFFER = true;
 	public static String SERVER_HOST() {
-		return "localhost";//raidadmin-server-01.tarnserver.live
+		return "127.0.0.1";//raidadmin-server-01.tarnserver.live
 	}
 }

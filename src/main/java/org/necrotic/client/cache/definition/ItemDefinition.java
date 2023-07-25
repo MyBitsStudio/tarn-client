@@ -4,6 +4,10 @@ import org.necrotic.client.Client;
 import org.necrotic.client.List;
 import org.necrotic.client.RarityColor;
 import org.necrotic.client.cache.Archive;
+import org.necrotic.client.cache.definition.items.Armor;
+import org.necrotic.client.cache.definition.items.Items;
+import org.necrotic.client.cache.definition.items.Pets;
+import org.necrotic.client.cache.definition.items.Sets;
 import org.necrotic.client.graphics.DrawingArea;
 import org.necrotic.client.graphics.Sprite;
 import org.necrotic.client.io.ByteBuffer;
@@ -30,145 +34,33 @@ public final class ItemDefinition {
 
 
 	public static void applyTexturing(Model model, int id) {
-		if(id == 23220){
-			System.out.println("Token - "+ Arrays.toString(model.anIntArray1640));
+		if(id == 23200){
+			System.out.println("Item - "+ Arrays.toString(model.anIntArray1640));
 		}
 
 		switch (id) {
 
-			//43020, 37929, 4549, 39950, 43016, 38950, 7743
-//			case 23214:
-//				model.setTexture(92, new int[]{552, 667});
-//				break;
-//			case 23215:
-//				model.setTexture(19, 92);
-//				break;
-//			case 23216:
-//				model.setTexture(37969, 92);
-//				break;
-
-//			case 23220:
-//				model.setTexture(24747, 92);
-//				break;
-			case 23219:
-				model.setTexture(40, 91);
+			case 23200:
+				model.setTexture(66, 1);
 				break;
-			case 23225:
-				model.setTexture(51, 71);
+			case 23201:
+				model.setTexture(66, 2);
 				break;
-			case 23243:
-				model.setTexture(51, 72);
-				break;
-			case 23244:
-				model.setTexture(51, 73);
-				break;
-			case 23245:
-				model.setTexture(51, 74);
-				break;
-			case 23246:
-				model.setTexture(51, 75);
-				break;
-			case 23247:
-				model.setTexture(51, 76);
-				break;
-			case 23248:
-				model.setTexture(51, 77);
-				break;
-			case 23249:
-				model.setTexture(51, 78);
-				break;
-			case 23250:
-				model.setTexture(51, 79);
-				break;
-			case 23251:
-				model.setTexture(51, 80);
-				break;
-
-			case 23252:
-				model.setTexture(51, 82);
-				break;
-			case 23253:
-				model.setTexture(51, 84);
-				break;
-
-			case 23226:
-				model.setTexture(0, 72);
-				break;
-			case 23227:
-				model.setTexture(0, 73);
-				break;
-			case 23228:
-				model.setTexture(0, 71);
-				break;
-			case 23229:
-				model.setTexture(0, 74);
-				break;
-			case 23230:
-				model.setTexture(0, 75);
-				break;
-			case 23231:
-				model.setTexture(0, 76);
-				break;
-			case 23232:
-				model.setTexture(0, 77);
-				break;
-			case 23233:
-				model.setTexture(0, 78);
-				break;
-			case 23234:
-				model.setTexture(0, 79);
-				break;
-			case 23235:
-				model.setTexture(0, 80);
-				break;
-			case 23236:
-				model.setTexture(0, 81);
-				break;
-			case 23237:
-				model.setTexture(0, 82);
-				break;
-			case 23238:
-				model.setTexture(0, 83);
-				break;
-			case 23239:
-				model.setTexture(0, 84);
-				break;
-			case 23240:
-				model.setTexture(0, 85);
-				break;
-			case 23241:
-				model.setTexture(0, 86);
-				break;
-			case 23242:
-				model.setTexture(0, 87);
-				break;
-
-			case 23211:
-				model.setTexture(300, 92);
-				break;
-			case 23204:
-				model.setTexture(300, 12);
-				break;
-			case 23205:
-				model.setTexture(300, 91);
-				break;
-			case 23209:
-				model.setTexture(300, 71);
+			case 23202:
+				model.setTexture(66, 3);
 				break;
 			case 23203:
-				model.setTexture(428, 78);
+				model.setTexture(66, 4);
+				break;
+			case 23204:
+				model.setTexture(66, 5);
+				break;
+			case 23205:
+				model.setTexture(66, 6);
 				break;
 			case 23206:
-				model.setTexture(40, 91);
+				model.setTexture(66, 7);
 				break;
-
-			case 23207:
-				model.setTexture(40, 71);
-				break;
-			case 23208:
-				model.setTexture(40, 87);
-				break;
-
 
 			case 299:
 			case 15084:
@@ -178,23 +70,9 @@ public final class ItemDefinition {
 				model.setTexture(71);
 				break;
 
-			case 23200:
-				model.setTexture(87);
-				break;
-			case 23201:
-				model.setTexture(71);
-				break;
-
-			case 23202:
-				model.setTexture(52);
-				break;
-
-
-			case 22005:
 			case 16194:
 			case 1857:
 			case 18636:
-			case 18629:
 			case 18750:
 			case 24011:
 				model.setTexture(52);
@@ -741,7 +619,6 @@ public final class ItemDefinition {
 			case 20118:
 			case 12860:
 			case 12565:
-			case 2021:
 			case 16140:
 				model.setTexture(63);
 				break;
@@ -836,21 +713,9 @@ public final class ItemDefinition {
 
 		buffer.position = streamIndices[id];
 		itemDef.id = id;
-		//buffer.position = streamIndices[id];
-		//	itemDef.readValues(buffer);
 
 		itemDef.setDefaults();
 
-		/*
-		 * if (Hardcode.readOSRSItem(itemDef)) { if (!itemDef.name.contains("hat") &&
-		 * !itemDef.name.contains("boot") && !itemDef.name.contains("cape")) {
-		 * itemDef.maleWieldY += 8; itemDef.femaleWieldY += 8; }
-		 *
-		 * if (itemDef.name.contains("hat")) { itemDef.maleWieldZ = 5;
-		 * itemDef.femaleWieldZ = 5; }
-		 *
-		 * } else { itemDef.readValues(buffer); }
-		 */
 		itemDef.readValues(buffer);
 		if (itemDef.newModelColor != null) {
 			for (int i2 = 0; i2 < itemDef.newModelColor.length; i2++) {
@@ -870,10 +735,23 @@ public final class ItemDefinition {
 		}
 
 		int customId = itemDef.id;
-		itemDef = ItemDef2.newIDS(itemDef, id);
+
+		/**
+		 * Old Item Defs
+		 */
+
+		//itemDef = ItemDef2.newIDS(itemDef, id);
 		itemDef = ItemDef3.newIDS1(itemDef, id);
 		itemDef = ItemDef4.newIDS(itemDef, id);
 		itemDef = CustomItems.newIDS1(itemDef, id);
+
+		/**
+		 * New Item Defs
+		 */
+		itemDef = Armor.newDef(itemDef, id);
+		itemDef = Items.newDef(itemDef, id);
+		itemDef = Pets.newDef(itemDef, id);
+		itemDef = Sets.newDef(itemDef, id);
 
 
 		if (customId >= 13700 && customId <= 13709) {
@@ -9553,7 +9431,7 @@ itemDef.actions[2] = "Dissolve";
 	private int maleDialogue;
 	private int anInt184;
 	private int anInt185;
-	int anInt188; // male arms
+	public int anInt188; // male arms
 	public int scaleZ;
 	public int scaleY;
 	private int anInt196;
