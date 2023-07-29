@@ -3508,14 +3508,14 @@ public class Client extends GameRenderer {
                                                         || (itemDef.equipOptions[menuActionRow] != null
                                                         && child.id == 1688)) {
                                                     if (child.id == 1688) {
-                                                        if (itemDef.equipOptions[menuActionRow] != null) {
-                                                            menuActionName[menuActionRow] = itemDef.equipOptions[menuActionRow]
-                                                                    + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
-                                                        } else {
+                                                        if (itemDef.equipOptions[menuActionRow] == null) {
                                                             if (child.actions[j4] != null) {
                                                                 menuActionName[menuActionRow] = child.actions[j4]
                                                                         + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                             }
+                                                        } else {
+                                                            menuActionName[menuActionRow] = itemDef.equipOptions[menuActionRow]
+                                                                    + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                         }
                                                         if (j4 == 0)
                                                             menuActionID[menuActionRow] = 632;
@@ -16304,6 +16304,21 @@ public class Client extends GameRenderer {
                             rsInt1.invStackSizes[itemSlot] = itemAmount;
                             rsInt1.invGlow[itemSlot] = rarityOrdinal;
                             rsInt1.bonus[itemSlot] = bonus;
+                        }
+                    }
+
+                    pktType = -1;
+                    return true;
+
+                case 184:
+                    while (getInputBuffer().position < pktSize) {
+                        int itemSlot = getInputBuffer().getSmart();
+                        int itemInvId = getInputBuffer().getUnsignedShort();
+                        int itemAmount = getInputBuffer().readInt();
+                        int rarityOrdinal = getInputBuffer().getUnsignedByte();
+                        int bonus = getInputBuffer().getByte();
+                        if (itemSlot >= 0 && itemSlot < 15) {
+                            Equipment.updateEquipment(itemSlot, itemInvId, itemAmount, rarityOrdinal, bonus);
                         }
                     }
 

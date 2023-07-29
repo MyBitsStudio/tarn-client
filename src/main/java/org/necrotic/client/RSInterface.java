@@ -4857,6 +4857,21 @@ public class RSInterface {
 		rsi.message = text;
 	}
 
+	public static void addSpriteLoaderWTooltip(int childId, int spriteId, String tooltip) {
+		RSInterface rsi = RSInterface.interfaceCache[childId] = new RSInterface();
+		rsi.id = childId;
+		rsi.parentID = childId;
+		rsi.type = 5;
+		rsi.atActionType = 1;
+		rsi.contentType = 0;
+		rsi.hoverType = 52;
+		rsi.enabledSprite = Client.spritesMap.get(spriteId);
+		rsi.disabledSprite = Client.spritesMap.get(spriteId);
+		rsi.width = rsi.enabledSprite.myWidth;
+		rsi.height = rsi.disabledSprite.myHeight - 2;
+		rsi.tooltip = tooltip;
+	}
+
 	public static void addSpriteLoader(int childId, int spriteId) {
 		RSInterface rsi = RSInterface.interfaceCache[childId] = new RSInterface();
 		rsi.id = childId;
@@ -5372,7 +5387,7 @@ public class RSInterface {
 		int i = -1;
 		stream.getUnsignedShort();
 		// int j = stream.getUnsignedShort();
-		interfaceCache = new RSInterface[162000];
+		interfaceCache = new RSInterface[164000];
 		while (stream.position < stream.buffer.length) {
 			int k = stream.getUnsignedShort();
 			if (k == 65535) {
@@ -5584,18 +5599,18 @@ public class RSInterface {
 
 				l = stream.getUnsignedByte();
 
-				if (l != 0) {
-					rsInterface.disabledAnimationId = (l - 1 << 8) + stream.getUnsignedByte();
-				} else {
+				if (l == 0) {
 					rsInterface.disabledAnimationId = -1;
+				} else {
+					rsInterface.disabledAnimationId = (l - 1 << 8) + stream.getUnsignedByte();
 				}
 
 				l = stream.getUnsignedByte();
 
-				if (l != 0) {
-					rsInterface.enabledAnimationId = (l - 1 << 8) + stream.getUnsignedByte();
-				} else {
+				if (l == 0) {
 					rsInterface.enabledAnimationId = -1;
+				} else {
+					rsInterface.enabledAnimationId = (l - 1 << 8) + stream.getUnsignedByte();
 				}
 
 				rsInterface.modelZoom = stream.getUnsignedShort();

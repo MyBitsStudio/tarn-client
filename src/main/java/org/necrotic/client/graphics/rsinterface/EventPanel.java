@@ -8,6 +8,8 @@ public class EventPanel extends RSInterface {
     public static void build(TextDrawingArea[] tda){
         int interID = 73000;
         RSInterface tab = addInterface(interID);
+
+
         int id = interID + 1;
         int c = 0;
         int x = 0;

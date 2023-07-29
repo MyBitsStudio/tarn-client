@@ -1753,7 +1753,7 @@ public class CustomInterfaces extends RSInterface {
 
 		addCharEquipment(21208);
 		setBounds(21208, 190, 200, index++, tab);
-		setBounds(1644, 320, 35, index++, tab);
+		setBounds(162500, 365, 50, index++, tab);
 
 		addText(66106, "Attack Speed:", fonts, 0, 0xFF9200, true, true);// 19153
 		tab.child(index++, 66106, 415, 250);
@@ -4349,16 +4349,6 @@ public class CustomInterfaces extends RSInterface {
 	private void clanChatTabInterface() {
 		RSInterface tab = addInterface(29328);
 
-
-		//addHoverButtonWSpriteLoader(29329, 698, 18, 18, "Join Clan", -1, 29330, 1);
-		//addHoveredImageWSpriteLoader(29330, 699, 18, 18, 29331);
-		//addHoverButtonWSpriteLoader(29332, 700, 18, 18, "Leave Clan", -1, 29333, 1);
-		//addHoveredImageWSpriteLoader(29333, 701, 18, 18, 29334);
-		//addHoverButtonWSpriteLoader(29335, 702, 18, 18, "Settings", -1, 29336, 1);
-		//addHoveredImageWSpriteLoader(29336, 703, 18, 18, 29337);
-		//addButtonWSpriteLoader(29455, 20, "Toggle Lootshare");
-		//addButtonWSpriteLoader(29456, 51, "View players online.");;
-
 		addButtonWSpriteLoader(70103, 3075, "@gre@Help");
 		addButtonWSpriteLoader(70104, 3076, "@blu@Trade");
 		addButtonWSpriteLoader(70105, 3077, "@cya@Groups");
@@ -4486,30 +4476,7 @@ public class CustomInterfaces extends RSInterface {
 		removeSomething(12455);
 
 
-/*	   addHoverButtonWSpriteLoader(11004, 707, 18, 18, "Select", -1, 11005, 1);
-		addTooltip(11005, "Skills Teleport\nOpen options of different \nskilling teleports.");
-		newInterface.child(3, 11004, 34, 8);
-		newInterface.child(4, 11005, 30, 39);
-		addHoverButtonWSpriteLoader(11008, 708, 18, 18, "Select", -1, 11009, 1);
-		addTooltip(11009, "Training Teleport\nOpen options of different \ntraining teleports.");
-		newInterface.child(5, 11008, 60, 8);
-		newInterface.child(6, 11009, 40, 39);
-		addHoverButtonWSpriteLoader(11011, 709, 18, 18, "Select", -1, 11012, 1);
-		addTooltip(11012, "Dungeon Teleport\nOpen options of different\ndungeon teleports.");
-		newInterface.child(7, 11011, 86, 8);
-		newInterface.child(8, 11012, 23, 39);
-		addHoverButtonWSpriteLoader(11014, 710, 18, 18, "Select", -1, 11015, 1);
-		addTooltip(11015, "Boss Teleport\nOpen options of different\nboss teleports.");
-		newInterface.child(9, 11014, 112, 8);
-		newInterface.child(10, 11015, 23, 39);
-		addHoverButtonWSpriteLoader(11017, 711, 18, 18, "Select", -1, 11018, 1);
-		addTooltip(11018, "Minigame Teleport\nOpen options of different\nminigame teleports.");
-		newInterface.child(11, 11017, 138, 8);
-		newInterface.child(12, 11018, 34, 39);
-		addHoverButtonWSpriteLoader(11020, 712, 18, 18, "Select", -1, 11021, 1);
-		addTooltip(11021, "Wilderness Teleport\nOpen options of different\nwilderness teleports.");
-		newInterface.child(13, 11020, 164, 8);
-		newInterface.child(14, 11021, 40, 39);*/
+
 		/**
 		 * Ancient spellbook
 		 */
@@ -4605,30 +4572,6 @@ public class CustomInterfaces extends RSInterface {
 		newInterface.child(10, 11015, 23 + x, 39);
 		newInterface.child(11, 11017, 138 + x, 16);
 		newInterface.child(12, 11018, 34 + x, 39);
-		/*	addHoverButtonWSpriteLoader(11004, 707, 18, 18, "Select", -1, 11005, 1);
-		addTooltip(11005, "Skills Teleport\nOpen options of different \nskilling teleports.");
-		newInterface.child(3, 11004, 34, 16);
-		newInterface.child(4, 11005, 30, 39);
-		addHoverButtonWSpriteLoader(11008, 708, 18, 18, "Select", -1, 11009, 1);
-		addTooltip(11009, "Training Teleport\nOpen options of different \ntraining teleports.");
-		newInterface.child(5, 11008, 60, 16);
-		newInterface.child(6, 11009, 40, 39);
-		addHoverButtonWSpriteLoader(11011, 709, 18, 18, "Select", -1, 11012, 1);
-		addTooltip(11012, "Dungeon Teleport\nOpen options of different\ndungeon teleports.");
-		newInterface.child(7, 11011, 86, 16);
-		newInterface.child(8, 11012, 23, 39);
-		addHoverButtonWSpriteLoader(11014, 710, 18, 18, "Select", -1, 11015, 1);
-		addTooltip(11015, "Boss Teleport\nOpen options of different\nboss teleports.");
-		newInterface.child(9, 11014, 112, 16);
-		newInterface.child(10, 11015, 23, 39);
-		addHoverButtonWSpriteLoader(11017, 711, 18, 18, "Select", -1, 11018, 1);
-		addTooltip(11018, "Minigame Teleport\nOpen options of different\nminigame teleports.");
-		newInterface.child(11, 11017, 138, 16);
-		newInterface.child(12, 11018, 34, 39);
-		addHoverButtonWSpriteLoader(11020, 712, 18, 18, "Select", -1, 11021, 1);
-		addTooltip(11021, "Wilderness Teleport\nOpen options of different\nWilderness teleports.");
-		newInterface.child(13, 11020, 164, 16);
-		newInterface.child(14, 11021, 40, 39);*/
 	}
 
 	private void bankInterface() {
@@ -8201,5 +8144,12 @@ public class CustomInterfaces extends RSInterface {
 		Shops.build(tda);
 		MinigameLobbyInterface.build();
 		TrackInterface.build(tda);
+		TarnTower.build(tda);
+
+		Equipment.build(tda);
+		Equipment.equipment();
+		Equipment.equipmentNon();
+		Equipment.wholePerks();
+		Equipment.onePerk();
 	}
 }
