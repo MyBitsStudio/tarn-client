@@ -7,6 +7,17 @@ import org.necrotic.client.graphics.fonts.TextDrawingArea;
 
 public class Equipment extends RSInterface {
 
+    public static void equipSlot(){
+        RSInterface rsi = addInterface(162750);
+
+        addSpriteLoader(162751, 2126);
+
+        rsi.totalChildren(2);
+        rsi.child(0, 162751, 120, 45);
+        rsi.child(1, 162500, 150, 75);
+
+    }
+
     public static void wholePerks() {
         RSInterface rsi = addInterface(162700);
 
@@ -82,6 +93,8 @@ public class Equipment extends RSInterface {
         addButtonWSpriteLoader(162564, 3321, "Boots");
         addButtonWSpriteLoader(162565, 3322, "Ring");
 
+        addToItemGroup(162566, 3,5, 2, 1, true, new String[] {"Choose", null, null, null, null});
+
         rsi.totalChildren(15);
 
         rsi.child(0, 162551, 0, 0);
@@ -99,6 +112,7 @@ public class Equipment extends RSInterface {
         rsi.child(12, 162563, 0, 140);
         rsi.child(13, 162564, 35, 140);
         rsi.child(14, 162565, 70, 140);
+        rsi.child(15, 162566, 0, 0);
     }
 
     public static void equipment(){

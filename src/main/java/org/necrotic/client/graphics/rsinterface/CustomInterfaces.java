@@ -8151,5 +8151,6 @@ public class CustomInterfaces extends RSInterface {
 		Equipment.equipmentNon();
 		Equipment.wholePerks();
 		Equipment.onePerk();
+		Equipment.equipSlot();
 	}
 }

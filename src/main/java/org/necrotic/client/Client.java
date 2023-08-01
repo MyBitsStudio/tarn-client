@@ -7852,6 +7852,13 @@ public class Client extends GameRenderer {
                                 j6 += childInterface.spritesY[i3];
                             }
 
+                            if(childInterface.id == 162516){
+                                RarityColor color = childInterface.invGlow[i3] > 0 ? RarityColor.getColorTypeForEffect(childInterface.invGlow[i3]) : RarityColor.NONE;
+                                if(color != null && color != RarityColor.NONE) {
+                                    DrawingArea.renderGlow(k5, j6, color.getColor(), 36);
+                                }
+                            }
+
                             if (i3 < childInterface.inv.length && childInterface.inv[i3] > 0) {
                                 if ((childInterface.id >= 110101 && childInterface.id <= 110221)) { /*
                                  * Shop interface hardcode
@@ -7894,7 +7901,7 @@ public class Client extends GameRenderer {
                                     } else {
                                         selectedItem = ItemDefinition.getSprite(j9, childInterface.invStackSizes[i3], l9);
                                     }
-                                    RarityColor color = childInterface.invGlow[i3] > 0 ? RarityColor.getColorTypeForEffect(childInterface.invGlow[i3]) : ItemDefinition.get(j9).rarityColortype;
+                                    //RarityColor color = childInterface.invGlow[i3] > 0 ? RarityColor.getColorTypeForEffect(childInterface.invGlow[i3]) : ItemDefinition.get(j9).rarityColortype;
 
                                     if (selectedItem != null) {
                                         if (activeInterfaceType != 0 && selectedInventorySlot == i3 && modifiedWidgetId == childInterface.id) {
@@ -7914,9 +7921,9 @@ public class Client extends GameRenderer {
                                                 j7 = 0;
                                             }
 
-                                            if(color != null) {
-                                                DrawingArea.renderGlow(k5 + k6, j6 + j7, color.getColor(), 36);
-                                            }
+//                                            if(color != null) {
+//                                                DrawingArea.renderGlow(k5 + k6, j6 + j7, color.getColor(), 36);
+//                                            }
                                             selectedItem.drawSprite1(k5 + k6, j6 + j7);
                                             int yy = GameFrame.getScreenMode() == ScreenMode.FIXED ? 40 : (getScreenHeight() - 503) / 2;
 
@@ -7962,23 +7969,23 @@ public class Client extends GameRenderer {
                                                 anInt1088 -= j10;
                                             }
                                         } else if (atInventoryInterfaceType != 0 && atInventoryIndex == i3 && atInventoryInterface == childInterface.id) {
-                                            if(color != null) {
-                                                DrawingArea.renderGlow(k5, j6, color.getColor(), 36);
-                                            }
+//                                            if(color != null) {
+//                                                DrawingArea.renderGlow(k5, j6, color.getColor(), 36);
+//                                            }
                                             selectedItem.drawSprite1(k5, j6);
                                         } else {
                                             if (childInterface.id == 30375 && childInterface.invStackSizes[i3] == 0) {
                                                 selectedItem.drawSpriteWithOpacity(k5, j6, 75);
                                             } else {
                                                 if (itemOpacity == 256) {
-                                                    if(color != null) {
-                                                        DrawingArea.renderGlow(k5, j6, color.getColor(), 36);
-                                                    }
+//                                                    if(color != null) {
+//                                                        DrawingArea.renderGlow(k5, j6, color.getColor(), 36);
+//                                                    }
                                                     selectedItem.drawSprite(k5, j6);
                                                 } else {
-                                                    if(color != null) {
-                                                        DrawingArea.renderGlow(k5 + k6, j6 + j7, color.getColor(), 36);
-                                                    }
+//                                                    if(color != null) {
+//                                                        DrawingArea.renderGlow(k5 + k6, j6 + j7, color.getColor(), 36);
+//                                                    }
                                                     selectedItem.drawSpriteWithOpacity(k5, j6, itemOpacity);
                                                 }
                                             }

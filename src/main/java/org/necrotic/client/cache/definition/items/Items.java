@@ -145,6 +145,28 @@ public class Items {
                 itemDef.actions = new String[5];
                 itemDef.actions[0] = "Redeem";
                 break;
+            case 23147:
+                itemDef.copyItem(1505);
+                itemDef.name = "Rare Perk Token";
+                itemDef.modelID = 100301;
+                itemDef.modelZoom = 1500;
+                itemDef.actions = new String[]{"Activate", null, null, null, "Destroy"};
+                itemDef.modelOffsetX = 0;
+                itemDef.modelOffsetY = 0;
+                itemDef.rotationZ = 0;
+                break;
+            case 23148:
+                itemDef.copyItem(23147);
+                itemDef.name = "Common Perk Token";
+                itemDef.modelID = 100302;
+                itemDef.modelZoom = 1600;
+                break;
+            case 23149:
+                itemDef.copyItem(23147);
+                itemDef.name = "Perk Token";
+                itemDef.modelID = 100303;
+                itemDef.modelZoom = 1600;
+                break;
 
 
             case 21816:
@@ -301,6 +323,62 @@ public class Items {
                 itemDef.rdc2 = 23454;
                 itemDef.actions = itemDefs.actions;
                 itemDef.modelZoom = itemDefs.modelZoom;
+                break;
+
+            case 23150:
+                itemDef.copyItem(20435);
+                itemDef.name = "Drop Rate Low";
+                itemDef.actions = new String[]{"Equip", null, null, null, null};
+                break;
+
+            case 23151:
+                itemDef.copyItem(23150);
+                itemDef.name = "Double XP";
+                break;
+
+            case 23152:
+                itemDef.copyItem(23150);
+                itemDef.name = "Double Drop";
+                break;
+
+            case 23153:
+                itemDef.copyItem(23150);
+                itemDef.name = "Double Rate Medium";
+                break;
+
+            case 23154:
+                itemDef.copyItem(23150);
+                itemDef.name = "Multi Kills";
+                break;
+
+            case 23155:
+                itemDef.copyItem(23150);
+                itemDef.name = "Double Cash";
+                break;
+
+            case 23156:
+                itemDef.copyItem(23150);
+                itemDef.name = "Damage Boost";
+                break;
+
+            case 23157:
+                itemDef.copyItem(23150);
+                itemDef.name = "AOE";
+                break;
+
+            case 23158:
+                itemDef.copyItem(23150);
+                itemDef.name = "Drop Rate High";
+                break;
+
+            case 23159:
+                itemDef.copyItem(23150);
+                itemDef.name = "Triple Cash";
+                break;
+
+            case 23160:
+                itemDef.copyItem(23150);
+                itemDef.name = "Multi Shot";
                 break;
 
 
@@ -897,28 +975,7 @@ public class Items {
                 itemDef.rdc2 = 8844;
                 itemDef.stackable = false;
                 break;
-            case 23147:
-                itemDef.copyItem(1505);
-                itemDef.name = "Melee attachement";
-                itemDef.modelID = 100301;
-                itemDef.modelZoom = 1500;
-                itemDef.actions = new String[]{null, null, null, null, null};
-                itemDef.modelOffsetX = 0;
-                itemDef.modelOffsetY = 0;
-                itemDef.rotationZ = 0;
-                break;
-            case 23148:
-                itemDef.copyItem(23147);
-                itemDef.name = "Magic attachement";
-                itemDef.modelID = 100302;
-                itemDef.modelZoom = 1600;
-                break;
-            case 23149:
-                itemDef.copyItem(23147);
-                itemDef.name = "Ranged attachement";
-                itemDef.modelID = 100303;
-                itemDef.modelZoom = 1600;
-                break;
+
             case 11000:
                 itemDef.name = "@red@Owner's Attachment";
                 itemDef.modelID = 65448;
