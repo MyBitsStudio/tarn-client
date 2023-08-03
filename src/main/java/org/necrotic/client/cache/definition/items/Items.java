@@ -167,6 +167,10 @@ public class Items {
                 itemDef.modelID = 100303;
                 itemDef.modelZoom = 1600;
                 break;
+            case 8788:
+                itemDef.name = "Transfer Crystal";
+                itemDef.rdc2 = 91291;
+                break;
 
 
             case 21816:
@@ -384,60 +388,60 @@ public class Items {
 
                 /* Packs */
             case 23200:
-                itemDef.name = TierColor.BEGGINER.getColor() +"Blurite Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.BEGGINER.getColor() +"Blurite Box";
                 break;
             case 23201:
-                itemDef.name = TierColor.BEGGINER.getColor() +"Nagi Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.BEGGINER.getColor() +"Nagi Box";
                 break;
             case 23202:
-                itemDef.name = TierColor.BEGGINER.getColor() +"Executive Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.BEGGINER.getColor() +"Executive Box";
                 break;
             case 23203:
-                itemDef.name = TierColor.BEGGINER.getColor() +"Imperial Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.BEGGINER.getColor() +"Imperial Box";
                 break;
             case 23204:
-                itemDef.name = TierColor.BEGGINER.getColor() +"Unknown Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.BEGGINER.getColor() +"Unknown Box";
                 break;
             case 23205:
-                itemDef.name = TierColor.BEGGINER.getColor() +"Turtle Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.BEGGINER.getColor() +"Turtle Box";
                 break;
             case 23206:
-                itemDef.name = TierColor.BEGGINER.getColor() +"Tormented Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.BEGGINER.getColor() +"Tormented Box";
                 break;
             case 23207:
-                itemDef.name = TierColor.NOVICE.getColor() +"Revenant Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.NOVICE.getColor() +"Revenant Box";
                 break;
             case 23208:
-                itemDef.name = TierColor.NOVICE.getColor() +"Freeflow Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.NOVICE.getColor() +"Freeflow Box";
                 break;
             case 23209:
-                itemDef.name = TierColor.INTER.getColor() +"Soldier Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.INTER.getColor() +"Soldier Box";
                 break;
             case 23210:
-                itemDef.name = TierColor.INTER.getColor() +"Mystical Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.INTER.getColor() +"Mystical Box";
                 break;
             case 23211:
-                itemDef.name = TierColor.INTER.getColor() +"Sacred Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.INTER.getColor() +"Sacred Box";
                 break;
             case 23212:
-                itemDef.name = TierColor.INTER.getColor() +"Ruthless Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.INTER.getColor() +"Ruthless Box";
                 break;
             case 23213:
-                itemDef.name = TierColor.INTER.getColor() +"Antique Box";
                 itemDef.copyItem(14488);
+                itemDef.name = TierColor.INTER.getColor() +"Antique Box";
                 break;
 
             case 23300:

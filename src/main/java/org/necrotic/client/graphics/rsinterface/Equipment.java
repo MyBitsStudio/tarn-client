@@ -14,7 +14,7 @@ public class Equipment extends RSInterface {
 
         rsi.totalChildren(2);
         rsi.child(0, 162751, 120, 45);
-        rsi.child(1, 162500, 150, 75);
+        rsi.child(1, 162550, 150, 75);
 
     }
 
@@ -95,7 +95,7 @@ public class Equipment extends RSInterface {
 
         addToItemGroup(162566, 3,5, 2, 1, true, new String[] {"Choose", null, null, null, null});
 
-        rsi.totalChildren(15);
+        rsi.totalChildren(16);
 
         rsi.child(0, 162551, 0, 0);
         rsi.child(1, 162552, 35, 0);
@@ -287,7 +287,33 @@ public class Equipment extends RSInterface {
         }
     }
 
+    public static void updateNon(int... args){
+        RSInterface rsInt2 = RSInterface.interfaceCache[162566];
+        int slot = 0;
+        switch(args[0]){
+            case 0: slot = 1; break;
+            case 1: slot = 3; break;
+            case 2: slot = 4; break;
+            case 3: slot = 6; break;
+            case 4: slot = 7; break;
+            case 5: slot = 8; break;
+            case 6: slot = 9; break;
+            case 7: slot = 10; break;
+            case 8: slot = 11; break;
+            case 9: slot = 12; break;
+            case 10: slot = 13; break;
+            case 12: slot = 14; break;
+            case 13: slot = 5; break;
+            case 14: slot = 2; break;
+        }
+        rsInt2.inv[slot] = 0;
+        rsInt2.invStackSizes[slot] = 0;
+        rsInt2.invGlow[slot] = args[3];
+        rsInt2.bonus[slot] = args[4];
+    }
+
     public static void updateEquipment(int... args){
+        updateNon(args);
         RSInterface rsInt2 = RSInterface.interfaceCache[162516];
         int slot = 0;
         switch(args[0]){

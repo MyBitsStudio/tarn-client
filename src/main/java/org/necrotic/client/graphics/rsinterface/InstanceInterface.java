@@ -15,8 +15,8 @@ public class InstanceInterface extends RSInterface {
         addButtonWSpriteLoader(70506, 1548, "Multi");
         addButtonWSpriteLoader(70507, 1547, "Single");
         addButtonWSpriteLoader(70508, 1547, "Special");
-        addButtonWSpriteLoader(70509, 1547, "");
-        addButtonWSpriteLoader(70510, 1547, "");
+        addButtonWSpriteLoader(70509, 1547, "Event");
+        addButtonWSpriteLoader(70510, 1547, "Master");
 
         addSpriteLoader(70536, 1552);
         addSpriteLoader(70537, 1549);
@@ -54,7 +54,7 @@ public class InstanceInterface extends RSInterface {
                 "@red@Any abuse of this system will result \\n" +
                 "@red@in immediate punishment!", ColorConstants.CYAN, true, true, -1, 0);
 
-        addButtonWSpriteLoader(70534, 2991, "Change Difficulty");
+        //addButtonWSpriteLoader(70534, 2991, "Change Difficulty");
         addButtonWSpriteLoader(70535, 3181, "Start Instance");
         addButtonWSpriteLoader(70542, 2876, "Restart");
 
@@ -102,7 +102,7 @@ public class InstanceInterface extends RSInterface {
             y += 35;
         }
 
-        main.totalChildren(43);
+        main.totalChildren(42);
         main.child(0, 70501, 5, 10);
         main.child(1, 70502, 250, 19);
         main.child(2, 70503, 455, 16);
@@ -146,16 +146,16 @@ public class InstanceInterface extends RSInterface {
 
         main.child(33, 70533, 150, 275);
 
-        main.child(34, 70534, 315, 291);
-        main.child(35, 70535, 405, 288);
+        //main.child(34, 70534, 315, 291);
+        main.child(34, 70535, 405, 288);
 
-        main.child(36, 70536, 318, 51);
-        main.child(37, 70537, 349, 51);
-        main.child(38, 70538, 380, 51);
-        main.child(39, 70539, 411, 51);
-        main.child(40, 70540, 442, 51);
-        main.child(41, 70541, 442, 293);
-        main.child(42, 70542, 370, 288);
+        main.child(35, 70536, 318, 51);
+        main.child(36, 70537, 349, 51);
+        main.child(37, 70538, 380, 51);
+        main.child(38, 70539, 411, 51);
+        main.child(39, 70540, 442, 51);
+        main.child(40, 70541, 442, 293);
+        main.child(41, 70542, 370, 288);
 
     }
 }

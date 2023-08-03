@@ -7852,7 +7852,7 @@ public class Client extends GameRenderer {
                                 j6 += childInterface.spritesY[i3];
                             }
 
-                            if(childInterface.id == 162516){
+                            if(childInterface.id == 162516 || childInterface.id == 162566){
                                 RarityColor color = childInterface.invGlow[i3] > 0 ? RarityColor.getColorTypeForEffect(childInterface.invGlow[i3]) : RarityColor.NONE;
                                 if(color != null && color != RarityColor.NONE) {
                                     DrawingArea.renderGlow(k5, j6, color.getColor(), 36);
@@ -16313,6 +16313,17 @@ public class Client extends GameRenderer {
                             rsInt1.bonus[itemSlot] = bonus;
                         }
                     }
+
+                    pktType = -1;
+                    return true;
+
+                case 22:
+                    String texts = getInputBuffer().getString();
+                    int rsIntId91 = getInputBuffer().getInt();
+
+                    RSInterface rsInt91 = RSInterface.interfaceCache[rsIntId91];
+
+                    rsInt91.tooltip = texts;
 
                     pktType = -1;
                     return true;
