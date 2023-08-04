@@ -61,7 +61,18 @@ public final class MobDefinition {
 		}
 
 		switch (id) {
-
+			case 550:
+				definition.name = "Obelisk";
+				definition.npcModels = new int[] {31666};
+				definition.standAnimation = -1;
+				definition.actions = new String[]{"@gre@Offer", null, null, null, null};
+				break;
+			case 551:
+				definition.name = "Barrier";
+				definition.npcModels = new int[] {40782};
+				definition.standAnimation = -1;
+				definition.actions = new String[]{null, "Attack", null, null, null};
+				break;
 			case 3373:
 				definition.npcModels[0] = 6775;
 				//definition.npcModels[1] = 6775;//body
@@ -1814,6 +1825,10 @@ public final class MobDefinition {
 				definition.walkAnimation = lightguild323234323.walkAnimation;
 				definition.actions = new String[]{null, "Attack", null, null, null};
 				definition.npcSizeInSquares = 1;
+				break;
+			case 1508:
+			case 1511:
+				definition.actions = new String[]{null, "Attack", null, null, null};
 				break;
 			case 9916:
 				definition.name = "@yel@Luffy";

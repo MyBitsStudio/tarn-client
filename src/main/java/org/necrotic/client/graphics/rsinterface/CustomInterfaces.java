@@ -8142,7 +8142,6 @@ public class CustomInterfaces extends RSInterface {
 		VIPInterface.build(tda);
 		GlobalBosses.build(tda);
 		Shops.build(tda);
-		MinigameLobbyInterface.build();
 		TrackInterface.build(tda);
 		TarnTower.build(tda);
 
@@ -8152,5 +8151,7 @@ public class CustomInterfaces extends RSInterface {
 		Equipment.wholePerks();
 		Equipment.onePerk();
 		Equipment.equipSlot();
-	}
+
+        MinigameInterfaces.build();
+    }
 }

@@ -2192,6 +2192,7 @@ public class Client extends GameRenderer {
                 ObjectDefinition class46 = ObjectDefinition.forID(index);
                 if (class46.morphisms != null) {
                     class46 = class46.method580();
+                    System.out.println("Selected: " + class46.type);
                 }
 
                 if (regionBaseX + x == 3090 && regionBaseY + y == 3956) {
@@ -15147,6 +15148,7 @@ public class Client extends GameRenderer {
                     return true;
                 case 140:
                     int childId = getInputBuffer().readInt();
+                    System.out.println("Reading int id: " + childId);
                     int interfaceState = getInputBuffer().getUnsignedShort();
                     int interfaceState3 = getInputBuffer().getUnsignedByte();
                     updateProgressBar(childId, interfaceState, interfaceState3, 0);
@@ -16040,7 +16042,7 @@ public class Client extends GameRenderer {
                     return true;
 
                 case 203:
-                    int progressBarIntId = getInputBuffer().getShort();
+                    int progressBarIntId = getInputBuffer().getInt();
                     int progress = getInputBuffer().getByte();
                     RSInterface.interfaceCache[progressBarIntId].progress = progress;
                     pktType = -1;

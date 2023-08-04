@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/libs/Tarn-Obf.jar.cache/sources/03" isTestSource="false" packagePrefix="org.necrotic.client" />
+      <sourceFolder url="file://$MODULE_DIR$/libs/Tarn-Obf.jar.cache/sources/07" isTestSource="false" packagePrefix="org.necrotic.client.a" />
+      <sourceFolder url="file://$MODULE_DIR$/libs/Tarn-Obf.jar.cache/sources/0b" isTestSource="false" packagePrefix="org.necrotic.client.accounts" />
+      <sourceFolder url="file://$MODULE_DIR$/libs/Tarn-Obf.jar.cache/sources/0c" isTestSource="false" packagePrefix="org.necrotic.client.accounts" />
+      <sourceFolder url="file://$MODULE_DIR$/libs/Tarn-Obf.jar.cache/sources/27" isTestSource="false" packagePrefix="org.pushingpixels.substance.api" />
+      <sourceFolder url="file://$MODULE_DIR$/libs/Tarn-Obf.jar.cache/sources/ad" isTestSource="false" packagePrefix="net.runelite.client.ui" />
+      <sourceFolder url="file://$MODULE_DIR$/libs/Tarn-Obf.jar.cache/sources/af" isTestSource="false" packagePrefix="net.runelite.client.ui" />
+      <sourceFolder url="file://$MODULE_DIR$/libs/Tarn-Obf.jar.cache/sources/b2" isTestSource="false" packagePrefix="net.runelite.client.ui" />
+      <sourceFolder url="file://$MODULE_DIR$/libs/Tarn-Obf.jar.cache/sources/eb" isTestSource="false" packagePrefix="net.runelite.client.ui.skin" />
+      <sourceFolder url="file://$MODULE_DIR$/libs/Tarn-Obf.jar.cache/sources/ed" isTestSource="false" packagePrefix="net.runelite.client.ui.skin" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="rt" level="project" />
+    <orderEntry type="library" name="libs" level="project" />
+    <orderEntry type="module" module-name="tarn-client" />
+  </component>
+</module>

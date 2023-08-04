@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d4d3c52-9a71-4bb6-b82b-a470a8cc691c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/rt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Tarn.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/build.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/runelite/client/RuneLite$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/rsinterface/EventPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/rsinterface/GlobalBosses.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/rsinterface/MinigameInterfaces.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/rsinterface/Shops.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/rsinterface/TradingPost.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/rsinterface/VIPInterface.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Rasterizer.class.uniqueId0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/necrotic/client/graphics/rsinterface/MinigameInterfaces.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tarn-client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/runelite/client/RuneLite.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/runelite/client/RuneLite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/runelite/client/plugins/discord/DiscordPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/runelite/client/plugins/discord/DiscordPlugin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/Configuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/AnimatedPlayerName.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/AnimatedPlayerName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/CacheDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/CacheDownloader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/Client$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/Client$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/Client$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/GameRenderer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/GameRenderer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/GameRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/GameRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/RSInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/RSInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/Signlink.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/Signlink.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/cache/definition/CustomItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/cache/definition/CustomItems.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/cache/definition/ItemDef3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/cache/definition/ItemDef3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/cache/definition/ItemDef4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/cache/definition/ItemDef4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/cache/definition/ItemDefinition.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/cache/definition/ItemDefinition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/cache/definition/MobDefinition.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/cache/definition/MobDefinition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/cache/definition/ObjectDefinition.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/cache/definition/ObjectDefinition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/constants/SizeConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/constants/SizeConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/entity/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/entity/player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/SpritesMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/SpritesMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/ChatArea$ChannelButtons$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/ChatArea$ChannelButtons$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/ChatArea$ChannelButtons.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/ChatArea$ChannelButtons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/ChatArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/ChatArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/MapArea$Orb.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/MapArea$Orb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/MapArea$OrbValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/MapArea$OrbValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/MapArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/MapArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/TabArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/gameframe/impl/TabArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/rsinterface/CustomInterfaces.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/rsinterface/CustomInterfaces.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/rsinterface/Forge.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/graphics/rsinterface/Forge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/net/HttpDownloadUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/net/HttpDownloadUtility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/renderable/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/renderable/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/world/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/necrotic/client/world/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ClientUI$1.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ClientUI$2.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ClientUI$3.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ClientUI$4.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ClientUI.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/RuneLite.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/necrotic/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/necrotic/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/necrotic/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/necrotic/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/necrotic/client/cache/definition/ItemDef2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/necrotic/client/cache/definition/ItemDef2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/necrotic/client/cache/definition/MobDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/necrotic/client/cache/definition/MobDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/necrotic/client/cache/definition/ObjectDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/necrotic/client/cache/definition/ObjectDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/necrotic/client/constants/SizeConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/necrotic/client/constants/SizeConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/necrotic/client/graphics/rsinterface/CustomInterfaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/necrotic/client/graphics/rsinterface/CustomInterfaces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/necrotic/client/graphics/rsinterface/MinigameLobbyInterface.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Tarn" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2SH3IQUASgIonkyl3gqHEzGqxEN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Gradle/Proguard&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="RuneLite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.runelite.client.RuneLite" />
+      <module name="Tarn.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.runelite.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RuneLite" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d4d3c52-9a71-4bb6-b82b-a470a8cc691c" name="Changes" comment="" />
+      <created>1688789599821</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688789599821</updated>
+      <workItem from="1688789600845" duration="4174000" />
+      <workItem from="1689125111274" duration="2566000" />
+      <workItem from="1689205321833" duration="1344000" />
+      <workItem from="1689224405914" duration="608000" />
+      <workItem from="1689269037325" duration="610000" />
+      <workItem from="1689270053623" duration="944000" />
+      <workItem from="1689307040116" duration="2553000" />
+      <workItem from="1689465879384" duration="319000" />
+      <workItem from="1689490997110" duration="60000" />
+      <workItem from="1689739410857" duration="5558000" />
+      <workItem from="1689894305285" duration="11688000" />
+      <workItem from="1689960847231" duration="50000" />
+      <workItem from="1689967165409" duration="3654000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

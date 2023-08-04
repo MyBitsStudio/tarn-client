@@ -248,6 +248,12 @@ public final class ObjectDefinition {
 			definition.name = "Coffin";
 			definition.actions = new String[]{"Open", null, null, null, null};
 		}
+		if(definition.type == 28731) {
+			definition.solid = true;
+			definition.interactive = true;
+			definition.actions = new String[]{"@gre@Offer", null, null, null, null};
+			definition.name = "Obelisk";
+		}
 		if (definition.type == 41202) {
 			definition.interactive = true;
 			definition.objectModelIDs = new int[]{100083};
@@ -1178,6 +1184,18 @@ public final class ObjectDefinition {
 			case 4408:
 				definition.name = "<col=436F40>[Starter Portal]";
 				break;
+			case 2013:
+			case 58:
+			case 2989:
+			case 2990:
+			case 13453:
+				definition.interactive = false;
+				break;
+			case 64:
+				definition.actions = new String[5];
+				definition.actions[0] = "@yel@Take";
+				definition.name = "Axes";
+				break;
 		}
 		if (id == 5222) {
 			definition.copy(5259);
@@ -1535,7 +1553,7 @@ public final class ObjectDefinition {
 				definition.decorDisplacement = 16;
 				definition.brightness = 15;
 				definition.contrast = 0;
-				definition.actions = new String[]{"Chop",};
+				definition.actions = new String[]{};
 				definition.mapFunctionID = -1;
 				definition.mapSceneID = -1;
 				definition.aBoolean751 = false;
@@ -1572,7 +1590,7 @@ public final class ObjectDefinition {
 				definition.decorDisplacement = 16;
 				definition.brightness = 15;
 				definition.contrast = 0;
-				definition.actions = new String[]{"Chop",};
+				definition.actions = new String[]{};
 				definition.mapFunctionID = -1;
 				definition.mapSceneID = -1;
 				definition.aBoolean751 = false;
@@ -1609,7 +1627,7 @@ public final class ObjectDefinition {
 				definition.decorDisplacement = 16;
 				definition.brightness = 15;
 				definition.contrast = 0;
-				definition.actions = new String[]{"Chop",};
+				definition.actions = new String[]{};
 				definition.mapFunctionID = -1;
 				definition.mapSceneID = -1;
 				definition.aBoolean751 = false;
@@ -1646,7 +1664,7 @@ public final class ObjectDefinition {
 				definition.decorDisplacement = 16;
 				definition.brightness = 15;
 				definition.contrast = 0;
-				definition.actions = new String[]{"Chop",};
+				definition.actions = new String[]{};
 				definition.mapFunctionID = -1;
 				definition.mapSceneID = -1;
 				definition.aBoolean751 = false;

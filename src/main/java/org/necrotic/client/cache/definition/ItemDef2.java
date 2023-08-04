@@ -23,7 +23,13 @@ public class ItemDef2 {
 				itemDef.equipOptions[2] = "Castle Wars";
 				itemDef.equipOptions[1] = "Clan wars";
 				break;
-				
+			case 8644:
+				itemDef.name = "Barricade";
+				itemDef.actions = new String[]{null, null, null, null, null};
+				itemDef.stackable = false;
+				itemDef.modelID = 40782;
+				itemDef.modelZoom = 2500;
+				break;
 //			case 17670:
 //				itemDef.name = "<col=b3b4f2>Demon Scythe";
 //				itemDef.modelID = 64016;
