@@ -292,6 +292,16 @@ public class Armor {
                 itemDef.modelID = 100128;
                 break;
 
+            case 15448:
+                itemDef.name = "Groudon-flame Aura";
+                break;
+            case 15449:
+                itemDef.name = "Extreme Aura";
+                break;
+            case 15450:
+                itemDef.name = "Collectors Aura I";
+                break;
+
 
             /* Ironman */
             case 13700:

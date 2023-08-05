@@ -6,23 +6,74 @@ import org.necrotic.client.cache.definition.ItemDefinition;
  *  Temp File, holding armors to use in future
  */
 public class olds {
-
-//    	case 17600:
-//    itemDef.name = "Vindicta staff";
-//    itemDef.modelID = 65486;
-//    itemDef.maleEquip1 = 65487;
-//    itemDef.femaleEquip1 = 65487;
-//    def = ItemDefinition.get(4158);
-//    itemDef.modelOffsetX = def.modelOffsetX;
-//    itemDef.modelOffsetY = def.modelOffsetY;
-//    itemDef.modelZoom = def.modelZoom;
-//    itemDef.rotationY = def.rotationY;
-//    itemDef.rotationX = def.rotationX;
 //
+//    case 19331:
+//    itemDef.name = "Frozen staff";
+//    itemdefedit = ItemDefinition.get(15486);
+//    itemDef.modelID = itemdefedit.modelID;
+//    itemDef.maleEquip1 = itemdefedit.maleEquip1;
+//    itemDef.femaleEquip1 = itemdefedit.femaleEquip1;
+//
+//    itemDef.modelOffsetX = itemdefedit.modelOffsetX;
+//    //	itemDef.modelOffsetX = itemdefedit.modelOffsetX;
+//    itemDef.modelOffsetY = itemdefedit.modelOffsetY;
+//    itemDef.modelZoom = itemdefedit.modelZoom;
+//    itemDef.rotationY = itemdefedit.rotationY;
+//    itemDef.rotationX = itemdefedit.rotationX;
+//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//    itemDef.stackable = false;
+//    itemDef.rdc2 = 7792950;
+//				break;
+
+//    case 14924:
+//    itemDef.name = "Icy staff of festive";
+//
+//    itemdefedit = ItemDefinition.get(18667);
+//    itemDef.modelOffsetX = itemdefedit.modelOffsetX;
+//    //itemDef.modelOffsetX = itemdefedit.modelOffsetX;
+//    itemDef.modelOffsetY = itemdefedit.modelOffsetY;
+//    itemDef.modelID = itemdefedit.modelID;
+//    itemDef.maleEquip1 = itemdefedit.maleEquip1;
+//    itemDef.femaleEquip1 = itemdefedit.femaleEquip1;
+//    itemDef.modelZoom = itemdefedit.modelZoom;
+//    itemDef.rotationY = itemdefedit.rotationY;
+//    itemDef.rotationX = itemdefedit.rotationX;
 //    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 //    itemDef.stackable = false;
 //
-//    itemDef.rdc2 = 222222;
+//				break;
+
+//    case 14919:
+//    itemDef.name = "Nature crossbow";
+//
+//    itemdefedit = ItemDefinition.get(14684);
+//    itemDef.modelOffsetX = itemdefedit.modelOffsetX;
+//    //itemDef.modelOffsetX = itemdefedit.modelOffsetX;
+//    itemDef.modelOffsetY = itemdefedit.modelOffsetY;
+//    itemDef.modelID = itemdefedit.modelID;
+//    itemDef.maleEquip1 = itemdefedit.maleEquip1;
+//    itemDef.femaleEquip1 = itemdefedit.femaleEquip1;
+//    itemDef.modelZoom = itemdefedit.modelZoom;
+//    itemDef.rotationY = itemdefedit.rotationY;
+//    itemDef.rotationX = itemdefedit.rotationX;
+//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//    itemDef.stackable = false;
+//
+//				break;
+//case 14915:
+//    itemDef.name = "Forsaken Sword";
+//    itemdefedit = ItemDefinition.get(20536);
+//    itemDef.modelOffsetX = itemdefedit.modelOffsetX;
+//    //itemDef.modelOffsetX = itemdefedit.modelOffsetX;
+//    itemDef.modelOffsetY = itemdefedit.modelOffsetY;
+//    itemDef.modelID = itemdefedit.modelID;
+//    itemDef.maleEquip1 = itemdefedit.maleEquip1;
+//    itemDef.femaleEquip1 = itemdefedit.femaleEquip1;
+//    itemDef.modelZoom = itemdefedit.modelZoom;
+//    itemDef.rotationY = itemdefedit.rotationY;
+//    itemDef.rotationX = itemdefedit.rotationX;
+//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//    itemDef.stackable = false;
 //				break;
 //			case 675:
 //    itemDef.name = "<col=b5f2b3>Indravox full helmet";
@@ -1551,17 +1602,6 @@ public class olds {
 //    itemDef.rdc2 = 8239113;
 //                break;
 
-//    case 23132:
-//            itemDef.copyItem(4710);
-//    itemDef.name = TierColor.INTER.getColor() +"Mystical scythe";
-//    itemDef.modelID = 100268;
-//    itemDef.maleEquip1 = 15171;
-//    itemDef.femaleEquip1 = 15171;
-//    itemDef.modelZoom = 3000;
-//    itemDef.rotationX = 1024;
-//    itemDef.rotationY = 525;
-//    itemDef.modelOffsetX = -5;
-//    itemDef.rotationZ = 0;
-//    itemDef.modelOffsetY = -5;
-//                break;
+
+
 }

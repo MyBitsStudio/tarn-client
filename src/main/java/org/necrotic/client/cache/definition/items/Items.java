@@ -136,7 +136,6 @@ public class Items {
                 itemDef.modelZoom = itemDefs.modelZoom;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                // itemDef.rdc2 = ;
                 itemDef.stackable = true;
                 itemDef.actions = new String[]{"Claim", null, null, null, "Drop"};
                 break;
@@ -171,8 +170,6 @@ public class Items {
                 itemDef.name = "Transfer Crystal";
                 itemDef.rdc2 = 91291;
                 break;
-
-
             case 21816:
                 itemDef.name = "@red@1% DR & Double Drop Ticket";
                 itemDef.actions = new String[]{null, null, null, null, null};
@@ -185,6 +182,53 @@ public class Items {
                 itemDef.name = "@blu@1% Double Drop Ticket";
                 itemDef.actions = new String[]{null, null, null, null, null};
                 break;
+            case 23150:
+                itemDef.copyItem(20435);
+                itemDef.name = "Drop Rate Low";
+                itemDef.actions = new String[]{"Equip", null, null, null, null};
+                break;
+            case 23151:
+                itemDef.copyItem(23150);
+                itemDef.name = "Double XP";
+                break;
+            case 23152:
+                itemDef.copyItem(23150);
+                itemDef.name = "Double Drop";
+                break;
+            case 23153:
+                itemDef.copyItem(23150);
+                itemDef.name = "Double Rate Medium";
+                break;
+            case 23154:
+                itemDef.copyItem(23150);
+                itemDef.name = "Multi Kills";
+                break;
+            case 23155:
+                itemDef.copyItem(23150);
+                itemDef.name = "Double Cash";
+                break;
+            case 23156:
+                itemDef.copyItem(23150);
+                itemDef.name = "Damage Boost";
+                break;
+            case 23157:
+                itemDef.copyItem(23150);
+                itemDef.name = "AOE";
+                break;
+            case 23158:
+                itemDef.copyItem(23150);
+                itemDef.name = "Drop Rate High";
+                break;
+            case 23159:
+                itemDef.copyItem(23150);
+                itemDef.name = "Triple Cash";
+                break;
+            case 23160:
+                itemDef.copyItem(23150);
+                itemDef.name = "Multi Shot";
+                break;
+
+                /* Not Used Yet */
             case 15355:
                 itemDef.name = "@gre@<shad=0>Double DR Scroll (1 Hour)<shad-1>";
                 itemDef.actions = new String[5];
@@ -329,119 +373,87 @@ public class Items {
                 itemDef.modelZoom = itemDefs.modelZoom;
                 break;
 
-            case 23150:
-                itemDef.copyItem(20435);
-                itemDef.name = "Drop Rate Low";
-                itemDef.actions = new String[]{"Equip", null, null, null, null};
-                break;
-
-            case 23151:
-                itemDef.copyItem(23150);
-                itemDef.name = "Double XP";
-                break;
-
-            case 23152:
-                itemDef.copyItem(23150);
-                itemDef.name = "Double Drop";
-                break;
-
-            case 23153:
-                itemDef.copyItem(23150);
-                itemDef.name = "Double Rate Medium";
-                break;
-
-            case 23154:
-                itemDef.copyItem(23150);
-                itemDef.name = "Multi Kills";
-                break;
-
-            case 23155:
-                itemDef.copyItem(23150);
-                itemDef.name = "Double Cash";
-                break;
-
-            case 23156:
-                itemDef.copyItem(23150);
-                itemDef.name = "Damage Boost";
-                break;
-
-            case 23157:
-                itemDef.copyItem(23150);
-                itemDef.name = "AOE";
-                break;
-
-            case 23158:
-                itemDef.copyItem(23150);
-                itemDef.name = "Drop Rate High";
-                break;
-
-            case 23159:
-                itemDef.copyItem(23150);
-                itemDef.name = "Triple Cash";
-                break;
-
-            case 23160:
-                itemDef.copyItem(23150);
-                itemDef.name = "Multi Shot";
-                break;
-
 
                 /* Packs */
             case 23200:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.BEGGINER.getColor() +"Blurite Box";
+                itemDef.name = TierColor.BEGGINER.getColor() +"Tier I Box";
                 break;
             case 23201:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.BEGGINER.getColor() +"Nagi Box";
+                itemDef.name = TierColor.BEGGINER.getColor() +"Tier II Box";
                 break;
             case 23202:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.BEGGINER.getColor() +"Executive Box";
+                itemDef.name = TierColor.BEGGINER.getColor() +"Tier III Box";
                 break;
             case 23203:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.BEGGINER.getColor() +"Imperial Box";
+                itemDef.name = TierColor.NOVICE.getColor() +"Tier IV Box";
                 break;
             case 23204:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.BEGGINER.getColor() +"Unknown Box";
+                itemDef.name = TierColor.NOVICE.getColor() +"Tier V Box";
                 break;
             case 23205:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.BEGGINER.getColor() +"Turtle Box";
+                itemDef.name = TierColor.INTER.getColor() +"Tier VI Box";
                 break;
             case 23206:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.BEGGINER.getColor() +"Tormented Box";
+                itemDef.name = TierColor.INTER.getColor() +"Tier VII Box";
                 break;
             case 23207:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.NOVICE.getColor() +"Revenant Box";
+                itemDef.name = TierColor.INTER.getColor() +"Tier VIII Box";
                 break;
             case 23208:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.NOVICE.getColor() +"Freeflow Box";
+                itemDef.name = TierColor.INTER.getColor() +"Tier IX Box";
                 break;
             case 23209:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.INTER.getColor() +"Soldier Box";
+                itemDef.name = TierColor.INTER.getColor() +"Tier X Box";
                 break;
             case 23210:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.INTER.getColor() +"Mystical Box";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Tier XI Box";
                 break;
             case 23211:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.INTER.getColor() +"Sacred Box";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Tier XII Box";
                 break;
             case 23212:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.INTER.getColor() +"Ruthless Box";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Tier XIII Box";
                 break;
             case 23213:
                 itemDef.copyItem(14488);
-                itemDef.name = TierColor.INTER.getColor() +"Antique Box";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Tier XIV Box";
+                break;
+            case 23214:
+                itemDef.copyItem(14488);
+                itemDef.name = TierColor.ADVANCED.getColor() +"Tier XV Box";
+                break;
+            case 23215:
+                itemDef.copyItem(14488);
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Tier XVI Box";
+                break;
+            case 23216:
+                itemDef.copyItem(14488);
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Tier XVII Box";
+                break;
+            case 23217:
+                itemDef.copyItem(14488);
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Tier XVIII Box";
+                break;
+            case 23218:
+                itemDef.copyItem(14488);
+                itemDef.name = TierColor.RARE.getColor() +"Tier XIX Box";
+                break;
+            case 23219:
+                itemDef.copyItem(14488);
+                itemDef.name = TierColor.RARE.getColor() +"Tier XX Box";
                 break;
 
             case 23300:
@@ -516,6 +528,8 @@ public class Items {
                 itemDef.scaleX *= 0.50;
                 itemDef.scaleZ *= 0.50;
                 break;
+
+            /* Not Used Yet */
             case 23173:
                 itemDef.copyItem(6199);
                 itemDef.name = "Other box";
@@ -523,6 +537,11 @@ public class Items {
                 break;
             case 15682:
                 itemDef.name = "Vote Crate";
+                itemDef.actions = new String[]{"Open", null, null, null, "Drop"};
+                break;
+            case 6833:
+                itemDef.name = "Goodiebag Box";
+                itemDef.rdc2 = 12512;
                 itemDef.actions = new String[]{"Open", null, null, null, "Drop"};
                 break;
             case 20505:
@@ -762,7 +781,7 @@ public class Items {
             case 23177:
                 itemDef.copyItem(6199);
                 itemDef.name = "Starter box";
-                itemDef.rdc2 = 3455;//15888 - 45366
+                itemDef.rdc2 = 3455;
                 break;
             case 23171:
                 itemDef.copyItem(6199);

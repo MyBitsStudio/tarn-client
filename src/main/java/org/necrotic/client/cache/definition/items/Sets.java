@@ -1452,7 +1452,7 @@ public class Sets {
             
             /* Tier 11 */
             case 11320:
-                itemDef.name = TierColor.ADVANCED.getColor() +"Max melee helm";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Cordial helm";
                 itemDef.modelID = 99851;
                 itemDef.maleEquip1 = 99852;
                 itemDef.femaleEquip1 = 99852;
@@ -1468,7 +1468,7 @@ public class Sets {
                 itemDef.editedModelColor = new int[]{52};
                 break;
             case 11321:
-                itemDef.name = TierColor.ADVANCED.getColor() +"Max melee body";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Cordial body";
                 itemDef.modelID = 99849;
                 itemDef.maleEquip1 = 99850;
                 itemDef.femaleEquip1 = 99850;
@@ -1484,7 +1484,7 @@ public class Sets {
                 itemDef.editedModelColor = new int[]{52};
                 break;
             case 11322:
-                itemDef.name = TierColor.ADVANCED.getColor() +"Max melee legs";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Cordial legs";
                 itemDef.modelID = 99848;
                 itemDef.maleEquip1 = 99847;
                 itemDef.femaleEquip1 = 99847;
@@ -1499,8 +1499,21 @@ public class Sets {
                 itemDef.newModelColor = new int[]{40};
                 itemDef.editedModelColor = new int[]{52};
                 break;
+            case 23132:
+                itemDef.copyItem(4710);
+                itemDef.name = TierColor.INTER.getColor() +"Cordial scythe";
+                itemDef.modelID = 100268;
+                itemDef.maleEquip1 = 15171;
+                itemDef.femaleEquip1 = 15171;
+                itemDef.modelZoom = 3000;
+                itemDef.rotationX = 1024;
+                itemDef.rotationY = 525;
+                itemDef.modelOffsetX = -5;
+                itemDef.rotationZ = 0;
+                itemDef.modelOffsetY = -5;
+                break;
             case 11340:
-                itemDef.name = TierColor.ADVANCED.getColor() +"Max range halo";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Deviant halo";
                 itemDef.modelID = 96120;
                 itemDef.maleEquip1 = 96121;
                 itemDef.femaleEquip1 = 96121;
@@ -1515,7 +1528,7 @@ public class Sets {
                 itemDef.rdc2 = 19518;
                 break;
             case 11341:
-                itemDef.name = TierColor.ADVANCED.getColor() +"Max range body";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Deviant body";
                 itemDef.modelID = 96122;
                 itemDef.maleEquip1 = 96123;
                 itemDef.femaleEquip1 = 96123;
@@ -1530,7 +1543,7 @@ public class Sets {
                 itemDef.rdc2 = 19518;
                 break;
             case 11342:
-                itemDef.name = TierColor.ADVANCED.getColor() +"Max range legs";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Deviant legs";
                 itemDef.modelID = 96124;
                 itemDef.maleEquip1 = 96125;
                 itemDef.femaleEquip1 = 96125;
@@ -1543,6 +1556,22 @@ public class Sets {
                 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 itemDef.rdc2 = 19518;
+                break;
+            case 8001:
+                itemDef.name = "Deviant Crossbow";
+                itemDef.modelID = 64495;
+                itemDef.maleEquip1 = 64496;
+                itemDef.femaleEquip1 = 64496;
+                itemDefs = ItemDefinition.get(9185);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = 1700;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions[1] = "Wear";
+                itemDef.actions[2] = "Dissolve";
+                itemDef.actions[4] = "Drop";
+                itemDef.stackable = false;
                 break;
             case 11421:
                 itemDef.name = TierColor.ADVANCED.getColor() +"Belligerent helm";
@@ -1591,6 +1620,117 @@ public class Sets {
                 itemDef.newModelColor = new int[]{40};
                 itemDef.editedModelColor = new int[]{51};
                 break;
+            case 17600:
+                itemDef.name = "Belligerent staff";
+                itemDef.modelID = 65486;
+                itemDef.maleEquip1 = 65487;
+                itemDef.femaleEquip1 = 65487;
+                itemDefs = ItemDefinition.get(4158);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 222222;
+                break;
+
+            /* Tier 12 */
+
+            case 15115:
+                itemDef.name = "<shad=1><col=00e673>Extreme helm";
+                itemDef.modelID = 65192;
+                itemDef.maleEquip1 = 65193;
+                itemDef.femaleEquip1 = 65193;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 88205;
+                break;
+            case 15116:
+                itemDef.name = "<shad=1><col=00e673>Extreme body";
+                itemDef.modelID = 65194;
+                itemDef.maleEquip1 = 65195;
+                itemDef.femaleEquip1 = 65195;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 88205;
+                break;
+            case 15117:
+                itemDef.name = "<shad=1><col=00e673>Extreme legs";
+                itemDef.modelID = 65196;
+                itemDef.maleEquip1 = 65197;
+                itemDef.femaleEquip1 = 65197;
+                itemDefs = ItemDefinition.get(4900);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 88205;
+                break;
+            case 15118:
+                itemDef.name = "<shad=1><col=00e673>Extreme gloves";
+                itemDef.modelID = 65198;
+                itemDef.maleEquip1 = 65199;
+                itemDef.femaleEquip1 = 65199;
+                itemDefs = ItemDefinition.get(7462);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 88205;
+                break;
+            case 15119:
+                itemDef.name = "<shad=1><col=00e673>Extreme boots";
+                itemDef.modelID = 65200;
+                itemDef.maleEquip1 = 65200;
+                itemDef.femaleEquip1 = 65200;
+                itemDefs = ItemDefinition.get(3791);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                //	itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 88205;
+                break;
+            case 15121:
+                itemDef.name = "Extreme spear";
+                itemDef.modelID = 65201;
+                itemDef.maleEquip1 = 65202;
+                itemDef.femaleEquip1 = 65202;
+                itemDefs = ItemDefinition.get(1237);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 88205;
+                break;
+
+
         }
         return itemDef;
     }

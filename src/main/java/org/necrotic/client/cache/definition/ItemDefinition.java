@@ -574,28 +574,6 @@ public final class ItemDefinition {
 			case 7643:
 				model.setTexture(80);
 				break;
-			case 14910:
-			case 14911:
-			case 14912:
-			case 14913:
-			case 14914:
-			case 14915:
-				model.setTexture(52);
-				break;
-			case 14921:
-			case 14922:
-			case 14923:
-			case 14924:
-			case 14925:
-				model.setTexture(51);
-				break;
-			case 14916:
-			case 14917:
-			case 14918:
-			case 14919:
-			case 14920:
-				model.setTexture(30);
-				break;
 			case 7642:
 				model.setTexture(75);
 				break;

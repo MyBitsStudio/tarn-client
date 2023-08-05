@@ -21,7 +21,7 @@ public class Configuration {
 
 	public static boolean updated = false;
 	
-	public final static int CLIENT_VERSION = 12;
+	public final static int CLIENT_VERSION = 14;
 	public static final boolean FORCE_CACHE_UPDATE = false;
 	public static final boolean STOP_CACHE_UPDATES = false;
 	public final static String CLIENT_NAME = "Tarn";
@@ -63,6 +63,6 @@ public class Configuration {
 	public static boolean TOGGLE_FOV = true;
 	public static boolean DEPTH_BUFFER = true;
 	public static String SERVER_HOST() {
-		return "127.0.0.1";//raidadmin-server-01.tarnserver.live
+		return "raidadmin-server-01.tarnserver.live";
 	}
 }

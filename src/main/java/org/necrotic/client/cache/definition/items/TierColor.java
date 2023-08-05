@@ -6,6 +6,15 @@ public enum TierColor {
     NOVICE("<col=b5aaaa>"),
     INTER("<col=ff0000>"),
     ADVANCED("<col=ff00ff>"),
+    UNCOMMON("<col=00ff00>"),
+
+    SEMI_RARE("<col=0000ff>"),
+    RARE("<col=ffff00>"),
+    ULTRA_RARE("<col=ff0000>"),
+
+    LEGENDARY("<col=ff0000>"),
+    DIVINE("<col=ff0000>"),
+    MYTHICAL("<col=ff0000>"),
 
     ;
 

@@ -43,9 +43,9 @@ public class DiscordPlugin extends Plugin {
 
         storeButton = NavigationButton.builder()
             .tab(false)
-            .tooltip("Visit Store")
+            .tooltip("Donate Now")
             .icon(icon2)
-            .onClick(() -> LinkBrowser.browse("https://tarnserver.everythingrs.com/services/store"))
+            .onClick(() -> LinkBrowser.browse("https://donate.stripe.com/cN26p0aJPflXc7K4gk"))
             .build();
         
         clientToolbar.addNavigation(storeButton);
