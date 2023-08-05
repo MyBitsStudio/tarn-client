@@ -18,14 +18,8 @@ final class GameShell extends JFrame {
 		}
 		setResizable(resizable);
 		add(applet, BorderLayout.CENTER);
-        /*if (width > 0 && height > 0) {
-            setSize(width, height);
-        } else {*/
 		pack();
-		/* }*/
 		setVisible(true);
-		//Insets insets = getInsets();
-		//setSize(width + insets.left + insets.right, height + insets.top + insets.bottom);
 		setLocationRelativeTo(null);
 		requestFocus();
 		toFront();

@@ -35,7 +35,7 @@ public class Save {
 			Gson builder = new GsonBuilder().setPrettyPrinting().create();
 			JsonObject object = new JsonObject();
 
-			object.addProperty("username", Client.instance.myUsername == null || !Configuration.SAVE_ACCOUNTS ? "" : Client.instance.myUsername);
+			object.addProperty("username", Client.myUsername == null || !Configuration.SAVE_ACCOUNTS ? "" : Client.instance.myUsername);
 			object.addProperty("password", Client.instance.password == null || !Configuration.SAVE_ACCOUNTS ? "" : Client.instance.password);
 
 
@@ -47,7 +47,7 @@ public class Save {
 			object.addProperty("new-cursor", Configuration.NEW_CURSORS);
 			object.addProperty("display-hp-above-head", Configuration.DISPLAY_HP_ABOVE_HEAD);
 			object.addProperty("display-username-above-head", Configuration.DISPLAY_USERNAMES_ABOVE_HEAD);
-			object.addProperty("gameframe", GameFrameConstants.gameframeType == GameFrameConstants.GameFrameType.FRAME_525 ? false : false);
+			object.addProperty("gameframe", false);
 			object.addProperty("highlight-username", Configuration.HIGHLIGHT_USERNAME);
 			object.addProperty("high-detail", Configuration.HIGH_DETAIL);
 			object.addProperty("split-chat-color", client.splitChatColor);
@@ -70,7 +70,6 @@ public class Save {
 			object.add("quick-curses", builder.toJsonTree(stringSave));
 
 			writer.write(builder.toJson(object));
-			writer.close();
 
 		} catch (Exception e) {
 			System.out.println(e);

@@ -18,14 +18,15 @@ public class Configuration {
 	}
 	
 	public static final boolean IS_RUNNING_WINDOWS = true;
+
+	public static boolean updated = false;
 	
 	public final static int CLIENT_VERSION = 12;
 	public static final boolean FORCE_CACHE_UPDATE = false;
 	public static final boolean STOP_CACHE_UPDATES = false;
-	public static final boolean DROPBOX_MODE = false;
 	public final static String CLIENT_NAME = "Tarn";
 	public final static String CACHE_DIRECTORY_NAME = ".tarn/data";
-	public static final String SETTINGS_DIRECTORY_NAME = "Tarn_settings";
+	public static final String SETTINGS_DIRECTORY_NAME = ".tarn/settings";
 	public final static boolean JAGCACHED_ENABLED = false;
 	public final static String JAGCACHED_HOST = "";
 	public final static int SERVER_PORT = 43143;

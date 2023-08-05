@@ -8144,6 +8144,7 @@ public class CustomInterfaces extends RSInterface {
 		Shops.build(tda);
 		TrackInterface.build(tda);
 		TarnTower.build(tda);
+		Shops.buildBuy(tda);
 
 		Equipment.build(tda);
 		Equipment.equipment();

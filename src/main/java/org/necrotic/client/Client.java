@@ -1,5 +1,9 @@
 package org.necrotic.client;
 
+import net.runelite.client.RuneLiteProperties;
+import net.runelite.client.ui.ClientUI;
+import net.runelite.client.util.ImageUtil;
+import net.runelite.client.util.SwingUtil;
 import org.necrotic.ColorConstants;
 import org.necrotic.Configuration;
 import org.necrotic.RichPresense;
@@ -73,6 +77,9 @@ import java.util.zip.CRC32;
 
 
 public class Client extends GameRenderer {
+
+    public static TrayIcon trayIcon;
+
     public static final RichPresense RICH_PRESENCE = new RichPresense();
     public static final int CACHE_INDEX_COUNT = 6;
     public static final int[] anIntArray1204 = {9104, 10275, 7595, 3610, 7975, 8526, 918, 38802, 24466, 10145, 58654, 5027, 1457, 16565, 34991, 25486};
@@ -122,7 +129,7 @@ public class Client extends GameRenderer {
     public static Player myPlayer;
     public static int openInterfaceID;
     public static int portOff;
-    public static HashMap<String, Boolean> options = new HashMap<String, Boolean>();
+    public static HashMap<String, Boolean> options = new HashMap<>();
     public static boolean tabAreaAltered;
     public static int tabID;
     public static boolean LOOP_MUSIC;
@@ -361,7 +368,7 @@ public class Client extends GameRenderer {
      */
     public boolean splitChatInterfaceOpen = false;
     public ArrayList<Partyhat> active_list = new ArrayList<>();
-    public ArrayList<CustomMinimapIcon> customMinimapIcons = new ArrayList<CustomMinimapIcon>();
+    public ArrayList<CustomMinimapIcon> customMinimapIcons = new ArrayList<>();
     public boolean doingDungeoneering;
     public boolean isMale;
     public boolean aBoolean1149;
@@ -920,6 +927,7 @@ public class Client extends GameRenderer {
         bigX = new int[4000];
         bigY = new int[4000];
         loginMessages = new String[]{""};
+        trayIcon = SwingUtil.createTrayIcon(ImageUtil.getResourceStreamFromClass(ClientUI.class, "/runelite.png"), RuneLiteProperties.getTitle(), null);
     }
 
     public static boolean getOption(String s) {
@@ -8761,7 +8769,7 @@ public class Client extends GameRenderer {
                 drawTextX -= 4;
             }
 
-            graphics.drawString("" + loadingPercentage + "", drawTextX + addedX, 432 - 130 + 5);
+            graphics.drawString(String.valueOf(loadingPercentage), drawTextX + addedX, 432 - 130 + 5);
 
             if (loadingImages[2]!=null)
                 graphics.drawImage(loadingImages[2].getSubimage(0, 0, scaleX + addedX, 32), 89, 453 - 130, null);
@@ -18350,10 +18358,10 @@ public class Client extends GameRenderer {
         if (i > 10) {
             i = 10;
         }
-        if (Signlink.mainapp != null) {
-            Signlink.startthread(runnable, i);
-        } else {
+        if (Signlink.mainapp == null) {
             super.startRunnable(runnable, i);
+        } else {
+            Signlink.startthread(runnable, i);
         }
     }
 

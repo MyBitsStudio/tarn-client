@@ -55,6 +55,8 @@ public final class RuneLite {
     public static void main(String[] args) {
         Locale.setDefault(Locale.ENGLISH);
 
+        Configuration.updated = true; //args.length > 0 && args[0].equals("true");
+
         boolean developerMode = false;
 
         Thread.setDefaultUncaughtExceptionHandler((thread, throwable) ->

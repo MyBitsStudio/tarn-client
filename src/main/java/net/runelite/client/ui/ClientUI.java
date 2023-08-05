@@ -79,7 +79,7 @@ public class ClientUI
 	public static final BufferedImage ICON = ImageUtil.getResourceStreamFromClass(ClientUI.class, "/runelite.png");
 
 	@Getter
-	private TrayIcon trayIcon;
+	public static TrayIcon trayIcon;
 
 	private final RuneLiteConfig config;
 	private final KeyManager keyManager;
@@ -419,7 +419,7 @@ public class ClientUI
 			frame.revalidateMinimumSize();
 
 			// Create tray icon (needs to be created after frame is packed)
-			trayIcon = SwingUtil.createTrayIcon(ICON, RuneLiteProperties.getTitle(), frame);
+			//trayIcon = SwingUtil.createTrayIcon(ICON, RuneLiteProperties.getTitle(), frame);
 
 			// Move frame around (needs to be done after frame is packed)
 			if (config.rememberScreenBounds())
@@ -428,14 +428,11 @@ public class ClientUI
 				{
 					Rectangle clientBounds = configManager.getConfiguration(
 						CONFIG_GROUP, CONFIG_CLIENT_BOUNDS, Rectangle.class);
-					if (clientBounds != null)
-					{
+					if (clientBounds == null) {
+						frame.setLocationRelativeTo(frame.getOwner());
+					} else {
 						frame.setBounds(clientBounds);
 						frame.revalidateMinimumSize();
-					}
-					else
-					{
-						frame.setLocationRelativeTo(frame.getOwner());
 					}
 
 					if (configManager.getConfiguration(CONFIG_GROUP, CONFIG_CLIENT_MAXIMIZED) != null)
