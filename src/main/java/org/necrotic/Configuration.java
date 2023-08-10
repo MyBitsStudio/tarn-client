@@ -63,6 +63,6 @@ public class Configuration {
 	public static boolean TOGGLE_FOV = true;
 	public static boolean DEPTH_BUFFER = true;
 	public static String SERVER_HOST() {
-		return "raidadmin-server-01.tarnserver.live";
-	}
+		return "localhost";
+	}//
 }

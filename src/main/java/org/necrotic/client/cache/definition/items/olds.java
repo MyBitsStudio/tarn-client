@@ -60,21 +60,6 @@ public class olds {
 //    itemDef.stackable = false;
 //
 //				break;
-//case 14915:
-//    itemDef.name = "Forsaken Sword";
-//    itemdefedit = ItemDefinition.get(20536);
-//    itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-//    //itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-//    itemDef.modelOffsetY = itemdefedit.modelOffsetY;
-//    itemDef.modelID = itemdefedit.modelID;
-//    itemDef.maleEquip1 = itemdefedit.maleEquip1;
-//    itemDef.femaleEquip1 = itemdefedit.femaleEquip1;
-//    itemDef.modelZoom = itemdefedit.modelZoom;
-//    itemDef.rotationY = itemdefedit.rotationY;
-//    itemDef.rotationX = itemdefedit.rotationX;
-//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//    itemDef.stackable = false;
-//				break;
 //			case 675:
 //    itemDef.name = "<col=b5f2b3>Indravox full helmet";
 //    def = ItemDefinition.get(10350);

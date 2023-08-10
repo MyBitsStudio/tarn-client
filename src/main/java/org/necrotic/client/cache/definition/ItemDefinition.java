@@ -41,25 +41,64 @@ public final class ItemDefinition {
 		switch (id) {
 
 			case 23200:
-				model.setTexture(66, 1);
+				model.setTexture(66, 31);
 				break;
 			case 23201:
-				model.setTexture(66, 2);
+				model.setTexture(66, 32);
 				break;
 			case 23202:
-				model.setTexture(66, 3);
+				model.setTexture(66, 33);
 				break;
 			case 23203:
-				model.setTexture(66, 4);
+				model.setTexture(66, 34);
 				break;
 			case 23204:
-				model.setTexture(66, 5);
+				model.setTexture(66, 35);
 				break;
 			case 23205:
-				model.setTexture(66, 6);
+				model.setTexture(66, 36);
 				break;
 			case 23206:
-				model.setTexture(66, 7);
+				model.setTexture(66, 38);
+				break;
+			case 23207:
+				model.setTexture(66, 39);
+				break;
+			case 23208:
+				model.setTexture(66, 40);
+				break;
+			case 23209:
+				model.setTexture(66, 41);
+				break;
+			case 23210:
+				model.setTexture(66, 42);
+				break;
+			case 23211:
+				model.setTexture(66, 43);
+				break;
+			case 23212:
+				model.setTexture(66, 44);
+				break;
+			case 23213:
+				model.setTexture(66, 45);
+				break;
+			case 23214:
+				model.setTexture(66, 46);
+				break;
+			case 23215:
+				model.setTexture(66, 47);
+				break;
+			case 23216:
+				model.setTexture(66, 48);
+				break;
+			case 23217:
+				model.setTexture(66, 49);
+				break;
+			case 23218:
+				model.setTexture(66, 50);
+				break;
+			case 23219:
+				model.setTexture(66, 51);
 				break;
 
 			case 299:
@@ -1183,9 +1222,7 @@ public final class ItemDefinition {
 			case 10033:
 				itemDef.actions = new String[]{null, null, null, null, "Drop"};
 				break;
-			case 13727:
-				itemDef.actions = new String[]{null, null, null, null, "Drop"};
-				break;
+
 			case 6500:
 				itemDef.modelID = 9123;
 				itemDef.name = "Charming imp";
@@ -5172,60 +5209,7 @@ itemDef.actions[2] = "Dissolve";
 				
 
 				break;
-			case 19946:
-				itemDef.name = "<col=a69eb6>Starter Gloves";
-				itemDef.modelID = 65101;
-				itemDef.maleEquip1 = 65102;
-				itemDef.femaleEquip1 = 65102;
-				itemDef21 = ItemDefinition.get(7462);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				itemDef.newModelColor[0] = 52; // the texture that it currently has
-				itemDef.editedModelColor[0] = 40; // the new text
-				
-				break;
-			case 19945:
-				itemDef.name = "<col=a69eb6>Starter Boots";
-				itemDef.modelID = 65103;
-				itemDef.maleEquip1 = 65103;
-				itemDef.femaleEquip1 = 65103;
-				itemDef21 = ItemDefinition.get(3791);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				itemDef.newModelColor[0] = 52; // the texture that it currently has
-				itemDef.editedModelColor[0] = 40; // the new text
-				
-				break;
-			case 19944:
-				itemDef.name = "<col=a69eb6>Starter Cape";
-				itemDef.modelID = 65104;
-				itemDef.maleEquip1 = 65105;
-				itemDef.femaleEquip1 = 65105;
-				itemDef21 = ItemDefinition.get(1007);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				itemDef.newModelColor[0] = 52; // the texture that it currently has
-				itemDef.editedModelColor[0] = 40; // the new text
-				
-				break;
+
 			case 19921:
 				itemDef.name = "wrath helm";
 				itemDef.modelID = 65118;
@@ -5843,25 +5827,6 @@ itemDef.actions[2] = "Dissolve";
 //				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 //				itemDef.stackable = false;
 //				break;
-			case 19914:
-				itemDef.name = "Starter Defender";
-				itemDef.modelID = 65127;
-				itemDef.maleEquip1 = 65128;
-				itemDef.femaleEquip1 = 65128;
-				itemDef21 = ItemDefinition.get(1321);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.editedModelColor = new int[1]; // if only 1 texture is modified this has to be 1, if 2 then 2 etc
-				itemDef.newModelColor = new int[1]; // same here
-				itemDef.newModelColor[0] = 40; // the texture that it currently has
-				itemDef.editedModelColor[0] = 40;
-				itemDef.stackable = false;
-				break;
 			case 4178:
 				itemDef.name = "Starter whip";
 				itemDef.modelID = 65141;
@@ -7773,21 +7738,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.rotationX = itemDef21.rotationX;
 
 				break;
-			case 5023:
-				itemDef.name = "<col=aaaaaa><shad=2>Slayer ticket";
-				itemDef.rdc2 = 23452;//666455
-				itemDef.stackable = true;
-				itemDef21 = ItemDefinition.get(18652);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.modelID = itemDef21.modelID;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.newModelColor = new int[]{63};
-				itemDef.editedModelColor = new int[]{67};
-				break;
+
 			case 22044:
 				itemDef.modelID = 65270;
 				itemDef.name = "Completionist Cape";
