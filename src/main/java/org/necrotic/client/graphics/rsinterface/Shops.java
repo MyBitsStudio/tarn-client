@@ -37,22 +37,15 @@ public class Shops extends RSInterface {
         addText(160019, "Store", ColorConstants.SNOW_WHITE, true, true, -1, 1);
 
         RSInterface items = addTabInterface(162000);
-        items.totalChildren(135);
+        items.totalChildren(1);
         items.height = 272;
         items.width = 319;
         items.scrollMax = 800;
 
-        int x = 0, c = 0, yz = 2, id = 162001;
+        int x = 0, yz = 2, id = 162001;
 
-        for (int z = 0; z < 15; z++) {
-            for (int i = 0; i < 9; i++) {
-                addToItemGroup(id, 9, 15, 1, 1, true, new String[]{"Value", "Buy 1", "Buy 5", "Buy 10", "Buy X"});
-                items.child(c++, id++, x, yz);
-                x += 36;
-            }
-            x = 0;
-            yz += 35;
-        }
+        addToItemGroup(id, 7, 15, 12, 12, true, new String[]{"Value", "Buy 1", "Buy 5", "Buy 10", "Buy X"});
+        items.child(0, id, x, yz);
 
         rsi.totalChildren(18);
         rsi.child(0, 160001, 8, 8);
