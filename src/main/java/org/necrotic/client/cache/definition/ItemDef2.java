@@ -30,6 +30,10 @@ public class ItemDef2 {
 				itemDef.modelID = 40782;
 				itemDef.modelZoom = 2500;
 				break;
+			case 15430:
+				itemDef.name = "Essence";
+				itemDef.actions = new String[]{null, null, null, null, null};
+				break;
 //			case 17670:
 //				itemDef.name = "<col=b3b4f2>Demon Scythe";
 //				itemDef.modelID = 64016;
