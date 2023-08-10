@@ -359,7 +359,11 @@ public class TabArea extends GameFrame {
 					}
 				}
 				inventoryGlow = (opacity << 1) | direction;
-				Client.spritesMap.get(3375).drawTransparentSprite(getOffSetX() + 33, getOffSetY() - (Client.clientWidth <= GameFrameConstants.smallTabs ? 13 : -23) + 50, opacity);
+				if(screenMode == ScreenMode.FIXED) {
+					Client.spritesMap.get(3375).drawTransparentSprite(getOffSetX() + 33, getOffSetY() - (Client.clientWidth <= GameFrameConstants.smallTabs ? 13 : -23) + 50, opacity);
+				} else {
+					Client.spritesMap.get(3375).drawTransparentSprite(getOffSetX() + 41, getOffSetY() - (Client.clientWidth <= GameFrameConstants.smallTabs ? 13 : -23) + 8, opacity);
+				}
 			}
 			drawRedStones(client, screenMode);
 			drawSideIcons(client, screenMode);
