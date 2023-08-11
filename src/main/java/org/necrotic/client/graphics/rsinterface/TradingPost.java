@@ -310,12 +310,10 @@ public class TradingPost extends RSInterface {
             scroll.child(i, 150867+i, 0, y);
             addItemOnInterface(150867+i+50, 150863, new String[]{null});
             scroll.child(i+50, 150867+i+50, 5, y+3);
-            RSInterface.interfaceCache[150867+i+50].inv[0] = 4152;
-            RSInterface.interfaceCache[150867+i+50].invStackSizes[0] = 1;
 
-            addText(150867+i+100, "249M (ea)", ColorConstants.RS_ORANGE, true, true, -1, 0);
+            addText(150867+i+100, "", ColorConstants.RS_ORANGE, true, true, -1, 0);
             scroll.child(i+100, 150867+i+100, 124, y+12);
-            addText(150867+i+150, "--/--/--", 0xafafaf, true, true, -1, 0);
+            addText(150867+i+150, "", 0xafafaf, true, true, -1, 0);
             scroll.child(i+150, 150867+i+150, 250, y+12);
 
             y+=35;
