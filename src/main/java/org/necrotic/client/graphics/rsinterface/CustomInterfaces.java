@@ -8154,5 +8154,6 @@ public class CustomInterfaces extends RSInterface {
 		Equipment.equipSlot();
 
         MinigameInterfaces.build();
+		Achievements.build();
     }
 }
