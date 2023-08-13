@@ -6,7 +6,7 @@ import org.necrotic.client.*;
 import org.necrotic.client.accounts.Account;
 import org.necrotic.client.cache.definition.ItemDefinition;
 import org.necrotic.client.graphics.fonts.TextDrawingArea;
-import org.necrotic.client.security.Security;
+import org.necrotic.client.graphics.rsinterface.achievements.Achievements;
 
 import java.util.ArrayList;
 

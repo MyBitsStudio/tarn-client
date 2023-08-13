@@ -5,6 +5,7 @@ import org.necrotic.client.Client;
 import org.necrotic.client.RSInterface;
 import org.necrotic.client.Settings.Save;
 import org.necrotic.client.graphics.gameframe.impl.MapArea.XPGain;
+import org.necrotic.client.graphics.rsinterface.achievements.Achievements;
 
 import java.text.NumberFormat;
 import java.util.LinkedList;
@@ -155,6 +156,7 @@ public class PlayerHandler {
 		quedBalloonY = -1;
 		client.setInputTaken(false);
 		client.inputString = "";
+		Achievements.switchTabs(Achievements.Difficulty.BEGINNER);
 	}
 
 }

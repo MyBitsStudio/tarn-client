@@ -34,6 +34,7 @@ import org.necrotic.client.graphics.gameframe.impl.ChatArea;
 import org.necrotic.client.graphics.gameframe.impl.MapArea;
 import org.necrotic.client.graphics.gameframe.impl.TabArea;
 import org.necrotic.client.graphics.rsinterface.*;
+import org.necrotic.client.graphics.rsinterface.achievements.Achievements;
 import org.necrotic.client.io.ByteBuffer;
 import org.necrotic.client.io.ISAACCipher;
 import org.necrotic.client.net.Connection;
@@ -4803,6 +4804,18 @@ public class Client extends GameRenderer {
             }
         }
 
+        if(RSInterface.interfaceCache[interfaceId].contentType == 965) {
+            Achievements.switchTabs(Achievements.Difficulty.BEGINNER);
+        } else if(RSInterface.interfaceCache[interfaceId].contentType == 966) {
+            Achievements.switchTabs(Achievements.Difficulty.EASY);
+        } else if(RSInterface.interfaceCache[interfaceId].contentType == 967) {
+            Achievements.switchTabs(Achievements.Difficulty.MEDIUM);
+        } else if(RSInterface.interfaceCache[interfaceId].contentType == 968) {
+            Achievements.switchTabs(Achievements.Difficulty.HARD);
+        } else if(RSInterface.interfaceCache[interfaceId].contentType == 969) {
+            Achievements.switchTabs(Achievements.Difficulty.ELITE);
+        }
+
         if(action == 1350) {
             getOut().putOpcode(204);
             getOut().putInt(TradingPost.selectedItemId);
@@ -8681,18 +8694,26 @@ public class Client extends GameRenderer {
                             sprite.drawSprite(childX, childY);
                         }
                     }
-
                 }
 
                 if (childInterface.type == 111) {
-                    //  System.out.println("Type ->");
                     boolean hovered = childInterface.selected;
                     Sprite sprite = childInterface.disabledSprite;
                     if (interfaceIsSelected(childInterface) || hovered) {
                         sprite = childInterface.enabledSprite;
                     }
-
                     sprite.drawSprite(childX, childY);
+                    if(childInterface.isAchievementComponent) {
+                        int calcWidth = (childInterface.achievementProgress * 377) / childInterface.achievementMaxProgress;
+                        int width = Math.min(childInterface.width, calcWidth);
+                        new Sprite(spritesMap.getData(3426), width, 33, 1).drawAdvancedSprite(childX+1, childY+1);
+                        childInterface.helmSprite.drawSprite(childX + 10, childY+9);
+                        CustomInterfaces.tda[1].drawRegularText(true, childX+40, 0xffa900, childInterface.achievementTitle, childY+17);
+                        CustomInterfaces.tda[0].drawRegularText(true, childX+40, 0x959494, childInterface.achievementDesc, childY+28);
+                        CustomInterfaces.tda[0].drawRegularText(true, childX+315, 0xffa900, "Reward:", childY+15);
+                        childInterface.achievementTokenSprite.drawSprite(childX + 315, childY+18);
+                        CustomInterfaces.tda[0].drawRegularText(true, childX+331, 0xecc578, String.valueOf(childInterface.achievementRewardPoints), childY+29);
+                    }
                 }
 
                 if (childInterface.type == 100 && childInterface.unrevealedSprite != null) {
@@ -13689,10 +13710,12 @@ public class Client extends GameRenderer {
                     promptInput += (char) key;
                     inputTaken = true;
                 }
-
                 if (key == 8 && promptInput.length() > 0) {
                     promptInput = promptInput.substring(0, promptInput.length() - 1);
                     inputTaken = true;
+                }
+                if(friendsListAction == 24 &&  promptInput.length() > 0) {
+                    Achievements.search(promptInput);
                 }
                 if (key == 13 || key == 10) {
                     messagePromptRaised = false;
@@ -17770,6 +17793,16 @@ public class Client extends GameRenderer {
                 friendsListAction = 2;
                 promptMessage = "Enter name of friend to delete from list";
             }
+        }
+
+        if(id == 964) {
+            inputTaken = true;
+            inputDialogState = 0;
+            messagePromptRaised = true;
+            promptInput = "";
+            friendsListAction = 24;
+            promptMessage = "Enter name of achievement to search for:";
+            return true;
         }
 
         if (id == 205) {

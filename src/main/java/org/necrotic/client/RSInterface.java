@@ -18,6 +18,8 @@ import org.necrotic.client.graphics.rsinterface.SummoningInterfaceData;
 import org.necrotic.client.io.ByteBuffer;
 import org.necrotic.client.world.Model;
 
+import static org.necrotic.client.graphics.rsinterface.CustomInterfaces.tda;
+
 public class RSInterface {
 
 	public static RSInterface addContainer(int id, int width, int height, int xPad, int yPad, boolean move, String... actions) {
@@ -264,6 +266,47 @@ public class RSInterface {
 		tab.valueIndexArray[0][0] = 5;
 		tab.valueIndexArray[0][1] = configFrame;
 		tab.valueIndexArray[0][2] = 0;
+		return tab;
+	}
+
+	public String achievementTitle;
+	public String achievementDesc;
+	public int achievementRewardPoints;
+	public int achievementProgress;
+	public int achievementMaxProgress;
+	public Sprite helmSprite;
+	public Sprite achievementTokenSprite;
+	public boolean isAchievementComponent;
+	public static RSInterface addAchievementComponent(int id, String title, String desc, int points, int mainSprite, int hoverSprite, Sprite helmSprite, int achievementMaxProgress, int configId) {
+		RSInterface tab = interfaceCache[id] = new RSInterface();
+		tab.id = id;
+		tab.parentID = id;
+		tab.type = 111;
+		tab.atActionType = 5;
+		tab.contentType = 0;
+		tab.opacity = (byte) 0;
+		tab.hoverable = true;
+		tab.disabledSprite = Client.spritesMap.get(mainSprite);
+		tab.enabledSprite = Client.spritesMap.get(hoverSprite);
+		tab.width = tab.disabledSprite.myWidth;
+		tab.height = tab.disabledSprite.myHeight;
+		tab.tooltip = "Select";
+		tab.valueCompareType = new int[1];
+		tab.requiredValues = new int[1];
+		tab.valueCompareType[0] = 1;
+		tab.requiredValues[0] = configId;
+		tab.valueIndexArray = new int[1][3];
+		tab.valueIndexArray[0][0] = 5;
+		tab.valueIndexArray[0][1] = 3126;
+		tab.valueIndexArray[0][2] = 0;
+		tab.achievementTitle = title;
+		tab.achievementDesc = desc;
+		tab.achievementRewardPoints = points;
+		tab.isAchievementComponent = true;
+		tab.achievementProgress = 0;
+		tab.helmSprite = helmSprite;
+		tab.achievementTokenSprite = Client.spritesMap.get(3435);
+		tab.achievementMaxProgress = achievementMaxProgress;
 		return tab;
 	}
 
@@ -5387,7 +5430,7 @@ public class RSInterface {
 		int i = -1;
 		stream.getUnsignedShort();
 		// int j = stream.getUnsignedShort();
-		interfaceCache = new RSInterface[165500];
+		interfaceCache = new RSInterface[167500];
 		while (stream.position < stream.buffer.length) {
 			int k = stream.getUnsignedShort();
 			if (k == 65535) {

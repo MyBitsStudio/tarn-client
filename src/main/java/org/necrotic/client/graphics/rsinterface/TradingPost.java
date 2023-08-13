@@ -421,9 +421,6 @@ public class TradingPost extends RSInterface {
                     if(!item.name.contains("+")) {
                         displayedItems[itemSearchCount] = item.id;
                         itemSearchCount++;
-                        System.out.println("Adding: " + item.name);
-                    } else {
-                        System.out.println("Skipped: " + item.name);
                     }
                 });
             }
