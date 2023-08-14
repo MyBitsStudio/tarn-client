@@ -61,6 +61,14 @@ public final class MobDefinition {
 		}
 
 		switch (id) {
+			case 3321:
+				definition.name = "Summer Event Manager";
+				definition.actions = new String[]{"@gre@Open", null, null, null, null};
+				break;
+			case 5049:
+				definition.name = "Loyalty Manager";
+				definition.actions = new String[]{"@gre@Open", null, null, null, null};
+				break;
 			case 550:
 				definition.name = "Obelisk";
 				definition.npcModels = new int[] {31666};

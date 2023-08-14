@@ -507,22 +507,6 @@ public class ItemDef2 {
 //				itemDef.rotationX = def.rotationX;
 //				itemDef.rdc2 = 223613;
 //				break;
-//			case 8213:
-//				itemDef.name = "Christmas token";
-//				itemDef.stackable = true;
-//				itemDef.actions = new String[]{null, null, null, null, "Drop"};
-//				def = ItemDefinition.get(1050);
-//				itemDef.modelID = def.modelID;
-//				itemDef.maleEquip1 = def.maleEquip1;
-//				itemDef.femaleEquip1 = def.femaleEquip1;
-//				itemDef.modelOffsetX = 2;
-//				itemDef.modelOffsetY = 1;
-//				itemDef.modelZoom = 600;
-//				//itemDef.actions = itemDef211.actions;
-//				itemDef.rotationY = 20;
-//				itemDef.rotationX = 900;
-//				//itemDef.rdc2 = 743;
-//				break;
 //			case 6183:
 //				itemDef.name = "Halloween Box (@bla@Discontinued@or1@)";
 //				itemDef.rdc2 = 32535;
@@ -2445,17 +2429,6 @@ public class ItemDef2 {
 //				itemDef.rotationX = 48;
 //				itemDef.rotationY = 660;
 //				itemDef.rotationZ = 13;
-//				break;
-//			case 13557:
-//				itemDef.copyItem(4561);
-//				itemDef.name = "Valentine's Candy";
-//				itemDef.modelID = 93512;
-//				itemDef.modelZoom = 724;
-//				itemDef.modelOffsetX = 1;
-//				itemDef.modelOffsetY = 1;
-//				itemDef.rotationX = 1808;
-//				itemDef.rotationY = 308;
-//				itemDef.rotationZ = 308;
 //				break;
 //			case 13558:
 //				itemDef.copyItem(12160);

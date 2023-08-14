@@ -101,6 +101,13 @@ public final class ItemDefinition {
 				model.setTexture(66, 51);
 				break;
 
+			case 4000:
+				model.setTexture(31);
+				break;
+			case 4001:
+				model.setTexture(32);
+				break;
+
 			case 299:
 			case 15084:
 				model.setTexture(87);
@@ -7724,20 +7731,20 @@ itemDef.actions[2] = "Dissolve";
 //				itemDef.newModelColor = new int[]{63};
 //				itemDef.editedModelColor = new int[]{67};
 //				break;
-			case 5022:
-				itemDef.name = "<col=FF33E9>Elite slayer ticket";
-				itemDef.rdc2 = 54666;
-				itemDef.stackable = true;
-				itemDef21 = ItemDefinition.get(18652);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.modelID = itemDef21.modelID;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-
-				break;
+//			case 5022:
+//				itemDef.name = "<col=FF33E9>Elite slayer ticket";
+//				itemDef.rdc2 = 54666;
+//				itemDef.stackable = true;
+//				itemDef21 = ItemDefinition.get(18652);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.rotationZ = itemDef21.rotationZ;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = itemDef21.modelZoom;
+//				itemDef.modelID = itemDef21.modelID;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//
+//				break;
 
 			case 22044:
 				itemDef.modelID = 65270;

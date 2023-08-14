@@ -94,9 +94,9 @@ public final class RuneLite {
         eventBus.register(pluginManager);
         eventBus.register(configManager);
         pluginManager.startPlugins();
-//        if(!Configuration.SERVER_HOST().equals("localhost")) {
-//            setSystemOut();
-//        }
+        if(!Configuration.SERVER_HOST().equals("localhost")) {
+            setSystemOut();
+        }
         clientUI.show();
     }
 

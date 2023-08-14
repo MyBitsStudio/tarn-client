@@ -57,11 +57,6 @@ public class CustomItems {
 //                itemDef.actions = new String[]{null, null, null, null, null};
 //                break;
 //
-//            case 23205:
-//                itemDef.copyItem(21816);
-//                itemDef.name = "@blu@Voting Ticket";
-//                itemDef.actions = new String[]{null, null, null, null, null};
-//                break;
 //
 //            case 23206:
 //                itemDef.copyItem(20435);
@@ -81,12 +76,6 @@ public class CustomItems {
 //                itemDef.actions = new String[]{null, null, null, null, null};
 //                break;
 //
-//            case 23209:
-//                itemDef.copyItem(21816);
-//                itemDef.name = "@blu@Elite Voting Ticket";
-//                itemDef.stackable = true;
-//                itemDef.actions = new String[]{null, null, null, null, null};
-//                break;
 //
 //            case 23210:
 //                itemDef.copyItem(6103);

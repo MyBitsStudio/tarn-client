@@ -4804,16 +4804,18 @@ public class Client extends GameRenderer {
             }
         }
 
-        if(RSInterface.interfaceCache[interfaceId].contentType == 965) {
-            Achievements.switchTabs(Achievements.Difficulty.BEGINNER);
-        } else if(RSInterface.interfaceCache[interfaceId].contentType == 966) {
-            Achievements.switchTabs(Achievements.Difficulty.EASY);
-        } else if(RSInterface.interfaceCache[interfaceId].contentType == 967) {
-            Achievements.switchTabs(Achievements.Difficulty.MEDIUM);
-        } else if(RSInterface.interfaceCache[interfaceId].contentType == 968) {
-            Achievements.switchTabs(Achievements.Difficulty.HARD);
-        } else if(RSInterface.interfaceCache[interfaceId].contentType == 969) {
-            Achievements.switchTabs(Achievements.Difficulty.ELITE);
+        if(RSInterface.interfaceCache[interfaceId] != null) {
+            if (RSInterface.interfaceCache[interfaceId].contentType == 965) {
+                Achievements.switchTabs(Achievements.Difficulty.BEGINNER);
+            } else if (RSInterface.interfaceCache[interfaceId].contentType == 966) {
+                Achievements.switchTabs(Achievements.Difficulty.EASY);
+            } else if (RSInterface.interfaceCache[interfaceId].contentType == 967) {
+                Achievements.switchTabs(Achievements.Difficulty.MEDIUM);
+            } else if (RSInterface.interfaceCache[interfaceId].contentType == 968) {
+                Achievements.switchTabs(Achievements.Difficulty.HARD);
+            } else if (RSInterface.interfaceCache[interfaceId].contentType == 969) {
+                Achievements.switchTabs(Achievements.Difficulty.ELITE);
+            }
         }
 
         if(action == 1350) {
