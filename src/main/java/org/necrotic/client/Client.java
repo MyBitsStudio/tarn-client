@@ -15327,6 +15327,37 @@ public class Client extends GameRenderer {
                         return true;
                     }
 
+                    if(s.startsWith("achP#")) {
+                        String[] split = s.substring(s.lastIndexOf("#")+1).split(",");
+                        int _id = Integer.parseInt(split[0]);
+                        int prog = Integer.parseInt(split[1]);
+                        int maxProg = Integer.parseInt(split[2]);
+                        RSInterface.interfaceCache[_id].achievementProgress = prog;
+                        RSInterface.interfaceCache[_id].achievementMaxProgress = maxProg;
+                        pktType = -1;
+                        return true;
+                    }
+                    
+                    if(s.startsWith("achC#")) {
+                        String[] split = s.substring(s.lastIndexOf("#")+1).split(",");
+                        int key = Integer.parseInt(split[0]);
+                        int amount = Integer.parseInt(split[1]);
+                        switch (key) {
+                            case 0:
+                                Achievements.completedBeginner = amount;
+                            case 1:
+                                Achievements.completedEasy = amount;
+                            case 2:
+                                Achievements.completedMedium = amount;
+                            case 3:
+                                Achievements.completedHard = amount;
+                            case 4:
+                                Achievements.completedElite = amount;
+                        }
+                        pktType = -1;
+                        return true;
+                    }
+
                     if(s.startsWith(":forge:")) {
                         Forge.unbuyable = Integer.parseInt(s.substring(s.lastIndexOf(":")+1)) == 0;
                         pktType = -1;
@@ -18615,7 +18646,6 @@ public class Client extends GameRenderer {
             animatedSprites[10] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/sales.gif");
             Forge.boxSprite = spritesMap.get(3363);
             Forge.lockSprite = spritesMap.get(3338);
-
             /*
              * media.jag / 1615310064 dump: 0 = summoning wolf icon 1 = spirit shard icon 2
              * = grand exchange icon 3 = herblore decanter icon 4 = alternative wood icon 5
@@ -18707,6 +18737,8 @@ public class Client extends GameRenderer {
             VarBit.unpackConfig(streamLoader);
             ItemDefinition.isMembers = isMembers;
             AnimatedPlayerName.animateAll();
+            Achievements.load();
+
             //// drawSmoothLoading(80, "Unpacked config!");
             // ItemDefinition.dumpItemModelsForId(13653);
             // onDemandFetcher.dump();

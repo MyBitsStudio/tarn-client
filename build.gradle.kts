@@ -34,6 +34,7 @@ dependencies {
     implementation ("net.runelite.pushingpixels:trident:1.5.00")
     implementation ("net.java.dev.jna:jna:5.8.0")
     implementation("com.hankcs:aho-corasick-double-array-trie:1.2.2")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.15.2")
     compileOnly("org.projectlombok:lombok:1.18.24")
     compileOnly("javax.servlet:javax.servlet-api:4.0.1")
     annotationProcessor("org.projectlombok:lombok:1.18.24")

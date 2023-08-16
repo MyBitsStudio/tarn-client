@@ -1,12 +1,19 @@
 package org.necrotic.client.graphics.rsinterface.achievements;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie;
 import org.necrotic.client.Client;
 import org.necrotic.client.RSInterface;
+import org.necrotic.client.Signlink;
 import org.necrotic.client.graphics.Sprite;
 import org.necrotic.client.graphics.rsinterface.ProgressBarType;
 
-import java.util.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -20,30 +27,14 @@ public class Achievements extends RSInterface {
 
     private static final AhoCorasickDoubleArrayTrie<String> acdat = new AhoCorasickDoubleArrayTrie<>();
 
-    public static final HashMap<Integer, Achievement> achievements = new LinkedHashMap<>();
-
+    public static final List<Achievement> ALL_ACHIEVEMENTS = new ArrayList<>();
     public static final List<Achievement> BEGINNER_ACHIEVEMENTS = new ArrayList<>();
     public static final List<Achievement> EASY_ACHIEVEMENTS = new ArrayList<>();
     public static final List<Achievement> MEDIUM_ACHIEVEMENTS = new ArrayList<>();
     public static final List<Achievement> HARD_ACHIEVEMENTS = new ArrayList<>();
     public static final List<Achievement> ELITE_ACHIEVEMENTS = new ArrayList<>();
 
-    static {
-        achievements.put(165029, new Achievement("Kill cows", "Kill whatever this is", 100, Difficulty.BEGINNER, 165029));
-        achievements.put(165030, new Achievement("Kill goblins", "Kill whatever this is", 100, Difficulty.BEGINNER, 165030));
-        achievements.put(165031, new Achievement("Kill skeletons", "Kill whatever this is", 100, Difficulty.BEGINNER, 165031));
-        achievements.put(165032, new Achievement("Kill hounds", "Kill whatever this is", 100, Difficulty.BEGINNER, 165032));
-        achievements.put(165033, new Achievement("Cut 10 trees", "Kill whatever this is", 100, Difficulty.BEGINNER, 165033));
-        achievements.put(165034, new Achievement("Fish 20 lobsters", "Kill whatever this is", 100, Difficulty.BEGINNER, 165034));
-        achievements.put(165035, new Achievement("Burn 20 logs", "Kill whatever this is", 100, Difficulty.BEGINNER, 165035));
-        achievements.put(165036, new Achievement("Fletch 5 magic shortbows", "Kill whatever this is", 100, Difficulty.BEGINNER, 165036));
-
-        BEGINNER_ACHIEVEMENTS.addAll(achievements.values().stream().filter(achievement -> achievement.difficulty.equals(Difficulty.BEGINNER)).collect(Collectors.toList()));
-        EASY_ACHIEVEMENTS.addAll(achievements.values().stream().filter(achievement -> achievement.difficulty.equals(Difficulty.EASY)).collect(Collectors.toList()));
-        MEDIUM_ACHIEVEMENTS.addAll(achievements.values().stream().filter(achievement -> achievement.difficulty.equals(Difficulty.MEDIUM)).collect(Collectors.toList()));
-        HARD_ACHIEVEMENTS.addAll(achievements.values().stream().filter(achievement -> achievement.difficulty.equals(Difficulty.HARD)).collect(Collectors.toList()));
-        ELITE_ACHIEVEMENTS.addAll(achievements.values().stream().filter(achievement -> achievement.difficulty.equals(Difficulty.ELITE)).collect(Collectors.toList()));
-    }
+    public static int completedBeginner = 0, completedEasy = 0, completedMedium = 0, completedHard = 0, completedElite = 0;
 
     private static void achievement() {
         RSInterface rsi = addInterface(165001);
@@ -134,18 +125,16 @@ public class Achievements extends RSInterface {
         scroll.scrollMax = 5000;
         scroll.width = 361;
         scroll.height = 181;
-        scroll.totalChildren(achievements.size()+1);
+        scroll.totalChildren(ALL_ACHIEVEMENTS.size()+1);
         rsi.child(29, 165027, 122, 125);
 
         addText(165028, "No matches found.", 0x9d9d9d, true, true, -1, 1);
         scroll.child(0, 165028, 182, 20);
 
         int count = 0;
-        for(Map.Entry<Integer, Achievement> entry : achievements.entrySet()) {
-            Achievement achievement = entry.getValue();
-            int id = entry.getKey();
-            addAchievementComponent(id, achievement.title, achievement.description, achievement.difficulty.points, count % 2 == 0 ? 3423 : 3424, count % 2 == 0 ? 3427 : 3425, achievement.difficulty.sprite, 100, count);
-            scroll.child(count+1, id, 0, 35 * count);
+        for(Achievement achievement : ALL_ACHIEVEMENTS) {
+            addAchievementComponent(achievement.key, achievement.title, achievement.description, achievement.difficulty.points, count % 2 == 0 ? 3423 : 3424, count % 2 == 0 ? 3427 : 3425, achievement.difficulty.sprite, 100, count);
+            scroll.child(count+1, achievement.key, 0, 35 * count);
             count++;
         }
     }
@@ -157,21 +146,20 @@ public class Achievements extends RSInterface {
             TreeMap<String, String> map = new TreeMap<>();
             map.put(search.toLowerCase(), search.toLowerCase());
             acdat.build(map);
-            for(Map.Entry<Integer, Achievement> entry : achievements.entrySet()) {
-                String name = entry.getValue().title.toLowerCase();
+            for(Achievement achievement : ALL_ACHIEVEMENTS) {
+                String name = achievement.title.toLowerCase();
                 acdat.parseText(name, (begin, end, value) -> {
-                        Achievement match = entry.getValue();
                         int count = matchCount.getAndIncrement();
-                        RSInterface component = interfaceCache[entry.getKey()];
-                        component.achievementMaxProgress = match.maxProgress;
-                        component.achievementTitle = match.title;
-                        component.helmSprite = match.difficulty.sprite;
-                        component.achievementDesc = match.description;
-                        component.achievementRewardPoints = match.difficulty.points;
+                        RSInterface component = interfaceCache[achievement.key];
+                        component.achievementMaxProgress = achievement.maxProgress;
+                        component.achievementTitle = achievement.title;
+                        component.helmSprite = achievement.difficulty.sprite;
+                        component.achievementDesc = achievement.description;
+                        component.achievementRewardPoints = achievement.difficulty.points;
                         component.disabledSprite = Client.spritesMap.get(count % 2 == 0 ? 3423 : 3424);
                         component.enabledSprite = Client.spritesMap.get(count % 2 == 0 ? 3427 : 3425);
                         component.hideWidget = false;
-                        RSInterface.interfaceCache[165027].childY[(entry.getKey() - 165029) + 1] = 35 * count;
+                        RSInterface.interfaceCache[165027].childY[(achievement.key - 165029) + 1] = 35 * count;
                         interfaceCache[165027].scrollMax = Math.max(182, 35 * count);
                 });
             }
@@ -200,28 +188,64 @@ public class Achievements extends RSInterface {
         clear();
         int i = 0;
         for(Achievement achievement : list) {
-            int id = 165029 + i;
-            RSInterface.interfaceCache[id].hideWidget = false;
+            RSInterface.interfaceCache[achievement.key].disabledSprite = Client.spritesMap.get(i % 2 == 0 ? 3423 : 3424);
+            RSInterface.interfaceCache[achievement.key].enabledSprite = Client.spritesMap.get(i % 2 == 0 ? 3427 : 3425);
             RSInterface.interfaceCache[165027].childY[(achievement.key - 165029) + 1] = i * 35;
+            RSInterface.interfaceCache[achievement.key].hideWidget = false;
             i++;
+        }
+        int size = list.size();
+        interfaceCache[165025].maxPercentage = size;
+        if(difficulty == Difficulty.BEGINNER) {
+            interfaceCache[165026].message = completedBeginner + "/" + size + " Complete";
+            interfaceCache[165025].progress = completedBeginner;
+        } else if(difficulty == Difficulty.EASY) {
+            interfaceCache[165026].message = completedEasy + "/" + size + " Complete";
+            interfaceCache[165025].progress = completedEasy;
+        } else if(difficulty == Difficulty.MEDIUM) {
+            interfaceCache[165026].message = completedMedium + "/" + size + " Complete";
+            interfaceCache[165025].progress = completedMedium;
+        } else if(difficulty == Difficulty.HARD) {
+            interfaceCache[165026].message = completedHard + "/" + size + " Complete";
+            interfaceCache[165025].progress = completedHard;
+        } else if(difficulty == Difficulty.ELITE) {
+            interfaceCache[165026].message = completedElite + "/" + size + " Complete";
+            interfaceCache[165025].progress = completedElite;
         }
         interfaceCache[165027].scrollMax = Math.max(182, 35 * list.size());
     }
 
     private static void clear() {
-        for(int i = 0; i < achievements.size(); i++) {
+        for(int i = 0; i < ALL_ACHIEVEMENTS.size(); i++) {
             int id = 165029 + i;
             RSInterface.interfaceCache[id].hideWidget = true;
             RSInterface.interfaceCache[165027].childY[i+1] = 0;
         }
     }
 
+    public static void load() {
+        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+        try {
+            ALL_ACHIEVEMENTS.addAll(mapper.readValue(
+                    new File(Signlink.getCacheDirectory() + "achievements.yaml"),
+                    mapper.getTypeFactory().constructCollectionType(List.class, Achievement.class)
+            ));
+            BEGINNER_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.BEGINNER)).collect(Collectors.toList()));
+            EASY_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.EASY)).collect(Collectors.toList()));
+            MEDIUM_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.MEDIUM)).collect(Collectors.toList()));
+            HARD_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.HARD)).collect(Collectors.toList()));
+            ELITE_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.ELITE)).collect(Collectors.toList()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public enum Difficulty {
         BEGINNER(Client.spritesMap.get(3428), 1),
-        EASY(Client.spritesMap.get(3429), 2),
+        EASY(Client.spritesMap.get(3432), 2),
         MEDIUM(Client.spritesMap.get(3430), 3),
-        HARD(Client.spritesMap.get(3431), 4),
-        ELITE(Client.spritesMap.get(3432), 5);
+        HARD(Client.spritesMap.get(3429), 4),
+        ELITE(Client.spritesMap.get(3431), 5);
 
         private final Sprite sprite;
         private final int points;
@@ -233,17 +257,29 @@ public class Achievements extends RSInterface {
     }
 
     static class Achievement {
-        private final String title;
-        private final String description;
-        private final int maxProgress;
-        private final Difficulty difficulty;
-        private final int key;
+        private String title;
+        private String description;
+        private int maxProgress;
+        private Difficulty difficulty;
+        private int key;
 
-        Achievement(String title, String description, int maxProgress, Difficulty difficulty, int key) {
+        public void setTitle(String title) {
             this.title = title;
+        }
+
+        public void setDescription(String description) {
             this.description = description;
+        }
+
+        public void setMaxProgress(int maxProgress) {
             this.maxProgress = maxProgress;
+        }
+
+        public void setDifficulty(Difficulty difficulty) {
             this.difficulty = difficulty;
+        }
+
+        public void setKey(int key) {
             this.key = key;
         }
     }
