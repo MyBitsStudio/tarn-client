@@ -133,7 +133,7 @@ public class Achievements extends RSInterface {
 
         int count = 0;
         for(Achievement achievement : ALL_ACHIEVEMENTS) {
-            addAchievementComponent(achievement.key, achievement.title, achievement.description, achievement.difficulty.points, count % 2 == 0 ? 3423 : 3424, count % 2 == 0 ? 3427 : 3425, achievement.difficulty.sprite, 100, count);
+            addAchievementComponent(achievement.key, achievement.title, achievement.description, achievement.difficulty.points, count % 2 == 0 ? 3423 : 3424, count % 2 == 0 ? 3427 : 3425, achievement.difficulty.sprite, achievement.maxProgress, count);
             scroll.child(count+1, achievement.key, 0, 35 * count);
             count++;
         }

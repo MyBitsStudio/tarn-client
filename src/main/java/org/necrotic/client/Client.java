@@ -15331,9 +15331,7 @@ public class Client extends GameRenderer {
                         String[] split = s.substring(s.lastIndexOf("#")+1).split(",");
                         int _id = Integer.parseInt(split[0]);
                         int prog = Integer.parseInt(split[1]);
-                        int maxProg = Integer.parseInt(split[2]);
                         RSInterface.interfaceCache[_id].achievementProgress = prog;
-                        RSInterface.interfaceCache[_id].achievementMaxProgress = maxProg;
                         pktType = -1;
                         return true;
                     }
