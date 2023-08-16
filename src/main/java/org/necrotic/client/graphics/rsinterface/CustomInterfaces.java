@@ -8154,6 +8154,7 @@ public class CustomInterfaces extends RSInterface {
 		Equipment.equipSlot();
 
         MinigameInterfaces.build();
+		Achievements.build();
 		MonicInterface.build(tda);
     }
 }

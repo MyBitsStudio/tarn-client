@@ -21,7 +21,7 @@ import static org.necrotic.client.graphics.rsinterface.CustomInterfaces.tda;
 
 public class Achievements extends RSInterface {
 
-    private static void build() {
+    public static void build() {
         achievement();
     }
 
@@ -235,7 +235,6 @@ public class Achievements extends RSInterface {
             MEDIUM_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.MEDIUM)).collect(Collectors.toList()));
             HARD_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.HARD)).collect(Collectors.toList()));
             ELITE_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.ELITE)).collect(Collectors.toList()));
-            Achievements.build();
         } catch (IOException e) {
             e.printStackTrace();
         }
