@@ -230,6 +230,9 @@ public class Achievements extends RSInterface {
                     new File(Signlink.getCacheDirectory() + "achievements.yaml"),
                     mapper.getTypeFactory().constructCollectionType(List.class, Achievement.class)
             ));
+            for(int i = 0; i < ALL_ACHIEVEMENTS.size(); i++) {
+                ALL_ACHIEVEMENTS.get(i).setKey(165029+i);
+            }
             BEGINNER_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.BEGINNER)).collect(Collectors.toList()));
             EASY_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.EASY)).collect(Collectors.toList()));
             MEDIUM_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.MEDIUM)).collect(Collectors.toList()));
