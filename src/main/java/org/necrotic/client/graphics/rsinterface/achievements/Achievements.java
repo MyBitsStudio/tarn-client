@@ -12,6 +12,7 @@ import org.necrotic.client.graphics.rsinterface.ProgressBarType;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.TreeMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -142,7 +143,7 @@ public class Achievements extends RSInterface {
     public static void search(String search) {
         clear();
         final AtomicInteger matchCount = new AtomicInteger(0);
-        if(search.length() >= 2) {
+        if(search.length() >= 1) {
             TreeMap<String, String> map = new TreeMap<>();
             map.put(search.toLowerCase(), search.toLowerCase());
             acdat.build(map);
@@ -151,18 +152,13 @@ public class Achievements extends RSInterface {
                 acdat.parseText(name, (begin, end, value) -> {
                         int count = matchCount.getAndIncrement();
                         RSInterface component = interfaceCache[achievement.key];
-                        component.achievementMaxProgress = achievement.maxProgress;
-                        component.achievementTitle = achievement.title;
-                        component.helmSprite = achievement.difficulty.sprite;
-                        component.achievementDesc = achievement.description;
-                        component.achievementRewardPoints = achievement.difficulty.points;
                         component.disabledSprite = Client.spritesMap.get(count % 2 == 0 ? 3423 : 3424);
                         component.enabledSprite = Client.spritesMap.get(count % 2 == 0 ? 3427 : 3425);
                         component.hideWidget = false;
                         RSInterface.interfaceCache[165027].childY[(achievement.key - 165029) + 1] = 35 * count;
-                        interfaceCache[165027].scrollMax = Math.max(182, 35 * count);
                 });
             }
+            interfaceCache[165027].scrollMax = Math.max(182, 35 * matchCount.get());
         }
     }
 
