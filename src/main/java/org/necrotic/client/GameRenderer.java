@@ -1038,7 +1038,6 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 			int interfaceId = Client.openInterfaceID;
 			if(Client.overlayInterfaceId != -1) {
 				interfaceId = Client.overlayInterfaceId;
-				System.out.println("Here");
 			}
 			RSInterface rsi = RSInterface.interfaceCache[interfaceId];
 			if(rsi.disableInteraction) {

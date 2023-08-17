@@ -3987,6 +3987,94 @@ public class RSInterface {
 		tab.enabledSprite = Client.spritesMap.get(k);
 	}
 
+	/**
+	 * Adds newlines to a text for a certain TextDrawingArea so each line is never longer than width.
+	 * Param tda The textDrawing Area for the text, basically the font
+	 * Param text The text to convert to wrapped text
+	 * Param width The width above which wrapping is applied
+	 * Return The wrapped text
+	 */
+	public static String getWrappedText(TextDrawingArea tda, String text, int width) {
+		if (text.contains("\\n") || tda.getTextWidth(text) <= width) {
+			return text;
+		}
+		int spaceWidth = tda.getTextWidth(" ");
+		StringBuilder result = new StringBuilder(text.length());
+		StringBuilder line = new StringBuilder();
+		int lineLength = 0;
+		int curIndex = 0;
+		while (true) {
+			int spaceIndex = text.indexOf(' ', curIndex);
+			int newLength = lineLength;
+			boolean last = false;
+			String curWord;
+			if (spaceIndex < 0) {
+				last = true;
+				curWord = text.substring(curIndex);
+			} else {
+				curWord = text.substring(curIndex, spaceIndex);
+				newLength += spaceWidth;
+			}
+			curIndex = spaceIndex + 1;
+			int w = tda.getTextWidth(curWord);
+			newLength += w;
+			if (newLength > width) {
+				result.append(line);
+				result.append("\\n");
+				line = new StringBuilder(curWord);
+				line.append(' ');
+				lineLength = w;
+			} else {
+				line.append(curWord);
+				line.append(' ');
+				lineLength = newLength;
+			}
+			if (last) {
+				break;
+			}
+		}
+		result.append(line);
+		return result.toString();
+	}
+
+	/**
+	 * Adds text with the specified properties. Automatically wraps text so it doesn't exceed width.
+	 * Only use for dynamic interfaces as there is some computation to check if wrapping is required.
+	 * If static text, use another addText method and pass the text into RSInterface.getWrappedText() firstly.
+	 *    Param id The child id for the text
+	 *    Param text The text message
+	 *    Param tda The tdas available
+	 *    Param idx The index of the tda to use
+	 *    Param color The text color
+	 *    Param center Whether the text is centered
+	 *    Param shadow Whether the text has shadow
+	 *    Param width The maximum width of each line before wrapping applies
+	 *    Return
+	 */
+	public static RSInterface addWrappingText(int id, String text, TextDrawingArea tda[],
+											  int idx, int color, boolean center, boolean shadow, int width) {
+		RSInterface tab = addTabInterface(id);
+		tab.parentID = id;
+		tab.id = id;
+		tab.type = 17;
+		tab.atActionType = 0;
+		tab.width = width;
+		tab.height = 11;
+		tab.contentType = 0;
+		tab.opacity = 0;
+		tab.hoverType = -1;
+		tab.centerText = center;
+		tab.textShadow = shadow;
+		tab.textDrawingAreas = tda[idx];
+		tab.message = getWrappedText(tab.textDrawingAreas, text, tab.width);
+		tab.enabledMessage = "";
+		tab.disabledColor = color;
+		tab.enabledColor = 0;
+		tab.disabledMouseOverColor = 0;
+		tab.enabledMouseOverColor = 0;
+		return tab;
+	}
+
 	public static void addPixels(int id, int color, int width, int height, int alpha, boolean filled) {
 		RSInterface rsi = addInterface(id);
 		rsi.disabledColor = color;

@@ -4,7 +4,6 @@ import net.runelite.client.RuneLiteProperties;
 import net.runelite.client.ui.ClientUI;
 import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.SwingUtil;
-import org.necrotic.ColorConstants;
 import org.necrotic.Configuration;
 import org.necrotic.RichPresense;
 import org.necrotic.client.Settings.Load;
@@ -23,7 +22,6 @@ import org.necrotic.client.constants.SizeConstants;
 import org.necrotic.client.entity.player.Player;
 import org.necrotic.client.entity.player.PlayerHandler;
 import org.necrotic.client.graphics.*;
-import static org.necrotic.client.Class33.sendAuth;
 import org.necrotic.client.graphics.fonts.RSFontSystem;
 import org.necrotic.client.graphics.fonts.TextClass;
 import org.necrotic.client.graphics.fonts.TextDrawingArea;
@@ -4816,6 +4814,7 @@ public class Client extends GameRenderer {
             } else if (RSInterface.interfaceCache[interfaceId].contentType == 969) {
                 Achievements.switchTabs(Achievements.Difficulty.ELITE);
             }
+            Achievements.onButtonClick(interfaceId);
         }
 
         if(action == 1350) {
@@ -8084,9 +8083,14 @@ public class Client extends GameRenderer {
                     } else {
                         DrawingArea.method338(childY, childInterface.height, 256 - (childInterface.opacity & 0xff), j3, childInterface.width, childX);
                     }
-                } else if (childInterface.type == 4) {
+                } else if (childInterface.type == 4 || childInterface.type == 17) {
                     TextDrawingArea textDrawingArea = childInterface.textDrawingAreas;
-                    String s = childInterface.message;
+                    String s;
+                    if (childInterface.type == 17) {
+                        s = RSInterface.getWrappedText(childInterface.textDrawingAreas, childInterface.message, childInterface.width);
+                    } else {
+                        s = childInterface.message;
+                    }
                     int xOffset = 0;
                     int imageDraw = 0;
                     final String INITIAL_MESSAGE = s;
@@ -15376,7 +15380,6 @@ public class Client extends GameRenderer {
 
                     if(s.startsWith(":maxitems:")) {
                         int amount = Integer.parseInt(s.substring(s.lastIndexOf(":")+1));
-                        System.out.println("Overlay: " + overlayInterfaceId);
                         for(int i = 0; i < 50; i++) {
                             if(amount > i) {
                                 if(overlayInterfaceId == 150857) {

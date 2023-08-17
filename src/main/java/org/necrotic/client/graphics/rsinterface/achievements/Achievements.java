@@ -3,6 +3,7 @@ package org.necrotic.client.graphics.rsinterface.achievements;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import com.hankcs.algorithm.AhoCorasickDoubleArrayTrie;
+import org.necrotic.ColorConstants;
 import org.necrotic.client.Client;
 import org.necrotic.client.RSInterface;
 import org.necrotic.client.Signlink;
@@ -11,10 +12,7 @@ import org.necrotic.client.graphics.rsinterface.ProgressBarType;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -28,7 +26,8 @@ public class Achievements extends RSInterface {
 
     private static final AhoCorasickDoubleArrayTrie<String> acdat = new AhoCorasickDoubleArrayTrie<>();
 
-    public static final List<Achievement> ALL_ACHIEVEMENTS = new ArrayList<>();
+    public static final List<Achievement> ALL_ACHIEVEMENTS = new ArrayList<>(300);
+    public static final HashMap<Integer, Achievement> cachedAchievements = new HashMap<>();
     public static final List<Achievement> BEGINNER_ACHIEVEMENTS = new ArrayList<>();
     public static final List<Achievement> EASY_ACHIEVEMENTS = new ArrayList<>();
     public static final List<Achievement> MEDIUM_ACHIEVEMENTS = new ArrayList<>();
@@ -137,6 +136,74 @@ public class Achievements extends RSInterface {
             addAchievementComponent(achievement.key, achievement.title, achievement.description, achievement.difficulty.points, count % 2 == 0 ? 3423 : 3424, count % 2 == 0 ? 3427 : 3425, achievement.difficulty.sprite, achievement.maxProgress, count);
             scroll.child(count+1, achievement.key, 0, 35 * count);
             count++;
+        }
+
+        overlay();
+    }
+
+    private static void overlay() {
+        RSInterface overlay = addInterface(165329);
+        overlay.totalChildren(9);
+
+        addRectangle(165330, 510, 304, 0x000000, 90, true);
+        overlay.child(0, 165330, 2, 15);
+
+        addSpriteLoader(165331, 3443);
+        overlay.child(1,165331, 142, 45);
+
+        addSpriteLoader(165332, 3428);
+        overlay.child(2,165332, 261, 91);
+
+        addText(165333, "Achievement Title", 0xffa900, true, true, -1, 1);
+        overlay.child(3,165333, 270, 119);
+
+        addText(165334, "Information", ColorConstants.RS_ORANGE, true, true, -1, 2);
+        overlay.child(4,165334, 267, 56);
+
+        addWrappingText(165335, "A description of the achievement, put anything here.", tda, 1, 0x9f9f9f, true, true, 196);
+        overlay.child(5, 165335, 170, 148);
+
+        addText(165336, "Rewards", 0xffc96d, true, true, -1, 1);
+        overlay.child(6,165336, 266, 195);
+
+        addToItemGroup(165337, 4,2, 5, 5, true, new String[]{null,null,null,null,null});
+        overlay.child(7,165337, 180, 220);
+
+        hoverButton(165338, 714, 715, "Close");
+        overlay.child(8, 165338, 369, 55);
+    }
+
+    public static void onButtonClick(int interfaceId) {
+        if(interfaceId == 165338) {
+            Client.overlayInterfaceId = -1;
+            RSInterface.interfaceCache[165001].disableInteraction = false;
+            return;
+        }
+        if(interfaceId >= 165029 && interfaceId < ALL_ACHIEVEMENTS.size() + 165029) {
+            Achievement achievement = null;
+            if (cachedAchievements.containsKey(interfaceId)) {
+                achievement = cachedAchievements.get(interfaceId);
+            } else {
+                Optional<Achievement> achievementOptional = ALL_ACHIEVEMENTS
+                        .stream()
+                        .filter(ach -> ach.key == interfaceId)
+                        .findFirst();
+                if (achievementOptional.isPresent()) {
+                    achievement = achievementOptional.get();
+                }
+            }
+            if(achievement != null) {
+                Client.overlayInterfaceId = 165329;
+                RSInterface.interfaceCache[165001].disableInteraction = true;
+                RSInterface.interfaceCache[165332].enabledSprite = achievement.difficulty.sprite;
+                RSInterface.interfaceCache[165332].disabledSprite = achievement.difficulty.sprite;
+                RSInterface.interfaceCache[165333].message = achievement.title;
+                RSInterface.interfaceCache[165335].message = achievement.description;;
+                for(int i = 0; i < achievement.rewards.length; i++) {
+                    RSInterface.interfaceCache[165337].inv[i] = achievement.rewards[i].itemId + 1;
+                    RSInterface.interfaceCache[165337].invStackSizes[i] = achievement.rewards[i].amount;
+                }
+            }
         }
     }
 
@@ -261,6 +328,7 @@ public class Achievements extends RSInterface {
         private int maxProgress;
         private Difficulty difficulty;
         private int key;
+        private Reward[] rewards;
 
         public void setTitle(String title) {
             this.title = title;
@@ -280,6 +348,35 @@ public class Achievements extends RSInterface {
 
         public void setKey(int key) {
             this.key = key;
+        }
+
+        public void setRewards(Reward[] rewards) {
+            this.rewards = rewards;
+        }
+
+        public Reward[] getRewards() {
+            return rewards;
+        }
+    }
+
+    static class Reward {
+        private int itemId;
+        private int amount;
+
+        public int getItemId() {
+            return itemId;
+        }
+
+        public void setItemId(int itemId) {
+            this.itemId = itemId;
+        }
+
+        public int getAmount() {
+            return amount;
+        }
+
+        public void setAmount(int amount) {
+            this.amount = amount;
         }
     }
 }
