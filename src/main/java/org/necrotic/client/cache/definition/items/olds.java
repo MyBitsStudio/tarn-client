@@ -25,41 +25,6 @@ public class olds {
 //    itemDef.rdc2 = 7792950;
 //				break;
 
-//    case 14924:
-//    itemDef.name = "Icy staff of festive";
-//
-//    itemdefedit = ItemDefinition.get(18667);
-//    itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-//    //itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-//    itemDef.modelOffsetY = itemdefedit.modelOffsetY;
-//    itemDef.modelID = itemdefedit.modelID;
-//    itemDef.maleEquip1 = itemdefedit.maleEquip1;
-//    itemDef.femaleEquip1 = itemdefedit.femaleEquip1;
-//    itemDef.modelZoom = itemdefedit.modelZoom;
-//    itemDef.rotationY = itemdefedit.rotationY;
-//    itemDef.rotationX = itemdefedit.rotationX;
-//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//    itemDef.stackable = false;
-//
-//				break;
-
-//    case 14919:
-//    itemDef.name = "Nature crossbow";
-//
-//    itemdefedit = ItemDefinition.get(14684);
-//    itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-//    //itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-//    itemDef.modelOffsetY = itemdefedit.modelOffsetY;
-//    itemDef.modelID = itemdefedit.modelID;
-//    itemDef.maleEquip1 = itemdefedit.maleEquip1;
-//    itemDef.femaleEquip1 = itemdefedit.femaleEquip1;
-//    itemDef.modelZoom = itemdefedit.modelZoom;
-//    itemDef.rotationY = itemdefedit.rotationY;
-//    itemDef.rotationX = itemdefedit.rotationX;
-//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//    itemDef.stackable = false;
-//
-//				break;
 //			case 675:
 //    itemDef.name = "<col=b5f2b3>Indravox full helmet";
 //    def = ItemDefinition.get(10350);
@@ -1158,20 +1123,6 @@ public class olds {
 //    itemDef.modelOffsetY = 0;
 //				break;
 
-//    case 17720:
-//    itemDef.name = "Dracula sword";
-//    itemDef.modelID = 64075;
-//    itemDef.maleEquip1 = 64076;
-//    itemDef.femaleEquip1 = 64076;
-//    def = ItemDefinition.get(1311);
-//    itemDef.modelOffsetX = def.modelOffsetX;
-//    itemDef.modelOffsetY = def.modelOffsetY;
-//    itemDef.modelZoom = def.modelZoom;
-//    itemDef.rotationY = def.rotationY;
-//    itemDef.rotationX = def.rotationX;
-//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//    itemDef.stackable = false;
-//				break;
 //			case 17722:
 //    itemDef.name = "Gunther sword";
 //    itemDef.modelID = 64077;
@@ -1271,8 +1222,7 @@ public class olds {
 //    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 //    itemDef.stackable = false;
 //				break;
-
-//    			case 17011:
+//                			case 17011:
 //    itemDef.name = "Sanguinesti Execution Staff";
 //    itemDef.actions = new String[5];
 //    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
@@ -1281,17 +1231,6 @@ public class olds {
 //    itemDef.femaleEquip1 = 99506;
 //				break;
 //
-//			case 17013:
-//    itemDef.name = "@whi@Light Sanguinesti Staff";
-//    itemDef.actions = new String[5];
-//    itemDef.actions[1] = "Wear"/*done*/; //done
-//    itemDef.actions[2] = "Dissolve";
-//    itemDef.actions[4] = "Drop";
-//    itemDef.modelID = 99513;
-//    itemDef.maleEquip1 = 99506;
-//    itemDef.femaleEquip1 = 99506;
-//    itemDef.rdc2 = 888833;
-//				break;
 
 //     case 17638:
 //    itemDef.name = TierColor.NOVICE.getColor() + "Angelic helm";

@@ -1084,6 +1084,22 @@ public class Sets {
                 itemDef.rdc2 = 8239113;
                 break;
 
+            case 17011:
+                itemDef.name = TierColor.NOVICE.getColor() + "Revenant Staff";
+                break;
+
+//            case 17013:
+//                itemDef.name = TierColor.NOVICE.getColor() + "Revenant Staff";
+//                itemDef.actions = new String[5];
+//                itemDef.actions[1] = "Wear"/*done*/; //done
+//                itemDef.actions[2] = "Dissolve";
+//                itemDef.actions[4] = "Drop";
+//                itemDef.modelID = 99513;
+//                itemDef.maleEquip1 = 99506;
+//                itemDef.femaleEquip1 = 99506;
+//                itemDef.rdc2 = 888833;
+//				break;
+
             /* Tier 5 */
             case 23050:
                 itemDef.copyItem(4708);
@@ -1260,6 +1276,21 @@ public class Sets {
                 itemDef.modelOffsetY = 25;
                 break;
 
+            case 14924:
+                itemDef.name = TierColor.INTER.getColor()+"Mystical Staff";
+                itemDefs = ItemDefinition.get(18667);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelID = itemDefs.modelID;
+                itemDef.maleEquip1 = itemDefs.maleEquip1;
+                itemDef.femaleEquip1 = itemDefs.femaleEquip1;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
             /* Tier 8 */
             case 23134:
                 itemDef.copyItem(4708);
@@ -1306,8 +1337,36 @@ public class Sets {
                 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.modelZoom = 700;
                 break;
+            case 14919:
+                itemDef.name = TierColor.INTER.getColor() +"Sacred crossbow";
+                itemDefs = ItemDefinition.get(14684);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelID = itemDefs.modelID;
+                itemDef.maleEquip1 = itemDefs.maleEquip1;
+                itemDef.femaleEquip1 = itemDefs.femaleEquip1;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+				break;
 
             /* Tier 9 */
+            case 17720:
+                itemDef.name = TierColor.INTER.getColor() +"Ruthless sword";
+                itemDef.modelID = 64075;
+                itemDef.maleEquip1 = 64076;
+                itemDef.femaleEquip1 = 64076;
+                itemDefs = ItemDefinition.get(1311);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+				break;
             case 23139:
                 itemDef.copyItem(4708);
                 itemDef.name = TierColor.INTER.getColor() +"Ruthless helm";
