@@ -133,8 +133,8 @@ public class Achievements extends RSInterface {
 
         int count = 0;
         for(Achievement achievement : ALL_ACHIEVEMENTS) {
-            addAchievementComponent(achievement.key, achievement.title, achievement.description, achievement.difficulty.points, count % 2 == 0 ? 3423 : 3424, count % 2 == 0 ? 3427 : 3425, achievement.difficulty.sprite, achievement.maxProgress, count);
-            scroll.child(count+1, achievement.key, 0, 35 * count);
+            addAchievementComponent(achievement.componentId, achievement.title, achievement.description, achievement.difficulty.points, count % 2 == 0 ? 3423 : 3424, count % 2 == 0 ? 3427 : 3425, achievement.difficulty.sprite, achievement.maxProgress, count);
+            scroll.child(count+1, achievement.componentId, 0, 35 * count);
             count++;
         }
 
@@ -186,7 +186,7 @@ public class Achievements extends RSInterface {
             } else {
                 Optional<Achievement> achievementOptional = ALL_ACHIEVEMENTS
                         .stream()
-                        .filter(ach -> ach.key == interfaceId)
+                        .filter(ach -> ach.componentId == interfaceId)
                         .findFirst();
                 if (achievementOptional.isPresent()) {
                     achievement = achievementOptional.get();
@@ -199,6 +199,8 @@ public class Achievements extends RSInterface {
                 RSInterface.interfaceCache[165332].disabledSprite = achievement.difficulty.sprite;
                 RSInterface.interfaceCache[165333].message = achievement.title;
                 RSInterface.interfaceCache[165335].message = achievement.description;;
+                RSInterface.interfaceCache[165337].inv = new int[8];
+                RSInterface.interfaceCache[165337].invStackSizes = new int[8];
                 for(int i = 0; i < achievement.rewards.length; i++) {
                     RSInterface.interfaceCache[165337].inv[i] = achievement.rewards[i].itemId + 1;
                     RSInterface.interfaceCache[165337].invStackSizes[i] = achievement.rewards[i].amount;
@@ -218,11 +220,11 @@ public class Achievements extends RSInterface {
                 String name = achievement.title.toLowerCase();
                 acdat.parseText(name, (begin, end, value) -> {
                         int count = matchCount.getAndIncrement();
-                        RSInterface component = interfaceCache[achievement.key];
+                        RSInterface component = interfaceCache[achievement.componentId];
                         component.disabledSprite = Client.spritesMap.get(count % 2 == 0 ? 3423 : 3424);
                         component.enabledSprite = Client.spritesMap.get(count % 2 == 0 ? 3427 : 3425);
                         component.hideWidget = false;
-                        RSInterface.interfaceCache[165027].childY[(achievement.key - 165029) + 1] = 35 * count;
+                        RSInterface.interfaceCache[165027].childY[(achievement.componentId - 165029) + 1] = 35 * count;
                 });
             }
             interfaceCache[165027].scrollMax = Math.max(182, 35 * matchCount.get());
@@ -251,10 +253,10 @@ public class Achievements extends RSInterface {
         clear();
         int i = 0;
         for(Achievement achievement : list) {
-            RSInterface.interfaceCache[achievement.key].disabledSprite = Client.spritesMap.get(i % 2 == 0 ? 3423 : 3424);
-            RSInterface.interfaceCache[achievement.key].enabledSprite = Client.spritesMap.get(i % 2 == 0 ? 3427 : 3425);
-            RSInterface.interfaceCache[165027].childY[(achievement.key - 165029) + 1] = i * 35;
-            RSInterface.interfaceCache[achievement.key].hideWidget = false;
+            RSInterface.interfaceCache[achievement.componentId].disabledSprite = Client.spritesMap.get(i % 2 == 0 ? 3423 : 3424);
+            RSInterface.interfaceCache[achievement.componentId].enabledSprite = Client.spritesMap.get(i % 2 == 0 ? 3427 : 3425);
+            RSInterface.interfaceCache[165027].childY[(achievement.componentId - 165029) + 1] = i * 35;
+            RSInterface.interfaceCache[achievement.componentId].hideWidget = false;
             i++;
         }
         int size = list.size();
@@ -294,7 +296,7 @@ public class Achievements extends RSInterface {
                     mapper.getTypeFactory().constructCollectionType(List.class, Achievement.class)
             ));
             for(int i = 0; i < ALL_ACHIEVEMENTS.size(); i++) {
-                ALL_ACHIEVEMENTS.get(i).setKey(165029+i);
+                ALL_ACHIEVEMENTS.get(i).setComponentId(165029+i);
             }
             BEGINNER_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.BEGINNER)).collect(Collectors.toList()));
             EASY_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.EASY)).collect(Collectors.toList()));
@@ -327,7 +329,8 @@ public class Achievements extends RSInterface {
         private String description;
         private int maxProgress;
         private Difficulty difficulty;
-        private int key;
+        private int primaryKey;
+        private int componentId;
         private Reward[] rewards;
 
         public void setTitle(String title) {
@@ -346,8 +349,8 @@ public class Achievements extends RSInterface {
             this.difficulty = difficulty;
         }
 
-        public void setKey(int key) {
-            this.key = key;
+        public void setComponentId(int componentId) {
+            this.componentId = componentId;
         }
 
         public void setRewards(Reward[] rewards) {
@@ -356,6 +359,10 @@ public class Achievements extends RSInterface {
 
         public Reward[] getRewards() {
             return rewards;
+        }
+
+        public void setPrimaryKey(int primaryKey) {
+            this.primaryKey = primaryKey;
         }
     }
 
