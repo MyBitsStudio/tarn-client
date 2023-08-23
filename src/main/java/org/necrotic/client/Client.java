@@ -15365,8 +15365,7 @@ public class Client extends GameRenderer {
                         String[] split = s.substring(s.lastIndexOf("#")+1).split(",");
                          boolean hasUnlocked = Boolean.parseBoolean(split[0]);
                          int offset = Integer.parseInt(split[1]);
-                        System.out.println(hasUnlocked + "  " + offset);
-                        Achievements.perkConfig(hasUnlocked, offset);
+                         Achievements.perkConfig(hasUnlocked, offset);
                         pktType = -1;
                         return true;
                     }
