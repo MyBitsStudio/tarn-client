@@ -158,7 +158,7 @@ public class Achievements extends RSInterface {
 
     private static void perks() {
         RSInterface rsi = addInterface(165342);
-        rsi.totalChildren(42);
+        rsi.totalChildren(51);
 
         addSpriteLoader(165343, 3406);
         rsi.child(0, 165343, 2, 15);
@@ -229,6 +229,33 @@ public class Achievements extends RSInterface {
 
         addText(165353, "200", 0x9d9d9d, false, true, -1, 0);
         rsi.child(41, 165353, 410, 162);
+
+        addHoverableConfigSprite(165354, 3458, 3459, true, "Perk 1", 0, 3126);
+        rsi.child(42, 165354, 130, 100);
+
+        addHoverableConfigSprite(165355, 3464, 3465, true, "Perk 2", 1, 3126);
+        rsi.child(43, 165355, 170, 100);
+
+        addHoverableConfigSprite(165356, 3469, 3470, true, "Perk 3", 2, 3126);
+        rsi.child(44, 165356, 210, 100);
+
+        addHoverableConfigSprite(165357, 3474, 3475, true, "Perk 4", 3, 3126);
+        rsi.child(45, 165357, 250, 100);
+
+        addHoverableConfigSprite(165358, 3479, 3480, true, "Perk 5", 5, 3126);
+        rsi.child(46, 165358, 130, 140);
+
+        addHoverableConfigSprite(165359, 3484, 3485, true, "Perk 6", 6, 3126);
+        rsi.child(47, 165359, 170, 140);
+
+        addHoverableConfigSprite(165360, 3489, 3490, true, "Perk 7", 7, 3126);
+        rsi.child(48, 165360, 210, 140);
+
+        addHoverableConfigSprite(165361, 3494, 3495, true, "Perk 8", 8, 3126);
+        rsi.child(49, 165361, 250, 140);
+
+        addHoverableConfigSprite(165362, 3499, 3500, true, "Perk 9", 9, 3126);
+        rsi.child(50, 165362, 130, 180);
     }
 
     private static void overlay() {
