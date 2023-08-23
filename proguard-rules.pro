@@ -64,4 +64,4 @@
 -dontwarn ch.qos.**
 -dontwarn lombok.**
 -dontwarn javax.crypto.**
-
+-dontwarn org.yaml.snakeyaml.**
