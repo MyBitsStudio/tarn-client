@@ -15361,6 +15361,16 @@ public class Client extends GameRenderer {
                         return true;
                     }
 
+                    if(s.startsWith("achPP#")) {
+                        String[] split = s.substring(s.lastIndexOf("#")+1).split(",");
+                         boolean hasUnlocked = Boolean.parseBoolean(split[0]);
+                         int offset = Integer.parseInt(split[1]);
+                        System.out.println(hasUnlocked + "  " + offset);
+                        Achievements.perkConfig(hasUnlocked, offset);
+                        pktType = -1;
+                        return true;
+                    }
+
                     if(s.startsWith(":forge:")) {
                         Forge.unbuyable = Integer.parseInt(s.substring(s.lastIndexOf(":")+1)) == 0;
                         pktType = -1;

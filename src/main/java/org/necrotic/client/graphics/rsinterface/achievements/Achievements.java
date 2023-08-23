@@ -48,6 +48,15 @@ public class Achievements extends RSInterface {
         PERK_DESCRIPTIONS.put(165362, "This is perk nine");
     }
 
+    public static final boolean[] UNLOCKED_PERKS = new boolean[9];
+    public static void perkConfig(boolean bool, int offset) {
+        UNLOCKED_PERKS[offset] = bool;
+        if(bool) {
+            RSInterface.interfaceCache[165354 + offset].disabledSprite = Client.spritesMap.get(3456 + (5 * offset));
+            RSInterface.interfaceCache[165354 + offset].enabledSprite = Client.spritesMap.get(3456 + (5 * offset) + (offset == 0 ? 1 : 2));
+        }
+    }
+
     private static void achievement() {
         RSInterface rsi = addInterface(165001);
         rsi.totalChildren(33);
