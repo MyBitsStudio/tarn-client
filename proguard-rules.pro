@@ -58,6 +58,9 @@
 -keep class com.google.** { *; }
 -keep class javax.swing.** { *; }
 -keep class java.awt.** { *; }
+-keep class org.necrotic.client.graphics.rsinterface.achievements.Achievement {*;}
+-keep class org.necrotic.client.graphics.rsinterface.achievements.Difficulty {*;}
+-keep class org.necrotic.client.graphics.rsinterface.achievements.Reward {*;}
 
 -dontwarn java.lang.invoke.MethodHandle
 -dontwarn org.apache.**

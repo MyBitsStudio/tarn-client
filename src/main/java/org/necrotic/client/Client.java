@@ -33,6 +33,7 @@ import org.necrotic.client.graphics.gameframe.impl.MapArea;
 import org.necrotic.client.graphics.gameframe.impl.TabArea;
 import org.necrotic.client.graphics.rsinterface.*;
 import org.necrotic.client.graphics.rsinterface.achievements.Achievements;
+import org.necrotic.client.graphics.rsinterface.achievements.Difficulty;
 import org.necrotic.client.io.ByteBuffer;
 import org.necrotic.client.io.ISAACCipher;
 import org.necrotic.client.net.Connection;
@@ -4804,15 +4805,15 @@ public class Client extends GameRenderer {
 
         if(RSInterface.interfaceCache[interfaceId] != null) {
             if (RSInterface.interfaceCache[interfaceId].contentType == 965) {
-                Achievements.switchTabs(Achievements.Difficulty.BEGINNER);
+                Achievements.switchTabs(Difficulty.BEGINNER);
             } else if (RSInterface.interfaceCache[interfaceId].contentType == 966) {
-                Achievements.switchTabs(Achievements.Difficulty.EASY);
+                Achievements.switchTabs(Difficulty.EASY);
             } else if (RSInterface.interfaceCache[interfaceId].contentType == 967) {
-                Achievements.switchTabs(Achievements.Difficulty.MEDIUM);
+                Achievements.switchTabs(Difficulty.MEDIUM);
             } else if (RSInterface.interfaceCache[interfaceId].contentType == 968) {
-                Achievements.switchTabs(Achievements.Difficulty.HARD);
+                Achievements.switchTabs(Difficulty.HARD);
             } else if (RSInterface.interfaceCache[interfaceId].contentType == 969) {
-                Achievements.switchTabs(Achievements.Difficulty.ELITE);
+                Achievements.switchTabs(Difficulty.ELITE);
             }
             Achievements.onButtonClick(interfaceId);
         }
@@ -13459,7 +13460,7 @@ public class Client extends GameRenderer {
         }
     }
 
-    private void resetInterfaceAnimation(int i) {
+    public void resetInterfaceAnimation(int i) {
         RSInterface class9 = RSInterface.interfaceCache[i];
         if (class9 == null || class9.children == null) {
             return;
@@ -16255,29 +16256,7 @@ public class Client extends GameRenderer {
                         pktType = -1;
                         return true;
                     }
-                    settings[settingId] = settingValue;
-                    switch (settingId) {
-                        case 2000:
-                            updateBankInterface();
-                            break;
-                        case 19:
-                            LOOP_MUSIC = settingValue == 1;
-                            break;
-                        case 293:
-                            int sprite = settingValue == 0 ? 607 : settingValue == 1 ? 606 : settingValue == 2 ? 608 : settingValue == 3 ? 609 : 610;
-                            RSInterface.interfaceCache[12348].disabledSprite = Client.spritesMap.get(sprite);
-                            break;
-                    }
-                    if (settingId < variousSettings.length) {
-                        if (variousSettings[settingId] != settingValue) {
-                            variousSettings[settingId] = settingValue;
-                            updateConfig(settingId);
-                            if (dialogID != -1) {
-                                inputTaken = true;
-                            }
-                        }
-                    }
-
+                    configPacket(settingId, settingValue);
                     pktType = -1;
                     return true;
 
@@ -16469,6 +16448,33 @@ public class Client extends GameRenderer {
 
         pktType = -1;
         return true;
+    }
+
+    public void configPacket(int settingId, int settingValue) {
+        if(settingId < settings.length) {
+            settings[settingId] = settingValue;
+            switch (settingId) {
+                case 2000:
+                    updateBankInterface();
+                    break;
+                case 19:
+                    LOOP_MUSIC = settingValue == 1;
+                    break;
+                case 293:
+                    int sprite = settingValue == 0 ? 607 : settingValue == 1 ? 606 : settingValue == 2 ? 608 : settingValue == 3 ? 609 : 610;
+                    RSInterface.interfaceCache[12348].disabledSprite = Client.spritesMap.get(sprite);
+                    break;
+            }
+            if (settingId < variousSettings.length) {
+                if (variousSettings[settingId] != settingValue) {
+                    variousSettings[settingId] = settingValue;
+                    updateConfig(settingId);
+                    if (dialogID != -1) {
+                        inputTaken = true;
+                    }
+                }
+            }
+        }
     }
 
     private void drawTimers() {
@@ -18826,7 +18832,7 @@ public class Client extends GameRenderer {
                 }
             } catch (Exception _ex) {
             }
-            ItemStats.readDefinitions();
+           // ItemStats.readDefinitions();
            // TradingPost.load();
             updateGameArea();
             RenderableObject.clientInstance = this;

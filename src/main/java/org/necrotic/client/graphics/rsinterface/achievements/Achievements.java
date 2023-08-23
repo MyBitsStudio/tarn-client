@@ -38,7 +38,7 @@ public class Achievements extends RSInterface {
 
     private static void achievement() {
         RSInterface rsi = addInterface(165001);
-        rsi.totalChildren(30);
+        rsi.totalChildren(33);
 
         addSpriteLoader(165002, 3407);
         rsi.child(0, 165002, 2, 15);
@@ -133,12 +133,102 @@ public class Achievements extends RSInterface {
 
         int count = 0;
         for(Achievement achievement : ALL_ACHIEVEMENTS) {
-            addAchievementComponent(achievement.componentId, achievement.title, achievement.description, achievement.difficulty.points, count % 2 == 0 ? 3423 : 3424, count % 2 == 0 ? 3427 : 3425, achievement.difficulty.sprite, achievement.maxProgress, count);
-            scroll.child(count+1, achievement.componentId, 0, 35 * count);
+            addAchievementComponent(achievement.getComponentId(), achievement.getTitle(), achievement.getDescription(), achievement.getDifficulty().getPoints(), count % 2 == 0 ? 3423 : 3424, count % 2 == 0 ? 3427 : 3425, achievement.getDifficulty().getSprite(), achievement.getMaxProgress(), count);
+            scroll.child(count+1, achievement.getComponentId(), 0, 35 * count);
             count++;
         }
 
         overlay();
+
+        addWrappingText(165339, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, " +
+                "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi "
+                , tda, 0, ColorConstants.RS_ORANGE, false, true, 100);
+
+        rsi.child(30, 165339, 15, 112);
+
+        hoverButton(165340, 3434, 3433, "Open");
+        rsi.child(31, 165340, 13, 279);
+
+        addText(165341, "Points Store", 0xff8624, true, true, -1, 1);
+        rsi.child(32, 165341, 65, 286);
+
+        perks();
+    }
+
+    private static void perks() {
+        RSInterface rsi = addInterface(165342);
+        rsi.totalChildren(42);
+
+        addSpriteLoader(165343, 3406);
+        rsi.child(0, 165343, 2, 15);
+
+        rsi.child(1, 165003, 260, 25);
+        rsi.child(2, 165004, 486, 25);
+        rsi.child(3, 165005, 13, 62);
+        rsi.child(4, 165006, 95, 62);
+        rsi.child(5, 165007, 177, 62);
+        rsi.child(6, 165008, 259, 62);
+        rsi.child(7, 165009, 341, 62);
+        rsi.child(8, 165010, 13, 54);
+        rsi.child(9, 165010, 95, 54);
+        rsi.child(10, 165010, 177, 54);
+        rsi.child(11, 165010, 259, 54);
+        rsi.child(12, 165010, 341, 54);
+        rsi.child(13, 165011, 13, 54);
+        rsi.child(14, 165012, 95, 54);
+        rsi.child(15, 165013, 177, 54);
+        rsi.child(16, 165014, 259, 54);
+        rsi.child(17, 165015, 341, 54);
+        rsi.child(18, 165016, 56, 66);
+        rsi.child(19, 165017, 130, 66);
+        rsi.child(20, 165018, 218, 66);
+        rsi.child(21, 165019, 294, 66);
+        rsi.child(22, 165020, 376, 66);
+        rsi.child(23, 165021, 3, 89);
+        rsi.child(24, 165022, 427, 61);
+        rsi.child(25, 165023, 442, 61);
+        rsi.child(26, 165024, 476, 63);
+        rsi.child(27, 165339, 15, 112);
+        rsi.child(28, 165340, 13, 279);
+        rsi.child(29, 165341, 65, 286);
+
+        hoverButton(165344, 3450, 3449, "Upgrade");
+        rsi.child(30, 165344, 120, 246);
+
+        hoverButton(165345, 3450, 3449, "Purchase");
+        rsi.child(31, 165345, 120, 279);
+
+        addText(165346, "Upgrade Selected Perk", 0xff8624, true, true, -1, 1);
+        rsi.child(32, 165346, 205, 253);
+
+        addText(165347, "Purchase Selected Perk", 0xff8624, true, true, -1, 1);
+        rsi.child(33, 165347, 205, 286);
+
+        rsi.child(34, 165022, 125, 225);
+        rsi.child(35, 165023, 140, 226);
+
+        addText(165348, "75", 0x9d9d9d, false, true, -1, 0);
+        rsi.child(36, 165348, 147, 227);
+
+        addWrappingText(165349, "Lorem ipsum dolor sit amet, consectetur adipiscing elit," +
+                        "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
+                        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi "
+                , tda, 0, ColorConstants.ORANGE, false, true, 190);
+
+        rsi.child(37, 165349, 304, 204);
+
+        addText(165350, "75", 0x9d9d9d, false, true, -1, 0);
+        rsi.child(38, 165350, 345, 108);
+
+        addText(165351, "100", 0x9d9d9d, false, true, -1, 0);
+        rsi.child(39, 165351, 411, 108);
+
+        addText(165352, "150", 0x9d9d9d, false, true, -1, 0);
+        rsi.child(40, 165352, 481, 108);
+
+        addText(165353, "200", 0x9d9d9d, false, true, -1, 0);
+        rsi.child(41, 165353, 410, 162);
     }
 
     private static void overlay() {
@@ -186,7 +276,7 @@ public class Achievements extends RSInterface {
             } else {
                 Optional<Achievement> achievementOptional = ALL_ACHIEVEMENTS
                         .stream()
-                        .filter(ach -> ach.componentId == interfaceId)
+                        .filter(ach -> ach.getComponentId() == interfaceId)
                         .findFirst();
                 if (achievementOptional.isPresent()) {
                     achievement = achievementOptional.get();
@@ -195,17 +285,34 @@ public class Achievements extends RSInterface {
             if(achievement != null) {
                 Client.overlayInterfaceId = 165329;
                 RSInterface.interfaceCache[165001].disableInteraction = true;
-                RSInterface.interfaceCache[165332].enabledSprite = achievement.difficulty.sprite;
-                RSInterface.interfaceCache[165332].disabledSprite = achievement.difficulty.sprite;
-                RSInterface.interfaceCache[165333].message = achievement.title;
-                RSInterface.interfaceCache[165335].message = achievement.description;;
+                RSInterface.interfaceCache[165332].enabledSprite = achievement.getDifficulty().getSprite();
+                RSInterface.interfaceCache[165332].disabledSprite = achievement.getDifficulty().getSprite();
+                RSInterface.interfaceCache[165333].message = achievement.getTitle();
+                RSInterface.interfaceCache[165335].message = achievement.getDescription();;
                 RSInterface.interfaceCache[165337].inv = new int[8];
                 RSInterface.interfaceCache[165337].invStackSizes = new int[8];
-                for(int i = 0; i < achievement.rewards.length; i++) {
-                    RSInterface.interfaceCache[165337].inv[i] = achievement.rewards[i].itemId + 1;
-                    RSInterface.interfaceCache[165337].invStackSizes[i] = achievement.rewards[i].amount;
+                for(int i = 0; i < achievement.getRewards().length; i++) {
+                    RSInterface.interfaceCache[165337].inv[i] = achievement.getRewards()[i].getItemId() + 1;
+                    RSInterface.interfaceCache[165337].invStackSizes[i] = achievement.getRewards()[i].getAmount();
                 }
             }
+        }
+        if(interfaceId == 165340) {
+            switchInterface(Client.openInterfaceID);
+        }
+    }
+
+    private static void switchInterface(int id) {
+        Client.getClient().aBoolean1149 = false;
+        if(id == 165001) {
+            Client.openInterfaceID = 165342;
+            Client.getClient().resetInterfaceAnimation(165342);
+            RSInterface.interfaceCache[165341].message = "Achievements";
+        } else if(id == 165342) {
+            Client.openInterfaceID = 165001;
+            Client.getClient().resetInterfaceAnimation(165001);
+            RSInterface.interfaceCache[165341].message = "Points Store";
+            switchTabs(Difficulty.BEGINNER);
         }
     }
 
@@ -213,18 +320,21 @@ public class Achievements extends RSInterface {
         clear();
         final AtomicInteger matchCount = new AtomicInteger(0);
         if(search.length() >= 1) {
+            if(Client.openInterfaceID != 165001) {
+                switchInterface(Client.openInterfaceID);
+            }
             TreeMap<String, String> map = new TreeMap<>();
             map.put(search.toLowerCase(), search.toLowerCase());
             acdat.build(map);
             for(Achievement achievement : ALL_ACHIEVEMENTS) {
-                String name = achievement.title.toLowerCase();
+                String name = achievement.getTitle().toLowerCase();
                 acdat.parseText(name, (begin, end, value) -> {
                         int count = matchCount.getAndIncrement();
-                        RSInterface component = interfaceCache[achievement.componentId];
+                        RSInterface component = interfaceCache[achievement.getComponentId()];
                         component.disabledSprite = Client.spritesMap.get(count % 2 == 0 ? 3423 : 3424);
                         component.enabledSprite = Client.spritesMap.get(count % 2 == 0 ? 3427 : 3425);
                         component.hideWidget = false;
-                        RSInterface.interfaceCache[165027].childY[(achievement.componentId - 165029) + 1] = 35 * count;
+                        RSInterface.interfaceCache[165027].childY[(achievement.getComponentId() - 165029) + 1] = 35 * count;
                 });
             }
             interfaceCache[165027].scrollMax = Math.max(182, 35 * matchCount.get());
@@ -233,30 +343,40 @@ public class Achievements extends RSInterface {
 
     public static void switchTabs(Difficulty difficulty) {
         List<Achievement> list = new ArrayList<>();
-        switch (difficulty) {
-            case BEGINNER:
-                list = BEGINNER_ACHIEVEMENTS;
-                break;
-            case EASY:
-                list = EASY_ACHIEVEMENTS;
-                break;
-            case MEDIUM:
-                list = MEDIUM_ACHIEVEMENTS;
-                break;
-            case HARD:
-                list = HARD_ACHIEVEMENTS;
-                break;
-            case ELITE:
-                list = ELITE_ACHIEVEMENTS;
-                break;
+        if(Client.openInterfaceID != 165001) {
+            list = BEGINNER_ACHIEVEMENTS;
+            Client.getClient().configPacket(3125, 0);
+        } else {
+            switch (difficulty) {
+                case BEGINNER:
+                    list = BEGINNER_ACHIEVEMENTS;
+                    Client.getClient().configPacket(3125, 0);
+                    break;
+                case EASY:
+                    list = EASY_ACHIEVEMENTS;
+                    Client.getClient().configPacket(3125, 1);
+                    break;
+                case MEDIUM:
+                    list = MEDIUM_ACHIEVEMENTS;
+                    Client.getClient().configPacket(3125, 2);
+                    break;
+                case HARD:
+                    list = HARD_ACHIEVEMENTS;
+                    Client.getClient().configPacket(3125, 3);
+                    break;
+                case ELITE:
+                    list = ELITE_ACHIEVEMENTS;
+                    Client.getClient().configPacket(3125, 4);
+                    break;
+            }
         }
         clear();
         int i = 0;
         for(Achievement achievement : list) {
-            RSInterface.interfaceCache[achievement.componentId].disabledSprite = Client.spritesMap.get(i % 2 == 0 ? 3423 : 3424);
-            RSInterface.interfaceCache[achievement.componentId].enabledSprite = Client.spritesMap.get(i % 2 == 0 ? 3427 : 3425);
-            RSInterface.interfaceCache[165027].childY[(achievement.componentId - 165029) + 1] = i * 35;
-            RSInterface.interfaceCache[achievement.componentId].hideWidget = false;
+            RSInterface.interfaceCache[achievement.getComponentId()].disabledSprite = Client.spritesMap.get(i % 2 == 0 ? 3423 : 3424);
+            RSInterface.interfaceCache[achievement.getComponentId()].enabledSprite = Client.spritesMap.get(i % 2 == 0 ? 3427 : 3425);
+            RSInterface.interfaceCache[165027].childY[(achievement.getComponentId() - 165029) + 1] = i * 35;
+            RSInterface.interfaceCache[achievement.getComponentId()].hideWidget = false;
             i++;
         }
         int size = list.size();
@@ -278,6 +398,9 @@ public class Achievements extends RSInterface {
             interfaceCache[165025].progress = completedElite;
         }
         interfaceCache[165027].scrollMax = Math.max(182, 35 * list.size());
+        if(Client.openInterfaceID != 165001) {
+            switchInterface(Client.openInterfaceID);
+        }
     }
 
     private static void clear() {
@@ -298,92 +421,14 @@ public class Achievements extends RSInterface {
             for(int i = 0; i < ALL_ACHIEVEMENTS.size(); i++) {
                 ALL_ACHIEVEMENTS.get(i).setComponentId(165029+i);
             }
-            BEGINNER_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.BEGINNER)).collect(Collectors.toList()));
-            EASY_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.EASY)).collect(Collectors.toList()));
-            MEDIUM_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.MEDIUM)).collect(Collectors.toList()));
-            HARD_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.HARD)).collect(Collectors.toList()));
-            ELITE_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.difficulty.equals(Difficulty.ELITE)).collect(Collectors.toList()));
+            BEGINNER_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.getDifficulty().equals(Difficulty.BEGINNER)).collect(Collectors.toList()));
+            EASY_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.getDifficulty().equals(Difficulty.EASY)).collect(Collectors.toList()));
+            MEDIUM_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.getDifficulty().equals(Difficulty.MEDIUM)).collect(Collectors.toList()));
+            HARD_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.getDifficulty().equals(Difficulty.HARD)).collect(Collectors.toList()));
+            ELITE_ACHIEVEMENTS.addAll(ALL_ACHIEVEMENTS.stream().filter(achievement -> achievement.getDifficulty().equals(Difficulty.ELITE)).collect(Collectors.toList()));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public enum Difficulty {
-        BEGINNER(Client.spritesMap.get(3428), 1),
-        EASY(Client.spritesMap.get(3432), 2),
-        MEDIUM(Client.spritesMap.get(3430), 3),
-        HARD(Client.spritesMap.get(3429), 4),
-        ELITE(Client.spritesMap.get(3431), 5);
-
-        private final Sprite sprite;
-        private final int points;
-
-        Difficulty(Sprite sprite, int points) {
-            this.sprite = sprite;
-            this.points = points;
-        }
-    }
-
-    static class Achievement {
-        private String title;
-        private String description;
-        private int maxProgress;
-        private Difficulty difficulty;
-        private int primaryKey;
-        private int componentId;
-        private Reward[] rewards;
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public void setDescription(String description) {
-            this.description = description;
-        }
-
-        public void setMaxProgress(int maxProgress) {
-            this.maxProgress = maxProgress;
-        }
-
-        public void setDifficulty(Difficulty difficulty) {
-            this.difficulty = difficulty;
-        }
-
-        public void setComponentId(int componentId) {
-            this.componentId = componentId;
-        }
-
-        public void setRewards(Reward[] rewards) {
-            this.rewards = rewards;
-        }
-
-        public Reward[] getRewards() {
-            return rewards;
-        }
-
-        public void setPrimaryKey(int primaryKey) {
-            this.primaryKey = primaryKey;
-        }
-    }
-
-    static class Reward {
-        private int itemId;
-        private int amount;
-
-        public int getItemId() {
-            return itemId;
-        }
-
-        public void setItemId(int itemId) {
-            this.itemId = itemId;
-        }
-
-        public int getAmount() {
-            return amount;
-        }
-
-        public void setAmount(int amount) {
-            this.amount = amount;
-        }
-    }
 }
