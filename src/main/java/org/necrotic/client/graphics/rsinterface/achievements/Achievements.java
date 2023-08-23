@@ -7,7 +7,6 @@ import org.necrotic.ColorConstants;
 import org.necrotic.client.Client;
 import org.necrotic.client.RSInterface;
 import org.necrotic.client.Signlink;
-import org.necrotic.client.graphics.Sprite;
 import org.necrotic.client.graphics.rsinterface.ProgressBarType;
 
 import java.io.File;
@@ -35,6 +34,19 @@ public class Achievements extends RSInterface {
     public static final List<Achievement> ELITE_ACHIEVEMENTS = new ArrayList<>();
 
     public static int completedBeginner = 0, completedEasy = 0, completedMedium = 0, completedHard = 0, completedElite = 0;
+
+    private static final HashMap<Integer, String> PERK_DESCRIPTIONS = new HashMap<>();
+    static {
+        PERK_DESCRIPTIONS.put(165354, "This is perk one");
+        PERK_DESCRIPTIONS.put(165355, "This is perk two");
+        PERK_DESCRIPTIONS.put(165356, "This is perk three");
+        PERK_DESCRIPTIONS.put(165357, "This is perk four");
+        PERK_DESCRIPTIONS.put(165358, "This is perk five");
+        PERK_DESCRIPTIONS.put(165359, "This is perk six");
+        PERK_DESCRIPTIONS.put(165360, "This is perk seven");
+        PERK_DESCRIPTIONS.put(165361, "This is perk eight");
+        PERK_DESCRIPTIONS.put(165362, "This is perk nine");
+    }
 
     private static void achievement() {
         RSInterface rsi = addInterface(165001);
@@ -323,6 +335,8 @@ public class Achievements extends RSInterface {
                     RSInterface.interfaceCache[165337].invStackSizes[i] = achievement.getRewards()[i].getAmount();
                 }
             }
+        } else if(interfaceId >= 165354 && interfaceId <= 165362) {
+            RSInterface.interfaceCache[165349].message = PERK_DESCRIPTIONS.get(interfaceId);
         }
         if(interfaceId == 165340) {
             switchInterface(Client.openInterfaceID);
@@ -330,7 +344,7 @@ public class Achievements extends RSInterface {
     }
 
     private static void switchInterface(int id) {
-        Client.getClient().aBoolean1149 = false;
+        Client.getClient().messagePromptRaised = false;
         if(id == 165001) {
             Client.openInterfaceID = 165342;
             Client.getClient().resetInterfaceAnimation(165342);
