@@ -375,11 +375,14 @@ public class Achievements extends RSInterface {
 
     public static void reset() {
         showPerk(165354);
+        switchInterface(165342);
         Client.getClient().configPacket(3126, 0);
     }
 
     private static void switchInterface(int id) {
         Client.getClient().messagePromptRaised = false;
+        showPerk(165354);
+        Client.getClient().configPacket(3126, 0);
         if(id == 165001) {
             Client.openInterfaceID = 165342;
             Client.getClient().resetInterfaceAnimation(165342);
