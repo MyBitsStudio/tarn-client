@@ -1,6 +1,7 @@
 package org.necrotic.client.cache.definition.items;
 
 public enum TierColor {
+    //<shad=1><col=00e673>
 
     BEGGINER(""),
     NOVICE("<col=b5aaaa>"),

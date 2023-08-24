@@ -7,22 +7,74 @@ import org.necrotic.client.cache.definition.ItemDefinition;
  */
 public class olds {
 //
-//    case 19331:
-//    itemDef.name = "Frozen staff";
-//    itemdefedit = ItemDefinition.get(15486);
-//    itemDef.modelID = itemdefedit.modelID;
-//    itemDef.maleEquip1 = itemdefedit.maleEquip1;
-//    itemDef.femaleEquip1 = itemdefedit.femaleEquip1;
-//
-//    itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-//    //	itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-//    itemDef.modelOffsetY = itemdefedit.modelOffsetY;
-//    itemDef.modelZoom = itemdefedit.modelZoom;
-//    itemDef.rotationY = itemdefedit.rotationY;
-//    itemDef.rotationX = itemdefedit.rotationX;
-//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+
+//    case 8410:
+//    itemDef.name = "Elite Sword";
+//    itemdefedit1 = ItemDefinition.get(4587);
+//    itemDef.modelID = 64487;
+//    itemDef.femaleEquip1 = 64488;
+//    itemDef.maleEquip1 = 64488;
+//    itemDef.modelOffsetX = itemdefedit1.modelOffsetX;
+//    itemDef.modelOffsetY = itemdefedit1.modelOffsetY;
+//    itemDef.modelZoom = itemdefedit1.modelZoom;
+//    itemDef.rotationY = itemdefedit1.rotationY;
+//    itemDef.rotationX = itemdefedit1.rotationX;
 //    itemDef.stackable = false;
-//    itemDef.rdc2 = 7792950;
+//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//    itemDef.newModelColor = new int[]{40};
+//    itemDef.editedModelColor = new int[]{60};
+//				break;
+//			case 8411:
+//    itemDef.name = "Elite Bow";
+//    itemdefedit1 = ItemDefinition.get(859);
+//    itemDef.modelID = 64485;
+//    itemDef.femaleEquip1 = 64486;
+//    itemDef.maleEquip1 = 64486;
+//    itemDef.modelOffsetX = itemdefedit1.modelOffsetX;
+//    itemDef.modelOffsetY = itemdefedit1.modelOffsetY;
+//    itemDef.modelZoom = itemdefedit1.modelZoom;
+//    itemDef.rotationY = itemdefedit1.rotationY;
+//    itemDef.rotationX = itemdefedit1.rotationX;
+//    itemDef.stackable = false;
+//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//    //	itemDef.rdc2  = 20483;
+//    itemDef.newModelColor = new int[]{40};
+//    itemDef.editedModelColor = new int[]{59};
+//				break;
+//			case 8412:
+//    itemDef.name = "Elite Staff";
+//    itemdefedit1 = ItemDefinition.get(4587);
+//    itemDef.modelID = 64489;
+//    itemDef.femaleEquip1 = 64490;
+//    itemDef.maleEquip1 = 64490;
+//    itemDef.modelOffsetX = itemdefedit1.modelOffsetX;
+//    itemDef.modelOffsetY = itemdefedit1.modelOffsetY;
+//    itemDef.modelZoom = itemdefedit1.modelZoom;
+//    itemDef.rotationY = itemdefedit1.rotationY;
+//    itemDef.rotationX = itemdefedit1.rotationX;
+//    itemDef.stackable = false;
+//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//    itemDef.newModelColor = new int[]{40};
+//    itemDef.editedModelColor = new int[]{58};
+//				break;
+
+
+
+//    case 9929:
+//    itemDef.name = "Cleric Rifle";
+//    ItemDefinition itemDef2 = ItemDefinition.get(20538);
+//    // itemDef.modelID = itemDef2.modelID;
+//    itemDef.modelID = 65024;
+//    itemDef.femaleEquip1 = 65025;
+//    itemDef.maleEquip1 = 65025;
+//    itemDef.modelOffsetX = 1;
+//    //	itemDef.modelOffsetX = itemDef2.modelOffsetX;
+//    itemDef.modelOffsetY = 30;
+//    itemDef.modelZoom = 2100;
+//    itemDef.rotationY = 200;
+//    itemDef.rotationX = itemDef2.rotationX;
+//    itemDef.stackable = false;
+//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 //				break;
 
 //			case 675:

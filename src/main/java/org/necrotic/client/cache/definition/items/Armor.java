@@ -372,6 +372,10 @@ public class Armor {
             case 15450:
                 itemDef.name = "Collectors Aura I";
                 break;
+            case 26:
+                itemDef.name = "Sassy Aura";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
 
 
             /* Ironman */

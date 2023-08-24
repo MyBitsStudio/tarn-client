@@ -1617,7 +1617,7 @@ public class Sets {
                 itemDef.rdc2 = 19518;
                 break;
             case 8001:
-                itemDef.name = "Deviant Crossbow";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Deviant Crossbow";
                 itemDef.modelID = 64495;
                 itemDef.maleEquip1 = 64496;
                 itemDef.femaleEquip1 = 64496;
@@ -1680,7 +1680,7 @@ public class Sets {
                 itemDef.editedModelColor = new int[]{51};
                 break;
             case 17600:
-                itemDef.name = "Belligerent staff";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Belligerent staff";
                 itemDef.modelID = 65486;
                 itemDef.maleEquip1 = 65487;
                 itemDef.femaleEquip1 = 65487;
@@ -1698,7 +1698,7 @@ public class Sets {
             /* Tier 12 */
 
             case 15115:
-                itemDef.name = "<shad=1><col=00e673>Extreme helm";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Extreme helm";
                 itemDef.modelID = 65192;
                 itemDef.maleEquip1 = 65193;
                 itemDef.femaleEquip1 = 65193;
@@ -1713,7 +1713,7 @@ public class Sets {
                 itemDef.rdc2 = 88205;
                 break;
             case 15116:
-                itemDef.name = "<shad=1><col=00e673>Extreme body";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Extreme body";
                 itemDef.modelID = 65194;
                 itemDef.maleEquip1 = 65195;
                 itemDef.femaleEquip1 = 65195;
@@ -1728,7 +1728,7 @@ public class Sets {
                 itemDef.rdc2 = 88205;
                 break;
             case 15117:
-                itemDef.name = "<shad=1><col=00e673>Extreme legs";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Extreme legs";
                 itemDef.modelID = 65196;
                 itemDef.maleEquip1 = 65197;
                 itemDef.femaleEquip1 = 65197;
@@ -1743,7 +1743,7 @@ public class Sets {
                 itemDef.rdc2 = 88205;
                 break;
             case 15118:
-                itemDef.name = "<shad=1><col=00e673>Extreme gloves";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Extreme gloves";
                 itemDef.modelID = 65198;
                 itemDef.maleEquip1 = 65199;
                 itemDef.femaleEquip1 = 65199;
@@ -1758,7 +1758,7 @@ public class Sets {
                 itemDef.rdc2 = 88205;
                 break;
             case 15119:
-                itemDef.name = "<shad=1><col=00e673>Extreme boots";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Extreme boots";
                 itemDef.modelID = 65200;
                 itemDef.maleEquip1 = 65200;
                 itemDef.femaleEquip1 = 65200;
@@ -1774,7 +1774,7 @@ public class Sets {
                 itemDef.rdc2 = 88205;
                 break;
             case 15121:
-                itemDef.name = "Extreme spear";
+                itemDef.name = TierColor.ADVANCED.getColor() +"Extreme spear";
                 itemDef.modelID = 65201;
                 itemDef.maleEquip1 = 65202;
                 itemDef.femaleEquip1 = 65202;
@@ -1789,6 +1789,416 @@ public class Sets {
                 itemDef.rdc2 = 88205;
                 break;
 
+            case 14056:
+                itemDef.name = TierColor.ADVANCED.getColor() +"Cleric Bow";
+                itemDef.modelID = 64358;
+                itemDef.maleEquip1 = 64359;
+                itemDef.femaleEquip1 = 64359;
+                itemDefs = ItemDefinition.get(9185);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = 1700;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+
+            case 20060:
+                itemDef.name = TierColor.ADVANCED.getColor() +"Cleric helm";
+                itemDef.modelID = 65385;
+                itemDef.maleEquip1 = 65386;
+                itemDef.femaleEquip1 = 65386;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.newModelColor = new int[]{52};
+                itemDef.editedModelColor = new int[]{88};
+                break;
+            case 20062:
+                itemDef.name = TierColor.ADVANCED.getColor() +"Cleric body";
+                itemDef.modelID = 65387;
+                itemDef.maleEquip1 = 65388;
+                itemDef.femaleEquip1 = 65388;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.newModelColor = new int[]{52};
+                itemDef.editedModelColor = new int[]{88};
+                break;
+            case 20063:
+                itemDef.name = TierColor.ADVANCED.getColor() +"Cleric legs";
+                itemDef.modelID = 65389;
+                itemDef.maleEquip1 = 65390;
+                itemDef.femaleEquip1 = 65390;
+                itemDefs = ItemDefinition.get(4900);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.newModelColor = new int[]{52};
+                itemDef.editedModelColor = new int[]{88};
+                break;
+            case 20073:
+                itemDef.name = TierColor.ADVANCED.getColor() +"Cleric boots";
+                itemDefs = ItemDefinition.get(7114);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.modelID = 64177;
+                itemDef.maleEquip1 = 64178;
+                itemDef.femaleEquip1 = 64178;
+                itemDef.actions = itemDefs.actions;
+                break;
+
+            case 19800:
+                itemDef.name = TierColor.ADVANCED.getColor() +"Cleric Teddybear";
+                itemDef.modelID = 64034;
+                itemDef.maleEquip1 = 64035;
+                itemDef.femaleEquip1 = 64035;
+                itemDefs = ItemDefinition.get(8848);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = 1000;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 19331:
+                itemDef.name = TierColor.ADVANCED.getColor() +"Godly staff";
+                itemDefs = ItemDefinition.get(15486);
+                itemDef.modelID = itemDefs.modelID;
+                itemDef.maleEquip1 = itemDefs.maleEquip1;
+                itemDef.femaleEquip1 = itemDefs.femaleEquip1;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 7792950;
+                break;
+
+            case 14050:
+                itemDef.name = TierColor.ADVANCED.getColor() +"Godly helm";
+                itemDef.modelID = 65385;
+                itemDef.maleEquip1 = 65386;
+                itemDef.femaleEquip1 = 65386;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.newModelColor = new int[]{52};
+                itemDef.editedModelColor = new int[]{91};
+                break;
+            case 14051:
+                itemDef.name = TierColor.ADVANCED.getColor() +"Godly body";
+                itemDef.modelID = 65387;
+                itemDef.maleEquip1 = 65388;
+                itemDef.femaleEquip1 = 65388;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                //	itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.newModelColor = new int[]{52};
+                itemDef.editedModelColor = new int[]{91};
+                break;
+            case 14052:
+                itemDef.name = TierColor.ADVANCED.getColor() +"Godly Legs";
+                itemDef.modelID = 65389;
+                itemDef.maleEquip1 = 65390;
+                itemDef.femaleEquip1 = 65390;
+                itemDefs = ItemDefinition.get(4900);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.newModelColor = new int[]{52};
+                itemDef.editedModelColor = new int[]{91};
+                break;
+
+            /* Tier 13 */
+
+            case 3740:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Yogi helm";
+                itemDef.modelID = 64401;
+                itemDef.maleEquip1 = 64402;
+                itemDef.femaleEquip1 = 64402;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 23453;
+                break;
+            case 3741:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Yogi body";
+                itemDef.modelID = 64403;
+                itemDef.maleEquip1 = 64404;
+                itemDef.femaleEquip1 = 64404;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 23453;
+                break;
+            case 3742:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Yogi legs";
+                itemDef.modelID = 64405;
+                itemDef.maleEquip1 = 64406;
+                itemDef.femaleEquip1 = 64406;
+                itemDefs = ItemDefinition.get(4900);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 23453;
+                break;
+            case 3744:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Yogi Bow";
+                itemDefs = ItemDefinition.get(859);
+                itemDef.modelID = 64397;
+                itemDef.femaleEquip1 = 64398;
+                itemDef.maleEquip1 = 64398;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.rdc2 = 23453;
+                break;
+            case 3745:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Yogi Staff";
+                itemDefs = ItemDefinition.get(4675);
+                itemDef.modelID = 64399;
+                itemDef.femaleEquip1 = 64400;
+                itemDef.maleEquip1 = 64400;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.rdc2 = 23453;
+                break;
+
+            /* Tier 14 */
+
+            case 3720:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Scarlet helm";
+                itemDef.modelID = 64407;
+                itemDef.maleEquip1 = 64408;
+                itemDef.femaleEquip1 = 64408;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 3721:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Scarlet body";
+                itemDef.modelID = 64409;
+                itemDef.maleEquip1 = 64410;
+                itemDef.femaleEquip1 = 64410;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 3722:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Scarlet legs";
+                itemDef.modelID = 64411;
+                itemDef.maleEquip1 = 64412;
+                itemDef.femaleEquip1 = 64412;
+                itemDefs = ItemDefinition.get(4900);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 3737:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Scarlet Sword";
+                itemDefs = ItemDefinition.get(4587);
+                itemDef.modelID = 64395;
+                itemDef.femaleEquip1 = 64396;
+                itemDef.maleEquip1 = 64396;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+				break;
+
+            case 3739:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Azure Staff";
+                itemDefs = ItemDefinition.get(4675);
+                itemDef.modelID = 64399;
+                itemDef.femaleEquip1 = 64400;
+                itemDef.maleEquip1 = 64400;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+            case 3726:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Azure Helmet";
+                itemDef.modelID = 64419;
+                itemDef.maleEquip1 = 64420;
+                itemDef.femaleEquip1 = 64420;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 3728:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Azure body";
+                itemDef.modelID = 64421;
+                itemDef.maleEquip1 = 64422;
+                itemDef.femaleEquip1 = 64422;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 3730:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Azure legs";
+                itemDef.modelID = 64423;
+                itemDef.maleEquip1 = 64424;
+                itemDef.femaleEquip1 = 64424;
+                itemDefs = ItemDefinition.get(4900);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 3723:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Herbal Helmet";
+                itemDef.modelID = 64413;
+                itemDef.maleEquip1 = 64414;
+                itemDef.femaleEquip1 = 64414;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 3724:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Herbal Body";
+                itemDef.modelID = 64415;
+                itemDef.maleEquip1 = 64416;
+                itemDef.femaleEquip1 = 64416;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 3725:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Herbal legs";
+                itemDef.modelID = 64417;
+                itemDef.maleEquip1 = 64418;
+                itemDef.femaleEquip1 = 64418;
+                itemDefs = ItemDefinition.get(4900);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 3738:
+                itemDef.name = TierColor.UNCOMMON.getColor() +"Herbal Bow";
+                itemDefs = ItemDefinition.get(859);
+                itemDef.modelID = 64397;
+                itemDef.femaleEquip1 = 64398;
+                itemDef.maleEquip1 = 64398;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
 
         }
         return itemDef;
