@@ -8,6 +8,18 @@ public class Items {
         ItemDefinition itemDefs;
         switch (id) {
 
+            case 8644:
+                itemDef.name = "Barricade";
+                itemDef.actions = new String[]{null, null, null, null, null};
+                itemDef.stackable = false;
+                itemDef.modelID = 40782;
+                itemDef.modelZoom = 2500;
+                break;
+            case 15430:
+                itemDef.name = "Essence";
+                itemDef.actions = new String[]{null, null, null, null, null};
+                break;
+
             case 995:
                 itemDef.name = "Coins";
                 itemDef.actions = new String[5];
@@ -76,6 +88,10 @@ public class Items {
             case 13727: // stardust
                 itemDef.actions = new String[]{null, null, null, null, "Drop"};
                 break;
+            case 21819:
+                itemDef.name = "Loot Device";
+                itemDef.actions = new String[]{"Check", null, null, null, "Drop"};
+                break;
             case 14505:
                 itemDef.name = "Ancient Monic";
                 itemDef.actions = new String[]{"Activate", null, null, null, "Drop"};
@@ -93,7 +109,6 @@ public class Items {
                 itemDef.name = "Vote Scroll";
                 itemDef.rdc2 = 15345;
                 break;
-
             case 23057:
                 itemDef.copyItem(1);
                 itemDef.name = "$10 Bond";
@@ -997,6 +1012,10 @@ public class Items {
                 break;
 
             /* Not Used Yet */
+            case 18768:
+                itemDef.name = "Dragonball Saga box";
+                itemDef.rdc2 = 2233311;
+                break;
             case 8213:
 				itemDef.name = "Christmas token";
 				itemDef.stackable = true;

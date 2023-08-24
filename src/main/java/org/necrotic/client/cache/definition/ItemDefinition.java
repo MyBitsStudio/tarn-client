@@ -197,12 +197,11 @@ public final class ItemDefinition {
             /*case 7478:
                 model.setTexture(76);
                 break;*/
-			case 20073:
-			case 19800:
-			case 19802:
-			case 9929:
-				model.setTexture(88);
-				break;
+//			case 20073:
+//			case 19800:
+//			case 19802:
+//			case 9929:
+//				model.setTexture(88);
 			case 14733:
 			case 14732:
 			case 14734:
@@ -210,12 +209,12 @@ public final class ItemDefinition {
 			case 12864:
 			case 10865:
 				model.setTexture(69);
-			case 14053:
-			case 14055:
-			case 14056:
-			case 14054:
-				model.setTexture(91);
-				break;
+//			case 14053:
+//			case 14055:
+//			case 14056:
+//			case 14054:
+//				model.setTexture(91);
+//				break;
 			case 12630:
 
 				model.setTexture(81);
