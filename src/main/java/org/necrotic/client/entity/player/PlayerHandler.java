@@ -158,6 +158,7 @@ public class PlayerHandler {
 		client.setInputTaken(false);
 		client.inputString = "";
 		Achievements.switchTabs(Difficulty.BEGINNER);
+		Achievements.reset();
 	}
 
 }

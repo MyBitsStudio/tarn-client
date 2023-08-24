@@ -179,7 +179,7 @@ public class Achievements extends RSInterface {
 
     private static void perks() {
         RSInterface rsi = addInterface(165342);
-        rsi.totalChildren(51);
+        rsi.totalChildren(56);
 
         addSpriteLoader(165343, 3406);
         rsi.child(0, 165343, 2, 15);
@@ -277,6 +277,19 @@ public class Achievements extends RSInterface {
 
         addHoverableConfigSprite(165362, 3499, 3500, true, "Perk 9", 9, 3126);
         rsi.child(50, 165362, 130, 180);
+
+        addSprite(165363, 3459);
+        addSprite(165364, 3459);
+        addSprite(165365, 3459);
+        addSprite(165366, 3459);
+        addSprite(165367, 3459);
+
+        rsi.child(51, 165363, 300, 90);
+        rsi.child(52, 165364, 371, 90);
+        rsi.child(53, 165365, 441, 90);
+        rsi.child(54, 165366, 441, 144);
+        rsi.child(55, 165367, 371, 144);
+
     }
 
     private static void overlay() {
@@ -346,10 +359,23 @@ public class Achievements extends RSInterface {
             }
         } else if(interfaceId >= 165354 && interfaceId <= 165362) {
             RSInterface.interfaceCache[165349].message = PERK_DESCRIPTIONS.get(interfaceId);
+            showPerk(interfaceId);
         }
         if(interfaceId == 165340) {
             switchInterface(Client.openInterfaceID);
         }
+    }
+
+    public static void showPerk(int id) {
+        for(int i = 165363; i <= 165367; i++) {
+            RSInterface.interfaceCache[i].enabledSprite = RSInterface.interfaceCache[id].enabledSprite;
+            RSInterface.interfaceCache[i].disabledSprite = RSInterface.interfaceCache[id].disabledSprite;
+        }
+    }
+
+    public static void reset() {
+        showPerk(165354);
+        Client.getClient().configPacket(3126, 0);
     }
 
     private static void switchInterface(int id) {

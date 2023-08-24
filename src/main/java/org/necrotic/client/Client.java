@@ -10609,6 +10609,7 @@ public class Client extends GameRenderer {
         }
 
         manageTextInput();
+
         super.idleTime++;
 
         if (super.idleTime > 9000 && !isInactive) {
@@ -15348,14 +15349,24 @@ public class Client extends GameRenderer {
                         switch (key) {
                             case 0:
                                 Achievements.completedBeginner = amount;
+                                RSInterface.interfaceCache[165011].progress = (int) (100 - (((float) amount / Achievements.BEGINNER_ACHIEVEMENTS.size()) * 100));
+                                break;
                             case 1:
                                 Achievements.completedEasy = amount;
+                                RSInterface.interfaceCache[165012].progress = (int) (100 - (((float) amount / Achievements.EASY_ACHIEVEMENTS.size()) * 100));
+                                break;
                             case 2:
                                 Achievements.completedMedium = amount;
+                                RSInterface.interfaceCache[165013].progress = (int) (100 - (((float) amount / Achievements.MEDIUM_ACHIEVEMENTS.size()) * 100));
+                                break;
                             case 3:
                                 Achievements.completedHard = amount;
+                                RSInterface.interfaceCache[165014].progress = (int) (100 - (((float) amount / Achievements.HARD_ACHIEVEMENTS.size()) * 100));
+                                break;
                             case 4:
                                 Achievements.completedElite = amount;
+                                RSInterface.interfaceCache[165015].progress = (int) (100 - (((float) amount / Achievements.ELITE_ACHIEVEMENTS.size()) * 100));
+                                break;
                         }
                         pktType = -1;
                         return true;
@@ -16315,6 +16326,7 @@ public class Client extends GameRenderer {
 
                     if(openInterfaceID != -1) {
                         RSInterface.interfaceCache[openInterfaceID].disableInteraction = false;
+                        Achievements.reset();
                         openInterfaceID = -1;
                         overlayInterfaceId = -1;
                     }
