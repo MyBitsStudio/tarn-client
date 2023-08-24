@@ -362,7 +362,8 @@ public class Achievements extends RSInterface {
             showPerk(interfaceId);
         }
         if(interfaceId == 165340) {
-            switchInterface(Client.openInterfaceID);
+            Client.getClient().messagePromptRaised = false;
+            switchInterface(Client.openInterfaceID, true);
         }
     }
 
@@ -374,24 +375,28 @@ public class Achievements extends RSInterface {
     }
 
     public static void reset() {
+        Client.getClient().messagePromptRaised = false;
         showPerk(165354);
-        switchInterface(165342);
+        switchInterface(165342, false);
         Client.getClient().configPacket(3126, 0);
     }
 
-    private static void switchInterface(int id) {
-        Client.getClient().messagePromptRaised = false;
+    private static void switchInterface(int id, boolean show) {
         showPerk(165354);
         Client.getClient().configPacket(3126, 0);
         if(id == 165001) {
-            Client.openInterfaceID = 165342;
+            if(show) {
+                Client.openInterfaceID = 165342;
+            }
             Client.getClient().resetInterfaceAnimation(165342);
             RSInterface.interfaceCache[165341].message = "Achievements";
         } else if(id == 165342) {
-            Client.openInterfaceID = 165001;
+            if(show) {
+                Client.openInterfaceID = 165001;
+            }
             Client.getClient().resetInterfaceAnimation(165001);
             RSInterface.interfaceCache[165341].message = "Points Store";
-            switchTabs(Difficulty.BEGINNER);
+            switchTabs(Difficulty.BEGINNER, show);
         }
     }
 
@@ -400,7 +405,7 @@ public class Achievements extends RSInterface {
         final AtomicInteger matchCount = new AtomicInteger(0);
         if(search.length() >= 1) {
             if(Client.openInterfaceID != 165001) {
-                switchInterface(Client.openInterfaceID);
+                switchInterface(Client.openInterfaceID, true);
             }
             TreeMap<String, String> map = new TreeMap<>();
             map.put(search.toLowerCase(), search.toLowerCase());
@@ -420,7 +425,7 @@ public class Achievements extends RSInterface {
         }
     }
 
-    public static void switchTabs(Difficulty difficulty) {
+    public static void switchTabs(Difficulty difficulty, boolean show) {
         List<Achievement> list = new ArrayList<>();
         if(Client.openInterfaceID != 165001) {
             list = BEGINNER_ACHIEVEMENTS;
@@ -478,7 +483,8 @@ public class Achievements extends RSInterface {
         }
         interfaceCache[165027].scrollMax = Math.max(182, 35 * list.size());
         if(Client.openInterfaceID != 165001) {
-            switchInterface(Client.openInterfaceID);
+            Client.getClient().messagePromptRaised = false;
+            switchInterface(Client.openInterfaceID, show);
         }
     }
 

@@ -4805,15 +4805,15 @@ public class Client extends GameRenderer {
 
         if(RSInterface.interfaceCache[interfaceId] != null) {
             if (RSInterface.interfaceCache[interfaceId].contentType == 965) {
-                Achievements.switchTabs(Difficulty.BEGINNER);
+                Achievements.switchTabs(Difficulty.BEGINNER, true);
             } else if (RSInterface.interfaceCache[interfaceId].contentType == 966) {
-                Achievements.switchTabs(Difficulty.EASY);
+                Achievements.switchTabs(Difficulty.EASY, true);
             } else if (RSInterface.interfaceCache[interfaceId].contentType == 967) {
-                Achievements.switchTabs(Difficulty.MEDIUM);
+                Achievements.switchTabs(Difficulty.MEDIUM, true);
             } else if (RSInterface.interfaceCache[interfaceId].contentType == 968) {
-                Achievements.switchTabs(Difficulty.HARD);
+                Achievements.switchTabs(Difficulty.HARD, true);
             } else if (RSInterface.interfaceCache[interfaceId].contentType == 969) {
-                Achievements.switchTabs(Difficulty.ELITE);
+                Achievements.switchTabs(Difficulty.ELITE, true);
             }
             Achievements.onButtonClick(interfaceId);
         }

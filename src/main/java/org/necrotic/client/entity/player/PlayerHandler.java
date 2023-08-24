@@ -157,7 +157,7 @@ public class PlayerHandler {
 		quedBalloonY = -1;
 		client.setInputTaken(false);
 		client.inputString = "";
-		Achievements.switchTabs(Difficulty.BEGINNER);
+		Achievements.switchTabs(Difficulty.BEGINNER, false);
 		Achievements.reset();
 	}
 
