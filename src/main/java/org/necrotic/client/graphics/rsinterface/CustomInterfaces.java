@@ -8144,7 +8144,7 @@ public class CustomInterfaces extends RSInterface {
 		Shops.build(tda);
 		TrackInterface.build(tda);
 		TarnTower.build(tda);
-		Shops.buildBuy(tda);
+		StarterShop.build(tda);
 
 		Equipment.build(tda);
 		Equipment.equipment();
@@ -8156,5 +8156,7 @@ public class CustomInterfaces extends RSInterface {
         MinigameInterfaces.build();
 		Achievements.build();
 		MonicInterface.build(tda);
+
+		SlayerInterface.build(tda);
     }
 }

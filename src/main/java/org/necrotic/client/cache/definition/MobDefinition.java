@@ -170,19 +170,22 @@ public final class MobDefinition {
 			case 12810:
 				definition.name = "Infernal demon";
 				break;
+			case 5249:
+				definition.name = "Junk Shop (Sell To Me)";
+				break;
+			case 932:
+				definition.name = "General Shop";
+				break;
 			case 9000:
 				definition.npcModels = get(12810).npcModels;
 				definition.combatLevel = 0;
-				definition.name = "Boss Slayer Master";
-				definition.actions = new String[]{"Talk-To", null, "Get-Task", "Open-Shop", null};
+				definition.name = "Slayer Master";
+				definition.actions = new String[]{"Talk-To", null, "Get-Task", null, null};
 				definition.standAnimation = get(12810).standAnimation;
 				definition.walkAnimation = get(12810).walkAnimation;
 				definition.npcSizeInSquares = 1;
 				definition.scaleY = 64;
 				definition.scaleXZ = 64;
-				//definition.walkingBackwardsAnimation = 4;
-				//definition.walkLeftAnimation = 4;
-				//definition.walkRightAnimation = 4;
 				break;
 
 			case 1830:
