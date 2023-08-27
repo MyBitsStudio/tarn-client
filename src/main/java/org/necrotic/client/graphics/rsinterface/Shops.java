@@ -69,42 +69,6 @@ public class Shops extends RSInterface {
 
         rsi.child(17, 162000, 160, 46);
 
-
-    }
-
-    public static void buildBuy(TextDrawingArea[] tda){
-        RSInterface rsi = addInterface(164000);
-
-        addSpriteLoader(164001, 3009);
-        addText(164002, "Buy Item", ColorConstants.AQUA, true, true, -1, 2);
-
-        addText(164003, "90m Tokens", ColorConstants.WHITE, true, true, -1, 1);
-
-        dropGroup(164004, 1, 1, 1, 1);
-
-        addButtonWSpriteLoader(164005, 3296, "Buy");
-        addText(164006, "Buy", ColorConstants.SNOW_WHITE, true, true, -1, 1);
-
-        addButtonWSpriteLoader(164007, 3296, "Cancel");
-        addText(164008, "Cancel", ColorConstants.SNOW_WHITE, true, true, -1, 1);
-
-        rsi.totalChildren(8);
-
-        rsi.child(0, 164001, 190, 40);
-        rsi.child(1, 164002, 253, 46);
-
-        rsi.child(2, 164003, 253, 74);
-
-        rsi.child(3, 164004, 236, 110);
-
-        rsi.child(4, 164005, 224, 170);
-        rsi.child(5, 164006, 254, 173);
-
-        rsi.child(6, 164007, 224, 200);
-        rsi.child(7, 164008, 254, 203);
-
-
-
     }
 
 

@@ -146,6 +146,21 @@ public class Items {
                 itemDef.rotationX = itemDefs.rotationX;
                 itemDef.modelZoom = 1300;
                 break;
+            case 23166:
+                itemDef.copyItem(23165);
+                itemDef.name = "Instance Unlock Scroll";
+                itemDef.modelID = 100316;
+                break;
+            case 23168:
+                itemDef.copyItem(23165);
+                itemDef.name = "Raids Unlock scroll";
+                itemDef.modelID = 100319;
+                break;
+            case 23167:
+                itemDef.copyItem(23165);
+                itemDef.name = "Holy Unlock scroll";
+                itemDef.modelID = 100317;
+                break;
             case 22214:
                 itemDef.copyItem(3114);
                 itemDef.name = "Helmet Certificate";
@@ -291,6 +306,42 @@ public class Items {
                 itemDef.actions = itemDefs.actions;
                 itemDef.modelID = 65285;
                 itemDef.modelZoom = 1500;
+                break;
+            case 2025:
+                itemDef.copyItem(2023);
+                itemDef.name = "Starter Bones";
+                itemDef.newModelColor = new int[]{63};
+                itemDef.editedModelColor = new int[]{72};
+                break;
+            case 4010:
+                itemDef.copyItem(2023);
+                itemDef.name = "Mystic Bones";
+                itemDef.newModelColor = new int[]{63};
+                itemDef.editedModelColor = new int[]{79};
+                break;
+            case 4011:
+                itemDef.copyItem(2023);
+                itemDef.name = "Callous Bones";
+                itemDef.newModelColor = new int[]{63};
+                itemDef.editedModelColor = new int[]{91};
+                break;
+            case 4012:
+                itemDef.copyItem(2023);
+                itemDef.name = "Night Bones";
+                itemDef.newModelColor = new int[]{63};
+                itemDef.editedModelColor = new int[]{66};
+                break;
+            case 4013:
+                itemDef.copyItem(2023);
+                itemDef.name = "Chipped Bones";
+                itemDef.newModelColor = new int[]{63};
+                itemDef.editedModelColor = new int[]{93};
+                break;
+            case 4014:
+                itemDef.copyItem(2023);
+                itemDef.name = "Donator Bones";
+                itemDef.newModelColor = new int[]{63};
+                itemDef.editedModelColor = new int[]{81};
                 break;
             case 3686:
                 itemDef.name = "Premium Ticket";
@@ -520,7 +571,7 @@ public class Items {
                 itemDef.actions = new String[]{"Drink", null, "Upgrade", null, "Drop"};
                 break;
             case 27:
-                itemDef.name = "<img=15>VIP Slayer Gem";
+                itemDef.name = "<img=15>Elite Slayer Gem";
                 itemDef.actions = new String[]{"Teleport to task", null, "Teleport to Elite", "Teleport To Master", "Drop"};
                 itemDef.rdc2 = 37483;
                 itemDefs = ItemDefinition.get(4155);
@@ -541,21 +592,6 @@ public class Items {
                 itemDef.rotationY = 554;
                 itemDef.modelOffsetX = -4;
                 itemDef.modelOffsetY = 0;
-                break;
-            case 23166:
-                itemDef.copyItem(23165);
-                itemDef.name = "Trinity prayer scroll";
-                itemDef.modelID = 100316;
-                break;
-            case 23167:
-                itemDef.copyItem(23165);
-                itemDef.name = "Warlock prayer scroll";
-                itemDef.modelID = 100317;
-                break;
-            case 23168:
-                itemDef.copyItem(23165);
-                itemDef.name = "Marksman prayer scroll";
-                itemDef.modelID = 100319;
                 break;
             case 23169:
                 itemDef.copyItem(23165);
@@ -587,7 +623,7 @@ public class Items {
                 itemDef.name = "Slayer skip scroll";
                 break;
             case 14822:
-                itemDef.name = "<img=15>VIP Slayer License";
+                itemDef.name = "<img=15>Elite Slayer License";
                 itemDef.actions = new String[]{"Claim", null, null, null, "Drop"};
                 break;
             case 20481:

@@ -2097,24 +2097,6 @@ public class ItemDef2 {
 
 
 
-//			case 2025:
-//				itemDef.name = "Dragonballz Bones";
-//				itemDef.newModelColor = new int[]{63};//old
-//				itemdefyogipic = ItemDefinition.get(526);
-//				itemDef.editedModelColor = new int[]{84};//new
-//				itemDef.actions = itemdefyogipic.actions;
-//				itemDef.modelID = 65285;
-//				itemDef.modelZoom = 1500;
-//				break;
-//			case 2026:
-//				itemDef.name = "Special Bones";
-//				itemDef.newModelColor = new int[]{63};//old
-//				itemdefyogipic = ItemDefinition.get(526);
-//				itemDef.editedModelColor = new int[]{83};//new
-//				itemDef.actions = itemdefyogipic.actions;
-//				itemDef.modelID = 65285;
-//				itemDef.modelZoom = 1500;
-//				break;
 //			case 13172:
 //				itemDef.name = "Inferno cat mask";
 //				itemDef.rdc2 = 852661;

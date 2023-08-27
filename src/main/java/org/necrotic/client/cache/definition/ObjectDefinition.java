@@ -812,7 +812,7 @@ public final class ObjectDefinition {
 		}
 		if (definition.type == 31424) {
 			definition.actions = new String[]{"Use", null, null, null, null};
-			definition.name = "Instance Station";
+			definition.name = "Event Station";
 
 		}
 
