@@ -4,6 +4,7 @@ import net.runelite.client.RuneLiteProperties;
 import net.runelite.client.ui.ClientUI;
 import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.SwingUtil;
+import org.necrotic.ColorConstants;
 import org.necrotic.Configuration;
 import org.necrotic.RichPresense;
 import org.necrotic.client.Settings.Load;
@@ -632,6 +633,8 @@ public class Client extends GameRenderer {
     private int atInventoryInterface;
     private int atInventoryInterfaceType;
     private int atInventoryLoopCycle;
+    private int achievementLoopCycle;
+    private int achievementLoopDirection;
     private int[] bigX;
     private int[] bigY;
     private byte[][][] tileFlags;
@@ -7820,6 +7823,44 @@ public class Client extends GameRenderer {
                         spritesMap.get(type == 1 ? 3329 : 3328).drawSprite(xPos + sprite.maxWidth, 290);
                     }
                 }
+            } else if(childInterface.type == 290) {
+                int progress = childInterface.progress;
+                if(progress > 0) {
+                    DrawingArea.drawRoundedRectangle(childX-18, childY-4, 18, 12, 0xffd929, achievementLoopCycle, false, false);
+                    spritesMap.get(3444).drawSpriteWithOpacity(childX-11, childY-1, achievementLoopCycle);
+                } else {
+                    spritesMap.get(3452).drawSprite(childX-11, childY-1);
+                }
+                if(progress >= 50) {
+                    DrawingArea.drawAlphaFilledPixels(childX, childY, 52, 4, 0xffd929,  achievementLoopCycle);
+                    DrawingArea.drawRoundedRectangle(childX+52, childY-4, 18, 12, 0xffd929, achievementLoopCycle, false, false);
+                    spritesMap.get(3445).drawSpriteWithOpacity(childX+57, childY-1, achievementLoopCycle);
+                } else {
+                    spritesMap.get(3453).drawSprite(childX+57, childY-1);
+                }
+                if(progress >= 100) {
+                    DrawingArea.drawAlphaFilledPixels(childX+70, childY, 52, 4, 0xffd929, achievementLoopCycle);
+                    DrawingArea.drawRoundedRectangle(childX+122, childY-4, 18, 12, 0xffd929, achievementLoopCycle, false, false);
+                    spritesMap.get(3446).drawSpriteWithOpacity(childX+126, childY-1, achievementLoopCycle);
+                } else {
+                    spritesMap.get(3454).drawSprite(childX+126, childY-1);
+                }
+                if(progress >= 150) {
+                    DrawingArea.drawAlphaFilledPixels(childX+140, childY, 36, 4, 0xffd929,achievementLoopCycle);
+                    DrawingArea.drawAlphaFilledPixels(childX+172, childY+4, 4, 54, 0xffd929, achievementLoopCycle);
+                    DrawingArea.drawAlphaFilledPixels(childX+140, childY+54, 32, 4, 0xffd929, achievementLoopCycle);
+                    DrawingArea.drawRoundedRectangle(childX+122, childY+50, 18, 12, 0xffd929, achievementLoopCycle, false, false);
+                    spritesMap.get(3447).drawSpriteWithOpacity(childX+126, childY+53, achievementLoopCycle);
+                } else {
+                    spritesMap.get(3454).drawSprite(childX+126, childY+53);
+                }
+                if(progress == 200) {
+                    DrawingArea.drawAlphaFilledPixels(childX+70, childY+54, 52, 4, 0xffd929, achievementLoopCycle);
+                    DrawingArea.drawRoundedRectangle(childX+52, childY+50, 18, 12, 0xffd929, achievementLoopCycle, false, false);
+                    spritesMap.get(3448).drawSpriteWithOpacity(childX+56, childY+52, achievementLoopCycle);
+                } else {
+                    spritesMap.get(3451).drawSprite(childX+56, childY+52);
+                }
             }
             if (childInterface.type == 150) {
                 childInterface.wheel.render(childX, childY);
@@ -10349,6 +10390,24 @@ public class Client extends GameRenderer {
 
             if (crossIndex >= 400) {
                 crossType = 0;
+            }
+        }
+
+        if(openInterfaceID == 165342) {
+            if(achievementLoopDirection == 0) {
+                if(achievementLoopCycle <= 250) {
+                    achievementLoopCycle += 2;
+                    if(achievementLoopCycle > 250) {
+                        achievementLoopDirection = 1;
+                    }
+                }
+            } else if(achievementLoopDirection == 1) {
+                if (achievementLoopCycle >= 80) {
+                    achievementLoopCycle -= 2;
+                    if (achievementLoopCycle <= 78) {
+                        achievementLoopDirection = 0;
+                    }
+                }
             }
         }
 
@@ -15380,7 +15439,15 @@ public class Client extends GameRenderer {
                         pktType = -1;
                         return true;
                     }
-
+                    if(s.startsWith("achPL#")) {
+                        String[] split = s.substring(s.lastIndexOf("#")+1).split(",");
+                        int level_ = Integer.parseInt(split[0]);
+                        int offset = Integer.parseInt(split[1]);
+                        Achievements.PERK_PROGRESS.put(165354+offset, level_);
+                        Achievements.showPerk(Achievements.selectPerk);
+                        pktType = -1;
+                        return true;
+                    }
                     if(s.startsWith(":forge:")) {
                         Forge.unbuyable = Integer.parseInt(s.substring(s.lastIndexOf(":")+1)) == 0;
                         pktType = -1;

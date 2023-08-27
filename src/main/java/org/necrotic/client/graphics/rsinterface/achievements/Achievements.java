@@ -36,6 +36,10 @@ public class Achievements extends RSInterface {
     public static int completedBeginner = 0, completedEasy = 0, completedMedium = 0, completedHard = 0, completedElite = 0;
 
     private static final HashMap<Integer, String> PERK_DESCRIPTIONS = new HashMap<>();
+    public static final HashMap<Integer, Integer> PERK_PROGRESS = new HashMap<>();
+
+    public static int selectPerk;
+
     static {
         PERK_DESCRIPTIONS.put(165354, "This is perk one");
         PERK_DESCRIPTIONS.put(165355, "This is perk two");
@@ -177,9 +181,10 @@ public class Achievements extends RSInterface {
         perks();
     }
 
+
     private static void perks() {
         RSInterface rsi = addInterface(165342);
-        rsi.totalChildren(56);
+        rsi.totalChildren(57);
 
         addSpriteLoader(165343, 3406);
         rsi.child(0, 165343, 2, 15);
@@ -290,6 +295,10 @@ public class Achievements extends RSInterface {
         rsi.child(54, 165366, 441, 144);
         rsi.child(55, 165367, 371, 144);
 
+        RSInterface progressBar = addInterface(165368);
+        progressBar.type = 290;
+        progressBar.maxPercentage = 200;
+        rsi.child(56, 165368, 324, 130);
     }
 
     private static void overlay() {
@@ -368,9 +377,27 @@ public class Achievements extends RSInterface {
     }
 
     public static void showPerk(int id) {
+        int progress = 0;
+        selectPerk = id;
+        if(PERK_PROGRESS.get(id) != null) {
+            progress = PERK_PROGRESS.get(id);
+            if(progress == 1) {
+                RSInterface.interfaceCache[165368].progress = 1;
+            } else if(progress > 1){
+                RSInterface.interfaceCache[165368].progress = (progress-1) * 50;
+            } else {
+                RSInterface.interfaceCache[165368].progress = 0;
+            }
+        }
         for(int i = 165363; i <= 165367; i++) {
-            RSInterface.interfaceCache[i].enabledSprite = RSInterface.interfaceCache[id].enabledSprite;
-            RSInterface.interfaceCache[i].disabledSprite = RSInterface.interfaceCache[id].disabledSprite;
+            int index = i - 165363;
+            if(progress > index) {
+                RSInterface.interfaceCache[i].disabledSprite = RSInterface.interfaceCache[id].disabledSprite;
+                RSInterface.interfaceCache[i].enabledSprite = RSInterface.interfaceCache[id].enabledSprite;
+            } else {
+                RSInterface.interfaceCache[i].enabledSprite = RSInterface.interfaceCache[id].originalEnabledSprite;
+                RSInterface.interfaceCache[i].disabledSprite = RSInterface.interfaceCache[id].originalDisabledSprite;
+            }
         }
     }
 

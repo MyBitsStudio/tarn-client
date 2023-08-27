@@ -242,6 +242,37 @@ public class RSInterface {
 		perkScroll.scrollMax = 168;
 	}
 
+	public Sprite originalEnabledSprite;
+	public Sprite originalDisabledSprite;
+	public static RSInterface addHoverableConfigSprite(int id, int mainSprite, int hoverSprite, int originalSprite, boolean clickable, String tooltip, int configId, int configFrame) {
+		//  System.out.println("Added hoverable sprite with param: " + clickable);
+		RSInterface tab = interfaceCache[id] = new RSInterface();
+		tab.id = id;
+		tab.parentID = id;
+		tab.type = 111;
+		tab.atActionType = 5;
+		//   System.out.println(tab.atActionType + " ->");
+		tab.contentType = 0;
+		tab.opacity = (byte) 0;
+		tab.hoverable = true;
+		tab.disabledSprite = Client.spritesMap.get(mainSprite);
+		tab.enabledSprite = Client.spritesMap.get(hoverSprite);
+		tab.originalEnabledSprite = Client.spritesMap.get(mainSprite);
+		tab.originalDisabledSprite = Client.spritesMap.get(hoverSprite);
+		tab.width = tab.disabledSprite.myWidth;
+		tab.height = tab.disabledSprite.myHeight;
+		tab.tooltip = tooltip;
+		tab.valueCompareType = new int[1];
+		tab.requiredValues = new int[1];
+		tab.valueCompareType[0] = 1;
+		tab.requiredValues[0] = configId;
+		tab.valueIndexArray = new int[1][3];
+		tab.valueIndexArray[0][0] = 5;
+		tab.valueIndexArray[0][1] = configFrame;
+		tab.valueIndexArray[0][2] = 0;
+		return tab;
+	}
+
 	public static RSInterface addHoverableConfigSprite(int id, int mainSprite, int hoverSprite, boolean clickable, String tooltip, int configId, int configFrame) {
 		//  System.out.println("Added hoverable sprite with param: " + clickable);
 		RSInterface tab = interfaceCache[id] = new RSInterface();
