@@ -244,7 +244,7 @@ public class RSInterface {
 
 	public Sprite originalEnabledSprite;
 	public Sprite originalDisabledSprite;
-	public static RSInterface addHoverableConfigSprite(int id, int mainSprite, int hoverSprite, int originalSprite, boolean clickable, String tooltip, int configId, int configFrame) {
+	public static RSInterface addHoverableConfigSpriteCopy(int id, int mainSprite, int hoverSprite, boolean clickable, String tooltip, int configId, int configFrame) {
 		//  System.out.println("Added hoverable sprite with param: " + clickable);
 		RSInterface tab = interfaceCache[id] = new RSInterface();
 		tab.id = id;
