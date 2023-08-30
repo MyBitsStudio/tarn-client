@@ -5,18 +5,21 @@ import java.util.Arrays;
 import java.util.List;
 
 public enum RarityColor {
-    NONE(0, null),
-    COMMON(0x32a852, ItemRarity.COMMON),
-    UNCOMMON(0x3564bd, ItemRarity.UNCOMMON),
-    RARE(0x8935bd, ItemRarity.RARE),
-    LEGENDARY(0xd4a22f, ItemRarity.LEGENDARY),
-    MYTHIC(0xed1515, ItemRarity.MYTHIC);
+    NONE(0, 0, ItemRarity.NONE),
+    COMMON(0x32A852, 1, ItemRarity.COMMON),
+    UNCOMMON(0x7DF0E, 2, ItemRarity.UNCOMMON),
+    RARE(0x87CEEB, 3, ItemRarity.RARE),
+    LEGENDARY(0XEE3609, 4, ItemRarity.LEGENDARY),
+    MYTHIC(0xEE82EE, 5, ItemRarity.MYTHIC),
 
-    private final int color;
+    GODLY(0xFF1493, 6, ItemRarity.GODLY);
+
+    private final int color, id;
     private final ItemRarity itemRarity;
 
-    RarityColor(int color, ItemRarity itemRarity) {
+    RarityColor(int color, int id, ItemRarity itemRarity) {
         this.color = color;
+        this.id = id;
         this.itemRarity = itemRarity;
     }
 
@@ -24,15 +27,18 @@ public enum RarityColor {
         return color;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public ItemRarity getItemRarity() {
         return itemRarity;
     }
 
     public static RarityColor getColorTypeForEffect(int effect) {
-        ItemRarity rarity = ItemEffect.values()[effect].getRarity();
         return RARITY_COLOR_LIST
                 .stream()
-                .filter(rarityColor -> rarityColor.itemRarity != null && rarityColor.itemRarity.equals(rarity))
+                .filter(eff -> eff.getId() == effect)
                 .findFirst()
                 .orElse(null);
     }

@@ -2861,25 +2861,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.maleEquip1 = 53330;
 				itemDef.femaleEquip1 = 53651;
 				break;
-			case 14018:
-				itemDef.modelID = 6277;
 
-				itemDef.name = "Malvek Katana";
-				itemDef.modelZoom = 2025;
-				itemDef.rotationY = 593;
-				itemDef.rotationX = 2040;
-				itemDef.modelOffsetX = 5;
-				itemDef.modelOffsetY = 1;
-				itemDef.value = 50000;
-				itemDef.membersObject = true;
-				itemDef.maleEquip1 = 5324;
-				itemDef.femaleEquip1 = 5324;
-				itemDef.actions = new String[5];
-				itemDef.actions[1] = "Wield";
-				itemDef.actions[4] = "Drop";
-				
-
-				break;
 //			case 14008:
 //				itemDef.modelID = 62714;
 //				itemDef.name = "Torva full helm";
@@ -4956,57 +4938,6 @@ itemDef.actions[2] = "Dissolve";
 				
 				itemDef.stackable = false;
 				// itemDef.rdc2 = 23945;
-				break;
-			case 19160:
-				itemDef.name = "Malvek helm";
-				itemDef.modelID = 65260;
-				itemDef.maleEquip1 = 65261;
-				itemDef.femaleEquip1 = 65261;
-				itemDef21 = ItemDefinition.get(4882);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				itemDef.rdc2 = 73533;
-
-				break;
-			case 19159:
-				itemDef.name = "Malvek body";
-				itemDef.modelID = 65262;
-				itemDef.maleEquip1 = 65263;
-				itemDef.femaleEquip1 = 65263;
-				itemDef21 = ItemDefinition.get(4894);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				itemDef.rdc2 = 73533;
-
-				break;
-			case 19158:
-				itemDef.name = "Malvek legs";
-				itemDef.modelID = 65264;
-				itemDef.maleEquip1 = 65265;
-				itemDef.femaleEquip1 = 65265;
-				itemDef21 = ItemDefinition.get(4900);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				itemDef.rdc2 = 73533;
-
 				break;
 			case 19140:
 				itemDef.name = "Magebeast helm";

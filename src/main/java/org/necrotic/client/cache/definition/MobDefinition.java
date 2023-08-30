@@ -92,8 +92,8 @@ public final class MobDefinition {
 				//definition.npcModels[6] = 65334;//wep
 				break;
 			case 289:
-				definition.name = "Daily Task Manager";
-				definition.actions = new String[]{"Get-Task", null, "Claim-Reward", "Cancel-Task", null};
+				definition.name = "Kingdom Manager";
+				definition.actions = new String[]{"Manage", null, "Purchase", "Info", null};
 				break;
 			case 9001:
 				definition.name = "Sonic";
@@ -6350,7 +6350,7 @@ public final class MobDefinition {
 				definition.name = "Master miner";
 				break;
 			case 961:
-				definition.actions = new String[]{null, null, "Buy Consumables", "Restore Stats", "Buy Food"};
+				definition.actions = new String[]{null, null, "Heal Stats", null, null};
 				definition.name = "Healer";
 				break;
 			case 705:

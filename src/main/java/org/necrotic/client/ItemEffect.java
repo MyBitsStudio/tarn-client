@@ -3,28 +3,22 @@ package org.necrotic.client;
 public enum ItemEffect {
 
     /* Common Effect */
-    NOTHING(ItemRarity.COMMON),
+    NOTHING(ItemRarity.NONE),
 
-    /* Uncommon Rarity Bonuses */
-    STRENGTH_DAMAGE(ItemRarity.UNCOMMON),
-    RANGE_DAMAGE(ItemRarity.UNCOMMON),
-    MAGIC_DAMAGE(ItemRarity.UNCOMMON),
+    DROP_RATE_LOW(ItemRarity.UNCOMMON),
+    DOUBLE_XP(ItemRarity.UNCOMMON),
 
-    /* Rare Rarity Bonuses */
-    DROP_RATE_LOW(ItemRarity.RARE),
     DOUBLE_DROP(ItemRarity.RARE),
-    ALL_DAMAGE_LOW(ItemRarity.RARE),
+    DROP_RATE_MED(ItemRarity.RARE),
 
-    /* Legendary Rarity Bonuses */
-    DOUBLE_KILLS(ItemRarity.LEGENDARY),
+    MULTI_KILLS(ItemRarity.LEGENDARY),
     DOUBLE_CASH(ItemRarity.LEGENDARY),
-    ALL_DAMAGE_MEDIUM(ItemRarity.LEGENDARY),
+    ALL_DAMAGE(ItemRarity.LEGENDARY),
 
-    /* Mythic Rarity Bonuses */
-    TRIPLE_KILLS(ItemRarity.MYTHIC),
     AOE_EFFECT(ItemRarity.MYTHIC),
     DROP_RATE_HIGH(ItemRarity.MYTHIC),
-    ALL_DAMAGE_HIGH(ItemRarity.MYTHIC);
+    TRIPLE_CASH(ItemRarity.MYTHIC),
+    MULTI_SHOT(ItemRarity.MYTHIC);
 
     ItemEffect(ItemRarity rarity) {
         this.rarity = rarity;

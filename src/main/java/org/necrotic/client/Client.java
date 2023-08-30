@@ -7919,6 +7919,7 @@ public class Client extends GameRenderer {
                             if(childInterface.id == 162516 || childInterface.id == 162566){
                                 RarityColor color = childInterface.invGlow[i3] > 0 ? RarityColor.getColorTypeForEffect(childInterface.invGlow[i3]) : RarityColor.NONE;
                                 if(color != null && color != RarityColor.NONE) {
+                                    System.out.println("Drawing glow for item: " +" i "+ i3+ " "+ childInterface.invGlow[i3] + " color " + color.getColor());
                                     DrawingArea.renderGlow(k5, j6, color.getColor(), 36);
                                 }
                             }

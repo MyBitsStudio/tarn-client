@@ -53,7 +53,7 @@ public class Pets {
                 itemDef.rotationX = itemDefs.rotationX;
                 itemDef.modelID = 65498;
                 itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.name = "<shad=1>@whi@Shadow Pet [Double Killcount]";
+                itemDef.name = "Shadow Pet [Double Killcount]";
                 itemDef.groundActions = new String[]{null, null, "Take", null, null};
                 itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
                 break;
@@ -385,7 +385,7 @@ public class Pets {
                 itemDef.name = "Byakuya Pet";
                 break;
             case 4073:
-                itemDef.name = "<col=C733FF>Fazula pet";
+                itemDef.name = "Fazula pet";
                 itemDef.modelID = 141170;
                 itemDef.modelZoom = 800;
                 itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
