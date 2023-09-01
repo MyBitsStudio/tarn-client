@@ -62,7 +62,7 @@ public final class MobDefinition {
 
 		switch (id) {
 			case 3321:
-				definition.name = "Summer Event Manager";
+				definition.name = "Fall Event Manager";
 				definition.actions = new String[]{"@gre@Open", null, null, null, null};
 				break;
 			case 5049:
@@ -2864,9 +2864,9 @@ public final class MobDefinition {
 				definition.changedModelColours[0] = 71; // New
 				break;
 			case 14:
-				definition.name = "<col=fce38a>Billbag+ store";
-
-
+				definition.name = "<col=fce38a>Pet Shop";
+				definition.npcSizeInSquares = 1;
+				definition.actions = new String[]{"Open Shop", null, null, null, null, null, null};
 				break;
 			case 1837:
 				definition.name = "Ancient Mage";
@@ -3278,8 +3278,8 @@ public final class MobDefinition {
 				break;
 
 			case 4652:
-				definition.name = "<col=aedaf9>Currency Exchange";
-				definition.actions = new String[]{"Talk-to", null, null, null, null};
+				definition.name = "<col=aedaf9>AFK Shop";
+				definition.actions = new String[]{"Open Shop", null, null, null, null};
 				break;
 
 			case 4896:
@@ -4245,29 +4245,22 @@ public final class MobDefinition {
 
 				break;
 			case 302:
-				definition.name = "@bla@Shadow Pet [Double Killcount]";
+				definition.name = "@bla@Shadow Pet";
 				definition.npcSizeInSquares = 1;
 				definition.standAnimation = 808;
 				definition.walkAnimation = 819;
-				definition.scaleXZ = 170;
-				definition.scaleY = 170;
 				definition.npcModels = new int[6];
 				definition.npcModels[0] = 65499; //HEAD
 				definition.npcModels[1] = 55820; //JAW
 				definition.npcModels[2] = 65501; //CHEST
 				definition.npcModels[3] = 65505; //CAPE
-				//definition.npcModels[4] = 64090; //ARM
-				//definition.npcModels[5] = 64043; //HAND//shield
-				//definition.npcModels[4] = 64042; //WEP
 				definition.npcModels[4] = 65503; //LEG
 				definition.npcModels[5] = 65508; //BOOT
 				definition.scaleXZ = 90;
 				definition.scaleY = 90;
 				definition.actions = new String[5];
 				definition.drawYellowDotOnMap = false;
-
 				definition.actions[0] = null;
-
 				break;
 			case 3310:
 				definition.name = "Yoshi";
@@ -7336,7 +7329,7 @@ public final class MobDefinition {
 				break;
 			case 1736:
 				MobDefinition b6936 = get(6865);
-				definition.name = "Kree devil";
+				definition.name = "Event devil";
 				definition.combatLevel = 40;
 				definition.scaleXZ = 100;
 				definition.scaleY = 100;

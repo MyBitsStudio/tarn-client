@@ -685,17 +685,7 @@ public class ItemDef4 {
 				itemDef.rdc3 = 25500;
 				itemDef.stackable = true;
 				break;
-			case 22107:
-				itemDef.name = "Lucifer's pet";
-				itemDef.modelID = 100000;
-				itemDef.rotationX = 0;
-				itemDef.rotationY = 468;
-				itemDef.modelZoom = 694;
-				itemDef.modelOffsetX = 7;
-				itemDef.modelOffsetY = -7;
-				itemDef.groundActions = new String[]{null, null, "Take", null, null};
-				itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
-				break;
+
 			case 22108:
 				itemDef.name = "Currency Pouch";
 				itemDef21 = ItemDefinition.get(12155);
@@ -3366,17 +3356,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.name = "@cya@Collectors Ring I";
 				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				break;
-			case 22116:
-				itemDef.name = "Iron's pet";
-				itemDef.modelID = 100026;
-				itemDef.rotationX = 0;
-				itemDef.rotationY = 468;
-				itemDef.modelZoom = 694;
-				itemDef.modelOffsetX = 7;
-				itemDef.modelOffsetY = -7;
-				itemDef.groundActions = new String[]{null, null, "Take", null, null};
-				itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
-				break;
+
 			case 22117:
 				itemDef.name = "Zenyte shield";
 				itemDef.modelID = 100011;
@@ -4611,94 +4591,6 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.femaleEquip1 = 140012;
 				break;
 
-			case 22242:
-				//itemDef.copyItem(4708);
-				itemDef.name = "Asta's Helm";
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.modelID = 141196;
-				itemDef.maleEquip1 = 141239;
-				itemDef.femaleEquip1 = 141239;
-				break;
-			case 22244:
-				itemDef.copyItem(4712);
-				itemDef.name = "Asta's Body";
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.modelID = 141198;
-				itemDef.maleEquip1 = 141226;
-				itemDef.femaleEquip1 = 141226;
-				break;
-			case 22246:
-				itemDef.copyItem(4714);
-				itemDef.name = "Asta's Legs";
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.modelID = 141199;
-				itemDef.maleEquip1 = 141227;
-				itemDef.femaleEquip1 = 141227;
-				//itemDef.modelZoom = 1500;
-				//itemDef.rotationX = 1100;
-				//itemDef.rotationY = 525;
-				//itemDef.modelOffsetX = 0;
-				//itemDef.rotationZ = 0;
-				//itemDef.modelOffsetY = 0;
-				break;
-			case 22250:
-				itemDef.copyItem(4708);
-				itemDef.name = "Asta's Boots";
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.modelID = 141201;
-				itemDef.maleEquip1 = 141222;
-				itemDef.femaleEquip1 = 141222;
-				//itemDef.modelZoom = 1500;
-				//itemDef.rotationX = 1100;
-				//itemDef.rotationY = 525;
-				//itemDef.modelOffsetX = 0;
-				//itemDef.rotationZ = 0;
-				//itemDef.modelOffsetY = 0;
-				break;
-			case 22248:
-				itemDef.copyItem(4708);
-				itemDef.name = "Asta's Gloves";
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.modelID = 141197;
-				itemDef.maleEquip1 = 141224;
-				itemDef.femaleEquip1 = 141224;
-				//itemDef.modelZoom = 1500;
-				//itemDef.rotationX = 1100;
-				//itemDef.rotationY = 525;
-				//itemDef.modelOffsetX = 0;
-				//itemDef.rotationZ = 0;
-				//itemDef.modelOffsetY = 0;
-				break;
-			case 22252:
-				itemDef.copyItem(22111);
-				itemDef.name = "Asta's Wings";
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.modelID = 141200;
-				itemDef.maleEquip1 = 141228;
-				itemDef.femaleEquip1 = 141228;
-				//itemDef.modelZoom = 1500;
-				//itemDef.rotationX = 1100;
-				//itemDef.rotationY = 525;
-				//itemDef.modelOffsetX = 0;
-				//itemDef.rotationZ = 0;
-				//itemDef.modelOffsetY = 0;
-				break;
-
-			case 22254:
-				//itemDef.copyItem(4710);
-				itemDef.name = "Asta's Sword";
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.modelID = 141231;
-				itemDef.maleEquip1 = 141240;
-				itemDef.femaleEquip1 = 141240;
-				itemDef.modelZoom = 1500;
-				itemDef.rotationX = 1100;
-				itemDef.rotationY = 525;
-				//itemDef.modelOffsetX = 0;
-				//itemDef.rotationZ = 0;
-				//itemDef.modelOffsetY = 0;
-				break;
-
 			case 6640:
 				itemDef.name = "Owner's Gemstone";
 				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
@@ -4722,7 +4614,6 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.name = "Youtube Casket";
 				itemDef.actions = new String[5];
 				itemDef.actions[0] = "Open";
-				itemDef21 = ItemDefinition.get(6199);
 				itemDef.modelOffsetX = 2;
 				itemDef.modelOffsetY = 1;
 				itemDef.modelZoom = 1500;

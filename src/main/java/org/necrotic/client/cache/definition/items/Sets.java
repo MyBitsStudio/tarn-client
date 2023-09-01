@@ -25,10 +25,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 444444;
                 break;
             case 19985:
@@ -45,10 +42,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 444444;
                 break;
             case 19986:
@@ -65,10 +59,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 444444;
                 break;
             case 19987:
@@ -85,10 +76,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 444444;
                 break;
 
@@ -106,10 +94,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 444444;
                 break;
             case 19989:
@@ -126,10 +111,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 444444;
                 break;
             case 19991:
@@ -146,10 +128,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 444444;
                 break;
             case 19992:
@@ -166,10 +145,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 444444;
                 break;
             case 19993:
@@ -186,10 +162,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 444444;
                 break;
 
@@ -207,10 +180,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 444444;
                 break;
 
@@ -228,10 +198,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 23662;
                 break;
             case 21064:
@@ -248,10 +215,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 23662;
                 break;
             case 21066:
@@ -268,10 +232,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 23662;
                 break;
             case 21067:
@@ -288,10 +249,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 23662;
                 break;
             case 21068:
@@ -308,10 +266,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 23662;
                 break;
             case 21069:
@@ -328,10 +283,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 23662;
                 break;
             case 21071:
@@ -348,10 +300,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 23662;
                 break;
             case 5012:
@@ -397,7 +346,7 @@ public class Sets {
                 itemDef.rotationX = execape.rotationX;
                 itemDef.stackable = false;
                 itemDef.rdc2 = 565656;
-
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 4684:
                 itemDef.name = TierColor.BEGGINER.getColor() + "Executive helm";
@@ -410,7 +359,7 @@ public class Sets {
                 itemDef.modelZoom = itemDefs.modelZoom;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};;
                 itemDef.stackable = false;
                 itemDef.rdc2 = 45341;
                 break;
@@ -458,10 +407,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 565656;
                 break;
             case 8274:
@@ -477,10 +423,7 @@ public class Sets {
                 itemDef.femaleEquip1 = 64279;
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 565656;
                 break;
 
@@ -497,10 +440,7 @@ public class Sets {
                 itemDef.modelZoom = itemDefs.modelZoom;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions = new String[5];
-                itemDef.actions[4] = "Drop";
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 break;
             case 20086:
@@ -517,10 +457,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 44322;
                 break;
             case 20087:
@@ -536,10 +473,7 @@ public class Sets {
                 itemDef.femaleEquip1 = 64197;
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 itemDef.rdc2 = 44322;
                 break;
@@ -556,10 +490,7 @@ public class Sets {
                 itemDef.femaleEquip1 = 64199;
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 itemDef.rdc2 = 44322;
                 break;
@@ -577,10 +508,7 @@ public class Sets {
                 itemDef.femaleEquip1 = 64203;
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 itemDef.rdc2 = 44322;
                 break;
@@ -597,10 +525,7 @@ public class Sets {
                 itemDef.femaleEquip1 = 64204;
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 itemDef.rdc2 = 44322;
                 break;
@@ -617,10 +542,7 @@ public class Sets {
                 itemDef.femaleEquip1 = 64206;
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 itemDef.rdc2 = 44322;
                 break;
@@ -637,10 +559,7 @@ public class Sets {
                 itemDef.femaleEquip1 = 64208;
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 itemDef.rdc2 = 44322;
                 break;
@@ -659,10 +578,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 234423;
                 break;
             case 21043:
@@ -679,10 +595,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 234423;
                 break;
             case 21044:
@@ -699,10 +612,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 234423;
                 break;
             case 21045:
@@ -719,10 +629,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 234423;
                 break;
 
@@ -740,10 +647,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 234423;
                 break;
             case 21047:
@@ -760,10 +664,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 234423;
                 break;
             case 19998:
@@ -780,10 +681,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 444444;
                 break;
 
@@ -801,10 +699,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 987654;
                 break;
             case 21016:
@@ -821,10 +716,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 987654;
                 break;
             case 21017:
@@ -841,10 +733,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.rdc2 = 987654;
                 break;
             case 21018:
@@ -858,10 +747,7 @@ public class Sets {
                 itemDef.modelZoom = itemDefs.modelZoom;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 itemDef.rdc2 = 987654;
                 break;
@@ -882,10 +768,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 21037:
                 itemDef.name = TierColor.BEGGINER.getColor() + "Tormented body";
@@ -901,10 +784,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 21038:
                 itemDef.name = TierColor.BEGGINER.getColor() + "Tormented legs";
@@ -920,10 +800,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 21039:
                 itemDef.name = TierColor.BEGGINER.getColor() + "Tormented cape";
@@ -939,10 +816,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
 
             case 21040:
@@ -959,10 +833,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 21041:
                 itemDef.name = TierColor.BEGGINER.getColor() + "Tormented boots";
@@ -978,10 +849,7 @@ public class Sets {
                 itemDef.groundActions = new String[5];
                 itemDef.groundActions[2] = "Take";
                 itemDef.stackable = false;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 8088:
                 itemDef.name = "Tormented Crossbow";
@@ -994,9 +862,7 @@ public class Sets {
                 itemDef.modelZoom = 1700;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear"/*done*/; //done
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
 
                 itemDef.rdc2 = 654332;
@@ -1086,6 +952,7 @@ public class Sets {
 
             case 17011:
                 itemDef.name = TierColor.NOVICE.getColor() + "Revenant Staff";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
 
 //            case 17013:
@@ -1177,6 +1044,7 @@ public class Sets {
                 itemDef.modelID = 100178;
                 itemDef.maleEquip1 = 100179;
                 itemDef.femaleEquip1 = 100179;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 23076:
                 itemDef.copyItem(4712);
@@ -1185,6 +1053,7 @@ public class Sets {
                 itemDef.modelID = 100180;
                 itemDef.maleEquip1 = 100181;
                 itemDef.femaleEquip1 = 100181;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 23077:
                 itemDef.copyItem(4714);
@@ -1193,6 +1062,7 @@ public class Sets {
                 itemDef.modelID = 100182;
                 itemDef.maleEquip1 = 100183;
                 itemDef.femaleEquip1 = 100183;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 23079:
                 itemDef.copyItem(4710);
@@ -1229,6 +1099,7 @@ public class Sets {
                 itemDef.maleEquip1 = 15166;
                 itemDef.femaleEquip1 = 15166;
                 itemDef.modelZoom = 800;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 23128:
                 itemDef.copyItem(4712);
@@ -1237,6 +1108,7 @@ public class Sets {
                 itemDef.maleEquip1 = 15168;
                 itemDef.femaleEquip1 = 15168;
                 itemDef.modelZoom = 1500;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 23129:
                 itemDef.copyItem(4714);
@@ -1245,6 +1117,7 @@ public class Sets {
                 itemDef.maleEquip1 = 15167;
                 itemDef.femaleEquip1 = 15167;
                 itemDef.modelZoom = 1800;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 23130:
                 itemDef.copyItem(4708);
@@ -1253,6 +1126,7 @@ public class Sets {
                 itemDef.maleEquip1 = 15170;
                 itemDef.femaleEquip1 = 15170;
                 itemDef.modelZoom = 700;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 23131:
                 itemDef.copyItem(4708);
@@ -1261,6 +1135,7 @@ public class Sets {
                 itemDef.maleEquip1 = 15169;
                 itemDef.femaleEquip1 = 15169;
                 itemDef.modelZoom = 700;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 23133:
                 itemDef.copyItem(669);
@@ -1274,6 +1149,7 @@ public class Sets {
                 itemDef.modelOffsetX = 0;
                 itemDef.rotationZ = 0;
                 itemDef.modelOffsetY = 25;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
 
             case 14924:
@@ -1382,6 +1258,7 @@ public class Sets {
                 itemDef.maleEquip1 = 100294;
                 itemDef.femaleEquip1 = 100294;
                 itemDef.modelZoom = 1500;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 23141:
                 itemDef.copyItem(4714);
@@ -1390,6 +1267,7 @@ public class Sets {
                 itemDef.maleEquip1 = 100292;
                 itemDef.femaleEquip1 = 100292;
                 itemDef.modelZoom = 1800;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 23142:
                 itemDef.copyItem(4708);
@@ -1398,6 +1276,7 @@ public class Sets {
                 itemDef.maleEquip1 = 100288;
                 itemDef.femaleEquip1 = 100288;
                 itemDef.modelZoom = 700;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 23143:
                 itemDef.copyItem(4708);
@@ -1406,6 +1285,7 @@ public class Sets {
                 itemDef.maleEquip1 = 100286;
                 itemDef.femaleEquip1 = 100286;
                 itemDef.modelZoom = 700;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
 
             /* Tier 10 */
@@ -1522,9 +1402,7 @@ public class Sets {
                 itemDef.membersObject = true;
                 itemDef.maleEquip1 = 5324;
                 itemDef.femaleEquip1 = 5324;
-                itemDef.actions = new String[5];
-                itemDef.actions[1] = "Wield";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 19160:
                 itemDef.name = TierColor.ADVANCED.getColor() +"Malvek helm";
@@ -1691,9 +1569,7 @@ public class Sets {
                 itemDef.modelZoom = 1700;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 break;
             case 11421:
@@ -1931,7 +1807,7 @@ public class Sets {
                 itemDef.modelID = 64177;
                 itemDef.maleEquip1 = 64178;
                 itemDef.femaleEquip1 = 64178;
-                itemDef.actions = itemDefs.actions;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
 
             case 19800:
@@ -2327,9 +2203,7 @@ public class Sets {
                 itemDef.modelZoom = 800;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 break;
             case 4077:
@@ -2343,9 +2217,7 @@ public class Sets {
                 itemDef.modelZoom = 1500;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 break;
             case 3473:
@@ -2359,9 +2231,7 @@ public class Sets {
                 itemDef.modelZoom = 1500;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 //itemDef.rdc2 = 654332;
                 break;
@@ -2376,9 +2246,7 @@ public class Sets {
                 itemDef.modelZoom = 1000;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 break;
             case 4085:
@@ -2392,9 +2260,7 @@ public class Sets {
                 itemDef.modelZoom = 1000;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 break;
             case 3470:
@@ -2408,9 +2274,7 @@ public class Sets {
                 itemDef.modelZoom = 1100;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 //itemDef.rdc2 = 654332;
                 break;
@@ -2425,9 +2289,7 @@ public class Sets {
                 itemDef.modelZoom = 1750;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 break;
 
@@ -2442,9 +2304,7 @@ public class Sets {
                 itemDef.modelZoom = 800;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 //itemDef.rdc2 = 654332;
                 break;
@@ -2459,9 +2319,7 @@ public class Sets {
                 itemDef.modelZoom = 1500;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 //itemDef.rdc2 = 654332;
                 break;
@@ -2476,9 +2334,7 @@ public class Sets {
                 itemDef.modelZoom = 1500;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 //itemDef.rdc2 = 654332;
                 break;
@@ -2493,9 +2349,7 @@ public class Sets {
                 itemDef.modelZoom = 1000;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 //itemDef.rdc2 = 654332;
                 break;
@@ -2510,9 +2364,7 @@ public class Sets {
                 itemDef.modelZoom = 1500;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 //itemDef.rdc2 = 654332;
                 break;
@@ -2527,9 +2379,7 @@ public class Sets {
                 itemDef.modelZoom = 1100;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 //itemDef.rdc2 = 654332;
                 break;
@@ -2544,9 +2394,7 @@ public class Sets {
                 itemDef.modelZoom = 1500;
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
-                itemDef.actions[1] = "Wear";
-                itemDef.actions[2] = "Dissolve";
-                itemDef.actions[4] = "Drop";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 //itemDef.rdc2 = 654332;
                 break;

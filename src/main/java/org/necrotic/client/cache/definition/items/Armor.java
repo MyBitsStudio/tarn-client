@@ -1110,6 +1110,65 @@ public class Armor {
                 itemDef.stackable = false;
                 break;
 
+            case 22242:
+                itemDef.name = "Asta Fire Helm";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 141196;
+                itemDef.maleEquip1 = 141239;
+                itemDef.femaleEquip1 = 141239;
+                break;
+            case 22244:
+                itemDef.copyItem(4712);
+                itemDef.name = "Asta Fire Body";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 141198;
+                itemDef.maleEquip1 = 141226;
+                itemDef.femaleEquip1 = 141226;
+                break;
+            case 22246:
+                itemDef.copyItem(4714);
+                itemDef.name = "Asta Fire Legs";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 141199;
+                itemDef.maleEquip1 = 141227;
+                itemDef.femaleEquip1 = 141227;
+                break;
+            case 22250:
+                itemDef.copyItem(4708);
+                itemDef.name = "Asta Fire Boots";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 141201;
+                itemDef.maleEquip1 = 141222;
+                itemDef.femaleEquip1 = 141222;
+                break;
+            case 22248:
+                itemDef.copyItem(4708);
+                itemDef.name = "Asta Fire Gloves";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 141197;
+                itemDef.maleEquip1 = 141224;
+                itemDef.femaleEquip1 = 141224;
+                break;
+            case 22252:
+                itemDef.copyItem(22111);
+                itemDef.name = "Asta Fire Wings";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 141200;
+                itemDef.maleEquip1 = 141228;
+                itemDef.femaleEquip1 = 141228;
+                break;
+
+            case 22254:
+                itemDef.name = "Asta Fire Sword";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 141231;
+                itemDef.maleEquip1 = 141240;
+                itemDef.femaleEquip1 = 141240;
+                itemDef.modelZoom = 1500;
+                itemDef.rotationX = 1100;
+                itemDef.rotationY = 525;
+                break;
+
             case 23061:
                 itemDef.copyItem(4708);
                 itemDef.name = "Obsidian helm";

@@ -70,6 +70,16 @@ public class Items {
                 itemDef.scaleX *= 0.50;
                 itemDef.scaleZ *= 0.50;
                 break;
+            case 19000:
+                itemDef.copyItem(14639);
+                itemDef.name = "Pet fragment";
+                itemDef.actions = new String[]{"Exchange", null, null, null, null};
+                break;
+            case 19002:
+                itemDef.copyItem(14639);
+                itemDef.name = "Elite Pet fragment";
+                itemDef.actions = new String[]{"Exchange", null, null, null, null};
+                break;
             case 5023:
                 itemDef.name = "Slayer ticket";
                 itemDef.rdc2 = 23452;
@@ -84,6 +94,10 @@ public class Items {
                 itemDef.rotationX = itemDefs.rotationX;
                 itemDef.newModelColor = new int[]{63};
                 itemDef.editedModelColor = new int[]{67};
+                break;
+            case 5020:
+                itemDef.name = "AFK ticket";
+                itemDef.stackable = true;
                 break;
             case 13727: // stardust
                 itemDef.actions = new String[]{null, null, null, null, "Drop"};
@@ -145,6 +159,13 @@ public class Items {
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
                 itemDef.modelZoom = 1300;
+                break;
+            case 19001:
+                itemDef.copyItem(15262);
+                itemDef.name = "Pet fragment pack (X250)";
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{"Open", null, null, null, "Drop"};
+                itemDef.rdc2 = 487111;
                 break;
             case 23166:
                 itemDef.copyItem(23165);
@@ -364,6 +385,40 @@ public class Items {
                 itemDef.actions = new String[5];
                 itemDef.actions[0] = "Redeem";
                 break;
+            case 15355:
+                itemDef.name = "Double DR Scroll (1 Hour)";
+                itemDef.actions = new String[5];
+                itemDef.actions[0] = "Activate";
+                itemDef.rdc2 = 921211;
+                break;
+            case 15356:
+                itemDef.name = "Double DDR Scroll (1 Hour)";
+                itemDef.actions = new String[5];
+                itemDef.actions[0] = "Activate";
+                itemDef.rdc2 = 348132;
+                break;
+            case 15357:
+                itemDef.name = "Double Damage Scroll (1 Hour)";
+                itemDef.actions = new String[5];
+                itemDef.actions[0] = "Activate";
+                itemDef.rdc2 = 23333;
+                break;
+            case 15358:
+                itemDef.name = "Double DR Scroll (30 Minutes)";
+                itemDef.actions = new String[5];
+                itemDef.actions[0] = "Activate";
+                itemDef.rdc2 = 663712;
+                break;
+            case 15359:
+                itemDef.name = "Double Damage Scroll (30 Minutes)";
+                itemDef.actions = new String[5];
+                itemDef.actions[0] = "Activate";
+                itemDef.rdc2 = 12411;
+                break;
+            case 21403:
+                itemDef.name = "Starter Potion";
+                itemDef.actions = new String[]{"Drink", null, null, null, "Destroy"};
+                break;
             case 23118:
                 itemDef.copyItem(2436);
                 itemDef.name = "Infinite healing potion (T1)";
@@ -460,7 +515,7 @@ public class Items {
             case 23150:
                 itemDef.copyItem(20435);
                 itemDef.name = "Drop Rate Low";
-                itemDef.actions = new String[]{"Equip", null, null, null, null};
+                itemDef.actions = new String[]{"Equip", null, "Reroll", null, "Destroy"};
                 break;
             case 23151:
                 itemDef.copyItem(23150);
@@ -502,43 +557,45 @@ public class Items {
                 itemDef.copyItem(23150);
                 itemDef.name = "Multi Shot";
                 break;
+            case 25000:
+                itemDef.copyItem(23150);
+                itemDef.name = "Double Slayer Tickets";
+                break;
+            case 25001:
+                itemDef.copyItem(23150);
+                itemDef.name = "FireWall";
+                break;
 
-                /* Events */
+            /* Master Parts */
+
+            case 19641:
+                itemDef.name = "Master Core";
+                break;
+            case 9076:
+                itemDef.name = "Master Ore";
+                break;
+            case 9077:
+                itemDef.name = "Master Steel";
+                break;
+            case 13748:
+                itemDef.name = "Shank Divine Sigil";
+                break;
+            case 13746:
+                itemDef.name = "Crosshair Divine Sigil";
+                break;
+            case 13750:
+                itemDef.name = "Winged Divine Sigil";
+                break;
+            case 13752:
+                itemDef.name = "Crooked Divine Sigil";
+                break;
+
+            /* Events */
             case 14819:
-                itemDef.name = "Summer Certificate";
+                itemDef.name = "Fall Certificate";
                 break;
 
                 /* Not Used Yet */
-            case 15355:
-                itemDef.name = "@gre@<shad=0>Double DR Scroll (1 Hour)<shad-1>";
-                itemDef.actions = new String[5];
-                itemDef.actions[0] = "Activate";
-                itemDef.rdc2 = 921211;
-                break;
-            case 15356:
-                itemDef.name = "@gre@<shad=0>Double DDR Scroll (1 Hour)<shad-1>";
-                itemDef.actions = new String[5];
-                itemDef.actions[0] = "Activate";
-                itemDef.rdc2 = 348132;
-                break;
-            case 15357:
-                itemDef.name = "@gre@<shad=0>Double Damage Scroll (1 Hour)<shad-1>";
-                itemDef.actions = new String[5];
-                itemDef.actions[0] = "Activate";
-                itemDef.rdc2 = 23333;
-                break;
-            case 15358:
-                itemDef.name = "@gre@<shad=0>Double DR Scroll (30 Minutes)<shad-1>";
-                itemDef.actions = new String[5];
-                itemDef.actions[0] = "Activate";
-                itemDef.rdc2 = 663712;
-                break;
-            case 15359:
-                itemDef.name = "@gre@<shad=0>Double Damage Scroll (30 Minutes)<shad-1>";
-                itemDef.actions = new String[5];
-                itemDef.actions[0] = "Activate";
-                itemDef.rdc2 = 12411;
-                break;
             case 17544:
                 itemDef.name = "@cya@<shad=272625> Aggro Potion (Godly)<shad-1>";
                 itemDef.rdc2 = 5774;
@@ -809,6 +866,39 @@ public class Items {
                 itemDef.modelOffsetX = 4;
                 itemDef.modelOffsetY = -3;
                 break;
+            case 22122:
+                itemDef.name = "Rare Card II";
+                itemDef.actions = new String[]{"Scratch", null, null, null, "Drop"};
+                itemDef.modelID = 100053;
+                itemDef.modelZoom = 1171;
+                itemDef.rotationX = 322;
+                itemDef.rotationY = 525;
+                itemDef.rotationZ = 0;
+                itemDef.modelOffsetX = 4;
+                itemDef.modelOffsetY = -3;
+                break;
+            case 22123:
+                itemDef.name = "Rare Card III";
+                itemDef.actions = new String[]{"Scratch", null, null, null, "Drop"};
+                itemDef.modelID = 100053;
+                itemDef.modelZoom = 1171;
+                itemDef.rotationX = 322;
+                itemDef.rotationY = 525;
+                itemDef.rotationZ = 0;
+                itemDef.modelOffsetX = 4;
+                itemDef.modelOffsetY = -3;
+                break;
+            case 22124:
+                itemDef.name = "Rare Card IV";
+                itemDef.actions = new String[]{"Scratch", null, null, null, "Drop"};
+                itemDef.modelID = 100053;
+                itemDef.modelZoom = 1171;
+                itemDef.rotationX = 322;
+                itemDef.rotationY = 525;
+                itemDef.rotationZ = 0;
+                itemDef.modelOffsetX = 4;
+                itemDef.modelOffsetY = -3;
+                break;
 
             case 20500:
                 itemDef.name = "Enhance Pack I";
@@ -1018,7 +1108,7 @@ public class Items {
                 break;
 
             case 28:
-                itemDef.name = "Summer key";
+                itemDef.name = "Fall key";
                 itemDefs = ItemDefinition.get(989);
                 itemDef.modelOffsetX = itemDefs.modelOffsetX;
                 itemDef.modelOffsetY = itemDefs.modelOffsetY;
@@ -1029,7 +1119,7 @@ public class Items {
                 itemDef.stackable = false;
                 break;
             case 29:
-                itemDef.name = "Locked summer chest";
+                itemDef.name = "Locked fall chest";
                 itemDef.actions = new String[]{"Open", null, null, null, "Drop"};
                 itemDef.modelOffsetX = 2;
                 itemDef.modelOffsetY = 1;
