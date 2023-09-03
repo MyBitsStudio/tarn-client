@@ -99,6 +99,11 @@ public class Items {
                 itemDef.name = "AFK ticket";
                 itemDef.stackable = true;
                 break;
+            case 25100:
+                itemDef.copyItem(607);
+                itemDef.name = "Fall Scroll";
+                itemDef.stackable = false;
+                break;
             case 13727: // stardust
                 itemDef.actions = new String[]{null, null, null, null, "Drop"};
                 break;
@@ -1082,7 +1087,6 @@ public class Items {
                 itemDef.scaleX *= 0.50;
                 itemDef.scaleZ *= 0.50;
                 break;
-
             case 23260: //23060 - 23075 Limited Master Editions
                 itemDef.copyItem(6199);
                 itemDef.modelZoom = 3000;
@@ -1091,7 +1095,6 @@ public class Items {
                 itemDef.maleEquip1 = 100122;
                 itemDef.femaleEquip1 = 100122;
                 break;
-
             case 23276:
                 itemDef.name = "Ultimate Cert Pack";
                 itemDef.actions = new String[5];
@@ -1105,6 +1108,14 @@ public class Items {
                 itemDef.newModelColor = new int[]{63};
                 itemDef.editedModelColor = new int[]{61};
                 itemDef.modelID = 65284;
+                break;
+            case 15682:
+                itemDef.name = "Vote Crate";
+                itemDef.actions = new String[]{"Open", null, null, null, "Drop"};
+                break;
+            case 18768:
+                itemDef.name = "Vote Box";
+                itemDef.rdc2 = 2233311;
                 break;
 
             case 28:
@@ -1129,6 +1140,60 @@ public class Items {
                 itemDef.modelZoom = 1100;
                 itemDef.stackable = false;
                 break;
+            case 23103:
+                itemDef.copyItem(1);
+                itemDef.name = "Vote Key";
+                itemDef.actions = new String[]{null, null, null, null, "Drop"};
+                itemDef.modelID = 100231;
+                itemDef.rotationX = 0;
+                itemDef.rotationY = 520;
+                itemDef.modelZoom = 800;
+                break;
+            case 25101:
+                itemDef.name = "Locked vote chest";
+                itemDef.actions = new String[]{"Open", null, null, null, "Drop"};
+                itemDef.modelOffsetX = 2;
+                itemDef.modelOffsetY = 1;
+                itemDef.rotationY = 100;
+                itemDef.rotationX = 90;
+                itemDef.modelID = 64300;
+                itemDef.modelZoom = 1100;
+                itemDef.stackable = false;
+                break;
+            case 23104:
+                itemDef.copyItem(23103);
+                itemDef.name = "Slayer Key";
+                itemDef.actions = new String[]{null, null, null, null, "Drop"};
+                itemDef.modelID = 100232;
+                break;
+            case 25102:
+                itemDef.name = "Locked slayer chest";
+                itemDef.actions = new String[]{"Open", null, null, null, "Drop"};
+                itemDef.modelOffsetX = 2;
+                itemDef.modelOffsetY = 1;
+                itemDef.rotationY = 100;
+                itemDef.rotationX = 90;
+                itemDef.modelID = 64300;
+                itemDef.modelZoom = 1100;
+                itemDef.stackable = false;
+                break;
+            case 23105:
+                itemDef.copyItem(23103);
+                itemDef.name = "PvM Key";
+                itemDef.actions = new String[]{null, null, null, null, "Drop"};
+                itemDef.modelID = 100233;
+                break;
+            case 25103:
+                itemDef.name = "Locked PVM chest";
+                itemDef.actions = new String[]{"Open", null, null, null, "Drop"};
+                itemDef.modelOffsetX = 2;
+                itemDef.modelOffsetY = 1;
+                itemDef.rotationY = 100;
+                itemDef.rotationX = 90;
+                itemDef.modelID = 64300;
+                itemDef.modelZoom = 1100;
+                itemDef.stackable = false;
+                break;
             case 23107:
                 itemDef.copyItem(23103);
                 itemDef.name = "Master Treasure Key";
@@ -1138,10 +1203,7 @@ public class Items {
                 break;
 
             /* Not Used Yet */
-            case 18768:
-                itemDef.name = "Dragonball Saga box";
-                itemDef.rdc2 = 2233311;
-                break;
+
             case 8213:
 				itemDef.name = "Christmas token";
 				itemDef.stackable = true;
@@ -1177,10 +1239,6 @@ public class Items {
                 itemDef.copyItem(6199);
                 itemDef.name = "Other box";
                 itemDef.rdc2 = 18000;
-                break;
-            case 15682:
-                itemDef.name = "Vote Crate";
-                itemDef.actions = new String[]{"Open", null, null, null, "Drop"};
                 break;
             case 6833:
                 itemDef.name = "Goodiebag Box";
@@ -1327,27 +1385,6 @@ public class Items {
                 itemDef.name = "@yel@Raids [1] Key";
                 itemDef.stackable = true;
                 itemDef.actions = new String[]{null, null, null, null, null};
-                break;
-            case 23103:
-                itemDef.copyItem(1);
-                itemDef.name = "Treasure Key 1";
-                itemDef.actions = new String[]{null, null, null, null, "Drop"};
-                itemDef.modelID = 100231;
-                itemDef.rotationX = 0;
-                itemDef.rotationY = 520;
-                itemDef.modelZoom = 800;
-                break;
-            case 23104:
-                itemDef.copyItem(23103);
-                itemDef.name = "Treasure Key 2";
-                itemDef.actions = new String[]{null, null, null, null, "Drop"};
-                itemDef.modelID = 100232;
-                break;
-            case 23105:
-                itemDef.copyItem(23103);
-                itemDef.name = "Treasure Key 3";
-                itemDef.actions = new String[]{null, null, null, null, "Drop"};
-                itemDef.modelID = 100233;
                 break;
             case 23106:
                 itemDef.copyItem(23103);

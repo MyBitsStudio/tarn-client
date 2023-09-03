@@ -42,7 +42,7 @@ public class AttendanceRewardInterface extends RSInterface {
         addText(150_137, "Donator", 0xff8624, false, true, 52, 0);
 
         addConfigButton(150_138, 150_000, 3371, 3372, 78, 20, "Summer", 1, 5, 178);
-        addText(150_139, "Summer", 0xff8624, false, true, 52, 0);
+        addText(150_139, "Fall", 0xff8624, false, true, 52, 0);
 
         addConfigButton(150_140, 150_000, 3371, 3372, 78, 20, "Event", 1, 5, 178);
         addText(150_141, "Event", 0xff8624, false, true, 52, 0);

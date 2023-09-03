@@ -34,12 +34,15 @@ public final class ItemDefinition {
 
 
 	public static void applyTexturing(Model model, int id) {
-		if(id == 23200){
+		if(id == 29){
 			System.out.println("Item - "+ Arrays.toString(model.anIntArray1640));
 		}
 
 		switch (id) {
 
+			case 29:
+				model.setTexture(37924, 31);
+				break;
 			case 23200:
 				model.setTexture(66, 31);
 				break;
@@ -6605,13 +6608,6 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.modelID = 65062;
 				itemDef.maleEquip1 = 65062;
 				itemDef.femaleEquip1 = 65063;
-				break;
-			case 26:
-				itemDef.name = "<col=17D797>Master Winged Aura"; // slayer
-				itemDef.modelID = 65038;
-				itemDef.maleEquip1 = 65039;
-				itemDef.femaleEquip1 = 65039;
-				itemDef.rdc3 = 25500;
 				break;
 			case 4315:
 				itemDef.name = "Craft Wings"; // slayer

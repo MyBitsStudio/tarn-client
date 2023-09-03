@@ -207,6 +207,16 @@ public class Pets {
                 itemDef.groundActions = new String[]{null, null, "Take", null, null};
                 itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
                 break;
+            case 20589:
+                itemDef.copyItem(5074);
+                itemDef.name = "Exoden Pet";
+                itemDef.modelID = 64094;
+                itemDef.modelZoom = 7500;
+                itemDef.modelOffsetX = 2;
+                itemDef.modelOffsetY = 80;
+                itemDef.rotationY = 204;
+                itemDef.rotationX = 20;
+                break;
 
 
             case 19483:
@@ -302,16 +312,6 @@ public class Pets {
                 itemDef.rotationZ = 0;
                 itemDef.modelOffsetY = 0;
                 itemDef.rdc2 = 7656789;
-                break;
-            case 20589:
-                itemDef.copyItem(5074);
-                itemDef.name = "Exoden Pet";
-                itemDef.modelID = 64094;
-                itemDef.modelZoom = 7500;
-                itemDef.modelOffsetX = 2;
-                itemDef.modelOffsetY = 80;
-                itemDef.rotationY = 204;
-                itemDef.rotationX = 20;
                 break;
             case 20590:
                 itemDef.copyItem(5074);
@@ -911,8 +911,7 @@ public class Pets {
                 break;
 
             case 22032:
-
-                itemDef.name = "Night spider pet (@bla@x1.5 EXP - X1.5 DMG BOOST@or1@)";
+                itemDef.name = "Night spider pet";
                 itemDefs = ItemDefinition.get(18504);
                 itemDef.modelID = itemDefs.modelID;
                 itemDef.modelOffsetX = itemDefs.modelOffsetX;
