@@ -6192,7 +6192,16 @@ public class Client extends GameRenderer {
                 getOut().putShort(interfaceId);
                 getOut().putShort(slot);
                 getOut().putShort(nodeId);
+            } else  if (interfaceId >= 150647 && interfaceId <= 150697) {
+                getOut().putOpcode(2); // examine item
+                getOut().putShort(definition.id);
+                getOut().putByte(interfaceId - 150647);
+            } else  if (interfaceId >= 150290 && interfaceId <= 150300) {
+                getOut().putOpcode(2); // examine item
+                getOut().putShort(definition.id);
+                getOut().putByte(interfaceId - 150290);
             } else {
+                System.out.println("interfaceId: " + interfaceId + " slot: " + slot + " nodeId: " + nodeId);
                 getOut().putOpcode(2); // examine item
                 getOut().putShort(definition.id);
                 getOut().putByte(slot);
@@ -20538,7 +20547,12 @@ public class Client extends GameRenderer {
 
             RSInterface.interfaceCache[94002].message = " @lre@" + RSFontSystem.removeColors(def.name);
 
-            if (ItemStats.itemstats[itemHover] != null) {
+            if (ItemStats.itemstats[itemHover] == null) {
+                RSInterface.interfaceCache[94021].height = 16;
+                RSInterface.interfaceCache[94021].width = newSmallFont.getTextWidth(def.name) + newSmallFont.getTextWidth(action) + 8;
+                RSInterface.interfaceCache[94020].childX[1] = 8 + (RSInterface.interfaceCache[94021].width / 2);
+                RSInterface.interfaceCache[94022].message = "";
+            } else {
                 if (ItemStats.itemstats[itemHover].type == 1) {
                     RSInterface.interfaceCache[94006].message = "";
                     String bonus = "";
@@ -20586,11 +20600,6 @@ public class Client extends GameRenderer {
                     RSInterface.setScrollableItems(RSInterface.interfaceCache[94089], ItemStats.itemstats[itemHover].rewards);
                     RSInterface.interfaceCache[94087].message = ItemStats.itemstats[itemHover].information;
                 }
-            } else {
-                RSInterface.interfaceCache[94021].height = 16;
-                RSInterface.interfaceCache[94021].width = newSmallFont.getTextWidth(def.name) + newSmallFont.getTextWidth(action) + 8;
-                RSInterface.interfaceCache[94020].childX[1] = 8 + (RSInterface.interfaceCache[94021].width / 2);
-                RSInterface.interfaceCache[94022].message = "";
             }
         }
     }

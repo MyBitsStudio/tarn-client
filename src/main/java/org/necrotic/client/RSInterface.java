@@ -3910,6 +3910,40 @@ public class RSInterface {
 		rsi.id = childId;
 		rsi.type = 2;
 	}
+	public static void addItemOnInterfaceHideExamine(int childId, int interfaceId, String[] options) {
+		RSInterface rsi = interfaceCache[childId] = new RSInterface();
+		rsi.actions = new String[10];
+		rsi.spritesX = new int[20];
+		rsi.inv = new int[30];
+		rsi.invStackSizes = new int[25];
+		rsi.invGlow = new int[25];
+		rsi.bonus = new int[25];
+		rsi.spritesY = new int[20];
+		rsi.children = new int[0];
+		rsi.childX = new int[0];
+		rsi.childY = new int[0];
+		for (int i = 0; i < rsi.actions.length; i++) {
+			if (i < options.length) {
+				if (options[i] != null) {
+					rsi.actions[i] = options[i];
+				}
+			}
+		}
+		rsi.hideExamine = true;
+		rsi.centerText = true;
+		rsi.filled = false;
+		rsi.dragDeletes = false;
+		rsi.usableItemInterface = false;
+		rsi.isInventoryInterface = false;
+		rsi.allowSwapItems = false;
+		rsi.invSpritePadX = 23;
+		rsi.invSpritePadY = 22;
+		rsi.height = 5;
+		rsi.width = 6;
+		rsi.parentID = interfaceId;
+		rsi.id = childId;
+		rsi.type = 2;
+	}
 
 	public static void addHoverText(int id, String text, String tooltip, TextDrawingArea tda[], int idx, int color, boolean center, boolean textShadowed, int width, int height) {
 		RSInterface rsinterface = addInterface(id);
