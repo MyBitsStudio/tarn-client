@@ -1250,6 +1250,7 @@ public class Sets {
                 itemDef.maleEquip1 = 100290;
                 itemDef.femaleEquip1 = 100290;
                 itemDef.modelZoom = 900;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
             case 23140:
                 itemDef.copyItem(4712);
