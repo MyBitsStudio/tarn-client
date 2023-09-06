@@ -18,6 +18,7 @@ repositories {
     mavenLocal()
     maven("https://jcenter.bintray.com")
     maven("https://jitpack.io")
+    maven("https://repo.runelite.net")
 }
 
 dependencies {
@@ -72,5 +73,3 @@ tasks {
         dependsOn(proguard)
     }
 }
-
-
