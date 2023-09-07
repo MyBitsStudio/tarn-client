@@ -3770,69 +3770,7 @@ public class ItemDef2 {
 //				itemDef.stackable = false;
 //
 //				break;
-//			case 21050:
-//				itemDef.name = "Slayermaster hood";
-//				itemdefyogipic = ItemDefinition.get(4882);
-//				itemDef.modelOffsetX = itemdefyogipic.modelOffsetX;
-//				itemDef.modelOffsetY = itemdefyogipic.modelOffsetY;
-//				itemDef.modelZoom = itemdefyogipic.modelZoom;
-//				itemDef.rotationY = itemdefyogipic.rotationY;
-//				itemDef.rotationX = itemdefyogipic.rotationX;
-//				itemDef.modelID = 64284;
-//				itemDef.maleEquip1 = 64285;
-//				itemDef.femaleEquip1 = 64285;
-//				itemDef.groundActions = new String[5];
-//				itemDef.groundActions[2] = "Take";
-//				itemDef.stackable = false;
-//				itemDef.actions = new String[5];
-//				itemDef.actions[1] = "Wear"/*done*/; //done
-//itemDef.actions[2] = "Dissolve";
-//				itemDef.actions[4] = "Drop";
-//				itemDef.stackable = false;
-//
-//				break;
-//			case 21051:
-//				itemDef.name = "Slayermaster body";
-//				itemdefyogipic = ItemDefinition.get(5575);
-//				itemDef.modelOffsetX = itemdefyogipic.modelOffsetX;
-//				itemDef.modelOffsetY = itemdefyogipic.modelOffsetY;
-//				itemDef.modelZoom = itemdefyogipic.modelZoom;
-//				itemDef.rotationY = itemdefyogipic.rotationY;
-//				itemDef.rotationX = itemdefyogipic.rotationX;
-//				itemDef.modelID = 64286;
-//				itemDef.maleEquip1 = 64287;
-//				itemDef.femaleEquip1 = 64287;
-//				itemDef.groundActions = new String[5];
-//				itemDef.groundActions[2] = "Take";
-//				itemDef.stackable = false;
-//				itemDef.actions = new String[5];
-//				itemDef.actions[1] = "Wear"/*done*/; //done
-//itemDef.actions[2] = "Dissolve";
-//				itemDef.actions[4] = "Drop";
-//				itemDef.stackable = false;
-//
-//				break;
-//			case 21052:
-//				itemDef.name = "Slayermaster legs";
-//				itemdefyogipic = ItemDefinition.get(5576);
-//				itemDef.modelOffsetX = itemdefyogipic.modelOffsetX;
-//				itemDef.modelOffsetY = itemdefyogipic.modelOffsetY;
-//				itemDef.modelZoom = itemdefyogipic.modelZoom;
-//				itemDef.rotationY = itemdefyogipic.rotationY;
-//				itemDef.rotationX = itemdefyogipic.rotationX;
-//				itemDef.modelID = 64288;
-//				itemDef.maleEquip1 = 64289;
-//				itemDef.femaleEquip1 = 64289;
-//				itemDef.groundActions = new String[5];
-//				itemDef.groundActions[2] = "Take";
-//				itemDef.stackable = false;
-//				itemDef.actions = new String[5];
-//				itemDef.actions[1] = "Wear"/*done*/; //done
-//itemDef.actions[2] = "Dissolve";
-//				itemDef.actions[4] = "Drop";
-//				itemDef.stackable = false;
-//
-//				break;
+
 //			case 21025:
 //				itemDef.name = "Samurai head";
 //				itemdefyogipic = ItemDefinition.get(4882);

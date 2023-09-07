@@ -20,7 +20,7 @@ public class Armor {
                 break;
 
             case 21075:
-                itemDef.name = "Slayer helmet [Level 1]";
+                itemDef.name = "Slayer helmet [T1]";
                  itemDefs = ItemDefinition.get(13263);
                 itemDef.modelOffsetX =  itemDefs.modelOffsetX;
                 itemDef.modelOffsetY =  itemDefs.modelOffsetY;
@@ -36,7 +36,7 @@ public class Armor {
                 itemDef.rdc2 = 35363;
                 break;
             case 21076:
-                itemDef.name = "Slayer helmet [Level 2]";
+                itemDef.name = "Slayer helmet [T2]";
                  itemDefs = ItemDefinition.get(13263);
                 itemDef.modelOffsetX =  itemDefs.modelOffsetX;
                 itemDef.modelOffsetY =  itemDefs.modelOffsetY;
@@ -85,7 +85,7 @@ public class Armor {
                 itemDef.rdc2 = 8808080;
                 break;
             case 21079:
-                itemDef.name = "Slayer helmet [MAX]";
+                itemDef.name = "Slayer helmet [T5]";
                  itemDefs = ItemDefinition.get(13263);
                 itemDef.modelOffsetX =  itemDefs.modelOffsetX;
                 itemDef.modelOffsetY =  itemDefs.modelOffsetY;
@@ -99,6 +99,138 @@ public class Armor {
                 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 itemDef.rdc2 = 74623;
+                break;
+
+//            case 21050: BROKEN
+//                itemDef.name = "Slayermaster hood";
+//                itemDefs = ItemDefinition.get(4882);
+//                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+//                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+//                itemDef.modelZoom = itemDefs.modelZoom;
+//                itemDef.rotationY = itemDefs.rotationY;
+//                itemDef.rotationX = itemDefs.rotationX;
+//                itemDef.modelID = 64284;
+//                itemDef.maleEquip1 = 64285;
+//                itemDef.femaleEquip1 = 64285;
+//                itemDef.groundActions = new String[5];
+//                itemDef.groundActions[2] = "Take";
+//                itemDef.stackable = false;
+//                itemDef.actions = new String[5];
+//                itemDef.actions[1] = "Wear"/*done*/; //done
+//                itemDef.actions[2] = "Dissolve";
+//                itemDef.actions[4] = "Drop";
+//                itemDef.stackable = false;
+//
+//                break;
+            case 21051:
+                itemDef.name = "Slayermaster body";
+                itemDefs = ItemDefinition.get(5575);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.modelID = 64286;
+                itemDef.maleEquip1 = 64287;
+                itemDef.femaleEquip1 = 64287;
+                itemDef.groundActions = new String[5];
+                itemDef.groundActions[2] = "Take";
+                itemDef.stackable = false;
+                itemDef.actions = new String[5];
+                itemDef.actions[1] = "Wear"/*done*/; //done
+                itemDef.actions[2] = "Dissolve";
+                itemDef.actions[4] = "Drop";
+                itemDef.stackable = false;
+
+                break;
+            case 21052:
+                itemDef.name = "Slayermaster legs";
+                itemDefs = ItemDefinition.get(5576);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.modelID = 64288;
+                itemDef.maleEquip1 = 64289;
+                itemDef.femaleEquip1 = 64289;
+                itemDef.groundActions = new String[5];
+                itemDef.groundActions[2] = "Take";
+                itemDef.stackable = false;
+                itemDef.actions = new String[5];
+                itemDef.actions[1] = "Wear"/*done*/; //done
+                itemDef.actions[2] = "Dissolve";
+                itemDef.actions[4] = "Drop";
+                itemDef.stackable = false;
+                break;
+            case 18819:
+                itemDef.name = "Master Slayer Ring";
+                itemDefs = ItemDefinition.get(13281);
+                itemDef.actions = itemDefs.actions;
+                break;
+            case 4373:
+                itemDef.name = "Master Slayer Aura";
+                itemDef.modelID = 65062;
+                itemDef.maleEquip1 = 65062;
+                itemDef.femaleEquip1 = 65063;
+                break;
+
+            case 4321:
+                itemDef.name = "dark fairy wings"; //
+                itemDef.modelID = 65058;
+                itemDef.maleEquip1 = 65059;
+                itemDef.femaleEquip1 = 65059;
+                itemDef.rdc2 = 1013;
+                break;
+            case 4389:
+                itemDef.name = "Dragonslayer wings"; //
+                itemDef.modelID = 65056;
+                itemDef.maleEquip1 = 65057;
+                itemDef.femaleEquip1 = 65057;
+                break;
+            case 4391:
+                itemDef.name = "Red fairy wings"; //
+                itemDef.modelID = 65058;
+                itemDef.maleEquip1 = 65059;
+                itemDef.femaleEquip1 = 65059;
+                break;
+            case 4369:
+                itemDef.name = "Shinigami wings";
+                itemDef.modelID = 65034;
+                itemDef.maleEquip1 = 65035;
+                itemDef.femaleEquip1 = 65035;
+                break;
+            case 4393:
+                itemDef.name = "Inferior wings"; //
+                itemDef.modelID = 65060;
+                itemDef.maleEquip1 = 65061;
+                itemDef.femaleEquip1 = 65061;
+                break;
+            case 4395:
+                itemDef.name = "Demonic wings"; //
+                itemDef.modelID = 65062;
+                itemDef.maleEquip1 = 65062;
+                itemDef.femaleEquip1 = 65063;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+            case 4403:
+                itemDef.name = "Tawn wings"; //
+                itemDef.modelID = 65062;
+                itemDef.maleEquip1 = 65062;
+                itemDef.femaleEquip1 = 65063;
+                itemDef.rdc2 = 357782;
+                break;
+            case 4401:
+                itemDef.name = "Angel wings"; //
+                itemDef.modelID = 65071;
+                itemDef.maleEquip1 = 65071;
+                itemDef.femaleEquip1 = 65072;
+                break;
+            case 4411:
+                itemDef.name = "Impspawn wings"; //
+                itemDef.modelID = 65064;
+                itemDef.maleEquip1 = 65065;
+                itemDef.femaleEquip1 = 65065;
                 break;
 
                 /* Starter Gear */

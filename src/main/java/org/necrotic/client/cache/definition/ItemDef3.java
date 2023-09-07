@@ -428,11 +428,7 @@ public class ItemDef3 {
 //				itemDef.rotationX = 948;
 //				break;
 
-//			case 18819:
-//				itemDef.name = "<shad=1><col=FF0000>Infinity Slayer Ring";
-//				itemdefedit = ItemDefinition.get(13281);
-//				itemDef.actions = itemdefedit.actions;
-//				break;
+
 
 
 //			case 8087:

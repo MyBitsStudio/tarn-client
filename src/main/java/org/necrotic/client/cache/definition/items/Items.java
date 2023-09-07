@@ -70,6 +70,12 @@ public class Items {
                 itemDef.scaleX *= 0.50;
                 itemDef.scaleZ *= 0.50;
                 break;
+            case 4155:
+                itemDef.name = "Slayer gem";
+                itemDef.description = "A magical stone created by the gods of Tarn".getBytes();
+                itemDef.actions = new String[5];
+                itemDef.actions = new String[]{null, null, null, null, null};
+                break;
             case 19000:
                 itemDef.copyItem(14639);
                 itemDef.name = "Pet fragment";
@@ -164,6 +170,9 @@ public class Items {
                 itemDef.rotationY = itemDefs.rotationY;
                 itemDef.rotationX = itemDefs.rotationX;
                 itemDef.modelZoom = 1300;
+                break;
+            case 604:
+                itemDef.name = "Supreme Shard";
                 break;
             case 19001:
                 itemDef.copyItem(15262);
@@ -1439,23 +1448,21 @@ public class Items {
 //                //itemDef.rdc2 = 3222;
 //                break;
 
-//            case 604:
-//                itemDef.name = "Supreme Shard";
-//                break;
-//            case 13555:
-//                itemDef.copyItem(6585);
-//                itemDef.name = "Elite Pendant (hybrid)";
-//                itemDef.modelID = 83812;
-//                itemDef.maleEquip1 = 83801;
-//                itemDef.femaleEquip1 = 83801;
-//                itemDef.maleWieldY = 5;
-//                itemDef.modelZoom = 464;
-//                itemDef.modelOffsetX = 3;
-//                itemDef.modelOffsetY = 54;
-//                itemDef.rotationX = 1964;
-//                itemDef.rotationY = 277;
-//                itemDef.rotationZ = 0;
-//                break;
+
+            case 13555:
+                itemDef.copyItem(6585);
+                itemDef.name = "Elite Pendant (hybrid)";
+                itemDef.modelID = 83812;
+                itemDef.maleEquip1 = 83801;
+                itemDef.femaleEquip1 = 83801;
+                itemDef.maleWieldY = 5;
+                itemDef.modelZoom = 464;
+                itemDef.modelOffsetX = 3;
+                itemDef.modelOffsetY = 54;
+                itemDef.rotationX = 1964;
+                itemDef.rotationY = 277;
+                itemDef.rotationZ = 0;
+                break;
 //            case 8788:
 //                itemDef.name = "Transfer Crystal";
 //                itemDef.rdc2 = 91291;

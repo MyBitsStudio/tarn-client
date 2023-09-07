@@ -1603,12 +1603,6 @@ public final class ItemDefinition {
 			case 6570:
 				itemDef.actions[2] = "Upgrade";
 				break;
-			case 4155:
-				itemDef.name = "Slayer gem";
-				itemDef.description = "A magical stone created by the gods of Tarn".getBytes();
-				itemDef.actions = new String[5];
-				itemDef.actions = new String[]{"Check", "Teleport", null, null, null};
-				break;
 			case 13663:
 				itemDef.name = "Stat reset cert.";
 				itemDef.actions = new String[5];
@@ -6597,133 +6591,77 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.femaleEquip1 = 65033;
 				
 				break;
-			case 4371:
-				itemDef.name = "Blue wings";
-				itemDef.modelID = 65036;
-				itemDef.maleEquip1 = 65037;
-				itemDef.femaleEquip1 = 65037;
-				break;
-			case 4373:
-				itemDef.name = "@red@Elite Winged Aura"; // slayer
-				itemDef.modelID = 65062;
-				itemDef.maleEquip1 = 65062;
-				itemDef.femaleEquip1 = 65063;
-				break;
-			case 4315:
-				itemDef.name = "Craft Wings"; // slayer
-				itemDef.modelID = 65038;
-				itemDef.maleEquip1 = 65039;
-				itemDef.femaleEquip1 = 65039;
-				itemDef.rdc2 = 2252;
-				break;
-			case 4375:
-				itemDef.name = "Angelic Wings"; // slayer
-				itemDef.modelID = 65040;
-				itemDef.maleEquip1 = 65041;
-				itemDef.femaleEquip1 = 65041;
-				break;
-			case 4377:
-				itemDef.name = "Hit cape"; //
-				itemDef.modelID = 65042;
-				itemDef.maleEquip1 = 65043;
-				itemDef.femaleEquip1 = 65043;
-				break;
-			case 4379:
-				itemDef.name = "Cyan Wings"; //
-				itemDef.modelID = 65044;
-				itemDef.maleEquip1 = 65045;
-				itemDef.femaleEquip1 = 65045;
-				break;
-			case 4407:
-				itemDef.name = "Donator wingcape"; //
-				itemDef.modelID = 65046;
-				itemDef.maleEquip1 = 65047;
-				itemDef.femaleEquip1 = 65047;
-				break;
-			case 4409:
-				itemDef.name = "Yellow wings"; //
-				itemDef.modelID = 65050;
-				itemDef.maleEquip1 = 65051;
-				itemDef.femaleEquip1 = 65051;
-				break;
-			case 4385:
-				itemDef.name = "Purple wings"; //
-				itemDef.modelID = 65052;
-				itemDef.maleEquip1 = 65053;
-				itemDef.femaleEquip1 = 65053;
-				break;
-			case 4387:
-				itemDef.name = "Camo wings"; //
-				itemDef.modelID = 65054;
-				itemDef.maleEquip1 = 65055;
-				itemDef.femaleEquip1 = 65055;
-				break;
-			case 4319:
-				itemDef.name = "cryswamp wings"; //
-				itemDef.modelID = 65054;
-				itemDef.maleEquip1 = 65055;
-				itemDef.femaleEquip1 = 65055;
-				itemDef.rdc2 = 92020;
-				break;
-			case 4389:
-				itemDef.name = "Dragonslayer wings"; //
-				itemDef.modelID = 65056;
-				itemDef.maleEquip1 = 65057;
-				itemDef.femaleEquip1 = 65057;
-				break;
-			case 4391:
-				itemDef.name = "Red fairy wings"; //
-				itemDef.modelID = 65058;
-				itemDef.maleEquip1 = 65059;
-				itemDef.femaleEquip1 = 65059;
-				break;
-			case 4321:
-				itemDef.name = "dark fairy wings"; //
-				itemDef.modelID = 65058;
-				itemDef.maleEquip1 = 65059;
-				itemDef.femaleEquip1 = 65059;
-				itemDef.rdc2 = 1013;
-				break;
-			case 4393:
-				itemDef.name = "Inferior wings"; //
-				itemDef.modelID = 65060;
-				itemDef.maleEquip1 = 65061;
-				itemDef.femaleEquip1 = 65061;
-				break;
-			case 4395:
-				itemDef.name = "Demonic wings"; //
-				itemDef.modelID = 65062;
-				itemDef.maleEquip1 = 65062;
-				itemDef.femaleEquip1 = 65063;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 4403:
-				itemDef.name = "Tawn wings"; //
-				itemDef.modelID = 65062;
-				itemDef.maleEquip1 = 65062;
-				itemDef.femaleEquip1 = 65063;
-				itemDef.rdc2 = 357782;
-				break;
-			case 4401:
-				itemDef.name = "Angel wings"; //
-				itemDef.modelID = 65071;
-				itemDef.maleEquip1 = 65071;
-				itemDef.femaleEquip1 = 65072;
-				break;
-			case 4411:
-				itemDef.name = "Impspawn wings"; //
-				itemDef.modelID = 65064;
-				itemDef.maleEquip1 = 65065;
-				itemDef.femaleEquip1 = 65065;
-				
+//			case 4371:
+//				itemDef.name = "Blue wings";
+//				itemDef.modelID = 65036;
+//				itemDef.maleEquip1 = 65037;
+//				itemDef.femaleEquip1 = 65037;
+//				break;
+//			case 4315:
+//				itemDef.name = "Craft Wings"; // slayer
+//				itemDef.modelID = 65038;
+//				itemDef.maleEquip1 = 65039;
+//				itemDef.femaleEquip1 = 65039;
+//				itemDef.rdc2 = 2252;
+//				break;
+//			case 4375:
+//				itemDef.name = "Angelic Wings"; // slayer
+//				itemDef.modelID = 65040;
+//				itemDef.maleEquip1 = 65041;
+//				itemDef.femaleEquip1 = 65041;
+//				break;
+//			case 4377:
+//				itemDef.name = "Hit cape"; //
+//				itemDef.modelID = 65042;
+//				itemDef.maleEquip1 = 65043;
+//				itemDef.femaleEquip1 = 65043;
+//				break;
+//			case 4379:
+//				itemDef.name = "Cyan Wings"; //
+//				itemDef.modelID = 65044;
+//				itemDef.maleEquip1 = 65045;
+//				itemDef.femaleEquip1 = 65045;
+//				break;
+//			case 4407:
+//				itemDef.name = "Donator wingcape"; //
+//				itemDef.modelID = 65046;
+//				itemDef.maleEquip1 = 65047;
+//				itemDef.femaleEquip1 = 65047;
+//				break;
+//			case 4409:
+//				itemDef.name = "Yellow wings"; //
+//				itemDef.modelID = 65050;
+//				itemDef.maleEquip1 = 65051;
+//				itemDef.femaleEquip1 = 65051;
+//				break;
+//			case 4385:
+//				itemDef.name = "Purple wings"; //
+//				itemDef.modelID = 65052;
+//				itemDef.maleEquip1 = 65053;
+//				itemDef.femaleEquip1 = 65053;
+//				break;
+//			case 4387:
+//				itemDef.name = "Camo wings"; //
+//				itemDef.modelID = 65054;
+//				itemDef.maleEquip1 = 65055;
+//				itemDef.femaleEquip1 = 65055;
+//				break;
+//			case 4319:
+//				itemDef.name = "cryswamp wings"; //
+//				itemDef.modelID = 65054;
+//				itemDef.maleEquip1 = 65055;
+//				itemDef.femaleEquip1 = 65055;
+//				itemDef.rdc2 = 92020;
+//				break;
 
-				break;
-			case 4397:
-				itemDef.name = "Green wingcape"; //
-				itemDef.modelID = 65066;
-				itemDef.maleEquip1 = 65067;
-				itemDef.femaleEquip1 = 65067;
-				break;
+
+
+//			case 4397:
+//				itemDef.name = "Green wingcape"; //
+//				itemDef.modelID = 65066;
+//				itemDef.maleEquip1 = 65067;
+//				itemDef.femaleEquip1 = 65067;
+//				break;
 			case 4399:
 				itemDef.name = "Big bird wings"; //
 				itemDef.modelID = 65069;
@@ -6750,12 +6688,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.rdc2 = 32523;
 				break;
 
-			case 4369:
-				itemDef.name = "Shinigami wings";
-				itemDef.modelID = 65034;
-				itemDef.maleEquip1 = 65035;
-				itemDef.femaleEquip1 = 65035;
-				break;
+
 
 //			case 22058:
 //				itemDef.name = "swag chest"; // temp replace later
