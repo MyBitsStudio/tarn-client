@@ -217,6 +217,57 @@ public class Pets {
                 itemDef.rotationY = 204;
                 itemDef.rotationX = 20;
                 break;
+            case 22050:
+                itemDef.name = "Vote Pet";
+                itemDefs = ItemDefinition.get(12458);
+                itemDef.modelID = itemDefs.modelID;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.rotationZ = itemDefs.rotationZ;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+                itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
+                break;
+            case 23112:
+                itemDef.copyItem(5074);
+                itemDef.name = "Heimdall Pet";
+                itemDef.modelID = 100200;
+                itemDef.modelZoom = 3500;
+                itemDef.rotationY = 0;
+                itemDef.rotationX = 0;
+                itemDef.modelOffsetX = 0;
+                itemDef.modelOffsetY = 0;
+                break;
+            case 23108:
+                itemDef.copyItem(5074);
+                itemDef.name = "Fenrir Pet";
+                itemDef.modelID = 100196;
+                itemDef.modelZoom = 2700;
+                itemDef.rotationY = 0;
+                itemDef.rotationX = 0;
+                itemDef.modelOffsetX = 0;
+                itemDef.modelOffsetY = 0;
+                break;
+            case 23109:
+                itemDef.copyItem(5074);
+                itemDef.name = "Green Fenrir Pet";
+                itemDef.modelID = 100197;
+                itemDef.modelZoom = 2700;
+                itemDef.rotationY = 0;
+                itemDef.rotationX = 0;
+                itemDef.modelOffsetX = 0;
+                itemDef.modelOffsetY = 0;
+                break;
+            case 23110:
+                itemDef.copyItem(5074);
+                itemDef.name = "Red Fenrir Pet";
+                itemDef.modelID = 100198;
+                itemDef.modelZoom = 2700;
+                itemDef.rotationY = 0;
+                itemDef.rotationX = 0;
+                itemDef.modelOffsetX = 0;
+                itemDef.modelOffsetY = 0;
+                break;
 
 
             case 19483:
@@ -944,17 +995,6 @@ public class Pets {
                 itemDef.groundActions = new String[]{null, null, "Take", null, null};
                 itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
                 break;
-            case 22050:
-                itemDef.name = "Pet magma";
-                itemDefs = ItemDefinition.get(12458);
-                itemDef.modelID = itemDefs.modelID;
-                itemDef.modelOffsetX = itemDefs.modelOffsetX;
-                itemDef.rotationZ = itemDefs.rotationZ;
-                itemDef.modelOffsetY = itemDefs.modelOffsetY;
-                itemDef.modelZoom = itemDefs.modelZoom;
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
-                break;
             case 22055:
                 itemDef.name = "Pet WildyWyrm";
                 itemDefs = ItemDefinition.get(12458);
@@ -966,6 +1006,69 @@ public class Pets {
                 itemDef.groundActions = new String[]{null, null, "Take", null, null};
                 itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
                 break;
+
+
+			case 23111:
+				itemDef.copyItem(5074);
+				itemDef.name = "Odin Pet";
+				itemDef.modelID = 100199;
+				itemDef.modelZoom = 3500;
+				itemDef.rotationY = 0;
+				itemDef.rotationX = 0;
+				itemDef.modelOffsetX = 0;
+				itemDef.modelOffsetY = 0;
+				break;
+
+			case 23113:
+				itemDef.copyItem(5074);
+				itemDef.name = "Demon Pet";
+				itemDef.modelID = 100076;
+				itemDef.modelZoom = 5000;
+				itemDef.rotationY = 0;
+				itemDef.rotationX = 0;
+				itemDef.modelOffsetX = 0;
+				itemDef.modelOffsetY = 0;
+				break;
+			case 23114:
+				itemDef.copyItem(5074);
+				itemDef.name = "Kil'jaeden Pet";
+				itemDef.modelID = 100077;
+				itemDef.modelZoom = 5500;
+				itemDef.rotationY = 0;
+				itemDef.rotationX = 0;
+				itemDef.modelOffsetX = 0;
+				itemDef.modelOffsetY = 0;
+				break;
+			case 23115:
+				itemDef.copyItem(5074);
+				itemDef.name = "Skreeg Pet";
+				itemDef.modelID = 100078;
+				itemDef.modelZoom = 5000;
+				itemDef.rotationY = 0;
+				itemDef.rotationX = 0;
+				itemDef.modelOffsetX = 0;
+				itemDef.modelOffsetY = 0;
+				break;
+			case 23116:
+				itemDef.copyItem(5074);
+				itemDef.name = "Orix Pet";
+				itemDef.modelID = 100079;
+				itemDef.modelZoom = 5000;
+				itemDef.rotationY = 0;
+				itemDef.rotationX = 0;
+				itemDef.modelOffsetX = 0;
+				itemDef.modelOffsetY = 0;
+				break;
+			case 23117:
+				itemDef.copyItem(5074);
+				itemDef.name = "Crystal orc Pet";
+				itemDef.modelID = 100080;
+				itemDef.modelZoom = 5500;
+				itemDef.rotationY = 0;
+				itemDef.rotationX = 0;
+				itemDef.modelOffsetX = 0;
+				itemDef.modelOffsetY = 0;
+				break;
         }
         return itemDef;
     }

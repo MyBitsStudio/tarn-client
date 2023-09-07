@@ -55,7 +55,7 @@ public class Items {
                 itemDef.scaleZ *= 0.50;
                 break;
             case 20503:
-                itemDef.name = "Upgrade Token";
+                itemDef.name = "Elite Token";
                 itemDef.actions = new String[5];
                 itemDef.modelID = 15063;
                 itemDef.modelZoom = 1100;
@@ -167,7 +167,7 @@ public class Items {
                 break;
             case 19001:
                 itemDef.copyItem(15262);
-                itemDef.name = "Pet fragment pack (X250)";
+                itemDef.name = "Pet fragment pack";
                 itemDef.stackable = false;
                 itemDef.actions = new String[]{"Open", null, null, null, "Drop"};
                 itemDef.rdc2 = 487111;

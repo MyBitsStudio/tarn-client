@@ -64,7 +64,7 @@ public interface LegacyConfig extends Config {
             position = 5
     )
     default boolean useNewGameframe() {
-        return true;
+        return false;
     }
 
     @ConfigItem(
@@ -104,7 +104,7 @@ public interface LegacyConfig extends Config {
             position = 9
     )
     default boolean enableFog() {
-        return true;
+        return false;
     }
 
     @ConfigItem(
