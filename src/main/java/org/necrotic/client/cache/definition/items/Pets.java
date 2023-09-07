@@ -268,7 +268,88 @@ public class Pets {
                 itemDef.modelOffsetX = 0;
                 itemDef.modelOffsetY = 0;
                 break;
+            case 456:
+                itemDef.name = "Scorpion pet";
+                itemDef.modelID = 24610;
+                itemDef.modelZoom = 4000;
+                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
+                break;
+            case 457:
+                itemDef.name = "Unicorn pet";
+                itemDef.modelID = 25754;
+                itemDef.modelZoom = 3000;
+                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
+                break;
+            case 458:
+                itemDef.name = "Bear pet";
+                itemDef.modelID = 18884;
+                itemDef.modelZoom = 3000;
+                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
+                break;
+            case 459:
+                itemDef.name = "Wolf pet";
+                itemDef.modelID = 26266;
+                itemDef.modelZoom = 3000;
+                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
+                break;
+            case 460:
+                itemDef.name = "Gorilla pet";
+                itemDef.modelID = 65154;
+                itemDef.modelZoom = 3000;
+                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
+                break;
+//            case 11317:
+//                ItemDefinition votingpoting = ItemDefinition.get(12479);
+//                itemDef.modelID = 64304;
+//                itemDef.modelOffsetX = votingpoting.modelOffsetX;
+//                itemDef.modelOffsetY = votingpoting.modelOffsetY;
+//                itemDef.modelZoom = 2000;
+//                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+//                itemDef.name = "Bumble bee pet";
+//                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+//                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
+//                itemDef.rdc2 = 664466;
+//                break;
+            case 11318:
+                ItemDefinition adminsraichu = ItemDefinition.get(12479);
+                itemDef.modelID = 64448;
+                itemDef.modelOffsetX = adminsraichu.modelOffsetX;
+                itemDef.modelOffsetY = adminsraichu.modelOffsetY;
+                itemDef.modelZoom = 2000;
+                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+                itemDef.name = "Raichu pet";
+                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
+                break;
+            case 22016:
+                itemDef.name = "Pet Skeleton Warlord";
+                itemDefs = ItemDefinition.get(12458);
+                itemDef.modelID = itemDefs.modelID;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.rotationZ = itemDefs.rotationZ;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+                itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
+                break;
+            case 22017:
+                itemDef.name = "Pet Penguin";
+                itemDefs = ItemDefinition.get(12458);
+                itemDef.modelID = itemDefs.modelID;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.rotationZ = itemDefs.rotationZ;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+                itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
+                break;
 
+                /* To Add */
 
             case 19483:
                 itemDef.copyItem(5074);
@@ -280,7 +361,6 @@ public class Pets {
                 itemDef.modelOffsetX = 0;
                 itemDef.modelOffsetY = 0;
                 break;
-
             case 19491:
                 itemDef.copyItem(5074);
                 itemDef.name = "Varthramoth Pet";
@@ -513,19 +593,6 @@ public class Pets {
                 itemDef.rotationZ = 0;
                 itemDef.modelOffsetY = 0;
                 break;
-            case 11317:
-                ItemDefinition votingpoting = ItemDefinition.get(12479);
-                itemDef.modelID = 64304;
-                itemDef.modelOffsetX = votingpoting.modelOffsetX;
-                //itemDef.modelOffsetX = itemdefedit1.modelOffsetX;
-                itemDef.modelOffsetY = votingpoting.modelOffsetY;
-                itemDef.modelZoom = 2000;
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.name = "Bumble bee pet";
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
-                itemDef.rdc2 = 664466;
-                break;
             case 5074:
                 ItemDefinition jokerpet = ItemDefinition.get(12479);
                 itemDef.modelID = 64508;
@@ -631,18 +698,6 @@ public class Pets {
                 itemDef.groundActions = new String[]{null, null, "Take", null, null};
                 itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
                 break;
-            case 11318:
-                ItemDefinition adminsraichu = ItemDefinition.get(12479);
-                itemDef.modelID = 64448;
-                itemDef.modelOffsetX = adminsraichu.modelOffsetX;
-                itemDef.modelOffsetY = adminsraichu.modelOffsetY;
-                itemDef.modelZoom = 2000;
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.name = "@yel@Raichu pet";
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
-                //itemDef.rdc2 = 664466;
-                break;
             case 11319:
                 ItemDefinition zorbak = ItemDefinition.get(12479);
                 itemDef.modelID = 64476;
@@ -660,14 +715,12 @@ public class Pets {
                 ItemDefinition zorbak2 = ItemDefinition.get(12479);
                 itemDef.modelID = 97666;
                 itemDef.modelOffsetX = zorbak2.modelOffsetX;
-                //itemDef.modelOffsetX = itemdefedit1.modelOffsetX;
                 itemDef.modelOffsetY = zorbak2.modelOffsetY;
                 itemDef.modelZoom = 6500;
                 itemDef.groundActions = new String[]{null, null, "Take", null, null};
                 itemDef.name = "Youtube JR Pet";
                 itemDef.groundActions = new String[]{null, null, "Take", null, null};
                 itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
-                //itemDef.rdc2 = 664466;
                 break;
             case 22107:
                 itemDef.name = "Lucifer's pet";
@@ -691,45 +744,7 @@ public class Pets {
                 itemDef.groundActions = new String[]{null, null, "Take", null, null};
                 itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
                 break;
-            case 456:
-                itemDef.name = "Scorpian pet";
-                itemDef.modelID = 24610;
 
-                itemDef.modelZoom = 4000;
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
-                break;
-            case 457:
-                itemDef.name = "Unicorn pet";
-                itemDef.modelID = 25754;
-
-                itemDef.modelZoom = 3000;
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
-                break;
-            case 458:
-                itemDef.name = "Bear pet";
-                itemDef.modelID = 18884;
-                itemDef.modelZoom = 3000;
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
-                break;
-            case 459:
-                itemDef.name = "Wolf pet";
-                itemDef.modelID = 26266;
-                itemDef.modelZoom = 3000;
-
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
-                break;
-            case 460:
-                itemDef.name = "Gorilla pet";
-                itemDef.modelID = 65154;
-                itemDef.modelZoom = 3000;
-
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
-                break;
             case 461:
                 itemDef.name = "Vegeta pet";
                 itemDef.modelID = 65304;
@@ -742,10 +757,8 @@ public class Pets {
                 break;
             case 462:
                 itemDef.modelID = 13850;
-
                 itemDef.modelZoom = 900;
                 itemDef.modelOffsetY = 160;
-
                 itemDef.rotationZ = 1;
                 itemDef.name = "Yoshi pet";
                 itemDef.groundActions = new String[]{null, null, "Take", null, null};
@@ -775,28 +788,6 @@ public class Pets {
                 break;
             case 22015:
                 itemDef.name = "Pet Maze Guardian";
-                itemDefs = ItemDefinition.get(12458);
-                itemDef.modelID = itemDefs.modelID;
-                itemDef.modelOffsetX = itemDefs.modelOffsetX;
-                itemDef.rotationZ = itemDefs.rotationZ;
-                itemDef.modelOffsetY = itemDefs.modelOffsetY;
-                itemDef.modelZoom = itemDefs.modelZoom;
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
-                break;
-            case 22016:
-                itemDef.name = "Pet Skeleton Warlord";
-                itemDefs = ItemDefinition.get(12458);
-                itemDef.modelID = itemDefs.modelID;
-                itemDef.modelOffsetX = itemDefs.modelOffsetX;
-                itemDef.rotationZ = itemDefs.rotationZ;
-                itemDef.modelOffsetY = itemDefs.modelOffsetY;
-                itemDef.modelZoom = itemDefs.modelZoom;
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
-                break;
-            case 22017:
-                itemDef.name = "Pet Penguin";
                 itemDefs = ItemDefinition.get(12458);
                 itemDef.modelID = itemDefs.modelID;
                 itemDef.modelOffsetX = itemDefs.modelOffsetX;

@@ -207,7 +207,7 @@ public final class MobDefinition {
 				definition.actions[0] = null;
 				break;
 			case 271:
-				definition.name = "Scorpian pet";
+				definition.name = "Scorpion pet";
 				definition.actions = new String[5];
 				definition.actions[0] = null;
 				definition.combatLevel = 0;
