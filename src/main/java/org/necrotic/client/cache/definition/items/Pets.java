@@ -349,6 +349,18 @@ public class Pets {
                 itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
                 break;
 
+            case 22018:
+                itemDef.name = "Pet Marley";
+                itemDefs = ItemDefinition.get(12458);
+                itemDef.modelID = itemDefs.modelID;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.rotationZ = itemDefs.rotationZ;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+                itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
+                break;
+
                 /* To Add */
 
             case 19483:
@@ -797,17 +809,17 @@ public class Pets {
                 itemDef.groundActions = new String[]{null, null, "Take", null, null};
                 itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
                 break;
-            case 22018:
-                itemDef.name = "Pet Druid";
-                itemDefs = ItemDefinition.get(12458);
-                itemDef.modelID = itemDefs.modelID;
-                itemDef.modelOffsetX = itemDefs.modelOffsetX;
-                itemDef.rotationZ = itemDefs.rotationZ;
-                itemDef.modelOffsetY = itemDefs.modelOffsetY;
-                itemDef.modelZoom = itemDefs.modelZoom;
-                itemDef.groundActions = new String[]{null, null, "Take", null, null};
-                itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
-                break;
+//            case 22018:
+//                itemDef.name = "Pet Druid";
+//                itemDefs = ItemDefinition.get(12458);
+//                itemDef.modelID = itemDefs.modelID;
+//                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+//                itemDef.rotationZ = itemDefs.rotationZ;
+//                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+//                itemDef.modelZoom = itemDefs.modelZoom;
+//                itemDef.groundActions = new String[]{null, null, "Take", null, null};
+//                itemDef.actions = new String[]{null, null, "Summon", null, "Drop"};
+//                break;
             case 22019:
                 itemDef.name = "Pet Monkey Guard";
                 itemDefs = ItemDefinition.get(12458);

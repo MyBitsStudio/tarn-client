@@ -778,7 +778,120 @@ public class Armor {
                 itemDef.stackable = false;
                 break;
 
+            case 15230:
+                itemDef.name = "VIP helm";
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX =  itemDefs.modelOffsetX;
+                itemDef.modelOffsetY =  itemDefs.modelOffsetY;
+                itemDef.modelZoom =  itemDefs.modelZoom;
+                itemDef.rotationY =  itemDefs.rotationY;
+                itemDef.rotationX =  itemDefs.rotationX;
+                itemDef.modelID = 64165;
+                itemDef.maleEquip1 = 64166;
+                itemDef.femaleEquip1 = 64166;
+                itemDef.groundActions = new String[5];
+                itemDef.groundActions[2] = "Take";
+                itemDef.stackable = false;
+                itemDef.actions = new String[5];
+                itemDef.actions[1] = "Wear"/*done*/; //done
+                itemDef.actions[2] = "Dissolve";
+                itemDef.actions[4] = "Drop";
+
+                itemDef.newModelColor = new int[]{40};
+                itemDef.editedModelColor = new int[]{73};
+                break;
+            case 15231:
+                itemDef.name = "VIP body";
+                itemDefs = ItemDefinition.get(5575);
+                itemDef.modelOffsetX =  itemDefs.modelOffsetX;
+                itemDef.modelOffsetY =  itemDefs.modelOffsetY;
+                itemDef.modelZoom =  itemDefs.modelZoom;
+                itemDef.rotationY =  itemDefs.rotationY;
+                itemDef.rotationX =  itemDefs.rotationX;
+                itemDef.modelID = 64167;
+                itemDef.maleEquip1 = 64168;
+                itemDef.femaleEquip1 = 64168;
+                itemDef.groundActions = new String[5];
+                itemDef.groundActions[2] = "Take";
+                itemDef.stackable = false;
+                itemDef.actions = new String[5];
+                itemDef.actions[1] = "Wear"/*done*/; //done
+                itemDef.actions[2] = "Dissolve";
+                itemDef.actions[4] = "Drop";
+
+                itemDef.newModelColor = new int[]{40};
+                itemDef.editedModelColor = new int[]{73};
+                break;
+            case 15232:
+                itemDef.name = "VIP legs";
+                itemDefs = ItemDefinition.get(5576);
+                itemDef.modelOffsetX =  itemDefs.modelOffsetX;
+                itemDef.modelOffsetY =  itemDefs.modelOffsetY;
+                itemDef.modelZoom =  itemDefs.modelZoom;
+                itemDef.rotationY =  itemDefs.rotationY;
+                itemDef.rotationX =  itemDefs.rotationX;
+                itemDef.modelID = 64169;
+                itemDef.maleEquip1 = 64170;
+                itemDef.femaleEquip1 = 64170;
+                itemDef.groundActions = new String[5];
+                itemDef.groundActions[2] = "Take";
+                itemDef.stackable = false;
+                itemDef.actions = new String[5];
+                itemDef.actions[1] = "Wear"/*done*/; //done
+                itemDef.actions[2] = "Dissolve";
+                itemDef.actions[4] = "Drop";
+
+                itemDef.newModelColor = new int[]{40};
+                itemDef.editedModelColor = new int[]{73};
+                break;
+            case 15233:
+                itemDef.name = "VIP Hammer";
+                itemDef.modelID = 64171;
+                itemDef.maleEquip1 = 64172;
+                itemDef.femaleEquip1 = 64172;
+                itemDefs = ItemDefinition.get(4755);
+                itemDef.modelOffsetX =  itemDefs.modelOffsetX;
+                //itemDef.modelOffsetX =  itemDefs.modelOffsetX;
+                itemDef.modelOffsetY =  itemDefs.modelOffsetY;
+                itemDef.modelZoom =  itemDefs.modelZoom;
+                itemDef.rotationY =  itemDefs.rotationY;
+                itemDef.rotationX =  itemDefs.rotationX;
+                itemDef.actions = new String[5];
+                itemDef.actions[1] = "Wear"/*done*/; //done
+                itemDef.actions[2] = "Dissolve";
+                itemDef.actions[4] = "Drop";
+
+                itemDef.newModelColor = new int[]{40};
+                itemDef.editedModelColor = new int[]{73};
+                break;
+            case 15234:
+                itemDef.name = "VIP shield";
+                itemDefs = ItemDefinition.get(1540);
+                itemDef.modelOffsetX =  itemDefs.modelOffsetX;
+                itemDef.modelOffsetY =  itemDefs.modelOffsetY;
+                itemDef.modelZoom =  itemDefs.modelZoom;
+                itemDef.rotationY =  itemDefs.rotationY;
+                itemDef.rotationX =  itemDefs.rotationX;
+                itemDef.modelID = 64173;
+                itemDef.maleEquip1 = 64174;
+                itemDef.femaleEquip1 = 64174;
+                itemDef.groundActions = new String[5];
+                itemDef.groundActions[2] = "Take";
+                itemDef.stackable = false;
+                itemDef.actions = new String[5];
+                itemDef.actions[1] = "Wear"/*done*/; //done
+                itemDef.actions[2] = "Dissolve";
+                itemDef.actions[4] = "Drop";
+                itemDef.newModelColor = new int[]{40};
+                itemDef.editedModelColor = new int[]{73};
+                break;
+
                 /* Statues */
+            case 23330:
+                itemDef.copyItem(14878);
+                itemDef.name = "Donator Statue";
+                itemDef.actions = new String[]{null, "Wear", null, null, "Drop"};
+                break;
             case 15589:
                 itemDef.name = "Magic Statue";
                 itemDef.actions = new String[]{null, "Wear", null, null, "Drop"};
@@ -815,6 +928,14 @@ public class Armor {
                 break;
 
                 /* Auras */
+            case 12630:
+                itemDef.name = "VIP Aura";
+                itemDef.modelID = 65074;
+                itemDef.maleEquip1 = 65074;
+                itemDef.femaleEquip1 = 65074;
+                itemDef.modelZoom = 1500;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
             case 23044:
                 itemDef.copyItem(1);
                 itemDef.name = "Aura 1";

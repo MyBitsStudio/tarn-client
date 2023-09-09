@@ -17018,7 +17018,6 @@ public class Client extends GameRenderer {
         client.getLoginBuffer().putShort(Configuration.CLIENT_VERSION);
         client.getLoginBuffer().putByte(Client.isLowDetail() ? 66 : 12);
 
-
         if (Configuration.SEND_HASH) {
             byte[] bytes = hash.getBytes(StandardCharsets.UTF_8);
             getLoginBuffer().putByte(bytes.length);

@@ -6555,14 +6555,6 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.modelZoom = 1500;
 				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				break;
-			case 12630:// super sayian
-				itemDef.name = "@yel@Elite Aura";
-				itemDef.modelID = 65074;
-				itemDef.maleEquip1 = 65074;
-				itemDef.femaleEquip1 = 65074;
-				itemDef.modelZoom = 1500;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
 			case 12610:// super sayian
 				itemDef.name = "@yel@Rogue Aura";
 				itemDef.modelID = 65075;

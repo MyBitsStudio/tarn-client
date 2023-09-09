@@ -157,6 +157,10 @@ public class Items {
                 itemDef.name = "$250 Bond";
                 itemDef.modelID = 100151;
                 break;
+            case 23335:
+                itemDef.copyItem(14819);
+                itemDef.name = "$5 VIP Certificate";
+                break;
             case 10946:
                 itemDef.name = "$1 Scroll";
                 itemDef.actions = new String[5];
@@ -488,6 +492,13 @@ public class Items {
                 itemDef.actions = new String[]{"Drink", null, null, null, "Destroy"};
                 itemDef.modelID = 100258;
                 break;
+            case 15328:
+                itemDef.name = "Infinity Rage Potion";
+                break;
+            case 15330:
+                itemDef.name = "Infinite Prayer Renewal";
+                itemDef.actions = new String[]{"Drink", null, "Upgrade", null, "Drop"};
+                break;
             case 23147:
                 itemDef.copyItem(1505);
                 itemDef.name = "Rare Perk Token";
@@ -633,13 +644,6 @@ public class Items {
                 itemDef.rdc2 = 42500;
                 itemDef.modelZoom = 600;
                 itemDef.actions = new String[]{"Drink", null, null, null, "Destroy"};
-                break;
-            case 15328:
-                itemDef.name = "<shad=1><col=ff0000>Infinity Rage Potion";
-                break;
-            case 15330:
-                itemDef.name = "<shad=1><col=ff0000>Infinite Super Overload";
-                itemDef.actions = new String[]{"Drink", null, "Upgrade", null, "Drop"};
                 break;
             case 27:
                 itemDef.name = "<img=15>Elite Slayer Gem";
