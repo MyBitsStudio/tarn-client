@@ -213,22 +213,22 @@ public class RSInterface {
 		main.child(8, STARTING_POINT + 10, 173, 189);
 		main.child(9, STARTING_POINT + 11, 254, 200);
 		RSInterface perkScroll = addInterface(STARTING_POINT + 15);
-		perkScroll.totalChildren(14);
+		perkScroll.totalChildren(18);
 		int idStart = STARTING_POINT + 16;
 		int yPos = 0;
 
-		for (int i = 0; i < 6; i++) {
+		for (int i = 0; i < 8; i++) {
 			addHoverableConfigSprite(idStart + i, 1517, 1518, true, "Select", i, 4000);
 			perkScroll.child(i, idStart + i, 53, yPos);
 			yPos += 42;
 		}
 
-		String[] PERK_NAMES = {"X1.5 Damage", "X1.5 DR", "X3 XP", "All Perks"};
+		String[] PERK_NAMES = {"x2 Slayer", "x1.5 DMG", "x1.5 DR", "x3 XP", "DR/DMG/XP", "MEGA PERK"};
 		int child = 6;
 		int index = 0;
 		yPos = 5;
 		idStart = STARTING_POINT + 50;
-		for (int j = 0; j < 8; j += 2) {
+		for (int j = 0; j < 12; j += 2) {
 			addText(idStart + j, PERK_NAMES[index], font, 2, 16746020, true, true);
 			addText(idStart + j + 1, "@gre@Perk", font, 1, 32768, false, true);
 			perkScroll.child(child, idStart + j, 125, yPos);
@@ -239,7 +239,7 @@ public class RSInterface {
 		}
 		perkScroll.width = 200;
 		perkScroll.height = 137;
-		perkScroll.scrollMax = 168;
+		perkScroll.scrollMax = 258;
 	}
 
 	public Sprite originalEnabledSprite;
