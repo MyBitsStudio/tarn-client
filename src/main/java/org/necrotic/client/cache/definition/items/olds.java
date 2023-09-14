@@ -1011,15 +1011,7 @@ public class olds {
 //    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 //    itemDef.stackable = false;
 //				break;
-//                			case 17011:
-//    itemDef.name = "Sanguinesti Execution Staff";
-//    itemDef.actions = new String[5];
-//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//    itemDef.modelID = 99513;
-//    itemDef.maleEquip1 = 99506;
-//    itemDef.femaleEquip1 = 99506;
-//				break;
-//
+
 
 //     case 17638:
 //    itemDef.name = TierColor.NOVICE.getColor() + "Angelic helm";
@@ -1098,26 +1090,8 @@ public class olds {
 //    itemDef.femaleEquip1 = 100185;
 //                break;
 
-//    case 23087:
-//            itemDef.copyItem(6585);
-//    itemDef.name = "Collectors necklace";
-//    itemDef.modelID = 100203;
-//    itemDef.maleEquip1 = 100204;
-//    itemDef.femaleEquip1 = 100204;
-//    itemDef.modelZoom = 800;
-//    itemDef.rotationX = 0;
-//    itemDef.rotationY = 350;
-//    itemDef.modelOffsetX = 0;
-//    itemDef.modelOffsetY = 15;
-//				break;
 
-//    case 23088:
-//            itemDef.copyItem(23087);
-//    itemDef.name = "Green Valor Amulet";
-//    itemDef.modelID = 100205;
-//    itemDef.maleEquip1 = 100206;
-//    itemDef.femaleEquip1 = 100206;
-//				break;
+
 //
 //			case 23090:
 //                    itemDef.copyItem(23087);

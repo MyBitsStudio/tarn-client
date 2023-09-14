@@ -447,46 +447,33 @@ public class ItemDef3 {
 //
 //				break;
 
-
-			case 19888:
-				itemDef.name = "Collector necklace @cya@II";
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				
-
-				break;
-			case 18823:
-
-				itemDef.name = "Collector ring @cya@II";
-				
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 18888:
-
-				itemdefedit = ItemDefinition.get(19888);
-				itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-				itemDef.modelOffsetY = itemdefedit.modelOffsetY;
-				itemDef.modelID = itemdefedit.modelID;
-				itemDef.maleEquip1 = itemdefedit.maleEquip1;
-				itemDef.femaleEquip1 = itemdefedit.femaleEquip1;
-				itemDef.modelZoom = itemdefedit.modelZoom;
-				itemDef.rotationY = itemdefedit.rotationY;
-				itemDef.rotationX = itemdefedit.rotationX;
-				itemDef.name = "Collector necklace @mag@III";
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 18818:
-				itemdefedit = ItemDefinition.get(18823);
-				itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-				itemDef.modelOffsetY = itemdefedit.modelOffsetY;
-				itemDef.modelID = itemdefedit.modelID;
-				itemDef.maleEquip1 = itemdefedit.maleEquip1;
-				itemDef.femaleEquip1 = itemdefedit.femaleEquip1;
-				itemDef.modelZoom = itemdefedit.modelZoom;
-				itemDef.rotationY = itemdefedit.rotationY;
-				itemDef.rotationX = itemdefedit.rotationX;
-				itemDef.name = "Collector ring @mag@III";
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
+//			case 18888:
+//
+//				itemdefedit = ItemDefinition.get(19888);
+//				itemDef.modelOffsetX = itemdefedit.modelOffsetX;
+//				itemDef.modelOffsetY = itemdefedit.modelOffsetY;
+//				itemDef.modelID = itemdefedit.modelID;
+//				itemDef.maleEquip1 = itemdefedit.maleEquip1;
+//				itemDef.femaleEquip1 = itemdefedit.femaleEquip1;
+//				itemDef.modelZoom = itemdefedit.modelZoom;
+//				itemDef.rotationY = itemdefedit.rotationY;
+//				itemDef.rotationX = itemdefedit.rotationX;
+//				itemDef.name = "Collector necklace @mag@III";
+//				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 18818:
+//				itemdefedit = ItemDefinition.get(18823);
+//				itemDef.modelOffsetX = itemdefedit.modelOffsetX;
+//				itemDef.modelOffsetY = itemdefedit.modelOffsetY;
+//				itemDef.modelID = itemdefedit.modelID;
+//				itemDef.maleEquip1 = itemdefedit.maleEquip1;
+//				itemDef.femaleEquip1 = itemdefedit.femaleEquip1;
+//				itemDef.modelZoom = itemdefedit.modelZoom;
+//				itemDef.rotationY = itemdefedit.rotationY;
+//				itemDef.rotationX = itemdefedit.rotationX;
+//				itemDef.name = "Collector ring @mag@III";
+//				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
 
 			case 21815:
 				itemDef.name = "Archer ticket";
@@ -1613,7 +1600,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.actions[2] = "Dissolve";
 				itemDef.actions[4] = "Drop";
 				break;
-			
+
 			case 5073:
 				itemDef.name = "Joker Rpg";
 				itemdefedit = ItemDefinition.get(1419);
@@ -2168,61 +2155,7 @@ itemDef.actions[2] = "Dissolve";
 //	itemDef.modelRotationY = 279;
 //	itemDef.modelRotationX = 948;
 				break;
-			case 8828:
-				itemDef.name = "Charybde helm";
-				itemDef.modelID = 96452;
-				itemDef.maleEquip1 = 96453;
-				itemDef.femaleEquip1 = 96453;
-				itemdefedit = ItemDefinition.get(4882);
-				itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-//	itemDef.modelOffsetX = itemDef2.modelOffsetX;
-				itemDef.modelOffsetY = itemdefedit.modelOffsetY;
-				itemDef.modelZoom = itemdefedit.modelZoom;
-				itemDef.rotationY = itemdefedit.rotationY;
-				itemDef.rotationX = itemdefedit.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				itemDef.newModelColor = new int[]{55};
-				itemDef.editedModelColor = new int[]{61};
-//	itemDef.rdc2 = 2353627;
-				break;
-			case 8829:
-				itemDef.name = "Charybde body";
-				itemDef.modelID = 96454;
-				itemDef.maleEquip1 = 96455;
-				itemDef.femaleEquip1 = 96455;
-				itemdefedit = ItemDefinition.get(4894);
-				itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-//	itemDef.modelOffsetX = itemDef2.modelOffsetX;
-				itemDef.modelOffsetY = itemdefedit.modelOffsetY;
-				itemDef.modelZoom = itemdefedit.modelZoom;
-				itemDef.rotationY = itemdefedit.rotationY;
-				itemDef.rotationX = itemdefedit.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				itemDef.newModelColor = new int[]{55};
-				itemDef.editedModelColor = new int[]{61};
-//	itemDef.rdc2 = 2353627;
-				break;
 
-			case 8833:
-				itemDef.name = "Charybde legs";
-				itemDef.modelID = 96456;
-				itemDef.maleEquip1 = 96457;
-				itemDef.femaleEquip1 = 96457;
-				itemdefedit = ItemDefinition.get(4900);
-				itemDef.modelOffsetX = itemdefedit.modelOffsetX;
-//	itemDef.modelOffsetX = itemDef2.modelOffsetX;
-				itemDef.modelOffsetY = itemdefedit.modelOffsetY;
-				itemDef.modelZoom = itemdefedit.modelZoom;
-				itemDef.rotationY = itemdefedit.rotationY;
-				itemDef.rotationX = itemdefedit.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				itemDef.newModelColor = new int[]{55};
-				itemDef.editedModelColor = new int[]{61};
-//	itemDef.rdc2 = 2353627;
-				break;
 			case 15642:
 				itemDef.name = "Elite helm (ranged)";
 				itemDef.modelID = 96496;

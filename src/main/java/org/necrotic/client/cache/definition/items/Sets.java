@@ -2821,7 +2821,109 @@ public class Sets {
                 itemDef.rotationX = itemDefs.rotationX;
                 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
+                break;
 
+            case 8828:
+                itemDef.name = "Charybde helm";
+                itemDef.modelID = 96452;
+                itemDef.maleEquip1 = 96453;
+                itemDef.femaleEquip1 = 96453;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.newModelColor = new int[]{55};
+                itemDef.editedModelColor = new int[]{61};
+                break;
+            case 8829:
+                itemDef.name = "Charybde body";
+                itemDef.modelID = 96454;
+                itemDef.maleEquip1 = 96455;
+                itemDef.femaleEquip1 = 96455;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.newModelColor = new int[]{55};
+                itemDef.editedModelColor = new int[]{61};
+                break;
+
+            case 8833:
+                itemDef.name = "Charybde legs";
+                itemDef.modelID = 96456;
+                itemDef.maleEquip1 = 96457;
+                itemDef.femaleEquip1 = 96457;
+                itemDefs = ItemDefinition.get(4900);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                itemDef.newModelColor = new int[]{55};
+                itemDef.editedModelColor = new int[]{61};
+                break;
+
+            case 8830:
+				itemDef.name = "Charybde cape";
+				itemDefs = ItemDefinition.get(6570);
+				itemDef.modelOffsetX = itemDefs.modelOffsetX;
+				itemDef.modelOffsetY = itemDefs.modelOffsetY;
+				itemDef.modelZoom = itemDefs.modelZoom;
+				itemDef.rotationY = itemDefs.rotationY;
+				itemDef.rotationX = itemDefs.rotationX;
+				itemDef.modelID = 65447;
+				itemDef.maleEquip1 = 65446;
+				itemDef.femaleEquip1 = 65446;
+				itemDef.actions = itemDefs.actions;
+				itemDef.editedModelColor = new int[2]; // if only 1 texture is modified this has to be 1, if 2 then 2 etc
+				itemDef.newModelColor = new int[2]; // same here
+				itemDef.newModelColor[0] = 54; // the texture that it currently has
+				itemDef.editedModelColor[0] = 63;
+				itemDef.newModelColor[1] = 65; // the texture that it currently has
+				itemDef.editedModelColor[1] = 63; // the new texture u want it to have
+				itemDef.stackable = false;
+				itemDef.value = 1;
+				break;
+
+            case 8831:
+				itemDef.name = "Charybde ring";
+				itemDefs = ItemDefinition.get(15401);
+				itemDef.modelOffsetX = itemDefs.modelOffsetX;
+				itemDef.modelOffsetY = itemDefs.modelOffsetY;
+				itemDef.modelZoom = itemDefs.modelZoom;
+				itemDef.rotationY = itemDefs.rotationY;
+				itemDef.rotationX = itemDefs.rotationX;
+				itemDef.actions = itemDefs.actions;
+				itemDef.modelID = 65303;
+				itemDef.maleEquip1 = 65303;
+				itemDef.femaleEquip1 = 65303;
+				itemDef.editedModelColor = new int[1]; // same here
+				itemDef.newModelColor = new int[1];
+				itemDef.newModelColor[0] = 51; // the texture that it currently has
+				itemDef.editedModelColor[0] = 63;
+				break;
+
+            case 22173:
+                itemDef.name = "Charybde staff";
+                itemDef.modelID = 100357;
+                itemDef.maleEquip1 = 100358;
+                itemDef.femaleEquip1 = 100358;
+                itemDefs = ItemDefinition.get(18509);
+                itemDef.modelZoom = 1000;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
                 break;
 
         }

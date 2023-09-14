@@ -886,10 +886,43 @@ public class Armor {
                 itemDef.editedModelColor = new int[]{73};
                 break;
 
+            /* Necks */
+            case 23087:
+                itemDef.copyItem(6585);
+                itemDef.name = "Accuracy necklace";
+                itemDef.modelID = 100203;
+                itemDef.maleEquip1 = 100204;
+                itemDef.femaleEquip1 = 100204;
+                itemDef.modelZoom = 800;
+                itemDef.rotationX = 0;
+                itemDef.rotationY = 350;
+                itemDef.modelOffsetX = 0;
+                itemDef.modelOffsetY = 15;
+				break;
+            case 23088:
+                itemDef.copyItem(23087);
+                itemDef.name = "Protection Amulet";
+                itemDef.modelID = 100205;
+                itemDef.maleEquip1 = 100206;
+                itemDef.femaleEquip1 = 100206;
+				break;
+            case 19892:
+                itemDef.name = "Slayer Amulet";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+            case 19888:
+                itemDef.name = "VIP Necklace";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+            case 18823:
+                itemDef.name = "VIP Ring";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+
                 /* Statues */
             case 23330:
                 itemDef.copyItem(14878);
-                itemDef.name = "Donator Statue";
+                itemDef.name = "VIP Statue";
                 itemDef.actions = new String[]{null, "Wear", null, null, "Drop"};
                 break;
             case 15589:

@@ -3869,18 +3869,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.stackable = false;
 				break;
 
-			case 22173:
-				itemDef.name = "Halfmoon staff";
-				itemDef.modelID = 100357;
-				itemDef.maleEquip1 = 100358;
-				itemDef.femaleEquip1 = 100358;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
+
 
 			case 22174:
 				itemDef.name = "Blurite Staff";

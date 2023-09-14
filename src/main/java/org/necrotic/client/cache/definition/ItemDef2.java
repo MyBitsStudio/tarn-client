@@ -1321,28 +1321,7 @@ public class ItemDef2 {
 //				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 //				break;
 
-//			case 8830:
-//				itemDef.name = "Charybde cape";
-//				trinity = ItemDefinition.get(6570);
-//				itemDef.modelOffsetX = trinity.modelOffsetX;
-//				//	itemDef.modelOffsetX = itemDef2.modelOffsetX;
-//				itemDef.modelOffsetY = trinity.modelOffsetY;
-//				itemDef.modelZoom = trinity.modelZoom;
-//				itemDef.rotationY = trinity.rotationY;
-//				itemDef.rotationX = trinity.rotationX;
-//				itemDef.modelID = 65447;
-//				itemDef.maleEquip1 = 65446;
-//				itemDef.femaleEquip1 = 65446;
-//				itemDef.actions = trinity.actions;
-//				itemDef.editedModelColor = new int[2]; // if only 1 texture is modified this has to be 1, if 2 then 2 etc
-//				itemDef.newModelColor = new int[2]; // same here
-//				itemDef.newModelColor[0] = 54; // the texture that it currently has
-//				itemDef.editedModelColor[0] = 63;
-//				itemDef.newModelColor[1] = 65; // the texture that it currently has
-//				itemDef.editedModelColor[1] = 63; // the new texture u want it to have
-//				itemDef.stackable = false;
-//				itemDef.value = 1;
-//				break;
+
 //			case 8812:
 //				itemDef.name = "Tarn gloves";
 //				trinity = ItemDefinition.get(7671);
@@ -1438,25 +1417,7 @@ public class ItemDef2 {
 //				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 //
 //				break;
-//			case 8831:
-//				itemDef.name = "Charybde ring";
-//				trinity = ItemDefinition.get(15401);
-//				itemDef.modelOffsetX = trinity.modelOffsetX;
-//				//	itemDef.modelOffsetX = itemDef2.modelOffsetX;
-//				itemDef.modelOffsetY = trinity.modelOffsetY;
-//				itemDef.modelZoom = trinity.modelZoom;
-//				itemDef.rotationY = trinity.rotationY;
-//				itemDef.rotationX = trinity.rotationX;
-//				itemDef.actions = trinity.actions;
-//
-//				itemDef.modelID = 65303;
-//				itemDef.maleEquip1 = 65303;
-//				itemDef.femaleEquip1 = 65303;
-//				itemDef.editedModelColor = new int[1]; // same here
-//				itemDef.newModelColor = new int[1];
-//				itemDef.newModelColor[0] = 51; // the texture that it currently has
-//				itemDef.editedModelColor[0] = 63;
-//				break;
+
 
 
 			/*case 1153:
@@ -2522,10 +2483,7 @@ public class ItemDef2 {
 //				itemDef.name = "Aberrant gloves";
 //				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 //				break;
-//			case 19892:
-//				itemDef.name = "Aberrant Amulet";
-//				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//				break;
+
 //			case 15834:
 //				itemDef.name = "Owner's Necklace";
 //				break;
