@@ -7928,7 +7928,7 @@ public class Client extends GameRenderer {
                             if(childInterface.id == 162516 || childInterface.id == 162566){
                                 RarityColor color = childInterface.invGlow[i3] > 0 ? RarityColor.getColorTypeForEffect(childInterface.invGlow[i3]) : RarityColor.NONE;
                                 if(color != null && color != RarityColor.NONE) {
-                                    System.out.println("Drawing glow for item: " +" i "+ i3+ " "+ childInterface.invGlow[i3] + " color " + color.getColor());
+                                    //System.out.println("Drawing glow for item: " +" i "+ i3+ " "+ childInterface.invGlow[i3] + " color " + color.getColor());
                                     DrawingArea.renderGlow(k5, j6, color.getColor(), 36);
                                 }
                             }
@@ -8762,8 +8762,8 @@ public class Client extends GameRenderer {
                     }
                     sprite.drawSprite(childX, childY);
                     if(childInterface.isAchievementComponent) {
-                        int calcWidth = (childInterface.achievementProgress * 377) / childInterface.achievementMaxProgress;
-                        int width = Math.min(childInterface.width, calcWidth);
+                        long calcWidth = (childInterface.achievementProgress * 377) / childInterface.achievementMaxProgress;
+                        int width = (int) Math.min(377, calcWidth);
                         new Sprite(spritesMap.getData(3426), width, 33, 1).drawAdvancedSprite(childX+1, childY+1);
                         childInterface.helmSprite.drawSprite(childX + 10, childY+9);
                         CustomInterfaces.tda[1].drawRegularText(true, childX+40, 0xffa900, childInterface.achievementTitle, childY+17);

@@ -2515,6 +2515,315 @@ public class Sets {
                 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
 
+                // tier 15
+            case 17614:
+                itemDef.name = "Conquerer helm";
+                itemDef.modelID = 65498;
+                itemDef.maleEquip1 = 65499;
+                itemDef.femaleEquip1 = 65499;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                //itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 17616:
+                itemDef.name = "Conquerer body";
+                itemDef.modelID = 65500;
+                itemDef.maleEquip1 = 65501;
+                itemDef.femaleEquip1 = 65501;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                //itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+
+                break;
+
+            case 17618:
+                itemDef.name = "Conquerer legs";
+                itemDef.modelID = 65502;
+                itemDef.maleEquip1 = 65503;
+                itemDef.femaleEquip1 = 65503;
+                itemDefs = ItemDefinition.get(4900);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 17606:
+                itemDef.name = "Conquerer wings";
+                itemDef.modelID = 65504;
+                itemDef.maleEquip1 = 65505;
+                itemDef.femaleEquip1 = 65505;
+                itemDefs = ItemDefinition.get(18509);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 8410:
+                itemDef.name = "Conquerer Sword";
+                itemDefs = ItemDefinition.get(4587);
+                itemDef.modelID = 64487;
+                itemDef.femaleEquip1 = 64488;
+                itemDef.maleEquip1 = 64488;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.newModelColor = new int[]{40};
+                itemDef.editedModelColor = new int[]{60};
+				break;
+			case 8411:
+                itemDef.name = "Conquerer Bow";
+                itemDefs = ItemDefinition.get(859);
+                itemDef.modelID = 64485;
+                itemDef.femaleEquip1 = 64486;
+                itemDef.maleEquip1 = 64486;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                //	itemDef.rdc2  = 20483;
+                itemDef.newModelColor = new int[]{40};
+                itemDef.editedModelColor = new int[]{59};
+				break;
+			case 8412:
+                itemDef.name = "Conquerer Staff";
+                itemDefs = ItemDefinition.get(4587);
+                itemDef.modelID = 64489;
+                itemDef.femaleEquip1 = 64490;
+                itemDef.maleEquip1 = 64490;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.newModelColor = new int[]{40};
+                itemDef.editedModelColor = new int[]{58};
+				break;
+            
+                // tier 16
+            case 5068:
+                itemDef.name = "Joker Face";
+                itemDef.modelID = 64497;
+                itemDef.maleEquip1 = 64498;
+                itemDef.femaleEquip1 = 64498;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 5069:
+                itemDef.name = "Joker body";
+                itemDef.modelID = 64499;
+                itemDef.maleEquip1 = 64500;
+                itemDef.femaleEquip1 = 64500;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                //itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 5070:
+                itemDef.name = "Joker legs";
+                itemDef.modelID = 64501;
+                itemDef.maleEquip1 = 64502;
+                itemDef.femaleEquip1 = 64502;
+                itemDefs = ItemDefinition.get(4900);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+
+            case 5071:
+                itemDef.name = "Joker gloves";
+                itemDef.modelID = 64503;
+                itemDef.maleEquip1 = 64504;
+                itemDef.femaleEquip1 = 64504;
+                itemDefs = ItemDefinition.get(7462);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.editedModelColor = new int[1]; // if only 1 texture is modified this has to be 1, if 2 then 2 etc
+                itemDef.newModelColor = new int[1]; // same here
+                itemDef.newModelColor[0] = 40; // the texture that it currently has
+                itemDef.editedModelColor[0] = 65;
+                itemDef.stackable = false;
+                break;
+            case 5072:
+                itemDef.name = "Joker boots";
+                itemDef.modelID = 64505;
+                itemDef.maleEquip1 = 64505;
+                itemDef.femaleEquip1 = 64505;
+                itemDefs = ItemDefinition.get(11732);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+			case 17718:
+				itemDef.name = "Joker bow";
+				itemDef.modelID = 64073;
+				itemDef.maleEquip1 = 64074;
+				itemDef.femaleEquip1 = 64074;
+                itemDefs = ItemDefinition.get(20171);
+				itemDef.modelOffsetX = itemDefs.modelOffsetX;
+				itemDef.modelOffsetY = itemDefs.modelOffsetY + 2;
+				itemDef.modelZoom = itemDefs.modelZoom;
+				itemDef.rotationY = itemDefs.rotationY;
+				itemDef.rotationX = itemDefs.rotationX;
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+				itemDef.stackable = false;
+				break;
+
+            case 13328:
+                itemDef.name = "Shinigami head";
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.modelID = 64132;
+                itemDef.maleEquip1 = 64133;
+                itemDef.femaleEquip1 = 64133;
+                itemDef.groundActions = new String[5];
+                itemDef.groundActions[2] = "Take";
+                itemDef.stackable = false;
+                itemDef.actions = new String[5];
+                itemDef.actions[1] = "Wear"/*done*/; //done
+                itemDef.actions[2] = "Dissolve";
+                itemDef.actions[4] = "Drop";
+                itemDef.stackable = false;
+
+                break;
+            case 13329:
+                itemDef.name = "Shinigami body";
+                itemDefs = ItemDefinition.get(5575);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.modelID = 64134;
+                itemDef.maleEquip1 = 64135;
+                itemDef.femaleEquip1 = 64135;
+                itemDef.groundActions = new String[5];
+                itemDef.groundActions[2] = "Take";
+                itemDef.stackable = false;
+                itemDef.actions = new String[5];
+                itemDef.actions[1] = "Wear"/*done*/; //done
+                itemDef.actions[2] = "Dissolve";
+                itemDef.actions[4] = "Drop";
+                itemDef.stackable = false;
+
+                break;
+            case 13330:
+                itemDef.name = "Shinigami legs";
+                itemDefs = ItemDefinition.get(5576);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.modelID = 64136;
+                itemDef.maleEquip1 = 64137;
+                itemDef.femaleEquip1 = 64137;
+                itemDef.groundActions = new String[5];
+                itemDef.groundActions[2] = "Take";
+                itemDef.stackable = false;
+                itemDef.actions = new String[5];
+                itemDef.actions[1] = "Wear"/*done*/; //done
+                itemDef.actions[2] = "Dissolve";
+                itemDef.actions[4] = "Drop";
+                itemDef.stackable = false;
+
+                break;
+            case 13332:
+                itemDef.name = "Shinigami boots";
+                itemDefs = ItemDefinition.get(7114);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.modelID = 64138;
+                itemDef.maleEquip1 = 64138;
+                itemDef.femaleEquip1 = 64138;
+                itemDef.groundActions = new String[5];
+                itemDef.groundActions[2] = "Take";
+                itemDef.stackable = false;
+                itemDef.actions = new String[5];
+                itemDef.actions[1] = "Wear"/*done*/; //done
+                itemDef.actions[2] = "Dissolve";
+                itemDef.actions[4] = "Drop";
+                itemDef.stackable = false;
+
+                break;
+            case 13333:
+                itemDef.name = "Shinigami Sword";
+                itemDef.modelID = 64139;
+                itemDef.maleEquip1 = 64140;
+                itemDef.femaleEquip1 = 64140;
+                itemDefs = ItemDefinition.get(22034);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+
+                break;
+
         }
         return itemDef;
     }

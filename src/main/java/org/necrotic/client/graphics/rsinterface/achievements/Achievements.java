@@ -41,15 +41,15 @@ public class Achievements extends RSInterface {
     public static int selectPerk;
 
     static {
-        PERK_DESCRIPTIONS.put(165354, "This is perk one");
-        PERK_DESCRIPTIONS.put(165355, "This is perk two");
-        PERK_DESCRIPTIONS.put(165356, "This is perk three");
-        PERK_DESCRIPTIONS.put(165357, "This is perk four");
-        PERK_DESCRIPTIONS.put(165358, "This is perk five");
-        PERK_DESCRIPTIONS.put(165359, "This is perk six");
-        PERK_DESCRIPTIONS.put(165360, "This is perk seven");
-        PERK_DESCRIPTIONS.put(165361, "This is perk eight");
-        PERK_DESCRIPTIONS.put(165362, "This is perk nine");
+        PERK_DESCRIPTIONS.put(165354, "Raise your ACCURACY by 10% per level");
+        PERK_DESCRIPTIONS.put(165355, "Increase your DROP RATE by 150 a level");
+        PERK_DESCRIPTIONS.put(165356, "Increase your MELEE DAMAGE by 10% a level");
+        PERK_DESCRIPTIONS.put(165357, "Increase your MAGIC DAMAGE by 10% a level");
+        PERK_DESCRIPTIONS.put(165358, "Increase your RANGE DAMAGE by 10% a level");
+        PERK_DESCRIPTIONS.put(165359, "Increase your COIN DROP by 10% a level");
+        PERK_DESCRIPTIONS.put(165360, "Increase your DEFENCE by 5% a level");
+        PERK_DESCRIPTIONS.put(165361, "Increase SKILLING bonuses by 5% a level");
+        PERK_DESCRIPTIONS.put(165362, "Increase your ABSORB DAMAGE by 5% a level");
     }
 
     public static final boolean[] UNLOCKED_PERKS = new boolean[9];
@@ -71,8 +71,8 @@ public class Achievements extends RSInterface {
         addText(165003, "Achievement Book", 0xff8624, true, true, -1, 2);
         rsi.child(1, 165003, 260, 25);
 
-        hoverButton(165004, 714, 715, "Close");
-        rsi.child(2, 165004, 486, 25);
+        addCloseButton(165004, 714, 715);
+        rsi.child(2, 165004, 479, 22);
 
         addHoverableConfigSprite(165005, 3420, 3421, true, "Select Beginner", 0, 3125);
         rsi.child(3, 165005, 13, 62);
@@ -237,9 +237,9 @@ public class Achievements extends RSInterface {
         addText(165348, "75", 0x9d9d9d, false, true, -1, 0);
         rsi.child(36, 165348, 147, 227);
 
-        addWrappingText(165349, "Lorem ipsum dolor sit amet, consectetur adipiscing elit," +
-                        "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
-                        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi "
+        addWrappingText(165349, "Get a cutting edge with these amazing perks!," +
+                        "Turn those points gained from achievements into permanent boosts. " +
+                        "Unlock a perk for 50 points, and continue to gain levels up to level 5 "
                 , tda, 0, ColorConstants.ORANGE, false, true, 190);
 
         rsi.child(37, 165349, 304, 204);
@@ -256,31 +256,31 @@ public class Achievements extends RSInterface {
         addText(165353, "200", 0x9d9d9d, false, true, -1, 0);
         rsi.child(41, 165353, 410, 162);
 
-        addHoverableConfigSpriteCopy(165354, 3458, 3459, true, "Perk 1", 0, 3126);
+        addHoverableConfigSpriteCopy(165354, 3458, 3459, true, "Accuracy", 0, 3126);
         rsi.child(42, 165354, 130, 100);
 
-        addHoverableConfigSpriteCopy(165355, 3464, 3465, true, "Perk 2", 1, 3126);
+        addHoverableConfigSpriteCopy(165355, 3464, 3465, true, "Drop Rate", 1, 3126);
         rsi.child(43, 165355, 170, 100);
 
-        addHoverableConfigSpriteCopy(165356, 3469, 3470, true, "Perk 3", 2, 3126);
+        addHoverableConfigSpriteCopy(165356, 3469, 3470, true, "Melee Damage", 2, 3126);
         rsi.child(44, 165356, 210, 100);
 
-        addHoverableConfigSpriteCopy(165357, 3474, 3475, true, "Perk 4", 3, 3126);
+        addHoverableConfigSpriteCopy(165357, 3474, 3475, true, "Magic Damage", 3, 3126);
         rsi.child(45, 165357, 250, 100);
 
-        addHoverableConfigSpriteCopy(165358, 3479, 3480, true, "Perk 5", 5, 3126);
+        addHoverableConfigSpriteCopy(165358, 3479, 3480, true, "Range Damage", 5, 3126);
         rsi.child(46, 165358, 130, 140);
 
-        addHoverableConfigSpriteCopy(165359, 3484, 3485, true, "Perk 6", 6, 3126);
+        addHoverableConfigSpriteCopy(165359, 3484, 3485, true, "Coin Drop", 6, 3126);
         rsi.child(47, 165359, 170, 140);
 
-        addHoverableConfigSpriteCopy(165360, 3489, 3490, true, "Perk 7", 7, 3126);
+        addHoverableConfigSpriteCopy(165360, 3489, 3490, true, "Defence", 7, 3126);
         rsi.child(48, 165360, 210, 140);
 
-        addHoverableConfigSpriteCopy(165361, 3494, 3495, true, "Perk 8", 8, 3126);
+        addHoverableConfigSpriteCopy(165361, 3494, 3495, true, "Skilling", 8, 3126);
         rsi.child(49, 165361, 250, 140);
 
-        addHoverableConfigSpriteCopy(165362, 3499, 3500, true, "Perk 9", 9, 3126);
+        addHoverableConfigSpriteCopy(165362, 3499, 3500, true, "Absorb", 9, 3126);
         rsi.child(50, 165362, 130, 180);
 
         addSprite(165363, 3459);

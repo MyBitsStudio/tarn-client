@@ -6,57 +6,6 @@ import org.necrotic.client.cache.definition.ItemDefinition;
  *  Temp File, holding armors to use in future
  */
 public class olds {
-//
-
-//    case 8410:
-//    itemDef.name = "Elite Sword";
-//    itemdefedit1 = ItemDefinition.get(4587);
-//    itemDef.modelID = 64487;
-//    itemDef.femaleEquip1 = 64488;
-//    itemDef.maleEquip1 = 64488;
-//    itemDef.modelOffsetX = itemdefedit1.modelOffsetX;
-//    itemDef.modelOffsetY = itemdefedit1.modelOffsetY;
-//    itemDef.modelZoom = itemdefedit1.modelZoom;
-//    itemDef.rotationY = itemdefedit1.rotationY;
-//    itemDef.rotationX = itemdefedit1.rotationX;
-//    itemDef.stackable = false;
-//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//    itemDef.newModelColor = new int[]{40};
-//    itemDef.editedModelColor = new int[]{60};
-//				break;
-//			case 8411:
-//    itemDef.name = "Elite Bow";
-//    itemdefedit1 = ItemDefinition.get(859);
-//    itemDef.modelID = 64485;
-//    itemDef.femaleEquip1 = 64486;
-//    itemDef.maleEquip1 = 64486;
-//    itemDef.modelOffsetX = itemdefedit1.modelOffsetX;
-//    itemDef.modelOffsetY = itemdefedit1.modelOffsetY;
-//    itemDef.modelZoom = itemdefedit1.modelZoom;
-//    itemDef.rotationY = itemdefedit1.rotationY;
-//    itemDef.rotationX = itemdefedit1.rotationX;
-//    itemDef.stackable = false;
-//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//    //	itemDef.rdc2  = 20483;
-//    itemDef.newModelColor = new int[]{40};
-//    itemDef.editedModelColor = new int[]{59};
-//				break;
-//			case 8412:
-//    itemDef.name = "Elite Staff";
-//    itemdefedit1 = ItemDefinition.get(4587);
-//    itemDef.modelID = 64489;
-//    itemDef.femaleEquip1 = 64490;
-//    itemDef.maleEquip1 = 64490;
-//    itemDef.modelOffsetX = itemdefedit1.modelOffsetX;
-//    itemDef.modelOffsetY = itemdefedit1.modelOffsetY;
-//    itemDef.modelZoom = itemdefedit1.modelZoom;
-//    itemDef.rotationY = itemdefedit1.rotationY;
-//    itemDef.rotationX = itemdefedit1.rotationX;
-//    itemDef.stackable = false;
-//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//    itemDef.newModelColor = new int[]{40};
-//    itemDef.editedModelColor = new int[]{58};
-//				break;
 
 
 
@@ -515,105 +464,7 @@ public class olds {
 //
 //                break;
 
-//            case 13328:
-//                itemDef.name = "Shinigami head";
-//                itemDefs = ItemDefinition.get(4882);
-//                itemDef.modelOffsetX = itemDefs.modelOffsetX;
-//                itemDef.modelOffsetY = itemDefs.modelOffsetY;
-//                itemDef.modelZoom = itemDefs.modelZoom;
-//                itemDef.rotationY = itemDefs.rotationY;
-//                itemDef.rotationX = itemDefs.rotationX;
-//                itemDef.modelID = 64132;
-//                itemDef.maleEquip1 = 64133;
-//                itemDef.femaleEquip1 = 64133;
-//                itemDef.groundActions = new String[5];
-//                itemDef.groundActions[2] = "Take";
-//                itemDef.stackable = false;
-//                itemDef.actions = new String[5];
-//                itemDef.actions[1] = "Wear"/*done*/; //done
-//                itemDef.actions[2] = "Dissolve";
-//                itemDef.actions[4] = "Drop";
-//                itemDef.stackable = false;
-//
-//                break;
-//            case 13329:
-//                itemDef.name = "Shinigami body";
-//                itemDefs = ItemDefinition.get(5575);
-//                itemDef.modelOffsetX = itemDefs.modelOffsetX;
-//                itemDef.modelOffsetY = itemDefs.modelOffsetY;
-//                itemDef.modelZoom = itemDefs.modelZoom;
-//                itemDef.rotationY = itemDefs.rotationY;
-//                itemDef.rotationX = itemDefs.rotationX;
-//                itemDef.modelID = 64134;
-//                itemDef.maleEquip1 = 64135;
-//                itemDef.femaleEquip1 = 64135;
-//                itemDef.groundActions = new String[5];
-//                itemDef.groundActions[2] = "Take";
-//                itemDef.stackable = false;
-//                itemDef.actions = new String[5];
-//                itemDef.actions[1] = "Wear"/*done*/; //done
-//                itemDef.actions[2] = "Dissolve";
-//                itemDef.actions[4] = "Drop";
-//                itemDef.stackable = false;
-//
-//                break;
-//            case 13330:
-//                itemDef.name = "Shinigami legs";
-//                itemDefs = ItemDefinition.get(5576);
-//                itemDef.modelOffsetX = itemDefs.modelOffsetX;
-//                itemDef.modelOffsetY = itemDefs.modelOffsetY;
-//                itemDef.modelZoom = itemDefs.modelZoom;
-//                itemDef.rotationY = itemDefs.rotationY;
-//                itemDef.rotationX = itemDefs.rotationX;
-//                itemDef.modelID = 64136;
-//                itemDef.maleEquip1 = 64137;
-//                itemDef.femaleEquip1 = 64137;
-//                itemDef.groundActions = new String[5];
-//                itemDef.groundActions[2] = "Take";
-//                itemDef.stackable = false;
-//                itemDef.actions = new String[5];
-//                itemDef.actions[1] = "Wear"/*done*/; //done
-//                itemDef.actions[2] = "Dissolve";
-//                itemDef.actions[4] = "Drop";
-//                itemDef.stackable = false;
-//
-//                break;
-//            case 13332:
-//                itemDef.name = "Shinigami boots";
-//                itemDefs = ItemDefinition.get(7114);
-//                itemDef.modelOffsetX = itemDefs.modelOffsetX;
-//                itemDef.modelOffsetY = itemDefs.modelOffsetY;
-//                itemDef.modelZoom = itemDefs.modelZoom;
-//                itemDef.rotationY = itemDefs.rotationY;
-//                itemDef.rotationX = itemDefs.rotationX;
-//                itemDef.modelID = 64138;
-//                itemDef.maleEquip1 = 64138;
-//                itemDef.femaleEquip1 = 64138;
-//                itemDef.groundActions = new String[5];
-//                itemDef.groundActions[2] = "Take";
-//                itemDef.stackable = false;
-//                itemDef.actions = new String[5];
-//                itemDef.actions[1] = "Wear"/*done*/; //done
-//                itemDef.actions[2] = "Dissolve";
-//                itemDef.actions[4] = "Drop";
-//                itemDef.stackable = false;
-//
-//                break;
-//            case 13333:
-//                itemDef.name = "Shinigami Sword";
-//                itemDef.modelID = 64139;
-//                itemDef.maleEquip1 = 64140;
-//                itemDef.femaleEquip1 = 64140;
-//                def = ItemDefinition.get(22034);
-//                itemDef.modelOffsetX = def.modelOffsetX;
-//                itemDef.modelOffsetY = def.modelOffsetY;
-//                itemDef.modelZoom = def.modelZoom;
-//                itemDef.rotationY = def.rotationY;
-//                itemDef.rotationX = def.rotationX;
-//                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//                itemDef.stackable = false;
-//
-//                break;
+
 
 //            case 21010:
 //                itemDef.name = TierColor.BEGGINER.getColor()+"Owl Helmet";
@@ -689,7 +540,7 @@ public class olds {
 //                itemDef.stackable = false;
 //                break;
 
-//            case 17676:
+ //           case 17676:
 //                itemDef.name = "Demonhunter blade";
 //                itemDef.modelID = 64022;
 //                itemDef.maleEquip1 = 64023;

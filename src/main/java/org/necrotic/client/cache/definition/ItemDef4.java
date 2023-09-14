@@ -302,69 +302,7 @@ public class ItemDef4 {
 				itemDef.stackable = false;
 				itemDef.rdc2 = 7467;
 				break;
-			case 17614:
-				itemDef.name = "<col=7d9781>Nite helm";
-				itemDef.modelID = 65498;
-				itemDef.maleEquip1 = 65499;
-				itemDef.femaleEquip1 = 65499;
-				itemDef21 = ItemDefinition.get(4882);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				//itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
 
-
-				break;
-
-			case 17616:
-				itemDef.name = "<col=7d9781>Nite body";
-				itemDef.modelID = 65500;
-				itemDef.maleEquip1 = 65501;
-				itemDef.femaleEquip1 = 65501;
-				itemDef21 = ItemDefinition.get(4894);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				//itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-
-				break;
-
-			case 17618:
-				itemDef.name = "<col=7d9781>Nite legs";
-				itemDef.modelID = 65502;
-				itemDef.maleEquip1 = 65503;
-				itemDef.femaleEquip1 = 65503;
-				itemDef21 = ItemDefinition.get(4900);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
-			case 17606:
-				itemDef.name = "<col=7d9781>Nite wings";
-				itemDef.modelID = 65504;
-				itemDef.maleEquip1 = 65505;
-				itemDef.femaleEquip1 = 65505;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
 			case 17626:
 				itemDef.name = "Firefly helm";
 				itemDef.modelID = 65511;

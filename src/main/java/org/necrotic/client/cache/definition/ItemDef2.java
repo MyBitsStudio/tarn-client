@@ -584,20 +584,7 @@ public class ItemDef2 {
 //
 //				itemDef.rdc2 = 2344321;
 //				break;
-//			case 17718:
-//				itemDef.name = "Darkness bow";
-//				itemDef.modelID = 64073;
-//				itemDef.maleEquip1 = 64074;
-//				itemDef.femaleEquip1 = 64074;
-//				def = ItemDefinition.get(20171);
-//				itemDef.modelOffsetX = def.modelOffsetX;
-//				itemDef.modelOffsetY = def.modelOffsetY;
-//				itemDef.modelZoom = def.modelZoom;
-//				itemDef.rotationY = def.rotationY;
-//				itemDef.rotationX = def.rotationX;
-//				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//				itemDef.stackable = false;
-//				break;
+
 
 
 //			case 17732:
