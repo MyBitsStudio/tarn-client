@@ -8762,8 +8762,8 @@ public class Client extends GameRenderer {
                     }
                     sprite.drawSprite(childX, childY);
                     if(childInterface.isAchievementComponent) {
-                        long calcWidth = (childInterface.achievementProgress * 377) / childInterface.achievementMaxProgress;
-                        int width = (int) Math.min(377, calcWidth);
+                        float percentage = (((float)childInterface.achievementProgress / childInterface.achievementMaxProgress) * 100.0f);
+                        int width = (int) Math.min(377, (377 * percentage)/100);
                         new Sprite(spritesMap.getData(3426), width, 33, 1).drawAdvancedSprite(childX+1, childY+1);
                         childInterface.helmSprite.drawSprite(childX + 10, childY+9);
                         CustomInterfaces.tda[1].drawRegularText(true, childX+40, 0xffa900, childInterface.achievementTitle, childY+17);
@@ -15415,27 +15415,42 @@ public class Client extends GameRenderer {
                         String[] split = s.substring(s.lastIndexOf("#")+1).split(",");
                         int key = Integer.parseInt(split[0]);
                         int amount = Integer.parseInt(split[1]);
+                        Difficulty tab = null;
+                        int n = 0;
                         switch (key) {
                             case 0:
                                 Achievements.completedBeginner = amount;
                                 RSInterface.interfaceCache[165011].progress = (int) (100 - (((float) amount / Achievements.BEGINNER_ACHIEVEMENTS.size()) * 100));
+                                tab = Difficulty.BEGINNER;
+                                n = Achievements.BEGINNER_ACHIEVEMENTS.size();
                                 break;
                             case 1:
                                 Achievements.completedEasy = amount;
                                 RSInterface.interfaceCache[165012].progress = (int) (100 - (((float) amount / Achievements.EASY_ACHIEVEMENTS.size()) * 100));
+                                tab = Difficulty.EASY;
+                                n = Achievements.EASY_ACHIEVEMENTS.size();
                                 break;
                             case 2:
                                 Achievements.completedMedium = amount;
                                 RSInterface.interfaceCache[165013].progress = (int) (100 - (((float) amount / Achievements.MEDIUM_ACHIEVEMENTS.size()) * 100));
+                                tab = Difficulty.MEDIUM;
+                                n = Achievements.MEDIUM_ACHIEVEMENTS.size();
                                 break;
                             case 3:
                                 Achievements.completedHard = amount;
                                 RSInterface.interfaceCache[165014].progress = (int) (100 - (((float) amount / Achievements.HARD_ACHIEVEMENTS.size()) * 100));
+                                tab = Difficulty.HARD;
+                                n = Achievements.HARD_ACHIEVEMENTS.size();
                                 break;
                             case 4:
                                 Achievements.completedElite = amount;
                                 RSInterface.interfaceCache[165015].progress = (int) (100 - (((float) amount / Achievements.ELITE_ACHIEVEMENTS.size()) * 100));
+                                tab = Difficulty.ELITE;
+                                n = Achievements.ELITE_ACHIEVEMENTS.size();
                                 break;
+                        }
+                        if(Achievements.currentTab.equals(tab) && n != 0) {
+                            Achievements.updateCompletedBar(tab, n);
                         }
                         pktType = -1;
                         return true;

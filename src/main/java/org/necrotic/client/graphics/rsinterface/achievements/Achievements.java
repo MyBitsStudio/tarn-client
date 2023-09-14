@@ -37,7 +37,7 @@ public class Achievements extends RSInterface {
 
     private static final HashMap<Integer, String> PERK_DESCRIPTIONS = new HashMap<>();
     public static final HashMap<Integer, Integer> PERK_PROGRESS = new HashMap<>();
-
+    public static Difficulty currentTab;
     public static int selectPerk;
 
     static {
@@ -456,6 +456,7 @@ public class Achievements extends RSInterface {
         List<Achievement> list = new ArrayList<>();
         if(Client.openInterfaceID != 165001) {
             list = BEGINNER_ACHIEVEMENTS;
+            currentTab = Difficulty.BEGINNER;
             Client.getClient().configPacket(3125, 0);
         } else {
             switch (difficulty) {
@@ -490,8 +491,18 @@ public class Achievements extends RSInterface {
             RSInterface.interfaceCache[achievement.getComponentId()].hideWidget = false;
             i++;
         }
+        currentTab = difficulty;
         int size = list.size();
         interfaceCache[165025].maxPercentage = size;
+        updateCompletedBar(difficulty, size);
+        interfaceCache[165027].scrollMax = Math.max(182, 35 * list.size());
+        if(Client.openInterfaceID != 165001) {
+            Client.getClient().messagePromptRaised = false;
+            switchInterface(Client.openInterfaceID, show);
+        }
+    }
+
+    public static void updateCompletedBar(Difficulty difficulty, int size) {
         if(difficulty == Difficulty.BEGINNER) {
             interfaceCache[165026].message = completedBeginner + "/" + size + " Complete";
             interfaceCache[165025].progress = completedBeginner;
@@ -507,11 +518,6 @@ public class Achievements extends RSInterface {
         } else if(difficulty == Difficulty.ELITE) {
             interfaceCache[165026].message = completedElite + "/" + size + " Complete";
             interfaceCache[165025].progress = completedElite;
-        }
-        interfaceCache[165027].scrollMax = Math.max(182, 35 * list.size());
-        if(Client.openInterfaceID != 165001) {
-            Client.getClient().messagePromptRaised = false;
-            switchInterface(Client.openInterfaceID, show);
         }
     }
 
