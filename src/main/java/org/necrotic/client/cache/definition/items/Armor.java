@@ -1024,6 +1024,16 @@ public class Armor {
                 //itemDef.rdc = 32521;
                 break;
 
+            case 6640:
+                itemDef.name = "Owner's Gemstone";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+
+            case 14882:
+                itemDef.name = "Owner's Enhancement";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+
 
             /* Ironman */
             case 13700:
@@ -1453,6 +1463,133 @@ public class Armor {
                 itemDef.modelZoom = 1500;
                 itemDef.rotationX = 1100;
                 itemDef.rotationY = 525;
+                break;
+
+            case 22111:
+                itemDef.name = "Tarn Defensive Aura";
+                itemDef.modelID = 100_008;
+                itemDef.maleEquip1 = 100_009;
+                itemDef.femaleEquip1 = 100_009;
+                itemDef.rotationX = 1000;
+                itemDef.modelZoom = 2000;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.newModelColor = new int[]{57};
+                itemDef.editedModelColor = new int[]{52};
+                break;
+
+            case 22229:
+                itemDef.copyItem(4710);
+                itemDef.name = "Tarn Blade";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 140003;
+                itemDef.maleEquip1 = 140005;
+                itemDef.femaleEquip1 = 140005;
+                itemDef.modelZoom = 1500;
+                itemDef.rotationX = 1100;
+                itemDef.rotationY = 525;
+                itemDef.modelOffsetX = 0;
+                itemDef.rotationZ = 0;
+                itemDef.modelOffsetY = 0;
+                break;
+            case 22230:
+                itemDef.copyItem(4710);
+                itemDef.name = "Tarn Staff";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 139999;
+                itemDef.maleEquip1 = 139998;
+                itemDef.femaleEquip1 = 139998;
+                itemDef.modelZoom = 1500;
+                itemDef.rotationX = 1100;
+                itemDef.rotationY = 525;
+                itemDef.modelOffsetX = 0;
+                itemDef.rotationZ = 0;
+                itemDef.modelOffsetY = 0;
+                break;
+            case 22231:
+                itemDef.copyItem(4710);
+                itemDef.name = "Tarn Bow";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 139997;
+                itemDef.maleEquip1 = 139996;
+                itemDef.femaleEquip1 = 139996;
+                itemDef.modelZoom = 1500;
+                itemDef.rotationX = 1100;
+                itemDef.rotationY = 525;
+                itemDef.modelOffsetX = 0;
+                itemDef.rotationZ = 0;
+                itemDef.modelOffsetY = 0;
+                break;
+            case 22232:
+                itemDef.copyItem(4708);
+                itemDef.name = "Tarn Helm";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 140017;
+                itemDef.maleEquip1 = 140009;
+                itemDef.femaleEquip1 = 140009;
+                break;
+            case 22233:
+                itemDef.copyItem(4712);
+                itemDef.name = "Tarn Body";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 140018;
+                itemDef.maleEquip1 = 140010;
+                itemDef.femaleEquip1 = 140010;
+                break;
+            case 22234:
+                itemDef.copyItem(4714);
+                itemDef.name = "Tarn Legs";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 140019;
+                itemDef.maleEquip1 = 140011;
+                itemDef.femaleEquip1 = 140011;
+                break;
+            case 22235:
+                itemDef.copyItem(4708);
+                itemDef.name = "Tarn Boots";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 140007;
+                itemDef.maleEquip1 = 140007;
+                itemDef.femaleEquip1 = 140007;
+                break;
+            case 22236:
+                itemDef.copyItem(4708);
+                itemDef.name = "Tarn Gloves";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 140015;
+                itemDef.maleEquip1 = 140008;
+                itemDef.femaleEquip1 = 140008;
+                break;
+            case 22237:
+                itemDef.copyItem(22111);
+                itemDef.name = "Tarn Wings";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 140021;
+                itemDef.maleEquip1 = 140013;
+                itemDef.femaleEquip1 = 140013;
+                break;
+            case 22238:
+                itemDef.copyItem(22111);
+                itemDef.name = "Tarn Offensive Aura";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 140023;
+                itemDef.maleEquip1 = 140022;
+                itemDef.femaleEquip1 = 140022;
+                break;
+            case 22239:
+                itemDef.copyItem(22111);
+                itemDef.name = "Tarn Halo";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 140016;
+                itemDef.maleEquip1 = 139867;
+                itemDef.femaleEquip1 = 139867;
+                break;
+            case 22240:
+                itemDef.copyItem(22064);
+                itemDef.name = "Tarn Shield";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.modelID = 140020;
+                itemDef.maleEquip1 = 140012;
+                itemDef.femaleEquip1 = 140012;
                 break;
 
             case 23061:

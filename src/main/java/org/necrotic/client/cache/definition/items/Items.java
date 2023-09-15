@@ -20,6 +20,10 @@ public class Items {
                 itemDef.actions = new String[]{null, null, null, null, null};
                 break;
 
+            case 19639:
+                itemDef.name = "Token Fragments";
+                break;
+
             case 995:
                 itemDef.name = "Coins";
                 itemDef.actions = new String[5];
@@ -540,7 +544,7 @@ public class Items {
             case 23150:
                 itemDef.copyItem(20435);
                 itemDef.name = "Drop Rate Low";
-                itemDef.actions = new String[]{"Equip", null, "Reroll", null, "Destroy"};
+                itemDef.actions = new String[]{"Equip", null, "Dissolve", "Reroll", "Destroy"};
                 break;
             case 23151:
                 itemDef.copyItem(23150);
@@ -1108,6 +1112,32 @@ public class Items {
                 itemDef.maleEquip1 = 100122;
                 itemDef.femaleEquip1 = 100122;
                 break;
+            case 20488:
+                itemDef.name = "Asta Fire Box";
+                itemDef.actions = new String[5];
+                itemDef.actions[0] = "Open";
+                itemDef.modelOffsetX = 2;
+                itemDef.modelOffsetY = 1;
+                itemDef.modelZoom = 850;
+                itemDef.rotationY = 100;
+                itemDef.rotationX = 90;
+                itemDef.modelID = 15156;
+
+                itemDef.scaleY *= 0.50;
+                itemDef.scaleX *= 0.50;
+                itemDef.scaleZ *= 0.50;
+                break;
+            case 23002:
+                itemDef.copyItem(6199);
+                itemDef.name = "Tarn Master Chest";
+                itemDef.modelID = 100054;
+                itemDef.modelZoom = 936;
+                itemDef.rotationX = 110;
+                itemDef.rotationY = 127;
+                itemDef.rotationZ = 0;
+                itemDef.modelOffsetX = 0;
+                itemDef.modelOffsetY = -6;
+                break;
             case 23276:
                 itemDef.name = "Ultimate Cert Pack";
                 itemDef.actions = new String[5];
@@ -1286,21 +1316,7 @@ public class Items {
                 itemDef.scaleX *= 0.50;
                 itemDef.scaleZ *= 0.50;
                 break;
-            case 20488:
-                itemDef.name = "<col=afafb2><shad=1299>Devoted Box<shad-1>";
-                itemDef.actions = new String[5];
-                itemDef.actions[0] = "Open";
-                itemDef.modelOffsetX = 2;
-                itemDef.modelOffsetY = 1;
-                itemDef.modelZoom = 850;
-                itemDef.rotationY = 100;
-                itemDef.rotationX = 90;
-                itemDef.modelID = 15156;
 
-                itemDef.scaleY *= 0.50;
-                itemDef.scaleX *= 0.50;
-                itemDef.scaleZ *= 0.50;
-                break;
             case 20489:
                 itemDef.name = "<col=a18f00><shad=0>Infamous Box<shad-1>";
                 itemDef.actions = new String[5];
@@ -1365,6 +1381,20 @@ public class Items {
                 itemDef.name = "<col=D73717><shad=0>Owner Jewellery Goodiebag";
                 itemDef.rdc3 = 67500;
                 break;
+            case 22110:
+                itemDef.name = "Owner's Attachment";
+                itemDefs = ItemDefinition.get(15287);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.modelID = itemDefs.modelID;
+                itemDef.actions = new String[5];
+                itemDef.actions[4] = "Drop";
+                itemDef.rdc2 = 53921;
+                itemDef.stackable = true;
+                break;
             case 23177:
                 itemDef.copyItem(6199);
                 itemDef.name = "Starter box";
@@ -1379,18 +1409,6 @@ public class Items {
                 itemDef.copyItem(6199);
                 itemDef.name = "Imperial Box";
                 itemDef.rdc2 = 15000;
-                break;
-
-            case 23002:
-                itemDef.copyItem(6199);
-                itemDef.name = "Owner Chest";
-                itemDef.modelID = 100054;
-                itemDef.modelZoom = 936;
-                itemDef.rotationX = 110;
-                itemDef.rotationY = 127;
-                itemDef.rotationZ = 0;
-                itemDef.modelOffsetX = 0;
-                itemDef.modelOffsetY = -6;
                 break;
 
             /* To Use */
