@@ -8158,5 +8158,6 @@ public class CustomInterfaces extends RSInterface {
 		MonicInterface.build(tda);
 
 		SlayerInterface.build(tda);
+		InstanceTimerOverlay.init();
     }
 }

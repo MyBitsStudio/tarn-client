@@ -234,7 +234,7 @@ public class Achievements extends RSInterface {
         rsi.child(34, 165022, 125, 225);
         rsi.child(35, 165023, 140, 226);
 
-        addText(165348, "75", 0x9d9d9d, false, true, -1, 0);
+        addText(165348, "50", 0x9d9d9d, false, true, -1, 0);
         rsi.child(36, 165348, 147, 227);
 
         addWrappingText(165349, "Get a cutting edge with these amazing perks!," +
