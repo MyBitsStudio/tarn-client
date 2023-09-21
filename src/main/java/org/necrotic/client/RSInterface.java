@@ -442,6 +442,10 @@ public class RSInterface {
 		hoverButton(id, regularSpriteId, hoveredSpriteId, hoverTooltip, 0, 0, "");
 	}
 
+	public static void hoverButtonWithPopup(int id, int regularSpriteId, int hoveredSpriteId, String hoverTooltip, int popupId) {
+		hoverButton(id, regularSpriteId, hoveredSpriteId, hoverTooltip, 0, 0, "");
+	}
+
 	public static RSFontSystem getFont(int fontType) {
 		switch (fontType) {
 			case 0:
@@ -5583,7 +5587,7 @@ public class RSInterface {
 		int i = -1;
 		stream.getUnsignedShort();
 		// int j = stream.getUnsignedShort();
-		interfaceCache = new RSInterface[167600];
+		interfaceCache = new RSInterface[167650];
 		while (stream.position < stream.buffer.length) {
 			int k = stream.getUnsignedShort();
 			if (k == 65535) {
