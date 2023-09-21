@@ -8159,5 +8159,6 @@ public class CustomInterfaces extends RSInterface {
 
 		SlayerInterface.build(tda);
 		InstanceTimerOverlay.init();
+		WorkerKingdom.build();
     }
 }
