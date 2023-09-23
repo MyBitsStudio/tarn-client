@@ -887,6 +887,9 @@ public class Armor {
                 break;
 
             /* Necks */
+//            case 19886:
+//                itemDef.name = "Collectors Necklace I";
+//                break;
             case 23087:
                 itemDef.copyItem(6585);
                 itemDef.name = "Accuracy necklace";
@@ -910,6 +913,29 @@ public class Armor {
                 itemDef.name = "Slayer Amulet";
                 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
+//            case 4489:
+//                itemDef.name = "Final Amulet";
+//                itemDef.modelID = 140640;
+//                itemDef.maleEquip1 = 140641;
+//                itemDef.femaleEquip1 = 140641;
+//                ItemDefinition def2 = ItemDefinition.get(295);
+//                itemDef.modelOffsetX = def2.modelOffsetX;
+//                itemDef.modelOffsetY = def2.modelOffsetY;
+//                itemDef.modelZoom = def2.modelZoom;
+//                itemDef.rotationY = def2.rotationY;
+//                itemDef.rotationX = def2.rotationX;
+//                itemDef.maleWieldY = 10;
+//                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//                break;
+//            case 5521:
+//                itemDef.name = "Final Ring";
+//                itemDef.modelID = 140639;
+//                itemDef.maleEquip1 = 140639;
+//                itemDef.femaleEquip1 = 140639;
+//                itemDef.rotationX = 1000;
+//                itemDef.modelZoom = 750;
+//                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//                break;
             case 19888:
                 itemDef.name = "VIP Necklace";
                 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
@@ -918,6 +944,10 @@ public class Armor {
                 itemDef.name = "VIP Ring";
                 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
+//            case 4446:
+//                itemDef.name = "Collectors Ring I";
+//                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//                break;
 
                 /* Statues */
             case 23330:
@@ -1153,6 +1183,14 @@ public class Armor {
                 itemDef.modelOffsetX = 0;
                 itemDef.rotationZ = 0;
                 itemDef.modelOffsetY = 0;
+                break;
+
+                /* Specials */
+
+            case 15222:
+                itemDef.name = "Poison Ivy";
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Destroy"};
                 break;
 
             /* Master Sets **/
@@ -1592,90 +1630,8 @@ public class Armor {
                 itemDef.femaleEquip1 = 140012;
                 break;
 
-            case 23061:
-                itemDef.copyItem(4708);
-                itemDef.name = "Obsidian helm";
-                itemDef.modelZoom = 900;
-                itemDef.modelID = 100152;
-                itemDef.maleEquip1 = 100153;
-                itemDef.femaleEquip1 = 100153;
-                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-                break;
-            case 23062:
-                itemDef.copyItem(4714);
-                itemDef.name = "Obsidian body";
-                itemDef.modelZoom = 1500;
-                itemDef.modelID = 100156;
-                itemDef.maleEquip1 = 100157;
-                itemDef.femaleEquip1 = 100157;
-                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-                break;
-            case 23063:
-                itemDef.copyItem(4712);
-                itemDef.name = "Obsidian legs";
-                itemDef.modelZoom = 1700;
-                itemDef.modelID = 100154;
-                itemDef.maleEquip1 = 100155;
-                itemDef.femaleEquip1 = 100155;
-                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-                break;
 
-            case 23064:
-                itemDef.copyItem(4710);
-                itemDef.name = "Avaryss blade";
-                itemDef.modelZoom = 1400;
-                itemDef.rotationX = 2000;
-                itemDef.rotationY = 525;
-                itemDef.modelOffsetX = 0;
-                itemDef.rotationZ = 0;
-                itemDef.modelOffsetY = 0;
-                itemDef.modelID = 100158;
-                itemDef.maleEquip1 = 100160;
-                itemDef.femaleEquip1 = 100160;
-                break;
-            case 23065:
-                itemDef.copyItem(4710);
-                itemDef.name = "Off-hand Avaryss blade";
-                itemDef.modelZoom = 1400;
-                itemDef.rotationX = 490;
-                itemDef.rotationY = 525;
-                itemDef.modelOffsetX = 0;
-                itemDef.rotationZ = 0;
-                itemDef.modelOffsetY = 0;
-                itemDef.modelID = 100158;
-                itemDef.maleEquip1 = 100159;
-                itemDef.femaleEquip1 = 100159;
-                break;
-            case 23066:
-                itemDef.copyItem(23064);
-                itemDef.name = "Obsidian crossbow";
-                itemDef.rotationX = 150;
-                itemDef.modelID = 100161;
-                itemDef.maleEquip1 = 100163;
-                itemDef.femaleEquip1 = 100163;
-                break;
-            case 23067:
-                itemDef.copyItem(23065);
-                itemDef.name = "Obsidian Off-Hand";
-                itemDef.rotationX = 1400;
-                itemDef.modelID = 100161;
-                itemDef.maleEquip1 = 100162;
-                itemDef.femaleEquip1 = 100162;
-                break;
-            case 23068:
-                itemDef.copyItem(669);
-                itemDef.name = "Obsidian wings";
-                itemDef.modelZoom = 2200;
-                itemDef.rotationX = 0;
-                itemDef.rotationY = 525;
-                itemDef.modelOffsetX = 0;
-                itemDef.rotationZ = 0;
-                itemDef.modelOffsetY = 0;
-                itemDef.modelID = 100164;
-                itemDef.maleEquip1 = 100165;
-                itemDef.femaleEquip1 = 100165;
-                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-                break;
+
 
 
         }

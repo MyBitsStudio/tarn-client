@@ -610,7 +610,7 @@ public class ItemDef4 {
 				itemDef.stackable = false;
 				break;
 			case 22106:
-				itemDef.name = "<col=17D797>Special Attachment";
+				itemDef.name = "Special Attachment";
 				itemDef21 = ItemDefinition.get(12159);
 				itemDef.modelOffsetX = itemDef21.modelOffsetX;
 				itemDef.rotationZ = itemDef21.rotationZ;
@@ -638,7 +638,6 @@ public class ItemDef4 {
 				itemDef.rdc3 = 11007;
 				itemDef.stackable = false;
 				break;
-
 
 			case 17672:
 				itemDef.name = "Doomicia bow";
@@ -1389,23 +1388,23 @@ public class ItemDef4 {
 
 
 				//FAZULA END
-			case 3474:
-				itemDef.name = "<col=C733FF>Meliodas Wings";
-				itemDef.modelID = 141011;
-				itemDef.maleEquip1 = 141010;
-				itemDef.femaleEquip1 = 141010;
-				itemDef21 = ItemDefinition.get(4055);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = 1750;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions[1] = "Wear";
-				itemDef.actions[2] = "Dissolve";
-				itemDef.actions[4] = "Drop";
-				itemDef.stackable = false;
-				//itemDef.rdc2 = 654332;
-				break;
+//			case 3474:
+//				itemDef.name = "<col=C733FF>Meliodas Wings";
+//				itemDef.modelID = 141011;
+//				itemDef.maleEquip1 = 141010;
+//				itemDef.femaleEquip1 = 141010;
+//				itemDef21 = ItemDefinition.get(4055);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = 1750;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.actions[1] = "Wear";
+//				itemDef.actions[2] = "Dissolve";
+//				itemDef.actions[4] = "Drop";
+//				itemDef.stackable = false;
+//				itemDef.rdc2 = 654332;
+//				break;
 			case 3475:
 				itemDef.name = "<col=C733FF>Lostvayne";
 				itemDef.modelID = 141013;
@@ -1421,1778 +1420,1751 @@ public class ItemDef4 {
 				itemDef.actions[2] = "Dissolve";
 				itemDef.actions[4] = "Drop";
 				itemDef.stackable = false;
-				//itemDef.rdc2 = 654332;
+				itemDef.rdc2 = 654332;
 				break;
-			case 3476:
-				itemDef.name = "<col=C733FF>Meliodas Boots";
-				itemDef.modelID = 141014;
-				itemDef.maleEquip1 = 141014;
-				itemDef.femaleEquip1 = 141014;
-				itemDef21 = ItemDefinition.get(4055);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = 1750;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions[1] = "Wear";
-				itemDef.actions[2] = "Dissolve";
-				itemDef.actions[4] = "Drop";
-				itemDef.stackable = false;
-				//itemDef.rdc2 = 654332;
-				break;
-			case 3477:
-				itemDef.name = "<col=C733FF>Meliodas Gloves";
-				itemDef.modelID = 141016;
-				itemDef.maleEquip1 = 141015;
-				itemDef.femaleEquip1 = 141015;
-				itemDef21 = ItemDefinition.get(4055);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = 1750;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions[1] = "Wear";
-				itemDef.actions[2] = "Dissolve";
-				itemDef.actions[4] = "Drop";
-				itemDef.stackable = false;
-				//itemDef.rdc2 = 654332;
-				break;
+//			case 3476:
+//				itemDef.name = "<col=C733FF>Meliodas Boots";
+//				itemDef.modelID = 141014;
+//				itemDef.maleEquip1 = 141014;
+//				itemDef.femaleEquip1 = 141014;
+//				itemDef21 = ItemDefinition.get(4055);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = 1750;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.actions[1] = "Wear";
+//				itemDef.actions[2] = "Dissolve";
+//				itemDef.actions[4] = "Drop";
+//				itemDef.stackable = false;
+//				itemDef.rdc2 = 654332;
+//				break;
+//			case 3477:
+//				itemDef.name = "<col=C733FF>Meliodas Gloves";
+//				itemDef.modelID = 141016;
+//				itemDef.maleEquip1 = 141015;
+//				itemDef.femaleEquip1 = 141015;
+//				itemDef21 = ItemDefinition.get(4055);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = 1750;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.actions[1] = "Wear";
+//				itemDef.actions[2] = "Dissolve";
+//				itemDef.actions[4] = "Drop";
+//				itemDef.stackable = false;
+//				itemDef.rdc2 = 654332;
+//				break;
 			case 13650:
 				itemDef.name = "Counter Token";
 				break;
-			case 3478:
-				itemDef.name = "<col=C733FF>Meliodas Legs";
-				itemDef.modelID = 141018;
-				itemDef.maleEquip1 = 141017;
-				itemDef.femaleEquip1 = 141017;
-				itemDef21 = ItemDefinition.get(4055);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = 1750;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions[1] = "Wear";
-				itemDef.actions[2] = "Dissolve";
-				itemDef.actions[4] = "Drop";
-				itemDef.stackable = false;
-				//itemDef.rdc2 = 654332;
-				break;
-			case 3479:
-				itemDef.name = "<col=C733FF>Meliodas Body";
-				itemDef.modelID = 141020;
-				itemDef.maleEquip1 = 141019;
-				itemDef.femaleEquip1 = 141019;
-				itemDef21 = ItemDefinition.get(4055);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = 1750;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions[1] = "Wear";
-				itemDef.actions[2] = "Dissolve";
-				itemDef.actions[4] = "Drop";
-				itemDef.stackable = false;
-				//itemDef.rdc2 = 654332;
-				break;
-			case 3480:
-				itemDef.name = "<col=C733FF>Meliodas Head";
-				itemDef.modelID = 141022;
-				itemDef.maleEquip1 = 141021;
-				itemDef.femaleEquip1 = 141021;
-				itemDef21 = ItemDefinition.get(4055);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = 1750;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions[1] = "Wear";
-				itemDef.actions[2] = "Dissolve";
-				itemDef.actions[4] = "Drop";
-				itemDef.stackable = false;
-				//itemDef.rdc2 = 654332;
-				break;
-			case 12843:
-				itemDef.name = "Deathbringer";
-				itemDef.modelID = 141194;
-				itemDef.maleEquip1 = 140852;
-				itemDef.femaleEquip1 = 140852;
-				itemDef21 = ItemDefinition.get(5575);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
+//			case 3478:
+//				itemDef.name = "<col=C733FF>Meliodas Legs";
+//				itemDef.modelID = 141018;
+//				itemDef.maleEquip1 = 141017;
+//				itemDef.femaleEquip1 = 141017;
+//				itemDef21 = ItemDefinition.get(4055);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = 1750;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.actions[1] = "Wear";
+//				itemDef.actions[2] = "Dissolve";
+//				itemDef.actions[4] = "Drop";
+//				itemDef.stackable = false;
+//				itemDef.rdc2 = 654332;
+//				break;
+//			case 3479:
+//				itemDef.copyItem(4685);
+//				itemDef.name = "<col=C733FF>Meliodas Body";
+//				itemDef.modelID = 141020;
+//				itemDef.maleEquip1 = 141019;
+//				itemDef.femaleEquip1 = 141019;
+//				itemDef21 = ItemDefinition.get(4055);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = 1750;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.actions[1] = "Wear";
+//				itemDef.actions[2] = "Dissolve";
+//				itemDef.actions[4] = "Drop";
+//				itemDef.stackable = false;
+//				itemDef.rdc2 = 654332;
+//				break;
+//			case 3480:
+//				itemDef.name = "<col=C733FF>Meliodas Head";
+//				itemDef.modelID = 141022;
+//				itemDef.maleEquip1 = 141021;
+//				itemDef.femaleEquip1 = 141021;
+//				itemDef21 = ItemDefinition.get(4055);
+//				itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//				itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//				itemDef.modelZoom = 1750;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.actions[1] = "Wear";
+//				itemDef.actions[2] = "Dissolve";
+//				itemDef.actions[4] = "Drop";
+//				itemDef.stackable = false;
+//				itemDef.rdc2 = 654332;
+//				break;
+
 
 
 			// NEW BOSS ITEMS END
 
 			//UPGRADED ITEMS START
 
-			case 2028:
-				itemDef.copyItem(23055);
-				itemDef.name = "Zinq Sword (U)";
-				                        itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2030:
-				itemDef.copyItem(23056);
-				itemDef.name = "Zinq Shield (U)";
-				          itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2032:
-				itemDef.copyItem(23050);
-				itemDef.name = "Zinq Helm (U)";
-				          itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2034:
-				itemDef.copyItem(23051);
-				itemDef.name = "Zinq Body (U)";
-				        itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2036:
-				itemDef.copyItem(23052);
-				itemDef.name = "Zinq Legs (U)";
-				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2038:
-				itemDef.copyItem(23054);
-				itemDef.name = "Zinq Boots (U)";
-				           itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2040:
-				itemDef.copyItem(19135);
-				itemDef.name = "Aberrant Minigun (U)";
-				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2042:
-				itemDef.copyItem(20592);
-				itemDef.name = "Aberrant Head (U)";
-				           itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2044:
-				itemDef.copyItem(20593);
-				itemDef.name = "Aberrant Top (U)";
-				          itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2046:
-				itemDef.copyItem(20594);
-				itemDef.name = "Aberrant Legs (U)";
-				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2048:
-				itemDef.copyItem(4367);
-				itemDef.name = "Aberrant Cape (U)";
-				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2050:
-				itemDef.copyItem(8334);
-				itemDef.name = "Aberrant Boots (U)";
-				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2052:
-				itemDef.copyItem(11140);
-				itemDef.name = "Aberrant Gloves (U)";
-				             itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2054:
-				itemDef.copyItem(8335);
-				itemDef.name = "Aberrant Ring (U)";
-				             itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2056:
-				itemDef.copyItem(19892);
-				itemDef.name = "Aberrant Amulet (U)";
-				               itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2058:
-				itemDef.copyItem(20542);
-				itemDef.name = "Inferno Blade (U)";
-				         itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2060:
-				itemDef.copyItem(13306);
-				itemDef.name = "Inferno Shield (U)";
-				          itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2062:
-				itemDef.copyItem(13300);
-				itemDef.name = "Inferno Helm (U)";
-				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2064:
-				itemDef.copyItem(13301);
-				itemDef.name = "Inferno Body (U)";
-				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2066:
-				itemDef.copyItem(13304);
-				itemDef.name = "Inferno Legs (U)";
-				          itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2068:
-				itemDef.copyItem(18683);
-				itemDef.name = "Inferno Tokhaar-kal (U)";
-				             itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2070:
-				itemDef.copyItem(13305);
-				itemDef.name = "Inferno Boots (U)";
-				             itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2072:
-				itemDef.copyItem(13302);
-				itemDef.name = "Inferno Gloves (U)";
-				              itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2074:
-				itemDef.copyItem(21055);
-				itemDef.name = "Nagi Ballista (U)";
-				              itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2076:
-				itemDef.copyItem(21062);
-				itemDef.name = "Nagi Helm (U)";
-				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2078:
-				itemDef.copyItem(21063);
-				itemDef.name = "Nagi Body (U)";
-				             itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2080:
-				itemDef.copyItem(21064);
-				itemDef.name = "Nagi Legs (U)";
-				           itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2082:
-				itemDef.copyItem(21071);
-				itemDef.name = "Nagi Cape (U)";
-				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2084:
-				itemDef.copyItem(21067);
-				itemDef.name = "Nagi Boots (U)";
-				               itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2086:
-				itemDef.copyItem(21066);
-				itemDef.name = "Nagi Gloves (U)";
-				                 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2088:
-				itemDef.copyItem(21069);
-				itemDef.name = "Nagi Ring (U)";
-				             itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2090:
-				itemDef.copyItem(21068);
-				itemDef.name = "Nagi Amulet (U)";
-				           itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2092:
-				itemDef.copyItem(21048);
-				itemDef.name = "Tormented Sword (U)";
-				 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2094:
-				itemDef.copyItem(21049);
-				itemDef.name = "Tormented Shield (U)";
-				 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2096:
-				itemDef.copyItem(21036);
-				itemDef.name = "Tormented Helm (U)";
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2098:
-				itemDef.copyItem(21037);
-				itemDef.name = "Tormented Body (U)";
-				 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2100:
-				itemDef.copyItem(21038);
-				itemDef.name = "Tormented Legs (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2102:
-				itemDef.copyItem(21039);
-				itemDef.name = "Tormented Cape (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2104:
-				itemDef.copyItem(21041);
-				itemDef.name = "Tormented Boots (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2106:
-				itemDef.copyItem(21040);
-				itemDef.name = "Tormented Gloves (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2108:
-				itemDef.copyItem(17664);
-				itemDef.name = "Sacred Scythe (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2110:
-				itemDef.copyItem(23134);
-				itemDef.name = "Sacred Helm (U)";
-				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2112:
-				itemDef.copyItem(23135);
-				itemDef.name = "Sacred Body (U)";
-				         itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2114:
-				itemDef.copyItem(23136);
-				itemDef.name = "Sacred Legs (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2116:
-				itemDef.copyItem(23138);
-				itemDef.name = "Sacred Boots (U)";
-				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2118:
-				itemDef.copyItem(23137);
-				itemDef.name = "Sacred Gloves (U)";
-				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2120:
-				itemDef.copyItem(14915);
-				itemDef.name = "Forsaken Sword (U)";
-				         itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2122:
-				itemDef.copyItem(14910);
-				itemDef.name = "Forsaken Helm (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2124:
-				itemDef.copyItem(14911);
-				itemDef.name = "Forsaken Body (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2126:
-				itemDef.copyItem(14912);
-				itemDef.name = "Forsaken Legs (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2128:
-				itemDef.copyItem(14914);
-				itemDef.name = "Forsaken Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2130:
-				itemDef.copyItem(14913);
-				itemDef.name = "Forsaken Gloves (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2132:
-				itemDef.copyItem(14377);
-				itemDef.name = "Sinful Staff (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2134:
-				itemDef.copyItem(14733);
-				itemDef.name = "Sinful Hat (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2136:
-				itemDef.copyItem(14732);
-				itemDef.name = "Sinful Top (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2138:
-				itemDef.copyItem(14734);
-				itemDef.name = "Sinful Bottom (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2140:
-				itemDef.copyItem(10865);
-				itemDef.name = "Sinful Boots (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2142:
-				itemDef.copyItem(12864);
-				itemDef.name = "Sinful Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2144:
-				itemDef.copyItem(8816);
-				itemDef.name = "Antique Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2146:
-				itemDef.copyItem(8817);
-				itemDef.name = "Antique Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2148:
-				itemDef.copyItem(8818);
-				itemDef.name = "Antique Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2150:
-				itemDef.copyItem(8820);
-				itemDef.name = "Antique Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2152:
-				itemDef.copyItem(8819);
-				itemDef.name = "Antique Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2154:
-				itemDef.copyItem(23146);
-				itemDef.name = "Antique Sword (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2156:
-				itemDef.copyItem(23145);
-				itemDef.name = "Antique Bow (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2158:
-				itemDef.copyItem(23144);
-				itemDef.name = "Antique Bow (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2160:
-				itemDef.copyItem(15922);
-				itemDef.name = "Doom Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2162:
-				itemDef.copyItem(16021);
-				itemDef.name = "Doom Body (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2164:
-				itemDef.copyItem(15933);
-				itemDef.name = "Doom Legs (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2166:
-				itemDef.copyItem(12614);
-				itemDef.name = "Doom Aura (U)";
-				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2168:
-				itemDef.copyItem(17710);
-				itemDef.name = "Maze Maul (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2170:
-				itemDef.copyItem(5420);
-				itemDef.name = "Maze Helm (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2172:
-				itemDef.copyItem(5422);
-				itemDef.name = "Maze Body (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2174:
-				itemDef.copyItem(5428);
-				itemDef.name = "Maze Legs (U)";
-				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2176:
-				itemDef.copyItem(17684);
-				itemDef.name = "Maze Cape (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2178:
-				itemDef.copyItem(9940);
-				itemDef.name = "Unknown Mace (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2180:
-				itemDef.copyItem(21042);
-				itemDef.name = "Unknown Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2182:
-				itemDef.copyItem(21043);
-				itemDef.name = "Unknown Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2184:
-				itemDef.copyItem(21044);
-				itemDef.name = "Unknown Legs (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2186:
-				itemDef.copyItem(21045);
-				itemDef.name = "Unknown Cape (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2188:
-				itemDef.copyItem(21047);
-				itemDef.name = "Unknown Boots (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2190:
-				itemDef.copyItem(21046);
-				itemDef.name = "Unknown Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2192:
-				itemDef.copyItem(8803);
-				itemDef.name = "Titan Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2194:
-				itemDef.copyItem(8804);
-				itemDef.name = "Titan Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2196:
-				itemDef.copyItem(8805);
-				itemDef.name = "Titan Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2198:
-				itemDef.copyItem(8809);
-				itemDef.name = "Lust Staff (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2200:
-				itemDef.copyItem(8806);
-				itemDef.name = "Lust Visor (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2202:
-				itemDef.copyItem(8807);
-				itemDef.name = "Lust Poncho (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2204:
-				itemDef.copyItem(8806);
-				itemDef.name = "Lust Legging (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2206:
-				itemDef.copyItem(21018);
-				itemDef.name = "Godly Bow (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2208:
-				itemDef.copyItem(14050);
-				itemDef.name = "Godly Helm (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2210:
-				itemDef.copyItem(14051);
-				itemDef.name = "Godly Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2212:
-				itemDef.copyItem(14052);
-				itemDef.name = "Godly Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2214:
-				itemDef.copyItem(1485);
-				itemDef.name = "Godly Cape (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2216:
-				itemDef.copyItem(14053);
-				itemDef.name = "Godly Boots (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2218:
-				itemDef.copyItem(14055);
-				itemDef.name = "Godly Gloves (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2220:
-				itemDef.copyItem(8088);
-				itemDef.name = "Emerald Crossbow (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2222:
-				itemDef.copyItem(11001);
-				itemDef.name = "Emerald Coif (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2224:
-				itemDef.copyItem(11002);
-				itemDef.name = "Emerald Body (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2226:
-				itemDef.copyItem(11003);
-				itemDef.name = "Emerald Chaps (U)";
-				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2228:
-				itemDef.copyItem(7014);
-				itemDef.name = "Gold Glaive (U)";
-				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2230:
-				itemDef.copyItem(11183);
-				itemDef.name = "Gold Helm (U)";
-				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2232:
-				itemDef.copyItem(11184);
-				itemDef.name = "Gold Body (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2234:
-				itemDef.copyItem(11179);
-				itemDef.name = "Gold Legs (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2236:
-				itemDef.copyItem(11762);
-				itemDef.name = "Gold Cape (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2238:
-				itemDef.copyItem(11182);
-				itemDef.name = "Gold Boots (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2240:
-				itemDef.copyItem(11181);
-				itemDef.name = "Gold Gloves (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2242:
-				itemDef.copyItem(21028);
-				itemDef.name = "Saint Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2244:
-				itemDef.copyItem(21029);
-				itemDef.name = "Saint Body (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2246:
-				itemDef.copyItem(21030);
-				itemDef.name = "Saint Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2248:
-				itemDef.copyItem(15888);
-				itemDef.name = "Champion Whip (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2250:
-				itemDef.copyItem(15818);
-				itemDef.name = "Champion Off-Hand (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2252:
-				itemDef.copyItem(15924);
-				itemDef.name = "Champion Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2254:
-				itemDef.copyItem(16023);
-				itemDef.name = "Champion Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2256:
-				itemDef.copyItem(15935);
-				itemDef.name = "Champion Legs (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2258:
-				itemDef.copyItem(17686);
-				itemDef.name = "Champion Wings (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2260:
-				itemDef.copyItem(16272);
-				itemDef.name = "Champion Boots (U)";
-				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2262:
-				itemDef.copyItem(12994);
-				itemDef.name = "Champion Gloves (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2264:
-				itemDef.copyItem(22127);
-				itemDef.name = "Rogue Sword (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2266:
-				itemDef.copyItem(22126);
-				itemDef.name = "Rogue Helm (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2268:
-				itemDef.copyItem(17596);
-				itemDef.name = "Rogue Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2270:
-				itemDef.copyItem(22125);
-				itemDef.name = "Rogue Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2272:
-				itemDef.copyItem(22122);
-				itemDef.name = "Rogue Boots (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2274:
-				itemDef.copyItem(22123);
-				itemDef.name = "Rogue Gloves (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2276:
-				itemDef.copyItem(12610);
-				itemDef.name = "Rogue Aura (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-				//BOSSES
-			case 2278:
-				itemDef.copyItem(22135);
-				itemDef.name = "Solar Staff (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2280:
-				itemDef.copyItem(15645);
-				itemDef.name = "Solar Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2282:
-				itemDef.copyItem(15646);
-				itemDef.name = "Solar Body (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2284:
-				itemDef.copyItem(15647);
-				itemDef.name = "Solar Legs (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2286:
-				itemDef.copyItem(21023);
-				itemDef.name = "Deviant Sword (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2288:
-				itemDef.copyItem(21020);
-				itemDef.name = "Deviant Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2290:
-				itemDef.copyItem(21021);
-				itemDef.name = "Deviant Body (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2292:
-				itemDef.copyItem(21022);
-				itemDef.name = "Deviant Legs (U)";
-				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2294:
-				itemDef.copyItem(21024);
-				itemDef.name = "Deviant Wings (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2296:
-				itemDef.copyItem(5012);
-				itemDef.name = "Executive Bow (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2298:
-				itemDef.copyItem(4784);
-				itemDef.name = "Executive Helm (U)";
-				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2300:
-				itemDef.copyItem(4685);
-				itemDef.name = "Executive Body (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2302:
-				itemDef.copyItem(4686);
-				itemDef.name = "Executive Legs (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2304:
-				itemDef.copyItem(9939);
-				itemDef.name = "Executive Cape (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2306:
-				itemDef.copyItem(8274);
-				itemDef.name = "Executive Boots (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2308:
-				itemDef.copyItem(8273);
-				itemDef.name = "Executive Gloves (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2310:
-				itemDef.copyItem(17698);
-				itemDef.name = "Nite Hammer (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2312:
-				itemDef.copyItem(17700);
-				itemDef.name = "Nite Off-Hand (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2314:
-				itemDef.copyItem(17614);
-				itemDef.name = "Nite Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2316:
-				itemDef.copyItem(17616);
-				itemDef.name = "Nite Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2318:
-				itemDef.copyItem(17618);
-				itemDef.name = "Nite Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2320:
-				itemDef.copyItem(17606);
-				itemDef.name = "Nite Wings (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2322:
-				itemDef.copyItem(17622);
-				itemDef.name = "Nite Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2324:
-				itemDef.copyItem(11195);
-				itemDef.name = "Nite Necklace (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2326:
-				itemDef.copyItem(23066);
-				itemDef.name = "Obsidian Crossbow (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2328:
-				itemDef.copyItem(23067);
-				itemDef.name = "Obsidian Off-Hand (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2330:
-				itemDef.copyItem(23061);
-				itemDef.name = "Obsidian Helm (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2332:
-				itemDef.copyItem(23062);
-				itemDef.name = "Obsidian Body (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2334:
-				itemDef.copyItem(23063);
-				itemDef.name = "Obsidian Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"}; 
-				break;
-			case 2336:
-				itemDef.copyItem(23068);
-				itemDef.name = "Obsidian Wings (U)";
-				                    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2338:
-				itemDef.copyItem(12612);
-				itemDef.name = "Obsidian Aura (U)";
-				           itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2340:
-				itemDef.copyItem(14018);
-				itemDef.name = "Malvek Katana (U)";
-				          itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2342:
-				itemDef.copyItem(19160);
-				itemDef.name = "Malvek Helm (U)";
-				        itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2344:
-				itemDef.copyItem(19159);
-				itemDef.name = "Malvek Body (U)";
-				         itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2346:
-				itemDef.copyItem(19158);
-				itemDef.name = "Malvek Legs (U)";
-				        itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2348:
-				itemDef.copyItem(20427);
-				itemDef.name = "Onyx Helm (U)";
-				        itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2350:
-				itemDef.copyItem(20260);
-				itemDef.name = "Onyx Body (U)";
-				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2352:
-				itemDef.copyItem(20095);
-				itemDef.name = "Onyx Legs (U)";
-				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2354:
-				itemDef.copyItem(8136);
-				itemDef.name = "Blood Vitur (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2356:
-				itemDef.copyItem(8813);
-				itemDef.name = "Blood Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2358:
-				itemDef.copyItem(8814);
-				itemDef.name = "Blood Body (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2360:
-				itemDef.copyItem(8815);
-				itemDef.name = "Blood Legs (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2362:
-				itemDef.copyItem(17283);
-				itemDef.name = "Blood Boots (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2364:
-				itemDef.copyItem(16194);
-				itemDef.name = "Blood Gloves (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2366:
-				itemDef.copyItem(14188);
-				itemDef.name = "Demonlord Sword (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2368:
-				itemDef.copyItem(14184);
-				itemDef.name = "Demonlord Helm (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2370:
-				itemDef.copyItem(14178);
-				itemDef.name = "Demonlord Body (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2372:
-				itemDef.copyItem(14186);
-				itemDef.name = "Demonlord Legs (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2374:
-				itemDef.copyItem(14180);
-				itemDef.name = "Demonlord Boots (U)";
-				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2376:
-				itemDef.copyItem(14182);
-				itemDef.name = "Demonlord Gloves (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2378:
-				itemDef.copyItem(22143);
-				itemDef.name = "Lili Staff (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2384:
-				itemDef.copyItem(22136);
-				itemDef.name = "Lili Helmet (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2386:
-				itemDef.copyItem(22137);
-				itemDef.name = "Lili Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2388:
-				itemDef.copyItem(22138);
-				itemDef.name = "Lili Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2390:
-				itemDef.copyItem(22141);
-				itemDef.name = "Lili Boots (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2392:
-				itemDef.copyItem(22139);
-				itemDef.name = "Lili Gloves (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2394:
-				itemDef.copyItem(22142);
-				itemDef.name = "Lili Aura (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2396:
-				itemDef.copyItem(13640);
-				itemDef.name = "Groudon-Flame Staff (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2398:
-				itemDef.copyItem(13964);
-				itemDef.name = "Groudon-Flame Shield (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2400:
-				itemDef.copyItem(21934);
-				itemDef.name = "Groudon-Flame Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2402:
-				itemDef.copyItem(19918);
-				itemDef.name = "Groudon-Flame Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2404:
-				itemDef.copyItem(19913);
-				itemDef.name = "Groudon-Flame Legs (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2406:
-				itemDef.copyItem(3107);
-				itemDef.name = "Groudon-Flame Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2408:
-				itemDef.copyItem(15448);
-				itemDef.name = "Groudon-Flame Power (U)";
-				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2410:
-				itemDef.copyItem(22148);
-				itemDef.name = "Varth Bow (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2412:
-				itemDef.copyItem(22151);
-				itemDef.name = "Varth Teddy (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2414:
-				itemDef.copyItem(22145);
-				itemDef.name = "Varth Helmet (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2416:
-				itemDef.copyItem(22146);
-				itemDef.name = "Varth Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2418:
-				itemDef.copyItem(22147);
-				itemDef.name = "Varth Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2420:
-				itemDef.copyItem(22149);
-				itemDef.name = "Varth Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2422:
-				itemDef.copyItem(22150);
-				itemDef.name = "Varth Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2424:
-				itemDef.copyItem(17694);
-				itemDef.name = "Tyrant Hammer (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2426:
-				itemDef.copyItem(17696);
-				itemDef.name = "Tyrant Off-Hand (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2428:
-				itemDef.copyItem(14190);
-				itemDef.name = "Tyrant Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2430:
-				itemDef.copyItem(14192);
-				itemDef.name = "Tyrant Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2432:
-				itemDef.copyItem(14194);
-				itemDef.name = "Tyrant Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2434:
-				itemDef.copyItem(14200);
-				itemDef.name = "Tyrant Wings (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2436:
-				itemDef.copyItem(14198);
-				itemDef.name = "Tyrant Boots (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2438:
-				itemDef.copyItem(14196);
-				itemDef.name = "Tyrant Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2440:
-				itemDef.copyItem(12608);
-				itemDef.name = "Tyrant Aura (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2442:
-				itemDef.copyItem(17644);
-				itemDef.name = "Flaming Katana (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2444:
-				itemDef.copyItem(22100);
-				itemDef.name = "Lucifer's Head (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2446:
-				itemDef.copyItem(22101);
-				itemDef.name = "Lucifer's Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2448:
-				itemDef.copyItem(22102);
-				itemDef.name = "Lucifer's Legs (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2450:
-				itemDef.copyItem(22105);
-				itemDef.name = "Lucifer's Wings (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2452:
-				itemDef.copyItem(22103);
-				itemDef.name = "Lucifer's Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2454:
-				itemDef.copyItem(22104);
-				itemDef.name = "Lucifer's Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2456:
-				itemDef.copyItem(14305);
-				itemDef.name = "Virtuos Wand (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2458:
-				itemDef.copyItem(14307);
-				itemDef.name = "Virtuos Relic (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2460:
-				itemDef.copyItem(14202);
-				itemDef.name = "Virtuos Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2462:
-				itemDef.copyItem(14204);
-				itemDef.name = "Virtuos Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2464:
-				itemDef.copyItem(14206);
-				itemDef.name = "Virtuos Legs (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2466:
-				itemDef.copyItem(14303);
-				itemDef.name = "Virtuos Boots (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2468:
-				itemDef.copyItem(14301);
-				itemDef.name = "Virtuos Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2470:
-				itemDef.copyItem(22155);
-				itemDef.name = "Agumon Bow (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2472:
-				itemDef.copyItem(22152);
-				itemDef.name = "Agumon Head (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2474:
-				itemDef.copyItem(22153);
-				itemDef.name = "Agumon Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2476:
-				itemDef.copyItem(22154);
-				itemDef.name = "Agumon Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2478:
-				itemDef.copyItem(22158);
-				itemDef.name = "Agumon Boots (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2480:
-				itemDef.copyItem(22159);
-				itemDef.name = "Agumon Gloves (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2482:
-				itemDef.copyItem(22160);
-				itemDef.name = "Agumon Aura (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2484:
-				itemDef.copyItem(22167);
-				itemDef.name = "White Staff (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2486:
-				itemDef.copyItem(22163);
-				itemDef.name = "White Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2488:
-				itemDef.copyItem(22165);
-				itemDef.name = "White Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2490:
-				itemDef.copyItem(22164);
-				itemDef.name = "White Legs (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2492:
-				itemDef.copyItem(22166);
-				itemDef.name = "White Wings (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2494:
-				itemDef.copyItem(22161);
-				itemDef.name = "White Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2496:
-				itemDef.copyItem(22162);
-				itemDef.name = "White Gloves (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2498:
-				itemDef.copyItem(23079);
-				itemDef.name = "Soldier Sword (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2500:
-				itemDef.copyItem(23080);
-				itemDef.name = "Soldier Off-Hand (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2502:
-				itemDef.copyItem(23075);
-				itemDef.name = "Soldier Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2504:
-				itemDef.copyItem(23076);
-				itemDef.name = "Soldier Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2506:
-				itemDef.copyItem(23077);
-				itemDef.name = "Soldier Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2508:
-				itemDef.copyItem(14319);
-				itemDef.name = "Fighter Sword (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2510:
-				itemDef.copyItem(14309);
-				itemDef.name = "Fighter Head (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2512:
-				itemDef.copyItem(14311);
-				itemDef.name = "Fighter Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2514:
-				itemDef.copyItem(14313);
-				itemDef.name = "Fighter Legs (U)";
-				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2516:
-				itemDef.copyItem(14321);
-				itemDef.name = "Fighter Wings (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2518:
-				itemDef.copyItem(14317);
-				itemDef.name = "Fighter Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2520:
-				itemDef.copyItem(14315);
-				itemDef.name = "Fighter Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2522:
-				itemDef.copyItem(22133);
-				itemDef.name = "Evil Scythe (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2524:
-				itemDef.copyItem(14325);
-				itemDef.name = "Evil Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2526:
-				itemDef.copyItem(14327);
-				itemDef.name = "Evil Body (U)";
-				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2528:
-				itemDef.copyItem(14331);
-				itemDef.name = "Evil Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2530:
-				itemDef.copyItem(14329);
-				itemDef.name = "Evil Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2688:
-				itemDef.copyItem(14323);
-				itemDef.name = "Evil Gloves (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2532:
-				itemDef.copyItem(14353);
-				itemDef.name = "Death Ring (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2534:
-				itemDef.copyItem(14349);
-				itemDef.name = "Death Sickle (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2536:
-				itemDef.copyItem(14359);
-				itemDef.name = "Death Head (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2538:
-				itemDef.copyItem(14363);
-				itemDef.name = "Death Pendant (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2540:
-				itemDef.copyItem(14339);
-				itemDef.name = "Death Body (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2542:
-				itemDef.copyItem(14347);
-				itemDef.name = "Death Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2544:
-				itemDef.copyItem(14355);
-				itemDef.name = "Death Staff (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2546:
-				itemDef.copyItem(14341);
-				itemDef.name = "Death Boots (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2548:
-				itemDef.copyItem(14345);
-				itemDef.name = "Death Gloves (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2550:
-				itemDef.copyItem(14343);
-				itemDef.name = "Death Bow (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2552:
-				itemDef.copyItem(14351);
-				itemDef.name = "Death Off-Hand (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2554:
-				itemDef.copyItem(14361);
-				itemDef.name = "Death Halo (U)";
-				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2556:
-				itemDef.copyItem(14337);
-				itemDef.name = "Death Aura (U)";
-				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2558:
-				itemDef.copyItem(14357);
-				itemDef.name = "Death Wings (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2560:
-				itemDef.copyItem(8828);
-				itemDef.name = "Charybde Helm (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2562:
-				itemDef.copyItem(8829);
-				itemDef.name = "Charybde Body (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2564:
-				itemDef.copyItem(8833);
-				itemDef.name = "Charybde Legs (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2566:
-				itemDef.copyItem(8830);
-				itemDef.name = "Charybde Cape (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2568:
-				itemDef.copyItem(8831);
-				itemDef.name = "Charybde Ring (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2570:
-				itemDef.copyItem(14369);
-				itemDef.name = "Scylla Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2572:
-				itemDef.copyItem(14373);
-				itemDef.name = "Scylla Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2574:
-				itemDef.copyItem(14371);
-				itemDef.name = "Scylla Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2576:
-				itemDef.copyItem(14375);
-				itemDef.name = "Scylla Wings (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2578:
-				itemDef.copyItem(14365);
-				itemDef.name = "Scylla Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2580:
-				itemDef.copyItem(14367);
-				itemDef.name = "Scylla Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2582:
-				itemDef.copyItem(22072);
-				itemDef.name = "Exode Sword (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2584:
-				itemDef.copyItem(22036);
-				itemDef.name = "Exode Hood (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2586:
-				itemDef.copyItem(22037);
-				itemDef.name = "Exode Robe Top (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2588:
-				itemDef.copyItem(22038);
-				itemDef.name = "Exode Robe Bottoms (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2590:
-				itemDef.copyItem(5594);
-				itemDef.name = "Exode Cape (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2592:
-				itemDef.copyItem(6937);
-				itemDef.name = "Exode Boots (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2594:
-				itemDef.copyItem(3905);
-				itemDef.name = "Exode Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2596:
-				itemDef.copyItem(20552);
-				itemDef.name = "Gladiator Glaive (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2598:
-				itemDef.copyItem(15008);
-				itemDef.name = "Gladiator Kiteshield (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2600:
-				itemDef.copyItem(15005);
-				itemDef.name = "Gladiator Full Helm (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2602:
-				itemDef.copyItem(15006);
-				itemDef.name = "Gladiator Fighterbody (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2604:
-				itemDef.copyItem(15007);
-				itemDef.name = "Gladiator Fighterlegs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2606:
-				itemDef.copyItem(15100);
-				itemDef.name = "Gladiator Cape (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2608:
-				itemDef.copyItem(15201);
-				itemDef.name = "Gladiator Boots (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2610:
-				itemDef.copyItem(15200);
-				itemDef.name = "Gladiator Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2612:
-				itemDef.copyItem(14379);
-				itemDef.name = "Afreet Scythe (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2614:
-				itemDef.copyItem(14381);
-				itemDef.name = "Afreet Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2616:
-				itemDef.copyItem(14383);
-				itemDef.name = "Afreet Body (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2618:
-				itemDef.copyItem(14385);
-				itemDef.name = "Afreet Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2620:
-				itemDef.copyItem(17702);
-				itemDef.name = "Frieza Claws (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2622:
-				itemDef.copyItem(11763);
-				itemDef.name = "Frieza Helm (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2624:
-				itemDef.copyItem(11764);
-				itemDef.name = "Frieza Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2626:
-				itemDef.copyItem(11765);
-				itemDef.name = "Frieza Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2628:
-				itemDef.copyItem(11767);
-				itemDef.name = "Frieza Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2630:
-				itemDef.copyItem(11766);
-				itemDef.name = "Frieza Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2632:
-				itemDef.copyItem(7543);
-				itemDef.name = "Perfect Cell Rifle (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2634:
-				itemDef.copyItem(7544);
-				itemDef.name = "Perfect Cell Teddy (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2636:
-				itemDef.copyItem(9481);
-				itemDef.name = "Perfect Cell Helm (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2638:
-				itemDef.copyItem(9482);
-				itemDef.name = "Perfect Cell Body (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2640:
-				itemDef.copyItem(9483);
-				itemDef.name = "Perfect Cell Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2642:
-				itemDef.copyItem(7545);
-				itemDef.name = "Perfect Cell Apparatus (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2644:
-				itemDef.copyItem(16249);
-				itemDef.name = "Super Buu Staff (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2646:
-				itemDef.copyItem(15832);
-				itemDef.name = "Super Buu Ward (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2648:
-				itemDef.copyItem(9478);
-				itemDef.name = "Super Buu Helm (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2650:
-				itemDef.copyItem(9479);
-				itemDef.name = "Super Buu Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2652:
-				itemDef.copyItem(9480);
-				itemDef.name = "Super Buu Legs (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2654:
-				itemDef.copyItem(16265);
-				itemDef.name = "Super Buu Boots (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2656:
-				itemDef.copyItem(8410);
-				itemDef.name = "Elite Sword (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2658:
-				itemDef.copyItem(8411);
-				itemDef.name = "Elite Bow (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2660:
-				itemDef.copyItem(8412);
-				itemDef.name = "Elite Staff (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2662:
-				itemDef.copyItem(13323);
-				itemDef.name = "Goku Head (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2664:
-				itemDef.copyItem(13324);
-				itemDef.name = "Goku Body (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2666:
-				itemDef.copyItem(13325);
-				itemDef.name = "Goku Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2668:
-				itemDef.copyItem(1486);
-				itemDef.name = "Goku Cape (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2670:
-				itemDef.copyItem(13327);
-				itemDef.name = "Goku Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2672:
-				itemDef.copyItem(13326);
-				itemDef.name = "Goku Gloves (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2674:
-				itemDef.copyItem(13333);
-				itemDef.name = "Shinigami Sword (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2676:
-				itemDef.copyItem(13328);
-				itemDef.name = "Shinigami Head (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2678:
-				itemDef.copyItem(13329);
-				itemDef.name = "Shinigami Body (U)";
-				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2680:
-				itemDef.copyItem(13330);
-				itemDef.name = "Shinigami Legs (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2682:
-				itemDef.copyItem(4369);
-				itemDef.name = "Shinigami Wings (U)";
-				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2684:
-				itemDef.copyItem(13332);
-				itemDef.name = "Shinigami Boots (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 2686:
-				itemDef.copyItem(3318);
-				itemDef.name = "Shinigami Gloves (U)";
-				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 15250:
-				itemDef.name = "Armour Stone";
-				break;
-			case 15251:
-				itemDef.name = "Weapon Stone";
-				break;
-			case 15252:
-				itemDef.copyItem(15250);
-				itemDef.name = "Accessories Stone";
-				itemDef.rdc2 = 822332;
-				break;
-			case 15253:
-				itemDef.copyItem(15251);
-				itemDef.name = "Other Stone";
-				itemDef.rdc2 = 622123;
-				break;
+//			case 2028:
+//				itemDef.copyItem(23055);
+//				itemDef.name = "Zinq Sword (U)";
+//				                        itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2030:
+//				itemDef.copyItem(23056);
+//				itemDef.name = "Zinq Shield (U)";
+//				          itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2032:
+//				itemDef.copyItem(23050);
+//				itemDef.name = "Zinq Helm (U)";
+//				          itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2034:
+//				itemDef.copyItem(23051);
+//				itemDef.name = "Zinq Body (U)";
+//				        itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2036:
+//				itemDef.copyItem(23052);
+//				itemDef.name = "Zinq Legs (U)";
+//				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2038:
+//				itemDef.copyItem(23054);
+//				itemDef.name = "Zinq Boots (U)";
+//				           itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2040:
+//				itemDef.copyItem(19135);
+//				itemDef.name = "Aberrant Minigun (U)";
+//				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2042:
+//				itemDef.copyItem(20592);
+//				itemDef.name = "Aberrant Head (U)";
+//				           itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2044:
+//				itemDef.copyItem(20593);
+//				itemDef.name = "Aberrant Top (U)";
+//				          itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2046:
+//				itemDef.copyItem(20594);
+//				itemDef.name = "Aberrant Legs (U)";
+//				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2048:
+//				itemDef.copyItem(4367);
+//				itemDef.name = "Aberrant Cape (U)";
+//				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2050:
+//				itemDef.copyItem(8334);
+//				itemDef.name = "Aberrant Boots (U)";
+//				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2052:
+//				itemDef.copyItem(11140);
+//				itemDef.name = "Aberrant Gloves (U)";
+//				             itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2054:
+//				itemDef.copyItem(8335);
+//				itemDef.name = "Aberrant Ring (U)";
+//				             itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2056:
+//				itemDef.copyItem(19892);
+//				itemDef.name = "Aberrant Amulet (U)";
+//				               itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2058:
+//				itemDef.copyItem(20542);
+//				itemDef.name = "Inferno Blade (U)";
+//				         itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2060:
+//				itemDef.copyItem(13306);
+//				itemDef.name = "Inferno Shield (U)";
+//				          itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2062:
+//				itemDef.copyItem(13300);
+//				itemDef.name = "Inferno Helm (U)";
+//				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2064:
+//				itemDef.copyItem(13301);
+//				itemDef.name = "Inferno Body (U)";
+//				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2066:
+//				itemDef.copyItem(13304);
+//				itemDef.name = "Inferno Legs (U)";
+//				          itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2068:
+//				itemDef.copyItem(18683);
+//				itemDef.name = "Inferno Tokhaar-kal (U)";
+//				             itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2070:
+//				itemDef.copyItem(13305);
+//				itemDef.name = "Inferno Boots (U)";
+//				             itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2072:
+//				itemDef.copyItem(13302);
+//				itemDef.name = "Inferno Gloves (U)";
+//				              itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2074:
+//				itemDef.copyItem(21055);
+//				itemDef.name = "Nagi Ballista (U)";
+//				              itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2076:
+//				itemDef.copyItem(21062);
+//				itemDef.name = "Nagi Helm (U)";
+//				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2078:
+//				itemDef.copyItem(21063);
+//				itemDef.name = "Nagi Body (U)";
+//				             itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2080:
+//				itemDef.copyItem(21064);
+//				itemDef.name = "Nagi Legs (U)";
+//				           itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2082:
+//				itemDef.copyItem(21071);
+//				itemDef.name = "Nagi Cape (U)";
+//				            itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2084:
+//				itemDef.copyItem(21067);
+//				itemDef.name = "Nagi Boots (U)";
+//				               itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2086:
+//				itemDef.copyItem(21066);
+//				itemDef.name = "Nagi Gloves (U)";
+//				                 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2088:
+//				itemDef.copyItem(21069);
+//				itemDef.name = "Nagi Ring (U)";
+//				             itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2090:
+//				itemDef.copyItem(21068);
+//				itemDef.name = "Nagi Amulet (U)";
+//				           itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2092:
+//				itemDef.copyItem(21048);
+//				itemDef.name = "Tormented Sword (U)";
+//				 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2094:
+//				itemDef.copyItem(21049);
+//				itemDef.name = "Tormented Shield (U)";
+//				 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2096:
+//				itemDef.copyItem(21036);
+//				itemDef.name = "Tormented Helm (U)";
+//				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2098:
+//				itemDef.copyItem(21037);
+//				itemDef.name = "Tormented Body (U)";
+//				 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2100:
+//				itemDef.copyItem(21038);
+//				itemDef.name = "Tormented Legs (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2102:
+//				itemDef.copyItem(21039);
+//				itemDef.name = "Tormented Cape (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2104:
+//				itemDef.copyItem(21041);
+//				itemDef.name = "Tormented Boots (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2106:
+//				itemDef.copyItem(21040);
+//				itemDef.name = "Tormented Gloves (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2108:
+//				itemDef.copyItem(17664);
+//				itemDef.name = "Sacred Scythe (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2110:
+//				itemDef.copyItem(23134);
+//				itemDef.name = "Sacred Helm (U)";
+//				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2112:
+//				itemDef.copyItem(23135);
+//				itemDef.name = "Sacred Body (U)";
+//				         itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2114:
+//				itemDef.copyItem(23136);
+//				itemDef.name = "Sacred Legs (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2116:
+//				itemDef.copyItem(23138);
+//				itemDef.name = "Sacred Boots (U)";
+//				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2118:
+//				itemDef.copyItem(23137);
+//				itemDef.name = "Sacred Gloves (U)";
+//				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2120:
+//				itemDef.copyItem(14915);
+//				itemDef.name = "Forsaken Sword (U)";
+//				         itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2122:
+//				itemDef.copyItem(14910);
+//				itemDef.name = "Forsaken Helm (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2124:
+//				itemDef.copyItem(14911);
+//				itemDef.name = "Forsaken Body (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2126:
+//				itemDef.copyItem(14912);
+//				itemDef.name = "Forsaken Legs (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2128:
+//				itemDef.copyItem(14914);
+//				itemDef.name = "Forsaken Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2130:
+//				itemDef.copyItem(14913);
+//				itemDef.name = "Forsaken Gloves (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2132:
+//				itemDef.copyItem(14377);
+//				itemDef.name = "Sinful Staff (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2134:
+//				itemDef.copyItem(14733);
+//				itemDef.name = "Sinful Hat (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2136:
+//				itemDef.copyItem(14732);
+//				itemDef.name = "Sinful Top (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2138:
+//				itemDef.copyItem(14734);
+//				itemDef.name = "Sinful Bottom (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2140:
+//				itemDef.copyItem(10865);
+//				itemDef.name = "Sinful Boots (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2142:
+//				itemDef.copyItem(12864);
+//				itemDef.name = "Sinful Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2144:
+//				itemDef.copyItem(8816);
+//				itemDef.name = "Antique Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2146:
+//				itemDef.copyItem(8817);
+//				itemDef.name = "Antique Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2148:
+//				itemDef.copyItem(8818);
+//				itemDef.name = "Antique Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2150:
+//				itemDef.copyItem(8820);
+//				itemDef.name = "Antique Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2152:
+//				itemDef.copyItem(8819);
+//				itemDef.name = "Antique Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2154:
+//				itemDef.copyItem(23146);
+//				itemDef.name = "Antique Sword (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2156:
+//				itemDef.copyItem(23145);
+//				itemDef.name = "Antique Bow (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2158:
+//				itemDef.copyItem(23144);
+//				itemDef.name = "Antique Bow (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2160:
+//				itemDef.copyItem(15922);
+//				itemDef.name = "Doom Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2162:
+//				itemDef.copyItem(16021);
+//				itemDef.name = "Doom Body (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2164:
+//				itemDef.copyItem(15933);
+//				itemDef.name = "Doom Legs (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2166:
+//				itemDef.copyItem(12614);
+//				itemDef.name = "Doom Aura (U)";
+//				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2168:
+//				itemDef.copyItem(17710);
+//				itemDef.name = "Maze Maul (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2170:
+//				itemDef.copyItem(5420);
+//				itemDef.name = "Maze Helm (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2172:
+//				itemDef.copyItem(5422);
+//				itemDef.name = "Maze Body (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2174:
+//				itemDef.copyItem(5428);
+//				itemDef.name = "Maze Legs (U)";
+//				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2176:
+//				itemDef.copyItem(17684);
+//				itemDef.name = "Maze Cape (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2178:
+//				itemDef.copyItem(9940);
+//				itemDef.name = "Unknown Mace (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2180:
+//				itemDef.copyItem(21042);
+//				itemDef.name = "Unknown Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2182:
+//				itemDef.copyItem(21043);
+//				itemDef.name = "Unknown Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2184:
+//				itemDef.copyItem(21044);
+//				itemDef.name = "Unknown Legs (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2186:
+//				itemDef.copyItem(21045);
+//				itemDef.name = "Unknown Cape (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2188:
+//				itemDef.copyItem(21047);
+//				itemDef.name = "Unknown Boots (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2190:
+//				itemDef.copyItem(21046);
+//				itemDef.name = "Unknown Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2192:
+//				itemDef.copyItem(8803);
+//				itemDef.name = "Titan Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2194:
+//				itemDef.copyItem(8804);
+//				itemDef.name = "Titan Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2196:
+//				itemDef.copyItem(8805);
+//				itemDef.name = "Titan Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2198:
+//				itemDef.copyItem(8809);
+//				itemDef.name = "Lust Staff (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2200:
+//				itemDef.copyItem(8806);
+//				itemDef.name = "Lust Visor (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2202:
+//				itemDef.copyItem(8807);
+//				itemDef.name = "Lust Poncho (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2204:
+//				itemDef.copyItem(8806);
+//				itemDef.name = "Lust Legging (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2206:
+//				itemDef.copyItem(21018);
+//				itemDef.name = "Godly Bow (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2208:
+//				itemDef.copyItem(14050);
+//				itemDef.name = "Godly Helm (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2210:
+//				itemDef.copyItem(14051);
+//				itemDef.name = "Godly Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2212:
+//				itemDef.copyItem(14052);
+//				itemDef.name = "Godly Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2214:
+//				itemDef.copyItem(1485);
+//				itemDef.name = "Godly Cape (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2216:
+//				itemDef.copyItem(14053);
+//				itemDef.name = "Godly Boots (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2218:
+//				itemDef.copyItem(14055);
+//				itemDef.name = "Godly Gloves (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2220:
+//				itemDef.copyItem(8088);
+//				itemDef.name = "Emerald Crossbow (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2222:
+//				itemDef.copyItem(11001);
+//				itemDef.name = "Emerald Coif (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2224:
+//				itemDef.copyItem(11002);
+//				itemDef.name = "Emerald Body (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2226:
+//				itemDef.copyItem(11003);
+//				itemDef.name = "Emerald Chaps (U)";
+//				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2228:
+//				itemDef.copyItem(7014);
+//				itemDef.name = "Gold Glaive (U)";
+//				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2230:
+//				itemDef.copyItem(11183);
+//				itemDef.name = "Gold Helm (U)";
+//				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2232:
+//				itemDef.copyItem(11184);
+//				itemDef.name = "Gold Body (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2234:
+//				itemDef.copyItem(11179);
+//				itemDef.name = "Gold Legs (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2236:
+//				itemDef.copyItem(11762);
+//				itemDef.name = "Gold Cape (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2238:
+//				itemDef.copyItem(11182);
+//				itemDef.name = "Gold Boots (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2240:
+//				itemDef.copyItem(11181);
+//				itemDef.name = "Gold Gloves (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2242:
+//				itemDef.copyItem(21028);
+//				itemDef.name = "Saint Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2244:
+//				itemDef.copyItem(21029);
+//				itemDef.name = "Saint Body (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2246:
+//				itemDef.copyItem(21030);
+//				itemDef.name = "Saint Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2248:
+//				itemDef.copyItem(15888);
+//				itemDef.name = "Champion Whip (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2250:
+//				itemDef.copyItem(15818);
+//				itemDef.name = "Champion Off-Hand (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2252:
+//				itemDef.copyItem(15924);
+//				itemDef.name = "Champion Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2254:
+//				itemDef.copyItem(16023);
+//				itemDef.name = "Champion Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2256:
+//				itemDef.copyItem(15935);
+//				itemDef.name = "Champion Legs (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2258:
+//				itemDef.copyItem(17686);
+//				itemDef.name = "Champion Wings (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2260:
+//				itemDef.copyItem(16272);
+//				itemDef.name = "Champion Boots (U)";
+//				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2262:
+//				itemDef.copyItem(12994);
+//				itemDef.name = "Champion Gloves (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2264:
+//				itemDef.copyItem(22127);
+//				itemDef.name = "Rogue Sword (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2266:
+//				itemDef.copyItem(22126);
+//				itemDef.name = "Rogue Helm (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2268:
+//				itemDef.copyItem(17596);
+//				itemDef.name = "Rogue Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2270:
+//				itemDef.copyItem(22125);
+//				itemDef.name = "Rogue Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2272:
+//				itemDef.copyItem(22122);
+//				itemDef.name = "Rogue Boots (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2274:
+//				itemDef.copyItem(22123);
+//				itemDef.name = "Rogue Gloves (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2276:
+//				itemDef.copyItem(12610);
+//				itemDef.name = "Rogue Aura (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//				//BOSSES
+//			case 2278:
+//				itemDef.copyItem(22135);
+//				itemDef.name = "Solar Staff (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2280:
+//				itemDef.copyItem(15645);
+//				itemDef.name = "Solar Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2282:
+//				itemDef.copyItem(15646);
+//				itemDef.name = "Solar Body (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2284:
+//				itemDef.copyItem(15647);
+//				itemDef.name = "Solar Legs (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2286:
+//				itemDef.copyItem(21023);
+//				itemDef.name = "Deviant Sword (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2288:
+//				itemDef.copyItem(21020);
+//				itemDef.name = "Deviant Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2290:
+//				itemDef.copyItem(21021);
+//				itemDef.name = "Deviant Body (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2292:
+//				itemDef.copyItem(21022);
+//				itemDef.name = "Deviant Legs (U)";
+//				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2294:
+//				itemDef.copyItem(21024);
+//				itemDef.name = "Deviant Wings (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2296:
+//				itemDef.copyItem(5012);
+//				itemDef.name = "Executive Bow (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2298:
+//				itemDef.copyItem(4784);
+//				itemDef.name = "Executive Helm (U)";
+//				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2300:
+//				itemDef.copyItem(4685);
+//				itemDef.name = "Executive Body (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2302:
+//				itemDef.copyItem(4686);
+//				itemDef.name = "Executive Legs (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2304:
+//				itemDef.copyItem(9939);
+//				itemDef.name = "Executive Cape (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2306:
+//				itemDef.copyItem(8274);
+//				itemDef.name = "Executive Boots (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2308:
+//				itemDef.copyItem(8273);
+//				itemDef.name = "Executive Gloves (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2310:
+//				itemDef.copyItem(17698);
+//				itemDef.name = "Nite Hammer (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2312:
+//				itemDef.copyItem(17700);
+//				itemDef.name = "Nite Off-Hand (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2314:
+//				itemDef.copyItem(17614);
+//				itemDef.name = "Nite Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2316:
+//				itemDef.copyItem(17616);
+//				itemDef.name = "Nite Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2318:
+//				itemDef.copyItem(17618);
+//				itemDef.name = "Nite Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2320:
+//				itemDef.copyItem(17606);
+//				itemDef.name = "Nite Wings (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2322:
+//				itemDef.copyItem(17622);
+//				itemDef.name = "Nite Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2324:
+//				itemDef.copyItem(11195);
+//				itemDef.name = "Nite Necklace (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2326:
+//				itemDef.copyItem(23066);
+//				itemDef.name = "Obsidian Crossbow (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2328:
+//				itemDef.copyItem(23067);
+//				itemDef.name = "Obsidian Off-Hand (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2330:
+//				itemDef.copyItem(23061);
+//				itemDef.name = "Obsidian Helm (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2332:
+//				itemDef.copyItem(23062);
+//				itemDef.name = "Obsidian Body (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2334:
+//				itemDef.copyItem(23063);
+//				itemDef.name = "Obsidian Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2336:
+//				itemDef.copyItem(23068);
+//				itemDef.name = "Obsidian Wings (U)";
+//				                    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2338:
+//				itemDef.copyItem(12612);
+//				itemDef.name = "Obsidian Aura (U)";
+//				           itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2340:
+//				itemDef.copyItem(14018);
+//				itemDef.name = "Malvek Katana (U)";
+//				          itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2342:
+//				itemDef.copyItem(19160);
+//				itemDef.name = "Malvek Helm (U)";
+//				        itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2344:
+//				itemDef.copyItem(19159);
+//				itemDef.name = "Malvek Body (U)";
+//				         itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2346:
+//				itemDef.copyItem(19158);
+//				itemDef.name = "Malvek Legs (U)";
+//				        itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2348:
+//				itemDef.copyItem(20427);
+//				itemDef.name = "Onyx Helm (U)";
+//				        itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2350:
+//				itemDef.copyItem(20260);
+//				itemDef.name = "Onyx Body (U)";
+//				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2352:
+//				itemDef.copyItem(20095);
+//				itemDef.name = "Onyx Legs (U)";
+//				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2354:
+//				itemDef.copyItem(8136);
+//				itemDef.name = "Blood Vitur (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2356:
+//				itemDef.copyItem(8813);
+//				itemDef.name = "Blood Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2358:
+//				itemDef.copyItem(8814);
+//				itemDef.name = "Blood Body (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2360:
+//				itemDef.copyItem(8815);
+//				itemDef.name = "Blood Legs (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2362:
+//				itemDef.copyItem(17283);
+//				itemDef.name = "Blood Boots (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2364:
+//				itemDef.copyItem(16194);
+//				itemDef.name = "Blood Gloves (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2366:
+//				itemDef.copyItem(14188);
+//				itemDef.name = "Demonlord Sword (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2368:
+//				itemDef.copyItem(14184);
+//				itemDef.name = "Demonlord Helm (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2370:
+//				itemDef.copyItem(14178);
+//				itemDef.name = "Demonlord Body (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2372:
+//				itemDef.copyItem(14186);
+//				itemDef.name = "Demonlord Legs (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2374:
+//				itemDef.copyItem(14180);
+//				itemDef.name = "Demonlord Boots (U)";
+//				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2376:
+//				itemDef.copyItem(14182);
+//				itemDef.name = "Demonlord Gloves (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2378:
+//				itemDef.copyItem(22143);
+//				itemDef.name = "Lili Staff (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2384:
+//				itemDef.copyItem(22136);
+//				itemDef.name = "Lili Helmet (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2386:
+//				itemDef.copyItem(22137);
+//				itemDef.name = "Lili Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2388:
+//				itemDef.copyItem(22138);
+//				itemDef.name = "Lili Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2390:
+//				itemDef.copyItem(22141);
+//				itemDef.name = "Lili Boots (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2392:
+//				itemDef.copyItem(22139);
+//				itemDef.name = "Lili Gloves (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2394:
+//				itemDef.copyItem(22142);
+//				itemDef.name = "Lili Aura (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2396:
+//				itemDef.copyItem(13640);
+//				itemDef.name = "Groudon-Flame Staff (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2398:
+//				itemDef.copyItem(13964);
+//				itemDef.name = "Groudon-Flame Shield (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2400:
+//				itemDef.copyItem(21934);
+//				itemDef.name = "Groudon-Flame Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2402:
+//				itemDef.copyItem(19918);
+//				itemDef.name = "Groudon-Flame Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2404:
+//				itemDef.copyItem(19913);
+//				itemDef.name = "Groudon-Flame Legs (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2406:
+//				itemDef.copyItem(3107);
+//				itemDef.name = "Groudon-Flame Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2408:
+//				itemDef.copyItem(15448);
+//				itemDef.name = "Groudon-Flame Power (U)";
+//				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2410:
+//				itemDef.copyItem(22148);
+//				itemDef.name = "Varth Bow (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2412:
+//				itemDef.copyItem(22151);
+//				itemDef.name = "Varth Teddy (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2414:
+//				itemDef.copyItem(22145);
+//				itemDef.name = "Varth Helmet (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2416:
+//				itemDef.copyItem(22146);
+//				itemDef.name = "Varth Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2418:
+//				itemDef.copyItem(22147);
+//				itemDef.name = "Varth Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2420:
+//				itemDef.copyItem(22149);
+//				itemDef.name = "Varth Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2422:
+//				itemDef.copyItem(22150);
+//				itemDef.name = "Varth Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2424:
+//				itemDef.copyItem(17694);
+//				itemDef.name = "Tyrant Hammer (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2426:
+//				itemDef.copyItem(17696);
+//				itemDef.name = "Tyrant Off-Hand (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2428:
+//				itemDef.copyItem(14190);
+//				itemDef.name = "Tyrant Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2430:
+//				itemDef.copyItem(14192);
+//				itemDef.name = "Tyrant Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2432:
+//				itemDef.copyItem(14194);
+//				itemDef.name = "Tyrant Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2434:
+//				itemDef.copyItem(14200);
+//				itemDef.name = "Tyrant Wings (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2436:
+//				itemDef.copyItem(14198);
+//				itemDef.name = "Tyrant Boots (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2438:
+//				itemDef.copyItem(14196);
+//				itemDef.name = "Tyrant Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2440:
+//				itemDef.copyItem(12608);
+//				itemDef.name = "Tyrant Aura (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2442:
+//				itemDef.copyItem(17644);
+//				itemDef.name = "Flaming Katana (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2444:
+//				itemDef.copyItem(22100);
+//				itemDef.name = "Lucifer's Head (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2446:
+//				itemDef.copyItem(22101);
+//				itemDef.name = "Lucifer's Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2448:
+//				itemDef.copyItem(22102);
+//				itemDef.name = "Lucifer's Legs (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2450:
+//				itemDef.copyItem(22105);
+//				itemDef.name = "Lucifer's Wings (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2452:
+//				itemDef.copyItem(22103);
+//				itemDef.name = "Lucifer's Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2454:
+//				itemDef.copyItem(22104);
+//				itemDef.name = "Lucifer's Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2456:
+//				itemDef.copyItem(14305);
+//				itemDef.name = "Virtuos Wand (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2458:
+//				itemDef.copyItem(14307);
+//				itemDef.name = "Virtuos Relic (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2460:
+//				itemDef.copyItem(14202);
+//				itemDef.name = "Virtuos Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2462:
+//				itemDef.copyItem(14204);
+//				itemDef.name = "Virtuos Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2464:
+//				itemDef.copyItem(14206);
+//				itemDef.name = "Virtuos Legs (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2466:
+//				itemDef.copyItem(14303);
+//				itemDef.name = "Virtuos Boots (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2468:
+//				itemDef.copyItem(14301);
+//				itemDef.name = "Virtuos Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2470:
+//				itemDef.copyItem(22155);
+//				itemDef.name = "Agumon Bow (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2472:
+//				itemDef.copyItem(22152);
+//				itemDef.name = "Agumon Head (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2474:
+//				itemDef.copyItem(22153);
+//				itemDef.name = "Agumon Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2476:
+//				itemDef.copyItem(22154);
+//				itemDef.name = "Agumon Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2478:
+//				itemDef.copyItem(22158);
+//				itemDef.name = "Agumon Boots (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2480:
+//				itemDef.copyItem(22159);
+//				itemDef.name = "Agumon Gloves (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2482:
+//				itemDef.copyItem(22160);
+//				itemDef.name = "Agumon Aura (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2484:
+//				itemDef.copyItem(22167);
+//				itemDef.name = "White Staff (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2486:
+//				itemDef.copyItem(22163);
+//				itemDef.name = "White Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2488:
+//				itemDef.copyItem(22165);
+//				itemDef.name = "White Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2490:
+//				itemDef.copyItem(22164);
+//				itemDef.name = "White Legs (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2492:
+//				itemDef.copyItem(22166);
+//				itemDef.name = "White Wings (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2494:
+//				itemDef.copyItem(22161);
+//				itemDef.name = "White Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2496:
+//				itemDef.copyItem(22162);
+//				itemDef.name = "White Gloves (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2498:
+//				itemDef.copyItem(23079);
+//				itemDef.name = "Soldier Sword (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2500:
+//				itemDef.copyItem(23080);
+//				itemDef.name = "Soldier Off-Hand (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2502:
+//				itemDef.copyItem(23075);
+//				itemDef.name = "Soldier Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2504:
+//				itemDef.copyItem(23076);
+//				itemDef.name = "Soldier Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2506:
+//				itemDef.copyItem(23077);
+//				itemDef.name = "Soldier Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2508:
+//				itemDef.copyItem(14319);
+//				itemDef.name = "Fighter Sword (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2510:
+//				itemDef.copyItem(14309);
+//				itemDef.name = "Fighter Head (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2512:
+//				itemDef.copyItem(14311);
+//				itemDef.name = "Fighter Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2514:
+//				itemDef.copyItem(14313);
+//				itemDef.name = "Fighter Legs (U)";
+//				       itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2516:
+//				itemDef.copyItem(14321);
+//				itemDef.name = "Fighter Wings (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2518:
+//				itemDef.copyItem(14317);
+//				itemDef.name = "Fighter Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2520:
+//				itemDef.copyItem(14315);
+//				itemDef.name = "Fighter Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2522:
+//				itemDef.copyItem(22133);
+//				itemDef.name = "Evil Scythe (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2524:
+//				itemDef.copyItem(14325);
+//				itemDef.name = "Evil Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2526:
+//				itemDef.copyItem(14327);
+//				itemDef.name = "Evil Body (U)";
+//				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2528:
+//				itemDef.copyItem(14331);
+//				itemDef.name = "Evil Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2530:
+//				itemDef.copyItem(14329);
+//				itemDef.name = "Evil Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2688:
+//				itemDef.copyItem(14323);
+//				itemDef.name = "Evil Gloves (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2532:
+//				itemDef.copyItem(14353);
+//				itemDef.name = "Death Ring (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2534:
+//				itemDef.copyItem(14349);
+//				itemDef.name = "Death Sickle (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2536:
+//				itemDef.copyItem(14359);
+//				itemDef.name = "Death Head (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2538:
+//				itemDef.copyItem(14363);
+//				itemDef.name = "Death Pendant (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2540:
+//				itemDef.copyItem(14339);
+//				itemDef.name = "Death Body (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2542:
+//				itemDef.copyItem(14347);
+//				itemDef.name = "Death Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2544:
+//				itemDef.copyItem(14355);
+//				itemDef.name = "Death Staff (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2546:
+//				itemDef.copyItem(14341);
+//				itemDef.name = "Death Boots (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2548:
+//				itemDef.copyItem(14345);
+//				itemDef.name = "Death Gloves (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2550:
+//				itemDef.copyItem(14343);
+//				itemDef.name = "Death Bow (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2552:
+//				itemDef.copyItem(14351);
+//				itemDef.name = "Death Off-Hand (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2554:
+//				itemDef.copyItem(14361);
+//				itemDef.name = "Death Halo (U)";
+//				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2556:
+//				itemDef.copyItem(14337);
+//				itemDef.name = "Death Aura (U)";
+//				   itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2558:
+//				itemDef.copyItem(14357);
+//				itemDef.name = "Death Wings (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2560:
+//				itemDef.copyItem(8828);
+//				itemDef.name = "Charybde Helm (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2562:
+//				itemDef.copyItem(8829);
+//				itemDef.name = "Charybde Body (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2564:
+//				itemDef.copyItem(8833);
+//				itemDef.name = "Charybde Legs (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2566:
+//				itemDef.copyItem(8830);
+//				itemDef.name = "Charybde Cape (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2568:
+//				itemDef.copyItem(8831);
+//				itemDef.name = "Charybde Ring (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2570:
+//				itemDef.copyItem(14369);
+//				itemDef.name = "Scylla Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2572:
+//				itemDef.copyItem(14373);
+//				itemDef.name = "Scylla Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2574:
+//				itemDef.copyItem(14371);
+//				itemDef.name = "Scylla Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2576:
+//				itemDef.copyItem(14375);
+//				itemDef.name = "Scylla Wings (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2578:
+//				itemDef.copyItem(14365);
+//				itemDef.name = "Scylla Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2580:
+//				itemDef.copyItem(14367);
+//				itemDef.name = "Scylla Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2582:
+//				itemDef.copyItem(22072);
+//				itemDef.name = "Exode Sword (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2584:
+//				itemDef.copyItem(22036);
+//				itemDef.name = "Exode Hood (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2586:
+//				itemDef.copyItem(22037);
+//				itemDef.name = "Exode Robe Top (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2588:
+//				itemDef.copyItem(22038);
+//				itemDef.name = "Exode Robe Bottoms (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2590:
+//				itemDef.copyItem(5594);
+//				itemDef.name = "Exode Cape (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2592:
+//				itemDef.copyItem(6937);
+//				itemDef.name = "Exode Boots (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2594:
+//				itemDef.copyItem(3905);
+//				itemDef.name = "Exode Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2596:
+//				itemDef.copyItem(20552);
+//				itemDef.name = "Gladiator Glaive (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2598:
+//				itemDef.copyItem(15008);
+//				itemDef.name = "Gladiator Kiteshield (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2600:
+//				itemDef.copyItem(15005);
+//				itemDef.name = "Gladiator Full Helm (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2602:
+//				itemDef.copyItem(15006);
+//				itemDef.name = "Gladiator Fighterbody (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2604:
+//				itemDef.copyItem(15007);
+//				itemDef.name = "Gladiator Fighterlegs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2606:
+//				itemDef.copyItem(15100);
+//				itemDef.name = "Gladiator Cape (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2608:
+//				itemDef.copyItem(15201);
+//				itemDef.name = "Gladiator Boots (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2610:
+//				itemDef.copyItem(15200);
+//				itemDef.name = "Gladiator Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2612:
+//				itemDef.copyItem(14379);
+//				itemDef.name = "Afreet Scythe (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2614:
+//				itemDef.copyItem(14381);
+//				itemDef.name = "Afreet Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2616:
+//				itemDef.copyItem(14383);
+//				itemDef.name = "Afreet Body (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2618:
+//				itemDef.copyItem(14385);
+//				itemDef.name = "Afreet Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2620:
+//				itemDef.copyItem(17702);
+//				itemDef.name = "Frieza Claws (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2622:
+//				itemDef.copyItem(11763);
+//				itemDef.name = "Frieza Helm (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2624:
+//				itemDef.copyItem(11764);
+//				itemDef.name = "Frieza Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2626:
+//				itemDef.copyItem(11765);
+//				itemDef.name = "Frieza Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2628:
+//				itemDef.copyItem(11767);
+//				itemDef.name = "Frieza Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2630:
+//				itemDef.copyItem(11766);
+//				itemDef.name = "Frieza Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2632:
+//				itemDef.copyItem(7543);
+//				itemDef.name = "Perfect Cell Rifle (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2634:
+//				itemDef.copyItem(7544);
+//				itemDef.name = "Perfect Cell Teddy (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2636:
+//				itemDef.copyItem(9481);
+//				itemDef.name = "Perfect Cell Helm (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2638:
+//				itemDef.copyItem(9482);
+//				itemDef.name = "Perfect Cell Body (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2640:
+//				itemDef.copyItem(9483);
+//				itemDef.name = "Perfect Cell Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2642:
+//				itemDef.copyItem(7545);
+//				itemDef.name = "Perfect Cell Apparatus (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2644:
+//				itemDef.copyItem(16249);
+//				itemDef.name = "Super Buu Staff (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2646:
+//				itemDef.copyItem(15832);
+//				itemDef.name = "Super Buu Ward (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2648:
+//				itemDef.copyItem(9478);
+//				itemDef.name = "Super Buu Helm (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2650:
+//				itemDef.copyItem(9479);
+//				itemDef.name = "Super Buu Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2652:
+//				itemDef.copyItem(9480);
+//				itemDef.name = "Super Buu Legs (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2654:
+//				itemDef.copyItem(16265);
+//				itemDef.name = "Super Buu Boots (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2656:
+//				itemDef.copyItem(8410);
+//				itemDef.name = "Elite Sword (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2658:
+//				itemDef.copyItem(8411);
+//				itemDef.name = "Elite Bow (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2660:
+//				itemDef.copyItem(8412);
+//				itemDef.name = "Elite Staff (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2662:
+//				itemDef.copyItem(13323);
+//				itemDef.name = "Goku Head (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2664:
+//				itemDef.copyItem(13324);
+//				itemDef.name = "Goku Body (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2666:
+//				itemDef.copyItem(13325);
+//				itemDef.name = "Goku Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2668:
+//				itemDef.copyItem(1486);
+//				itemDef.name = "Goku Cape (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2670:
+//				itemDef.copyItem(13327);
+//				itemDef.name = "Goku Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2672:
+//				itemDef.copyItem(13326);
+//				itemDef.name = "Goku Gloves (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2674:
+//				itemDef.copyItem(13333);
+//				itemDef.name = "Shinigami Sword (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2676:
+//				itemDef.copyItem(13328);
+//				itemDef.name = "Shinigami Head (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2678:
+//				itemDef.copyItem(13329);
+//				itemDef.name = "Shinigami Body (U)";
+//				    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2680:
+//				itemDef.copyItem(13330);
+//				itemDef.name = "Shinigami Legs (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2682:
+//				itemDef.copyItem(4369);
+//				itemDef.name = "Shinigami Wings (U)";
+//				     itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2684:
+//				itemDef.copyItem(13332);
+//				itemDef.name = "Shinigami Boots (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+//			case 2686:
+//				itemDef.copyItem(3318);
+//				itemDef.name = "Shinigami Gloves (U)";
+//				      itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				break;
+
 
 			//UPGRADED ITEMS END
 
@@ -3212,65 +3184,7 @@ public class ItemDef4 {
 				itemDef.rdc3 = 1;
 				itemDef.stackable = true;
 				break;
-			case 22113:
-				itemDef.name = "<shad=1>@bla@Dark Twisted Bow";
-				ItemDefinition tbow1 = ItemDefinition.get(1419);
-				itemDef.modelID = 65324;
-				itemDef.femaleEquip1 = 65325;
-				itemDef.maleEquip1 = 65325;
-				itemDef.actions = tbow1.actions;
-				itemDef.modelOffsetX = tbow1.modelOffsetX;
-				itemDef.modelOffsetY = tbow1.modelOffsetY;
-				itemDef.modelZoom = tbow1.modelZoom;
-				itemDef.rotationY = tbow1.rotationY;
-				itemDef.rotationX = tbow1.rotationX;
-				itemDef.stackable = false;
-				itemDef.rdc2 = 25;
-				break;
-			case 22114:
-				itemDef.name = "<shad=1>@bla@Dark Sanguinesti Staff";
-				itemDef.actions = new String[5];
-				itemDef.actions[1] = "Wear"/*done*/; //done
-itemDef.actions[2] = "Dissolve";
-				itemDef.actions[2] = "Dissolve";
-				itemDef.actions[4] = "Drop";
-				itemDef.modelID = 99513;
-				itemDef.maleEquip1 = 99506;
-				itemDef.femaleEquip1 = 99506;
-				itemDef.rdc = 25;
-				break;
-			case 22115:
-				itemDef.name = "<shad=1>@bla@Dark Scythe Of Vitur";
-				ItemDefinition vitur22 = ItemDefinition.get(1419);
-				itemDef.modelID = 65320;
-				itemDef.femaleEquip1 = 65321;
-				itemDef.maleEquip1 = 65321;
-				itemDef.actions = vitur22.actions;
-				itemDef.modelOffsetX = vitur22.modelOffsetX;
-				itemDef.modelOffsetY = vitur22.modelOffsetY;
-				itemDef.modelZoom = 3800;
-				itemDef.rotationY = vitur22.rotationY;
-				itemDef.rotationX = vitur22.rotationX;
-				itemDef.stackable = false;
-				itemDef.newModelColor = new int[]{40};
-				itemDef.editedModelColor = new int[]{57};
-				break;
-			case 10025:
-				itemDef.name = "@whi@Progressive Box [T1]";
-				itemDef.rdc2 = 4567543;
-				break;
-			case 10029:
-				itemDef.copyItem(10025);
-				itemDef.name = "@whi@Progressive Box [T2]";
-				itemDef.rdc2 = 5577653;
-				break;
-			case 19886:
-				itemDef.name = "@cya@Collectors Necklace I";
-				break;
-			case 4446:
-				itemDef.name = "@cya@Collectors Ring I";
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
+
 
 			case 22117:
 				itemDef.name = "Zenyte shield";
@@ -3286,29 +3200,8 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				itemDef.stackable = false;
 				break;
-			case 4489:
-				itemDef.name = "Final Amulet";
-				itemDef.modelID = 140640;
-				itemDef.maleEquip1 = 140641;
-				itemDef.femaleEquip1 = 140641;
-				ItemDefinition def2 = ItemDefinition.get(295);
-				itemDef.modelOffsetX = def2.modelOffsetX;
-				itemDef.modelOffsetY = def2.modelOffsetY;
-				itemDef.modelZoom = def2.modelZoom;
-				itemDef.rotationY = def2.rotationY;
-				itemDef.rotationX = def2.rotationX;
-				itemDef.maleWieldY = 10;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
-			case 5521:
-				itemDef.name = "Final Ring";
-				itemDef.modelID = 140639;
-				itemDef.maleEquip1 = 140639;
-				itemDef.femaleEquip1 = 140639;
-				itemDef.rotationX = 1000;
-				itemDef.modelZoom = 750;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				break;
+
+
 			case 22118:
 				itemDef.name = "Group Ironman's Aura";
 				itemDef.modelID = 100_021;
@@ -3482,34 +3375,6 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.stackable = false;
 				break;
 			//naruto
-			case 22133:
-				itemDef.name = "Evil Scythe";
-				itemDef.modelID = 139_764;
-				itemDef.maleEquip1 = 15177;
-				itemDef.femaleEquip1 = 15177;
-				ItemDefinition def333 = ItemDefinition.get(1419);
-				itemDef.modelOffsetX = def333.modelOffsetX;
-				itemDef.modelOffsetY = def333.modelOffsetY;
-				itemDef.modelZoom = 3900;
-				itemDef.rotationY = def333.rotationY;
-				itemDef.rotationX = def333.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
-			case 22134:
-				itemDef.name = "Demon Bow";
-				itemDef.modelID = 100_353;
-				itemDef.maleEquip1 = 100_354;
-				itemDef.femaleEquip1 = 100_354;
-				ItemDefinition def343 = ItemDefinition.get(859);
-				itemDef.modelOffsetX = def343.modelOffsetX;
-				itemDef.modelOffsetY = def343.modelOffsetY;
-				itemDef.modelZoom = 1900;
-				itemDef.rotationY = def343.rotationY;
-				itemDef.rotationX = def343.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
 
 			case 22143:
 				itemDef.name = "Lili Staff";
@@ -3686,100 +3551,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.stackable = false;
 				break;
 
-			case 22161:
-				itemDef.name = "White boots";
-				itemDef21 = ItemDefinition.get(20119);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelID = 100333;
-				itemDef.maleEquip1 = 100333;
-				itemDef.femaleEquip1 = 100333;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = itemDef21.actions;
-				itemDef.stackable = false;
-				break;
 
-			case 22162:
-				itemDef.name = "White Gloves";
-				itemDef.modelID = 100334;
-				itemDef.maleEquip1 = 100335;
-				itemDef.femaleEquip1 = 100335;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
-
-			case 22163:
-				itemDef.name = "White Helm";
-				itemDef.modelID = 100336;
-				itemDef.maleEquip1 = 100337;
-				itemDef.femaleEquip1 = 100337;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
-
-			case 22164:
-				itemDef.name = "White Legs";
-				itemDef.modelID = 100338;
-				itemDef.maleEquip1 = 100339;
-				itemDef.femaleEquip1 = 100339;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
-
-			case 22165:
-				itemDef.name = "White Body";
-				itemDef.modelID = 100340;
-				itemDef.maleEquip1 = 100341;
-				itemDef.femaleEquip1 = 100341;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
-
-			case 22166:
-				itemDef.name = "White wings";
-				itemDef.modelID = 100347;
-				itemDef.maleEquip1 = 100348;
-				itemDef.femaleEquip1 = 100348;
-				itemDef21 = ItemDefinition.get(19709);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
-
-			case 22167:
-				itemDef.name = "White Staff";
-				itemDef.modelID = 100342;
-				itemDef.maleEquip1 = 100343;
-				itemDef.femaleEquip1 = 100343;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
 
 			case 22168:
 				itemDef.name = "White Blade";
@@ -3794,44 +3566,33 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.stackable = false;
 				break;
 
-			case 22169:
-				itemDef.name = "Sunlight Staff";
-				itemDef.modelID = 100349;
-				itemDef.maleEquip1 = 100350;
-				itemDef.femaleEquip1 = 100350;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
 
-			case 22170:
-				itemDef.name = "Darklight Staff";
-				itemDef.modelID = 1003451;
-				itemDef.maleEquip1 = 100352;
-				itemDef.femaleEquip1 = 100352;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
 
-			case 22171:
-				itemDef.name = "Darklight Bow";
-				itemDef.modelID = 100353;
-				itemDef.maleEquip1 = 100354;
-				itemDef.femaleEquip1 = 100354;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
+//			case 22170:
+//				itemDef.name = "Darklight Staff";
+//				itemDef.modelID = 1003451;
+//				itemDef.maleEquip1 = 100352;
+//				itemDef.femaleEquip1 = 100352;
+//				itemDef21 = ItemDefinition.get(18509);
+//				itemDef.modelZoom = 1000;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				itemDef.stackable = false;
+//				break;
+
+//			case 22171:
+//				itemDef.name = "Darklight Bow";
+//				itemDef.modelID = 100353;
+//				itemDef.maleEquip1 = 100354;
+//				itemDef.femaleEquip1 = 100354;
+//				itemDef21 = ItemDefinition.get(18509);
+//				itemDef.modelZoom = 1000;
+//				itemDef.rotationY = itemDef21.rotationY;
+//				itemDef.rotationX = itemDef21.rotationX;
+//				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//				itemDef.stackable = false;
+//				break;
 
 			case 22172:
 				itemDef.name = "Slime Staff";
@@ -3874,31 +3635,6 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.stackable = false;
 				break;
 
-			case 22176:
-				itemDef.name = "Ocean Bow";
-				itemDef.modelID = 100363;
-				itemDef.maleEquip1 = 100364;
-				itemDef.femaleEquip1 = 100364;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
-
-			case 22177:
-				itemDef.name = "Obsidian Staff";
-				itemDef.modelID = 100365;
-				itemDef.maleEquip1 = 100366;
-				itemDef.femaleEquip1 = 100366;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
 
 			case 22178:
 				itemDef.name = "Slime Scythe";
@@ -3913,85 +3649,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.stackable = false;
 				break;
 
-			case 22179:
-				itemDef.name = "Ocean Boots";
-				itemDef21 = ItemDefinition.get(20119);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelID = 100408;
-				itemDef.maleEquip1 = 100408;
-				itemDef.femaleEquip1 = 100408;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = itemDef21.actions;
-				itemDef.stackable = false;
-				break;
 
-			case 22180:
-				itemDef.name = "Ocean Gloves";
-				itemDef.modelID = 100409;
-				itemDef.maleEquip1 = 100410;
-				itemDef.femaleEquip1 = 100410;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
-
-			case 22181:
-				itemDef.name = "Ocean Body";
-				itemDef.modelID = 100411;
-				itemDef.maleEquip1 = 100412;
-				itemDef.femaleEquip1 = 100412;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
-
-			case 22182:
-				itemDef.name = "Ocean Legs";
-				itemDef.modelID = 100413;
-				itemDef.maleEquip1 = 100414;
-				itemDef.femaleEquip1 = 100414;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
-
-			case 22183:
-				itemDef.name = "Ocean Helm";
-				itemDef.modelID = 100415;
-				itemDef.maleEquip1 = 100416;
-				itemDef.femaleEquip1 = 100416;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
-
-			case 22184:
-				itemDef.name = "Ocean Blade";
-				itemDef.modelID = 100417;
-				itemDef.maleEquip1 = 100418;
-				itemDef.femaleEquip1 = 100418;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
 
 			case 22185:
 				itemDef.name = "Keyblade";
@@ -4214,31 +3872,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.stackable = false;
 				break;
 
-			case 22202:
-				itemDef.name = "Obsidian Cape";
-				itemDef.modelID = 139820;
-				itemDef.maleEquip1 = 139821;
-				itemDef.femaleEquip1 = 139821;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
 
-			case 22203:
-				itemDef.name = "Obsidian Boots";
-				itemDef.modelID = 139822;
-				itemDef.maleEquip1 = 139822;
-				itemDef.femaleEquip1 = 139822;
-				itemDef21 = ItemDefinition.get(18509);
-				itemDef.modelZoom = 1000;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
 
 			case 22204:
 				itemDef.name = "Haunted Cat Mask";

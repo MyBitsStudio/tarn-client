@@ -595,6 +595,23 @@ public class Items {
                 itemDef.name = "FireWall";
                 break;
 
+            case 15250:
+                itemDef.name = "Armour Stone";
+                break;
+            case 15251:
+                itemDef.name = "Weapon Stone";
+                break;
+            case 15252:
+                itemDef.copyItem(15250);
+                itemDef.name = "Accessories Stone";
+                itemDef.rdc2 = 822332;
+                break;
+            case 15253:
+                itemDef.copyItem(15251);
+                itemDef.name = "Other Stone";
+                itemDef.rdc2 = 622123;
+                break;
+
             /* Master Parts */
 
             case 19641:
@@ -1432,11 +1449,6 @@ public class Items {
                 itemDef.rotationY = 520;
                 itemDef.modelZoom = 800;
                 break;
-            case 15222:
-                itemDef.name = "Poison Ivy";
-                itemDef.stackable = false;
-                itemDef.actions = new String[]{null, null, null, null, "Drop"};
-                break;
             case 588:
                 itemDef.name = "Spirit Orb";
                 itemDef.actions = new String[]{null, null, null, null, "Drop"};
@@ -1595,6 +1607,15 @@ public class Items {
 //                itemDef.actions = itemDefs.actions;
 //                itemDef.rdc2 = 88757;
 //                break;
+            case 10025:
+                itemDef.name = "@whi@Progressive Box [T1]";
+                itemDef.rdc2 = 4567543;
+                break;
+            case 10029:
+                itemDef.copyItem(10025);
+                itemDef.name = "@whi@Progressive Box [T2]";
+                itemDef.rdc2 = 5577653;
+                break;
         }
         return itemDef;
     }
