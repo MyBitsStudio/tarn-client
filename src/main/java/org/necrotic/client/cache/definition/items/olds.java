@@ -7,8 +7,106 @@ import org.necrotic.client.cache.definition.ItemDefinition;
  */
 public class olds {
 
+//    case 22169:
+//    itemDef.name = "Sunlight Staff";
+//    itemDef.modelID = 100349;
+//    itemDef.maleEquip1 = 100350;
+//    itemDef.femaleEquip1 = 100350;
+//    itemDef21 = ItemDefinition.get(18509);
+//    itemDef.modelZoom = 1000;
+//    itemDef.rotationY = itemDef21.rotationY;
+//    itemDef.rotationX = itemDef21.rotationX;
+//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//    itemDef.stackable = false;
+//				break;
 
+// case 22133:
+//    itemDef.name = "Obsidian Scythe";
+//    itemDef.modelID = 139_764;
+//    itemDef.maleEquip1 = 15177;
+//    itemDef.femaleEquip1 = 15177;
+//    ItemDefinition def333 = ItemDefinition.get(1419);
+//    itemDef.modelOffsetX = def333.modelOffsetX;
+//    itemDef.modelOffsetY = def333.modelOffsetY;
+//    itemDef.modelZoom = 3900;
+//    itemDef.rotationY = def333.rotationY;
+//    itemDef.rotationX = def333.rotationX;
+//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//    itemDef.stackable = false;
+//				break;
+//			case 22134:
+//    itemDef.name = "Demon Bow";
+//    itemDef.modelID = 100_353;
+//    itemDef.maleEquip1 = 100_354;
+//    itemDef.femaleEquip1 = 100_354;
+//    ItemDefinition def343 = ItemDefinition.get(859);
+//    itemDef.modelOffsetX = def343.modelOffsetX;
+//    itemDef.modelOffsetY = def343.modelOffsetY;
+//    itemDef.modelZoom = 1900;
+//    itemDef.rotationY = def343.rotationY;
+//    itemDef.rotationX = def343.rotationX;
+//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//    itemDef.stackable = false;
+//				break;
 
+  //  			case 22114:
+//				itemDef.name = "<shad=1>@bla@Dark Sanguinesti Staff";
+//				itemDef.actions = new String[5];
+//				itemDef.actions[1] = "Wear"/*done*/; //done
+//itemDef.actions[2] = "Dissolve";
+//				itemDef.actions[2] = "Dissolve";
+//				itemDef.actions[4] = "Drop";
+//				itemDef.modelID = 99513;
+//				itemDef.maleEquip1 = 99506;
+//				itemDef.femaleEquip1 = 99506;
+//				itemDef.rdc = 25;
+//				break;
+//			case 22115:
+//				itemDef.name = "<shad=1>@bla@Dark Scythe Of Vitur";
+//				ItemDefinition vitur22 = ItemDefinition.get(1419);
+//				itemDef.modelID = 65320;
+//				itemDef.femaleEquip1 = 65321;
+//				itemDef.maleEquip1 = 65321;
+//				itemDef.actions = vitur22.actions;
+//				itemDef.modelOffsetX = vitur22.modelOffsetX;
+//				itemDef.modelOffsetY = vitur22.modelOffsetY;
+//				itemDef.modelZoom = 3800;
+//				itemDef.rotationY = vitur22.rotationY;
+//				itemDef.rotationX = vitur22.rotationX;
+//				itemDef.stackable = false;
+//				itemDef.newModelColor = new int[]{40};
+//				itemDef.editedModelColor = new int[]{57};
+//				break;
+
+//	case 22113:
+//    itemDef.name = "<shad=1>@bla@Dark Twisted Bow";
+//    ItemDefinition tbow1 = ItemDefinition.get(1419);
+//    itemDef.modelID = 65324;
+//    itemDef.femaleEquip1 = 65325;
+//    itemDef.maleEquip1 = 65325;
+//    itemDef.actions = tbow1.actions;
+//    itemDef.modelOffsetX = tbow1.modelOffsetX;
+//    itemDef.modelOffsetY = tbow1.modelOffsetY;
+//    itemDef.modelZoom = tbow1.modelZoom;
+//    itemDef.rotationY = tbow1.rotationY;
+//    itemDef.rotationX = tbow1.rotationX;
+//    itemDef.stackable = false;
+//    itemDef.rdc2 = 25;
+//				break;
+//case 12843:
+//    itemDef.name = "Deathbringer";
+//    itemDef.modelID = 141194;
+//    itemDef.maleEquip1 = 140852;
+//    itemDef.femaleEquip1 = 140852;
+//    itemDef21 = ItemDefinition.get(5575);
+//    itemDef.modelOffsetX = itemDef21.modelOffsetX;
+//    itemDef.modelOffsetY = itemDef21.modelOffsetY;
+//    itemDef.modelZoom = itemDef21.modelZoom;
+//    itemDef.rotationY = itemDef21.rotationY;
+//    itemDef.rotationX = itemDef21.rotationX;
+//    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+//    itemDef.stackable = false;
+//				break;
 //    case 9929:
 //    itemDef.name = "Cleric Rifle";
 //    ItemDefinition itemDef2 = ItemDefinition.get(20538);

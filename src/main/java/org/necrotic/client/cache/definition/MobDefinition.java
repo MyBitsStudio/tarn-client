@@ -890,8 +890,7 @@ public final class MobDefinition {
 				definition.combatLevel = MobDefinition.get(2292).combatLevel;
 				definition.standAnimation = MobDefinition.get(2292).standAnimation;
 				definition.walkAnimation = MobDefinition.get(2292).walkAnimation;
-				definition.actions = new String[5];
-				definition.actions[0] = null;
+				definition.actions = new String[]{null, "Attack", null, null, null};
 				definition.drawYellowDotOnMap = true;
 				definition.npcSizeInSquares = 1;
 				definition.scaleXZ = 128;
@@ -904,8 +903,7 @@ public final class MobDefinition {
 				definition.combatLevel = MobDefinition.get(2292).combatLevel;
 				definition.standAnimation = MobDefinition.get(2292).standAnimation;
 				definition.walkAnimation = MobDefinition.get(2292).walkAnimation;
-				definition.actions = new String[5];
-				definition.actions[0] = null;
+				definition.actions = new String[]{null, "Attack", null, null, null};
 				definition.drawYellowDotOnMap = true;
 				definition.npcSizeInSquares = 1;
 				definition.scaleXZ = 128;

@@ -181,12 +181,12 @@ public class Entity extends Animable {
 		y = smallY[0] * 128 + anInt1540 * 64;
 	}
 
-	public int[] hitmarkMove = new int[4];
-	public int[] moveTimer = new int[4];
-	public int[] hitmarkTrans = new int[4];
-	public int[] hitIcon = new int[4];
-	public long[] soakDamage = new long[4];
-	public int[] hitMarkPos = new int[4];
+	public int[] hitmarkMove = new int[7];
+	public int[] moveTimer = new int[7];
+	public int[] hitmarkTrans = new int[7];
+	public int[] hitIcon = new int[7];
+	public long[] soakDamage = new long[7];
+	public int[] hitMarkPos = new int[7];
 
 	public final void updateHitData(int markType, long damage, int l, int icon, long soak) {
 		for (int i1 = 0; i1 < 4; i1++) {
