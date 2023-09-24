@@ -14781,6 +14781,15 @@ public class Client extends GameRenderer {
                     pktType = -1;
                     return true;
 
+                case 236:
+                    int id = getInputBuffer().getInt();
+                    int len = getInputBuffer().getShort();
+                    RSInterface inter = RSInterface.interfaceCache[id];
+                    inter.conveyorItems[len][0] = getInputBuffer().getInt();
+                    inter.conveyorItems[len][1] = getInputBuffer().getShort();
+                    pktType = -1;
+                    return true;
+
                 case 88:
                     int xface = getInputBuffer().getSignedShort();
                     int yface = getInputBuffer().getSignedShort();
@@ -14878,9 +14887,9 @@ public class Client extends GameRenderer {
                     int widgetId = getInputBuffer().getShort();
                     WheelOfFortune wheel = RSInterface.interfaceCache[widgetId].wheel;
                     byte index = getInputBuffer().getByte();
-                    byte len = getInputBuffer().getByte();
-                    int[] items = new int[len];
-                    for (int j = 0; j < len; j++) {
+                    byte len2 = getInputBuffer().getByte();
+                    int[] items = new int[len2];
+                    for (int j = 0; j < len2; j++) {
                         items[j] = getInputBuffer().getShort();
                     }
                     wheel.setItems(items);
@@ -15350,11 +15359,11 @@ public class Client extends GameRenderer {
                     return true;
 
                 case 174:
-                    int id = getInputBuffer().getUnsignedShort();
+                    int ids = getInputBuffer().getUnsignedShort();
                     int type = getInputBuffer().getUnsignedByte();
                     int delay = getInputBuffer().getUnsignedShort();
                     if (soundEffectVolume != 0 && type != 0 && soundCount < 50) {
-                        sound[soundCount] = id;
+                        sound[soundCount] = ids;
                         soundType[soundCount] = type;
                         soundDelay[soundCount] = delay;
                         aClass26Array1468[soundCount] = null;

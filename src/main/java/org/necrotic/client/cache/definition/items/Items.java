@@ -680,14 +680,15 @@ public class Items {
                 break;
             case 23165:
                 itemDef.copyItem(1505);
-                itemDef.name = "Knight prayer scroll";
+                itemDef.name = "Daily Coin Scroll";
                 itemDef.modelID = 100318;
-                itemDef.actions = new String[]{"Claim", null, null, null, null};
+                itemDef.actions = new String[]{null, null, null, null, null};
                 itemDef.modelZoom = 2600;
                 itemDef.rotationX = 1534;
                 itemDef.rotationY = 554;
                 itemDef.modelOffsetX = -4;
                 itemDef.modelOffsetY = 0;
+                itemDef.stackable = true;
                 break;
             case 23169:
                 itemDef.copyItem(23165);
@@ -1497,10 +1498,6 @@ public class Items {
                 itemDef.rotationY = 277;
                 itemDef.rotationZ = 0;
                 break;
-//            case 8788:
-//                itemDef.name = "Transfer Crystal";
-//                itemDef.rdc2 = 91291;
-//                break;
 //            case 9662:
 //                itemDef.name = "<col=f8ac00>Damned key@lre@";
 //                itemDef.actions = new String[5];
