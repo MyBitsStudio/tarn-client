@@ -192,16 +192,19 @@ public class Items {
             case 23166:
                 itemDef.copyItem(23165);
                 itemDef.name = "Instance Unlock Scroll";
+                itemDef.actions = new String[]{"Claim", null, null, null, "Drop"};
                 itemDef.modelID = 100316;
                 break;
             case 23168:
                 itemDef.copyItem(23165);
                 itemDef.name = "Raids Unlock scroll";
+                itemDef.actions = new String[]{"Claim", null, null, null, "Drop"};
                 itemDef.modelID = 100319;
                 break;
             case 23167:
                 itemDef.copyItem(23165);
                 itemDef.name = "Holy Unlock scroll";
+                itemDef.actions = new String[]{"Claim", null, null, null, "Drop"};
                 itemDef.modelID = 100317;
                 break;
             case 22214:
