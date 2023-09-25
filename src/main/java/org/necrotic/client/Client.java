@@ -15400,6 +15400,40 @@ public class Client extends GameRenderer {
                         pktType = -1;
                         return true;
                     }
+                    if(s.startsWith("es#")) {
+                        int i = Integer.parseInt(s.substring(s.lastIndexOf("#")+1));
+                        RSInterface.interfaceCache[167520+i].hideWidget = false;
+                        RSInterface.interfaceCache[167530+i].hideWidget = true;
+                        RSInterface.interfaceCache[167543+i].hideWidget = true;
+                        RSInterface.interfaceCache[167553+i].hideWidget = true;
+                        RSInterface.interfaceCache[167563+i].hideWidget = true;
+                        RSInterface.interfaceCache[167573+i].hideWidget = true;
+                        RSInterface.interfaceCache[167583+i].hideWidget = true;
+                        RSInterface.interfaceCache[167593+i].hideWidget = true;
+                        RSInterface.interfaceCache[167603+i].hideWidget = true;
+                        RSInterface.interfaceCache[167613+i].hideWidget = true;
+                        RSInterface.interfaceCache[167623+i].hideWidget = true;
+                        RSInterface.interfaceCache[167633+i].hideWidget = true;
+                        pktType = -1;
+                        return true;
+                    }
+                    if(s.startsWith("os#")) {
+                        int i = Integer.parseInt(s.substring(s.lastIndexOf("#")+1));
+                        RSInterface.interfaceCache[167520+i].hideWidget = true;
+                        RSInterface.interfaceCache[167530+i].hideWidget = false;
+                        RSInterface.interfaceCache[167543+i].hideWidget = false;
+                        RSInterface.interfaceCache[167553+i].hideWidget = false;
+                        RSInterface.interfaceCache[167563+i].hideWidget = false;
+                        RSInterface.interfaceCache[167573+i].hideWidget = false;
+                        RSInterface.interfaceCache[167583+i].hideWidget = false;
+                        RSInterface.interfaceCache[167593+i].hideWidget = false;
+                        RSInterface.interfaceCache[167603+i].hideWidget = false;
+                        RSInterface.interfaceCache[167613+i].hideWidget = false;
+                        RSInterface.interfaceCache[167623+i].hideWidget = false;
+                        RSInterface.interfaceCache[167633+i].hideWidget = false;
+                        pktType = -1;
+                        return true;
+                    }
                     if (s.equals(":spinCasket")) {
                         casketOpening.setSpinClick(true);
                         pktType = -1;

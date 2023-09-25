@@ -79,19 +79,18 @@ public class WorkerKingdom extends RSInterface {
         workersScroll.totalChildren(140);
 
         addSprite(167519, 3382);
-        addRectangle(167541, 256, 0x242017, false, 46, 46);
-        addRectangle(167542, 256, 0x5A4F3A, false, 44, 44);
         int y = 48;
         for(int i = 0; i < 10; i++) {
             workersScroll.child(i, 167519, 16, y);
             workersScroll.child(i+10, 167519, 156, y);
             addHoverableText(167520+i, "Add Worker", "Select", tda, 1, false, false, 65, ColorConstants.ORANGE, ColorConstants.SNOW_WHITE);
             workersScroll.child(i+20, 167520+i, 140, y-30);
-            RSInterface.interfaceCache[167520+i].hideWidget = true;
             addText(167530+i, "Lv.31@or2@ Worker name here", 0xbdb1a1, false, true, -1, 1);
             workersScroll.child(i+30, 167530+i, 65, y-45);
-            workersScroll.child(i+40, 167541, 16, y-46);
-            workersScroll.child(i+50, 167542, 17, y+1-46);
+            addRectangle(167623+i, 256, 0x242017, false, 46, 46);
+            addRectangle(167633+i, 256, 0x5A4F3A, false, 44, 44);
+            workersScroll.child(i+40, 167623+i, 16, y-46);
+            workersScroll.child(i+50, 167633+i, 17, y+1-46);
             addProgressBar(167543+i, 41, 11, 10*i, 0xce7616, 0x2b292a);
             workersScroll.child(i+60, 167543+i, 19, y-13);
             addItemOnInterface(167553+i, 167518, new String[]{});
