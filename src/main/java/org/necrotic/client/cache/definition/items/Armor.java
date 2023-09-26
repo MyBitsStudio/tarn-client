@@ -1503,6 +1503,217 @@ public class Armor {
                 itemDef.rotationY = 525;
                 break;
 
+            case 14337:
+                itemDef.name = "Death Aura";
+                itemDef.modelID = 140147;
+                itemDef.maleEquip1 = 140147;
+                itemDef.femaleEquip1 = 140147;
+                itemDefs = ItemDefinition.get(1419);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = 5000;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14339:
+                itemDef.name = "Death Body";
+                itemDef.modelID = 140148;
+                itemDef.maleEquip1 = 140148;
+                itemDef.femaleEquip1 = 140148;
+                itemDefs = ItemDefinition.get(1419);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14341:
+                itemDef.name = "Death Boots";
+                itemDef.modelID = 140149;
+                itemDef.maleEquip1 = 140149;
+                itemDef.femaleEquip1 = 140149;
+                itemDefs = ItemDefinition.get(7114);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14343:
+                itemDef.name = "Death Bow";
+                itemDef.modelID = 140150;
+                itemDef.maleEquip1 = 140150;
+                itemDef.femaleEquip1 = 140150;
+                itemDefs = ItemDefinition.get(859);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = 5000;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14345:
+                itemDef.name = "Death Gloves";
+                itemDef.modelID = 140151;
+                itemDef.maleEquip1 = 140151;
+                itemDef.femaleEquip1 = 140151;
+                itemDefs = ItemDefinition.get(7461);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = 1000;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14347:
+                itemDef.name = "Death Legs";
+                itemDef.modelID = 140152;
+                itemDef.maleEquip1 = 140152;
+                itemDef.femaleEquip1 = 140152;
+                itemDefs = ItemDefinition.get(1419);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = 1000;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14349:
+                itemDef.name = "Death Sickle";
+                itemDef.modelID = 140157;
+                itemDef.maleEquip1 = 140157;
+                itemDef.femaleEquip1 = 140157;
+                itemDefs = ItemDefinition.get(1419);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14351:
+                itemDef.name = "Death Sickle Off-Hand";
+                itemDef.modelID = 140158;
+                itemDef.maleEquip1 = 140158;
+                itemDef.femaleEquip1 = 140158;
+                itemDefs = ItemDefinition.get(1419);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14353:
+                itemDef.name = "Death Ring";
+                itemDef.modelID = 140159;
+                itemDef.maleEquip1 = 140159;
+                itemDef.femaleEquip1 = 140159;
+                itemDefs = ItemDefinition.get(23091);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14355:
+                itemDef.name = "Death Staff";
+                itemDef.modelID = 140160;
+                itemDef.maleEquip1 = 140160;
+                itemDef.femaleEquip1 = 140160;
+                itemDefs = ItemDefinition.get(4587);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = 1250;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14357:
+                itemDef.name = "Death Wings";
+                itemDef.modelID = 140161;
+                itemDef.maleEquip1 = 140161;
+                itemDef.femaleEquip1 = 140161;
+                itemDefs = ItemDefinition.get(1419);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = 2000;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14359:
+                itemDef.name = "Death Head";
+                itemDef.modelID = 140162;
+                itemDef.maleEquip1 = 140162;
+                itemDef.femaleEquip1 = 140162;
+                itemDefs = ItemDefinition.get(1419);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14361:
+                itemDef.name = "Death Halo";
+                itemDef.modelID = 140163;
+                itemDef.maleEquip1 = 140163;
+                itemDef.femaleEquip1 = 140163;
+                itemDefs = ItemDefinition.get(1419);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14363:
+                itemDef.name = "Death Pendant";
+                itemDef.modelID = 140164;
+                itemDef.maleEquip1 = 140164;
+                itemDef.femaleEquip1 = 140164;
+                itemDefs = ItemDefinition.get(1419);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+                
+
             case 22111:
                 itemDef.name = "Tarn Defensive Aura";
                 itemDef.modelID = 100_008;

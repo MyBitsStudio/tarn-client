@@ -2,6 +2,8 @@ package org.necrotic.client.graphics.gameframe.impl;
 
 import org.necrotic.client.*;
 import org.necrotic.client.Settings.Save;
+import org.necrotic.client.graphics.AnimatedPlayerName;
+import org.necrotic.client.graphics.AnimatedRankName;
 import org.necrotic.client.graphics.DrawingArea;
 import org.necrotic.client.graphics.fonts.RSFontSystem;
 import org.necrotic.client.graphics.gameframe.GameFrame;
@@ -139,29 +141,26 @@ public class ChatArea extends GameFrame {
 				}
 
 				if (client.inSprite(true, Client.spritesMap.get(17), getxPos() + 404, getyPos() + 143)) {
-					SERVICE.execute(new Runnable() {
-						@Override
-						public void run() {
-							try {
-								Window window = KeyboardFocusManager.getCurrentKeyboardFocusManager().getFocusedWindow();
-								Point point = window.getLocationOnScreen();
-								Robot robot = new Robot(window.getGraphicsConfiguration().getDevice());
-								Rectangle rectangle = new Rectangle((int) point.getX(), (int) point.getY(), window.getWidth(), window.getHeight());
-								BufferedImage img = robot.createScreenCapture(rectangle);
-								Path path = Paths.get(Signlink.getCacheDirectory().toString(), "screenshots");
-								if (!Files.exists(path)) {
-									Files.createDirectories(path);
-								}
-								DateFormat format = new SimpleDateFormat("MM-dd-yyyy hh-mm-ss a");
-								File file = new File(path.toFile(), format.format(new Date()) + ".png");
-								ImageIO.write(img, "png", file);
-								client.pushMessage("A screenshot has been taken and placed in your data folder.", 0, "");
-							} catch (AWTException | IOException reason) {
-								client.pushMessage("An error occured whilst capturing your screenshot.", 0, "");
-								throw new RuntimeException("Fatal error whilst capturing screenshot", reason);
-							}
-						}
-					});
+					SERVICE.execute(() -> {
+                        try {
+                            Window window = KeyboardFocusManager.getCurrentKeyboardFocusManager().getFocusedWindow();
+                            Point point = window.getLocationOnScreen();
+                            Robot robot = new Robot(window.getGraphicsConfiguration().getDevice());
+                            Rectangle rectangle = new Rectangle((int) point.getX(), (int) point.getY(), window.getWidth(), window.getHeight());
+                            BufferedImage img = robot.createScreenCapture(rectangle);
+                            Path path = Paths.get(Signlink.getCacheDirectory().toString(), "screenshots");
+                            if (!Files.exists(path)) {
+                                Files.createDirectories(path);
+                            }
+                            DateFormat format = new SimpleDateFormat("MM-dd-yyyy hh-mm-ss a");
+                            File file = new File(path.toFile(), format.format(new Date()) + ".png");
+                            ImageIO.write(img, "png", file);
+                            client.pushMessage("A screenshot has been taken and placed in your data folder.", 0, "");
+                        } catch (AWTException | IOException reason) {
+                            client.pushMessage("An error occured whilst capturing your screenshot.", 0, "");
+                            throw new RuntimeException("Fatal error whilst capturing screenshot", reason);
+                        }
+                    });
 				}
 
 				for (int i = 0; i < chatMenuText.length; i++) {
@@ -201,11 +200,8 @@ public class ChatArea extends GameFrame {
 		if (client.inSprite(false, Client.spritesMap.get(17), getxPos() + 404, getyPos() + 143)) {
 			return true;
 		}
-		if (screenMode == ScreenMode.FIXED && client.inSprite(false, Client.spritesMap.get(3), getOffSetX(), getOffSetY())) {
-			return true;
-		}
-		return false;
-	}
+        return screenMode == ScreenMode.FIXED && client.inSprite(false, Client.spritesMap.get(3), getOffSetX(), getOffSetY());
+    }
 
 	@Override
 	protected void render(Client client, ScreenMode screenMode) {
@@ -214,7 +210,7 @@ public class ChatArea extends GameFrame {
 				return;
 			}
 			if (screenMode == ScreenMode.FIXED) {
-				if (client.loggedIn) {
+				if (Client.loggedIn) {
 					client.chatAreaIP.initDrawingArea();
 				}
 			}
@@ -281,11 +277,8 @@ public class ChatArea extends GameFrame {
 						if (!chatRights.isEmpty()) {
 							playerRights = chatRights.get(0);
 							donorRights = chatRights.get(1);
-							ironman = chatRights.get(2);
+							ironman = chatRights.get(2) - 11;
 						}
-//						if (playerRights == 13) { //Zenyte Donator
-//							playerRights += 3;
-//						}
 						if (name != null && name.indexOf("@") == 0) {
 							int substringLength = Client.getClient().getPrefixSubstringLength(name);
 							name = name.substring(substringLength);
@@ -296,7 +289,7 @@ public class ChatArea extends GameFrame {
 							name = name.substring(substringLength);
 						}
 						if(playerRights > 0)
-							color = AnimatedPlayerName.getCurrentColorByRank(playerRights);
+							color = AnimatedRankName.getCurrentColorByRank(playerRights);
 						else
 							color = AnimatedPlayerName.getCurrentColorByRank(donorRights);
 						// Don't show Private messages in "All" if split chat is
@@ -350,44 +343,54 @@ public class ChatArea extends GameFrame {
 						if ((chatType == 1 || chatType == 2) && (chatType == 1 || client.publicChatMode == 0 || client.publicChatMode == 1 && client.isFriendOrSelf(name))) {
 							if (client.chatTypeView == 1 || client.chatTypeView == 0) {
 								if (positionY > 0 && positionY < 210) {
-									int xPos = 4;
+									int xPos = 6;
 									AnimatedSprite as;
 									if (playerRights > 0) {
 										if((as = Client.animatedSpriteForRank(playerRights)) != null) {
-											as.getInstance(as.myWidth,as.myHeight).drawAdvancedSprite(xPos + 1 + getOffSetX(),positionY - 11 + getOffSetY());
+											if(playerRights >= 4){
+												xPos += 2;
+											}
+											as.getInstance(as.myWidth,as.myHeight).drawAdvancedSprite(xPos + 1 + getOffSetX(),positionY - 13 + getOffSetY());
+											xPos += 15;
+										} else {
+											client.modIcons[playerRights == 1 ? 10 : playerRights].drawTransparentSprite(xPos + 1 + getOffSetX(), positionY - 13 + getOffSetY(), 255);
 											xPos += 14;
 										}
 									} else if ((as = Client.animatedSpriteForDonation(donorRights)) == null) {
-										client.modIcons[playerRights].drawTransparentSprite(xPos + 1 + getOffSetX(), positionY - 13 + getOffSetY(), 255);
+										if(donorRights >= 1){
+											client.modIcons[donorRights + 5].drawTransparentSprite(xPos + 1 + getOffSetX(), positionY - 13 + getOffSetY(), 255);
+											xPos += 15;
+										}
 									} else {
 										as.getInstance(as.myWidth, as.myHeight).drawAdvancedSprite(xPos + 1 + getOffSetX(), positionY - 11 + getOffSetY());
 										xPos += 14;
 									}
 									if (ironman > 0) {
-										client.modIcons[ironman].drawTransparentSprite(xPos + 4 + getOffSetX(), positionY - 11 + getOffSetY(), 255);
-										xPos += 14;
+										client.modIcons[ironman + 8].drawTransparentSprite(xPos + 4 + getOffSetX(), positionY - 11 + getOffSetY(), 255);
+										xPos += 15;
 									}
 									String title = client.chatTitles[i] == null || client.chatTitles[i].isEmpty() ? "" : client.chatTitles[i];
 									title = title.trim();
 									int position = 0;
-									if (!title.isEmpty()) {
-										xPos += 2;
-										position = client.chatPosition[i];
-									}
-									if (position == 0) {
-										textDrawingArea.drawBasicString(title, xPos + getOffSetX(), positionY + getOffSetY(), client.chatColor[i], -1, true);
-										xPos += textDrawingArea.getTextWidth(title) + 3;
-										//color == 0 ? screenMode == ScreenMode.FIXED ? 0 : 0xffffff: color
-										textDrawingArea.drawBasicString(name + ":", xPos + getOffSetX(), positionY + getOffSetY(), color == 0 ? screenMode == ScreenMode.FIXED ? 0 : 0xffffff : color, screenMode == ScreenMode.FIXED ? -1 : 0x000000, true);
-										xPos += textDrawingArea.getTextWidth(name + ":") + 2;
-										textDrawingArea.drawBasicString(client.chatMessages[i], xPos + getOffSetX(), positionY + getOffSetY(), screenMode == ScreenMode.FIXED ? 255 : 0x7FA9FF, screenMode == ScreenMode.FIXED ? -1 : 0x000000, true);
-									} else {
-										textDrawingArea.drawBasicString(name, xPos + getOffSetX(), positionY + getOffSetY(), color == 0 ? screenMode == ScreenMode.FIXED ? 0 : 0xffffff : color, screenMode == ScreenMode.FIXED ? -1 : 0x000000, true);
-										xPos += textDrawingArea.getTextWidth(name) + 2;
-										textDrawingArea.drawBasicString(title, xPos + getOffSetX(), positionY + getOffSetY(), client.chatColor[i], -1, true);
-										xPos += textDrawingArea.getTextWidth(title);
-										textDrawingArea.drawBasicString("<col=000000>:</col> " + client.chatMessages[i], xPos + getOffSetX(), positionY + getOffSetY(), screenMode == ScreenMode.FIXED ? 255 : 0x7FA9FF, screenMode == ScreenMode.FIXED ? -1 : 0x000000, true);
-									}
+//									if (!title.isEmpty()) {
+//										xPos += 2;
+//										position = client.chatPosition[i];
+//									}
+//									if (position == 0) {
+////										textDrawingArea.drawBasicString(title, xPos + getOffSetX(), positionY + getOffSetY(), client.chatColor[i], -1, true);
+////										xPos += textDrawingArea.getTextWidth(title) + 3;
+//										//color == 0 ? screenMode == ScreenMode.FIXED ? 0 : 0xffffff: color
+//
+//									} else {
+//										textDrawingArea.drawBasicString(name, xPos + getOffSetX(), positionY + getOffSetY(), color == 0 ? screenMode == ScreenMode.FIXED ? 0 : 0xffffff : color, screenMode == ScreenMode.FIXED ? -1 : 0x000000, true);
+//										xPos += textDrawingArea.getTextWidth(name) + 2;
+//										textDrawingArea.drawBasicString(title, xPos + getOffSetX(), positionY + getOffSetY(), client.chatColor[i], -1, true);
+//										xPos += textDrawingArea.getTextWidth(title);
+//										textDrawingArea.drawBasicString("<col=000000>:</col> " + client.chatMessages[i], xPos + getOffSetX(), positionY + getOffSetY(), screenMode == ScreenMode.FIXED ? 255 : 0x7FA9FF, screenMode == ScreenMode.FIXED ? -1 : 0x000000, true);
+//									}
+									textDrawingArea.drawBasicString(name + ":", xPos + getOffSetX(), positionY + getOffSetY(), color == 0 ? screenMode == ScreenMode.FIXED ? 0 : 0xffffff : color, screenMode == ScreenMode.FIXED ? -1 : 0x000000, true);
+									xPos += textDrawingArea.getTextWidth(name + ":") + 2;
+									textDrawingArea.drawBasicString(client.chatMessages[i], xPos + getOffSetX(), positionY + getOffSetY(), screenMode == ScreenMode.FIXED ? 255 : 0x7FA9FF, screenMode == ScreenMode.FIXED ? -1 : 0x000000, true);
 								}
 								scrollPosition++;
 								messageY++;
@@ -591,7 +594,7 @@ public class ChatArea extends GameFrame {
 					}
 
 					if (client.gameMode > 0 && client.gameMode != 3) {
-						client.modIcons[11 + client.gameMode].drawTransparentSprite(drawOffsetX + 4, getOffSetY() + 133 - 11, 255);
+						client.modIcons[8 + client.gameMode].drawTransparentSprite(drawOffsetX + 4, getOffSetY() + 133 - 11, 255);
 						drawOffsetX += 15;
 					}
 

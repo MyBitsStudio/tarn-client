@@ -515,28 +515,24 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 			Client.controlIsDown = true;
 		}
 		if (keyEvent.isControlDown()) {
-			if (keyCode == KeyEvent.VK_T) {
-				sendCommand("teleport");
-				keyEvent.consume();
-				return;
-			} else if (keyCode == KeyEvent.VK_H) {
+			if (keyCode == KeyEvent.VK_H) {
 				sendCommand("home");
-				keyEvent.consume();
-				return;
-			} else if (keyCode == KeyEvent.VK_Z) {
-				sendCommand("zones");
 				keyEvent.consume();
 				return;
 			} else if (keyCode == KeyEvent.VK_P) {
 				sendCommand("pos");
 				keyEvent.consume();
 				return;
-			} else if (keyCode == KeyEvent.VK_U) {
-				sendCommand("upgrade");
+			} else if (keyCode == KeyEvent.VK_S) {
+				sendCommand("bp");
 				keyEvent.consume();
 				return;
 			} else if (keyCode == KeyEvent.VK_B) {
 				sendCommand("bank");
+				keyEvent.consume();
+				return;
+			} else if (keyCode == KeyEvent.VK_T) {
+				sendCommand("tracks");
 				keyEvent.consume();
 				return;
 			}

@@ -1,12 +1,13 @@
-package org.necrotic.client;
+package org.necrotic.client.graphics;
 
-import java.util.*;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public enum AnimatedPlayerName {
+public enum AnimatedRankName {
     OWNER(8, new int[] {
             0x050000, 0x0a0000, 0x0f0000, 0x140000, 0x1a0000, 0x1f0000, 0x240000, 0x290000, 0x2e0000, 0x330000, 0x380000, 0x3d0000, 0x420000, 0x470000, 0x4d0000, 0x520000, 0x570000, 0x5c0000,
             0x610000, 0x660000, 0x6b0000, 0x700000, 0x750000, 0x7a0000, 0x800000, 0x850000, 0x8a0000, 0x8f0000, 0x940000, 0x990000, 0x9e0000, 0xa30000, 0xa80000, 0xad0000, 0xb30000, 0xb80000,
@@ -105,7 +106,7 @@ public enum AnimatedPlayerName {
     private int index;
     private int currentColor;
 
-    AnimatedPlayerName(int rank, int[] colors) {
+    AnimatedRankName(int rank, int[] colors) {
         this.rank = rank;
         this.colors = colors;
     }
@@ -120,14 +121,14 @@ public enum AnimatedPlayerName {
 
     public static void animateAll() {
         final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
-        executorService.scheduleAtFixedRate(() -> ANIMATED_PLAYER_NAMES.forEach(AnimatedPlayerName::changeColor), 0, DELAY, TimeUnit.MILLISECONDS);
+        executorService.scheduleAtFixedRate(() -> ANIMATED_PLAYER_NAMES.forEach(AnimatedRankName::changeColor), 0, DELAY, TimeUnit.MILLISECONDS);
     }
 
     public static int getCurrentColorByRank(int rank) {
-        Optional<AnimatedPlayerName> possibleAn = ANIMATED_PLAYER_NAMES.stream().filter(animatedPlayerName -> animatedPlayerName.rank == rank).findAny();
+        Optional<AnimatedRankName> possibleAn = ANIMATED_PLAYER_NAMES.stream().filter(animatedPlayerName -> animatedPlayerName.rank == rank).findAny();
         return possibleAn.map(animatedPlayerName -> animatedPlayerName.currentColor).orElse(0);
     }
 
-    private static final List<AnimatedPlayerName> ANIMATED_PLAYER_NAMES = Arrays.asList(AnimatedPlayerName.values());
+    private static final List<AnimatedRankName> ANIMATED_PLAYER_NAMES = Arrays.asList(AnimatedRankName.values());
 
 }

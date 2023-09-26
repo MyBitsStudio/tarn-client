@@ -4,7 +4,6 @@ import net.runelite.client.RuneLiteProperties;
 import net.runelite.client.ui.ClientUI;
 import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.SwingUtil;
-import org.necrotic.ColorConstants;
 import org.necrotic.Configuration;
 import org.necrotic.RichPresense;
 import org.necrotic.client.Settings.Load;
@@ -231,11 +230,11 @@ public class Client extends GameRenderer {
             case 4:
                 return animatedSprites[6];
             case 5:
-            case 6:
                 return animatedSprites[7];
             case 8:
                 return animatedSprites[10];
             case 7:
+            case 6:
                 return animatedSprites[8];
             case 2:
             case 3:
@@ -259,6 +258,8 @@ public class Client extends GameRenderer {
             case 6:
             case 7:
             case 8:
+            case 9:
+            case 10:
                 return animatedSprites[5];
         }
         return null;
@@ -3488,21 +3489,6 @@ public class Client extends GameRenderer {
                                         if (child.isInventoryInterface && shiftIsDown && shiftDrop) {
                                             for (int l3 = 4; l3 >= 3; l3--) {
                                                 if (itemDef.actions != null && itemDef.actions[l3] != null) {
-                                                    menuActionName[menuActionRow] = itemDef.actions[l3] + " @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
-
-                                                    if (l3 == 3) {
-                                                        menuActionID[menuActionRow] = 493;
-                                                    }
-
-                                                    if (l3 == 4) {
-                                                        menuActionID[menuActionRow] = 847;
-                                                    }
-
-                                                    menuActionCmd1[menuActionRow] = itemDef.id;
-                                                    menuActionCmd2[menuActionRow] = containerSlot;
-                                                    menuActionCmd3[menuActionRow] = child.id;
-                                                    menuActionRow++;
-                                                } else if (l3 == 4) {
                                                     menuActionName[menuActionRow] = "Drop @lre@" + itemDef.name + (myRights >= 6 ? " (" + itemDef.id + ") @or1@(" + itemDef.maleEquip1 + ")" : "");
                                                     menuActionID[menuActionRow] = 847;
                                                     menuActionCmd1[menuActionRow] = itemDef.id;
@@ -3718,7 +3704,6 @@ public class Client extends GameRenderer {
                                                 }
                                                 //if (clientSize == 1) {
                                                 if (controlIsDown && ItemStats.itemstats[itemHover] != null && ItemStats.itemstats[itemHover].type == 1) {
-
                                                     drawInterface(0, x, RSInterface.interfaceCache[94000], y);
                                                 } else {
                                                     drawInterface(0, x, RSInterface.interfaceCache[94020], y);
@@ -11054,12 +11039,6 @@ public class Client extends GameRenderer {
                         player.anInt1531 = effects & 0xff;
                         player.textCycle = 150;
                         int secondary = -1;
-                        /*if (rights == 0 && ironman > 0) {
-                            rights = 11 + ironman;
-                        } else if (rights > 0 && ironman > 0) {
-                            secondary = rights;
-                            rights = 11 + ironman;
-                        }*/
                         if (ironman > 0) {
                             secondary = ironman;
                         }
@@ -18900,6 +18879,7 @@ public class Client extends GameRenderer {
             ItemDefinition.isMembers = isMembers;
             AnimatedPlayerName.animateAll();
             Achievements.load();
+            ItemStats.readDefinitions();
 
             //// drawSmoothLoading(80, "Unpacked config!");
             // ItemDefinition.dumpItemModelsForId(13653);

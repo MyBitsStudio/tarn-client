@@ -1148,6 +1148,22 @@ public class Items {
                 itemDef.scaleX *= 0.50;
                 itemDef.scaleZ *= 0.50;
                 break;
+            case 14490:
+                itemDef.name = "Death Box";
+                itemDef.actions = new String[5];
+                itemDef.actions[0] = "Open";
+                itemDef.modelOffsetX = 2;
+                itemDef.modelOffsetY = 1;
+                itemDef.modelZoom = 850;
+                itemDef.rotationY = 100;
+                itemDef.rotationX = 90;
+                itemDef.modelID = 15180;
+
+                //itemDef.rdc2 = 988331;
+                itemDef.scaleY *= 0.50;
+                itemDef.scaleX *= 0.50;
+                itemDef.scaleZ *= 0.50;
+                break;
             case 23002:
                 itemDef.copyItem(6199);
                 itemDef.name = "Tarn Master Chest";
