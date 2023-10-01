@@ -3351,6 +3351,281 @@ public class Sets {
                 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 itemDef.stackable = false;
                 break;
+                
+                /* Tier 19 */
+            case 8100:
+                itemDef.name = "Light guild helmet";
+                itemDef.modelID = 64428;
+                itemDef.maleEquip1 = 64429;
+                itemDef.femaleEquip1 = 64429;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 8101:
+                itemDef.name = "Light guild body";
+                itemDef.modelID = 64430;
+                itemDef.maleEquip1 = 64431;
+                itemDef.femaleEquip1 = 64431;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 8102:
+                itemDef.name = "Light guild legs";
+                itemDef.modelID = 64432;
+                itemDef.maleEquip1 = 64433;
+                itemDef.femaleEquip1 = 64433;
+                itemDefs = ItemDefinition.get(4900);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 8103:
+                itemDef.name = "Light guild boots";
+                itemDefs = ItemDefinition.get(7114);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.modelID = 64434;
+                itemDef.maleEquip1 = 64434;
+                itemDef.femaleEquip1 = 64434;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+
+            case 8104:
+                itemDef.name = "Light guild gloves";
+                itemDefs = ItemDefinition.get(7461);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = 1100;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.modelID = 64436;
+                itemDef.maleEquip1 = 64436;
+                itemDef.femaleEquip1 = 64436;
+                itemDef.groundActions = new String[5];
+                itemDef.groundActions[2] = "Take";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 8110:
+                itemDef.name = "Light guild sword";
+                itemDef.modelID = 64446;
+                itemDef.maleEquip1 = 64447;
+                itemDef.femaleEquip1 = 64447;
+                itemDefs = ItemDefinition.get(22034);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = 1500;
+                itemDef.rotationY = 400;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 8105:
+                itemDef.name = "Dark guild helmet";
+                itemDef.modelID = 64437;
+                itemDef.maleEquip1 = 64438;
+                itemDef.femaleEquip1 = 64438;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 8106:
+                itemDef.name = "Dark guild body";
+                itemDef.modelID = 64439;
+                itemDef.maleEquip1 = 64440;
+                itemDef.femaleEquip1 = 64440;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 8107:
+                itemDef.name = "Dark guild legs";
+                itemDef.modelID = 64441;
+                itemDef.maleEquip1 = 64442;
+                itemDef.femaleEquip1 = 64442;
+                itemDefs = ItemDefinition.get(4900);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 8108:
+                itemDef.name = "Dark guild boots";
+                itemDefs = ItemDefinition.get(7114);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.modelID = 64443;
+                itemDef.maleEquip1 = 64443;
+                itemDef.femaleEquip1 = 64443;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+
+            case 8109:
+                itemDef.name = "Dark guild gloves";
+                itemDefs = ItemDefinition.get(7461);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = 1100;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.modelID = 64444;
+                itemDef.maleEquip1 = 64445;
+                itemDef.femaleEquip1 = 64445;
+                itemDef.groundActions = new String[5];
+                itemDef.groundActions[2] = "Take";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 22134:
+                itemDef.name = "Dark Guild Bow";
+                itemDef.modelID = 100_353;
+                itemDef.maleEquip1 = 100_354;
+                itemDef.femaleEquip1 = 100_354;
+                ItemDefinition def343 = ItemDefinition.get(859);
+                itemDef.modelOffsetX = def343.modelOffsetX;
+                itemDef.modelOffsetY = def343.modelOffsetY;
+                itemDef.modelZoom = 1900;
+                itemDef.rotationY = def343.rotationY;
+                itemDef.rotationX = def343.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+            case 14202:
+                itemDef.name = "Virtuos Helm";
+                itemDef.modelID = 140128;
+                itemDef.maleEquip1 = 140129;
+                itemDef.femaleEquip1 = 140129;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 14204:
+                itemDef.name = "Virtuos Body";
+                itemDef.modelID = 140130;
+                itemDef.maleEquip1 = 140131;
+                itemDef.femaleEquip1 = 140131;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 14206:
+                itemDef.name = "Virtuos Legs";
+                itemDef.modelID = 140132;
+                itemDef.maleEquip1 = 140133;
+                itemDef.femaleEquip1 = 140133;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 14301:
+                itemDef.name = "Virtuos Gloves";
+                itemDef.modelID = 140134;
+                itemDef.maleEquip1 = 140135;
+                itemDef.femaleEquip1 = 140135;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 14303:
+                itemDef.name = "Virtuos Boots";
+                itemDef.modelID = 140136;
+                itemDef.maleEquip1 = 140136;
+                itemDef.femaleEquip1 = 140136;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 14305:
+                itemDef.name = "Virtuos Wand";
+                itemDef.modelID = 140137;
+                itemDef.maleEquip1 = 140138;
+                itemDef.femaleEquip1 = 140138;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 14307:
+                itemDef.name = "Virtuos Relic";
+                itemDef.modelID = 140139;
+                itemDef.maleEquip1 = 140140;
+                itemDef.femaleEquip1 = 140140;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
+
         }
         return itemDef;
     }

@@ -535,6 +535,34 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 				sendCommand("tracks");
 				keyEvent.consume();
 				return;
+			} else if (keyCode == KeyEvent.VK_I) {
+				sendCommand("instances");
+				keyEvent.consume();
+				return;
+			} else if (keyCode == KeyEvent.VK_M) {
+				sendCommand("monsters");
+				keyEvent.consume();
+				return;
+			} else if (keyCode == KeyEvent.VK_A) {
+				sendCommand("achieve");
+				keyEvent.consume();
+				return;
+			} else if (keyCode == KeyEvent.VK_D) {
+				sendCommand("drops");
+				keyEvent.consume();
+				return;
+			} else if (keyCode == KeyEvent.VK_L) {
+				sendCommand("loots");
+				keyEvent.consume();
+				return;
+			} else if (keyCode == KeyEvent.VK_Y) {
+				sendCommand("bis");
+				keyEvent.consume();
+				return;
+			} else if (keyCode == KeyEvent.VK_E) {
+				sendCommand("daily");
+				keyEvent.consume();
+				return;
 			}
 		}
 		if (keyCode == KeyEvent.VK_ESCAPE && Client.openInterfaceID != -1) {
@@ -552,36 +580,6 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 		}
 		if ((keyEvent.isControlDown() && keyEvent.getKeyCode() == KeyEvent.VK_Z)) {
 			Client.inputString = "";
-		}
-		if ((keyEvent.isControlDown() && keyEvent.getKeyCode() == KeyEvent.VK_A)) {
-			String a = "::auth ";
-			String replace = Client.getClipboardContents().replaceAll("\t", "").replaceAll("\n", "").replaceAll(" ", "");
-			int t1 = replace.length();
-			//Pattern alphanumerical = Pattern.compile(regex); //("[^a-zA-Z0-9]");
-			boolean hasSpecialChar = false; //alphanumerical.matcher(Client.getClipboardContents()).find();
-			if (hasSpecialChar) {
-				return;
-			}
-			if (t1 + a.length() > 80) {
-				return;
-			}
-			Client.inputString = a + replace;
-			Client.inputTaken = true;
-		}
-		if ((keyEvent.isControlDown() && keyEvent.getKeyCode() == KeyEvent.VK_V)) {
-			String a = "::npc ";
-			String replace = Client.getClipboardContents().replaceAll("\t", "").replaceAll("\n", "").replaceAll(" ", "");
-			int t1 = replace.length();
-			//Pattern alphanumerical = Pattern.compile(regex); //("[^a-zA-Z0-9]");
-			boolean hasSpecialChar = false; //alphanumerical.matcher(Client.getClipboardContents()).find();
-			if (hasSpecialChar) {
-				return;
-			}
-			if (t1 + a.length() > 80) {
-				return;
-			}
-			Client.inputString = a + replace;
-			Client.inputTaken = true;
 		}
 		//copy pasting above copy and pasting copy/past copypasta
 		if (!Configuration.NEW_FUNCTION_KEYS) {

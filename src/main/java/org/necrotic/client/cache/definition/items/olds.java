@@ -34,20 +34,12 @@ public class olds {
 //    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 //    itemDef.stackable = false;
 //				break;
-//			case 22134:
-//    itemDef.name = "Demon Bow";
-//    itemDef.modelID = 100_353;
-//    itemDef.maleEquip1 = 100_354;
-//    itemDef.femaleEquip1 = 100_354;
-//    ItemDefinition def343 = ItemDefinition.get(859);
-//    itemDef.modelOffsetX = def343.modelOffsetX;
-//    itemDef.modelOffsetY = def343.modelOffsetY;
-//    itemDef.modelZoom = 1900;
-//    itemDef.rotationY = def343.rotationY;
-//    itemDef.rotationX = def343.rotationX;
+//   case 13128:
+//    itemDef.name = "Dark guild Flail";
 //    itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 //    itemDef.stackable = false;
-//				break;
+//    itemDef.rdc2 = 729987;
+//                break;
 
   //  			case 22114:
 //				itemDef.name = "<shad=1>@bla@Dark Sanguinesti Staff";

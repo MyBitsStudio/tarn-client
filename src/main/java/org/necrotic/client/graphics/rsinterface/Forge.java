@@ -18,68 +18,124 @@ public class Forge extends RSInterface {
     public static final HashMap<Integer, Integer> PRICES = new HashMap<>();
 
     static {
-        PRICES.put(23226, 25);
-        PRICES.put(23227, 35);
-        PRICES.put(23228, 40);
-        PRICES.put(23229, 50);
-        PRICES.put(8100, 100);
-        PRICES.put(8101, 100);
-        PRICES.put(8102, 100);
-        PRICES.put(8103, 100);
-        PRICES.put(8104, 100);
-        PRICES.put(8105, 125);
-        PRICES.put(8106, 125);
-        PRICES.put(8107, 125);
-        PRICES.put(8108, 125);
-        PRICES.put(8109, 125);
-        PRICES.put(8110, 125);
-        PRICES.put(24003, 400);
-        PRICES.put(24004, 400);
-        PRICES.put(24005, 400);
-        PRICES.put(24006, 400);
-        PRICES.put(24007, 400);
-        PRICES.put(24008, 400);
-        PRICES.put(24009, 400);
-        PRICES.put(23127, 600);
-        PRICES.put(23128, 600);
-        PRICES.put(23129, 600);
-        PRICES.put(23130, 600);
-        PRICES.put(23131, 600);
-        PRICES.put(22242, 800);
-        PRICES.put(22244, 800);
-        PRICES.put(22246, 800);
-        PRICES.put(22250, 800);
-        PRICES.put(22248, 800);
-        PRICES.put(22252, 800);
-        PRICES.put(24010, 400);
-        PRICES.put(22254, 600);
-        PRICES.put(4446, 20);
-        PRICES.put(19886, 25);
-        PRICES.put(18888, 80);
-        PRICES.put(18823, 60);
-        PRICES.put(17391, 40);
-        PRICES.put(1857, 30);
-        PRICES.put(21814, 3);
-        PRICES.put(21815, 1);
-        PRICES.put(9084, 15);
-        PRICES.put(741, 10);
-        PRICES.put(23219, 30);
-        PRICES.put(8788, 3);
-        PRICES.put(21816, 10);
-        PRICES.put(23178, 40);
-        PRICES.put(22110, 60);
-        PRICES.put(13650, 2);
-        PRICES.put(742, 15);
-        PRICES.put(4442, 100);
-        PRICES.put(4440, 250);
-        PRICES.put(743, 120);
-        PRICES.put(13019, 500);
-        PRICES.put(3686, 5000);
-        PRICES.put(15003, 50);
-        PRICES.put(15002, 250);
-        PRICES.put(15004, 600);
-        PRICES.put(20491, 1100);
-        PRICES.put(20490, 1900);
+        //armors
+        PRICES.put(17614, 75);
+        PRICES.put(17616, 75);
+        PRICES.put(17618, 75);
+        PRICES.put(17606, 75);
+        PRICES.put(8411, 100);
+        PRICES.put(8410, 100);
+        PRICES.put(8412, 100);
+
+        PRICES.put(5068, 100);
+        PRICES.put(5069, 100);
+        PRICES.put(5070, 100);
+        PRICES.put(5071, 100);
+        PRICES.put(5072, 100);
+        PRICES.put(17718, 200);
+
+        PRICES.put(11328, 100);
+        PRICES.put(11329, 100);
+        PRICES.put(13330, 100);
+        PRICES.put(13332, 100);
+        PRICES.put(13333, 200);
+
+        PRICES.put(8828, 100);
+        PRICES.put(8829, 100);
+        PRICES.put(8833, 100);
+        PRICES.put(8830, 100);
+        PRICES.put(8831, 100);
+        PRICES.put(22173, 200);
+
+        PRICES.put(22177, 350);
+        PRICES.put(23066, 350);
+        PRICES.put(23067, 350);
+        PRICES.put(23064, 350);
+        PRICES.put(23065, 350);
+        PRICES.put(22202, 200);
+        PRICES.put(22203, 200);
+        PRICES.put(23061, 200);
+        PRICES.put(23062, 200);
+        PRICES.put(23063, 200);
+        PRICES.put(23068, 200);
+
+        PRICES.put(22179, 400);
+        PRICES.put(22180, 400);
+        PRICES.put(22181, 400);
+        PRICES.put(22182, 400);
+        PRICES.put(22183, 400);
+        PRICES.put(22184, 600);
+
+        PRICES.put(22161, 400);
+        PRICES.put(22162, 400);
+        PRICES.put(22163, 400);
+        PRICES.put(22164, 400);
+        PRICES.put(22165, 400);
+        PRICES.put(22166, 400);
+        PRICES.put(22167, 600);
+
+        PRICES.put(21607, 400);
+        PRICES.put(21608, 400);
+        PRICES.put(21609, 400);
+        PRICES.put(21610, 500);
+        PRICES.put(21611, 400);
+        PRICES.put(21612, 400);
+        PRICES.put(22176, 600);
+
+        PRICES.put(22134, 1250);
+        PRICES.put(8109, 1000);
+        PRICES.put(8108, 1000);
+        PRICES.put(8107, 1000);
+        PRICES.put(8106, 1000);
+        PRICES.put(8105, 1000);
+        PRICES.put(8110, 1250);
+        PRICES.put(8104, 1000);
+        PRICES.put(8103, 1000);
+        PRICES.put(8102, 1000);
+        PRICES.put(8101, 1000);
+        PRICES.put(8100, 1000);
+        PRICES.put(14202, 1000);
+        PRICES.put(14204, 1000);
+        PRICES.put(14206, 1000);
+        PRICES.put(14301, 1000);
+        PRICES.put(14303, 1000);
+        PRICES.put(14305, 1000);
+        PRICES.put(14307, 1250);
+
+        //access
+        PRICES.put(14880, 400);
+        PRICES.put(15585, 1500);
+        PRICES.put(15586, 1500);
+        PRICES.put(15584, 1500);
+
+        PRICES.put(15449, 1500);
+        PRICES.put(15448, 1500);
+        PRICES.put(23087, 1500);
+
+        PRICES.put(18823, 2100);
+        PRICES.put(19888, 2100);
+        PRICES.put(15589, 2100);
+        PRICES.put(15588, 2100);
+        PRICES.put(15587, 2100);
+        PRICES.put(23088, 4200);
+
+        //others
+
+        PRICES.put(21815, 5);
+        PRICES.put(21814, 5);
+        PRICES.put(23149, 25);
+
+        PRICES.put(21816, 25);
+        PRICES.put(23148, 50);
+
+        PRICES.put(19641, 15000);
+        PRICES.put(9076, 8000);
+        PRICES.put(9040, 28000);
+        PRICES.put(13748, 28000);
+        PRICES.put(13746, 28000);
+        PRICES.put(13750, 28000);
+        PRICES.put(13752, 28000);
+        PRICES.put(23147, 100);
     }
 
     public static void build() {

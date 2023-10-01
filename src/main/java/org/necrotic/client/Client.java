@@ -18785,6 +18785,7 @@ public class Client extends GameRenderer {
             animatedSprites[8] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/cm.gif");
             animatedSprites[9] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/support.gif");
             animatedSprites[10] = new AnimatedSprite(Signlink.getCacheDirectory() + "gifs/sales.gif");
+
             Forge.boxSprite = spritesMap.get(3363);
             Forge.lockSprite = spritesMap.get(3338);
             /*

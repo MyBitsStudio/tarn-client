@@ -425,7 +425,6 @@ public class Pets {
                 itemDef.modelID = 139809;
                 itemDef.modelZoom = 4000;
                 itemDef.modelOffsetX = 2;
-                //itemDef.modelOffsetX = itemdefedit1.modelOffsetX;
                 itemDef.modelOffsetY = 80;
                 itemDef.rotationY = 204;
                 itemDef.rotationX = 20;
@@ -436,7 +435,6 @@ public class Pets {
                 itemDef.modelID = 100240;
                 itemDef.modelZoom = 3500;
                 itemDef.modelOffsetX = 2;
-                //itemDef.modelOffsetX = itemdefedit1.modelOffsetX;
                 itemDef.modelOffsetY = 80;
                 itemDef.rotationY = 204;
                 itemDef.rotationX = 20;
@@ -447,7 +445,6 @@ public class Pets {
                 itemDef.modelID = 139777;
                 itemDef.modelZoom = 3500;
                 itemDef.modelOffsetX = 2;
-                //itemDef.modelOffsetX = itemdefedit1.modelOffsetX;
                 itemDef.modelOffsetY = 80;
                 itemDef.rotationY = 204;
                 itemDef.rotationX = 20;
