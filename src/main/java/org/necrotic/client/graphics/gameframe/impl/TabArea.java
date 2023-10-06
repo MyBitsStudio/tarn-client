@@ -90,7 +90,8 @@ public class TabArea extends GameFrame {
 	 * @param client
 	 * @param screenMode
 	 */
-	private static final int[][] gameFrameData = new int[][]{{528, 11, 8}, // attack
+	private static final int[][] gameFrameData = new int[][]{
+			{528, 11, 8}, // attack
 			// tab
 			{529, 11, 8}, // skills tab
 			{530, 10, 8}, // quest tab
@@ -150,13 +151,12 @@ public class TabArea extends GameFrame {
 						}
 
 						int spriteIndex = gameFrameData[i][0];
-						if (spriteIndex != -1) {
-
-							if (i == 2 && spriteIndex == 530) {
-								if (Client.getClient().doingDungeoneering) {
-									spriteIndex = 1031;
-								}
+						if (i == 13) {
+							if (Client.getClient().doingDungeoneering) {
+								spriteIndex = 2875;
 							}
+							Client.spritesMap.get(spriteIndex).drawSprite(offsetX, offsetY);
+						} else if (spriteIndex != -1) {
 
 							Client.spritesMap.get(spriteIndex).drawSprite(offsetX, offsetY);
 						}
@@ -417,9 +417,9 @@ public class TabArea extends GameFrame {
 				spriteIndex = 1197;
 				break;
 		}
-		if (tab == 2 && spriteIndex == 530) {
+		if (tab == 13) {
 			if (Client.getClient().doingDungeoneering) {
-				spriteIndex = 1031;
+				spriteIndex = 2875;
 			}
 		}
 		return Client.spritesMap.get(spriteIndex);

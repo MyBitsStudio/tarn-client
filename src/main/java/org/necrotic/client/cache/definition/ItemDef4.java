@@ -3229,18 +3229,6 @@ public class ItemDef4 {
 				itemDef.modelZoom = 2000;
 				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 				break;
-			case 22142:
-				itemDef.name = "Lili Aura";
-				itemDef.modelID = 100323;
-				itemDef.maleEquip1 = -1;
-				itemDef.femaleEquip1 = -1;
-				ItemDefinition def2123123 = ItemDefinition.get(18509);
-				itemDef.modelZoom = def2123123.modelZoom;
-				itemDef.rotationY = def2123123.rotationY;
-				itemDef.rotationX = def2123123.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.stackable = false;
-				break;
 			case 22122:
 				itemDef.name = "Rogue Boots";
 				itemDef.modelID = 100408;

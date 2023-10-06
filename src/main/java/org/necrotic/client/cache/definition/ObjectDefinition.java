@@ -730,13 +730,9 @@ public final class ObjectDefinition {
 		}
 		if (definition.type == 26791) {
 			definition.actions = new String[5];
-			definition.name = "Recipe Machine";
-			definition.actions[0] = "Concoct";
-			//definition.modelSizeX = 70;
-			//definition.modelSizeH = 100;
-			//definition.modelSizeY = 70;
+			definition.name = "Crafting Machine";
+			definition.actions[0] = "Craft";
 			definition.interactive = true;
-			//definition.objectModelIDs = new int[]{65315};//same
 		}
 		if (definition.type == 1144) {
 			definition.actions = new String[5];

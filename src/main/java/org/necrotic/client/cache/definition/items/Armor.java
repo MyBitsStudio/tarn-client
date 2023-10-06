@@ -984,7 +984,7 @@ public class Armor {
                 itemDef.actions = new String[]{null, "Wear", null, null, "Drop"};
                 break;
 
-            case 23213:
+            case 566:
                 itemDef.copyItem(20661);
                 itemDef.name = "Golden Statue";
                 itemDef.actions = new String[]{null, "Equip", null, null, null};
@@ -1033,6 +1033,19 @@ public class Armor {
                 itemDef.modelID = 100128;
                 break;
 
+            case 22142:
+                itemDef.name = "Master Aura";
+                itemDef.modelID = 100323;
+                itemDef.maleEquip1 = -1;
+                itemDef.femaleEquip1 = -1;
+                ItemDefinition def2123123 = ItemDefinition.get(18509);
+                itemDef.modelZoom = def2123123.modelZoom;
+                itemDef.rotationY = def2123123.rotationY;
+                itemDef.rotationX = def2123123.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
             case 15448:
                 itemDef.name = "Defense Aura";
                 break;
@@ -1054,16 +1067,42 @@ public class Armor {
                 //itemDef.rdc = 32521;
                 break;
 
-            case 6640:
-                itemDef.name = "Owner's Gemstone";
-                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-                break;
+
 
             case 14882:
                 itemDef.name = "Owner's Enhancement";
                 itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
                 break;
 
+                /* Gemstones */
+            case 6640:
+                itemDef.name = "Gemstone";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+            case 6641:
+                itemDef.name = "Gemstone + 1";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+            case 6642:
+                itemDef.name = "Gemstone + 2";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+            case 6644:
+                itemDef.name = "Gemstone + 3";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+            case 6643:
+                itemDef.name = "Gemstone + 4";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+            case 6645:
+                itemDef.name = "Gemstone + 5";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
+            case 6646:
+                itemDef.name = "Master Gemstone";
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                break;
 
             /* Ironman */
             case 13700:

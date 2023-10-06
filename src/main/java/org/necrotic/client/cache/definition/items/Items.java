@@ -182,6 +182,54 @@ public class Items {
             case 604:
                 itemDef.name = "Supreme Shard";
                 break;
+            case 6038:
+                itemDef.name = "Magic Flux";
+                itemDef.stackable = true;
+                break;
+            case 15684:
+                itemDef.name = "Red Essence";
+                itemDef.stackable = true;
+                break;
+            case 15686:
+                itemDef.name = "Blue Essence";
+                itemDef.stackable = true;
+                break;
+            case 15685:
+                itemDef.name = "Yellow Essence";
+                itemDef.stackable = true;
+                break;
+            case 15690:
+                itemDef.name = "Red Essence Bowl";
+                itemDef.stackable = true;
+                break;
+            case 15689:
+                itemDef.name = "Blue Essence Bowl";
+                itemDef.stackable = true;
+                break;
+            case 15691:
+                itemDef.name = "Yellow Essence Bowl";
+                itemDef.stackable = true;
+                break;
+            case 15693:
+                itemDef.name = "Green Essence Bowl";
+                itemDef.stackable = true;
+                break;
+            case 15694:
+                itemDef.name = "Purple Essence Bowl";
+                itemDef.stackable = true;
+                break;
+            case 15698:
+                itemDef.name = "Aqua Essence Bowl";
+                itemDef.stackable = true;
+                break;
+            case 15700:
+                itemDef.name = "Magenta Essence Bowl";
+                itemDef.stackable = true;
+                break;
+            case 15696:
+                itemDef.name = "Amber Essence Bowl";
+                itemDef.stackable = true;
+                break;
             case 19001:
                 itemDef.copyItem(15262);
                 itemDef.name = "Pet fragment pack";
@@ -596,6 +644,26 @@ public class Items {
             case 25001:
                 itemDef.copyItem(23150);
                 itemDef.name = "FireWall";
+                break;
+            case 25002:
+                itemDef.copyItem(23150);
+                itemDef.name = "Life Bringer";
+                break;
+            case 25003:
+                itemDef.copyItem(23150);
+                itemDef.name = "Life Stealer";
+                break;
+            case 25004:
+                itemDef.copyItem(23150);
+                itemDef.name = "Bounce Back";
+                break;
+            case 25005:
+                itemDef.copyItem(23150);
+                itemDef.name = "IceWall";
+                break;
+            case 25006:
+                itemDef.copyItem(23150);
+                itemDef.name = "Rage All";
                 break;
 
             case 15250:
@@ -1447,18 +1515,61 @@ public class Items {
                 itemDef.name = "Imperial Box";
                 itemDef.rdc2 = 15000;
                 break;
+                
+                /** Skilling */
+
+            case 19812:
+                itemDef.name = "Lava pickaxe";
+                itemDef.modelID = 65224;
+                itemDef.maleEquip1 = 65225;
+                itemDef.femaleEquip1 = 65225;
+                itemDefs = ItemDefinition.get(4882);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.rotationZ = itemDefs.rotationZ;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.editedModelColor = new int[1]; // if only 1 texture is modified this has to be 1, if 2 then 2 etc
+                itemDef.newModelColor = new int[1]; // same here
+                itemDef.newModelColor[0] = 60; // the texture that it currently has
+                itemDef.editedModelColor[0] = 40; // the new texture u want it to have
+                itemDef.stackable = false;
+                break;
+
+            case 16142:
+                itemDef.name = "Mystic pickaxe";
+                itemDef.rdc2 = 7248247;
+                break;
+
+            case 21405:
+                itemDef.name = "Basic pickaxe";
+                itemDef.rdc2 = 7248247;
+                break;
+
+            case 15259:
+                itemDef.name = "Iced pickaxe";
+                itemDef.rdc2 = 7248247;
+                break;
+
+            case 15261:
+                itemDef.name = "Iced pickaxe (U)";
+                itemDef.rdc2 = 7248231;
+                break;
+
+            case 23106:
+                itemDef.copyItem(23103);
+                itemDef.name = "Treasure Key";
+                itemDef.actions = new String[]{null, null, null, null, "Drop"};
+                itemDef.modelID = 100234;
+                break;
 
             /* To Use */
             case 13591:
                 itemDef.name = "@yel@Raids [1] Key";
                 itemDef.stackable = true;
                 itemDef.actions = new String[]{null, null, null, null, null};
-                break;
-            case 23106:
-                itemDef.copyItem(23103);
-                itemDef.name = "Treasure Key 4";
-                itemDef.actions = new String[]{null, null, null, null, "Drop"};
-                itemDef.modelID = 100234;
                 break;
             case 23086:
                 itemDef.copyItem(1);

@@ -3962,25 +3962,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.editedModelColor[1] = 54;// the u want it to have
 				itemDef.stackable = false;
 				break;
-			case 19812:
-				itemDef.name = "Lava Speed pickaxe";
-				itemDef.modelID = 65224;
-				itemDef.maleEquip1 = 65225;
-				itemDef.femaleEquip1 = 65225;
-				itemDef21 = ItemDefinition.get(4882);
-				itemDef.modelOffsetX = itemDef21.modelOffsetX;
-				itemDef.rotationZ = itemDef21.rotationZ;
-				itemDef.modelOffsetY = itemDef21.modelOffsetY;
-				itemDef.modelZoom = itemDef21.modelZoom;
-				itemDef.rotationY = itemDef21.rotationY;
-				itemDef.rotationX = itemDef21.rotationX;
-				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-				itemDef.editedModelColor = new int[1]; // if only 1 texture is modified this has to be 1, if 2 then 2 etc
-				itemDef.newModelColor = new int[1]; // same here
-				itemDef.newModelColor[0] = 60; // the texture that it currently has
-				itemDef.editedModelColor[0] = 40; // the new texture u want it to have
-				itemDef.stackable = false;
-				break;
+
 //			case 12657:
 //				itemDef.name = "Penguin pebbles";
 //				itemDef.rdc2 = 995555;
@@ -4878,10 +4860,7 @@ itemDef.actions[2] = "Dissolve";
 				itemDef.name = "KanX platelegs";
 				itemDef.rdc2 = 7248247;
 				break;
-			case 16142:
-				itemDef.name = "KanX pickaxe";
-				itemDef.rdc2 = 7248247;
-				break;
+
 			case 16080:
 				itemDef.name = "KanX chainbody";
 				itemDef.rdc2 = 7248247;

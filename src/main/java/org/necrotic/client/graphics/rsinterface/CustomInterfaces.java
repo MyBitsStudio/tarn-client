@@ -3679,37 +3679,28 @@ public class CustomInterfaces extends RSInterface {
 
 	private void formParty() {
 		RSInterface tab = addTabInterface(27224);
-		addHDSprite(27225, 1013, 1013);
-		/*addHoverButton(27326, 141, 141, 16, 16, "Exit", 250, 27227, 5);
-		addHoveredButton(27227, 142, 142, 16, 16, 27228);*/
+		addHDSprite(27225, 3506, 3506);
 
 		addHoverButton(27229, 1014, 1014, 180, 32, "Form Party", 250, 27230, 5);
 		addHoveredButton(27230, 1015, 1015, 180, 32, 27231);
 
-		/*addHoverButton(27132, 146, 146, 52, 25, "Reset", 250, 27133, 5);
-		addHoveredButton(27133, 147, 147, 52, 25, 27134);*/
-
-		addText(27235, "", tda, 1, 0xffffff, true, true);
+		addText(27235, "Raid Party", tda, 1, 0xffffff, true, true);
 		addText(27236, "", tda, 1, 0xffffff, true, true);
 		addText(27237, "", tda, 1, 0xffffff, true, true);
 		addText(27238, "", tda, 1, 0xffffff, true, true);
 		addText(27239, "", tda, 1, 0xffffff, true, true);
-		addText(27240, "", tda, 2, 0xffffff, false, true);
-		addText(27241, "", tda, 2, 0xffffff, true, true);
-		addText(27242, "-", tda, 1, 0xffffff, false, true);
-		addText(27243, "-", tda, 1, 0xffffff, false, true);
 
 
-		addText(27244, "Prestige", tda, 2, 0xc69b01, true, true);
+		addHDSprite(27244, 2652, 2652);
+		addHDSprite(27243, 1991, 1991);
 
-
-		int[][] data = {{27225, 0, 0},/* { 27326, 171, 1 }, { 27227, 171, 1 },*/
-				{27229, 5, 111}, {27230, 5, 111}, /*{ 27132, 132, 230 },
-				{ 27133, 132, 230 }, */{27235, 91, 29}, {27236, 91, 44},
+		int[][] data = {{27225, 3, 148},/* { 27326, 171, 1 }, { 27227, 171, 1 },*/
+				{27229, 7, 115}, {27230, 7, 115}, /*{ 27132, 132, 230 },
+				{ 27133, 132, 230 }, */{27235, 91, 3}, {27236, 91, 44},
 				{27237, 91, 59}, {27238, 91, 75}, {27239, 91, 90},
-				{27240, 99, 156}, {27241, 103, 183}, {27242, 112, 229},
-				{27243, 112, 245}, {27244, 35, 183}};
-		tab.totalChildren(13); // 14, 16
+				/*{27240, 99, 156}, {27241, 103, 183}, {27242, 112, 229},*/
+				{27243, 45, 239}, {27244, 7, 24}};
+		tab.totalChildren(10); // 14, 16
 		for (int i = 0; i < data.length; i++) {
 			tab.child(i, data[i][0], data[i][1], data[i][2]);
 		}
@@ -4713,7 +4704,7 @@ public class CustomInterfaces extends RSInterface {
 
 		interfaceId += 2;
 		children++;
-		RSInterface.addText(interfaceId, "Recipe Interface", tda, 2, 0xff9933, true, true);
+		RSInterface.addText(interfaceId, "Crafting", tda, 2, 0xff9933, true, true);
 		RSInterface.setBounds(interfaceId, x + 196, y + 9, children, Interface);
 
 		interfaceId++;
@@ -4728,7 +4719,7 @@ public class CustomInterfaces extends RSInterface {
 
 		interfaceId++;
 		children++;
-		RSInterface.addHoverSpriteLoaderButton(interfaceId, 1649, 83, 20, "Upgrade", -1, interfaceId + 1, 1);
+		RSInterface.addHoverSpriteLoaderButton(interfaceId, 1649, 83, 20, "Craft", -1, interfaceId + 1, 1);
 		RSInterface.setBounds(interfaceId, x + 273, y + 208, children, Interface);
 
 		interfaceId++;
@@ -4753,7 +4744,7 @@ public class CustomInterfaces extends RSInterface {
 
 		interfaceId++;
 		children++;
-		RSInterface.addHoverSpriteLoaderButton(interfaceId, 1650, 62, 20, "View Potions", -1, interfaceId + 1, 1);
+		RSInterface.addHoverSpriteLoaderButton(interfaceId, 1650, 62, 20, "View Materials", -1, interfaceId + 1, 1);
 		RSInterface.setBounds(interfaceId, x + 9, y + 40, children, Interface);
 
 		interfaceId++;
@@ -4763,7 +4754,7 @@ public class CustomInterfaces extends RSInterface {
 
 		interfaceId += 2;
 		children++;
-		RSInterface.addHoverSpriteLoaderButton(interfaceId, 1650, 62, 20, "View Ingredients", -1, interfaceId + 1, 1);
+		RSInterface.addHoverSpriteLoaderButton(interfaceId, 1650, 62, 20, "View Equip", -1, interfaceId + 1, 1);
 		RSInterface.setBounds(interfaceId, x + 73, y + 40, children, Interface);
 
 		interfaceId++;
@@ -4773,7 +4764,7 @@ public class CustomInterfaces extends RSInterface {
 
 		interfaceId += 2;
 		children++;
-		RSInterface.addHoverSpriteLoaderButton(interfaceId, 1650, 62, 20, "View Misc", -1, interfaceId + 1, 1);
+		RSInterface.addHoverSpriteLoaderButton(interfaceId, 1650, 62, 20, "View Other", -1, interfaceId + 1, 1);
 		RSInterface.setBounds(interfaceId, x + 136, y + 40, children, Interface);
 
 		interfaceId++;
@@ -4783,17 +4774,17 @@ public class CustomInterfaces extends RSInterface {
 
 		interfaceId += 2;
 		children++;
-		RSInterface.addText(interfaceId, "Potions", tda, 0, 0xff9933, true, true);
+		RSInterface.addText(interfaceId, "Materials", tda, 0, 0xff9933, true, true);
 		RSInterface.setBounds(interfaceId, x + 40, y + 44, children, Interface);
 
 		interfaceId++;
 		children++;
-		RSInterface.addText(interfaceId, "Component", tda, 0, 0xff9933, true, true);
+		RSInterface.addText(interfaceId, "Equip", tda, 0, 0xff9933, true, true);
 		RSInterface.setBounds(interfaceId, x + 103, y + 44, children, Interface);
 
 		interfaceId++;
 		children++;
-		RSInterface.addText(interfaceId, "Misc", tda, 0, 0xff9933, true, true);
+		RSInterface.addText(interfaceId, "Other", tda, 0, 0xff9933, true, true);
 		RSInterface.setBounds(interfaceId, x + 167, y + 44, children, Interface);
 
 		interfaceId++;
