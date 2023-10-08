@@ -990,6 +990,12 @@ public class Armor {
                 itemDef.actions = new String[]{null, "Equip", null, null, null};
                 break;
 
+            case 20661:
+            case 14876:
+            case 21570:
+                itemDef.actions = new String[]{null, "Equip", null, null, null};
+                break;
+
                 /* Auras */
             case 12630:
                 itemDef.name = "VIP Aura";

@@ -69,6 +69,10 @@ public final class MobDefinition {
 				definition.name = "Loyalty Manager";
 				definition.actions = new String[]{"@gre@Open", null, null, null, null};
 				break;
+			case 2153:
+				definition.name = "Perk Shop";
+				definition.actions = new String[]{"@gre@Open", null, null, null, null};
+				break;
 			case 550:
 				definition.name = "Obelisk";
 				definition.npcModels = new int[] {31666};
@@ -2120,6 +2124,14 @@ public final class MobDefinition {
 				definition.walkAnimation = demon12345678.walkAnimation;
 				definition.actions = new String[]{null, "Attack", null, null, null};
 				definition.npcSizeInSquares = 1;
+				break;
+
+			case 9713:
+				definition.name = "@red@Thok";
+				definition.actions = new String[]{null, "Attack", null, null, null};
+				definition.combatLevel = 999;
+				definition.npcSizeInSquares = 1;
+				definition.drawYellowDotOnMap = true;
 				break;
 
 			case 3020:

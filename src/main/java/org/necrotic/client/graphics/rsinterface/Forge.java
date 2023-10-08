@@ -34,8 +34,8 @@ public class Forge extends RSInterface {
         PRICES.put(5072, 100);
         PRICES.put(17718, 200);
 
-        PRICES.put(11328, 100);
-        PRICES.put(11329, 100);
+        PRICES.put(13328, 100);
+        PRICES.put(13329, 100);
         PRICES.put(13330, 100);
         PRICES.put(13332, 100);
         PRICES.put(13333, 200);

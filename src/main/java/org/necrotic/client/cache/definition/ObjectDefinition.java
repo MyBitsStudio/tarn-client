@@ -209,10 +209,26 @@ public final class ObjectDefinition {
 			definition.actions = new String[]{"Mine", null, null, null, null};
 		}
 
+		//new ones below
 
+		if (definition.type == 35470 || definition.type == 35471) {
+			definition.name = "Slayer Chest";
+		}
+		if (definition.type == 20040) {
+			definition.name = "Smithing Center";
+
+			definition.actions = new String[5];
+			definition.actions[0] = "Use";
+			definition.actions[1] = null;
+		}
 		if (definition.type == 2469) {
 			definition.actions = new String[]{"Advance", "Back", null, null, null};
 		}
+
+
+
+		//old ones below
+
 
 		if (definition.type == 22973) {
 			definition.actions = new String[]{"Restore", null, null, null, null};
@@ -398,13 +414,6 @@ public final class ObjectDefinition {
 			definition.modelSizeX = 170;
 			definition.modelSizeH = 140;
 			definition.modelSizeY = 170;
-		}
-		if (definition.type == 20040) {
-			definition.name = "Upgade Machine";
-
-			definition.actions = new String[5];
-			definition.actions[0] = "Use";
-			definition.actions[1] = null;
 		}
 		if (definition.type == 25808) {
 			definition.name = "Bank Booth";
