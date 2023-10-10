@@ -61,6 +61,52 @@ public final class MobDefinition {
 		}
 
 		switch (id) {
+			case 9906:
+				definition.npcModels = new int[]{139_785};
+				MobDefinition b171223 = get(202);
+				definition.name = "@whi@Godly Veigar";
+				definition.combatLevel = 1974;
+				definition.scaleXZ = 200;
+				definition.scaleY = 200;
+				definition.npcSizeInSquares = 1;
+				definition.actions = new String[]{null, "Attack", null, null, null};
+				definition.description = "Holy fu** ....".getBytes();
+				definition.drawYellowDotOnMap = true;
+				//definition.npcModels = b17122.npcModels.clone();
+				definition.standAnimation = b171223.standAnimation;
+				definition.walkAnimation = b171223.walkAnimation;
+				definition.degreesToTurn = 32;
+				//definition.rdc2 = 7454;
+				break;
+			case 199:
+				definition.name = "Headless Hunter";
+				definition.description = "What happened to his head....".getBytes();
+				definition.combatLevel = 440;
+				definition.actions = new String[]{null, "Attack", null, null, null};
+				definition.npcModels = new int[7];
+				definition.npcModels[0] = 62739; //pern mask
+				definition.npcModels[1] = 62744; //pern body
+				definition.npcModels[2] = 62741; //pern legs
+				definition.npcModels[3] = 65300; //max
+				definition.npcModels[4] = 13319; //bgloves
+				definition.npcModels[5] = 53309; //glaivens
+				definition.npcModels[6] = 62750; //bow
+				definition.standAnimation = 808;
+				definition.walkAnimation = 819;
+				definition.rdc2 = 25252;
+				break;
+			case 3306:
+				definition.name = "Halloween Event Manager";
+				MobDefinition drv1 = MobDefinition.get(2292);
+				definition.description = "Manages the event.".getBytes();
+				definition.npcModels = new int[]{64065};
+				definition.combatLevel = drv1.combatLevel;
+				definition.standAnimation = drv1.standAnimation;
+				definition.walkAnimation = drv1.walkAnimation;
+				definition.scaleXZ = drv1.scaleXZ;
+				definition.scaleY = drv1.scaleY;
+				definition.actions = new String[]{"@red@Teleport", null, null, null, null};
+				break;
 			case 3321:
 				definition.name = "Fall Event Manager";
 				definition.actions = new String[]{"@gre@Open", null, null, null, null};
@@ -2673,23 +2719,6 @@ public final class MobDefinition {
 				definition.degreesToTurn = 32;
 				//definition.rdc2 = 7454;
 				break;
-			case 9906:
-				definition.npcModels = new int[]{139_785};
-				MobDefinition b171223 = get(202);
-				definition.name = "Final Boss Veigar";
-				definition.combatLevel = 1974;
-				definition.scaleXZ = 200;
-				definition.scaleY = 200;
-				definition.npcSizeInSquares = 1;
-				definition.actions = new String[]{null, "Attack", null, null, null};
-				definition.description = b171223.description;
-				definition.drawYellowDotOnMap = true;
-				//definition.npcModels = b17122.npcModels.clone();
-				definition.standAnimation = b171223.standAnimation;
-				definition.walkAnimation = b171223.walkAnimation;
-				definition.degreesToTurn = 32;
-				//definition.rdc2 = 7454;
-				break;
 			case 9907:
 				definition.npcModels = new int[]{139_769};
 				MobDefinition b171224 = get(202);
@@ -3148,23 +3177,7 @@ public final class MobDefinition {
 				definition.walkAnimation = 819;
 				break;
 
-			case 199:
-				definition.name = "Sagittariis";
-				definition.description = "Still dedicated to Twinky".getBytes();
-				definition.combatLevel = 440;
-				definition.actions = new String[]{null, "Attack", null, null, null};
-				definition.npcModels = new int[7];
-				definition.npcModels[0] = 62739; //pern mask
-				definition.npcModels[1] = 62744; //pern body
-				definition.npcModels[2] = 62741; //pern legs
-				definition.npcModels[3] = 65300; //max
-				definition.npcModels[4] = 13319; //bgloves
-				definition.npcModels[5] = 53309; //glaivens
-				definition.npcModels[6] = 62750; //bow
-				definition.standAnimation = 808;
-				definition.walkAnimation = 819;
-				definition.rdc2 = 25252;
-				break;
+
 
 			case 198:
 				definition.name = "Battle Brawl Master(Npc Tiers)";
@@ -4294,18 +4307,7 @@ public final class MobDefinition {
 				definition.rdc2 = 34734;
 				break;
 
-			case 3306:
-				definition.name = "Event Organizer";
-				MobDefinition drv1 = MobDefinition.get(2292);
-				definition.description = "GWD.".getBytes();
-				definition.npcModels = new int[]{64065};
-				definition.combatLevel = drv1.combatLevel;
-				definition.standAnimation = drv1.standAnimation;
-				definition.walkAnimation = drv1.walkAnimation;
-				definition.scaleXZ = drv1.scaleXZ;
-				definition.scaleY = drv1.scaleY;
-				definition.actions = new String[]{null, null, "Event Points Shop", null, null};
-				break;
+
 
 			case 130:
 				definition.name = "Locked Santa";

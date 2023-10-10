@@ -887,9 +887,9 @@ public class Armor {
                 break;
 
             /* Necks */
-//            case 19886:
-//                itemDef.name = "Collectors Necklace I";
-//                break;
+            case 19886:
+                itemDef.name = "Ultimate Ironman Necklace";
+                break;
             case 23087:
                 itemDef.copyItem(6585);
                 itemDef.name = "Accuracy necklace";

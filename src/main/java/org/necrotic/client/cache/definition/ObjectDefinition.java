@@ -214,6 +214,13 @@ public final class ObjectDefinition {
 		if (definition.type == 35470 || definition.type == 35471) {
 			definition.name = "Slayer Chest";
 		}
+		if (definition.type == 18804 || definition.type == 18805) {
+			definition.name = "Vote Chest";
+		}
+		if (definition.type == 52296 || definition.type == 52297) {
+			definition.name = "PvM Chest";
+			definition.actions = new String[]{"Open", null, null, null, null};
+		}
 		if (definition.type == 20040) {
 			definition.name = "Smithing Center";
 
