@@ -221,6 +221,10 @@ public final class ObjectDefinition {
 			definition.name = "PvM Chest";
 			definition.actions = new String[]{"Open", null, null, null, null};
 		}
+		if (definition.type == 55350) {
+			definition.name = "HNS Totem";
+			definition.actions = new String[]{"Capture", null, null, null, null};
+		}
 		if (definition.type == 20040) {
 			definition.name = "Smithing Center";
 

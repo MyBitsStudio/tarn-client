@@ -379,37 +379,13 @@ public class ItemDef2 {
 //				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 //				itemDef.stackable = false;
 //				break;
-//			case 1959:
-//				itemDef.name = "Halloween Token";
-//				itemDef.stackable = true;
-//				itemDef.actions = new String[]{null, null, null, null, "Drop"};
-//				break;
+
 //			case 18189:
 //				itemDef.name = "Baby web spiders";
 //				itemDef.stackable = true;
 //				itemDef.actions = new String[]{null, null, null, null, "Drop"};
 //				break;
-//			case 20422:
-//				itemDef.name = "Cracker Urn";
-//				itemDef.stackable = true;
-//				itemDef.actions = new String[]{null, null, null, null, "Drop"};
-//				break;
-//			case 4568:
-//				itemDef.name = "Basket of undead (@bla@Discontinued@or1@)";
-//				//	itemDef.stackable = true;
-//				itemDef.actions = new String[]{null, null, null, null, "Drop"};
-//				def = ItemDefinition.get(4565);
-//				itemDef.modelID = def.modelID;
-//				itemDef.maleEquip1 = def.maleEquip1;
-//				itemDef.femaleEquip1 = def.femaleEquip1;
-//				itemDef.modelOffsetX = def.modelOffsetX;
-//				itemDef.modelOffsetY = def.modelOffsetY;
-//				itemDef.modelZoom = def.modelZoom;
-//				itemDef.actions = def.actions;
-//				itemDef.rotationY = def.rotationY;
-//				itemDef.rotationX = def.rotationX;
-//				itemDef.rdc2 = 35473;
-//				break;
+
 //			case 4569:
 //				itemDef.name = "Basket of Xmas (@whi@Xmas 2019@or1@)";
 //				//	itemDef.stackable = true;
@@ -505,12 +481,7 @@ public class ItemDef2 {
 //				itemDef.name = "Xmas Mystery Box (@whi@Xmas 2019@or1@)";
 //				itemDef.rdc2 = 32535;
 //				break;
-//			case 20083:
-//				itemDef.name = "Halloween cracker (@bla@Discontinued@or1@)";
-//				//itemDef.stackable = true;
-//				itemDef.actions = new String[]{"Pull", null, null, null, "Drop"};
-//				itemDef.rdc2 = 294295;
-//				break;
+
 //
 //
 //
@@ -523,12 +494,6 @@ public class ItemDef2 {
 //				itemDef.name = "Large event rate Lamp";
 //				itemDef.rdc2 = 23643315;
 //				itemDef.modelZoom = 700;
-//				break;
-//			case 17831:
-//				itemDef.name = "Mystery Shards";
-//				itemDef.stackable = false;
-//				itemDef.actions = new String[]{null, null, null, null, "Drop"};
-//				//itemDef.rdc2 = 234563434;
 //				break;
 //			case 2862:
 //				itemDef.name = "Grinch logs";
@@ -615,21 +580,21 @@ public class ItemDef2 {
 //				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
 //				itemDef.stackable = false;
 //				break;
-//			case 17636:
-//				itemDef.name = "Flaming Skeleton";
-//				itemDef.modelID = 65525;
-//				itemDef.maleEquip1 = 65526;
-//				itemDef.femaleEquip1 = 65526;
-//				def = ItemDefinition.get(4882);
-//				itemDef.modelOffsetX = def.modelOffsetX;
-//				//itemDef.modelOffsetX = itemDef21.modelOffsetX;
-//				itemDef.modelOffsetY = def.modelOffsetY;
-//				itemDef.modelZoom = def.modelZoom;
-//				itemDef.rotationY = def.rotationY;
-//				itemDef.rotationX = def.rotationX;
-//				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
-//				itemDef.stackable = false;
-//				break;
+			case 17636:
+				itemDef.name = "Flaming Skeleton";
+				itemDef.modelID = 65525;
+				itemDef.maleEquip1 = 65526;
+				itemDef.femaleEquip1 = 65526;
+				def = ItemDefinition.get(4882);
+				itemDef.modelOffsetX = def.modelOffsetX;
+				//itemDef.modelOffsetX = itemDef21.modelOffsetX;
+				itemDef.modelOffsetY = def.modelOffsetY;
+				itemDef.modelZoom = def.modelZoom;
+				itemDef.rotationY = def.rotationY;
+				itemDef.rotationX = def.rotationX;
+				itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+				itemDef.stackable = false;
+				break;
 //			case 17644:
 //				itemDef.name = "Flaming Katana";
 //				itemDef.modelID = 65527;

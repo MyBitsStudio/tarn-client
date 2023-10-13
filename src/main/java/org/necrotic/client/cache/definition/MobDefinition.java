@@ -72,7 +72,6 @@ public final class MobDefinition {
 				definition.actions = new String[]{null, "Attack", null, null, null};
 				definition.description = "Holy fu** ....".getBytes();
 				definition.drawYellowDotOnMap = true;
-				//definition.npcModels = b17122.npcModels.clone();
 				definition.standAnimation = b171223.standAnimation;
 				definition.walkAnimation = b171223.walkAnimation;
 				definition.degreesToTurn = 32;
@@ -105,7 +104,7 @@ public final class MobDefinition {
 				definition.walkAnimation = drv1.walkAnimation;
 				definition.scaleXZ = drv1.scaleXZ;
 				definition.scaleY = drv1.scaleY;
-				definition.actions = new String[]{"@red@Teleport", null, null, null, null};
+				definition.actions = new String[]{"@red@Store", null, null, null, null};
 				break;
 			case 3321:
 				definition.name = "Fall Event Manager";
@@ -6093,7 +6092,7 @@ public final class MobDefinition {
 				definition.scaleY = nightspider.scaleY;
 				definition.rdc2 = 23523;
 				definition.combatLevel = 144;
-				definition.description = "A halloween pet gives bonus Exp and bonus dmg boost.".getBytes();
+				definition.description = "A halloween pet".getBytes();
 				break;
 			case 6311:
 				definition.npcModels = new int[]{5062};

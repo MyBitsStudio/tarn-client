@@ -230,6 +230,104 @@ public class Items {
                 itemDef.name = "Amber Essence Bowl";
                 itemDef.stackable = true;
                 break;
+
+//            case 18340:
+//                itemDef.name = "Transmorgify Totem";
+//                itemDef.stackable = false;
+//                itemDef.actions = new String[]{"Activate", null, null, null, "Drop"};
+//                break;
+
+            case 750:
+                itemDef.name = "Transmorgify Totem";
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{"Activate", null, null, null, "Drop"};
+                break;
+
+            case 17985:
+                itemDef.name = "Death Soul";
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{"Consume", null, null, null, "Drop"};
+                break;
+
+            case 17986:
+                itemDef.name = "Warlord Soul";
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{"Consume", null, null, null, "Drop"};
+                break;
+
+            case 17987:
+                itemDef.name = "Pirate Soul";
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{"Consume", null, null, null, "Drop"};
+                break;
+
+            case 1960:
+                itemDef.copyItem(1959);
+				itemDef.name = "Pumpkin Candies";
+				itemDef.stackable = true;
+				itemDef.actions = new String[]{"Consume", null, null, null, "Drop"};
+                itemDef.rdc2 = 3274772;
+				break;
+            case 4568:
+                itemDef.name = "Basket of undead";
+                //	itemDef.stackable = true;
+                itemDef.actions = new String[]{null, null, null, null, "Drop"};
+                itemDefs = ItemDefinition.get(4565);
+                itemDef.modelID = itemDefs.modelID;
+                itemDef.maleEquip1 = itemDefs.maleEquip1;
+                itemDef.femaleEquip1 = itemDefs.femaleEquip1;
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.actions = itemDefs.actions;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.rdc2 = 35473;
+                break;
+            case 20083:
+                itemDef.name = "Halloween cracker";
+                itemDef.stackable = true;
+                itemDef.actions = new String[]{"Pull", null, null, null, "Drop"};
+                itemDef.rdc2 = 294295;
+                break;
+            case 17831:
+                itemDef.name = "Mystery Shards";
+                itemDef.stackable = false;
+                itemDef.actions = new String[]{null, null, null, null, "Drop"};
+                itemDef.rdc2 = 234563434;
+                break;
+            case 20422:
+				itemDef.name = "Unfinished Urn (H)";
+				itemDef.stackable = true;
+				itemDef.actions = new String[]{null, null, null, null, "Drop"};
+				break;
+            case 20413:
+                itemDef.name = "Ceremonial Urn (H)";
+                itemDef.stackable = true;
+                itemDef.actions = new String[]{null, null, null, null, "Drop"};
+                break;
+            case 20419:
+                itemDef.name = "Accursed Urn (H)";
+                itemDef.stackable = true;
+                itemDef.actions = new String[]{null, null, null, null, "Drop"};
+                break;
+            case 20425:
+                itemDef.name = "Infinity Urn (H)";
+                itemDef.stackable = true;
+                itemDef.actions = new String[]{null, null, null, null, "Drop"};
+                break;
+            case 20395:
+                itemDef.name = "Mining Urn";
+                itemDef.stackable = true;
+                itemDef.actions = new String[]{null, null, null, null, "Drop"};
+                break;
+            case 20407:
+                itemDef.name = "Ceremonial Mining Urn";
+                itemDef.stackable = true;
+                itemDef.actions = new String[]{null, null, null, null, "Drop"};
+                break;
+
+
             case 19001:
                 itemDef.copyItem(15262);
                 itemDef.name = "Pet fragment pack";
@@ -1613,21 +1711,6 @@ public class Items {
 //                //itemDef.rdc2 = 3222;
 //                break;
 
-
-            case 13555:
-                itemDef.copyItem(6585);
-                itemDef.name = "Elite Pendant (hybrid)";
-                itemDef.modelID = 83812;
-                itemDef.maleEquip1 = 83801;
-                itemDef.femaleEquip1 = 83801;
-                itemDef.maleWieldY = 5;
-                itemDef.modelZoom = 464;
-                itemDef.modelOffsetX = 3;
-                itemDef.modelOffsetY = 54;
-                itemDef.rotationX = 1964;
-                itemDef.rotationY = 277;
-                itemDef.rotationZ = 0;
-                break;
 //            case 9662:
 //                itemDef.name = "<col=f8ac00>Damned key@lre@";
 //                itemDef.actions = new String[5];

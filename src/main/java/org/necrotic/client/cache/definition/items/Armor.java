@@ -890,6 +890,14 @@ public class Armor {
             case 19886:
                 itemDef.name = "Ultimate Ironman Necklace";
                 break;
+            case 13555:
+                itemDef.name = "Halloween Spirit Necklace";
+                itemDef.actions = new String[]{null, "Wear", null, null, "Drop"};
+                break;
+            case 4489:
+                itemDef.name = "Astifar's Pendant";
+                itemDef.actions = new String[]{null, "Wear", null, null, "Drop"};
+                break;
             case 23087:
                 itemDef.copyItem(6585);
                 itemDef.name = "Accuracy necklace";

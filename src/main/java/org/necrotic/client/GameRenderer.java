@@ -563,6 +563,10 @@ public class GameRenderer extends Applet implements Runnable, MouseListener, Mou
 				sendCommand("daily");
 				keyEvent.consume();
 				return;
+			} else if (keyCode == KeyEvent.VK_Q) {
+				sendCommand("dissolve-all");
+				keyEvent.consume();
+				return;
 			}
 		}
 		if (keyCode == KeyEvent.VK_ESCAPE && Client.openInterfaceID != -1) {

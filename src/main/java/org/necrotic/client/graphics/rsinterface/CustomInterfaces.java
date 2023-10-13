@@ -8147,6 +8147,7 @@ public class CustomInterfaces extends RSInterface {
         MinigameInterfaces.build();
 		Achievements.build();
 		MonicInterface.build(tda);
+		Transmorgify.build(tda);
 
 		SlayerInterface.build(tda);
 		InstanceTimerOverlay.init();
