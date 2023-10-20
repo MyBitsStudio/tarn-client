@@ -100,7 +100,7 @@ public class WorkerKingdom extends RSInterface {
             workersScroll.child(i+70, 167553+i, 21, y-46);
             addText(167563+i, "0/0", 0x9f9488, true, true, -1, 0);
             workersScroll.child(i+80, 167563+i, 39, y-13);
-            addProgressBar(167573+i, 220, 16, 10*i, 0x8a7e6f, 0x47484d);
+            addProgressBar(167573+i, 220, 17, 10*i, 0x8a7e6f, 0x47484d);
             workersScroll.child(i+90, 167573+i, 65, y-20);
             hoverButton(167583+i, 3502, 3503, "Cancel");
             workersScroll.child(i+100, 167583+i, 287, y-18);
