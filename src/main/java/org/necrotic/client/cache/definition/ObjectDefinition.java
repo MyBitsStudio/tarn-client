@@ -127,7 +127,6 @@ public final class ObjectDefinition {
 				stream.position = streamIndices[id];
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
 		}
 		definition.type = id;
 		definition.setDefaults();
@@ -236,7 +235,69 @@ public final class ObjectDefinition {
 			definition.actions = new String[]{"Advance", "Back", null, null, null};
 		}
 
+		if (definition.type == 63003) {
+			definition.setDefaults();
+			definition.interactive = true;
+			definition.isSolidObject = true;
+			definition.length = 1;
+			definition.width = 1;
+			definition.objectModelIDs = new int[]{141251};
+			definition.name = "Boss Well";
+			definition.actions = new String[]{null, "Donate", null, null, null};
+		}
+		if (definition.type == 63004) {
+			definition.setDefaults();
+			definition.interactive = true;
+			definition.isSolidObject = true;
+			definition.length = 1;
+			definition.width = 1;
+			definition.objectModelIDs = new int[]{141252};
+			definition.name = "Trading Post";
+			definition.actions = new String[]{null, "Open", null, null, null};
+		}
 
+		if (definition.type == 63000) {
+			definition.setDefaults();
+			definition.interactive = true;
+			definition.isSolidObject = true;
+			definition.length = 1;
+			definition.width = 1;
+			definition.objectModelIDs = new int[]{100201};
+			definition.name = "Vote Chest";
+			definition.actions = new String[]{"Open", null, null, null, null};
+		}
+		if (definition.type == 63001) {
+			definition.setDefaults();
+			definition.interactive = true;
+			definition.isSolidObject = true;
+			definition.length = 1;
+			definition.width = 1;
+			definition.objectModelIDs = new int[]{139_881};
+			definition.name = "Slayer Chest";
+			definition.modelSizeH = 70;
+			definition.modelSizeY = 70;
+			definition.modelSizeX = 70;
+			definition.actions = new String[]{"Open", null, null, null, null};
+		}
+		if (definition.type == 63002) {
+			definition.name = "PvM Chest";
+			definition.actions = new String[5];
+			definition.actions[0] = "Open";
+			definition.modelSizeX = 50;
+			definition.modelSizeH = 50;
+			definition.modelSizeY = 50;
+			definition.objectModelIDs = new int[]{139882};//15073
+		}
+		if (definition.type == 3378) {
+			definition.name = "@whi@<shad=355>Loot Chest<shad=-1>";
+			definition.actions[0] = "Search";
+			definition.objectModelIDs = new int[]{65439};
+			definition.modelSizeX = 100;
+			definition.modelSizeH = 100;
+			definition.modelSizeY = 100;
+			definition.interactive = true;
+			//  definition.rdc2 = 2552;
+		}
 
 		//old ones below
 
@@ -310,16 +371,6 @@ public final class ObjectDefinition {
 			definition.width = 4;
 			definition.objectModelIDs = new int[]{100195};
 			definition.name = "Raids Portal";
-			definition.actions = new String[]{"Open", null, null, null, null};
-		}
-		if (definition.type == 41206) {
-			definition.setDefaults();
-			definition.interactive = true;
-			definition.isSolidObject = true;
-			definition.length = 1;
-			definition.width = 1;
-			definition.objectModelIDs = new int[]{100201};
-			definition.name = "Halls of Valor Chest";
 			definition.actions = new String[]{"Open", null, null, null, null};
 		}
 		if (definition.type == 41207) {
@@ -604,18 +655,7 @@ public final class ObjectDefinition {
 			//  definition.rdc2 = 2552;
 
 		}
-		if (definition.type == 3378) {
 
-			definition.name = "@whi@<shad=355>Loot Chest<shad=-1>";
-			definition.actions[0] = "Search";
-			definition.objectModelIDs = new int[]{65439};
-			definition.modelSizeX = 100;
-			definition.modelSizeH = 100;
-			definition.modelSizeY = 100;
-			definition.interactive = true;
-			//  definition.rdc2 = 2552;
-
-		}
 
 		if (definition.type == 28457 || definition.type == 28458 || definition.type == 28459 || definition.type == 28460 || definition.type == 28461 || definition.type == 28462 || definition.type == 28463 || definition.type == 28464 || definition.type == 28465 || definition.type == 28466 || definition.type == 28467 || definition.type == 28468 || definition.type == 28469 || definition.type == 28470 || definition.type == 28471 || definition.type == 28472 || definition.type == 28473 || definition.type == 28456) {
 			definition.name = "Murky water";
@@ -910,15 +950,6 @@ public final class ObjectDefinition {
 		|| definition.type == 22774) {
 			definition.actions = new String[5];
 			definition.actions[0] = "Steal-from";
-		}
-		if (definition.type == 10620) {
-			definition.name = "Elite Slayer Chest";
-			definition.actions = new String[5];
-			definition.actions[0] = "Open";
-			definition.modelSizeX = 75;
-			definition.modelSizeH = 75;
-			definition.modelSizeY = 75;
-			definition.objectModelIDs = new int[]{139882};//15073
 		}
 		if (definition.type == 621) {
 			definition.name = "Raids Table";

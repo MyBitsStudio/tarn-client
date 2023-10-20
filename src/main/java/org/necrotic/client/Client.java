@@ -1748,6 +1748,7 @@ public class Client extends GameRenderer {
         System.out.println("Started repacking index " + cacheIndex + ".");
         int indexLength = new File(indexLocation(cacheIndex, -1)).listFiles().length;
         File[] file = new File(indexLocation(cacheIndex, -1)).listFiles();
+
         if (file == null || file.length == 0) {
             return;
         }
@@ -5874,7 +5875,7 @@ public class Client extends GameRenderer {
         if (action == 900) {
             method66(nodeId, y, x, id);
             getOut().putOpcode(252);
-            getOut().writeSignedBigEndian(id);
+            getOut().putShort(id);
             getOut().writeUnsignedWordBigEndian(y + regionBaseY);
             getOut().writeUnsignedWordA(x + regionBaseX);
 
@@ -16474,6 +16475,21 @@ public class Client extends GameRenderer {
                     pktType = -1;
                     return true;
 
+                case 235:
+
+                    int[] allowed = new int[0];
+                    int spot = 0;
+                    while (getInputBuffer().position < pktSize) {
+                        int itemInvId = getInputBuffer().getUnsignedShort();
+                        allowed = Arrays.copyOf(allowed, allowed.length + 1);
+                        allowed[spot++] = itemInvId;
+                    }
+
+                    TradingPost.allowedItems = allowed;
+
+                    pktType = -1;
+                    return true;
+
                 case 159:
                     int rsIntId1 = getInputBuffer().getUnsignedShort();
                     RSInterface rsInt1 = RSInterface.interfaceCache[rsIntId1];
@@ -19295,86 +19311,73 @@ public class Client extends GameRenderer {
                     npcScreenPos((Entity) obj, ((Entity) obj).height + 5);
                     if (spriteDrawX > -1) {
 
+                        /*
+                        to use --
+                        1419 - diamond
+                        368 -- mage
+                        641 - range
+                        625 -- melee
+                        916 - anti range
+                        917 - anti melee
+                        856 - crossed swords
+                        1229 - red arrow down
+                        838 - veteran icon
+                        870 - prayer
+                         */
+
                         // draw sprites on npc
-                        if (entityDef.id == 6537) {
+                        if (entityDef.id == 9015) { // group ironman
                             spritesMap.get(607).drawSprite(spriteDrawX - 12, spriteDrawY - 30);
                         }
                         if (entityDef.id == 8000 || entityDef.id == 8002) {
                             spritesMap.get(134).drawSprite(spriteDrawX - 12, spriteDrawY - 30);
                         }
-                        if (entityDef.id == 13738) {
-                            spritesMap.get(1419).drawSprite(spriteDrawX - 12, spriteDrawY - 30);
-
-                        }
-                        if (entityDef.id == 1086) {
-                            spritesMap.get(638).drawSprite(spriteDrawX - 12, spriteDrawY - 40);
-
-                        }
-                        if (entityDef.id == 1085) {
-                            spritesMap.get(641).drawSprite(spriteDrawX - 12, spriteDrawY - 40);
-
-                        }
-                        if (entityDef.id == 1084) {
-                            spritesMap.get(625).drawSprite(spriteDrawX - 12, spriteDrawY - 40);
-
-                        }
                         if (entityDef.id == 3777) {
                             spritesMap.get(857).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
-
                         }
-                        if (entityDef.id == 585) {
-                            spritesMap.get(915).drawSprite(spriteDrawX - 4, spriteDrawY - 32);
-
-                        }
-                        if (entityDef.id == 688) {
-                            spritesMap.get(916).drawSprite(spriteDrawX - 4, spriteDrawY - 32);
-
+                        if (entityDef.id == 587) {
+                            spritesMap.get(1419).drawSprite(spriteDrawX - 4, spriteDrawY - 32);
                         }
                         if (entityDef.id == 125) {
                             spritesMap.get(917).drawSprite(spriteDrawX - 4, spriteDrawY - 32);
-
                         }
-                        if (entityDef.id == 1821) {
-                            spritesMap.get(869).drawSprite(spriteDrawX - 4, spriteDrawY - 5);
-
-                        }
-                        if (entityDef.id == 925 || entityDef.id == 1988) {
+                        if (entityDef.id == 925) {// slayer master elite?
                             spritesMap.get(853).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
-
-                        }
-                        if (entityDef.id == 198) {
-                            spritesMap.get(856).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
-
-                        }
-                        if (entityDef.id == 3306) {
-                            spritesMap.get(876).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
-
                         }
                         if (entityDef.id == 4651) {
                             spritesMap.get(868).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
-
                         }
-                        if (entityDef.id == 6692) {
-                            spritesMap.get(364).drawSprite(spriteDrawX - 12, spriteDrawY - 30);
-
-                        }
-                        if (entityDef.id == 3112) {
-                            spritesMap.get(1229).drawSprite(spriteDrawX - 12, spriteDrawY - 30);
-
-                        }
-
                         if (entityDef.id == 605) {
                             spritesMap.get(866).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
                         }
-
-                        if (entityDef.id == 2579) {
-                            spritesMap.get(838).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
+                        if (entityDef.id == 3306) {
+                            spritesMap.get(2512).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
                         }
-                        if (entityDef.id == 547) {
-                            spritesMap.get(870).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
+                        if (entityDef.id == 9000) {
+                            spritesMap.get(3303).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
+                        }
+                        if (entityDef.id == 289) {
+                            spritesMap.get(3206).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
+                        }
+                        if (entityDef.id == 5249) {
+                            spritesMap.get(3130).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
+                        }
+                        if (entityDef.id == 2153) {
+                            spritesMap.get(3064).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
+                        }
+                        if (entityDef.id == 5049) {
+                            spritesMap.get(2834).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
+                        }
+                        if (entityDef.id == 14) {
+                            spritesMap.get(2648).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
+                        }
+                        if (entityDef.id == 4652) {
+                            spritesMap.get(2395).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
+                        }
+                        if (entityDef.id == 932) {
+                            spritesMap.get(2349).drawSprite(spriteDrawX - 4, spriteDrawY - 16);
                         }
 
-                        // rock tail are objects
                     }
 
                     if (entityDef.childrenIDs != null) {
@@ -19410,9 +19413,48 @@ public class Client extends GameRenderer {
                                 l += 29;
                             }
 
+                            int rights = player.playerRights;
+                            int donorRights = player.donorRights;
+
+                            if(rights >= 1){
+                                switch(rights){
+                                    case 1 :
+                                        if (player.headIcon > 20 || player.headIcon < 0) {
+                                            spritesMap.get(2482).drawSprite(spriteDrawX - 8, spriteDrawY - (l - 29));
+                                        }
+                                        break;
+                                    case 2:
+                                    case 3:
+                                        if (player.headIcon > 20 || player.headIcon < 0) {
+                                            spritesMap.get(832).drawSprite(spriteDrawX - 8, spriteDrawY - (l - 29));
+                                        }
+                                        break;
+                                    case 4:
+                                        if (player.headIcon > 20 || player.headIcon < 0) {
+                                            spritesMap.get(828).drawSprite(spriteDrawX - 8, spriteDrawY - (l - 29));
+                                        }
+                                        break;
+                                    case 5:
+                                        if (player.headIcon > 20 || player.headIcon < 0) {
+                                            spritesMap.get(829).drawSprite(spriteDrawX - 8, spriteDrawY - (l - 29));
+                                        }
+                                        break;
+                                    case 6:
+                                        if (player.headIcon > 20 || player.headIcon < 0) {
+                                            spritesMap.get(831).drawSprite(spriteDrawX - 8, spriteDrawY - (l - 29));
+                                        }
+                                        break;
+                                    case 8:
+                                        if (player.headIcon > 20 || player.headIcon < 0) {
+                                            spritesMap.get(3385).drawSprite(spriteDrawX - 8, spriteDrawY - (l - 29));
+                                        }
+                                        break;
+                                }
+                            }
+
+
                             if (Configuration.DISPLAY_USERNAMES_ABOVE_HEAD) {
-                                int rights = player.playerRights;
-                                int donorRights = player.donorRights;
+
                                 if(rights >= 1){
                                     switch(rights){
                                         case 1://youtube

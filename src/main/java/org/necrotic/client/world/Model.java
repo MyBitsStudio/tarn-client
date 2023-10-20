@@ -65,11 +65,19 @@ public class Model extends Animable {
 	public static byte[] getData(final int model) {
 		if (raw.exists()) {
 			final String rawDat = raw.getAbsolutePath() + File.separator + model + ".dat";
+
 			if (new File(rawDat).exists()) {
 				load(FileOperations.readFile(rawDat), model);
 			}
 		}
 		return mapRS2.get(model);
+	}
+
+	public static void decryptModel(byte[] data, int id) {
+		if (data == null) {
+			return;
+		}
+
 	}
 
 	public static void load(byte[] data, int id) {

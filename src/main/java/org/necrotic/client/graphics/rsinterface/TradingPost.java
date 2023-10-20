@@ -31,6 +31,8 @@ public class TradingPost extends RSInterface {
     public static int selectedItemId;
     public static String searchedName = "";
     public static int[] displayedItems;
+
+    public static int[] allowedItems;
     private static final AhoCorasickDoubleArrayTrie<String> acdat = new AhoCorasickDoubleArrayTrie<>();
 
     public static void build() {
@@ -320,6 +322,8 @@ public class TradingPost extends RSInterface {
         }
     }
 
+
+
     public static void drawSearchBox() {
         int yPosOffset = (GameFrame.getScreenMode() != GameFrame.ScreenMode.FIXED) ? Client.clientHeight - 165 : 0;
 
@@ -405,6 +409,16 @@ public class TradingPost extends RSInterface {
             for (int id = 0; id < ItemDefinition.totalItems; id++) {
                 ItemDefinition item = ItemDefinition.get(id);
                 if (item.name == null) {
+                    continue;
+                }
+                boolean allow = false;
+                for(int allowed : allowedItems){
+                    if(item.id == allowed) {
+                        allow = true;
+                        break;
+                    }
+                }
+                if(!allow){
                     continue;
                 }
                 String name = item.name.toLowerCase();
