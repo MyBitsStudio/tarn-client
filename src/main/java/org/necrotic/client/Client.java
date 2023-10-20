@@ -11795,7 +11795,7 @@ public class Client extends GameRenderer {
             int i2 = stream.method426();
             int l4 = anInt1268 + (i2 >> 4 & 7);
             int k7 = anInt1269 + (i2 & 7);
-            int objectId = stream.getShortBigEndian();
+            int objectId = stream.getUnsignedShort();
             int k12 = stream.method428();
             int i15 = k12 >> 2;
             int k16 = k12 & 3;

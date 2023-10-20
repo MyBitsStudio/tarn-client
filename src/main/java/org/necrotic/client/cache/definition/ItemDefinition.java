@@ -801,8 +801,6 @@ public final class ItemDefinition {
 
 		switch (customId) {
 
-
-
 			case 22000:
 				itemDef.copyItem(15496);
 				itemDef.name = "Boss Slayer Helmet [1]";
@@ -888,6 +886,7 @@ public final class ItemDefinition {
 				itemDef.modelZoom = 3000;
 				itemDef.actions = new String[]{"Activate", null, null, null, "Drop"};
 				break;
+
 			case 1563:
 			case 1564:
 			case 1562:
@@ -900,13 +899,11 @@ public final class ItemDefinition {
 			case 12512:
 			case 12518:
 			case 12520:
-
 				itemDef.groundActions = new String[]{null, null, "Take", null, null};
 				itemDef.actions = new String[]{null, null, "Summon", "Upgrade-pet", "Drop"};
 				break;
 
 			case 463:
-
 				itemDef.modelID = 65332;
 				itemDef.modelZoom = 6000;
 				itemDef.groundActions = new String[]{null, null, "Take", null, null};

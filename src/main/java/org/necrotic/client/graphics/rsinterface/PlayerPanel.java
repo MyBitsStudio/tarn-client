@@ -15,11 +15,35 @@ public class PlayerPanel extends RSInterface{
         int c = 0;
         int x = 0;
         int y = 0;
+        tab.totalChildren(4);
+        //1418
+        //1471
 
         addSpriteLoader(id, 1563);
         tab.child(c++, id++, 2 + x, 30 + y);
 
         tab.child(c++, 111100, 0, 0);
+
+        addText(id, "@whi@World Information", tda, 2, 0xFFFFFF, true, true);
+        tab.child(c++, id++, 95 + x, 37 + y);
+
+        tab.child(c++, 111200, 4 + x, 58 + y);
+
+        interID = 111200;
+        RSInterface info = addInterface(interID);
+        info.width = 182 - 16;
+        info.height = 195;
+        info.scrollMax = 500;
+        id = interID + 1;
+        c = 0;
+        x = -5;
+        y = 3;
+        info.totalChildren(2);
+
+        addSpriteLoader(id, 1318);
+        info.child(c++, id++, 9 + x, 25 + y);
+        addText(id, "@whi@Online Players : 120", tda, 2, 0xFFFFFF, true, true);
+        info.child(c++, id++, 47 + x, 40 + y);
 
 
     }

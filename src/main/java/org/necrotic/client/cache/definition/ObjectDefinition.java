@@ -243,7 +243,7 @@ public final class ObjectDefinition {
 			definition.width = 1;
 			definition.objectModelIDs = new int[]{141251};
 			definition.name = "Boss Well";
-			definition.actions = new String[]{null, "Donate", null, null, null};
+			definition.actions = new String[]{"Donate", null, null, null, null};
 		}
 		if (definition.type == 63004) {
 			definition.setDefaults();
@@ -283,9 +283,9 @@ public final class ObjectDefinition {
 			definition.name = "PvM Chest";
 			definition.actions = new String[5];
 			definition.actions[0] = "Open";
-			definition.modelSizeX = 50;
-			definition.modelSizeH = 50;
-			definition.modelSizeY = 50;
+			definition.modelSizeX = 80;
+			definition.modelSizeH = 80;
+			definition.modelSizeY = 80;
 			definition.objectModelIDs = new int[]{139882};//15073
 		}
 		if (definition.type == 3378) {
