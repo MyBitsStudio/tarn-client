@@ -67,6 +67,8 @@ val proguard = tasks.register<ProGuardTask>("proguard") {
     libraryjars(configurations.runtimeClasspath)
 }
 
+
+
 tasks {
     "build" {
         dependsOn(fatJar)
