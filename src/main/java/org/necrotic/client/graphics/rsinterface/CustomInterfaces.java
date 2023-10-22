@@ -1995,7 +1995,7 @@ public class CustomInterfaces extends RSInterface {
 		addSpriteLoader(id, 1563);
 		tab.child(c++, id++, 2 + x, 30 + y);
 
-		tab.child(c++, 111100, 0 + x, 0 + y);
+		tab.child(c++, 111100, 0, 0);
 
 		addText(id, "@whi@Account Information", tda, 2, 0xFFFFFF, true, true);
 		tab.child(c++, id++, 95 + x, 37 + y);
@@ -5162,7 +5162,7 @@ public class CustomInterfaces extends RSInterface {
 
 		addSpriteLoader(54020, 1576);
 
-		addNpc(54021, 50);
+		addSpriteLoader(54020, 1576);
 		//addFamiliarHead(54021, 75, 50, 875);
 		//	addPet(54021);
 		addText(54027, "", tda, 2, 0xFF981F, true, false);
@@ -7785,83 +7785,83 @@ public class CustomInterfaces extends RSInterface {
 	}
 
 
-	static void upgradeInterface() {//this one
-		int interID = 121000;
-		RSInterface tab = addInterface(interID);
-		int id = interID + 1;
-		int c = 0;
-		int x = 45;
-		int y = 45;
-		tab.totalChildren(21);
-
-		addSpriteLoader(id, 1582);
-		tab.child(c++, id++, 0 + x, 0 + y);
-
-		addHoverButtonWSpriteLoader(id, 1016, 16, 16, "Close Window", 0, id + 1, 3);
-		tab.child(c++, id++, 394 + x, 9 + y);
-		addHoveredImageWSpriteLoader(id, 1017, 16, 16, id + 1);
-		tab.child(c++, id++, 394 + x, 9 + y);
-		id++;
-
-		addConfigButtonWSpriteLoader(id, interID, 1555, 1554, 99, 20, "Select", 0, 5, 5334);
-		tab.child(c++, id++, 10 + x, 39 + y);
-		addConfigButtonWSpriteLoader(id, interID, 1555, 1554, 99, 20, "", 1, 5, 5334);
-		tab.child(c++, id++, 110 + x, 39 + y);
-		addConfigButtonWSpriteLoader(id, interID, 1555, 1554, 99, 20, "", 2, 5, 5334);
-		tab.child(c++, id++, 210 + x, 39 + y);
-		addConfigButtonWSpriteLoader(id, interID, 1555, 1554, 99, 20, "", 3, 5, 5334);
-		tab.child(c++, id++, 310 + x, 39 + y);
-
-		addSpriteLoader(id, 1559);
-		tab.child(c++, id++, 14 + x, 42 + y);
-		addSpriteLoader(id, -1);
-		tab.child(c++, id++, 114 + x, 41 + y);
-		addSpriteLoader(id, -1);
-		tab.child(c++, id++, 216 + x, 42 + y);
-		addSpriteLoader(id, -1);
-		tab.child(c++, id++, 314 + x, 41 + y);
-
-		addText(id, "Potions", tda, 0, ColorConstants.ORANGE, false, true);
-		tab.child(c++, id++, 32 + x, 44 + y);
-		addText(id, "", tda, 0, ColorConstants.ORANGE, false, true);
-		tab.child(c++, id++, 132 + x, 44 + y);
-		addText(id, "", tda, 0, ColorConstants.ORANGE, false, true);
-		tab.child(c++, id++, 232 + x, 44 + y);
-		addText(id, "", tda, 0, ColorConstants.ORANGE, false, true);
-		tab.child(c++, id++, 332 + x, 44 + y);
-
-		dropGroup(id, 1, 1, 1, 1);
-		tab.child(c++, id++, 335 + x, 101 + y);
-
-		addText(id, "Tokens required: ", tda, 0, ColorConstants.ORANGE, false, true);
-		tab.child(c++, id++, 295 + x, 158 + y);
-		addText(id, "Success rate: ", tda, 0, ColorConstants.ORANGE, false, true);
-		tab.child(c++, id++, 295 + x, 181 + y);
-
-		hoverButton(id, 1536, 1537, "Upgrade-All", 0, 0xff8624, "Upgrade-All");
-		tab.child(c++, id++, 312 + x, 208 + y);
-
-		hoverButton(id, 1536, 1537, "Upgrade", 0, 0xff8624, "Upgrade");
-		tab.child(c++, id++, 312 + x, 208 + y);
-
-		tab.child(c++, 121100, 12 + x, 98 + y);
-
-		interID = 121100;
-
-		RSInterface scroll = addInterface(interID);
-
-		scroll.totalChildren(1);
-		scroll.width = 273 - 16;
-		scroll.height = 138;
-		scroll.scrollMax = 500;
-		y = 0;
-		c = 0;
-		id = interID + 1;
-		x = 0;
-		// addToItemGroup(62209, 9, 10, 9, 7, true, new String[]{"Value", "Buy 1", "Buy 5", "Buy 10", "Buy X"});
-		scroll.child(c++, 62209, 6 + x, 4 + y);
-
-	}
+//	static void upgradeInterface() {//this one
+//		int interID = 121000;
+//		RSInterface tab = addInterface(interID);
+//		int id = interID + 1;
+//		int c = 0;
+//		int x = 45;
+//		int y = 45;
+//		tab.totalChildren(21);
+//
+//		addSpriteLoader(id, 1582);
+//		tab.child(c++, id++, 0 + x, 0 + y);
+//
+//		addHoverButtonWSpriteLoader(id, 1016, 16, 16, "Close Window", 0, id + 1, 3);
+//		tab.child(c++, id++, 394 + x, 9 + y);
+//		addHoveredImageWSpriteLoader(id, 1017, 16, 16, id + 1);
+//		tab.child(c++, id++, 394 + x, 9 + y);
+//		id++;
+//
+//		addConfigButtonWSpriteLoader(id, interID, 1555, 1554, 99, 20, "Select", 0, 5, 5334);
+//		tab.child(c++, id++, 10 + x, 39 + y);
+//		addConfigButtonWSpriteLoader(id, interID, 1555, 1554, 99, 20, "", 1, 5, 5334);
+//		tab.child(c++, id++, 110 + x, 39 + y);
+//		addConfigButtonWSpriteLoader(id, interID, 1555, 1554, 99, 20, "", 2, 5, 5334);
+//		tab.child(c++, id++, 210 + x, 39 + y);
+//		addConfigButtonWSpriteLoader(id, interID, 1555, 1554, 99, 20, "", 3, 5, 5334);
+//		tab.child(c++, id++, 310 + x, 39 + y);
+//
+//		addSpriteLoader(id, 1559);
+//		tab.child(c++, id++, 14 + x, 42 + y);
+//		addSpriteLoader(id, -1);
+//		tab.child(c++, id++, 114 + x, 41 + y);
+//		addSpriteLoader(id, -1);
+//		tab.child(c++, id++, 216 + x, 42 + y);
+//		addSpriteLoader(id, -1);
+//		tab.child(c++, id++, 314 + x, 41 + y);
+//
+//		addText(id, "Potions", tda, 0, ColorConstants.ORANGE, false, true);
+//		tab.child(c++, id++, 32 + x, 44 + y);
+//		addText(id, "", tda, 0, ColorConstants.ORANGE, false, true);
+//		tab.child(c++, id++, 132 + x, 44 + y);
+//		addText(id, "", tda, 0, ColorConstants.ORANGE, false, true);
+//		tab.child(c++, id++, 232 + x, 44 + y);
+//		addText(id, "", tda, 0, ColorConstants.ORANGE, false, true);
+//		tab.child(c++, id++, 332 + x, 44 + y);
+//
+//		dropGroup(id, 1, 1, 1, 1);
+//		tab.child(c++, id++, 335 + x, 101 + y);
+//
+//		addText(id, "Tokens required: ", tda, 0, ColorConstants.ORANGE, false, true);
+//		tab.child(c++, id++, 295 + x, 158 + y);
+//		addText(id, "Success rate: ", tda, 0, ColorConstants.ORANGE, false, true);
+//		tab.child(c++, id++, 295 + x, 181 + y);
+//
+//		hoverButton(id, 1536, 1537, "Upgrade-All", 0, 0xff8624, "Upgrade-All");
+//		tab.child(c++, id++, 312 + x, 208 + y);
+//
+//		hoverButton(id, 1536, 1537, "Upgrade", 0, 0xff8624, "Upgrade");
+//		tab.child(c++, id++, 312 + x, 208 + y);
+//
+//		tab.child(c++, 121100, 12 + x, 98 + y);
+//
+//		interID = 121100;
+//
+//		RSInterface scroll = addInterface(interID);
+//
+//		scroll.totalChildren(1);
+//		scroll.width = 273 - 16;
+//		scroll.height = 138;
+//		scroll.scrollMax = 500;
+//		y = 0;
+//		c = 0;
+//		id = interID + 1;
+//		x = 0;
+//		// addToItemGroup(62209, 9, 10, 9, 7, true, new String[]{"Value", "Buy 1", "Buy 5", "Buy 10", "Buy X"});
+//		scroll.child(c++, 62209, 6 + x, 4 + y);
+//
+//	}
 
 
 	static void teleportInterface() {
@@ -8058,8 +8058,7 @@ public class CustomInterfaces extends RSInterface {
 		//	pouchCreation();
 		opacityInterface();
 		staffTabInterface(tda);
-		EventPanel.build(tda);
-		EventPanel.buildDeals(tda);
+		//EventPanel.buildDeals(tda);
 		levelUpInterfaces();
 		godWars();
 		optionTab();
@@ -8112,7 +8111,7 @@ public class CustomInterfaces extends RSInterface {
 		donatorShop();
 		petShop();
 		raidsInterface();
-		upgradeInterface();
+		//upgradeInterface();
 		teleportInterface();
 		minigameInterface();
 		vodOverlay(tda);
@@ -8149,11 +8148,20 @@ public class CustomInterfaces extends RSInterface {
 		InstanceTimerOverlay.init();
 		WorkerKingdom.build();
 
-		panelInterface();
-		panelInterfaceAccountInfo();
-		panelSlayerInterface();
-		panelInterfaceInterfaces();
+		//panelInterface();
+		//panelInterfaceAccountInfo();
+		//panelSlayerInterface();
+		//panelInterfaceInterfaces();
 
-		//PlayerPanel.panelInterface(tda);
+		PlayerPanel.panelInterface(tda);
+		PlayerPanel.secondInterface(tda);
+		PlayerPanel.thirdInterface(tda);
+		PlayerPanel.fourInterface(tda);
+
+		EventPanel.build(tda);
+		EventPanel.buildTwo(tda);
+		EventPanel.buildThree(tda);
+
+		SpellBook.buildGlobal(tda);
     }
 }

@@ -5,10 +5,53 @@ import org.necrotic.client.graphics.fonts.TextDrawingArea;
 
 public class EventPanel extends RSInterface {
 
-    public static void build(TextDrawingArea[] tda){
+    public static void topPanel(TextDrawingArea[] tda) {
+        int interID = 73500;
+        RSInterface list = addInterface(interID);
+        list.width = 190;
+        list.height = 44;
+        list.scrollMax = 44;
+        int id = interID + 1;
+        int c = 0;
+        int x = 0;
+        int y = 0;
+        list.totalChildren(12);
+
+        addConfigButtonWSpriteLoader(id, interID, 1564, 1565, 31, 27, "Globals", 0, 5, 6000);
+        list.child(c++, id++, 33 + x, 5 + y);
+        addConfigButtonWSpriteLoader(id, interID, 1564, 1565, 31, 27, "Events", 1, 5, 6000);
+        list.child(c++, id++, 63 + x, 5 + y);
+        addConfigButtonWSpriteLoader(id, interID, 1564, 1565, 31, 27, "Slayer Hub", 2, 5, 6000);
+        list.child(c++, id++, 93 + x, 5 + y);
+        addConfigButtonWSpriteLoader(id, interID, 1564, 1565, 31, 27, "Coming Soon", 3, 5, 6000);
+        list.child(c++, id++, 123 + x, 5 + y);
+
+        addText(id, "", tda, 2, 0xFFFFFF, true, true);
+        list.child(c++, id++, 108 + x, 5 + y);
+        addText(id, "", tda, 2, 0xFFFFFF, true, true);
+        list.child(c++, id++, 138 + x, 5 + y);
+
+
+        addSpriteLoader(id, 2831);
+        list.child(c++, id++, 40 + x, 10 + y);
+        addSpriteLoader(id, 2507);
+        list.child(c++, id++, 70 + x, 10 + y);
+        addSpriteLoader(id, 3303);
+        list.child(c++, id++, 100 + x, 10 + y);
+        addSpriteLoader(id, 1568);
+        list.child(c++, id++, 130 + x, 10 + y);
+        addText(id, "", tda, 2, 0xFFFFFF, true, true);
+        list.child(c++, id++, 100 + x, 10 + y);
+        addText(id, "", tda, 2, 0xFFFFFF, true, true);
+        list.child(c++, id++, 130 + x, 10 + y);
+    }
+
+    public static void build(TextDrawingArea[] tda) {
+        topPanel(tda);
+        buildGlobals(tda);
+
         int interID = 73000;
         RSInterface tab = addInterface(interID);
-
 
         int id = interID + 1;
         int c = 0;
@@ -19,206 +62,128 @@ public class EventPanel extends RSInterface {
         addSpriteLoader(id, 1563);
         tab.child(c++, id++, 2 + x, 30 + y);
 
-        tab.child(c++, 74000, 0, 0);
+        tab.child(c++, 73500, 0, 0);
 
-        addText(id, "@whi@Events & More", tda, 2, 0xFFFFFF, true, true);
+        addText(id, "@whi@Globals", tda, 2, 0xFFFFFF, true, true);
         tab.child(c++, id++, 95 + x, 37 + y);
 
-        tab.child(c++, 73500, 4 + x, 58 + y);
+        tab.child(c++, 74000, 4 + x, 58 + y);
 
 
-        interID = 73500;
+    }
+
+    public static void buildTwo(TextDrawingArea[] tda) {
+        topPanel(tda);
+
+        int interID = 75000;
+        RSInterface tab = addInterface(interID);
+
+        int id = interID + 1;
+        int c = 0;
+        int x = 0;
+        int y = 0;
+        tab.totalChildren(4);
+
+        addSpriteLoader(id, 1563);
+        tab.child(c++, id++, 2 + x, 30 + y);
+
+        tab.child(c++, 73500, 0, 0);
+
+        addText(id, "@whi@Events", tda, 2, 0xFFFFFF, true, true);
+        tab.child(c++, id++, 95 + x, 37 + y);
+
+        tab.child(c++, 76000, 4 + x, 58 + y);
+
+    }
+
+    public static void buildGlobals(TextDrawingArea[] tda) {
+
+        int interID = 74000;
+        RSInterface info = addInterface(interID);
+        info.width = 182 - 16;
+        info.height = 195;
+        info.scrollMax = 750;
+        int id = interID + 1;
+        int c = 0;
+        int x = -5;
+        int y = 3;
+        info.totalChildren(40);
+
+        for (int i = 0; i < 20; i++) {
+            addButtonWSpriteLoader(id, 493, "Teleport");
+            info.child(c++, id++, x += 8, y += 1);
+            addText(id, "", tda, 1, 0xFFFFFF, true, true);
+            info.child(c++, id++, x += 78, y +=7);
+            x = -5;
+            y += 28;
+        }
+    }
+
+    public static void buildThree(TextDrawingArea[] tda) {
+        topPanel(tda);
+        slayerHub(tda);
+
+        int interID = 121000;
+        RSInterface tab = addInterface(interID);
+
+        int id = interID + 1;
+        int c = 0;
+        int x = 0;
+        int y = 0;
+        tab.totalChildren(4);
+
+        addSpriteLoader(id, 1563);
+        tab.child(c++, id++, 2 + x, 30 + y);
+
+        tab.child(c++, 73500, 0, 0);
+
+        addText(id, "@whi@Slayer Hub", tda, 2, 0xFFFFFF, true, true);
+        tab.child(c++, id++, 95 + x, 37 + y);
+
+        tab.child(c++, 121050, 4 + x, 58 + y);
+
+    }
+
+    public static void slayerHub(TextDrawingArea[] tda){
+        int interID = 121050;
         RSInterface info = addInterface(interID);
         info.width = 182 - 16;
         info.height = 195;
         info.scrollMax = 500;
-        id = interID + 1;
-        c = 0;
-        x = -5;
-        y = 3;
-        info.totalChildren(15);
-
-        addText(id, "BOSSES", tda, 2, 0xFFFFFF, true, true);
-        info.child(c++, id++, 85 + x, y);
-        y += 20;
-
-        addText(id, "-------------------", tda, 2, 0xFFFFFF, true, true);
-        info.child(c++, id++, 85 + x, y);
-        y += 20;
-
-        addText(id, "GLOBALS", tda, 2, 0xFFFFFF, true, true);
-        info.child(c++, id++, 85 + x, y);
-        y += 20;
-
-        for (int i = 0; i < 8; i++) {
-            addText(id, "id: " + id, tda, 0, 0xFFFFFF, false, true);
-            info.child(c++, id++, 10 + x, y);
-            y += 17;
-        }
-
-
-        y += 5;
-        addText(id, "SPECIALS", tda, 2, 0xFFFFFF, true, true);
-        info.child(c++, id++, 85 + x, y);
-        y += 20;
-
-        for (int i = 0; i < 3; i++) {
-            addText(id, "id: " + id, tda, 0, 0xFFFFFF, false, true);
-            info.child(c++, id++, 10 + x, y);
-            y += 17;
-        }
-
-
-        interID = 74000;
-        RSInterface list = addInterface(interID);
-        list.width = 190;
-        list.height = 44;
-        list.scrollMax = 44;
-        id = interID + 1;
-        c = 0;
-        x = 0;
-        y = 0;
-        list.totalChildren(12);
-
-        addConfigButtonWSpriteLoader(id, interID, 1564, 1565, 31, 27, "Bosses", 0, 5, 6000);
-        list.child(c++, id++, 33 + x, 5 + y);
-        addConfigButtonWSpriteLoader(id, interID, 1564, 1565, 31, 27, "Staff Events", 1, 5, 6000);
-        list.child(c++, id++, 63 + x, 5 + y);
-        addConfigButtonWSpriteLoader(id, interID, 1564, 1565, 31, 27, "Donation Events", 2, 5, 6000);
-        list.child(c++, id++, 93 + x, 5 + y);
-        addConfigButtonWSpriteLoader(id, interID, 1564, 1565, 31, 27, "Coming Soon", 3, 5, 6000);
-        list.child(c++, id++, 123 + x, 5 + y);
-
-        addText(id, "", tda, 2, 0xFFFFFF, true, true);
-        list.child(c++, id++, 108 + x, 5 + y);
-        addText(id, "", tda, 2, 0xFFFFFF, true, true);
-        list.child(c++, id++, 138 + x, 5 + y);
-
-
-        addSpriteLoader(id, 1930);
-        list.child(c++, id++, 39 + x, 10 + y);
-        addSpriteLoader(id, 1559);
-        list.child(c++, id++, 70 + x, 11 + y);
-        addSpriteLoader(id, 1420);
-        list.child(c++, id++, 102 + x, 14 + y);
-        addSpriteLoader(id, 1419);
-        list.child(c++, id++, 131 + x, 11 + y);
-        addText(id, "", tda, 2, 0xFFFFFF, true, true);
-        list.child(c++, id++, 100 + x, 10 + y);
-        addText(id, "", tda, 2, 0xFFFFFF, true, true);
-        list.child(c++, id++, 130 + x, 10 + y);
-
-    }
-
-    public static void buildDeals(TextDrawingArea[] tda){
-        int interID = 75000;
-        RSInterface tab = addInterface(interID);
         int id = interID + 1;
         int c = 0;
-        int x = 0;
-        int y = 0;
-        tab.totalChildren(4);
+        int x = -5;
+        int y = 3;
+        info.totalChildren(11);
 
-        addSpriteLoader(id, 1563);
-        tab.child(c++, id++, 2 + x, 30 + y);
+        addText(id, "@yel@SLAYER MONSTER HERE", tda, 2, 0xFFFFFF, true, true);
+        info.child(c++, id++, x + 90, y + 1);
 
-        tab.child(c++, 76000, 0, 0);
+        addSpriteLoader(id, 1327);
+        info.child(c++, id++, x + 14, y + 20);
 
-        addText(id, "@whi@Events & More", tda, 2, 0xFFFFFF, true, true);
-        tab.child(c++, id++, 95 + x, 37 + y);
+        addNpc(id, 50);
+        info.child(c++, id++, x + 14, y + 18);
 
-        tab.child(c++, 75500, 4 + x, 58 + y);
+        addSpriteLoader(id, 493);
+        info.child(c++, id++, x + 8, y + 120);
+        addSpriteLoader(id, 3303);
+        info.child(c++, id++, x + 14, y + 125);
+        addText(id, "@yel@ 16141 / 87162", tda, 1, 0xFFFFFF, true, true);
+        info.child(c++, id++, x + 92, y + 128);
 
+        addSpriteLoader(id, 493);
+        info.child(c++, id++, x + 8, y + 158);
+        addSpriteLoader(id, 2999);
+        info.child(c++, id++, x + 16, y + 164);
+        addText(id, "@yel@ Streak : 1819", tda, 1, 0xFFFFFF, true, true);
+        info.child(c++, id++, x + 92, y + 166);
 
-        interID = 75500;
-        RSInterface info = addInterface(interID);
-        info.width = 182 - 16;
-        info.height = 195;
-        info.scrollMax = 700;
-        id = interID + 1;
-        c = 0;
-        x = -5;
-        y = 3;
-        info.totalChildren(33);
+        addButtonWSpriteLoader(id, 3269, "Slayer Master");
+        info.child(c++, id++, x + 25, y + 205);
 
-        addText(id, "DONATE DEALS", tda, 2, 0xFFFFFF, true, true);
-        info.child(c++, id++, 85 + x, y);
-        y += 20;
-
-        addText(id, "-------------------", tda, 2, 0xFFFFFF, true, true);
-        info.child(c++, id++, 85 + x, y);
-        y += 20;
-
-        addText(id, "SALES", tda, 2, 0xFFFFFF, true, true);
-        info.child(c++, id++, 85 + x, y);
-        y += 20;
-
-        for (int i = 0; i < 8; i++) {
-            addText(id, "id: " + id, tda, 0, 0xFFFFFF, false, true);
-            info.child(c++, id++, 10 + x, y);
-            y += 17;
-        }
-
-
-        y += 5;
-        addText(id, "SPECIALS", tda, 2, 0xFFFFFF, true, true);
-        info.child(c++, id++, 85 + x, y);
-        y += 20;
-
-        for (int i = 0; i < 10; i++) {
-            addText(id, "id: " + id, tda, 0, 0xFFFFFF, false, true);
-            info.child(c++, id++, 10 + x, y);
-            y += 17;
-        }
-
-        y += 5;
-        addText(id, "DOUBLED", tda, 2, 0xFFFFFF, true, true);
-        info.child(c++, id++, 85 + x, y);
-        y += 20;
-
-        for (int i = 0; i < 10; i++) {
-            addText(id, "id: " + id, tda, 0, 0xFFFFFF, false, true);
-            info.child(c++, id++, 10 + x, y);
-            y += 17;
-        }
-
-        interID = 76000;
-        RSInterface list = addInterface(interID);
-        list.width = 190;
-        list.height = 44;
-        list.scrollMax = 44;
-        id = interID + 1;
-        c = 0;
-        x = 0;
-        y = 0;
-        list.totalChildren(12);
-
-        addConfigButtonWSpriteLoader(id, interID, 1564, 1565, 31, 27, "Bosses", 0, 5, 6000);
-        list.child(c++, id++, 33 + x, 5 + y);
-        addConfigButtonWSpriteLoader(id, interID, 1564, 1565, 31, 27, "Staff Events", 1, 5, 6000);
-        list.child(c++, id++, 63 + x, 5 + y);
-        addConfigButtonWSpriteLoader(id, interID, 1564, 1565, 31, 27, "Donation Events", 2, 5, 6000);
-        list.child(c++, id++, 93 + x, 5 + y);
-        addConfigButtonWSpriteLoader(id, interID, 1564, 1565, 31, 27, "Coming Soon", 3, 5, 6000);
-        list.child(c++, id++, 123 + x, 5 + y);
-
-        addText(id, "", tda, 2, 0xFFFFFF, true, true);
-        list.child(c++, id++, 108 + x, 5 + y);
-        addText(id, "", tda, 2, 0xFFFFFF, true, true);
-        list.child(c++, id++, 138 + x, 5 + y);
-
-
-        addSpriteLoader(id, 1930);
-        list.child(c++, id++, 39 + x, 10 + y);
-        addSpriteLoader(id, 1559);
-        list.child(c++, id++, 70 + x, 11 + y);
-        addSpriteLoader(id, 1420);
-        list.child(c++, id++, 102 + x, 14 + y);
-        addSpriteLoader(id, 1419);
-        list.child(c++, id++, 131 + x, 11 + y);
-        addText(id, "", tda, 2, 0xFFFFFF, true, true);
-        list.child(c++, id++, 100 + x, 10 + y);
-        addText(id, "", tda, 2, 0xFFFFFF, true, true);
-        list.child(c++, id++, 130 + x, 10 + y);
+        addText(id, "@yel@ Slayer Master", tda, 2, 0xFFFFFF, true, true);
+        info.child(c++, id++, x + 90, y + 211);
     }
+
 }
