@@ -8153,7 +8153,7 @@ public class CustomInterfaces extends RSInterface {
 		panelInterfaceAccountInfo();
 		panelSlayerInterface();
 		panelInterfaceInterfaces();
-
+		TaskScroll.build();
 		//PlayerPanel.panelInterface(tda);
     }
 }
