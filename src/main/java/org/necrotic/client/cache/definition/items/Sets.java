@@ -3625,6 +3625,91 @@ public class Sets {
                 itemDef.stackable = false;
                 break;
 
+            case 6000:
+                itemDef.name = "Deusmon Insignia";
+                itemDef.modelID = 141254;
+                itemDef.maleEquip1 = 141255;
+                itemDef.femaleEquip1 = 141255;
+                itemDefs = ItemDefinition.get(17632);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 6002:
+                itemDef.name = "Deusmon Boots";
+                itemDef.modelID = 141256;
+                itemDef.maleEquip1 = 141256;
+                itemDef.femaleEquip1 = 141256;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 6004:
+                itemDef.name = "Deusmon Gloves";
+                itemDef.modelID = 141257;
+                itemDef.maleEquip1 = 141258;
+                itemDef.femaleEquip1 = 141258;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 6006:
+                itemDef.name = "Deusmon Helm";
+                itemDef.modelID = 141259;
+                itemDef.maleEquip1 = 141260;
+                itemDef.femaleEquip1 = 141260;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 6008:
+                itemDef.name = "Deusmon Legs";
+                itemDef.modelID = 141261;
+                itemDef.maleEquip1 = 141262;
+                itemDef.femaleEquip1 = 141262;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+            case 6010:
+                itemDef.name = "Deusmon Body";
+                itemDef.modelID = 141263;
+                itemDef.maleEquip1 = 141264;
+                itemDef.femaleEquip1 = 141264;
+                itemDefs = ItemDefinition.get(4894);
+                itemDef.modelOffsetX = itemDefs.modelOffsetX;
+                itemDef.modelOffsetY = itemDefs.modelOffsetY;
+                itemDef.modelZoom = itemDefs.modelZoom;
+                itemDef.rotationY = itemDefs.rotationY;
+                itemDef.rotationX = itemDefs.rotationX;
+                itemDef.actions = new String[]{null, "Wear", "Dissolve", null, "Drop"};
+                itemDef.stackable = false;
+                break;
+
 
         }
         return itemDef;
