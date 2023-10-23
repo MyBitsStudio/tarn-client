@@ -6,7 +6,7 @@ import org.necrotic.client.graphics.fonts.TextDrawingArea;
 public class SpellBook extends RSInterface{
 
     public static void buildGlobal(TextDrawingArea[] tda) {
-        int inter = 121000;
+        int inter = 123000;
         RSInterface info = addInterface(inter);
         info.totalChildren(6);
 

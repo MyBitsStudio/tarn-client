@@ -21,7 +21,7 @@ public class Configuration {
 
 	public static boolean updated = false;
 	
-	public final static int CLIENT_VERSION = 14;
+	public final static int CLIENT_VERSION = 316;
 	public static final boolean FORCE_CACHE_UPDATE = false;
 	public static final boolean STOP_CACHE_UPDATES = false;
 	public final static String CLIENT_NAME = "Tarn";
@@ -29,7 +29,7 @@ public class Configuration {
 	public static final String SETTINGS_DIRECTORY_NAME = ".tarn/settings";
 	public final static boolean JAGCACHED_ENABLED = false;
 	public final static String JAGCACHED_HOST = "";
-	public final static int SERVER_PORT = 43143;
+	public final static int SERVER_PORT = 42166;
 	public final static boolean DISPLAY_GAMEWORLD_ON_LOGIN = false;
 	public final static int NPC_BITS = 18;
 	public static final boolean SEND_HASH = true;
@@ -41,7 +41,7 @@ public class Configuration {
 	public static final boolean USING_INTELLIJ = true;
 	
 	public static boolean SAVE_ACCOUNTS = false;
-	public static boolean DISPLAY_HP_ABOVE_HEAD = false;
+	public static boolean DISPLAY_HP_ABOVE_HEAD = true;
 	public static boolean DISPLAY_USERNAMES_ABOVE_HEAD = true;
 	public static boolean TWEENING_ENABLED = true;
 	public static boolean NEW_HITMARKS = true;
@@ -64,5 +64,5 @@ public class Configuration {
 	public static boolean DEPTH_BUFFER = true;
 	public static String SERVER_HOST() {
 		return "localhost";
-	}//
+	}//tarn-server-raid-01-enforced-live.tarnserver.live
 }

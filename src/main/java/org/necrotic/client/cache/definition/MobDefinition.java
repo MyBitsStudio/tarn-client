@@ -88,6 +88,21 @@ public final class MobDefinition {
 				definition.actions = new String[]{null, "Attack", null, null, null};
 				definition.npcSizeInSquares = 1;
 				break;
+			case 14379:
+				definition.name = "@whi@Deusmon";
+				MobDefinition resks = get(202);
+				definition.npcModels = new int[]{141253};
+				definition.combatLevel = 1249;
+				definition.scaleXZ = 160;
+				definition.scaleY = 160;
+				definition.npcSizeInSquares = 1;
+				definition.description = "Fear the god of all that is".getBytes();
+				definition.drawYellowDotOnMap = true;
+				definition.standAnimation = resks.standAnimation;
+				definition.walkAnimation = resks.walkAnimation;
+				definition.actions = new String[]{null, "Attack", null, null, null};
+				definition.npcSizeInSquares = 1;
+				break;
 			case 9906:
 				definition.npcModels = new int[]{139_785};
 				MobDefinition b171223 = get(202);

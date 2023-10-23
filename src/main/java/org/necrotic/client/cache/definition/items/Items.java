@@ -652,6 +652,10 @@ public class Items {
                 itemDef.name = "Infinite Prayer Renewal";
                 itemDef.actions = new String[]{"Drink", null, "Upgrade", null, "Drop"};
                 break;
+            case 882:
+                itemDef.name = "Demented arrow";
+                itemDef.stackable = false;
+                break;
             case 23147:
                 itemDef.copyItem(1505);
                 itemDef.name = "Rare Perk Token";
@@ -869,6 +873,7 @@ public class Items {
                 itemDef.name = "Prosperous prayer scroll";
                 itemDef.modelID = 100315;
                 break;
+
                 
             case 23174:
                 itemDef.copyItem(10936);
@@ -881,9 +886,6 @@ public class Items {
                 itemDef.name = "100% DR enchantment";
                 itemDef.rdc2 = 54666;
                 itemDef.actions = new String[5];
-                break;
-            case 882:
-                itemDef.name = "Starter arrow";
                 break;
             case 9719:
                 itemDef.name = "Slayer skip scroll";
@@ -1585,7 +1587,7 @@ public class Items {
                 itemDef.rdc3 = 67500;
                 break;
             case 22110:
-                itemDef.name = "Owner's Attachment";
+                itemDef.name = "10$ In-Name";
                 itemDefs = ItemDefinition.get(15287);
                 itemDef.modelOffsetX = itemDefs.modelOffsetX;
                 itemDef.modelOffsetY = itemDefs.modelOffsetY;
