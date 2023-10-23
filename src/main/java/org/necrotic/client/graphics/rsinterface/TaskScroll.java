@@ -37,7 +37,7 @@ public class TaskScroll extends RSInterface {
         hoverButton(167657, 3190, 3191, "Track");
         rsi.child(10, 167657, 389, 290);
 
-        addProgressBar(167658, 260, 20, 10, 0x494034, 0x06bc21);
+        addProgressBar(167658, 260, 20, 0, 0x494034, 0x06bc21);
         rsi.child(11, 167658, 83, 293);
 
         addText(167659, "Rewards", ColorConstants.RS_ORANGE, true, true, -1, 1);
@@ -46,7 +46,7 @@ public class TaskScroll extends RSInterface {
         addText(167660, "Description", ColorConstants.RS_ORANGE, true, true, -1, 1);
         rsi.child(13, 167660, 325, 56);
 
-        addText(167661, "5/100", ColorConstants.SNOW_WHITE, true, true, -1, 1);
+        addText(167661, "", ColorConstants.SNOW_WHITE, true, true, -1, 1);
         rsi.child(14, 167661, 219, 297);
 
         RSInterface rewardScroll = addInterface(167662);
@@ -70,5 +70,14 @@ public class TaskScroll extends RSInterface {
                 , tda, 1, 0xff9040, false, true, 200);
 
         rsi.child(16, 167664, 225, 80);
+
+        overlay();
+    }
+
+    private static void overlay() {
+        RSInterface rsi = addInterface(167665);
+        rsi.totalChildren(2);
+        rsi.child(0, 167658, 120, 300);
+        rsi.child(1, 167661, 250, 303);
     }
 }
