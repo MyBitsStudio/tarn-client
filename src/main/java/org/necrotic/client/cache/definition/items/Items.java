@@ -8,6 +8,69 @@ public class Items {
         ItemDefinition itemDefs;
         switch (id) {
 
+            case 10000:
+                itemDef.copyItem(21586);
+                itemDef.name = "Vial Of Liquid (Easy)";
+                itemDef.actions = new String[]{"Open", null, null, null, null};
+                itemDef.stackable = true;
+                itemDef.rdc2 = 23452;
+                break;
+
+            case 10002:
+                itemDef.copyItem(21586);
+                itemDef.name = "Vial Of Spirit (Medium)";
+                itemDef.actions = new String[]{"Open", null, null, null, null};
+                itemDef.stackable = true;
+                itemDef.rdc2 = 15345;
+                break;
+
+            case 10004:
+                itemDef.copyItem(21586);
+                itemDef.name = "Vial Of Soul (Hard)";
+                itemDef.actions = new String[]{"Open", null, null, null, null};
+                itemDef.stackable = true;
+                itemDef.rdc2 = 35473;
+                break;
+
+            case 10006:
+                itemDef.copyItem(21586);
+                itemDef.name = "Vial Of Divinity (Elite)";
+                itemDef.actions = new String[]{"Open", null, null, null, null};
+                itemDef.stackable = true;
+                itemDef.rdc2 = 822332;
+                break;
+
+            case 19043:
+                itemDef.name = "Task Scroll (Elite)";
+                itemDef.actions = new String[]{"Read", null, null, null, null};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 822332;
+                break;
+
+            case 13050:
+                itemDef.copyItem(19043);
+                itemDef.name = "Task Scroll (Medium)";
+                itemDef.actions = new String[]{"Read", null, null, null, null};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 15345;
+                break;
+
+            case 13010:
+                itemDef.copyItem(19043);
+                itemDef.name = "Task Scroll (Hard)";
+                itemDef.actions = new String[]{"Read", null, null, null, null};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 35473;
+                break;
+
+            case 10180:
+                itemDef.copyItem(19043);
+                itemDef.name = "Task Scroll (Easy)";
+                itemDef.actions = new String[]{"Read", null, null, null, null};
+                itemDef.stackable = false;
+                itemDef.rdc2 = 23452;
+                break;
+
             case 8644:
                 itemDef.name = "Barricade";
                 itemDef.actions = new String[]{null, null, null, null, null};
@@ -22,6 +85,18 @@ public class Items {
 
             case 19639:
                 itemDef.name = "Token Fragments";
+                break;
+
+            case 14808:
+                itemDef.name = "Champion Voter Scroll";
+                itemDef.actions = new String[]{"Read", null, null, null, null};
+                itemDef.stackable = false;
+                break;
+
+            case 14796:
+                itemDef.name = "Champion VIP Scroll";
+                itemDef.actions = new String[]{"Read", null, null, null, null};
+                itemDef.stackable = false;
                 break;
 
             case 995:

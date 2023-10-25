@@ -341,8 +341,8 @@ public class MapArea extends GameFrame {
 			hitpoints.draw(client, GameFrame.getScreenMode() != ScreenMode.FIXED ? Client.clientWidth - 212 : 172, GameFrame.getScreenMode() != ScreenMode.FIXED ? 39 : 15, screenMode);
 			run.setOrbValues(new OrbValue(client.energy, 100));
 			run.draw(client, GameFrame.getScreenMode() != ScreenMode.FIXED ? Client.clientWidth - 203 : 184, GameFrame.getScreenMode() != ScreenMode.FIXED ? 107 : 93, screenMode);
-			summoning.setOrbValues(new OrbValue(client.currentStats[23], client.maxStats[23]));
-			summoning.draw(client, GameFrame.getScreenMode() != ScreenMode.FIXED ? Client.clientWidth - 179 : 167, GameFrame.getScreenMode() != ScreenMode.FIXED ? 136 : 129, screenMode);
+//			summoning.setOrbValues(new OrbValue(client.currentStats[23], client.maxStats[23]));
+//			summoning.draw(client, GameFrame.getScreenMode() != ScreenMode.FIXED ? Client.clientWidth - 179 : 167, GameFrame.getScreenMode() != ScreenMode.FIXED ? 136 : 129, screenMode);
 			if (client.inSprite(false, Client.spritesMap.get(345), getxPos() - (GameFrame.getScreenMode() == ScreenMode.FIXED ? 2 : 40), getyPos() + (GameFrame.getScreenMode() == ScreenMode.FIXED ? 46 : 2))) {
 				Client.spritesMap.get(344).drawSprite(getOffSetX() - (GameFrame.getScreenMode() == ScreenMode.FIXED ? 2 : 40), getOffSetY() + (GameFrame.getScreenMode() == ScreenMode.FIXED ? 46 : 2));
 			} else {

@@ -34,9 +34,9 @@ public final class ItemDefinition {
 
 
 	public static void applyTexturing(Model model, int id) {
-		if(id == 29){
-			System.out.println("Item - "+ Arrays.toString(model.anIntArray1640));
-		}
+//		if(id == 21586){
+//			System.out.println("Item - "+ Arrays.toString(model.anIntArray1640));
+//		}
 
 		switch (id) {
 
@@ -7482,6 +7482,9 @@ itemDef.actions[2] = "Dissolve";
 		//	return ItemDef3.newIDS1(itemDef, id);
 
 	}
+
+
+
 
 //	private static void setCustomItemDefData(int customId, ItemDefinition itemDef) {
 //

@@ -377,6 +377,17 @@ public class RSInterface {
 		rsi.progressBarType = progressBarType;
 	}
 
+	public static void addProgressBarTwo(int id, int spriteId, int width, int height, int current, int maxPercentage, ProgressBarType progressBarType) {
+		RSInterface rsi = addInterface(id);
+		rsi.disabledSpriteId = spriteId;
+		rsi.progress = current;
+		rsi.maxPercentage = maxPercentage;
+		rsi.type = 288;
+		rsi.progressBarType = progressBarType;
+		rsi.width = width;
+		rsi.height = height;
+	}
+
 	private static void perkOverlays(TextDrawingArea[] tda) {
 		int STARTING_POINT = 42112;
 		RSInterface main = addInterface(STARTING_POINT);
@@ -3265,6 +3276,14 @@ public class RSInterface {
 		hover.height = 28;
 	}
 
+	public static void createHoverTwo(int id, int x, int width, int height) {
+		RSInterface hover = addInterface(id);
+		hover.type = 10;
+		hover.contentType = x;
+		hover.width = width;
+		hover.height = height;
+	}
+
 	public static void createSkillHover(int id, int x) {
 		RSInterface hover = addInterface(id);
 		hover.type = 10;
@@ -4573,6 +4592,16 @@ public class RSInterface {
 		button.width = 60;
 		button.height = 28;
 		// button.disabledSprite = getSprite("Interfaces/Skilltab/Button");
+		button.tooltip = "@whi@View @or1@" + skillGuide + " @whi@Options";
+	}
+
+	public static void addNewSkillButton(int id, String skillGuide) {
+		RSInterface button = addTabInterface(id);
+		button.type = 5;
+		button.atActionType = 5;
+		button.contentType = 0;
+		button.width = 60;
+		button.height = 28;
 		button.tooltip = "@whi@View @or1@" + skillGuide + " @whi@Options";
 	}
 

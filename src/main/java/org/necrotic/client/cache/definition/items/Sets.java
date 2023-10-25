@@ -3625,6 +3625,7 @@ public class Sets {
                 itemDef.stackable = false;
                 break;
 
+                ////
             case 6000:
                 itemDef.name = "Deusmon Insignia";
                 itemDef.modelID = 141254;

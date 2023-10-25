@@ -56,7 +56,7 @@ public class TaskScroll extends RSInterface {
         rsi.child(15, 167662, 85, 75);
         rewardScroll.totalChildren(1);
 
-        RSInterface.itemGroup(167663, 3, 10, 5, 3);
+        RSInterface.itemGroup(167663, 3, 15, 5, 3);
         rewardScroll.child(0, 167663, 0, 3);
 
         for(int i = 0; i < 30; i++) {

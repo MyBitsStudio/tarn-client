@@ -5041,14 +5041,8 @@ public class Client extends GameRenderer {
 
             boolean flag8 = true;
             if ((class9.contentType == 1321) || (class9.contentType == 1322) || (class9.contentType == 1323)) {
-                int index = class9.id - 79924;
-                if (index >= 50) {
-                    index -= 50;
-                }
-                if (index >= 25) {
-                    index -= 25;
-                }
-                Skills.selectedSkillId = Skills.SKILL_ID_NAME(Skills.SKILL_NAMES[index]);
+                getOut().putOpcode(195);
+                getOut().putInt(interfaceId);
             }
             if (class9.contentType > 0) {
                 flag8 = promptUserForInput(class9);
@@ -6969,12 +6963,11 @@ public class Client extends GameRenderer {
             if (j >= k) {
                 class9.message = "";
                 class9.atActionType = 0;
-                return;
             } else {
                 class9.message = friendsList[j];
                 class9.atActionType = 1;
-                return;
             }
+            return;
         }
 
         if (j == 901) {
@@ -8627,7 +8620,7 @@ public class Client extends GameRenderer {
                     int boxWidth = 0;
                     int boxHeight = 0;
                     TextDrawingArea textDrawingArea_2 = normalText;
-                    for (String s1 = childInterface.message; s1.length() > 0; ) {
+                    for (String s1 = childInterface.message; !s1.isEmpty(); ) {
                         int l7 = s1.indexOf("\\n");
                         String s4;
                         if (l7 != -1) {
@@ -8703,7 +8696,7 @@ public class Client extends GameRenderer {
                     }
                     DrawingArea.fillPixels(xPos, boxWidth, boxHeight, 0, yPos);
                     String s2 = childInterface.message;
-                    for (int j11 = yPos + textDrawingArea_2.anInt1497 + 2; s2.length() > 0; j11 += textDrawingArea_2.anInt1497 + 1) {
+                    for (int j11 = yPos + textDrawingArea_2.anInt1497 + 2; !s2.isEmpty(); j11 += textDrawingArea_2.anInt1497 + 1) {
                         int l11 = s2.indexOf("\\n");
                         String s5;
                         if (l11 != -1) {
@@ -8843,8 +8836,8 @@ public class Client extends GameRenderer {
 
 
     public int skillIdForButton(int buttonId) {
-        int[] buttonIds = {4040, 4076, 4112, 4046, 4082, 4118, 4052, 4088, 4124, 4058, 4094, 4130, 4064, 4100, 4136, 4070, 4106, 4142, 4160, 2832, 13917, 28173, 28174, 28175, 28176};
-        int[] skillID = {0, 3, 14, 2, 16, 13, 1, 15, 10, 4, 17, 7, 5, 12, 11, 6, 9, 8, 20, 18, 19, 21, 22, 23, 24, 25};
+        int[] buttonIds = {124003, 124011, 124019, 124027, 124035, 124043, 124051, 124059, 124067, 124075, 124083, 124091, 124099};
+        int[] skillID = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
         for (int i = 0; i < buttonIds.length; i++) {
             if (buttonIds[i] == buttonId) {
                 buttonId = i;
@@ -18017,33 +18010,7 @@ public class Client extends GameRenderer {
             friendsListAction = 5;
             promptMessage = "Enter the name of a player to delete from the list";
         }
-        if (id == 1321) {
-            inputTaken = true;
-            inputDialogState = 0;
-            messagePromptRaised = true;
-            promptInput = "";
-            friendsListAction = 12;
-            promptMessage = "Enter your " + Skills.SKILL_NAMES[index] + " level goal below.";
-        }
-        if (id == 1322) {
-            inputTaken = true;
-            inputDialogState = 0;
-            messagePromptRaised = true;
-            promptInput = "";
-            friendsListAction = 13;
-            promptMessage = "Enter your experience goal below.";
-        }
-        if (id == 1323) {
-            if (Skills.goalData[Skills.selectedSkillId][0] == -1 && Skills.goalData[Skills.selectedSkillId][1] == -1 && Skills.goalData[Skills.selectedSkillId][2] == -1) {
-                pushMessage("You do not have a goal to clear for that level.", 0, "");
-            }
-            if (Skills.selectedSkillId > -1) {
-                Skills.goalData[Skills.selectedSkillId][0] = -1;
-                Skills.goalData[Skills.selectedSkillId][1] = -1;
-                Skills.goalData[Skills.selectedSkillId][2] = -1;
-                saveGoals(myUsername);
-            }
-        } else if (id >= 5000 && id <= 5025) {
+        if (id >= 5000 && id <= 5025) {
             getOut().putOpcode(223);
             index = id - 5000;
             getOut().putShort(index);
@@ -18486,42 +18453,46 @@ public class Client extends GameRenderer {
     private String setMessage(int skillLevel) {
         if (skillLevel == 26) {
             long totalXp = 0;
-            for (int i = 0; i < currentExp.length; i++) {
+            for (int i = 0; i < Skills.SKILL_NAMES.length; i++) {
                 totalXp += currentExp[i];
             }
-            return "Total XP: " + String.format("%, d", totalXp) + "";
+            return "Total XP: " + String.format("%, d", totalXp);
+        } else if(skillLevel == 25){
+            long totalXp = 0;
+            for (int i = 0; i < Skills.SKILL_NAMES.length; i++) {
+                totalXp += currentStats[i];
+            }
+            return "Total Level: " + String.format("%, d", totalXp);
         }
         String[] getToolTipText = new String[6];
         String toolTiptext = "";
-        int[] getSkillIds = {0, 3, 14, 2, 16, 13, 1, 15, 10, 4, 17, 7, 5, 12, 11, 6, 9, 8, 20, 18, 19, 21, 22, 23, 24, 25};
-        int init = Skills.goalData[getSkillIds[skillLevel]][0];
-        int goal = Skills.goalData[getSkillIds[skillLevel]][1];
-        int stat = getSkillIds[skillLevel];
-        int currentLevel = currentStats[stat];
-        int maxLevel = maxStats[stat];
-        if (stat == 3 || stat == 5) {
+        int init = Skills.goalData[skillLevel][0];
+        int goal = Skills.goalData[skillLevel][1];
+        int currentLevel = currentStats[skillLevel];
+        int maxLevel = maxStats[skillLevel];
+        if (skillLevel == 3 || skillLevel == 5) {
             currentLevel /= 10;
             maxLevel /= 10;
         }
         getToolTipText[0] = (Skills.SKILL_NAMES[skillLevel] + ": " + currentLevel + "/" + maxLevel + "\\n");
-        getToolTipText[1] = ("Current Exp: " + (maxLevel < 99 ? "" : "") + String.format("%, d", currentExp[getSkillIds[skillLevel]]) + "\\n");
-        getToolTipText[2] = ("Next level: " + String.format("%, d", PlayerHandler.getXPForLevel(maxLevel + 1) - currentExp[getSkillIds[skillLevel]]));
+        getToolTipText[1] = ("Current Exp: " + String.format("%, d", currentExp[skillLevel]) + "\\n");
+        getToolTipText[2] = ("Next level: " + String.format("%, d", PlayerHandler.getXPForLevel(maxLevel + 1) - currentExp[skillLevel]));
         toolTiptext = getToolTipText[0] + getToolTipText[1];
         boolean onNewLine = false;
         if (maxLevel < 99) {
             toolTiptext += getToolTipText[2]; // + getToolTipText[3];
             onNewLine = true;
         }
-        if ((currentExp[getSkillIds[skillLevel]] < 1000000000) && init > -1 && goal > -1) {
+        if ((currentExp[skillLevel] < 1000000000) && init > -1 && goal > -1) {
             getToolTipText[4] = ((onNewLine ? "\\n" : "") + Skills.goalType + "" + (Skills.goalType.endsWith("Level: ") ? Integer.valueOf(PlayerHandler.getLevelForXP(goal)) : String.format("%,d", goal)) + "\\n");
-            int remainder = goal - currentExp[getSkillIds[skillLevel]] - (Skills.goalType.endsWith("Level: ") ? 1 : 0);
+            int remainder = goal - currentExp[skillLevel] - (Skills.goalType.endsWith("Level: ") ? 1 : 0);
             if (remainder < 0) {
                 remainder = 0;
             }
             getToolTipText[5] = ("Remainder: " + String.format("%,d", remainder));
-            Skills.goalData[getSkillIds[skillLevel]][2] = (int) (((currentExp[getSkillIds[skillLevel]] - init) / (double) (goal - init)) * 100);
-            if (Skills.goalData[getSkillIds[skillLevel]][2] > 100) {
-                Skills.goalData[getSkillIds[skillLevel]][2] = 100;
+            Skills.goalData[skillLevel][2] = (int) (((currentExp[skillLevel] - init) / (double) (goal - init)) * 100);
+            if (Skills.goalData[skillLevel][2] > 100) {
+                Skills.goalData[skillLevel][2] = 100;
             }
             toolTiptext += getToolTipText[4] + getToolTipText[5];
         }

@@ -8022,7 +8022,7 @@ public class CustomInterfaces extends RSInterface {
 		//slayerBuyInterface();
 		barrowsInterface();
 		pestControlInterfaces();
-		skillTabInterface();
+		//skillTabInterface();
 		playerPanel();
 		killsTracker();
 		friendsTabInterface();
@@ -8169,5 +8169,6 @@ public class CustomInterfaces extends RSInterface {
 		EventPanel.buildThree(tda);
 
 		SpellBook.buildGlobal(tda);
+		SkillTab.buildGlobal(tda);
     }
 }
